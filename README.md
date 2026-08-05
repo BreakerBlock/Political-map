@@ -5,9 +5,10 @@ A single-page travel planner for India: 145+ curated places across 8 categories,
 ## Deploy in 5 minutes (GitHub Pages)
 
 1. Create a new GitHub repository (e.g. `bharatyatra`)
-2. Upload both files to the repo root:
+2. Upload all three files to the repo root:
    - `index.html`
    - `places.json`
+   - `india-boundary.geojson` (official Survey of India boundary — full J&K included)
 3. Go to **Settings → Pages → Source** → select `main` branch, `/ (root)` → Save
 4. Your site is live at `https://YOUR_USERNAME.github.io/bharatyatra/`
 

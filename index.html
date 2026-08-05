@@ -96,6 +96,12 @@ header h1 span{color:var(--accent)}
 
 .state-label{font-family:'DM Sans',sans-serif!important;font-size:9.5px!important;font-weight:600!important;color:rgba(44,24,16,0.38)!important;letter-spacing:0.07em!important;text-transform:uppercase!important;white-space:nowrap!important;text-shadow:0 0 5px rgba(245,237,224,1)!important;pointer-events:none!important;text-align:center!important}
 
+.city-label{font-family:'DM Sans',sans-serif!important;pointer-events:none!important;white-space:nowrap!important}
+.city-label .cl-inner{display:flex;align-items:center;gap:4px}
+.city-label .cl-dot{width:5px;height:5px;border-radius:50%;background:#5A4A3A;border:1px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);flex-shrink:0}
+.city-label .cl-name{font-size:10px;font-weight:500;color:#4A3A2C;text-shadow:0 0 3px #fff,0 0 5px #fff,0 0 6px #fff}
+.city-label.tier1 .cl-name{font-weight:600;font-size:10.5px}
+
 @media(max-width:760px){
   .sidebar{width:100%;max-height:42vh;border-right:none;border-bottom:1px solid var(--border)}
   .main-wrap{flex-direction:column}
@@ -137,7 +143,7 @@ header h1 span{color:var(--accent)}
   </aside>
   <div id="map">
     <div class="loading-overlay" id="loader"><div class="spinner"></div>Loading places…</div>
-    <div class="disclaimer">Map for reference only · Not to scale</div>
+    <div class="disclaimer">Boundary as per Survey of India · Map for reference only · Not to scale</div>
   </div>
 </div>
 
@@ -208,6 +214,70 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/
 
 markerLayer=L.layerGroup().addTo(map);
 
+/* ─── India official boundary (Survey of India, full J&K) ───
+   Loaded from india-boundary.geojson in the same repo.       */
+async function loadBoundary(){
+  try{
+    const res=await fetch('india-boundary.geojson');
+    if(!res.ok)throw new Error('http '+res.status);
+    const geo=await res.json();
+
+    // Dim everything outside India: world rectangle with India's rings as holes
+    const coords=geo.features[0].geometry.coordinates; // MultiPolygon [ [ [ring], ...], ... ]
+    const holes=coords.map(poly=>poly[0].map(pt=>[pt[1],pt[0]])); // exterior rings → [lat,lng]
+    const world=[[-89,-179],[-89,179],[89,179],[89,-179]];
+    L.polygon([world,...holes],{
+      stroke:false,fillColor:'#B7AE9C',fillOpacity:0.35,interactive:false
+    }).addTo(map);
+
+    // India boundary line + subtle warm fill
+    L.geoJSON(geo,{
+      style:{color:'#7A4A22',weight:2,opacity:0.8,fillColor:'#FFF8EC',fillOpacity:0.12},
+      interactive:false
+    }).addTo(map);
+  }catch(e){console.warn('Boundary not loaded:',e.message)}
+}
+loadBoundary();
+
+/* ─── City labels (two tiers by zoom) ─── */
+const CITIES_T1=[
+  ["New Delhi",28.61,77.21],["Mumbai",19.08,72.88],["Kolkata",22.57,88.36],
+  ["Chennai",13.08,80.27],["Bengaluru",12.97,77.59],["Hyderabad",17.39,78.49],
+  ["Ahmedabad",23.02,72.57],["Pune",18.52,73.86],["Jaipur",26.92,75.79],
+  ["Lucknow",26.85,80.95],["Srinagar",34.08,74.80],["Leh",34.15,77.58],
+  ["Chandigarh",30.73,76.78],["Bhopal",23.26,77.41],["Patna",25.59,85.14],
+  ["Guwahati",26.14,91.74],["Kochi",9.93,76.27],["Panaji",15.49,73.83],
+  ["Visakhapatnam",17.69,83.22],["Nagpur",21.15,79.09],["Varanasi",25.32,83.01],
+  ["Amritsar",31.63,74.87],["Indore",22.72,75.86]
+];
+const CITIES_T2=[
+  ["Shimla",31.10,77.17],["Dehradun",30.32,78.03],["Jammu",32.73,74.86],
+  ["Ranchi",23.34,85.31],["Raipur",21.25,81.63],["Bhubaneswar",20.30,85.82],
+  ["Thiruvananthapuram",8.52,76.94],["Madurai",9.93,78.12],["Coimbatore",11.02,76.96],
+  ["Mysuru",12.30,76.64],["Mangaluru",12.91,74.86],["Surat",21.17,72.83],
+  ["Vadodara",22.31,73.19],["Rajkot",22.30,70.80],["Jodhpur",26.24,73.02],
+  ["Udaipur",24.58,73.68],["Jaisalmer",26.92,70.91],["Agra",27.18,78.02],
+  ["Kanpur",26.45,80.33],["Prayagraj",25.44,81.85],["Gwalior",26.22,78.18],
+  ["Aurangabad",19.88,75.34],["Nashik",20.00,73.79],["Vijayawada",16.51,80.65],
+  ["Tirupati",13.63,79.42],["Imphal",24.82,93.94],["Aizawl",23.73,92.72],
+  ["Kohima",25.67,94.11],["Itanagar",27.10,93.62],["Shillong",25.57,91.88],
+  ["Agartala",23.83,91.28],["Gangtok",27.33,88.62],["Siliguri",26.73,88.40],
+  ["Amaravati",16.51,80.52],["Puducherry",11.94,79.83],["Port Blair",11.62,92.73],
+  ["Kavaratti",10.57,72.64],["Dharamshala",32.22,76.32],["Rishikesh",30.09,78.27]
+];
+function cityMarker(c,tier){
+  return L.marker([c[1],c[2]],{
+    icon:L.divIcon({
+      className:'city-label '+tier,
+      html:`<div class="cl-inner"><span class="cl-dot"></span><span class="cl-name">${c[0]}</span></div>`,
+      iconSize:[110,14],iconAnchor:[3,7]
+    }),
+    interactive:false
+  });
+}
+const cityT1Layer=L.layerGroup(CITIES_T1.map(c=>cityMarker(c,'tier1')));
+const cityT2Layer=L.layerGroup(CITIES_T2.map(c=>cityMarker(c,'tier2')));
+
 // State labels (only visible at country zoom, hidden when zoomed in)
 const stateLayer=L.layerGroup().addTo(map);
 STATE_LABELS.forEach(s=>{
@@ -216,10 +286,21 @@ STATE_LABELS.forEach(s=>{
     interactive:false
   }).addTo(stateLayer);
 });
-map.on('zoomend',()=>{
-  if(map.getZoom()>=8) map.removeLayer(stateLayer);
-  else if(!map.hasLayer(stateLayer)) map.addLayer(stateLayer);
-});
+
+function syncLabelLayers(){
+  const z=map.getZoom();
+  // States: zoom 4-7
+  if(z>=8){if(map.hasLayer(stateLayer))map.removeLayer(stateLayer)}
+  else{if(!map.hasLayer(stateLayer))map.addLayer(stateLayer)}
+  // Major cities: zoom 5+
+  if(z>=5){if(!map.hasLayer(cityT1Layer))map.addLayer(cityT1Layer)}
+  else{if(map.hasLayer(cityT1Layer))map.removeLayer(cityT1Layer)}
+  // Secondary cities: zoom 6+
+  if(z>=6){if(!map.hasLayer(cityT2Layer))map.addLayer(cityT2Layer)}
+  else{if(map.hasLayer(cityT2Layer))map.removeLayer(cityT2Layer)}
+}
+map.on('zoomend',syncLabelLayers);
+syncLabelLayers();
 
 /* ═════════════════════════════════════════════════════════
    DATA
