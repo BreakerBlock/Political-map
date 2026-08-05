@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>BharatYatra — India Travel Planner</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -71,8 +71,21 @@ header h1 span{color:var(--accent)}
 .pc-state{font-size:0.64rem;color:var(--ink-light);margin-top:1px}
 .place-card p{font-size:0.68rem;color:var(--ink-dim);margin-top:3px;line-height:1.35}
 
-#map{flex:1;background:#CDE3F1;position:relative}
+#map{flex:1;background:#AECBCE;position:relative}
+
+/* Warm vintage tint on basemap tiles */
+.tile-relief{filter:sepia(0.42) saturate(0.95) hue-rotate(-6deg) brightness(1.05) contrast(1.04)}
+.tile-warm{filter:sepia(0.25) saturate(1.02) hue-rotate(-4deg) brightness(1.03)}
+
+/* Vignette for old-atlas depth (sits above tiles, below markers) */
+.map-vignette{position:absolute;inset:0;pointer-events:none;z-index:350;
+  box-shadow:inset 0 0 90px 20px rgba(72,48,24,0.22), inset 0 0 25px rgba(72,48,24,0.12)}
+
+/* Compass rose */
+.compass{position:absolute;left:12px;bottom:26px;z-index:800;width:58px;height:58px;opacity:0.55;pointer-events:none;filter:drop-shadow(0 1px 2px rgba(255,253,248,0.8))}
+
 .leaflet-control-zoom a{background:var(--surface)!important;color:var(--ink)!important;border-color:var(--border)!important;font-size:16px!important;width:32px!important;height:32px!important;line-height:32px!important}
+.leaflet-control-scale-line{background:rgba(255,253,248,0.8)!important;border-color:var(--ink-dim)!important;color:var(--ink-dim)!important;font-family:'DM Sans',sans-serif!important;font-size:9px!important}
 
 /* Popup with image */
 .leaflet-popup-content-wrapper{background:var(--surface)!important;color:var(--ink)!important;border-radius:12px!important;box-shadow:0 6px 24px rgba(44,24,16,0.18)!important;border:1px solid var(--border)!important;overflow:hidden!important;padding:0!important}
@@ -114,10 +127,49 @@ header h1 span{color:var(--accent)}
 .leaflet-tooltip.pin-label{display:none}
 body.show-pin-labels .leaflet-tooltip.pin-label{display:block}
 
+/* Toggle buttons (chevrons hidden on desktop) */
+.cat-toggle{border:none;background:none;display:flex;align-items:center;gap:7px;cursor:default;font-family:inherit;padding:0;color:inherit}
+.chev{display:none;transition:transform 0.2s;color:var(--ink-dim);flex-shrink:0}
+.pc-chev{margin-left:auto}
+button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+
 @media(max-width:760px){
-  .sidebar{width:100%;max-height:42vh;border-right:none;border-bottom:1px solid var(--border)}
+  body{height:100dvh}
   .main-wrap{flex-direction:column}
+
+  /* Sidebar shrinks to content; map gets the rest */
+  .sidebar{width:100%;max-height:none;flex-shrink:0;border-right:none;border-bottom:1px solid var(--border)}
+
+  header{padding:8px 14px}
+  header h1{font-size:1.15rem}
   .header-sub{display:none}
+  .brand-flag{width:30px;height:30px}
+  .btn-suggest{padding:7px 12px;font-size:0.7rem}
+
+  /* Category section = dropdown, collapsed by default */
+  .filters{padding:10px 14px}
+  .filters-head{margin-bottom:0}
+  .cat-toggle{cursor:pointer}
+  .chev{display:block}
+  .filters.open .cat-toggle .chev{transform:rotate(180deg)}
+  .cat-list{display:none;margin-top:10px}
+  .filters.open .cat-list{display:flex}
+  .cat-btn{padding:9px 11px}
+
+  /* Search: 16px font stops iOS auto-zoom on focus */
+  .search-wrap{padding:8px 14px}
+  .search-wrap input{font-size:16px;padding:8px 12px 8px 36px}
+
+  /* Place list = dropdown, collapsed by default */
+  .place-count{cursor:pointer;display:flex;align-items:center;padding:9px 14px;user-select:none}
+  .place-list{display:none}
+  body.list-open .place-list{display:block;max-height:34vh;overflow-y:auto}
+  body.list-open .pc-chev{transform:rotate(180deg)}
+
+  /* Map controls: larger touch targets */
+  .leaflet-control-zoom a{width:38px!important;height:38px!important;line-height:38px!important}
+  .pin-label{font-size:10px!important;padding:2px 6px!important}
+  .disclaimer{font-size:0.5rem;bottom:4px}
 }
 </style>
 </head>
@@ -141,7 +193,10 @@ body.show-pin-labels .leaflet-tooltip.pin-label{display:block}
   <aside class="sidebar">
     <div class="filters">
       <div class="filters-head">
-        <h2>Explore by Category</h2>
+        <button class="cat-toggle" onclick="toggleCatPanel()" aria-expanded="true">
+          <h2>Explore by Category</h2>
+          <svg class="chev" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+        </button>
         <button class="toggle-all" id="toggleAll" onclick="toggleAllCats()">Deselect All</button>
       </div>
       <div class="cat-list" id="catBtns"></div>
@@ -150,11 +205,21 @@ body.show-pin-labels .leaflet-tooltip.pin-label{display:block}
       <svg class="s-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>
       <input type="text" id="searchInput" placeholder="Search places, states…" oninput="render()">
     </div>
-    <div class="place-count" id="placeCount"></div>
+    <div class="place-count" id="placeCount" onclick="togglePlaceList()"><span id="placeCountText"></span><svg class="chev pc-chev" width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg></div>
     <div class="place-list" id="placeList"></div>
   </aside>
   <div id="map">
     <div class="loading-overlay" id="loader"><div class="spinner"></div>Loading places…</div>
+    <div class="map-vignette"></div>
+    <svg class="compass" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="50" r="44" stroke="#5A4432" stroke-width="1.5"/>
+      <circle cx="50" cy="50" r="34" stroke="#5A4432" stroke-width="0.75" opacity="0.6"/>
+      <path d="M50 8L56 46L50 50L44 46Z" fill="#B5452A"/>
+      <path d="M50 92L44 54L50 50L56 54Z" fill="#5A4432"/>
+      <path d="M8 50L46 44L50 50L46 56Z" fill="#5A4432"/>
+      <path d="M92 50L54 56L50 50L54 44Z" fill="#5A4432"/>
+      <text x="50" y="6" text-anchor="middle" font-size="11" font-weight="700" fill="#5A4432" font-family="Georgia,serif">N</text>
+    </svg>
     <div class="disclaimer">Boundary as per Survey of India · Map for reference only · Not to scale</div>
   </div>
 </div>
@@ -171,10 +236,10 @@ const CONTACT_EMAIL = 'utkarsh.khurana@outlook.com';
    ═════════════════════════════════════════════════════════ */
 const ICONS={
 scenic:`<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21l4-10 4 10"/><path d="M2 21l5-12 3 6"/><circle cx="18" cy="5" r="2"/></svg>`,
-religious:`<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8M8 6h8M12 10v12M7 22h10"/></svg>`,
+religious:`<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c2.2 2.8 4 4.4 4 6.8a4 4 0 01-8 0C8 7.4 9.8 5.8 12 3z"/><path d="M5 17h14"/><path d="M7 17c.5 2.4 2.6 4 5 4s4.5-1.6 5-4"/></svg>`,
 fauna:`<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8c0-2 2-4 4-3 1-2 4-3 4-1 0-2 3-1 4 1 2-1 4 1 4 3-1 3-4 5-8 9C8 13 5 11 4 8z"/></svg>`,
-history:`<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-4h6v4"/></svg>`,
-arts:`<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="9" cy="12" r="2"/><circle cx="16" cy="14" r="1.5"/><path d="M12 2a10 10 0 0110 10c0 2-2 2-3 1s-2-1-3 0-2 2-4 2-3-1-3-1a10 10 0 013-12z"/></svg>`,
+history:`<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21h20"/><path d="M5 21V11a7 7 0 0114 0v10"/><path d="M9.5 21v-6a2.5 2.5 0 015 0v6"/><path d="M12 2v2"/></svg>`,
+arts:`<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4l-8.5 8.5"/><path d="M11.5 12.5c-2.2.8-3.3 1.9-3.9 4.6-.2 1 .8 2.1 1.9 1.9 2.7-.6 3.8-1.7 4.6-3.9l-2.6-2.6z"/><path d="M17 2l5 5-2 2-5-5 2-2z"/></svg>`,
 cuisine:`<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M5 12c0-4 3-8 7-8s7 4 7 8M5 12v2c0 3 3 5 7 5s7-2 7-5v-2"/></svg>`,
 adventure:`<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l-4 8h8l-4-8z"/><path d="M8 10l-5 10h18l-5-10"/><path d="M12 8v14"/></svg>`,
 festivals:`<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M5.6 5.6l2.8 2.8M2 12h4M5.6 18.4l2.8-2.8M12 18v4M18.4 18.4l-2.8-2.8M22 12h-4M18.4 5.6l-2.8 2.8"/><circle cx="12" cy="12" r="3"/></svg>`,
@@ -220,9 +285,18 @@ const imgCache={};
    MAP — CartoDB Voyager (no political boundary labels)
    ═════════════════════════════════════════════════════════ */
 const map=L.map('map',{zoomControl:true,minZoom:4,maxBounds:[[3,60],[40,102]],maxBoundsViscosity:0.85}).setView([22.5,80],5);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png',{
-  attribution:'© <a href="https://carto.com">CARTO</a> © OSM',maxZoom:18,subdomains:'abcd'
+
+/* Country view (zoom ≤ 8): shaded terrain relief — Himalayas, Ghats, Thar visible */
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}',{
+  attribution:'Esri © CARTO © OSM',maxZoom:8,className:'tile-relief'
 }).addTo(map);
+
+/* City view (zoom ≥ 9): streets for itinerary planning, warm-tinted */
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png',{
+  attribution:'© <a href="https://carto.com">CARTO</a> © OSM',minZoom:9,maxZoom:18,subdomains:'abcd',className:'tile-warm'
+}).addTo(map);
+
+L.control.scale({imperial:false,position:'bottomright'}).addTo(map);
 
 markerLayer=L.layerGroup().addTo(map);
 
@@ -239,12 +313,18 @@ async function loadBoundary(){
     const holes=coords.map(poly=>poly[0].map(pt=>[pt[1],pt[0]])); // exterior rings → [lat,lng]
     const world=[[-89,-179],[-89,179],[89,179],[89,-179]];
     L.polygon([world,...holes],{
-      stroke:false,fillColor:'#B7AE9C',fillOpacity:0.35,interactive:false
+      stroke:false,fillColor:'#8E8471',fillOpacity:0.42,interactive:false
     }).addTo(map);
 
-    // India boundary line + subtle warm fill
+    // Soft outer glow around the boundary
     L.geoJSON(geo,{
-      style:{color:'#7A4A22',weight:2,opacity:0.8,fillColor:'#FFF8EC',fillOpacity:0.12},
+      style:{color:'#B5452A',weight:7,opacity:0.16,fill:false},
+      interactive:false
+    }).addTo(map);
+
+    // India boundary line + warm inner glow fill
+    L.geoJSON(geo,{
+      style:{color:'#6E3D1B',weight:2.2,opacity:0.9,fillColor:'#FFF4DE',fillOpacity:0.14},
       interactive:false
     }).addTo(map);
   }catch(e){console.warn('Boundary not loaded:',e.message)}
@@ -332,7 +412,7 @@ async function loadData(){
   }catch(e){
     console.warn('places.json not reachable:',e.message);
     places=[];
-    document.getElementById('placeCount').textContent='Could not load places.json — check the file exists in your repo.';
+    document.getElementById('placeCountText').textContent='Could not load places.json — check the file exists in your repo.';
   }
   document.getElementById('loader').style.display='none';
   render();
@@ -411,11 +491,14 @@ function render(){
     const card=document.createElement('div');
     card.className='place-card';
     card.innerHTML=`<div class="pc-swatch" style="background:${c.color}">${ICONS[p.cat]||ICONS.scenic}</div><div><h3>${p.name}</h3><div class="pc-state">${p.state}</div><p>${p.desc}</p></div>`;
-    card.onclick=()=>{map.setView([p.lat,p.lng],10);m.openPopup()};
+    card.onclick=()=>{
+      if(isMobile()){document.body.classList.remove('list-open');setTimeout(()=>map.invalidateSize(),50)}
+      map.setView([p.lat,p.lng],10);m.openPopup();
+    };
     listEl.appendChild(card);
   });
 
-  document.getElementById('placeCount').textContent=`Showing ${visible.length} of ${places.length} places`;
+  document.getElementById(`placeCountText`).textContent=`Showing ${visible.length} of ${places.length} places`;
   renderCatBtns();
 }
 
@@ -439,6 +522,20 @@ function toggleAllCats(){
   else{Object.keys(CATS).forEach(k=>activeCats.add(k));btn.textContent='Deselect All'}
   render();
 }
+
+/* Mobile dropdowns */
+const isMobile=()=>window.innerWidth<=760;
+function toggleCatPanel(){
+  if(!isMobile())return;
+  document.querySelector('.filters').classList.toggle('open');
+  setTimeout(()=>map.invalidateSize(),50);
+}
+function togglePlaceList(){
+  if(!isMobile())return;
+  document.body.classList.toggle('list-open');
+  setTimeout(()=>map.invalidateSize(),50);
+}
+window.addEventListener('resize',()=>setTimeout(()=>map.invalidateSize(),100));
 
 /* ═════════════════════════════════════════════════════════
    SUGGEST A PLACE (opens visitor's email client)
