@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "BharatYatra",
-    "contactEmail": "your@email.com",
+    "contactEmail": "utkarsh.khurana@outlook.com",
     "lastUpdated": "2026-08-05",
     "howToUpdate": "Edit this file on GitHub → Commit → site refreshes on next load. Each place needs: name, cat, lat, lng, state, desc. Optional: wiki (Wikipedia article title, used to auto-fetch a photo), img (direct image URL, overrides wiki photo)."
   },
