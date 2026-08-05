@@ -1,54 +1,61 @@
 # BharatYatra — Interactive India Travel Map
 
-A single-page travel planner for India: 145+ curated places across 8 categories, plotted on an interactive map with photos, search, and category filters.
+A travel planner for India: 289+ curated places (and growing) across 8 categories and 34 states/UTs, with marker clustering, state-level lazy loading, Wikipedia photos, and a vintage-atlas map.
 
 ## Deploy in 5 minutes (GitHub Pages)
 
 1. Create a new GitHub repository (e.g. `bharatyatra`)
-2. Upload all three files to the repo root:
-   - `index.html`
-   - `places.json`
-   - `india-boundary.geojson` (official Survey of India boundary — full J&K included)
+2. Upload the entire folder structure:
+   ```
+   index.html
+   india-boundary.geojson
+   generate-data.py
+   data/
+     highlights.json
+     states-index.json
+     states/
+       rj.json, kl.json, up.json, ... (34 state files)
+   ```
 3. Go to **Settings → Pages → Source** → select `main` branch, `/ (root)` → Save
-4. Your site is live at `https://YOUR_USERNAME.github.io/bharatyatra/`
+4. Live at `https://YOUR_USERNAME.github.io/bharatyatra/`
 
-## Updating places (no coding needed)
+## How it works
 
-1. Open `places.json` in your repo → click the ✏️ pencil icon
-2. Add a new entry to the `"places"` array:
+- **Country view**: shows 153 highlight places, clustered into coloured groups so the map stays clean even with thousands of pins.
+- **Zoom into a state**: the site auto-loads that state's full dataset (lazy). A dropdown also lets visitors pick a state directly.
+- **Category pills + State dropdown**: work together as filters. Both update the sidebar list and map markers.
+- **Pin click**: fetches a photo from Wikipedia (via the `wiki` field) and shows it in the popup.
 
-```json
-{"name":"My New Place","cat":"scenic","lat":28.61,"lng":77.20,"state":"Delhi","desc":"One-line description","wiki":"Wikipedia_Article_Title"}
-```
+## Adding places (scaling to 10k+)
 
-3. Commit — the live site picks it up on the next page load.
+### Quick add (one place)
+Edit the relevant state file (e.g. `data/states/rj.json`) on GitHub, add an entry to its `places` array, commit. Done.
+
+### Bulk add (using the generator)
+1. Open `generate-data.py` locally
+2. Add entries to the `PLACES` list:
+   ```python
+   ("Place Name", "category", lat, lng, "STATE_CODE", "Description", "Wikipedia_Article", True/False),
+   #                                                                                       ^ highlight?
+   ```
+3. Run `python generate-data.py` — it regenerates all files in `data/`
+4. Commit and push the updated `data/` folder
 
 ### Field reference
 
-| Field  | Required | Notes |
-|--------|----------|-------|
-| name   | ✔ | Display name |
-| cat    | ✔ | One of: `scenic` `religious` `fauna` `history` `arts` `cuisine` `adventure` `festivals` |
-| lat, lng | ✔ | Right-click a spot on Google Maps → first line shows them |
-| state  | ✔ | State or region shown in the popup |
-| desc   | ✔ | One-line description |
-| wiki   | optional | Wikipedia article title (the part after `/wiki/` in the URL). Used to auto-fetch a photo for the popup |
-| img    | optional | Direct image URL — overrides the Wikipedia photo |
+| Field     | Required | Notes |
+|-----------|----------|-------|
+| name      | ✔ | Display name |
+| cat       | ✔ | `scenic` `religious` `fauna` `history` `arts` `cuisine` `adventure` `festivals` |
+| lat, lng  | ✔ | Coordinates |
+| stateCode | ✔ | Two-letter code (see `generate-data.py` for the full list) |
+| state     | ✔ | Full state name |
+| desc      | ✔ | One-line description |
+| wiki      | opt | Wikipedia article title → auto-fetches photo |
+| img       | opt | Direct image URL → overrides wiki photo |
 
-### Adding a new category
+### Highlight vs. detail
+Set `highlight=True` in the generator for places that should appear at the country zoom level. Everything else loads only when users zoom into that state or select it from the dropdown.
 
-Add it to the `"categories"` object in `places.json`:
-
-```json
-"beaches": { "label": "Beaches & Coast", "color": "#0E7490" }
-```
-
-Then use `"cat":"beaches"` in places. (The category will use the default mountain icon unless you add a matching SVG in `index.html` → `ICONS`.)
-
-### Changing your contact email
-
-Edit `meta.contactEmail` in `places.json`. The "Suggest a Place" button opens visitors' email clients with a pre-filled template addressed to it.
-
-## How images work
-
-When a visitor clicks a pin, the site queries the free Wikipedia REST API using the place's `wiki` field and shows the article's lead photo. No image hosting, no API keys. If a place has an `img` URL, that's used instead. If neither yields a photo, the popup simply shows text.
+## Changing contact email
+Edit `CONTACT_EMAIL` in `index.html` (line ~3 of the script block).

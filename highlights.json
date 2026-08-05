@@ -1,0 +1,1535 @@
+{
+ "places": [
+  {
+   "name": "Amber Fort",
+   "cat": "history",
+   "lat": 26.99,
+   "lng": 75.85,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Hilltop fort of mirrored halls above Maota Lake",
+   "wiki": "Amer_Fort"
+  },
+  {
+   "name": "Hawa Mahal",
+   "cat": "history",
+   "lat": 26.92,
+   "lng": 75.83,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Palace of Winds \u2014 953 honeycomb windows",
+   "wiki": "Hawa_Mahal"
+  },
+  {
+   "name": "Mehrangarh Fort",
+   "cat": "history",
+   "lat": 26.3,
+   "lng": 73.02,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Towering fortress above the Blue City",
+   "wiki": "Mehrangarh"
+  },
+  {
+   "name": "Jaisalmer Fort",
+   "cat": "history",
+   "lat": 26.91,
+   "lng": 70.91,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Living golden fort \u2014 families still reside within",
+   "wiki": "Jaisalmer_Fort"
+  },
+  {
+   "name": "Chittorgarh Fort",
+   "cat": "history",
+   "lat": 24.88,
+   "lng": 74.64,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Largest fort in India \u2014 Rajput saga",
+   "wiki": "Chittorgarh_Fort"
+  },
+  {
+   "name": "Udaipur City Palace",
+   "cat": "history",
+   "lat": 24.58,
+   "lng": 73.68,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Lake-facing palace of Mewar dynasty",
+   "wiki": "City_Palace,_Udaipur"
+  },
+  {
+   "name": "Ajmer Sharif Dargah",
+   "cat": "religious",
+   "lat": 26.46,
+   "lng": 74.63,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Sufi dargah of Moinuddin Chishti",
+   "wiki": "Ajmer_Sharif_Dargah"
+  },
+  {
+   "name": "Ranthambore NP",
+   "cat": "fauna",
+   "lat": 26.02,
+   "lng": 76.5,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Tigers among ancient fort ruins",
+   "wiki": "Ranthambore_National_Park"
+  },
+  {
+   "name": "Keoladeo Ghana NP",
+   "cat": "fauna",
+   "lat": 27.16,
+   "lng": 77.52,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "UNESCO bird paradise \u2014 Siberian cranes",
+   "wiki": "Keoladeo_National_Park"
+  },
+  {
+   "name": "Pushkar Camel Fair",
+   "cat": "festivals",
+   "lat": 26.49,
+   "lng": 74.55,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "World's largest camel fair",
+   "wiki": "Pushkar_Fair"
+  },
+  {
+   "name": "Jaisalmer Desert Festival",
+   "cat": "festivals",
+   "lat": 26.92,
+   "lng": 70.91,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Folk performances on moonlit dunes",
+   "wiki": "Jaisalmer"
+  },
+  {
+   "name": "Jaipur Block Printing",
+   "cat": "arts",
+   "lat": 26.9,
+   "lng": 75.82,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Sanganer and Bagru hand-block traditions",
+   "wiki": "Sanganer"
+  },
+  {
+   "name": "Rajasthani Thali",
+   "cat": "cuisine",
+   "lat": 26.91,
+   "lng": 75.8,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Dal-baati-churma and ghewar",
+   "wiki": "Rajasthani_cuisine"
+  },
+  {
+   "name": "Munnar",
+   "cat": "scenic",
+   "lat": 10.09,
+   "lng": 77.06,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Rolling tea plantations in the Western Ghats",
+   "wiki": "Munnar"
+  },
+  {
+   "name": "Alleppey Backwaters",
+   "cat": "scenic",
+   "lat": 9.49,
+   "lng": 76.33,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Houseboat cruises through palm-fringed canals",
+   "wiki": "Alappuzha"
+  },
+  {
+   "name": "Fort Kochi",
+   "cat": "history",
+   "lat": 9.97,
+   "lng": 76.24,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Chinese fishing nets and colonial heritage",
+   "wiki": "Fort_Kochi"
+  },
+  {
+   "name": "Padmanabhaswamy Temple",
+   "cat": "religious",
+   "lat": 8.48,
+   "lng": 76.94,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Richest temple in the world \u2014 Vishnu reclining",
+   "wiki": "Padmanabhaswamy_Temple"
+  },
+  {
+   "name": "Sabarimala",
+   "cat": "religious",
+   "lat": 9.43,
+   "lng": 77.08,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Forest shrine of Ayyappa \u2014 millions trek",
+   "wiki": "Sabarimala"
+  },
+  {
+   "name": "Periyar NP",
+   "cat": "fauna",
+   "lat": 9.47,
+   "lng": 77.17,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Elephants along a tranquil reservoir",
+   "wiki": "Periyar_National_Park"
+  },
+  {
+   "name": "Eravikulam NP",
+   "cat": "fauna",
+   "lat": 10.17,
+   "lng": 77.04,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Nilgiri tahr on grassy peaks",
+   "wiki": "Eravikulam_National_Park"
+  },
+  {
+   "name": "Thrissur Pooram",
+   "cat": "festivals",
+   "lat": 10.52,
+   "lng": 76.21,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Elephant procession with parasols and drums",
+   "wiki": "Thrissur_Pooram"
+  },
+  {
+   "name": "Onam",
+   "cat": "festivals",
+   "lat": 9.95,
+   "lng": 76.27,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Harvest festival \u2014 boat races and sadhya feast",
+   "wiki": "Onam"
+  },
+  {
+   "name": "Malabar Cuisine",
+   "cat": "cuisine",
+   "lat": 11.25,
+   "lng": 75.78,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Appam-stew and Malabar biryani",
+   "wiki": "Malabar_cuisine"
+  },
+  {
+   "name": "Taj Mahal",
+   "cat": "history",
+   "lat": 27.17,
+   "lng": 78.04,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Mughal marble masterpiece",
+   "wiki": "Taj_Mahal"
+  },
+  {
+   "name": "Fatehpur Sikri",
+   "cat": "history",
+   "lat": 27.09,
+   "lng": 77.66,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Akbar's abandoned sandstone capital",
+   "wiki": "Fatehpur_Sikri"
+  },
+  {
+   "name": "Sarnath",
+   "cat": "history",
+   "lat": 25.38,
+   "lng": 83.02,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Buddha's first sermon site",
+   "wiki": "Sarnath"
+  },
+  {
+   "name": "Varanasi",
+   "cat": "religious",
+   "lat": 25.32,
+   "lng": 83.01,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Oldest living city \u2014 Ganga Aarti",
+   "wiki": "Varanasi"
+  },
+  {
+   "name": "Vrindavan",
+   "cat": "religious",
+   "lat": 27.58,
+   "lng": 77.7,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Land of Krishna \u2014 Holi celebrations",
+   "wiki": "Vrindavan"
+  },
+  {
+   "name": "Dudhwa NP",
+   "cat": "fauna",
+   "lat": 28.5,
+   "lng": 80.68,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Swamp deer and rhino reintroduction",
+   "wiki": "Dudhwa_National_Park"
+  },
+  {
+   "name": "Kumbh Mela Prayagraj",
+   "cat": "festivals",
+   "lat": 25.43,
+   "lng": 81.85,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Largest human gathering on earth",
+   "wiki": "Kumbh_Mela"
+  },
+  {
+   "name": "Holi in Barsana",
+   "cat": "festivals",
+   "lat": 27.65,
+   "lng": 77.38,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Lathmar Holi \u2014 colour like nowhere else",
+   "wiki": "Barsana"
+  },
+  {
+   "name": "Lucknow Chikankari",
+   "cat": "arts",
+   "lat": 26.85,
+   "lng": 80.95,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Delicate white embroidery",
+   "wiki": "Chikan_(embroidery)"
+  },
+  {
+   "name": "Banarasi Silk",
+   "cat": "arts",
+   "lat": 25.3,
+   "lng": 83.0,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Gold zari brocade weaving",
+   "wiki": "Banarasi_sari"
+  },
+  {
+   "name": "Moradabad Brass",
+   "cat": "arts",
+   "lat": 28.83,
+   "lng": 78.78,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Intricate metalwork and engraving",
+   "wiki": "Moradabad"
+  },
+  {
+   "name": "Old Delhi Food Trail",
+   "cat": "cuisine",
+   "lat": 28.65,
+   "lng": 77.23,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "Chandni Chowk \u2014 kebabs and paranthas",
+   "wiki": "Chandni_Chowk"
+  },
+  {
+   "name": "Lucknow Awadhi",
+   "cat": "cuisine",
+   "lat": 26.85,
+   "lng": 80.94,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Tunday kebabs and Nawabi biryanis",
+   "wiki": "Awadhi_cuisine"
+  },
+  {
+   "name": "Khajuraho",
+   "cat": "history",
+   "lat": 24.85,
+   "lng": 79.93,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Medieval temples with erotic sculpture",
+   "wiki": "Khajuraho_Group_of_Monuments"
+  },
+  {
+   "name": "Sanchi Stupa",
+   "cat": "history",
+   "lat": 23.48,
+   "lng": 77.74,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "3rd century BCE Buddhist monument",
+   "wiki": "Sanchi"
+  },
+  {
+   "name": "Bhimbetka Caves",
+   "cat": "history",
+   "lat": 22.94,
+   "lng": 77.61,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "30,000-year-old rock shelter paintings",
+   "wiki": "Bhimbetka_rock_shelters"
+  },
+  {
+   "name": "Bandhavgarh NP",
+   "cat": "fauna",
+   "lat": 23.72,
+   "lng": 80.96,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Highest tiger density in India",
+   "wiki": "Bandhavgarh_National_Park"
+  },
+  {
+   "name": "Kanha NP",
+   "cat": "fauna",
+   "lat": 22.33,
+   "lng": 80.63,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Jungle Book country",
+   "wiki": "Kanha_Tiger_Reserve"
+  },
+  {
+   "name": "Pench NP",
+   "cat": "fauna",
+   "lat": 21.72,
+   "lng": 79.3,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Rich tiger territory",
+   "wiki": "Pench_National_Park"
+  },
+  {
+   "name": "Satpura NP",
+   "cat": "fauna",
+   "lat": 22.52,
+   "lng": 77.87,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Walking safaris and canoe rides",
+   "wiki": "Satpura_National_Park"
+  },
+  {
+   "name": "Indore Street Food",
+   "cat": "cuisine",
+   "lat": 22.72,
+   "lng": 75.86,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Poha-jalebi and Sarafa night bazaar",
+   "wiki": "Indore"
+  },
+  {
+   "name": "Hampi",
+   "cat": "history",
+   "lat": 15.33,
+   "lng": 76.46,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Vijayanagara Empire ruins",
+   "wiki": "Hampi"
+  },
+  {
+   "name": "Mysore Palace",
+   "cat": "history",
+   "lat": 12.31,
+   "lng": 76.66,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Indo-Saracenic palace \u2014 100,000 bulbs",
+   "wiki": "Mysore_Palace"
+  },
+  {
+   "name": "Coorg",
+   "cat": "scenic",
+   "lat": 12.42,
+   "lng": 75.74,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Misty coffee estates and waterfalls",
+   "wiki": "Kodagu_district"
+  },
+  {
+   "name": "Nagarhole NP",
+   "cat": "fauna",
+   "lat": 12.05,
+   "lng": 76.1,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Tigers, elephants, and gaur",
+   "wiki": "Nagarhole_National_Park"
+  },
+  {
+   "name": "Bandipur NP",
+   "cat": "fauna",
+   "lat": 11.67,
+   "lng": 76.63,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Nilgiri Biosphere tiger reserve",
+   "wiki": "Bandipur_National_Park"
+  },
+  {
+   "name": "Dandeli",
+   "cat": "fauna",
+   "lat": 15.24,
+   "lng": 74.62,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Black panther sightings",
+   "wiki": "Dandeli"
+  },
+  {
+   "name": "Mysore Dasara",
+   "cat": "festivals",
+   "lat": 12.31,
+   "lng": 76.66,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "10-day royal celebration",
+   "wiki": "Mysore_Dasara"
+  },
+  {
+   "name": "Channapatna Toys",
+   "cat": "arts",
+   "lat": 12.65,
+   "lng": 77.21,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Lacquered wooden toys \u2014 GI-tagged",
+   "wiki": "Channapatna_toys"
+  },
+  {
+   "name": "Mysore Painting",
+   "cat": "arts",
+   "lat": 12.3,
+   "lng": 76.64,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Gold-leaf classical painting",
+   "wiki": "Mysore_painting"
+  },
+  {
+   "name": "Bidriware",
+   "cat": "arts",
+   "lat": 17.91,
+   "lng": 77.52,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Silver-inlaid black metal craft",
+   "wiki": "Bidriware"
+  },
+  {
+   "name": "Coorg Cuisine",
+   "cat": "cuisine",
+   "lat": 12.42,
+   "lng": 75.73,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Pandi curry and estate coffee",
+   "wiki": "Kodava_cuisine"
+  },
+  {
+   "name": "Brihadisvara Temple",
+   "cat": "history",
+   "lat": 10.78,
+   "lng": 79.13,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "1,000-year-old Chola granite masterwork",
+   "wiki": "Brihadisvara_Temple,_Thanjavur"
+  },
+  {
+   "name": "Mahabalipuram",
+   "cat": "history",
+   "lat": 12.62,
+   "lng": 80.19,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Pallava shore temples and reliefs",
+   "wiki": "Mahabalipuram"
+  },
+  {
+   "name": "Madurai Meenakshi",
+   "cat": "religious",
+   "lat": 9.92,
+   "lng": 78.12,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Towering gopurams \u2014 painted sculptures",
+   "wiki": "Meenakshi_Temple"
+  },
+  {
+   "name": "Rameswaram",
+   "cat": "religious",
+   "lat": 9.29,
+   "lng": 79.31,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Island temple \u2014 Char Dham",
+   "wiki": "Ramanathaswamy_Temple"
+  },
+  {
+   "name": "Ooty",
+   "cat": "scenic",
+   "lat": 11.41,
+   "lng": 76.69,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Nilgiri queen \u2014 gardens and toy train",
+   "wiki": "Ooty"
+  },
+  {
+   "name": "Kodaikanal",
+   "cat": "scenic",
+   "lat": 10.24,
+   "lng": 77.49,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Princess of hill stations",
+   "wiki": "Kodaikanal"
+  },
+  {
+   "name": "Kanchipuram Silk",
+   "cat": "arts",
+   "lat": 12.83,
+   "lng": 79.71,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Temple town \u2014 handwoven silk sarees",
+   "wiki": "Kanchipuram_silk_sari"
+  },
+  {
+   "name": "Kalamkari",
+   "cat": "arts",
+   "lat": 13.75,
+   "lng": 79.7,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Hand-painted temple cloth art",
+   "wiki": "Kalamkari"
+  },
+  {
+   "name": "Chennai South Indian",
+   "cat": "cuisine",
+   "lat": 13.08,
+   "lng": 80.27,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Filter coffee, dosas, Chettinad",
+   "wiki": "Tamil_cuisine"
+  },
+  {
+   "name": "Coonoor Tea",
+   "cat": "cuisine",
+   "lat": 11.35,
+   "lng": 76.8,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Nilgiri tea estate tastings",
+   "wiki": "Nilgiri_tea"
+  },
+  {
+   "name": "Ajanta Caves",
+   "cat": "history",
+   "lat": 20.55,
+   "lng": 75.7,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Rock-cut Buddhist cave paintings",
+   "wiki": "Ajanta_Caves"
+  },
+  {
+   "name": "Ellora Caves",
+   "cat": "history",
+   "lat": 20.03,
+   "lng": 75.18,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Kailasa temple carved from one rock",
+   "wiki": "Ellora_Caves"
+  },
+  {
+   "name": "Shirdi",
+   "cat": "religious",
+   "lat": 19.77,
+   "lng": 74.48,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Sai Baba shrine",
+   "wiki": "Shirdi"
+  },
+  {
+   "name": "Lonavala",
+   "cat": "scenic",
+   "lat": 18.75,
+   "lng": 73.41,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Monsoon cliffs near Mumbai",
+   "wiki": "Lonavala"
+  },
+  {
+   "name": "Tadoba NP",
+   "cat": "fauna",
+   "lat": 20.23,
+   "lng": 79.35,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Jewel of Vidarbha \u2014 thriving tigers",
+   "wiki": "Tadoba_Andhari_Tiger_Reserve"
+  },
+  {
+   "name": "Mumbai Street Food",
+   "cat": "cuisine",
+   "lat": 18.94,
+   "lng": 72.83,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Vada pav, pav bhaji, bhel",
+   "wiki": "Street_food_of_Mumbai"
+  },
+  {
+   "name": "Victoria Memorial",
+   "cat": "history",
+   "lat": 22.55,
+   "lng": 88.34,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "White marble monument in Kolkata",
+   "wiki": "Victoria_Memorial,_Kolkata"
+  },
+  {
+   "name": "Darjeeling",
+   "cat": "scenic",
+   "lat": 27.04,
+   "lng": 88.26,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Sunrise over Kanchenjunga",
+   "wiki": "Darjeeling"
+  },
+  {
+   "name": "Sundarbans",
+   "cat": "fauna",
+   "lat": 21.95,
+   "lng": 89.18,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Largest mangrove \u2014 Royal Bengal tigers",
+   "wiki": "Sundarbans_National_Park"
+  },
+  {
+   "name": "Durga Puja",
+   "cat": "festivals",
+   "lat": 22.57,
+   "lng": 88.36,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Grand artistic pandals across Kolkata",
+   "wiki": "Durga_Puja"
+  },
+  {
+   "name": "Gangasagar Mela",
+   "cat": "festivals",
+   "lat": 21.63,
+   "lng": 88.08,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Where Ganga meets the sea",
+   "wiki": "Gangasagar"
+  },
+  {
+   "name": "Kolkata Bengali",
+   "cat": "cuisine",
+   "lat": 22.57,
+   "lng": 88.36,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Fish curry, mishti doi, kathi rolls",
+   "wiki": "Bengali_cuisine"
+  },
+  {
+   "name": "Gir NP",
+   "cat": "fauna",
+   "lat": 21.12,
+   "lng": 70.79,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Last Asiatic lion refuge",
+   "wiki": "Gir_National_Park"
+  },
+  {
+   "name": "Little Rann of Kutch",
+   "cat": "fauna",
+   "lat": 23.2,
+   "lng": 71.6,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Wild ass on salt flats",
+   "wiki": "Indian_Wild_Ass_Sanctuary"
+  },
+  {
+   "name": "Rani ki Vav",
+   "cat": "history",
+   "lat": 23.86,
+   "lng": 72.1,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "UNESCO stepwell seven stories deep",
+   "wiki": "Rani_ki_Vav"
+  },
+  {
+   "name": "Dwarka",
+   "cat": "religious",
+   "lat": 22.24,
+   "lng": 68.97,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Krishna's legendary kingdom",
+   "wiki": "Dwarka"
+  },
+  {
+   "name": "Somnath",
+   "cat": "religious",
+   "lat": 20.89,
+   "lng": 70.4,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "First of twelve jyotirlingas",
+   "wiki": "Somnath_temple"
+  },
+  {
+   "name": "Palitana",
+   "cat": "religious",
+   "lat": 21.52,
+   "lng": 71.82,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "863 Jain temples on Shatrunjaya",
+   "wiki": "Palitana_temples"
+  },
+  {
+   "name": "Rann Utsav",
+   "cat": "festivals",
+   "lat": 23.85,
+   "lng": 69.5,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "White desert moonlight festival",
+   "wiki": "Rann_Utsav"
+  },
+  {
+   "name": "Kutch Handicrafts",
+   "cat": "arts",
+   "lat": 23.73,
+   "lng": 69.86,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Mirror work, bandhani, Rogan art",
+   "wiki": "Kutch_district"
+  },
+  {
+   "name": "Patan Patola",
+   "cat": "arts",
+   "lat": 23.85,
+   "lng": 72.13,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Double-ikat silk weaving",
+   "wiki": "Patola_sari"
+  },
+  {
+   "name": "Gujarati Thali",
+   "cat": "cuisine",
+   "lat": 23.02,
+   "lng": 72.57,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Fafda-jalebi, dhokla, thali culture",
+   "wiki": "Gujarati_cuisine"
+  },
+  {
+   "name": "Leh",
+   "cat": "scenic",
+   "lat": 34.16,
+   "lng": 77.58,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "High-altitude desert capital",
+   "wiki": "Leh"
+  },
+  {
+   "name": "Pangong Tso",
+   "cat": "scenic",
+   "lat": 33.76,
+   "lng": 78.65,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Shimmering blue lake",
+   "wiki": "Pangong_Tso"
+  },
+  {
+   "name": "Nubra Valley",
+   "cat": "scenic",
+   "lat": 34.68,
+   "lng": 77.57,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Sand dunes and camels",
+   "wiki": "Nubra_Valley"
+  },
+  {
+   "name": "Hemis NP",
+   "cat": "fauna",
+   "lat": 33.67,
+   "lng": 77.6,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Snow leopard habitat",
+   "wiki": "Hemis_National_Park"
+  },
+  {
+   "name": "Hemis Festival",
+   "cat": "festivals",
+   "lat": 33.78,
+   "lng": 77.37,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Masked dances at monastery",
+   "wiki": "Hemis_Monastery"
+  },
+  {
+   "name": "Chadar Trek",
+   "cat": "adventure",
+   "lat": 33.5,
+   "lng": 76.85,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Frozen river walk",
+   "wiki": "Zanskar"
+  },
+  {
+   "name": "Stok Kangri",
+   "cat": "adventure",
+   "lat": 33.98,
+   "lng": 77.47,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Non-technical 6,153 m summit",
+   "wiki": "Stok_Kangri"
+  },
+  {
+   "name": "Markha Valley",
+   "cat": "adventure",
+   "lat": 33.85,
+   "lng": 77.3,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Classic Ladakhi tea-house trek",
+   "wiki": "Markha_Valley"
+  },
+  {
+   "name": "Dal Lake",
+   "cat": "scenic",
+   "lat": 34.09,
+   "lng": 74.84,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Iconic houseboat lake",
+   "wiki": "Dal_Lake"
+  },
+  {
+   "name": "Gulmarg",
+   "cat": "scenic",
+   "lat": 34.05,
+   "lng": 74.38,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Snow meadows and gondola",
+   "wiki": "Gulmarg"
+  },
+  {
+   "name": "Sonamarg",
+   "cat": "scenic",
+   "lat": 34.3,
+   "lng": 75.29,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Meadow of gold",
+   "wiki": "Sonamarg"
+  },
+  {
+   "name": "Amarnath",
+   "cat": "religious",
+   "lat": 34.21,
+   "lng": 75.5,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Ice lingam cave shrine",
+   "wiki": "Amarnath_Temple"
+  },
+  {
+   "name": "Vaishno Devi",
+   "cat": "religious",
+   "lat": 33.03,
+   "lng": 74.95,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Mountain shrine \u2014 8 million pilgrims/year",
+   "wiki": "Vaishno_Devi"
+  },
+  {
+   "name": "Manali",
+   "cat": "scenic",
+   "lat": 32.24,
+   "lng": 77.19,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Rohtang gateway",
+   "wiki": "Manali"
+  },
+  {
+   "name": "Shimla",
+   "cat": "scenic",
+   "lat": 31.1,
+   "lng": 77.17,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Colonial ridge town",
+   "wiki": "Shimla"
+  },
+  {
+   "name": "Spiti Valley",
+   "cat": "scenic",
+   "lat": 32.25,
+   "lng": 78.03,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Cold desert monasteries",
+   "wiki": "Spiti_Valley"
+  },
+  {
+   "name": "Bir Billing",
+   "cat": "adventure",
+   "lat": 31.88,
+   "lng": 76.72,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "World Cup paragliding",
+   "wiki": "Bir,_Himachal_Pradesh"
+  },
+  {
+   "name": "Hampta Pass",
+   "cat": "adventure",
+   "lat": 32.35,
+   "lng": 77.25,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Kullu-to-Lahaul crossover",
+   "wiki": "Hampta_Pass"
+  },
+  {
+   "name": "Pin Parvati Pass",
+   "cat": "adventure",
+   "lat": 31.93,
+   "lng": 77.6,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "High-altitude crossover",
+   "wiki": "Pin_Parvati_Pass"
+  },
+  {
+   "name": "Valley of Flowers",
+   "cat": "scenic",
+   "lat": 30.73,
+   "lng": 79.6,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "UNESCO alpine meadow",
+   "wiki": "Valley_of_Flowers_National_Park"
+  },
+  {
+   "name": "Chopta-Tungnath",
+   "cat": "scenic",
+   "lat": 30.49,
+   "lng": 79.22,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "World's highest Shiva temple",
+   "wiki": "Tungnath"
+  },
+  {
+   "name": "Auli",
+   "cat": "scenic",
+   "lat": 30.53,
+   "lng": 79.57,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Himalayan ski slopes",
+   "wiki": "Auli,_Uttarakhand"
+  },
+  {
+   "name": "Nainital",
+   "cat": "scenic",
+   "lat": 29.38,
+   "lng": 79.46,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Crescent lake hill station",
+   "wiki": "Nainital"
+  },
+  {
+   "name": "Rishikesh",
+   "cat": "religious",
+   "lat": 30.09,
+   "lng": 78.27,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Yoga capital on the Ganges",
+   "wiki": "Rishikesh"
+  },
+  {
+   "name": "Kedarnath",
+   "cat": "religious",
+   "lat": 30.73,
+   "lng": 79.07,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Himalayan jyotirlinga at 3,583 m",
+   "wiki": "Kedarnath_Temple"
+  },
+  {
+   "name": "Badrinath",
+   "cat": "religious",
+   "lat": 30.74,
+   "lng": 79.49,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Char Dham shrine",
+   "wiki": "Badrinath_Temple"
+  },
+  {
+   "name": "Haridwar",
+   "cat": "religious",
+   "lat": 29.95,
+   "lng": 78.16,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Where Ganga meets the plains",
+   "wiki": "Haridwar"
+  },
+  {
+   "name": "Jim Corbett NP",
+   "cat": "fauna",
+   "lat": 29.53,
+   "lng": 78.77,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "India's oldest tiger park",
+   "wiki": "Jim_Corbett_National_Park"
+  },
+  {
+   "name": "Roopkund Trek",
+   "cat": "adventure",
+   "lat": 30.26,
+   "lng": 79.73,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Skeleton lake at 5,029 m",
+   "wiki": "Roopkund"
+  },
+  {
+   "name": "Rishikesh Rafting",
+   "cat": "adventure",
+   "lat": 30.1,
+   "lng": 78.3,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Ganges white water",
+   "wiki": "Rishikesh"
+  },
+  {
+   "name": "Kedarkantha Trek",
+   "cat": "adventure",
+   "lat": 31.03,
+   "lng": 78.18,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Winter summit through snow forests",
+   "wiki": "Kedarkantha"
+  },
+  {
+   "name": "Dudhsagar Falls",
+   "cat": "adventure",
+   "lat": 15.31,
+   "lng": 74.31,
+   "state": "Goa",
+   "stateCode": "GA",
+   "desc": "310 m four-tier waterfall",
+   "wiki": "Dudhsagar_Falls"
+  },
+  {
+   "name": "Goan Coastal",
+   "cat": "cuisine",
+   "lat": 15.5,
+   "lng": 73.83,
+   "state": "Goa",
+   "stateCode": "GA",
+   "desc": "Vindaloo, xacuti, seafood",
+   "wiki": "Goan_cuisine"
+  },
+  {
+   "name": "Goa Carnival",
+   "cat": "festivals",
+   "lat": 15.5,
+   "lng": 73.83,
+   "state": "Goa",
+   "stateCode": "GA",
+   "desc": "Portuguese-legacy float parade",
+   "wiki": "Goa_Carnival"
+  },
+  {
+   "name": "Konark Sun Temple",
+   "cat": "history",
+   "lat": 19.89,
+   "lng": 86.09,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "13th-century chariot temple",
+   "wiki": "Konark_Sun_Temple"
+  },
+  {
+   "name": "Puri Jagannath",
+   "cat": "religious",
+   "lat": 19.81,
+   "lng": 85.83,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Rath Yatra chariot festival",
+   "wiki": "Jagannath_Temple,_Puri"
+  },
+  {
+   "name": "Raghurajpur",
+   "cat": "arts",
+   "lat": 19.88,
+   "lng": 85.55,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Heritage crafts village \u2014 Pattachitra",
+   "wiki": "Raghurajpur"
+  },
+  {
+   "name": "Golconda Fort",
+   "cat": "history",
+   "lat": 17.38,
+   "lng": 78.4,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Acoustic marvels and diamond legacy",
+   "wiki": "Golconda_Fort"
+  },
+  {
+   "name": "Hyderabadi Biryani",
+   "cat": "cuisine",
+   "lat": 17.39,
+   "lng": 78.49,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Dum biryani and haleem",
+   "wiki": "Hyderabadi_biryani"
+  },
+  {
+   "name": "Pochampally Ikat",
+   "cat": "arts",
+   "lat": 17.35,
+   "lng": 78.83,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Geometric weaving \u2014 UNESCO",
+   "wiki": "Pochampally_sari"
+  },
+  {
+   "name": "Tirupati",
+   "cat": "religious",
+   "lat": 13.63,
+   "lng": 79.42,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "World's most visited pilgrimage site",
+   "wiki": "Venkateswara_Temple,_Tirumala"
+  },
+  {
+   "name": "Araku Valley",
+   "cat": "scenic",
+   "lat": 18.33,
+   "lng": 82.87,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Coffee-growing valley",
+   "wiki": "Araku_Valley"
+  },
+  {
+   "name": "Kalamkari Srikalahasti",
+   "cat": "arts",
+   "lat": 13.75,
+   "lng": 79.7,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Hand-painted cloth art",
+   "wiki": "Kalamkari"
+  },
+  {
+   "name": "Golden Temple",
+   "cat": "religious",
+   "lat": 31.62,
+   "lng": 74.88,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Harmandir Sahib \u2014 Sikhism's holiest",
+   "wiki": "Golden_Temple"
+  },
+  {
+   "name": "Amritsari Food",
+   "cat": "cuisine",
+   "lat": 31.63,
+   "lng": 74.87,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Kulcha-chole and lassi",
+   "wiki": "Punjabi_cuisine"
+  },
+  {
+   "name": "Bodh Gaya",
+   "cat": "religious",
+   "lat": 24.7,
+   "lng": 84.99,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Buddha's enlightenment site",
+   "wiki": "Bodh_Gaya"
+  },
+  {
+   "name": "Nalanda",
+   "cat": "history",
+   "lat": 25.14,
+   "lng": 85.45,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "World's first university",
+   "wiki": "Nalanda"
+  },
+  {
+   "name": "Madhubani Painting",
+   "cat": "arts",
+   "lat": 26.37,
+   "lng": 86.07,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Mithila folk painting",
+   "wiki": "Madhubani_art"
+  },
+  {
+   "name": "Kaziranga NP",
+   "cat": "fauna",
+   "lat": 26.57,
+   "lng": 93.17,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "One-horned rhinoceros",
+   "wiki": "Kaziranga_National_Park"
+  },
+  {
+   "name": "Manas NP",
+   "cat": "fauna",
+   "lat": 26.66,
+   "lng": 91.0,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "UNESCO \u2014 pygmy hog and golden langur",
+   "wiki": "Manas_National_Park"
+  },
+  {
+   "name": "Kamakhya Temple",
+   "cat": "religious",
+   "lat": 26.17,
+   "lng": 91.7,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Shakti Peeth hilltop temple",
+   "wiki": "Kamakhya_Temple"
+  },
+  {
+   "name": "Cherrapunji",
+   "cat": "scenic",
+   "lat": 25.27,
+   "lng": 91.73,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "Living root bridges",
+   "wiki": "Cherrapunji"
+  },
+  {
+   "name": "Dawki River",
+   "cat": "scenic",
+   "lat": 25.18,
+   "lng": 92.02,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "Crystal-clear river",
+   "wiki": "Dawki"
+  },
+  {
+   "name": "Meghalaya Caves",
+   "cat": "adventure",
+   "lat": 25.3,
+   "lng": 91.5,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "India's longest limestone caves",
+   "wiki": "Krem_Liat_Prah"
+  },
+  {
+   "name": "Gangtok",
+   "cat": "scenic",
+   "lat": 27.33,
+   "lng": 88.62,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "Kanchenjunga views",
+   "wiki": "Gangtok"
+  },
+  {
+   "name": "Gurudongmar Lake",
+   "cat": "scenic",
+   "lat": 28.03,
+   "lng": 88.71,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "Sacred lake at 5,183 m",
+   "wiki": "Gurudongmar_Lake"
+  },
+  {
+   "name": "Tawang",
+   "cat": "scenic",
+   "lat": 27.58,
+   "lng": 91.87,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Dramatic monastery",
+   "wiki": "Tawang"
+  },
+  {
+   "name": "Ziro Valley",
+   "cat": "scenic",
+   "lat": 27.55,
+   "lng": 93.83,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Apatani rice paddies",
+   "wiki": "Ziro"
+  },
+  {
+   "name": "Ziro Music Festival",
+   "cat": "festivals",
+   "lat": 27.55,
+   "lng": 93.83,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Indie music in rice fields",
+   "wiki": "Ziro_Festival_of_Music"
+  },
+  {
+   "name": "Hornbill Festival",
+   "cat": "festivals",
+   "lat": 25.67,
+   "lng": 94.12,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "Festival of Festivals",
+   "wiki": "Hornbill_Festival"
+  },
+  {
+   "name": "Dzukou Valley",
+   "cat": "adventure",
+   "lat": 25.57,
+   "lng": 93.9,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "Valley of flowers",
+   "wiki": "Dz%C3%BCkou_Valley"
+  },
+  {
+   "name": "Red Fort",
+   "cat": "history",
+   "lat": 28.66,
+   "lng": 77.24,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "Mughal citadel",
+   "wiki": "Red_Fort"
+  },
+  {
+   "name": "Qutub Minar",
+   "cat": "history",
+   "lat": 28.52,
+   "lng": 77.19,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "73 m victory tower",
+   "wiki": "Qutb_Minar"
+  },
+  {
+   "name": "Old Delhi Food",
+   "cat": "cuisine",
+   "lat": 28.65,
+   "lng": 77.23,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "Chandni Chowk kebabs and paranthas",
+   "wiki": "Chandni_Chowk"
+  },
+  {
+   "name": "Havelock Island",
+   "cat": "scenic",
+   "lat": 12.03,
+   "lng": 92.98,
+   "state": "Andaman & Nicobar",
+   "stateCode": "AN",
+   "desc": "Radhanagar Beach",
+   "wiki": "Havelock_Island"
+  },
+  {
+   "name": "Agatti Island",
+   "cat": "scenic",
+   "lat": 10.85,
+   "lng": 72.18,
+   "state": "Lakshadweep",
+   "stateCode": "LD",
+   "desc": "Coral atoll with lagoon",
+   "wiki": "Agatti"
+  }
+ ],
+ "total": 289
+}
