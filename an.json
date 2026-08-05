@@ -1,0 +1,56 @@
+{
+ "state": "Andaman & Nicobar",
+ "code": "AN",
+ "places": [
+  {
+   "name": "Havelock Island",
+   "cat": "scenic",
+   "lat": 12.03,
+   "lng": 92.98,
+   "state": "Andaman & Nicobar",
+   "stateCode": "AN",
+   "desc": "Radhanagar Beach",
+   "wiki": "Havelock_Island"
+  },
+  {
+   "name": "Ross Island",
+   "cat": "history",
+   "lat": 11.68,
+   "lng": 92.76,
+   "state": "Andaman & Nicobar",
+   "stateCode": "AN",
+   "desc": "British colonial ruins in jungle",
+   "wiki": "Ross_Island_(Andaman)"
+  },
+  {
+   "name": "Cellular Jail",
+   "cat": "history",
+   "lat": 11.68,
+   "lng": 92.75,
+   "state": "Andaman & Nicobar",
+   "stateCode": "AN",
+   "desc": "Kala Pani \u2014 freedom fighter prison",
+   "wiki": "Cellular_Jail"
+  },
+  {
+   "name": "Barren Island",
+   "cat": "scenic",
+   "lat": 12.28,
+   "lng": 93.86,
+   "state": "Andaman & Nicobar",
+   "stateCode": "AN",
+   "desc": "India's only active volcano",
+   "wiki": "Barren_Island"
+  },
+  {
+   "name": "Scuba Neil Island",
+   "cat": "adventure",
+   "lat": 11.83,
+   "lng": 93.05,
+   "state": "Andaman & Nicobar",
+   "stateCode": "AN",
+   "desc": "Pristine coral reef diving",
+   "wiki": "Neil_Island"
+  }
+ ]
+}

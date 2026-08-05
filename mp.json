@@ -1,0 +1,176 @@
+{
+ "state": "Madhya Pradesh",
+ "code": "MP",
+ "places": [
+  {
+   "name": "Khajuraho",
+   "cat": "history",
+   "lat": 24.85,
+   "lng": 79.93,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Medieval temples with erotic sculpture",
+   "wiki": "Khajuraho_Group_of_Monuments"
+  },
+  {
+   "name": "Sanchi Stupa",
+   "cat": "history",
+   "lat": 23.48,
+   "lng": 77.74,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "3rd century BCE Buddhist monument",
+   "wiki": "Sanchi"
+  },
+  {
+   "name": "Gwalior Fort",
+   "cat": "history",
+   "lat": 26.23,
+   "lng": 78.17,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Hilltop fortress spanning centuries",
+   "wiki": "Gwalior_Fort"
+  },
+  {
+   "name": "Orchha",
+   "cat": "history",
+   "lat": 25.35,
+   "lng": 78.64,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Bundela dynasty palaces on the Betwa",
+   "wiki": "Orchha"
+  },
+  {
+   "name": "Mandu",
+   "cat": "history",
+   "lat": 22.36,
+   "lng": 75.4,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Afghan ruins and Baz Bahadur's love story",
+   "wiki": "Mandu,_Madhya_Pradesh"
+  },
+  {
+   "name": "Bhimbetka Caves",
+   "cat": "history",
+   "lat": 22.94,
+   "lng": 77.61,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "30,000-year-old rock shelter paintings",
+   "wiki": "Bhimbetka_rock_shelters"
+  },
+  {
+   "name": "Bandhavgarh NP",
+   "cat": "fauna",
+   "lat": 23.72,
+   "lng": 80.96,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Highest tiger density in India",
+   "wiki": "Bandhavgarh_National_Park"
+  },
+  {
+   "name": "Kanha NP",
+   "cat": "fauna",
+   "lat": 22.33,
+   "lng": 80.63,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Jungle Book country",
+   "wiki": "Kanha_Tiger_Reserve"
+  },
+  {
+   "name": "Pench NP",
+   "cat": "fauna",
+   "lat": 21.72,
+   "lng": 79.3,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Rich tiger territory",
+   "wiki": "Pench_National_Park"
+  },
+  {
+   "name": "Satpura NP",
+   "cat": "fauna",
+   "lat": 22.52,
+   "lng": 77.87,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Walking safaris and canoe rides",
+   "wiki": "Satpura_National_Park"
+  },
+  {
+   "name": "Panna NP",
+   "cat": "fauna",
+   "lat": 24.72,
+   "lng": 80.07,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Diamond mines and tiger habitat",
+   "wiki": "Panna_National_Park"
+  },
+  {
+   "name": "Pachmarhi",
+   "cat": "scenic",
+   "lat": 22.47,
+   "lng": 78.43,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Queen of Satpura \u2014 waterfalls and caves",
+   "wiki": "Pachmarhi"
+  },
+  {
+   "name": "Ujjain Mahakal",
+   "cat": "religious",
+   "lat": 23.18,
+   "lng": 75.77,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "One of 12 jyotirlingas \u2014 Kumbh city",
+   "wiki": "Mahakaleshwar_Jyotirlinga"
+  },
+  {
+   "name": "Omkareshwar",
+   "cat": "religious",
+   "lat": 22.24,
+   "lng": 76.15,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Island shaped like Om \u2014 jyotirlinga",
+   "wiki": "Omkareshwar"
+  },
+  {
+   "name": "Indore Street Food",
+   "cat": "cuisine",
+   "lat": 22.72,
+   "lng": 75.86,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Poha-jalebi and Sarafa night bazaar",
+   "wiki": "Indore"
+  },
+  {
+   "name": "Bhopal Gosht Korma",
+   "cat": "cuisine",
+   "lat": 23.26,
+   "lng": 77.41,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Rich Nawabi meat preparations",
+   "wiki": "Bhopali_cuisine"
+  },
+  {
+   "name": "Chanderi Weaving",
+   "cat": "arts",
+   "lat": 24.72,
+   "lng": 78.13,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Gossamer fabric woven since Vedic times",
+   "wiki": "Chanderi_sari"
+  }
+ ]
+}

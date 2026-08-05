@@ -1,0 +1,156 @@
+{
+ "state": "Maharashtra",
+ "code": "MH",
+ "places": [
+  {
+   "name": "Ajanta Caves",
+   "cat": "history",
+   "lat": 20.55,
+   "lng": 75.7,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Rock-cut Buddhist cave paintings",
+   "wiki": "Ajanta_Caves"
+  },
+  {
+   "name": "Ellora Caves",
+   "cat": "history",
+   "lat": 20.03,
+   "lng": 75.18,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Kailasa temple carved from one rock",
+   "wiki": "Ellora_Caves"
+  },
+  {
+   "name": "Gateway of India",
+   "cat": "history",
+   "lat": 18.92,
+   "lng": 72.83,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Iconic Mumbai waterfront arch",
+   "wiki": "Gateway_of_India"
+  },
+  {
+   "name": "Shaniwar Wada",
+   "cat": "history",
+   "lat": 18.52,
+   "lng": 73.86,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Peshwa Maratha fortified palace in Pune",
+   "wiki": "Shaniwar_Wada"
+  },
+  {
+   "name": "Raigad Fort",
+   "cat": "history",
+   "lat": 18.23,
+   "lng": 73.45,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Shivaji's coronation hill fortress",
+   "wiki": "Raigad_Fort"
+  },
+  {
+   "name": "Shirdi",
+   "cat": "religious",
+   "lat": 19.77,
+   "lng": 74.48,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Sai Baba shrine",
+   "wiki": "Shirdi"
+  },
+  {
+   "name": "Trimbakeshwar",
+   "cat": "religious",
+   "lat": 19.93,
+   "lng": 73.53,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "One of 12 jyotirlingas near Nashik",
+   "wiki": "Trimbakeshwar_Shiva_Temple"
+  },
+  {
+   "name": "Lonavala",
+   "cat": "scenic",
+   "lat": 18.75,
+   "lng": 73.41,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Monsoon cliffs near Mumbai",
+   "wiki": "Lonavala"
+  },
+  {
+   "name": "Mahabaleshwar",
+   "cat": "scenic",
+   "lat": 17.92,
+   "lng": 73.66,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Strawberry fields and valley viewpoints",
+   "wiki": "Mahabaleshwar"
+  },
+  {
+   "name": "Tadoba NP",
+   "cat": "fauna",
+   "lat": 20.23,
+   "lng": 79.35,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Jewel of Vidarbha \u2014 thriving tigers",
+   "wiki": "Tadoba_Andhari_Tiger_Reserve"
+  },
+  {
+   "name": "Sanjay Gandhi NP",
+   "cat": "fauna",
+   "lat": 19.22,
+   "lng": 72.91,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Leopards inside Mumbai city limits",
+   "wiki": "Sanjay_Gandhi_National_Park"
+  },
+  {
+   "name": "Mumbai Street Food",
+   "cat": "cuisine",
+   "lat": 18.94,
+   "lng": 72.83,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Vada pav, pav bhaji, bhel",
+   "wiki": "Street_food_of_Mumbai"
+  },
+  {
+   "name": "Paithani Weaving",
+   "cat": "arts",
+   "lat": 19.48,
+   "lng": 75.38,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "2,000-year-old silk-cotton saree tradition",
+   "wiki": "Paithani"
+  },
+  {
+   "name": "Warli Art",
+   "cat": "arts",
+   "lat": 19.9,
+   "lng": 73.1,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Tribal geometric painting tradition",
+   "wiki": "Warli_painting"
+  },
+  {
+   "name": "Ganesh Chaturthi",
+   "cat": "festivals",
+   "lat": 18.94,
+   "lng": 72.83,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Mumbai's grand Ganpati processions",
+   "wiki": "Ganesh_Chaturthi"
+  }
+ ]
+}

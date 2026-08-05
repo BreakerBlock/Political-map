@@ -1,0 +1,316 @@
+{
+ "state": "Rajasthan",
+ "code": "RJ",
+ "places": [
+  {
+   "name": "Amber Fort",
+   "cat": "history",
+   "lat": 26.99,
+   "lng": 75.85,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Hilltop fort of mirrored halls above Maota Lake",
+   "wiki": "Amer_Fort"
+  },
+  {
+   "name": "Hawa Mahal",
+   "cat": "history",
+   "lat": 26.92,
+   "lng": 75.83,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Palace of Winds \u2014 953 honeycomb windows",
+   "wiki": "Hawa_Mahal"
+  },
+  {
+   "name": "Mehrangarh Fort",
+   "cat": "history",
+   "lat": 26.3,
+   "lng": 73.02,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Towering fortress above the Blue City",
+   "wiki": "Mehrangarh"
+  },
+  {
+   "name": "City Palace Jaipur",
+   "cat": "history",
+   "lat": 26.93,
+   "lng": 75.82,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Royal Kachwaha palace museum in the Pink City",
+   "wiki": "City_Palace,_Jaipur"
+  },
+  {
+   "name": "Jantar Mantar Jaipur",
+   "cat": "history",
+   "lat": 26.92,
+   "lng": 75.82,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "World's largest stone astronomical instruments",
+   "wiki": "Jantar_Mantar,_Jaipur"
+  },
+  {
+   "name": "Nahargarh Fort",
+   "cat": "history",
+   "lat": 26.94,
+   "lng": 75.82,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Eagle's nest fort with sunset views of Jaipur",
+   "wiki": "Nahargarh_Fort"
+  },
+  {
+   "name": "Jaisalmer Fort",
+   "cat": "history",
+   "lat": 26.91,
+   "lng": 70.91,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Living golden fort \u2014 families still reside within",
+   "wiki": "Jaisalmer_Fort"
+  },
+  {
+   "name": "Chittorgarh Fort",
+   "cat": "history",
+   "lat": 24.88,
+   "lng": 74.64,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Largest fort in India \u2014 Rajput saga",
+   "wiki": "Chittorgarh_Fort"
+  },
+  {
+   "name": "Kumbhalgarh Fort",
+   "cat": "history",
+   "lat": 25.15,
+   "lng": 73.58,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "36 km walls \u2014 second longest after Great Wall",
+   "wiki": "Kumbhalgarh"
+  },
+  {
+   "name": "Udaipur City Palace",
+   "cat": "history",
+   "lat": 24.58,
+   "lng": 73.68,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Lake-facing palace of Mewar dynasty",
+   "wiki": "City_Palace,_Udaipur"
+  },
+  {
+   "name": "Ranakpur Jain Temple",
+   "cat": "religious",
+   "lat": 25.11,
+   "lng": 73.47,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "1444 uniquely carved marble pillars",
+   "wiki": "Ranakpur_Jain_temple"
+  },
+  {
+   "name": "Pushkar Lake",
+   "cat": "religious",
+   "lat": 26.49,
+   "lng": 74.55,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Sacred lake with 52 bathing ghats",
+   "wiki": "Pushkar_Lake"
+  },
+  {
+   "name": "Ajmer Sharif Dargah",
+   "cat": "religious",
+   "lat": 26.46,
+   "lng": 74.63,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Sufi dargah of Moinuddin Chishti",
+   "wiki": "Ajmer_Sharif_Dargah"
+  },
+  {
+   "name": "Ranthambore NP",
+   "cat": "fauna",
+   "lat": 26.02,
+   "lng": 76.5,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Tigers among ancient fort ruins",
+   "wiki": "Ranthambore_National_Park"
+  },
+  {
+   "name": "Sariska Tiger Reserve",
+   "cat": "fauna",
+   "lat": 27.33,
+   "lng": 76.4,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Reintroduced tigers and leopards near Delhi",
+   "wiki": "Sariska_Tiger_Reserve"
+  },
+  {
+   "name": "Keoladeo Ghana NP",
+   "cat": "fauna",
+   "lat": 27.16,
+   "lng": 77.52,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "UNESCO bird paradise \u2014 Siberian cranes",
+   "wiki": "Keoladeo_National_Park"
+  },
+  {
+   "name": "Desert NP Jaisalmer",
+   "cat": "fauna",
+   "lat": 26.75,
+   "lng": 70.5,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Great Indian Bustard habitat in the Thar",
+   "wiki": "Desert_National_Park"
+  },
+  {
+   "name": "Sam Sand Dunes",
+   "cat": "scenic",
+   "lat": 26.9,
+   "lng": 70.6,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Camel safaris and desert sunsets",
+   "wiki": "Sam_sand_dunes"
+  },
+  {
+   "name": "Pushkar Camel Fair",
+   "cat": "festivals",
+   "lat": 26.49,
+   "lng": 74.55,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "World's largest camel fair",
+   "wiki": "Pushkar_Fair"
+  },
+  {
+   "name": "Jaisalmer Desert Festival",
+   "cat": "festivals",
+   "lat": 26.92,
+   "lng": 70.91,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Folk performances on moonlit dunes",
+   "wiki": "Jaisalmer"
+  },
+  {
+   "name": "Mewar Festival Udaipur",
+   "cat": "festivals",
+   "lat": 24.58,
+   "lng": 73.68,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Spring celebration by Gangaur procession",
+   "wiki": "Gangaur"
+  },
+  {
+   "name": "Jaipur Block Printing",
+   "cat": "arts",
+   "lat": 26.9,
+   "lng": 75.82,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Sanganer and Bagru hand-block traditions",
+   "wiki": "Sanganer"
+  },
+  {
+   "name": "Jaipur Blue Pottery",
+   "cat": "arts",
+   "lat": 26.92,
+   "lng": 75.78,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Persian-origin turquoise glazed pottery craft",
+   "wiki": "Jaipur_blue_pottery"
+  },
+  {
+   "name": "Jodhpur Bandhani",
+   "cat": "arts",
+   "lat": 26.24,
+   "lng": 73.02,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Resist-dyeing technique creating intricate patterns",
+   "wiki": "Bandhani"
+  },
+  {
+   "name": "Rajasthani Thali",
+   "cat": "cuisine",
+   "lat": 26.91,
+   "lng": 75.8,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Dal-baati-churma and ghewar",
+   "wiki": "Rajasthani_cuisine"
+  },
+  {
+   "name": "Jodhpur Mirchi Vada",
+   "cat": "cuisine",
+   "lat": 26.24,
+   "lng": 73.02,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Stuffed chilli fritter \u2014 local favourite",
+   "wiki": "Mirchi_Bada"
+  },
+  {
+   "name": "Bikaner Bhujia",
+   "cat": "cuisine",
+   "lat": 28.02,
+   "lng": 73.31,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Legendary namkeen snacks of Bikaner",
+   "wiki": "Bikaneri_bhujia"
+  },
+  {
+   "name": "Jaipur Ghewar",
+   "cat": "cuisine",
+   "lat": 26.92,
+   "lng": 75.79,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Honeycomb disc dessert soaked in syrup",
+   "wiki": "Ghewar"
+  },
+  {
+   "name": "Mount Abu",
+   "cat": "scenic",
+   "lat": 24.59,
+   "lng": 72.71,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Rajasthan's only hill station with Dilwara Temples",
+   "wiki": "Mount_Abu"
+  },
+  {
+   "name": "Bundi Stepwells",
+   "cat": "history",
+   "lat": 25.44,
+   "lng": 75.63,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "84-pillar stepwell and Taragarh Fort",
+   "wiki": "Bundi"
+  },
+  {
+   "name": "Shekhawati Havelis",
+   "cat": "history",
+   "lat": 27.6,
+   "lng": 75.14,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Open-air art gallery of painted mansions",
+   "wiki": "Shekhawati"
+  }
+ ]
+}

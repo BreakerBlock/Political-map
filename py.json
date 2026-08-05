@@ -1,0 +1,16 @@
+{
+ "state": "Puducherry",
+ "code": "PY",
+ "places": [
+  {
+   "name": "Puducherry French Quarter",
+   "cat": "history",
+   "lat": 11.93,
+   "lng": 79.83,
+   "state": "Puducherry",
+   "stateCode": "PY",
+   "desc": "Colonial streets and caf\u00e9s",
+   "wiki": "Pondicherry"
+  }
+ ]
+}

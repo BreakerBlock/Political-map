@@ -1,0 +1,56 @@
+{
+ "state": "Arunachal Pradesh",
+ "code": "AR",
+ "places": [
+  {
+   "name": "Tawang",
+   "cat": "scenic",
+   "lat": 27.58,
+   "lng": 91.87,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Dramatic monastery",
+   "wiki": "Tawang"
+  },
+  {
+   "name": "Ziro Valley",
+   "cat": "scenic",
+   "lat": 27.55,
+   "lng": 93.83,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Apatani rice paddies",
+   "wiki": "Ziro"
+  },
+  {
+   "name": "Ziro Music Festival",
+   "cat": "festivals",
+   "lat": 27.55,
+   "lng": 93.83,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Indie music in rice fields",
+   "wiki": "Ziro_Festival_of_Music"
+  },
+  {
+   "name": "Sela Pass",
+   "cat": "scenic",
+   "lat": 27.5,
+   "lng": 92.1,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Snow-covered 4,170 m pass",
+   "wiki": "Sela_Pass"
+  },
+  {
+   "name": "Namdapha NP",
+   "cat": "fauna",
+   "lat": 27.5,
+   "lng": 96.4,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Easternmost tiger reserve \u2014 4 big cat species",
+   "wiki": "Namdapha_National_Park"
+  }
+ ]
+}

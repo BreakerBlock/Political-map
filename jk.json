@@ -1,0 +1,76 @@
+{
+ "state": "Jammu & Kashmir",
+ "code": "JK",
+ "places": [
+  {
+   "name": "Dal Lake",
+   "cat": "scenic",
+   "lat": 34.09,
+   "lng": 74.84,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Iconic houseboat lake",
+   "wiki": "Dal_Lake"
+  },
+  {
+   "name": "Gulmarg",
+   "cat": "scenic",
+   "lat": 34.05,
+   "lng": 74.38,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Snow meadows and gondola",
+   "wiki": "Gulmarg"
+  },
+  {
+   "name": "Sonamarg",
+   "cat": "scenic",
+   "lat": 34.3,
+   "lng": 75.29,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Meadow of gold",
+   "wiki": "Sonamarg"
+  },
+  {
+   "name": "Pahalgam",
+   "cat": "scenic",
+   "lat": 34.01,
+   "lng": 75.31,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Aru and Betaab valleys",
+   "wiki": "Pahalgam"
+  },
+  {
+   "name": "Amarnath",
+   "cat": "religious",
+   "lat": 34.21,
+   "lng": 75.5,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Ice lingam cave shrine",
+   "wiki": "Amarnath_Temple"
+  },
+  {
+   "name": "Vaishno Devi",
+   "cat": "religious",
+   "lat": 33.03,
+   "lng": 74.95,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Mountain shrine \u2014 8 million pilgrims/year",
+   "wiki": "Vaishno_Devi"
+  },
+  {
+   "name": "Shalimar Bagh",
+   "cat": "history",
+   "lat": 34.16,
+   "lng": 74.79,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Mughal terraced garden on Dal Lake",
+   "wiki": "Shalimar_Bagh,_Srinagar"
+  }
+ ]
+}

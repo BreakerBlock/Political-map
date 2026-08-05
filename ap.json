@@ -1,0 +1,56 @@
+{
+ "state": "Andhra Pradesh",
+ "code": "AP",
+ "places": [
+  {
+   "name": "Tirupati",
+   "cat": "religious",
+   "lat": 13.63,
+   "lng": 79.42,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "World's most visited pilgrimage site",
+   "wiki": "Venkateswara_Temple,_Tirumala"
+  },
+  {
+   "name": "Araku Valley",
+   "cat": "scenic",
+   "lat": 18.33,
+   "lng": 82.87,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Coffee-growing valley",
+   "wiki": "Araku_Valley"
+  },
+  {
+   "name": "Kalamkari Srikalahasti",
+   "cat": "arts",
+   "lat": 13.75,
+   "lng": 79.7,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Hand-painted cloth art",
+   "wiki": "Kalamkari"
+  },
+  {
+   "name": "Lepakshi",
+   "cat": "history",
+   "lat": 15.98,
+   "lng": 77.61,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Hanging pillar Vijayanagara temple",
+   "wiki": "Lepakshi"
+  },
+  {
+   "name": "Vijayawada Kanaka Durga",
+   "cat": "religious",
+   "lat": 16.52,
+   "lng": 80.62,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Hilltop Durga temple on Krishna River",
+   "wiki": "Kanaka_Durga_Temple"
+  }
+ ]
+}

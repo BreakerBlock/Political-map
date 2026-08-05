@@ -1,0 +1,46 @@
+{
+ "state": "Sikkim",
+ "code": "SK",
+ "places": [
+  {
+   "name": "Gangtok",
+   "cat": "scenic",
+   "lat": 27.33,
+   "lng": 88.62,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "Kanchenjunga views",
+   "wiki": "Gangtok"
+  },
+  {
+   "name": "Gurudongmar Lake",
+   "cat": "scenic",
+   "lat": 28.03,
+   "lng": 88.71,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "Sacred lake at 5,183 m",
+   "wiki": "Gurudongmar_Lake"
+  },
+  {
+   "name": "Pelling",
+   "cat": "scenic",
+   "lat": 27.3,
+   "lng": 88.24,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "Gateway to Kanchenjunga trails",
+   "wiki": "Pelling"
+  },
+  {
+   "name": "Rumtek Monastery",
+   "cat": "religious",
+   "lat": 27.28,
+   "lng": 88.57,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "Kagyu Buddhist seat",
+   "wiki": "Rumtek_Monastery"
+  }
+ ]
+}

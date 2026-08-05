@@ -1,0 +1,26 @@
+{
+ "state": "Tripura",
+ "code": "TR",
+ "places": [
+  {
+   "name": "Tripura Ujjayanta Palace",
+   "cat": "history",
+   "lat": 23.83,
+   "lng": 91.28,
+   "state": "Tripura",
+   "stateCode": "TR",
+   "desc": "Royal lakeside palace",
+   "wiki": "Ujjayanta_Palace"
+  },
+  {
+   "name": "Neer Mahal",
+   "cat": "history",
+   "lat": 23.48,
+   "lng": 91.23,
+   "state": "Tripura",
+   "stateCode": "TR",
+   "desc": "Lake palace of Tripura",
+   "wiki": "Neer_Mahal"
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "state": "Assam",
+ "code": "AS",
+ "places": [
+  {
+   "name": "Kaziranga NP",
+   "cat": "fauna",
+   "lat": 26.57,
+   "lng": 93.17,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "One-horned rhinoceros",
+   "wiki": "Kaziranga_National_Park"
+  },
+  {
+   "name": "Manas NP",
+   "cat": "fauna",
+   "lat": 26.66,
+   "lng": 91.0,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "UNESCO \u2014 pygmy hog and golden langur",
+   "wiki": "Manas_National_Park"
+  },
+  {
+   "name": "Kamakhya Temple",
+   "cat": "religious",
+   "lat": 26.17,
+   "lng": 91.7,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Shakti Peeth hilltop temple",
+   "wiki": "Kamakhya_Temple"
+  },
+  {
+   "name": "Majuli Island",
+   "cat": "scenic",
+   "lat": 26.98,
+   "lng": 94.17,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "World's largest river island",
+   "wiki": "Majuli"
+  },
+  {
+   "name": "Bihu Festival",
+   "cat": "festivals",
+   "lat": 26.14,
+   "lng": 91.74,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Assamese new year celebration",
+   "wiki": "Bihu"
+  },
+  {
+   "name": "Assam Tea",
+   "cat": "cuisine",
+   "lat": 26.8,
+   "lng": 94.2,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Tea garden visits and tasting",
+   "wiki": "Assam_tea"
+  }
+ ]
+}

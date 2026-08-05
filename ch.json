@@ -1,0 +1,16 @@
+{
+ "state": "Chandigarh",
+ "code": "CH",
+ "places": [
+  {
+   "name": "Chandigarh Rock Garden",
+   "cat": "scenic",
+   "lat": 30.75,
+   "lng": 76.81,
+   "state": "Chandigarh",
+   "stateCode": "CH",
+   "desc": "Nek Chand's recycled art park",
+   "wiki": "Rock_Garden_of_Chandigarh"
+  }
+ ]
+}

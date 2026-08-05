@@ -1,0 +1,16 @@
+{
+ "state": "Chhattisgarh",
+ "code": "CG",
+ "places": [
+  {
+   "name": "Chhattisgarh Chitrakote Falls",
+   "cat": "scenic",
+   "lat": 19.2,
+   "lng": 81.7,
+   "state": "Chhattisgarh",
+   "stateCode": "CG",
+   "desc": "Niagara of India",
+   "wiki": "Chitrakote_Falls"
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "state": "Odisha",
+ "code": "OD",
+ "places": [
+  {
+   "name": "Konark Sun Temple",
+   "cat": "history",
+   "lat": 19.89,
+   "lng": 86.09,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "13th-century chariot temple",
+   "wiki": "Konark_Sun_Temple"
+  },
+  {
+   "name": "Puri Jagannath",
+   "cat": "religious",
+   "lat": 19.81,
+   "lng": 85.83,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Rath Yatra chariot festival",
+   "wiki": "Jagannath_Temple,_Puri"
+  },
+  {
+   "name": "Lingaraj Temple",
+   "cat": "religious",
+   "lat": 20.24,
+   "lng": 85.83,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "11th-century Shiva temple in Bhubaneswar",
+   "wiki": "Lingaraja_Temple"
+  },
+  {
+   "name": "Chilika Lake",
+   "cat": "fauna",
+   "lat": 19.72,
+   "lng": 85.32,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Largest coastal lagoon \u2014 flamingos and dolphins",
+   "wiki": "Chilika_Lake"
+  },
+  {
+   "name": "Raghurajpur",
+   "cat": "arts",
+   "lat": 19.88,
+   "lng": 85.55,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Heritage crafts village \u2014 Pattachitra",
+   "wiki": "Raghurajpur"
+  },
+  {
+   "name": "Rath Yatra",
+   "cat": "festivals",
+   "lat": 19.81,
+   "lng": 85.83,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Annual chariot procession of Lord Jagannath",
+   "wiki": "Ratha_Yatra"
+  }
+ ]
+}

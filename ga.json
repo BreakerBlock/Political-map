@@ -1,0 +1,76 @@
+{
+ "state": "Goa",
+ "code": "GA",
+ "places": [
+  {
+   "name": "Basilica of Bom Jesus",
+   "cat": "history",
+   "lat": 15.5,
+   "lng": 73.91,
+   "state": "Goa",
+   "stateCode": "GA",
+   "desc": "UNESCO \u2014 St Francis Xavier's remains",
+   "wiki": "Basilica_of_Bom_Jesus"
+  },
+  {
+   "name": "Fort Aguada",
+   "cat": "history",
+   "lat": 15.49,
+   "lng": 73.77,
+   "state": "Goa",
+   "stateCode": "GA",
+   "desc": "17th-century Portuguese lighthouse fort",
+   "wiki": "Fort_Aguada"
+  },
+  {
+   "name": "Dudhsagar Falls",
+   "cat": "adventure",
+   "lat": 15.31,
+   "lng": 74.31,
+   "state": "Goa",
+   "stateCode": "GA",
+   "desc": "310 m four-tier waterfall",
+   "wiki": "Dudhsagar_Falls"
+  },
+  {
+   "name": "Goan Coastal",
+   "cat": "cuisine",
+   "lat": 15.5,
+   "lng": 73.83,
+   "state": "Goa",
+   "stateCode": "GA",
+   "desc": "Vindaloo, xacuti, seafood",
+   "wiki": "Goan_cuisine"
+  },
+  {
+   "name": "Goa Carnival",
+   "cat": "festivals",
+   "lat": 15.5,
+   "lng": 73.83,
+   "state": "Goa",
+   "stateCode": "GA",
+   "desc": "Portuguese-legacy float parade",
+   "wiki": "Goa_Carnival"
+  },
+  {
+   "name": "Baga Beach",
+   "cat": "scenic",
+   "lat": 15.56,
+   "lng": 73.75,
+   "state": "Goa",
+   "stateCode": "GA",
+   "desc": "Vibrant nightlife beach strip",
+   "wiki": "Baga_Beach"
+  },
+  {
+   "name": "Palolem Beach",
+   "cat": "scenic",
+   "lat": 15.01,
+   "lng": 74.02,
+   "state": "Goa",
+   "stateCode": "GA",
+   "desc": "Crescent-shaped serene beach in South Goa",
+   "wiki": "Palolem"
+  }
+ ]
+}

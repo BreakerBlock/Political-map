@@ -1,0 +1,226 @@
+{
+ "state": "Uttar Pradesh",
+ "code": "UP",
+ "places": [
+  {
+   "name": "Taj Mahal",
+   "cat": "history",
+   "lat": 27.17,
+   "lng": 78.04,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Mughal marble masterpiece",
+   "wiki": "Taj_Mahal"
+  },
+  {
+   "name": "Fatehpur Sikri",
+   "cat": "history",
+   "lat": 27.09,
+   "lng": 77.66,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Akbar's abandoned sandstone capital",
+   "wiki": "Fatehpur_Sikri"
+  },
+  {
+   "name": "Agra Fort",
+   "cat": "history",
+   "lat": 27.18,
+   "lng": 78.02,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Massive Mughal red sandstone fortress",
+   "wiki": "Agra_Fort"
+  },
+  {
+   "name": "Sarnath",
+   "cat": "history",
+   "lat": 25.38,
+   "lng": 83.02,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Buddha's first sermon site",
+   "wiki": "Sarnath"
+  },
+  {
+   "name": "Itmad-ud-Daulah",
+   "cat": "history",
+   "lat": 27.19,
+   "lng": 78.03,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Baby Taj \u2014 jewel box of Mughal art",
+   "wiki": "Tomb_of_I%27tim%C4%81d-ud-Daulah"
+  },
+  {
+   "name": "Lucknow Bara Imambara",
+   "cat": "history",
+   "lat": 26.87,
+   "lng": 80.91,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Labyrinthine Nawabi monument",
+   "wiki": "Bara_Imambara"
+  },
+  {
+   "name": "Varanasi",
+   "cat": "religious",
+   "lat": 25.32,
+   "lng": 83.01,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Oldest living city \u2014 Ganga Aarti",
+   "wiki": "Varanasi"
+  },
+  {
+   "name": "Vrindavan",
+   "cat": "religious",
+   "lat": 27.58,
+   "lng": 77.7,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Land of Krishna \u2014 Holi celebrations",
+   "wiki": "Vrindavan"
+  },
+  {
+   "name": "Mathura",
+   "cat": "religious",
+   "lat": 27.49,
+   "lng": 77.67,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Krishna's birthplace",
+   "wiki": "Mathura"
+  },
+  {
+   "name": "Vindhyachal",
+   "cat": "religious",
+   "lat": 25.06,
+   "lng": 83.15,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Vindhyavasini Shakti Peeth",
+   "wiki": "Vindhyachal"
+  },
+  {
+   "name": "Dudhwa NP",
+   "cat": "fauna",
+   "lat": 28.5,
+   "lng": 80.68,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Swamp deer and rhino reintroduction",
+   "wiki": "Dudhwa_National_Park"
+  },
+  {
+   "name": "Chambal Sanctuary",
+   "cat": "fauna",
+   "lat": 26.65,
+   "lng": 78.95,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Gharial and river dolphins",
+   "wiki": "National_Chambal_Sanctuary"
+  },
+  {
+   "name": "Katarniaghat",
+   "cat": "fauna",
+   "lat": 28.32,
+   "lng": 81.2,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Tigers, dolphins, and gharials",
+   "wiki": "Katarniaghat_Wildlife_Sanctuary"
+  },
+  {
+   "name": "Kumbh Mela Prayagraj",
+   "cat": "festivals",
+   "lat": 25.43,
+   "lng": 81.85,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Largest human gathering on earth",
+   "wiki": "Kumbh_Mela"
+  },
+  {
+   "name": "Holi in Barsana",
+   "cat": "festivals",
+   "lat": 27.65,
+   "lng": 77.38,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Lathmar Holi \u2014 colour like nowhere else",
+   "wiki": "Barsana"
+  },
+  {
+   "name": "Dev Deepawali Varanasi",
+   "cat": "festivals",
+   "lat": 25.32,
+   "lng": 83.01,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Million lamps on the Ganga ghats",
+   "wiki": "Dev_Deepawali"
+  },
+  {
+   "name": "Lucknow Chikankari",
+   "cat": "arts",
+   "lat": 26.85,
+   "lng": 80.95,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Delicate white embroidery",
+   "wiki": "Chikan_(embroidery)"
+  },
+  {
+   "name": "Banarasi Silk",
+   "cat": "arts",
+   "lat": 25.3,
+   "lng": 83.0,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Gold zari brocade weaving",
+   "wiki": "Banarasi_sari"
+  },
+  {
+   "name": "Moradabad Brass",
+   "cat": "arts",
+   "lat": 28.83,
+   "lng": 78.78,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Intricate metalwork and engraving",
+   "wiki": "Moradabad"
+  },
+  {
+   "name": "Firozabad Glass",
+   "cat": "arts",
+   "lat": 27.15,
+   "lng": 78.39,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Bangle-making capital of India",
+   "wiki": "Firozabad"
+  },
+  {
+   "name": "Lucknow Awadhi",
+   "cat": "cuisine",
+   "lat": 26.85,
+   "lng": 80.94,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Tunday kebabs and Nawabi biryanis",
+   "wiki": "Awadhi_cuisine"
+  },
+  {
+   "name": "Agra Petha",
+   "cat": "cuisine",
+   "lat": 27.18,
+   "lng": 78.02,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Translucent ash-gourd sweet",
+   "wiki": "Petha"
+  }
+ ]
+}

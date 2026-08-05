@@ -1,0 +1,56 @@
+{
+ "state": "Meghalaya",
+ "code": "ML",
+ "places": [
+  {
+   "name": "Cherrapunji",
+   "cat": "scenic",
+   "lat": 25.27,
+   "lng": 91.73,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "Living root bridges",
+   "wiki": "Cherrapunji"
+  },
+  {
+   "name": "Dawki River",
+   "cat": "scenic",
+   "lat": 25.18,
+   "lng": 92.02,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "Crystal-clear river",
+   "wiki": "Dawki"
+  },
+  {
+   "name": "Meghalaya Caves",
+   "cat": "adventure",
+   "lat": 25.3,
+   "lng": 91.5,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "India's longest limestone caves",
+   "wiki": "Krem_Liat_Prah"
+  },
+  {
+   "name": "Mawlynnong",
+   "cat": "scenic",
+   "lat": 25.2,
+   "lng": 91.92,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "Cleanest village in Asia",
+   "wiki": "Mawlynnong"
+  },
+  {
+   "name": "Nohkalikai Falls",
+   "cat": "scenic",
+   "lat": 25.28,
+   "lng": 91.69,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "India's tallest plunge waterfall",
+   "wiki": "Nohkalikai_Falls"
+  }
+ ]
+}

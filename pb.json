@@ -1,0 +1,46 @@
+{
+ "state": "Punjab",
+ "code": "PB",
+ "places": [
+  {
+   "name": "Golden Temple",
+   "cat": "religious",
+   "lat": 31.62,
+   "lng": 74.88,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Harmandir Sahib \u2014 Sikhism's holiest",
+   "wiki": "Golden_Temple"
+  },
+  {
+   "name": "Jallianwala Bagh",
+   "cat": "history",
+   "lat": 31.62,
+   "lng": 74.88,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Memorial to the 1919 massacre",
+   "wiki": "Jallianwala_Bagh"
+  },
+  {
+   "name": "Wagah Border",
+   "cat": "history",
+   "lat": 31.6,
+   "lng": 74.57,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Daily flag-lowering ceremony",
+   "wiki": "Wagah_border_ceremony"
+  },
+  {
+   "name": "Amritsari Food",
+   "cat": "cuisine",
+   "lat": 31.63,
+   "lng": 74.87,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Kulcha-chole and lassi",
+   "wiki": "Punjabi_cuisine"
+  }
+ ]
+}

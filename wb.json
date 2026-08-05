@@ -1,0 +1,106 @@
+{
+ "state": "West Bengal",
+ "code": "WB",
+ "places": [
+  {
+   "name": "Victoria Memorial",
+   "cat": "history",
+   "lat": 22.55,
+   "lng": 88.34,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "White marble monument in Kolkata",
+   "wiki": "Victoria_Memorial,_Kolkata"
+  },
+  {
+   "name": "Howrah Bridge",
+   "cat": "history",
+   "lat": 22.58,
+   "lng": 88.35,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Cantilever steel icon over the Hooghly",
+   "wiki": "Howrah_Bridge"
+  },
+  {
+   "name": "Darjeeling",
+   "cat": "scenic",
+   "lat": 27.04,
+   "lng": 88.26,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Sunrise over Kanchenjunga",
+   "wiki": "Darjeeling"
+  },
+  {
+   "name": "Sundarbans",
+   "cat": "fauna",
+   "lat": 21.95,
+   "lng": 89.18,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Largest mangrove \u2014 Royal Bengal tigers",
+   "wiki": "Sundarbans_National_Park"
+  },
+  {
+   "name": "Singalila NP",
+   "cat": "fauna",
+   "lat": 27.05,
+   "lng": 88.0,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Red panda habitat in the eastern Himalayas",
+   "wiki": "Singalila_National_Park"
+  },
+  {
+   "name": "Durga Puja",
+   "cat": "festivals",
+   "lat": 22.57,
+   "lng": 88.36,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Grand artistic pandals across Kolkata",
+   "wiki": "Durga_Puja"
+  },
+  {
+   "name": "Gangasagar Mela",
+   "cat": "festivals",
+   "lat": 21.63,
+   "lng": 88.08,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Where Ganga meets the sea",
+   "wiki": "Gangasagar"
+  },
+  {
+   "name": "Kolkata Bengali",
+   "cat": "cuisine",
+   "lat": 22.57,
+   "lng": 88.36,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Fish curry, mishti doi, kathi rolls",
+   "wiki": "Bengali_cuisine"
+  },
+  {
+   "name": "Shantiniketan Batik",
+   "cat": "arts",
+   "lat": 23.68,
+   "lng": 87.69,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Tagore's art school \u2014 batik and leather",
+   "wiki": "Shantiniketan"
+  },
+  {
+   "name": "Baluchari Saree",
+   "cat": "arts",
+   "lat": 23.24,
+   "lng": 87.87,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Silk sarees with mythological motifs",
+   "wiki": "Baluchari_sari"
+  }
+ ]
+}

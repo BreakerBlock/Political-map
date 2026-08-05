@@ -1,0 +1,16 @@
+{
+ "state": "Lakshadweep",
+ "code": "LD",
+ "places": [
+  {
+   "name": "Agatti Island",
+   "cat": "scenic",
+   "lat": 10.85,
+   "lng": 72.18,
+   "state": "Lakshadweep",
+   "stateCode": "LD",
+   "desc": "Coral atoll with lagoon",
+   "wiki": "Agatti"
+  }
+ ]
+}

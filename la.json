@@ -1,0 +1,116 @@
+{
+ "state": "Ladakh",
+ "code": "LA",
+ "places": [
+  {
+   "name": "Leh",
+   "cat": "scenic",
+   "lat": 34.16,
+   "lng": 77.58,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "High-altitude desert capital",
+   "wiki": "Leh"
+  },
+  {
+   "name": "Pangong Tso",
+   "cat": "scenic",
+   "lat": 33.76,
+   "lng": 78.65,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Shimmering blue lake",
+   "wiki": "Pangong_Tso"
+  },
+  {
+   "name": "Nubra Valley",
+   "cat": "scenic",
+   "lat": 34.68,
+   "lng": 77.57,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Sand dunes and camels",
+   "wiki": "Nubra_Valley"
+  },
+  {
+   "name": "Hemis NP",
+   "cat": "fauna",
+   "lat": 33.67,
+   "lng": 77.6,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Snow leopard habitat",
+   "wiki": "Hemis_National_Park"
+  },
+  {
+   "name": "Hemis Festival",
+   "cat": "festivals",
+   "lat": 33.78,
+   "lng": 77.37,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Masked dances at monastery",
+   "wiki": "Hemis_Monastery"
+  },
+  {
+   "name": "Chadar Trek",
+   "cat": "adventure",
+   "lat": 33.5,
+   "lng": 76.85,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Frozen river walk",
+   "wiki": "Zanskar"
+  },
+  {
+   "name": "Stok Kangri",
+   "cat": "adventure",
+   "lat": 33.98,
+   "lng": 77.47,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Non-technical 6,153 m summit",
+   "wiki": "Stok_Kangri"
+  },
+  {
+   "name": "Markha Valley",
+   "cat": "adventure",
+   "lat": 33.85,
+   "lng": 77.3,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Classic Ladakhi tea-house trek",
+   "wiki": "Markha_Valley"
+  },
+  {
+   "name": "Magnetic Hill",
+   "cat": "scenic",
+   "lat": 34.17,
+   "lng": 77.39,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Optical illusion \u2014 cars appear to roll uphill",
+   "wiki": "Magnetic_Hill,_Leh"
+  },
+  {
+   "name": "Diskit Monastery",
+   "cat": "religious",
+   "lat": 34.55,
+   "lng": 77.56,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Giant Maitreya Buddha overlooking Nubra",
+   "wiki": "Diskit_Monastery"
+  },
+  {
+   "name": "Thiksey Monastery",
+   "cat": "religious",
+   "lat": 33.91,
+   "lng": 77.67,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Mini Potala \u2014 12-storey gompa",
+   "wiki": "Thiksey_Monastery"
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "state": "Manipur",
+ "code": "MN",
+ "places": [
+  {
+   "name": "Manipur Loktak Lake",
+   "cat": "scenic",
+   "lat": 24.55,
+   "lng": 93.8,
+   "state": "Manipur",
+   "stateCode": "MN",
+   "desc": "Floating phumdis on lake",
+   "wiki": "Loktak_Lake"
+  },
+  {
+   "name": "Kangla Fort",
+   "cat": "history",
+   "lat": 24.8,
+   "lng": 93.95,
+   "state": "Manipur",
+   "stateCode": "MN",
+   "desc": "Ancient Meitei royal seat",
+   "wiki": "Kangla_Fort"
+  }
+ ]
+}

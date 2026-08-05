@@ -1,0 +1,126 @@
+{
+ "state": "Himachal Pradesh",
+ "code": "HP",
+ "places": [
+  {
+   "name": "Manali",
+   "cat": "scenic",
+   "lat": 32.24,
+   "lng": 77.19,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Rohtang gateway",
+   "wiki": "Manali"
+  },
+  {
+   "name": "Shimla",
+   "cat": "scenic",
+   "lat": 31.1,
+   "lng": 77.17,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Colonial ridge town",
+   "wiki": "Shimla"
+  },
+  {
+   "name": "Spiti Valley",
+   "cat": "scenic",
+   "lat": 32.25,
+   "lng": 78.03,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Cold desert monasteries",
+   "wiki": "Spiti_Valley"
+  },
+  {
+   "name": "Dharamshala",
+   "cat": "scenic",
+   "lat": 32.22,
+   "lng": 76.32,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Dalai Lama's home in exile",
+   "wiki": "Dharamshala"
+  },
+  {
+   "name": "Kasol",
+   "cat": "scenic",
+   "lat": 32.01,
+   "lng": 77.32,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Backpacker haven in Parvati Valley",
+   "wiki": "Kasol"
+  },
+  {
+   "name": "Bir Billing",
+   "cat": "adventure",
+   "lat": 31.88,
+   "lng": 76.72,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "World Cup paragliding",
+   "wiki": "Bir,_Himachal_Pradesh"
+  },
+  {
+   "name": "Hampta Pass",
+   "cat": "adventure",
+   "lat": 32.35,
+   "lng": 77.25,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Kullu-to-Lahaul crossover",
+   "wiki": "Hampta_Pass"
+  },
+  {
+   "name": "Pin Parvati Pass",
+   "cat": "adventure",
+   "lat": 31.93,
+   "lng": 77.6,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "High-altitude crossover",
+   "wiki": "Pin_Parvati_Pass"
+  },
+  {
+   "name": "Great Himalayan NP",
+   "cat": "fauna",
+   "lat": 31.77,
+   "lng": 77.55,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "UNESCO wilderness \u2014 western tragopan",
+   "wiki": "Great_Himalayan_National_Park"
+  },
+  {
+   "name": "Kullu Dussehra",
+   "cat": "festivals",
+   "lat": 31.96,
+   "lng": 77.11,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Week-long valley-wide Dussehra fair",
+   "wiki": "Kullu_Dussehra"
+  },
+  {
+   "name": "Kinnauri Shawl",
+   "cat": "arts",
+   "lat": 31.58,
+   "lng": 78.17,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Fine woolen weaving of Kinnaur tribe",
+   "wiki": "Kinnauri_shawl"
+  },
+  {
+   "name": "Dham Cuisine",
+   "cat": "cuisine",
+   "lat": 31.96,
+   "lng": 77.11,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Festive leaf-plate meal of the hills",
+   "wiki": "Dham_(food)"
+  }
+ ]
+}

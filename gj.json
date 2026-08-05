@@ -1,0 +1,146 @@
+{
+ "state": "Gujarat",
+ "code": "GJ",
+ "places": [
+  {
+   "name": "Gir NP",
+   "cat": "fauna",
+   "lat": 21.12,
+   "lng": 70.79,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Last Asiatic lion refuge",
+   "wiki": "Gir_National_Park"
+  },
+  {
+   "name": "Little Rann of Kutch",
+   "cat": "fauna",
+   "lat": 23.2,
+   "lng": 71.6,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Wild ass on salt flats",
+   "wiki": "Indian_Wild_Ass_Sanctuary"
+  },
+  {
+   "name": "Rani ki Vav",
+   "cat": "history",
+   "lat": 23.86,
+   "lng": 72.1,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "UNESCO stepwell seven stories deep",
+   "wiki": "Rani_ki_Vav"
+  },
+  {
+   "name": "Dholavira",
+   "cat": "history",
+   "lat": 23.89,
+   "lng": 70.21,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "5,000-year-old Harappan city",
+   "wiki": "Dholavira"
+  },
+  {
+   "name": "Dwarka",
+   "cat": "religious",
+   "lat": 22.24,
+   "lng": 68.97,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Krishna's legendary kingdom",
+   "wiki": "Dwarka"
+  },
+  {
+   "name": "Somnath",
+   "cat": "religious",
+   "lat": 20.89,
+   "lng": 70.4,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "First of twelve jyotirlingas",
+   "wiki": "Somnath_temple"
+  },
+  {
+   "name": "Palitana",
+   "cat": "religious",
+   "lat": 21.52,
+   "lng": 71.82,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "863 Jain temples on Shatrunjaya",
+   "wiki": "Palitana_temples"
+  },
+  {
+   "name": "Rann Utsav",
+   "cat": "festivals",
+   "lat": 23.85,
+   "lng": 69.5,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "White desert moonlight festival",
+   "wiki": "Rann_Utsav"
+  },
+  {
+   "name": "Navratri Garba",
+   "cat": "festivals",
+   "lat": 23.02,
+   "lng": 72.57,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Ahmedabad's all-night dancing",
+   "wiki": "Navratri"
+  },
+  {
+   "name": "Kutch Handicrafts",
+   "cat": "arts",
+   "lat": 23.73,
+   "lng": 69.86,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Mirror work, bandhani, Rogan art",
+   "wiki": "Kutch_district"
+  },
+  {
+   "name": "Patan Patola",
+   "cat": "arts",
+   "lat": 23.85,
+   "lng": 72.13,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Double-ikat silk weaving",
+   "wiki": "Patola_sari"
+  },
+  {
+   "name": "Gujarati Thali",
+   "cat": "cuisine",
+   "lat": 23.02,
+   "lng": 72.57,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Fafda-jalebi, dhokla, thali culture",
+   "wiki": "Gujarati_cuisine"
+  },
+  {
+   "name": "Surat Locho",
+   "cat": "cuisine",
+   "lat": 21.17,
+   "lng": 72.83,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Steamed gram flour street snack",
+   "wiki": "Locho"
+  },
+  {
+   "name": "Champaner-Pavagadh",
+   "cat": "history",
+   "lat": 22.49,
+   "lng": 73.53,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "UNESCO pre-Mughal Islamic city",
+   "wiki": "Champaner-Pavagadh"
+  }
+ ]
+}

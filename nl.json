@@ -1,0 +1,36 @@
+{
+ "state": "Nagaland",
+ "code": "NL",
+ "places": [
+  {
+   "name": "Hornbill Festival",
+   "cat": "festivals",
+   "lat": 25.67,
+   "lng": 94.12,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "Festival of Festivals",
+   "wiki": "Hornbill_Festival"
+  },
+  {
+   "name": "Dzukou Valley",
+   "cat": "adventure",
+   "lat": 25.57,
+   "lng": 93.9,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "Valley of flowers",
+   "wiki": "Dz%C3%BCkou_Valley"
+  },
+  {
+   "name": "Kohima War Cemetery",
+   "cat": "history",
+   "lat": 25.66,
+   "lng": 94.11,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "WWII memorial \u2014 Battle of Kohima",
+   "wiki": "Kohima_War_Cemetery"
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "state": "Telangana",
+ "code": "TS",
+ "places": [
+  {
+   "name": "Golconda Fort",
+   "cat": "history",
+   "lat": 17.38,
+   "lng": 78.4,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Acoustic marvels and diamond legacy",
+   "wiki": "Golconda_Fort"
+  },
+  {
+   "name": "Charminar",
+   "cat": "history",
+   "lat": 17.36,
+   "lng": 78.47,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Iconic Hyderabad monument and bazaar",
+   "wiki": "Charminar"
+  },
+  {
+   "name": "Hyderabadi Biryani",
+   "cat": "cuisine",
+   "lat": 17.39,
+   "lng": 78.49,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Dum biryani and haleem",
+   "wiki": "Hyderabadi_biryani"
+  },
+  {
+   "name": "Pochampally Ikat",
+   "cat": "arts",
+   "lat": 17.35,
+   "lng": 78.83,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Geometric weaving \u2014 UNESCO",
+   "wiki": "Pochampally_sari"
+  },
+  {
+   "name": "Warangal Fort",
+   "cat": "history",
+   "lat": 17.95,
+   "lng": 79.6,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Kakatiya dynasty ruins",
+   "wiki": "Warangal_Fort"
+  },
+  {
+   "name": "Bonalu Festival",
+   "cat": "festivals",
+   "lat": 17.36,
+   "lng": 78.47,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Goddess worship festival of Telangana",
+   "wiki": "Bonalu"
+  }
+ ]
+}

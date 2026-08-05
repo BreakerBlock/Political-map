@@ -1,0 +1,226 @@
+{
+ "state": "Karnataka",
+ "code": "KA",
+ "places": [
+  {
+   "name": "Hampi",
+   "cat": "history",
+   "lat": 15.33,
+   "lng": 76.46,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Vijayanagara Empire ruins",
+   "wiki": "Hampi"
+  },
+  {
+   "name": "Mysore Palace",
+   "cat": "history",
+   "lat": 12.31,
+   "lng": 76.66,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Indo-Saracenic palace \u2014 100,000 bulbs",
+   "wiki": "Mysore_Palace"
+  },
+  {
+   "name": "Badami Caves",
+   "cat": "history",
+   "lat": 15.92,
+   "lng": 75.68,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "6th-century rock-cut temple complex",
+   "wiki": "Badami_cave_temples"
+  },
+  {
+   "name": "Pattadakal",
+   "cat": "history",
+   "lat": 15.95,
+   "lng": 75.82,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "UNESCO Chalukya temple cluster",
+   "wiki": "Pattadakal"
+  },
+  {
+   "name": "Halebidu-Belur",
+   "cat": "history",
+   "lat": 13.21,
+   "lng": 75.99,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Hoysala sculptural pinnacle",
+   "wiki": "Halebidu"
+  },
+  {
+   "name": "Srirangapatna",
+   "cat": "history",
+   "lat": 12.42,
+   "lng": 76.69,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Tipu Sultan's island fortress",
+   "wiki": "Srirangapatna"
+  },
+  {
+   "name": "Bidar Fort",
+   "cat": "history",
+   "lat": 17.91,
+   "lng": 77.52,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Bahmani fortress and Bidriware hometown",
+   "wiki": "Bidar_Fort"
+  },
+  {
+   "name": "Coorg",
+   "cat": "scenic",
+   "lat": 12.42,
+   "lng": 75.74,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Misty coffee estates and waterfalls",
+   "wiki": "Kodagu_district"
+  },
+  {
+   "name": "Jog Falls",
+   "cat": "scenic",
+   "lat": 14.23,
+   "lng": 74.81,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "India's second-highest plunge waterfall",
+   "wiki": "Jog_Falls"
+  },
+  {
+   "name": "Gokarna",
+   "cat": "scenic",
+   "lat": 14.55,
+   "lng": 74.32,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Temple town with pristine beaches",
+   "wiki": "Gokarna"
+  },
+  {
+   "name": "Nagarhole NP",
+   "cat": "fauna",
+   "lat": 12.05,
+   "lng": 76.1,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Tigers, elephants, and gaur",
+   "wiki": "Nagarhole_National_Park"
+  },
+  {
+   "name": "Bandipur NP",
+   "cat": "fauna",
+   "lat": 11.67,
+   "lng": 76.63,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Nilgiri Biosphere tiger reserve",
+   "wiki": "Bandipur_National_Park"
+  },
+  {
+   "name": "Dandeli",
+   "cat": "fauna",
+   "lat": 15.24,
+   "lng": 74.62,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Black panther sightings",
+   "wiki": "Dandeli"
+  },
+  {
+   "name": "BRT Tiger Reserve",
+   "cat": "fauna",
+   "lat": 12.05,
+   "lng": 77.14,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Biligiriranga Hills \u2014 elephants and tigers",
+   "wiki": "Biligiriranga_Hills"
+  },
+  {
+   "name": "Mysore Dasara",
+   "cat": "festivals",
+   "lat": 12.31,
+   "lng": 76.66,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "10-day royal celebration",
+   "wiki": "Mysore_Dasara"
+  },
+  {
+   "name": "Channapatna Toys",
+   "cat": "arts",
+   "lat": 12.65,
+   "lng": 77.21,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Lacquered wooden toys \u2014 GI-tagged",
+   "wiki": "Channapatna_toys"
+  },
+  {
+   "name": "Mysore Painting",
+   "cat": "arts",
+   "lat": 12.3,
+   "lng": 76.64,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Gold-leaf classical painting",
+   "wiki": "Mysore_painting"
+  },
+  {
+   "name": "Bidriware",
+   "cat": "arts",
+   "lat": 17.91,
+   "lng": 77.52,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Silver-inlaid black metal craft",
+   "wiki": "Bidriware"
+  },
+  {
+   "name": "Ilkal Sarees",
+   "cat": "arts",
+   "lat": 15.96,
+   "lng": 75.62,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Distinctive red border handloom cotton",
+   "wiki": "Ilkal_sari"
+  },
+  {
+   "name": "Coorg Cuisine",
+   "cat": "cuisine",
+   "lat": 12.42,
+   "lng": 75.73,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Pandi curry and estate coffee",
+   "wiki": "Kodava_cuisine"
+  },
+  {
+   "name": "Bengaluru Dosa Belt",
+   "cat": "cuisine",
+   "lat": 12.97,
+   "lng": 77.59,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Vidyarthi Bhavan to MTR \u2014 iconic dosa trail",
+   "wiki": "Masala_dosa"
+  },
+  {
+   "name": "Dharwad Pedha",
+   "cat": "cuisine",
+   "lat": 15.46,
+   "lng": 75.01,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Legendary caramelized milk sweet",
+   "wiki": "Dharwad_pedha"
+  }
+ ]
+}

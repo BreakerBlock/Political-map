@@ -1,0 +1,146 @@
+{
+ "state": "Uttarakhand",
+ "code": "UK",
+ "places": [
+  {
+   "name": "Valley of Flowers",
+   "cat": "scenic",
+   "lat": 30.73,
+   "lng": 79.6,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "UNESCO alpine meadow",
+   "wiki": "Valley_of_Flowers_National_Park"
+  },
+  {
+   "name": "Chopta-Tungnath",
+   "cat": "scenic",
+   "lat": 30.49,
+   "lng": 79.22,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "World's highest Shiva temple",
+   "wiki": "Tungnath"
+  },
+  {
+   "name": "Auli",
+   "cat": "scenic",
+   "lat": 30.53,
+   "lng": 79.57,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Himalayan ski slopes",
+   "wiki": "Auli,_Uttarakhand"
+  },
+  {
+   "name": "Nainital",
+   "cat": "scenic",
+   "lat": 29.38,
+   "lng": 79.46,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Crescent lake hill station",
+   "wiki": "Nainital"
+  },
+  {
+   "name": "Rishikesh",
+   "cat": "religious",
+   "lat": 30.09,
+   "lng": 78.27,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Yoga capital on the Ganges",
+   "wiki": "Rishikesh"
+  },
+  {
+   "name": "Kedarnath",
+   "cat": "religious",
+   "lat": 30.73,
+   "lng": 79.07,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Himalayan jyotirlinga at 3,583 m",
+   "wiki": "Kedarnath_Temple"
+  },
+  {
+   "name": "Badrinath",
+   "cat": "religious",
+   "lat": 30.74,
+   "lng": 79.49,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Char Dham shrine",
+   "wiki": "Badrinath_Temple"
+  },
+  {
+   "name": "Haridwar",
+   "cat": "religious",
+   "lat": 29.95,
+   "lng": 78.16,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Where Ganga meets the plains",
+   "wiki": "Haridwar"
+  },
+  {
+   "name": "Jim Corbett NP",
+   "cat": "fauna",
+   "lat": 29.53,
+   "lng": 78.77,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "India's oldest tiger park",
+   "wiki": "Jim_Corbett_National_Park"
+  },
+  {
+   "name": "Rajaji NP",
+   "cat": "fauna",
+   "lat": 30.22,
+   "lng": 78.18,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Elephant reserve near Haridwar",
+   "wiki": "Rajaji_National_Park"
+  },
+  {
+   "name": "Roopkund Trek",
+   "cat": "adventure",
+   "lat": 30.26,
+   "lng": 79.73,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Skeleton lake at 5,029 m",
+   "wiki": "Roopkund"
+  },
+  {
+   "name": "Rishikesh Rafting",
+   "cat": "adventure",
+   "lat": 30.1,
+   "lng": 78.3,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Ganges white water",
+   "wiki": "Rishikesh"
+  },
+  {
+   "name": "Kedarkantha Trek",
+   "cat": "adventure",
+   "lat": 31.03,
+   "lng": 78.18,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Winter summit through snow forests",
+   "wiki": "Kedarkantha"
+  },
+  {
+   "name": "Ganga Dussehra",
+   "cat": "festivals",
+   "lat": 29.95,
+   "lng": 78.16,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Celebrating Ganga's descent to earth",
+   "wiki": "Ganga_Dussehra"
+  }
+ ]
+}

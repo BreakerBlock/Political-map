@@ -1,0 +1,196 @@
+{
+ "state": "Kerala",
+ "code": "KL",
+ "places": [
+  {
+   "name": "Munnar",
+   "cat": "scenic",
+   "lat": 10.09,
+   "lng": 77.06,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Rolling tea plantations in the Western Ghats",
+   "wiki": "Munnar"
+  },
+  {
+   "name": "Alleppey Backwaters",
+   "cat": "scenic",
+   "lat": 9.49,
+   "lng": 76.33,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Houseboat cruises through palm-fringed canals",
+   "wiki": "Alappuzha"
+  },
+  {
+   "name": "Varkala Cliff",
+   "cat": "scenic",
+   "lat": 8.73,
+   "lng": 76.71,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Red laterite cliff above Arabian Sea beach",
+   "wiki": "Varkala"
+  },
+  {
+   "name": "Wayanad",
+   "cat": "scenic",
+   "lat": 11.69,
+   "lng": 76.08,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Mist-laden forests and tribal heritage",
+   "wiki": "Wayanad_district"
+  },
+  {
+   "name": "Fort Kochi",
+   "cat": "history",
+   "lat": 9.97,
+   "lng": 76.24,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Chinese fishing nets and colonial heritage",
+   "wiki": "Fort_Kochi"
+  },
+  {
+   "name": "Padmanabhaswamy Temple",
+   "cat": "religious",
+   "lat": 8.48,
+   "lng": 76.94,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Richest temple in the world \u2014 Vishnu reclining",
+   "wiki": "Padmanabhaswamy_Temple"
+  },
+  {
+   "name": "Sabarimala",
+   "cat": "religious",
+   "lat": 9.43,
+   "lng": 77.08,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Forest shrine of Ayyappa \u2014 millions trek",
+   "wiki": "Sabarimala"
+  },
+  {
+   "name": "Guruvayur Temple",
+   "cat": "religious",
+   "lat": 10.59,
+   "lng": 76.04,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Krishna temple \u2014 one of the most sacred in South India",
+   "wiki": "Guruvayur_Temple"
+  },
+  {
+   "name": "Periyar NP",
+   "cat": "fauna",
+   "lat": 9.47,
+   "lng": 77.17,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Elephants along a tranquil reservoir",
+   "wiki": "Periyar_National_Park"
+  },
+  {
+   "name": "Eravikulam NP",
+   "cat": "fauna",
+   "lat": 10.17,
+   "lng": 77.04,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Nilgiri tahr on grassy peaks",
+   "wiki": "Eravikulam_National_Park"
+  },
+  {
+   "name": "Silent Valley NP",
+   "cat": "fauna",
+   "lat": 11.07,
+   "lng": 76.43,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Last tract of virgin tropical evergreen forest",
+   "wiki": "Silent_Valley_National_Park"
+  },
+  {
+   "name": "Thrissur Pooram",
+   "cat": "festivals",
+   "lat": 10.52,
+   "lng": 76.21,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Elephant procession with parasols and drums",
+   "wiki": "Thrissur_Pooram"
+  },
+  {
+   "name": "Onam",
+   "cat": "festivals",
+   "lat": 9.95,
+   "lng": 76.27,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Harvest festival \u2014 boat races and sadhya feast",
+   "wiki": "Onam"
+  },
+  {
+   "name": "Nehru Trophy Boat Race",
+   "cat": "festivals",
+   "lat": 9.49,
+   "lng": 76.33,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Snake boat race on Punnamada Lake",
+   "wiki": "Nehru_Trophy_Boat_Race"
+  },
+  {
+   "name": "Kerala Mural Art",
+   "cat": "arts",
+   "lat": 10.85,
+   "lng": 76.27,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Temple mural painting tradition",
+   "wiki": "Kerala_mural_painting"
+  },
+  {
+   "name": "Kasaragod Sarees",
+   "cat": "arts",
+   "lat": 12.5,
+   "lng": 75.0,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Handloom cotton weaving tradition",
+   "wiki": "Kasaragod_sari"
+  },
+  {
+   "name": "Malabar Cuisine",
+   "cat": "cuisine",
+   "lat": 11.25,
+   "lng": 75.78,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Appam-stew and Malabar biryani",
+   "wiki": "Malabar_cuisine"
+  },
+  {
+   "name": "Toddy Shop Culture",
+   "cat": "cuisine",
+   "lat": 9.93,
+   "lng": 76.27,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Palm toddy with Kerala seafood",
+   "wiki": "Palm_wine"
+  },
+  {
+   "name": "Banana Chips",
+   "cat": "cuisine",
+   "lat": 8.52,
+   "lng": 76.94,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Kerala's signature snack fried in coconut oil",
+   "wiki": "Banana_chip"
+  }
+ ]
+}

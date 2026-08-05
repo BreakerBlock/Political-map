@@ -1,0 +1,26 @@
+{
+ "state": "Jharkhand",
+ "code": "JH",
+ "places": [
+  {
+   "name": "Jharkhand Baidyanath",
+   "cat": "religious",
+   "lat": 24.49,
+   "lng": 86.7,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "One of 12 jyotirlingas",
+   "wiki": "Baidyanath_Temple"
+  },
+  {
+   "name": "Betla NP",
+   "cat": "fauna",
+   "lat": 23.88,
+   "lng": 84.05,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "Elephant and tiger reserve",
+   "wiki": "Betla_National_Park"
+  }
+ ]
+}

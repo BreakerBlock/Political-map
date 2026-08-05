@@ -1,0 +1,156 @@
+{
+ "state": "Tamil Nadu",
+ "code": "TN",
+ "places": [
+  {
+   "name": "Brihadisvara Temple",
+   "cat": "history",
+   "lat": 10.78,
+   "lng": 79.13,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "1,000-year-old Chola granite masterwork",
+   "wiki": "Brihadisvara_Temple,_Thanjavur"
+  },
+  {
+   "name": "Mahabalipuram",
+   "cat": "history",
+   "lat": 12.62,
+   "lng": 80.19,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Pallava shore temples and reliefs",
+   "wiki": "Mahabalipuram"
+  },
+  {
+   "name": "Madurai Meenakshi",
+   "cat": "religious",
+   "lat": 9.92,
+   "lng": 78.12,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Towering gopurams \u2014 painted sculptures",
+   "wiki": "Meenakshi_Temple"
+  },
+  {
+   "name": "Rameswaram",
+   "cat": "religious",
+   "lat": 9.29,
+   "lng": 79.31,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Island temple \u2014 Char Dham",
+   "wiki": "Ramanathaswamy_Temple"
+  },
+  {
+   "name": "Ooty",
+   "cat": "scenic",
+   "lat": 11.41,
+   "lng": 76.69,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Nilgiri queen \u2014 gardens and toy train",
+   "wiki": "Ooty"
+  },
+  {
+   "name": "Kodaikanal",
+   "cat": "scenic",
+   "lat": 10.24,
+   "lng": 77.49,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Princess of hill stations",
+   "wiki": "Kodaikanal"
+  },
+  {
+   "name": "Kanchipuram Silk",
+   "cat": "arts",
+   "lat": 12.83,
+   "lng": 79.71,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Temple town \u2014 handwoven silk sarees",
+   "wiki": "Kanchipuram_silk_sari"
+  },
+  {
+   "name": "Kalamkari",
+   "cat": "arts",
+   "lat": 13.75,
+   "lng": 79.7,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Hand-painted temple cloth art",
+   "wiki": "Kalamkari"
+  },
+  {
+   "name": "Thanjavur Painting",
+   "cat": "arts",
+   "lat": 10.78,
+   "lng": 79.13,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Gold-foil embossed classical art",
+   "wiki": "Tanjore_painting"
+  },
+  {
+   "name": "Chennai South Indian",
+   "cat": "cuisine",
+   "lat": 13.08,
+   "lng": 80.27,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Filter coffee, dosas, Chettinad",
+   "wiki": "Tamil_cuisine"
+  },
+  {
+   "name": "Chettinad",
+   "cat": "cuisine",
+   "lat": 10.17,
+   "lng": 78.83,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Fiery Chettiar cuisine in mansion country",
+   "wiki": "Chettinad_cuisine"
+  },
+  {
+   "name": "Coonoor Tea",
+   "cat": "cuisine",
+   "lat": 11.35,
+   "lng": 76.8,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Nilgiri tea estate tastings",
+   "wiki": "Nilgiri_tea"
+  },
+  {
+   "name": "Pongal Harvest",
+   "cat": "festivals",
+   "lat": 10.78,
+   "lng": 79.13,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Four-day harvest thanksgiving festival",
+   "wiki": "Thai_Pongal"
+  },
+  {
+   "name": "Mudumalai NP",
+   "cat": "fauna",
+   "lat": 11.57,
+   "lng": 76.53,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Elephant corridor in the Nilgiris",
+   "wiki": "Mudumalai_National_Park"
+  },
+  {
+   "name": "Point Calimere",
+   "cat": "fauna",
+   "lat": 10.3,
+   "lng": 79.86,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Flamingo gathering and mangrove wetlands",
+   "wiki": "Point_Calimere"
+  }
+ ]
+}

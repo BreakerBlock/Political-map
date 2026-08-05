@@ -1,0 +1,16 @@
+{
+ "state": "Mizoram",
+ "code": "MZ",
+ "places": [
+  {
+   "name": "Mizoram Phawngpui",
+   "cat": "scenic",
+   "lat": 22.63,
+   "lng": 93.03,
+   "state": "Mizoram",
+   "stateCode": "MZ",
+   "desc": "Blue Mountain \u2014 highest peak",
+   "wiki": "Phawngpui"
+  }
+ ]
+}

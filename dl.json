@@ -1,0 +1,86 @@
+{
+ "state": "Delhi",
+ "code": "DL",
+ "places": [
+  {
+   "name": "Old Delhi Food Trail",
+   "cat": "cuisine",
+   "lat": 28.65,
+   "lng": 77.23,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "Chandni Chowk \u2014 kebabs and paranthas",
+   "wiki": "Chandni_Chowk"
+  },
+  {
+   "name": "Red Fort",
+   "cat": "history",
+   "lat": 28.66,
+   "lng": 77.24,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "Mughal citadel",
+   "wiki": "Red_Fort"
+  },
+  {
+   "name": "Qutub Minar",
+   "cat": "history",
+   "lat": 28.52,
+   "lng": 77.19,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "73 m victory tower",
+   "wiki": "Qutb_Minar"
+  },
+  {
+   "name": "Humayun's Tomb",
+   "cat": "history",
+   "lat": 28.59,
+   "lng": 77.25,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "Precursor to the Taj Mahal",
+   "wiki": "Humayun%27s_Tomb"
+  },
+  {
+   "name": "India Gate",
+   "cat": "history",
+   "lat": 28.61,
+   "lng": 77.23,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "War memorial on Rajpath",
+   "wiki": "India_Gate"
+  },
+  {
+   "name": "Lotus Temple",
+   "cat": "religious",
+   "lat": 28.55,
+   "lng": 77.26,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "Baha'i House of Worship",
+   "wiki": "Lotus_Temple"
+  },
+  {
+   "name": "Jama Masjid",
+   "cat": "history",
+   "lat": 28.65,
+   "lng": 77.23,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "India's largest mosque",
+   "wiki": "Jama_Masjid,_Delhi"
+  },
+  {
+   "name": "Old Delhi Food",
+   "cat": "cuisine",
+   "lat": 28.65,
+   "lng": 77.23,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "Chandni Chowk kebabs and paranthas",
+   "wiki": "Chandni_Chowk"
+  }
+ ]
+}
