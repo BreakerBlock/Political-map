@@ -82,6 +82,35 @@ header h1 span{color:var(--accent)}
 .pc-state{font-size:0.62rem;color:var(--ink-light);margin-top:1px}
 .place-card p{font-size:0.66rem;color:var(--ink-dim);margin-top:2px;line-height:1.3}
 
+/* ── Trip planner ── */
+.trip{border-bottom:1px solid var(--border-light)}
+.trip-head{width:100%;display:flex;align-items:center;gap:8px;padding:9px 14px;border:none;background:none;font-family:inherit;color:var(--ink);cursor:pointer;text-align:left}
+.trip-head h2{font-family:'Cormorant Garamond',serif;font-size:0.85rem;font-weight:700;color:var(--ink-dim)}
+.trip-n{font-size:0.6rem;font-weight:700;background:var(--accent);color:#fff;border-radius:10px;padding:1px 7px;min-width:18px;text-align:center}
+.trip-n.zero{background:var(--border)}
+.trip-dist{font-size:0.62rem;color:var(--ink-light);margin-left:auto}
+.trip-head .chev{display:block;margin-left:4px}
+.trip.open .trip-head .chev{transform:rotate(180deg)}
+.trip-body{display:none;padding:0 10px 10px}
+.trip.open .trip-body{display:block}
+.trip-empty{font-size:0.68rem;color:var(--ink-dim);padding:2px 4px 4px;line-height:1.4}
+.trip-list{list-style:none;max-height:30vh;overflow-y:auto}
+.trip-stop{display:flex;align-items:center;gap:7px;padding:5px 4px;border-radius:7px}
+.trip-stop+.trip-stop{border-top:1px dashed var(--border-light)}
+.trip-num{width:20px;height:20px;border-radius:50%;color:#fff;font-size:0.62rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trip-name{flex:1;min-width:0;cursor:pointer}
+.trip-name b{display:block;font-size:0.74rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.trip-name span{font-size:0.6rem;color:var(--ink-light)}
+.trip-name:hover b{color:var(--accent)}
+.trip-ctl{border:none;background:none;color:var(--ink-dim);cursor:pointer;width:26px;height:26px;border-radius:6px;font-size:0.8rem;line-height:1;flex-shrink:0}
+.trip-ctl:hover:not(:disabled){background:var(--surface-hover);color:var(--ink)}
+.trip-ctl:disabled{opacity:0.25;cursor:default}
+.trip-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.trip-actions button{flex:1;min-width:0;white-space:nowrap;padding:6px 6px;border-radius:7px;border:1px solid var(--border);background:var(--parchment);color:var(--ink);font-family:inherit;font-size:0.68rem;font-weight:600;cursor:pointer}
+.trip-actions button:hover{border-color:var(--accent);color:var(--accent)}
+.trip-note{font-size:0.6rem;color:var(--ink-light);margin-top:6px;min-height:0.8em}
+.trip-badge{width:18px;height:18px;border-radius:50%;background:var(--ink);color:#fff;border:2px solid #fff;font:700 10px/14px 'DM Sans',sans-serif;text-align:center;box-shadow:0 1px 4px rgba(44,24,16,0.4)}
+
 /* ── Map ── */
 #map{flex:1;background:#AECBCE;position:relative}
 .tile-relief{filter:sepia(0.42) saturate(0.95) hue-rotate(-6deg) brightness(1.05) contrast(1.04)}
@@ -114,6 +143,9 @@ header h1 span{color:var(--accent)}
 .pop-cat{font-size:10px;color:var(--ink-light);text-transform:uppercase;letter-spacing:0.1em;margin-top:3px}
 .pop-state{font-size:12px;color:var(--ink-dim);margin-top:5px}
 .pop-desc{font-size:12px;color:var(--ink-dim);margin-top:6px;line-height:1.45}
+.pop-trip{margin-top:10px;width:100%;padding:7px 10px;border-radius:7px;border:1.5px solid var(--accent);background:var(--surface);color:var(--accent);font-family:inherit;font-size:12px;font-weight:600;cursor:pointer}
+.pop-trip:hover{background:color-mix(in srgb,var(--accent) 8%,var(--surface))}
+.pop-trip.in{background:var(--accent);color:#fff}
 .leaflet-popup-close-button{color:#fff!important;text-shadow:0 1px 3px rgba(0,0,0,0.5);top:6px!important;right:6px!important;font-size:18px!important;z-index:10}
 
 .pin-label{
@@ -138,7 +170,7 @@ body.show-pin-labels .leaflet-tooltip.pin-label{display:block}
 .spinner{width:28px;height:28px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button,a,.place-card,.cat-btn,.trip-name{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 
 @media(max-width:760px){
   body{height:100dvh}
@@ -156,6 +188,9 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
   .filters.open .cat-list{display:flex}
   .search-wrap input{font-size:16px}
   .place-count{cursor:pointer;user-select:none}
+  .trip-head{padding:8px 14px}
+  .trip-list{max-height:22vh}
+  .trip-ctl{width:32px;height:32px}
   .place-list{display:none;max-height:28vh}
   body.list-open .place-list{display:block;overflow-y:auto}
   body.list-open .pc-chev{transform:rotate(180deg)}
@@ -195,6 +230,25 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
     <div class="search-wrap">
       <svg class="s-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>
       <input type="text" id="searchInput" placeholder="Search places, states…" oninput="render()">
+    </div>
+    <div class="trip" id="tripPanel">
+      <button class="trip-head" onclick="toggleTripPanel()" aria-expanded="false" aria-controls="tripBody">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="5" r="2.5"/><path d="M8.5 19H16a3.5 3.5 0 000-7H8a3.5 3.5 0 010-7h7.5"/></svg>
+        <h2>My Trip</h2><span class="trip-n zero" id="tripCount">0</span>
+        <span class="trip-dist" id="tripDist"></span>
+        <svg class="chev" width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="trip-body" id="tripBody">
+        <div class="trip-empty" id="tripEmpty">Open any pin and tap <b>+ Add to trip</b> to start planning. Reorder stops with the arrows.</div>
+        <ol class="trip-list" id="tripList"></ol>
+        <div class="trip-actions" id="tripActions">
+          <button onclick="fitTrip()">Show route</button>
+          <button onclick="shareTrip()">Copy link</button>
+          <button onclick="emailTrip()">Email</button>
+          <button onclick="clearTrip()">Clear</button>
+        </div>
+        <div class="trip-note" id="tripNote"></div>
+      </div>
     </div>
     <div class="place-count" id="placeCount" onclick="togglePlaceList()">
       <span id="placeCountText"></span>
@@ -310,6 +364,7 @@ async function init(){
     allPlaces=[...highlightPlaces];
     populateStateSelect();
   }catch(e){console.warn('Init:',e.message)}
+  initTrip();
   document.getElementById('loader').style.display='none';
   render();
 }
@@ -357,7 +412,7 @@ function makeIcon(cat){
 }
 function popupHTML(p,img){
   const c=CATS[p.cat]||CATS.scenic;
-  return `<div class="pop-img-wrap" style="${img?'display:block':''}">${img?`<img src="${img}" alt="${p.name}" onerror="this.parentElement.style.display='none'">`:''}</div><div class="pop-body"><div class="pop-name"><span class="pop-dot" style="background:${c.color}"></span>${p.name}</div><div class="pop-cat">${c.label}</div><div class="pop-state">📍 ${p.state}</div><div class="pop-desc">${p.desc}</div></div>`;
+  return `<div class="pop-img-wrap" style="${img?'display:block':''}">${img?`<img src="${img}" alt="${p.name}" onerror="this.parentElement.style.display='none'">`:''}</div><div class="pop-body"><div class="pop-name"><span class="pop-dot" style="background:${c.color}"></span>${p.name}</div><div class="pop-cat">${c.label}</div><div class="pop-state">📍 ${p.state}</div><div class="pop-desc">${p.desc}</div>${tripButtonHTML(p)}</div>`;
 }
 async function getImage(p){
   if(p.img)return p.img;if(!p.wiki)return null;if(imgCache[p.wiki]!==undefined)return imgCache[p.wiki];
@@ -375,12 +430,14 @@ function render(){
   visible.sort((a,b)=>{const d=Object.keys(CATS).indexOf(a.cat)-Object.keys(CATS).indexOf(b.cat);return d||a.name.localeCompare(b.name)});
 
   const markers=[];
+  popupPlaces={};
   visible.forEach(p=>{
+    popupPlaces[tripKey(p)]=p;
     const c=CATS[p.cat]||CATS.scenic;
     const m=L.marker([p.lat,p.lng],{icon:makeIcon(p.cat)});
     m.bindPopup(popupHTML(p,p.img||null),{maxWidth:250,minWidth:250});
     m.bindTooltip(p.name,{permanent:true,direction:'right',offset:[12,0],className:'pin-label'});
-    m.on('popupopen',async()=>{const u=await getImage(p);if(u&&m.getPopup())m.getPopup().setContent(popupHTML(p,u))});
+    m.on('popupopen',async()=>{m.getPopup().setContent(popupHTML(p,imgCache[p.wiki]||p.img||null));const u=await getImage(p);if(u&&m.getPopup())m.getPopup().setContent(popupHTML(p,u))});
     markers.push(m);
 
     const card=document.createElement('div');
@@ -429,6 +486,135 @@ function suggestPlace(){
   const body=encodeURIComponent(`Hi,\n\nI'd like to suggest a place for BharatYatra:\n\nPlace Name: \nCategory (${cats}): \nState / Region: \nLatitude, Longitude: \nShort Description: \nWikipedia article (optional): \n\nThanks!`);
   window.location.href=`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('BharatYatra — Place Suggestion')}&body=${body}`;
   return false;
+}
+
+/* ══════ TRIP PLANNER ══════
+   Stops are stored as small self-contained objects so a trip survives reloads
+   (localStorage) and can be shared as a link (#trip=…) without the receiver
+   having that state's data loaded. Distances are straight-line estimates. */
+const TRIP_STORE='bharatyatra.trip.v1';
+const TRIP_MAX=30;
+let trip=[];
+const tripLayer=L.layerGroup().addTo(map);
+const esc=t=>String(t==null?'':t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const tripKey=p=>(p.stateCode||'')+'|'+p.name;
+const inTrip=p=>trip.some(t=>tripKey(t)===tripKey(p));
+const stopOf=p=>({name:p.name,lat:+p.lat,lng:+p.lng,cat:p.cat,state:p.state,stateCode:p.stateCode});
+function validStop(s){return s&&typeof s.name==='string'&&s.name.length>0&&s.name.length<120&&isFinite(s.lat)&&isFinite(s.lng)&&s.lat>3&&s.lat<40&&s.lng>60&&s.lng<102}
+function cleanStop(s){return {name:s.name,lat:+s.lat,lng:+s.lng,cat:CATS[s.cat]?s.cat:'scenic',stateCode:String(s.stateCode||'').slice(0,3),state:String(s.state||(statesIndex[s.stateCode]||{}).name||s.stateCode||'')}}
+
+function saveTrip(){try{localStorage.setItem(TRIP_STORE,JSON.stringify(trip))}catch(e){}}
+function encodeTrip(){return trip.map(s=>[s.stateCode,s.name,s.lat.toFixed(4),s.lng.toFixed(4),s.cat].map(encodeURIComponent).join(',')).join(';')}
+function decodeTrip(str){
+  return str.split(';').map(part=>{
+    const f=part.split(',').map(x=>{try{return decodeURIComponent(x)}catch(e){return ''}});
+    return {stateCode:f[0],name:f[1],lat:parseFloat(f[2]),lng:parseFloat(f[3]),cat:f[4]};
+  }).filter(validStop).map(cleanStop).slice(0,TRIP_MAX);
+}
+function initTrip(){
+  const m=location.hash.match(/(?:^#|&)trip=([^&]*)/);
+  if(m){
+    const shared=decodeTrip(m[1]);
+    if(shared.length){trip=shared;saveTrip();openTripPanel(true)}
+    try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}
+  }else{
+    try{const t=JSON.parse(localStorage.getItem(TRIP_STORE)||'[]');if(Array.isArray(t))trip=t.filter(validStop).map(cleanStop).slice(0,TRIP_MAX)}catch(e){}
+    if(trip.length&&!isMobile())openTripPanel(true);
+  }
+  renderTrip();
+  if(m&&trip.length)fitTrip();
+}
+
+function tripButtonHTML(p){
+  const on=inTrip(p);
+  return `<button class="pop-trip${on?' in':''}" data-key="${encodeURIComponent(tripKey(p))}" onclick="tripFromPopup(this)">${on?'✓ In your trip — remove':'+ Add to trip'}</button>`;
+}
+let popupPlaces={};   // key → place, for the popup buttons of rendered markers
+function tripFromPopup(btn){
+  const p=popupPlaces[decodeURIComponent(btn.dataset.key)];if(!p)return;
+  toggleTrip(p);
+  const on=inTrip(p);
+  btn.classList.toggle('in',on);
+  btn.textContent=on?'✓ In your trip — remove':'+ Add to trip';
+}
+function toggleTrip(p){
+  if(inTrip(p))trip=trip.filter(t=>tripKey(t)!==tripKey(p));
+  else{
+    if(trip.length>=TRIP_MAX){tripNote(`A trip can have up to ${TRIP_MAX} stops.`);return}
+    trip.push(stopOf(p));openTripPanel(true);
+  }
+  saveTrip();renderTrip();
+}
+function moveStop(i,d){const j=i+d;if(j<0||j>=trip.length)return;[trip[i],trip[j]]=[trip[j],trip[i]];saveTrip();renderTrip()}
+function removeStop(i){trip.splice(i,1);saveTrip();renderTrip()}
+function clearTrip(){if(!trip.length)return;if(!confirm('Remove all stops from your trip?'))return;trip=[];saveTrip();renderTrip()}
+function goToStop(i){
+  const s=trip[i];if(!s)return;
+  if(isMobile()){document.body.classList.remove('list-open');setTimeout(()=>map.invalidateSize(),50)}
+  map.setView([s.lat,s.lng],Math.max(map.getZoom(),10));
+}
+function fitTrip(){
+  if(!trip.length)return;
+  if(trip.length===1)map.setView([trip[0].lat,trip[0].lng],10);
+  else map.fitBounds(L.latLngBounds(trip.map(s=>[s.lat,s.lng])),{padding:[40,40],maxZoom:10});
+}
+function haversineKm(a,b){
+  const R=6371,r=x=>x*Math.PI/180,dLat=r(b.lat-a.lat),dLng=r(b.lng-a.lng);
+  const h=Math.sin(dLat/2)**2+Math.cos(r(a.lat))*Math.cos(r(b.lat))*Math.sin(dLng/2)**2;
+  return 2*R*Math.asin(Math.sqrt(h));
+}
+function tripKm(){let d=0;for(let i=1;i<trip.length;i++)d+=haversineKm(trip[i-1],trip[i]);return d}
+function fmtKm(d){return d<10?d.toFixed(1)+' km':Math.round(d).toLocaleString('en-IN')+' km'}
+let noteTimer;
+function tripNote(t){const n=document.getElementById('tripNote');n.textContent=t;clearTimeout(noteTimer);noteTimer=setTimeout(()=>n.textContent='',4000)}
+function openTripPanel(open){
+  const el=document.getElementById('tripPanel');
+  el.classList.toggle('open',open);
+  el.querySelector('.trip-head').setAttribute('aria-expanded',String(open));
+  setTimeout(()=>map.invalidateSize(),50);
+}
+function toggleTripPanel(){openTripPanel(!document.getElementById('tripPanel').classList.contains('open'))}
+
+function renderTrip(){
+  const n=trip.length;
+  const cnt=document.getElementById('tripCount');cnt.textContent=n;cnt.classList.toggle('zero',!n);
+  document.getElementById('tripDist').textContent=n>1?'≈ '+fmtKm(tripKm())+' straight-line':'';
+  document.getElementById('tripEmpty').style.display=n?'none':'block';
+  document.getElementById('tripActions').style.display=n?'flex':'none';
+  const list=document.getElementById('tripList');list.innerHTML='';
+  trip.forEach((s,i)=>{
+    const c=CATS[s.cat]||CATS.scenic;
+    const li=document.createElement('li');li.className='trip-stop';
+    const leg=i?` · ${fmtKm(haversineKm(trip[i-1],s))} from previous`:'';
+    li.innerHTML=`<span class="trip-num" style="background:${c.color}">${i+1}</span>`+
+      `<div class="trip-name" onclick="goToStop(${i})" title="Show on map"><b>${esc(s.name)}</b><span>${esc(s.state)}${leg}</span></div>`+
+      `<button class="trip-ctl" onclick="moveStop(${i},-1)" aria-label="Move up" ${i?'':'disabled'}>↑</button>`+
+      `<button class="trip-ctl" onclick="moveStop(${i},1)" aria-label="Move down" ${i<n-1?'':'disabled'}>↓</button>`+
+      `<button class="trip-ctl" onclick="removeStop(${i})" aria-label="Remove">✕</button>`;
+    list.appendChild(li);
+  });
+  // route on the map
+  tripLayer.clearLayers();
+  if(n>1)L.polyline(trip.map(s=>[s.lat,s.lng]),{color:'#B5452A',weight:3,opacity:0.85,dashArray:'7 7',interactive:false}).addTo(tripLayer);
+  trip.forEach((s,i)=>{
+    L.marker([s.lat,s.lng],{icon:L.divIcon({className:'',html:`<div class="trip-badge">${i+1}</div>`,iconSize:[18,18],iconAnchor:[22,22]}),zIndexOffset:1000,keyboard:false})
+      .bindTooltip(`${i+1}. ${esc(s.name)}`,{direction:'top',offset:[-13,-22]})
+      .on('click',()=>goToStop(i)).addTo(tripLayer);
+  });
+}
+
+function tripShareUrl(){return location.origin+location.pathname+'#trip='+encodeTrip()}
+async function shareTrip(){
+  if(!trip.length)return;
+  const url=tripShareUrl();
+  try{await navigator.clipboard.writeText(url);tripNote('Trip link copied — anyone who opens it sees this route.')}
+  catch(e){window.prompt('Copy this link to share your trip:',url)}
+}
+function emailTrip(){
+  if(!trip.length)return;
+  const lines=trip.map((s,i)=>`${i+1}. ${s.name} (${s.state}) — https://www.google.com/maps?q=${s.lat},${s.lng}`);
+  const body=`My BharatYatra trip (${trip.length} stops, about ${fmtKm(tripKm())} straight-line):\n\n${lines.join('\n')}\n\nOpen it on the map: ${tripShareUrl()}\n`;
+  window.location.href=`mailto:?subject=${encodeURIComponent('My BharatYatra trip')}&body=${encodeURIComponent(body)}`;
 }
 
 init();

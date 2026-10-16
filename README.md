@@ -25,6 +25,7 @@ A travel planner for India: 289+ curated places (and growing) across 8 categorie
 - **Zoom into a state**: the site auto-loads that state's full dataset (lazy). A dropdown also lets visitors pick a state directly.
 - **Category pills + State dropdown**: work together as filters. Both update the sidebar list and map markers.
 - **Pin click**: fetches a photo from Wikipedia (via the `wiki` field) and shows it in the popup.
+- **My Trip (itinerary planner)**: every popup has **+ Add to trip**. The *My Trip* panel in the sidebar lists the stops, lets you reorder or remove them, shows straight-line distances between stops, and draws the route on the map. The trip is saved in the browser, can be shared as a link (`#trip=…`), or emailed as a list with Google Maps links.
 
 ## Adding places (scaling to 10k+)
 
