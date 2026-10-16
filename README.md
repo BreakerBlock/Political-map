@@ -9,27 +9,25 @@ A travel planner for India: 289+ curated places (and growing) across 8 categorie
    ```
    index.html
    india-boundary.geojson
-   generate-data.py
-   data/
-     highlights.json
-     states-index.json
-     states/
-       rj.json, kl.json, up.json, ... (34 state files)
+   highlights.json
+   states-index.json
+   rj.json, kl.json, up.json, ... (34 state files, in the repo root)
    ```
+   (A `states/` subfolder for the per-state files also works — the site tries the root first, then `states/`.)
 3. Go to **Settings → Pages → Source** → select `main` branch, `/ (root)` → Save
 4. Live at `https://YOUR_USERNAME.github.io/bharatyatra/`
 
 ## How it works
 
 - **Country view**: shows 153 highlight places, clustered into coloured groups so the map stays clean even with thousands of pins.
-- **Zoom into a state**: the site auto-loads that state's full dataset (lazy). A dropdown also lets visitors pick a state directly.
+- **Zoom into a region** (zoom 7+): the site auto-loads the full dataset of every state in view (lazy). A dropdown also lets visitors pick a state directly.
 - **Category pills + State dropdown**: work together as filters. Both update the sidebar list and map markers.
 - **Pin click**: fetches a photo from Wikipedia (via the `wiki` field) and shows it in the popup.
 
 ## Adding places (scaling to 10k+)
 
 ### Quick add (one place)
-Edit the relevant state file (e.g. `data/states/rj.json`) on GitHub, add an entry to its `places` array, commit. Done.
+Edit the relevant state file (e.g. `rj.json`) on GitHub, add an entry to its `places` array, commit. Done.
 
 ### Bulk add (using the generator)
 1. Open `generate-data.py` locally

@@ -281,17 +281,17 @@ async function loadBoundary(){
 loadBoundary();
 
 /* ── Auto-load state data when zoomed into a region ── */
-map.on('moveend',()=>{
-  if(map.getZoom()>=7&&!selectedState){
-    const c=map.getCenter();
-    // Find nearest state
-    let best='',bestD=Infinity;
-    for(const[sc,s] of Object.entries(statesIndex)){
-      const d=Math.hypot(c.lat-s.lat,c.lng-s.lng);
-      if(d<bestD){bestD=d;best=sc}
-    }
-    if(best&&bestD<4&&!loadedStates[best])loadStateData(best);
-  }
+// Load every state whose centre falls inside (a padded copy of) the current view,
+// so panning across a border at zoom >= 7 brings in the neighbouring state too.
+map.on('moveend',async()=>{
+  if(map.getZoom()<7||selectedState)return;
+  const view=map.getBounds().pad(0.5);
+  const todo=Object.entries(statesIndex)
+    .filter(([sc,s])=>!loadedStates[sc]&&view.contains([s.lat,s.lng]))
+    .map(([sc])=>sc);
+  if(!todo.length)return;
+  const results=await Promise.all(todo.map(loadStateData));
+  if(results.some(r=>r.length))render();
 });
 
 /* ══════ DATA LOADING ══════ */
@@ -314,17 +314,33 @@ async function init(){
   render();
 }
 
-async function loadStateData(sc){
-  if(loadedStates[sc])return loadedStates[sc];
-  try{
-    const r=await fetch(`${DATA_BASE}states/${sc.toLowerCase()}.json?v=`+Date.now());
-    if(!r.ok)throw 0;
-    const d=await r.json();
-    loadedStates[sc]=d.places;
-    // Merge: replace highlights for this state with full state data
-    allPlaces=allPlaces.filter(p=>p.stateCode!==sc).concat(d.places);
-    return d.places;
-  }catch(e){console.warn('State load:',sc,e);return []}
+const stateFetches={};   // in-flight requests, so the same state is never fetched twice
+const failedStates=new Set(); // don't retry a missing file on every pan
+// State files live in the repo root (up.json, kl.json…); fall back to a states/ folder
+// for deployments that follow the README's data/states layout.
+function stateFileUrls(sc){const f=sc.toLowerCase()+'.json';return [DATA_BASE+f,DATA_BASE+'states/'+f]}
+function loadStateData(sc){
+  if(loadedStates[sc])return Promise.resolve(loadedStates[sc]);
+  if(stateFetches[sc])return stateFetches[sc];
+  if(failedStates.has(sc))return Promise.resolve([]);
+  stateFetches[sc]=(async()=>{
+    for(const url of stateFileUrls(sc)){
+      try{
+        const r=await fetch(url+'?v='+Date.now());
+        if(!r.ok)continue;
+        const d=await r.json();
+        if(!d||!Array.isArray(d.places))continue;
+        loadedStates[sc]=d.places;
+        // Merge: replace highlights for this state with the full state data
+        allPlaces=allPlaces.filter(p=>p.stateCode!==sc).concat(d.places);
+        return d.places;
+      }catch(e){/* try next location */}
+    }
+    console.warn('State load failed:',sc);
+    failedStates.add(sc);
+    return [];
+  })().finally(()=>{delete stateFetches[sc]});
+  return stateFetches[sc];
 }
 
 function populateStateSelect(){
