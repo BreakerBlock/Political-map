@@ -138,6 +138,35 @@ body.show-pin-labels .leaflet-tooltip.pin-label{display:block}
 .spinner{width:28px;height:28px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
+/* ── Trip planner ── */
+.trip-btn{margin-left:10px;display:flex;align-items:center;gap:5px;padding:3px 9px;border-radius:12px;border:1.5px solid var(--accent);background:var(--surface);color:var(--accent);font-family:inherit;font-size:0.62rem;font-weight:700;cursor:pointer}
+.trip-btn b{background:var(--accent);color:#fff;border-radius:8px;padding:0 6px;font-size:0.58rem}
+body.trip-view .trip-btn{background:var(--accent);color:#fff}
+body.trip-view .trip-btn b{background:#fff;color:var(--accent)}
+.trip-panel{display:none;flex:1;overflow-y:auto;padding:8px 10px}
+body.trip-view .trip-panel{display:block}
+body.trip-view .place-list{display:none!important}
+.trip-empty{font-size:0.74rem;color:var(--ink-dim);line-height:1.5;padding:10px 4px}
+.trip-stop{display:flex;align-items:center;gap:8px;padding:7px 4px}
+.trip-leg{font-size:0.6rem;color:var(--ink-light);padding:0 0 0 34px;margin:-2px 0}
+.trip-num{width:24px;height:24px;border-radius:50%;color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:2px solid #fff;box-shadow:0 1px 3px rgba(44,24,16,0.3)}
+.trip-info{flex:1;min-width:0;cursor:pointer}
+.trip-info h3{font-size:0.76rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.trip-info div{font-size:0.6rem;color:var(--ink-light)}
+.trip-ctl{display:flex;gap:2px}
+.trip-ctl button{width:26px;height:26px;border-radius:6px;border:1px solid var(--border-light);background:var(--surface);color:var(--ink-dim);cursor:pointer;font-size:0.75rem;line-height:1}
+.trip-ctl button:hover:not(:disabled){background:var(--surface-hover);color:var(--ink)}
+.trip-ctl button:disabled{opacity:0.35;cursor:default}
+.trip-sum{font-size:0.7rem;color:var(--ink-dim);padding:8px 4px;border-top:1px solid var(--border-light);margin-top:4px}
+.trip-sum small{display:block;font-size:0.58rem;color:var(--ink-light);margin-top:2px}
+.trip-actions{display:flex;flex-wrap:wrap;gap:6px;padding:4px 4px 10px}
+.trip-actions button{padding:6px 10px;border-radius:7px;border:1px solid var(--border);background:var(--surface);color:var(--ink);font-family:inherit;font-size:0.68rem;font-weight:600;cursor:pointer}
+.trip-actions button:hover{background:var(--surface-hover)}
+.trip-actions button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.pop-trip{margin-top:9px;width:100%;padding:7px 10px;border-radius:7px;border:1.5px solid var(--accent);background:var(--accent);color:#fff;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer}
+.pop-trip.in{background:var(--surface);color:var(--accent)}
+.route-num{display:flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--ink);color:#fff;font:700 11px 'DM Sans',sans-serif;border:2px solid #fff;box-shadow:0 1px 4px rgba(44,24,16,0.45)}
+
 button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 
 @media(max-width:760px){
@@ -154,7 +183,10 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
   .filters.open .cat-toggle .chev{transform:rotate(180deg)}
   .cat-list{display:none}
   .filters.open .cat-list{display:flex}
-  .search-wrap input{font-size:16px}
+  .search-wrap input,.state-filter select{font-size:16px}
+  header,.sidebar{touch-action:pan-x pan-y}
+  .trip-panel{display:none!important;max-height:34vh}
+  body.list-open.trip-view .trip-panel{display:block!important}
   .place-count{cursor:pointer;user-select:none}
   .place-list{display:none;max-height:28vh}
   body.list-open .place-list{display:block;overflow-y:auto}
@@ -198,10 +230,12 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
     </div>
     <div class="place-count" id="placeCount" onclick="togglePlaceList()">
       <span id="placeCountText"></span>
+      <button class="trip-btn" id="tripBtn" onclick="event.stopPropagation();toggleTripView()" title="Your trip itinerary">Trip <b id="tripCount">0</b></button>
       <span class="total-badge" id="totalBadge"></span>
       <svg class="chev pc-chev" width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
     </div>
     <div class="place-list" id="placeList"></div>
+    <div class="trip-panel" id="tripPanel"></div>
   </aside>
   <div id="map">
     <div class="loading-overlay" id="loader"><div class="spinner"></div>Loading places…</div>
@@ -371,7 +405,7 @@ function makeIcon(cat){
 }
 function popupHTML(p,img){
   const c=CATS[p.cat]||CATS.scenic;
-  return `<div class="pop-img-wrap" style="${img?'display:block':''}">${img?`<img src="${img}" alt="${p.name}" onerror="this.parentElement.style.display='none'">`:''}</div><div class="pop-body"><div class="pop-name"><span class="pop-dot" style="background:${c.color}"></span>${p.name}</div><div class="pop-cat">${c.label}</div><div class="pop-state">📍 ${p.state}</div><div class="pop-desc">${p.desc}</div></div>`;
+  return `<div class="pop-img-wrap" style="${img?'display:block':''}">${img?`<img src="${img}" alt="${p.name}" onerror="this.parentElement.style.display='none'">`:''}</div><div class="pop-body"><div class="pop-name"><span class="pop-dot" style="background:${c.color}"></span>${p.name}</div><div class="pop-cat">${c.label}</div><div class="pop-state">📍 ${p.state}</div><div class="pop-desc">${p.desc}</div>${tripBtnHTML(p)}</div>`;
 }
 async function getImage(p){
   if(p.img)return p.img;if(!p.wiki)return null;if(imgCache[p.wiki]!==undefined)return imgCache[p.wiki];
@@ -400,6 +434,7 @@ function render(){
     m.bindPopup(popupHTML(p,p.img||null),{maxWidth:250,minWidth:250});
     m.bindTooltip(p.name,{permanent:true,direction:'right',offset:[12,0],className:'pin-label'});
     m.on('popupopen',async()=>{const u=await getImage(p);if(u&&m.getPopup())m.getPopup().setContent(popupHTML(p,u))});
+    m._place=p;
     markers.push(m);markerByKey[placeKey(p)]=m;
 
     const card=document.createElement('div');
@@ -459,7 +494,129 @@ function suggestPlace(){
   return false;
 }
 
-init();
+/* ══════ TRIP PLANNER ══════
+   Trip = ordered list of place keys ("SC|Name"). Saved in localStorage and
+   shareable via #trip=… in the URL. Distances are straight-line (great-circle). */
+const TRIP_LS='bharatyatra.trip.v1';
+let trip=[];
+const tripLayer=L.layerGroup().addTo(map);
+const findPlace=k=>allPlaces.find(p=>placeKey(p)===k);
+const inTrip=p=>trip.includes(placeKey(p));
+function tripBtnHTML(p){
+  const k=encodeURIComponent(placeKey(p));
+  return inTrip(p)
+    ?`<button class="pop-trip in" data-trip="${k}">✓ In your trip — remove</button>`
+    :`<button class="pop-trip" data-trip="${k}">+ Add to trip</button>`;
+}
+function km(a,b){
+  const R=6371,r=x=>x*Math.PI/180,dLat=r(b.lat-a.lat),dLng=r(b.lng-a.lng);
+  const h=Math.sin(dLat/2)**2+Math.cos(r(a.lat))*Math.cos(r(b.lat))*Math.sin(dLng/2)**2;
+  return 2*R*Math.asin(Math.sqrt(h));
+}
+const fmtKm=d=>d<10?d.toFixed(1)+' km':Math.round(d).toLocaleString('en-IN')+' km';
+function saveTrip(){try{localStorage.setItem(TRIP_LS,JSON.stringify(trip))}catch(e){}}
+function tripStops(){return trip.map(findPlace).filter(Boolean)}
+function toggleTrip(key){
+  const i=trip.indexOf(key);
+  if(i>=0)trip.splice(i,1);else trip.push(key);
+  tripChanged();
+}
+function moveStop(i,d){const j=i+d;if(j<0||j>=trip.length)return;[trip[i],trip[j]]=[trip[j],trip[i]];tripChanged()}
+function removeStop(i){trip.splice(i,1);tripChanged()}
+function clearTrip(){if(trip.length&&confirm('Remove all stops from your trip?')){trip=[];tripChanged()}}
+// Nearest-neighbour ordering from the first stop, then 2-opt to remove crossings.
+function optimiseTrip(){
+  const st=tripStops();if(st.length<3)return;
+  const rest=st.slice(1),ord=[st[0]];
+  while(rest.length){const last=ord[ord.length-1];let bi=0;rest.forEach((p,i)=>{if(km(last,p)<km(last,rest[bi]))bi=i});ord.push(rest.splice(bi,1)[0])}
+  let improved=true;
+  while(improved){improved=false;
+    for(let i=1;i<ord.length-1;i++)for(let j=i+1;j<ord.length;j++){
+      const a=ord[i-1],b=ord[i],c=ord[j],d=ord[j+1];
+      const before=km(a,b)+(d?km(c,d):0),after=km(a,c)+(d?km(b,d):0);
+      if(after<before-0.01){ord.splice(i,j-i+1,...ord.slice(i,j+1).reverse());improved=true}
+    }}
+  trip=ord.map(placeKey);tripChanged();
+}
+function tripLink(){return location.origin+location.pathname+'#trip='+trip.map(encodeURIComponent).join('~')}
+async function shareTrip(){
+  const url=tripLink();
+  try{
+    if(navigator.share&&isMobile()){await navigator.share({title:'My BharatYatra trip',url});return}
+    await navigator.clipboard.writeText(url);alert('Trip link copied — anyone with it will see the same itinerary.');
+  }catch(e){if(e&&e.name==='AbortError')return;prompt('Copy your trip link:',url)}
+}
+function emailTrip(){
+  const st=tripStops();if(!st.length)return;
+  const lines=st.map((p,i)=>`${i+1}. ${p.name} (${p.state}) — ${CATS[p.cat]?.label||p.cat}`+(i?`  [${fmtKm(km(st[i-1],p))} from previous]`:''));
+  const body=`My BharatYatra itinerary:\n\n${lines.join('\n')}\n\nTotal straight-line distance: ${fmtKm(totalKm(st))}\n\nOpen on the map: ${tripLink()}`;
+  window.location.href=`mailto:?subject=${encodeURIComponent('My BharatYatra trip ('+st.length+' stops)')}&body=${encodeURIComponent(body)}`;
+}
+const totalKm=st=>st.reduce((s,p,i)=>i?s+km(st[i-1],p):0,0);
+function toggleTripView(){
+  const on=document.body.classList.toggle('trip-view');
+  if(on&&isMobile())document.body.classList.add('list-open');
+  renderTrip();setTimeout(()=>map.invalidateSize(),50);
+}
+function tripChanged(){
+  saveTrip();renderTrip();
+  if(location.hash.startsWith('#trip='))history.replaceState(null,'',location.pathname+location.search);
+  // refresh any open popup's button
+  map.eachLayer(l=>{if(l._place&&l.isPopupOpen&&l.isPopupOpen()){const p=l._place;l.getPopup().setContent(popupHTML(p,p.img||imgCache[p.wiki]||null))}});
+}
+function renderTrip(){
+  const st=tripStops();
+  document.getElementById('tripCount').textContent=st.length;
+  // map route
+  tripLayer.clearLayers();
+  if(st.length>1)L.polyline(st.map(p=>[p.lat,p.lng]),{color:'#2C1810',weight:2.5,opacity:0.75,dashArray:'6 6',interactive:false}).addTo(tripLayer);
+  st.forEach((p,i)=>{
+    const m=L.marker([p.lat,p.lng],{icon:L.divIcon({className:'',html:`<div class="route-num">${i+1}</div>`,iconSize:[20,20],iconAnchor:[10,24]}),zIndexOffset:1000,title:`${i+1}. ${p.name}`});
+    m.on('click',()=>focusPlace(p));m.addTo(tripLayer);
+  });
+  // sidebar panel
+  const el=document.getElementById('tripPanel');
+  if(!st.length){el.innerHTML='<div class="trip-empty"><b>Plan a trip.</b><br>Tap any pin and choose <b>+ Add to trip</b>. Your stops are numbered on the map, joined in order, and saved on this device. You can reorder them, sort them into a shorter route, and share or email the plan.</div>';return}
+  let h='';
+  st.forEach((p,i)=>{
+    const c=CATS[p.cat]||CATS.scenic;
+    if(i)h+=`<div class="trip-leg">↓ ${fmtKm(km(st[i-1],p))}</div>`;
+    h+=`<div class="trip-stop"><span class="trip-num" style="background:${c.color}">${i+1}</span><div class="trip-info" data-i="${i}"><h3>${p.name}</h3><div>${p.state} · ${c.label}</div></div><div class="trip-ctl"><button onclick="moveStop(${i},-1)" ${i?'':'disabled'} aria-label="Move up">↑</button><button onclick="moveStop(${i},1)" ${i<st.length-1?'':'disabled'} aria-label="Move down">↓</button><button onclick="removeStop(${i})" aria-label="Remove">✕</button></div></div>`;
+  });
+  h+=`<div class="trip-sum">${st.length} stop${st.length>1?'s':''} · <b>${fmtKm(totalKm(st))}</b> total<small>Straight-line distance; road distance will be longer.</small></div>`;
+  h+=`<div class="trip-actions">${st.length>2?'<button onclick="optimiseTrip()" title="Keeps your first stop, reorders the rest">Shortest order</button>':''}<button onclick="fitTrip()">Show on map</button><button class="primary" onclick="shareTrip()">Share link</button><button onclick="emailTrip()">Email</button><button onclick="clearTrip()">Clear</button></div>`;
+  el.innerHTML=h;
+  el.querySelectorAll('.trip-info').forEach(d=>d.onclick=()=>focusPlace(st[+d.dataset.i]));
+}
+function fitTrip(){
+  const st=tripStops();if(!st.length)return;
+  if(isMobile())document.body.classList.remove('list-open');
+  setTimeout(()=>{map.invalidateSize();st.length===1?map.setView([st[0].lat,st[0].lng],10):map.fitBounds(st.map(p=>[p.lat,p.lng]),{padding:[40,40],maxZoom:10})},60);
+}
+// Popup "+ Add to trip" buttons (popups are re-created, so delegate)
+document.getElementById('map').addEventListener('click',e=>{
+  const b=e.target.closest('.pop-trip');if(!b)return;
+  e.preventDefault();e.stopPropagation();toggleTrip(decodeURIComponent(b.dataset.trip));
+},true); // capture: Leaflet stops click propagation out of popups
+async function initTrip(){
+  const clean=keys=>Array.isArray(keys)?[...new Set(keys.filter(k=>typeof k==='string'))].slice(0,60):[];
+  // Stops can be non-highlight places, so load their states before resolving them
+  async function resolve(keys){
+    const states=[...new Set(keys.map(k=>k.split('|')[0]))].filter(sc=>statesIndex[sc]&&!loadedStates[sc]);
+    if(states.length){await Promise.all(states.map(loadStateData));render()}
+    return keys.filter(k=>findPlace(k));
+  }
+  const m=location.hash.match(/^#trip=(.*)$/);
+  if(m){
+    trip=await resolve(clean(m[1].split('~').map(k=>{try{return decodeURIComponent(k)}catch(e){return ''}}).filter(Boolean)));
+    if(trip.length){saveTrip();document.body.classList.add('trip-view');if(isMobile())document.body.classList.add('list-open');fitTrip();renderTrip();return}
+  }
+  let saved=[];try{saved=JSON.parse(localStorage.getItem(TRIP_LS)||'[]')}catch(e){}
+  trip=await resolve(clean(saved));
+  renderTrip();
+}
+
+init().then(initTrip);
 </script>
 </body>
 </html>
