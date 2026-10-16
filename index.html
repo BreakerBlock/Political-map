@@ -281,17 +281,23 @@ async function loadBoundary(){
 loadBoundary();
 
 /* ── Auto-load state data when zoomed into a region ── */
-map.on('moveend',()=>{
-  if(map.getZoom()>=7&&!selectedState){
-    const c=map.getCenter();
-    // Find nearest state
-    let best='',bestD=Infinity;
-    for(const[sc,s] of Object.entries(statesIndex)){
-      const d=Math.hypot(c.lat-s.lat,c.lng-s.lng);
-      if(d<bestD){bestD=d;best=sc}
-    }
-    if(best&&bestD<4&&!loadedStates[best])loadStateData(best);
+// Loads the nearest state plus any state whose centre falls inside the (padded) view,
+// then re-renders so the newly loaded pins actually appear.
+map.on('moveend',async()=>{
+  if(map.getZoom()<7||selectedState)return;
+  const c=map.getCenter(),view=map.getBounds().pad(0.25);
+  const want=new Set();
+  let best='',bestD=Infinity;
+  for(const[sc,s] of Object.entries(statesIndex)){
+    const d=Math.hypot(c.lat-s.lat,c.lng-s.lng);
+    if(d<bestD){bestD=d;best=sc}
+    if(view.contains([s.lat,s.lng]))want.add(sc);
   }
+  if(best&&bestD<4)want.add(best);
+  const todo=[...want].filter(sc=>!loadedStates[sc]);
+  if(!todo.length)return;
+  await Promise.all(todo.map(loadStateData));
+  render();
 });
 
 /* ══════ DATA LOADING ══════ */
@@ -314,11 +320,19 @@ async function init(){
   render();
 }
 
-async function loadStateData(sc){
-  if(loadedStates[sc])return loadedStates[sc];
+const statePending={};
+function loadStateData(sc){
+  if(loadedStates[sc])return Promise.resolve(loadedStates[sc]);
+  if(!statePending[sc])statePending[sc]=fetchStateData(sc).finally(()=>{delete statePending[sc]});
+  return statePending[sc];
+}
+async function fetchStateData(sc){
   try{
-    const r=await fetch(`${DATA_BASE}states/${sc.toLowerCase()}.json?v=`+Date.now());
-    if(!r.ok)throw 0;
+    // State files live next to index.html (e.g. kl.json); fall back to the older states/ folder layout.
+    const f=sc.toLowerCase()+'.json',v='?v='+Date.now();
+    let r=await fetch(DATA_BASE+f+v);
+    if(!r.ok)r=await fetch(DATA_BASE+'states/'+f+v);
+    if(!r.ok)throw new Error('HTTP '+r.status);
     const d=await r.json();
     loadedStates[sc]=d.places;
     // Merge: replace highlights for this state with full state data
@@ -365,8 +379,13 @@ async function getImage(p){
 }
 
 /* ══════ RENDER ══════ */
+const placeKey=p=>p.stateCode+'|'+p.name;
+let markerByKey={};
 function render(){
-  clusters.clearLayers();
+  // Remember an open popup so a re-render (e.g. after a state auto-loads) doesn't close it
+  let reopen=null;
+  for(const[k,m] of Object.entries(markerByKey)){if(m.isPopupOpen&&m.isPopupOpen()){reopen=k;break}}
+  clusters.clearLayers();markerByKey={};
   const listEl=document.getElementById('placeList');listEl.innerHTML='';
   const q=(document.getElementById('searchInput').value||'').toLowerCase();
 
@@ -381,22 +400,31 @@ function render(){
     m.bindPopup(popupHTML(p,p.img||null),{maxWidth:250,minWidth:250});
     m.bindTooltip(p.name,{permanent:true,direction:'right',offset:[12,0],className:'pin-label'});
     m.on('popupopen',async()=>{const u=await getImage(p);if(u&&m.getPopup())m.getPopup().setContent(popupHTML(p,u))});
-    markers.push(m);
+    markers.push(m);markerByKey[placeKey(p)]=m;
 
     const card=document.createElement('div');
     card.className='place-card';
     card.innerHTML=`<div class="pc-swatch" style="background:${c.color}">${ICONS[p.cat]||ICONS.scenic}</div><div><h3>${p.name}</h3><div class="pc-state">${p.state}</div><p>${p.desc}</p></div>`;
-    card.onclick=()=>{
-      if(isMobile()){document.body.classList.remove('list-open');setTimeout(()=>map.invalidateSize(),50)}
-      map.setView([p.lat,p.lng],12);m.openPopup();
-    };
+    card.onclick=()=>focusPlace(p);
     listEl.appendChild(card);
   });
   clusters.addLayers(markers);
+  if(reopen&&markerByKey[reopen]){const m=markerByKey[reopen];clusters.zoomToShowLayer(m,()=>m.openPopup())}
 
   document.getElementById('placeCountText').textContent=`Showing ${visible.length} places`;
   document.getElementById('totalBadge').textContent=`${totalPlaces} total in repo`;
   renderCatBtns();
+}
+
+// Fly to a place from the list. Load its state first so the moveend auto-load
+// can't re-render underneath the popup and close it.
+async function focusPlace(p){
+  map.closePopup();
+  if(isMobile()){document.body.classList.remove('list-open');setTimeout(()=>map.invalidateSize(),50)}
+  if(!loadedStates[p.stateCode]&&statesIndex[p.stateCode]){await loadStateData(p.stateCode);render()}
+  map.setView([p.lat,p.lng],Math.max(map.getZoom(),12));
+  const m=markerByKey[placeKey(p)];
+  if(m)clusters.zoomToShowLayer(m,()=>m.openPopup());
 }
 
 function renderCatBtns(){
