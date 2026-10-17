@@ -21,6 +21,7 @@ A travel planner for India: 289+ curated places (and growing) across 8 categorie
 - **Country view**: shows 153 highlight places, clustered into coloured groups so the map stays clean even with thousands of pins.
 - **Zoom into a state**: the site auto-loads that state's full dataset (lazy). A dropdown also lets visitors pick a state directly.
 - **Category pills + State dropdown**: work together as filters. Both update the sidebar list and map markers.
+- **On phones**: the controls collapse into one compact row — a **Categories** dropdown (checkbox list that overlays the map, with Clear/All and a count badge) next to the State picker — and the map opens fitted to the whole of India, including all of J&K and Ladakh.
 - **Pin click**: fetches a photo from Wikipedia (via the `wiki` field) and shows it in the popup.
 - **Trip planner**: every popup has **+ Add to trip**. The **Trip** button in the sidebar opens your itinerary. Stops are numbered on the map and joined by a dashed route. You can reorder or remove stops, use **Shortest order** to reorder by distance, see straight-line distances for each leg and in total, and share it as a link (`#trip=…`) or email it. The trip is saved in the browser's localStorage.
 

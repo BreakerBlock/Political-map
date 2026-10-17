@@ -52,6 +52,8 @@ header h1 span{color:var(--accent)}
 .cat-swatch{width:18px;height:18px;border-radius:5px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
 .cat-swatch svg{width:11px;height:11px}
 .cat-cnt{font-size:0.6rem;color:var(--ink-light);font-weight:600}
+.filter-row{display:contents}
+.cat-summary,.cat-panel-head,.cat-check{display:none}
 
 /* ── State filter ── */
 .state-filter{padding:8px 14px;border-bottom:1px solid var(--border-light);display:flex;gap:8px;align-items:center}
@@ -178,11 +180,34 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
   .header-sub{display:none}
   .brand-flag{width:30px;height:30px}
   .btn-suggest{padding:7px 12px;font-size:0.7rem}
-  .cat-toggle{cursor:pointer}
+  /* Compact control row: [Categories ▾] [State select]. Categories open as a dropdown
+     that overlays the map, so the map never resizes or jumps when filters change. */
+  .sidebar{overflow:visible;position:relative;z-index:1100}
+  .filter-row{display:flex;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid var(--border-light);position:relative}
+  .filters{padding:0;border:none;flex-shrink:0}
+  .filters-head{margin:0}
+  .filters-head .toggle-all{display:none}
+  .cat-toggle{cursor:pointer;height:40px;padding:0 10px;border:1px solid var(--border);border-radius:7px;background:var(--parchment);gap:7px}
+  .filters.open .cat-toggle{border-color:var(--accent)}
+  .cat-toggle h2{font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:600;color:var(--ink)}
+  .cat-summary{display:inline-block;font-size:0.64rem;font-weight:700;background:var(--accent);color:#fff;border-radius:9px;padding:1px 7px;line-height:1.5}
   .chev{display:block}
   .filters.open .cat-toggle .chev{transform:rotate(180deg)}
-  .cat-list{display:none}
-  .filters.open .cat-list{display:flex}
+  .cat-panel{display:none;position:absolute;left:8px;right:8px;top:calc(100% + 4px);background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(44,24,16,0.28);padding:10px 12px 12px;z-index:1200;max-height:62vh;overflow-y:auto;overscroll-behavior:contain}
+  .filters.open .cat-panel{display:block}
+  .cat-panel-head{display:flex;align-items:center;gap:14px;margin-bottom:8px;font-size:0.66rem;color:var(--ink-dim);font-weight:700;text-transform:uppercase;letter-spacing:0.07em}
+  .cat-panel-head span{flex:1}
+  .cat-panel-head .toggle-all{font-size:0.78rem;text-transform:none;letter-spacing:0;padding:6px 2px}
+  .cat-done{border:none;background:var(--accent);color:#fff;font-family:inherit;font-size:0.76rem;font-weight:600;border-radius:7px;padding:6px 14px;cursor:pointer;text-transform:none;letter-spacing:0}
+  .cat-list{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .cat-btn{border-radius:9px;padding:8px 10px;min-height:44px;font-size:0.8rem;white-space:normal;text-align:left}
+  .cat-btn span:nth-child(2){flex:1;min-width:0}
+  .cat-check{display:flex;width:18px;height:18px;border-radius:4px;border:1.5px solid var(--border);background:var(--surface);flex-shrink:0;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:700;line-height:1}
+  .cat-btn.active .cat-check{background:var(--c);border-color:var(--c)}
+  .cat-btn.active .cat-check::after{content:'✓'}
+  .state-filter{flex:1;min-width:0;padding:0;border:none}
+  .state-filter label{display:none}
+  .state-filter select{height:40px;width:100%;min-width:0}
   .search-wrap input,.state-filter select{font-size:16px}
   header,.sidebar{touch-action:pan-x pan-y}
   .trip-panel{display:none!important;max-height:34vh}
@@ -192,7 +217,7 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
   body.list-open .place-list{display:block;overflow-y:auto}
   body.list-open .pc-chev{transform:rotate(180deg)}
   .leaflet-control-zoom a{width:38px!important;height:38px!important;line-height:38px!important}
-  .disclaimer{font-size:0.5rem;bottom:4px}
+  .disclaimer{font-size:0.5rem;top:6px;right:6px;bottom:auto;left:auto;transform:none}
   .compass{width:42px;height:42px;left:8px;bottom:20px}
 }
 </style>
@@ -210,19 +235,25 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
 </header>
 <div class="main-wrap">
   <aside class="sidebar">
-    <div class="filters">
+    <div class="filter-row">
+    <div class="filters" id="filters">
       <div class="filters-head">
-        <button class="cat-toggle" onclick="toggleCatPanel()" aria-expanded="true">
+        <button class="cat-toggle" id="catToggle" onclick="toggleCatPanel(event)" aria-expanded="false" aria-controls="catPanel">
           <h2>Categories</h2>
+          <span class="cat-summary" id="catSummary"></span>
           <svg class="chev" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
         </button>
         <button class="toggle-all" id="toggleAll" onclick="toggleAllCats()">Clear</button>
       </div>
-      <div class="cat-list" id="catBtns"></div>
+      <div class="cat-panel" id="catPanel">
+        <div class="cat-panel-head"><span>Show on map</span><button class="toggle-all" id="toggleAllM" onclick="toggleAllCats()">Clear</button><button class="cat-done" onclick="closeCatPanel()">Done</button></div>
+        <div class="cat-list" id="catBtns" role="group" aria-label="Categories"></div>
+      </div>
     </div>
     <div class="state-filter">
-      <label>State</label>
-      <select id="stateSelect" onchange="onStateSelect(this.value)"><option value="">All India</option></select>
+      <label for="stateSelect">State</label>
+      <select id="stateSelect" onchange="onStateSelect(this.value)" aria-label="State"><option value="">All India</option></select>
+    </div>
     </div>
     <div class="search-wrap">
       <svg class="s-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>
@@ -277,7 +308,12 @@ const CITIES_T1=[["New Delhi",28.61,77.21],["Mumbai",19.08,72.88],["Kolkata",22.
 const CITIES_T2=[["Shimla",31.10,77.17],["Dehradun",30.32,78.03],["Jammu",32.73,74.86],["Ranchi",23.34,85.31],["Raipur",21.25,81.63],["Bhubaneswar",20.30,85.82],["Thiruvananthapuram",8.52,76.94],["Madurai",9.93,78.12],["Coimbatore",11.02,76.96],["Mysuru",12.30,76.64],["Mangaluru",12.91,74.86],["Surat",21.17,72.83],["Vadodara",22.31,73.19],["Jodhpur",26.24,73.02],["Udaipur",24.58,73.68],["Agra",27.18,78.02],["Prayagraj",25.44,81.85],["Nashik",20.00,73.79],["Visakhapatnam",17.69,83.22],["Nagpur",21.15,79.09],["Imphal",24.82,93.94],["Shillong",25.57,91.88],["Gangtok",27.33,88.62],["Siliguri",26.73,88.40],["Dharamshala",32.22,76.32],["Rishikesh",30.09,78.27],["Port Blair",11.62,92.73]];
 
 /* ══════ MAP ══════ */
-const map=L.map('map',{zoomControl:true,minZoom:4,maxBounds:[[3,60],[40,102]],maxBoundsViscosity:0.85}).setView([22.5,80],5);
+// Full extent of India's official boundary, incl. all of J&K and Ladakh (Gilgit-Baltistan, Aksai Chin)
+const INDIA_BOUNDS=[[6.5,68.1],[37.1,97.4]];
+const map=L.map('map',{zoomControl:true,minZoom:4,zoomSnap:0.25,maxBounds:[[3,60],[40,102]],maxBoundsViscosity:0.85});
+// Fit the whole country into whatever space the map has (phones used to open on a zoom-5 view that cut off Kashmir and the south)
+function showAllIndia(animate){map.fitBounds(INDIA_BOUNDS,{padding:[8,8],animate:!!animate})}
+showAllIndia();
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}',{attribution:'Esri',maxZoom:8,className:'tile-relief'}).addTo(map);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png',{attribution:'CARTO OSM',minZoom:9,maxZoom:18,subdomains:'abcd',className:'tile-warm'}).addTo(map);
 L.control.scale({imperial:false,position:'bottomright'}).addTo(map);
@@ -295,7 +331,7 @@ function syncLabels(){
   const z=map.getZoom();
   [stateLayer,cityT1,cityT2].forEach(l=>{if(map.hasLayer(l))map.removeLayer(l)});
   if(z<8)map.addLayer(stateLayer);
-  if(z>=5)map.addLayer(cityT1);
+  if(z>=4.5)map.addLayer(cityT1);
   if(z>=7)map.addLayer(cityT2);
   document.body.classList.toggle('show-pin-labels',z>=9);
 }
@@ -393,7 +429,7 @@ async function onStateSelect(sc){
     const s=statesIndex[sc];
     map.setView([s.lat,s.lng],7,{animate:true});
   }else{
-    map.setView([22.5,80],5,{animate:true});
+    showAllIndia(true);
   }
   render();
 }
@@ -469,23 +505,36 @@ function renderCatBtns(){
     const btn=document.createElement('button');
     btn.className='cat-btn'+(active?' active':'');
     btn.style.setProperty('--c',c.color);
+    btn.setAttribute('role','checkbox');btn.setAttribute('aria-checked',active);
     const cnt=allPlaces.filter(p=>p.cat===k&&(!selectedState||p.stateCode===selectedState)).length;
-    btn.innerHTML=`<div class="cat-swatch" style="background:${active?c.color:'var(--border)'}">${ICONS[k]}</div><span>${c.label}</span><span class="cat-cnt">${cnt}</span>`;
+    btn.innerHTML=`<span class="cat-check" aria-hidden="true"></span><div class="cat-swatch" style="background:${active?c.color:'var(--border)'}">${ICONS[k]}</div><span>${c.label}</span><span class="cat-cnt">${cnt}</span>`;
     btn.onclick=()=>{if(activeCats.has(k))activeCats.delete(k);else activeCats.add(k);render()};
     w.appendChild(btn);
   });
+  const n=activeCats.size,all=Object.keys(CATS).length;
+  document.getElementById('catSummary').textContent=n===all?'All':n+'/'+all;
+  const lbl=n===all?'Clear':'All';
+  document.getElementById('toggleAll').textContent=lbl;document.getElementById('toggleAllM').textContent=lbl;
 }
 
 function toggleAllCats(){
-  const b=document.getElementById('toggleAll');
-  if(activeCats.size===Object.keys(CATS).length){activeCats.clear();b.textContent='All'}
-  else{Object.keys(CATS).forEach(k=>activeCats.add(k));b.textContent='Clear'}
+  if(activeCats.size===Object.keys(CATS).length)activeCats.clear();
+  else Object.keys(CATS).forEach(k=>activeCats.add(k));
   render();
 }
 const isMobile=()=>window.innerWidth<=760;
-function toggleCatPanel(){if(!isMobile())return;document.querySelector('.filters').classList.toggle('open');setTimeout(()=>map.invalidateSize(),50)}
+// Mobile: categories are a dropdown overlaying the map (no map resize needed)
+function setCatPanel(open){
+  document.getElementById('filters').classList.toggle('open',open);
+  document.getElementById('catToggle').setAttribute('aria-expanded',open);
+}
+function toggleCatPanel(e){if(!isMobile())return;if(e)e.stopPropagation();setCatPanel(!document.getElementById('filters').classList.contains('open'))}
+function closeCatPanel(){setCatPanel(false)}
+// Tap anywhere outside the dropdown (including the map) closes it
+document.addEventListener('pointerdown',e=>{if(document.getElementById('filters').classList.contains('open')&&!e.target.closest('#filters'))closeCatPanel()},true);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCatPanel()});
 function togglePlaceList(){if(!isMobile())return;document.body.classList.toggle('list-open');setTimeout(()=>map.invalidateSize(),50)}
-window.addEventListener('resize',()=>setTimeout(()=>map.invalidateSize(),100));
+window.addEventListener('resize',()=>setTimeout(()=>{map.invalidateSize();if(!isMobile())closeCatPanel()},100));
 
 function suggestPlace(){
   const cats=Object.keys(CATS).join(' / ');
