@@ -20,7 +20,8 @@
 }
 body{font-family:'DM Sans',sans-serif;background:var(--parchment);color:var(--ink);height:100vh;display:flex;flex-direction:column;overflow:hidden}
 
-header{padding:10px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:var(--surface);flex-shrink:0}
+header{padding:10px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:linear-gradient(90deg,#FFF6EA 0%,var(--surface) 45%,#F1F8EF 100%);flex-shrink:0;position:relative;box-shadow:0 1px 0 rgba(255,255,255,.6) inset}
+header::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:3px;background:linear-gradient(90deg,#FF9933 0 33.3%,#FFFDF8 33.3% 66.6%,#138808 66.6%);opacity:.85}
 .brand{display:flex;align-items:center;gap:10px}
 .brand-flag{width:36px;height:36px;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--border);flex-shrink:0}
 .brand-flag span:nth-child(1){flex:1;background:#FF9933}
@@ -85,24 +86,37 @@ header h1 span{color:var(--accent)}
 .place-card p{font-size:0.66rem;color:var(--ink-dim);margin-top:2px;line-height:1.3}
 
 /* ── Map ── */
-#map{flex:1;background:#AECBCE;position:relative}
-.tile-relief{filter:sepia(0.42) saturate(0.95) hue-rotate(-6deg) brightness(1.05) contrast(1.04)}
-.tile-warm{filter:sepia(0.25) saturate(1.02) hue-rotate(-4deg) brightness(1.03)}
-.map-vignette{position:absolute;inset:0;pointer-events:none;z-index:350;box-shadow:inset 0 0 90px 20px rgba(72,48,24,0.22),inset 0 0 25px rgba(72,48,24,0.12)}
-.compass{position:absolute;left:12px;bottom:26px;z-index:800;width:54px;height:54px;opacity:0.5;pointer-events:none;filter:drop-shadow(0 1px 2px rgba(255,253,248,0.8))}
+#map{flex:1;background:#B9D3DC;position:relative}
+.tile-terrain{filter:saturate(1.15) contrast(1.05) brightness(1.02)}
+.tile-sat{filter:saturate(1.08) contrast(1.03)}
+body.sat-on .india-mask{fill-opacity:0.35}
+body.sat-on .india-fill{fill-opacity:0}
+.map-vignette{position:absolute;inset:0;pointer-events:none;z-index:350;box-shadow:inset 0 0 70px 6px rgba(30,40,50,0.14)}
+.base-toggle{display:flex;background:rgba(255,253,248,0.94);border-radius:10px;padding:3px;box-shadow:0 2px 10px rgba(44,24,16,0.18);backdrop-filter:blur(6px)}
+.base-toggle button{border:none;background:none;font:600 11px 'DM Sans',sans-serif;color:var(--ink-dim);padding:6px 10px;border-radius:7px;cursor:pointer;transition:background .15s,color .15s}
+.base-toggle button.on{background:var(--ink);color:#fff}
+.compass{position:absolute;left:12px;bottom:26px;z-index:800;width:54px;height:54px;opacity:0.45;pointer-events:none;filter:drop-shadow(0 1px 2px rgba(255,253,248,0.8))}
 .leaflet-control-zoom a{background:var(--surface)!important;color:var(--ink)!important;border-color:var(--border)!important;font-size:16px!important;width:32px!important;height:32px!important;line-height:32px!important}
 
 /* ── Cluster styling ── */
 .marker-cluster{background:transparent!important}
 .marker-cluster div{
-  width:36px!important;height:36px!important;margin-left:0!important;margin-top:0!important;
+  width:38px!important;height:38px!important;margin-left:0!important;margin-top:0!important;
   border-radius:50%!important;display:flex!important;align-items:center!important;justify-content:center!important;
-  font-family:'DM Sans',sans-serif!important;font-weight:700!important;font-size:12px!important;
-  box-shadow:0 2px 8px rgba(44,24,16,0.3)!important;border:2px solid #fff!important;
+  font-family:'DM Sans',sans-serif!important;font-weight:700!important;font-size:12.5px!important;
+  background:rgba(255,253,248,0.96)!important;color:var(--ink)!important;
+  box-shadow:0 0 0 4px var(--ring),0 4px 14px rgba(44,24,16,0.35)!important;border:none!important;
+  transition:transform .15s ease;
 }
-.marker-cluster-small div{background:#4A9E7E!important;color:#fff!important}
-.marker-cluster-medium div{background:#D08B38!important;color:#fff!important}
-.marker-cluster-large div{background:var(--accent)!important;color:#fff!important}
+.marker-cluster:hover div{transform:scale(1.08)}
+.marker-cluster-small{--ring:rgba(19,136,8,0.55)}
+.marker-cluster-medium{--ring:rgba(255,153,51,0.75)}
+.marker-cluster-large{--ring:rgba(181,69,42,0.8)}
+.pin{position:relative;width:30px;height:38px;cursor:pointer;transition:transform .15s ease;transform-origin:50% 100%;filter:drop-shadow(0 3px 4px rgba(30,20,10,0.35))}
+.pin:hover{transform:scale(1.15)}
+.pin svg.drop{position:absolute;inset:0;width:30px;height:38px}
+.pin .ico{position:absolute;left:7px;top:6px;width:16px;height:16px;display:flex}
+.pin .ico svg{width:16px;height:16px}
 
 /* ── Popup ── */
 .leaflet-popup-content-wrapper{background:var(--surface)!important;color:var(--ink)!important;border-radius:12px!important;box-shadow:0 6px 24px rgba(44,24,16,0.18)!important;border:1px solid var(--border)!important;overflow:hidden!important;padding:0!important}
@@ -128,7 +142,7 @@ header h1 span{color:var(--accent)}
 .leaflet-tooltip.pin-label{display:none}
 body.show-pin-labels .leaflet-tooltip.pin-label{display:block}
 
-.state-label{font-family:'DM Sans',sans-serif!important;font-size:9.5px!important;font-weight:600!important;color:rgba(44,24,16,0.38)!important;letter-spacing:0.07em!important;text-transform:uppercase!important;white-space:nowrap!important;text-shadow:0 0 5px rgba(245,237,224,1)!important;pointer-events:none!important;text-align:center!important}
+.state-label{font-family:'Cormorant Garamond',serif!important;font-size:10.5px!important;font-weight:700!important;color:rgba(90,40,20,0.5)!important;letter-spacing:0.16em!important;text-transform:uppercase!important;white-space:nowrap!important;text-shadow:0 0 5px rgba(245,237,224,1)!important;pointer-events:none!important;text-align:center!important}
 .city-label{font-family:'DM Sans',sans-serif!important;pointer-events:none!important;white-space:nowrap!important}
 .cl-inner{display:flex;align-items:center;gap:4px}
 .cl-dot{width:5px;height:5px;border-radius:50%;background:#5A4A3A;border:1px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);flex-shrink:0}
@@ -150,7 +164,7 @@ body.trip-view .trip-panel{display:block}
 body.trip-view .place-list{display:none!important}
 .trip-empty{font-size:0.74rem;color:var(--ink-dim);line-height:1.5;padding:10px 4px}
 .trip-stop{display:flex;align-items:center;gap:8px;padding:7px 4px}
-.trip-leg{font-size:0.6rem;color:var(--ink-light);padding:0 0 0 34px;margin:-2px 0}
+.trip-leg{font-size:0.62rem;color:var(--ink-dim);padding:0 0 0 34px;margin:-2px 0}
 .trip-num{width:24px;height:24px;border-radius:50%;color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:2px solid #fff;box-shadow:0 1px 3px rgba(44,24,16,0.3)}
 .trip-info{flex:1;min-width:0;cursor:pointer}
 .trip-info h3{font-size:0.76rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -217,8 +231,8 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
   body.list-open .place-list{display:block;overflow-y:auto}
   body.list-open .pc-chev{transform:rotate(180deg)}
   .leaflet-control-zoom a{width:38px!important;height:38px!important;line-height:38px!important}
-  .disclaimer{font-size:0.5rem;top:6px;right:6px;bottom:auto;left:auto;transform:none}
-  .compass{width:42px;height:42px;left:8px;bottom:20px}
+  .disclaimer{font-size:0.5rem;bottom:22px;left:8px;transform:none}
+  .compass{display:none}
 }
 </style>
 </head>
@@ -314,8 +328,30 @@ const map=L.map('map',{zoomControl:true,minZoom:4,zoomSnap:0.25,maxBounds:[[3,60
 // Fit the whole country into whatever space the map has (phones used to open on a zoom-5 view that cut off Kashmir and the south)
 function showAllIndia(animate){map.fitBounds(INDIA_BOUNDS,{padding:[8,8],animate:!!animate})}
 showAllIndia();
-L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}',{attribution:'Esri',maxZoom:8,className:'tile-relief'}).addTo(map);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png',{attribution:'CARTO OSM',minZoom:9,maxZoom:18,subdomains:'abcd',className:'tile-warm'}).addTo(map);
+/* Basemaps: key-free Esri tiles with NO drawn borders or labels, so india-boundary.geojson
+   is the only boundary on the map. Terrain for the overview; satellite imagery when zoomed in
+   (terrain only goes to native z13), or always if the visitor picks "Satellite". */
+const ESRI='https://server.arcgisonline.com/ArcGIS/rest/services/';
+const terrainTiles=L.tileLayer(ESRI+'World_Terrain_Base/MapServer/tile/{z}/{y}/{x}',{attribution:'Terrain &copy; Esri, USGS, NOAA',maxNativeZoom:13,maxZoom:19,className:'tile-terrain'});
+const satTiles=L.tileLayer(ESRI+'World_Imagery/MapServer/tile/{z}/{y}/{x}',{attribution:'Imagery &copy; Esri, Maxar, Earthstar Geographics',maxNativeZoom:18,maxZoom:19,className:'tile-sat'});
+const SAT_FROM_ZOOM=11;
+let baseMode='map'; // 'map' = terrain → satellite when zoomed in; 'sat' = satellite always
+function syncBasemap(){
+  const wantSat=baseMode==='sat'||map.getZoom()>=SAT_FROM_ZOOM;
+  const on=wantSat?satTiles:terrainTiles,off=wantSat?terrainTiles:satTiles;
+  if(!map.hasLayer(on))on.addTo(map).bringToBack();
+  if(map.hasLayer(off))map.removeLayer(off);
+  document.body.classList.toggle('sat-on',wantSat);
+}
+const BaseToggle=L.Control.extend({options:{position:'topright'},onAdd(){
+  const d=L.DomUtil.create('div','base-toggle');
+  d.innerHTML='<button data-m="map" class="on">Map</button><button data-m="sat">Satellite</button>';
+  L.DomEvent.disableClickPropagation(d);
+  d.onclick=e=>{const b=e.target.closest('button');if(!b)return;baseMode=b.dataset.m;d.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));syncBasemap()};
+  return d;
+}});
+new BaseToggle().addTo(map);
+map.on('zoomend',syncBasemap);syncBasemap();
 L.control.scale({imperial:false,position:'bottomright'}).addTo(map);
 
 const clusters=L.markerClusterGroup({maxClusterRadius:45,spiderfyOnMaxZoom:true,showCoverageOnHover:false,zoomToBoundsOnClick:true,disableClusteringAtZoom:12});
@@ -330,7 +366,7 @@ const cityT2=L.layerGroup(CITIES_T2.map(c=>mkLabel(c[0],c[1],c[2],'city-label ti
 function syncLabels(){
   const z=map.getZoom();
   [stateLayer,cityT1,cityT2].forEach(l=>{if(map.hasLayer(l))map.removeLayer(l)});
-  if(z<8)map.addLayer(stateLayer);
+  if(z>=4.5&&z<8)map.addLayer(stateLayer);
   if(z>=4.5)map.addLayer(cityT1);
   if(z>=7)map.addLayer(cityT2);
   document.body.classList.toggle('show-pin-labels',z>=9);
@@ -343,9 +379,11 @@ async function loadBoundary(){
     const r=await fetch('india-boundary.geojson');if(!r.ok)throw 0;
     const g=await r.json();
     const holes=g.features[0].geometry.coordinates.map(p=>p[0].map(pt=>[pt[1],pt[0]]));
-    L.polygon([[ [-89,-179],[-89,179],[89,179],[89,-179] ],...holes],{stroke:false,fillColor:'#8E8471',fillOpacity:0.42,interactive:false}).addTo(map);
-    L.geoJSON(g,{style:{color:'#B5452A',weight:7,opacity:0.16,fill:false},interactive:false}).addTo(map);
-    L.geoJSON(g,{style:{color:'#6E3D1B',weight:2.2,opacity:0.9,fillColor:'#FFF4DE',fillOpacity:0.14},interactive:false}).addTo(map);
+    // Neighbouring countries fade into a soft mist so India stands out
+    L.polygon([[ [-89,-179],[-89,179],[89,179],[89,-179] ],...holes],{stroke:false,fillColor:'#EEF1F2',fillOpacity:0.62,interactive:false,className:'india-mask'}).addTo(map);
+    // Saffron halo + crisp ink line
+    L.geoJSON(g,{style:{color:'#F2A541',weight:9,opacity:0.28,fill:false,lineJoin:'round'},interactive:false}).addTo(map);
+    L.geoJSON(g,{style:{color:'#7A2E14',weight:1.8,opacity:0.95,fillColor:'#FFE6BF',fillOpacity:0.14,lineJoin:'round',className:'india-fill'},interactive:false}).addTo(map);
   }catch(e){console.warn('Boundary:',e)}
 }
 loadBoundary();
@@ -437,7 +475,8 @@ async function onStateSelect(sc){
 /* ══════ MARKERS ══════ */
 function makeIcon(cat){
   const c=CATS[cat]||CATS.scenic;
-  return L.divIcon({className:'',html:`<div style="width:24px;height:24px;border-radius:50%;background:${c.color};border:2px solid #fff;box-shadow:0 1px 5px rgba(44,24,16,0.35);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.12s" onmouseover="this.style.transform='scale(1.28)'" onmouseout="this.style.transform='scale(1)'">${ICONS[cat]||ICONS.scenic}</div>`,iconSize:[24,24],iconAnchor:[12,12],popupAnchor:[0,-8]});
+  // Teardrop pin in the category colour, white rim, category glyph inside
+  return L.divIcon({className:'',html:`<div class="pin"><svg class="drop" viewBox="0 0 30 38"><path d="M15 37C15 37 2 22.5 2 14a13 13 0 0126 0c0 8.5-13 23-13 23z" fill="${c.color}" stroke="#fff" stroke-width="2.2"/></svg><span class="ico">${ICONS[cat]||ICONS.scenic}</span></div>`,iconSize:[30,38],iconAnchor:[15,37],popupAnchor:[0,-34],tooltipAnchor:[12,-22]});
 }
 function popupHTML(p,img){
   const c=CATS[p.cat]||CATS.scenic;
@@ -468,7 +507,7 @@ function render(){
     const c=CATS[p.cat]||CATS.scenic;
     const m=L.marker([p.lat,p.lng],{icon:makeIcon(p.cat)});
     m.bindPopup(popupHTML(p,p.img||null),{maxWidth:250,minWidth:250});
-    m.bindTooltip(p.name,{permanent:true,direction:'right',offset:[12,0],className:'pin-label'});
+    m.bindTooltip(p.name,{permanent:true,direction:'right',offset:[2,0],className:'pin-label'});
     m.on('popupopen',async()=>{const u=await getImage(p);if(u&&m.getPopup())m.getPopup().setContent(popupHTML(p,u))});
     m._place=p;
     markers.push(m);markerByKey[placeKey(p)]=m;
@@ -597,8 +636,10 @@ async function shareTrip(){
 }
 function emailTrip(){
   const st=tripStops();if(!st.length)return;
-  const lines=st.map((p,i)=>`${i+1}. ${p.name} (${p.state}) — ${CATS[p.cat]?.label||p.cat}`+(i?`  [${fmtKm(km(st[i-1],p))} from previous]`:''));
-  const body=`My BharatYatra itinerary:\n\n${lines.join('\n')}\n\nTotal straight-line distance: ${fmtKm(totalKm(st))}\n\nOpen on the map: ${tripLink()}`;
+  const lines=st.map((p,i)=>`${i+1}. ${p.name} (${p.state}) — ${CATS[p.cat]?.label||p.cat}`+(i?`  [${legText(st[i-1],p,true)} from previous]`:''));
+  const T=tripTotals(st);
+  const tot=[T.road?`${fmtKm(T.road)} by road (~${fmtMin(T.min)} driving)`:'',T.straight?`${fmtKm(T.straight)} straight-line`:''].filter(Boolean).join(' + ');
+  const body=`My BharatYatra itinerary:\n\n${lines.join('\n')}\n\nTotal: ${tot||'—'}\n(Drive times are estimates.)\n\nOpen on the map: ${tripLink()}`;
   window.location.href=`mailto:?subject=${encodeURIComponent('My BharatYatra trip ('+st.length+' stops)')}&body=${encodeURIComponent(body)}`;
 }
 const totalKm=st=>st.reduce((s,p,i)=>i?s+km(st[i-1],p):0,0);
@@ -613,12 +654,80 @@ function tripChanged(){
   // refresh any open popup's button
   map.eachLayer(l=>{if(l._place&&l.isPopupOpen&&l.isPopupOpen()){const p=l._place;l.getPopup().setContent(popupHTML(p,p.img||imgCache[p.wiki]||null))}});
 }
+/* ── Road routing (free, key-less public OSRM server) ──
+   One request per leg, cached per coordinate pair, so a leg with no road (e.g. to the
+   Andamans) falls back to straight-line without breaking the others. */
+const OSRM='https://router.project-osrm.org/route/v1/driving/';
+const ISLANDS=new Set(['AN','LD']);
+const routeCache={};   // key -> {ok:true,km,min,coords} | {ok:false}
+let routeTimer=null,routeBusy=false;
+const legKey=(a,b)=>`${a.lng.toFixed(5)},${a.lat.toFixed(5)};${b.lng.toFixed(5)},${b.lat.toFixed(5)}`;
+function legInfo(a,b){
+  if(a.stateCode!==b.stateCode&&(ISLANDS.has(a.stateCode)||ISLANDS.has(b.stateCode)))return {ok:false,sea:true};
+  return routeCache[legKey(a,b)]||null; // null = not fetched yet
+}
+async function fetchLeg(a,b){
+  const k=legKey(a,b);
+  try{
+    const ctl=new AbortController(),t=setTimeout(()=>ctl.abort(),12000);
+    const r=await fetch(OSRM+k+'?overview=full&geometries=geojson&alternatives=false&steps=false',{signal:ctl.signal});
+    clearTimeout(t);
+    if(r.status===429)return false; // rate-limited: retry later
+    const j=await r.json();
+    const rt=j.code==='Ok'&&j.routes&&j.routes[0];
+    // Reject routes whose endpoints had to snap far from the place (no nearby road)
+    const snapOk=rt&&j.waypoints.every(w=>w.distance<8000);
+    if(snapOk&&!window._osrmAttr){map.attributionControl.addAttribution('Routes &copy; <a href="https://project-osrm.org">OSRM</a>, OpenStreetMap');window._osrmAttr=1}
+    routeCache[k]=snapOk?{ok:true,km:rt.distance/1000,min:rt.duration/60,coords:rt.geometry.coordinates.map(c=>[c[1],c[0]])}:{ok:false};
+  }catch(e){if(e.name==='AbortError')routeCache[k]={ok:false};else return false}
+  return true;
+}
+// Debounced: fetch every uncached leg of the current trip (2 at a time), then re-render once.
+function scheduleRouting(){
+  clearTimeout(routeTimer);
+  routeTimer=setTimeout(async()=>{
+    if(routeBusy)return scheduleRouting();
+    const st=tripStops(),todo=[];
+    for(let i=1;i<st.length;i++)if(legInfo(st[i-1],st[i])===null&&!todo.some(([a,b])=>legKey(a,b)===legKey(st[i-1],st[i])))todo.push([st[i-1],st[i]]);
+    if(!todo.length)return;
+    routeBusy=true;let retry=false;
+    try{
+      while(todo.length){const batch=todo.splice(0,2);const res=await Promise.all(batch.map(([a,b])=>fetchLeg(a,b)));if(res.includes(false)){retry=true;break}}
+    }finally{routeBusy=false}
+    renderTrip();
+    if(retry)setTimeout(scheduleRouting,4000);
+  },400);
+}
+const fmtMin=m=>{m=Math.round(m/5)*5||5;const h=Math.floor(m/60),r=m%60;return h?`${h} h${r?' '+r+' min':''}`:`${r} min`};
+function tripTotals(st){
+  let road=0,min=0,straight=0,pending=0,fallback=0;
+  for(let i=1;i<st.length;i++){
+    const L1=legInfo(st[i-1],st[i]);
+    if(L1&&L1.ok){road+=L1.km;min+=L1.min}
+    else{straight+=km(st[i-1],st[i]);if(L1)fallback++;else pending++}
+  }
+  return {road,min,straight,pending,fallback};
+}
+function legText(a,b,plain){
+  const L1=legInfo(a,b);
+  if(L1&&L1.ok)return `${fmtKm(L1.km)} by road · ~${fmtMin(L1.min)}`;
+  const d=fmtKm(km(a,b));
+  if(!L1)return plain?`${d} straight-line`:`${d} straight-line · finding road route…`;
+  return L1.sea?`${d} straight-line · by sea/air`:`${d} straight-line · no road route found`;
+}
 function renderTrip(){
   const st=tripStops();
   document.getElementById('tripCount').textContent=st.length;
   // map route
   tripLayer.clearLayers();
-  if(st.length>1)L.polyline(st.map(p=>[p.lat,p.lng]),{color:'#2C1810',weight:2.5,opacity:0.75,dashArray:'6 6',interactive:false}).addTo(tripLayer);
+  for(let i=1;i<st.length;i++){
+    const a=st[i-1],b=st[i],L1=legInfo(a,b);
+    if(L1&&L1.ok){
+      L.polyline(L1.coords,{color:'#fff',weight:7,opacity:0.85,interactive:false}).addTo(tripLayer);
+      L.polyline(L1.coords,{color:'#B5452A',weight:4,opacity:0.95,interactive:false}).addTo(tripLayer);
+    }else L.polyline([[a.lat,a.lng],[b.lat,b.lng]],{color:'#2C1810',weight:2.5,opacity:0.75,dashArray:'6 6',interactive:false}).addTo(tripLayer);
+  }
+  if(st.length>1)scheduleRouting();
   st.forEach((p,i)=>{
     const m=L.marker([p.lat,p.lng],{icon:L.divIcon({className:'',html:`<div class="route-num">${i+1}</div>`,iconSize:[20,20],iconAnchor:[10,24]}),zIndexOffset:1000,title:`${i+1}. ${p.name}`});
     m.on('click',()=>focusPlace(p));m.addTo(tripLayer);
@@ -629,10 +738,17 @@ function renderTrip(){
   let h='';
   st.forEach((p,i)=>{
     const c=CATS[p.cat]||CATS.scenic;
-    if(i)h+=`<div class="trip-leg">↓ ${fmtKm(km(st[i-1],p))}</div>`;
+    if(i)h+=`<div class="trip-leg">↓ ${legText(st[i-1],p)}</div>`;
     h+=`<div class="trip-stop"><span class="trip-num" style="background:${c.color}">${i+1}</span><div class="trip-info" data-i="${i}"><h3>${p.name}</h3><div>${p.state} · ${c.label}</div></div><div class="trip-ctl"><button onclick="moveStop(${i},-1)" ${i?'':'disabled'} aria-label="Move up">↑</button><button onclick="moveStop(${i},1)" ${i<st.length-1?'':'disabled'} aria-label="Move down">↓</button><button onclick="removeStop(${i})" aria-label="Remove">✕</button></div></div>`;
   });
-  h+=`<div class="trip-sum">${st.length} stop${st.length>1?'s':''} · <b>${fmtKm(totalKm(st))}</b> total<small>Straight-line distance; road distance will be longer.</small></div>`;
+  const T=tripTotals(st);
+  let sum=`${st.length} stop${st.length>1?'s':''}`;
+  if(st.length>1){
+    if(T.road)sum+=` · <b>${fmtKm(T.road)}</b> by road · <b>~${fmtMin(T.min)}</b> driving`;
+    if(T.straight)sum+=`${T.road?' + ':' · '}<b>${fmtKm(T.straight)}</b> straight-line`;
+  }
+  const note=T.pending?'Finding road routes…':'Road distances and drive times are estimates from OpenStreetMap (OSRM) and exclude stops and traffic.'+(T.fallback?' Legs without a road route (e.g. to islands) use straight-line distance.':'');
+  h+=`<div class="trip-sum">${sum}${st.length>1?`<small>${note}</small>`:''}</div>`;
   h+=`<div class="trip-actions">${st.length>2?'<button onclick="optimiseTrip()" title="Keeps your first stop, reorders the rest">Shortest order</button>':''}<button onclick="fitTrip()">Show on map</button><button class="primary" onclick="shareTrip()">Share link</button><button onclick="emailTrip()">Email</button><button onclick="clearTrip()">Clear</button></div>`;
   el.innerHTML=h;
   el.querySelectorAll('.trip-info').forEach(d=>d.onclick=()=>focusPlace(st[+d.dataset.i]));
