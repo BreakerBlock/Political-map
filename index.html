@@ -43,6 +43,7 @@ header h1 span{color:var(--accent)}
 .cat-toggle{border:none;background:none;display:flex;align-items:center;gap:6px;cursor:default;font-family:inherit;padding:0;color:inherit}
 .chev{display:none;transition:transform 0.2s;color:var(--ink-dim);flex-shrink:0}
 .pc-chev{margin-left:auto}
+.total-badge~.pc-chev{margin-left:8px}
 .toggle-all{font-size:0.62rem;color:var(--accent);cursor:pointer;font-weight:600;border:none;background:none;font-family:inherit}
 .toggle-all:hover{text-decoration:underline}
 
@@ -227,6 +228,16 @@ body.trip-view .place-list{display:none!important}
 .trip-ctl button:hover:not(:disabled){background:var(--surface-hover);color:var(--ink)}
 .trip-ctl button.rm:hover{color:var(--accent)}
 .trip-ctl button:disabled{opacity:0.3;cursor:default}
+/* Drag to reorder: grab a stop by its number or the grip */
+.tl-num,.trip-ctl .grip{cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none}
+.trip-ctl .grip svg{width:14px;height:14px;vertical-align:middle}
+.tl-stop.dragging{z-index:5;background:#fff;box-shadow:0 10px 26px -6px rgba(44,24,16,0.35);cursor:grabbing;transition:none;animation:none}
+.tl-stop.dragging .tl-num{cursor:grabbing;transform:scale(1.08)}
+.tl-stop.shift{transition:transform .16s ease}
+body.tl-dragging{cursor:grabbing;user-select:none;-webkit-user-select:none}
+body.tl-dragging .tl-leg{opacity:.25;transition:opacity .15s}
+.tl-stop.dropped{animation:dropFlash .5s ease}
+@keyframes dropFlash{0%{background:color-mix(in srgb,var(--c) 18%,#fff)}100%{background:transparent}}
 .tl-leg{position:relative;padding:3px 0 3px 42px;min-height:30px;display:flex;align-items:center}
 .tl-leg::before{content:'';position:absolute;left:17px;top:-10px;bottom:-10px;border-left:3px solid var(--accent);opacity:.75}
 .tl-leg.sea::before,.tl-leg.none::before,.tl-leg.pending::before{border-left:2px dashed var(--ink-light);left:18px;opacity:1}
@@ -255,11 +266,19 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
   body{height:100dvh}
   .main-wrap{flex-direction:column}
   .sidebar{width:100%;flex-shrink:0;border-right:none;border-bottom:1px solid var(--border)}
-  header{padding:8px 14px}
-  header h1{font-size:1.15rem}
+  /* One-row phone header: [flag BharatYatra] [search……] [✉] — gives the map ~50px more height */
+  header{padding:6px 10px 7px 12px;gap:8px}
+  .brand{gap:7px;flex-shrink:0}
+  header h1{font-size:1.08rem;letter-spacing:-0.01em}
   .header-sub{display:none}
-  .brand-flag{width:30px;height:30px}
-  .btn-suggest{padding:7px 12px;font-size:0.7rem}
+  .brand-flag{width:24px;height:24px;border-radius:6px}
+  .brand-flag span:nth-child(2){font-size:7px}
+  .btn-suggest{width:36px;height:36px;padding:0;border-radius:50%;justify-content:center;flex-shrink:0;box-shadow:0 2px 6px rgba(181,69,42,0.3)}
+  .btn-suggest svg{width:15px;height:15px}
+  .bs-label{display:none}
+  header .search-wrap{flex:1;min-width:0;padding:0;border:none}
+  header .search-wrap input{height:36px;padding:0 10px 0 30px;border-radius:18px;background:rgba(255,253,248,0.9)}
+  header .s-icon{left:10px}
   /* Compact control row: [Categories ▾] [State select]. Categories open as a dropdown
      that overlays the map, so the map never resizes or jumps when filters change. */
   .sidebar{overflow:visible;position:relative;z-index:1100}
@@ -300,9 +319,10 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
   .leaflet-control-zoom a{width:38px!important;height:38px!important;line-height:38px!important}
   .disclaimer{font-size:0.5rem;bottom:20px;left:6px}
   .leaflet-control-attribution{font-size:9px!important;line-height:1.5!important;padding:0 5px!important;max-width:100%}
-  .place-count{padding:7px 12px}
+  .place-count{padding:6px 12px}
   .place-count .total-badge{font-size:0.62rem}
-  .vt{padding:7px 12px;font-size:0.78rem}
+  .vt{padding:6px 12px;font-size:0.78rem}
+  .trip-ctl .mv{display:none}
   .trip-ctl{opacity:1}
   .n-long{display:none}.n-short{display:inline}
   .trip-hero{padding:10px 12px 9px}
@@ -319,9 +339,9 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
     <div class="brand-flag"><span></span><span>☸</span><span></span></div>
     <div><h1>Bharat<span>Yatra</span></h1><div class="header-sub">Interactive India Travel Planner</div></div>
   </div>
-  <a class="btn-suggest" href="#" onclick="return suggestPlace()">
+  <a class="btn-suggest" href="#" onclick="return suggestPlace()" aria-label="Suggest a place" title="Suggest a place">
     <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 3.5l6 4 6-4M1 3.5v7a1 1 0 001 1h10a1 1 0 001-1v-7M1 3.5a1 1 0 011-1h10a1 1 0 011 1"/></svg>
-    Suggest a Place
+    <span class="bs-label">Suggest a Place</span>
   </a>
 </header>
 <div class="main-wrap">
@@ -346,7 +366,7 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
       <select id="stateSelect" onchange="onStateSelect(this.value)" aria-label="State"><option value="">All India</option></select>
     </div>
     </div>
-    <div class="search-wrap">
+    <div class="search-wrap" id="searchWrap">
       <svg class="s-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>
       <input type="text" id="searchInput" placeholder="Search places, states…" oninput="render()">
     </div>
@@ -699,7 +719,15 @@ function closeCatPanel(){setCatPanel(false)}
 document.addEventListener('pointerdown',e=>{if(document.getElementById('filters').classList.contains('open')&&!e.target.closest('#filters'))closeCatPanel()},true);
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCatPanel()});
 function togglePlaceList(){if(!isMobile())return;document.body.classList.toggle('list-open');setTimeout(()=>map.invalidateSize(),50)}
-window.addEventListener('resize',()=>setTimeout(()=>{map.invalidateSize();if(!isMobile())closeCatPanel()},100));
+// Phones: the search box lives in the header row; desktop: back in the sidebar
+function placeSearch(){
+  const w=document.getElementById('searchWrap'),hdr=document.querySelector('header'),inHdr=w.parentElement===hdr;
+  if(isMobile()&&!inHdr)hdr.insertBefore(w,hdr.querySelector('.btn-suggest'));
+  else if(!isMobile()&&inHdr)document.querySelector('.sidebar').insertBefore(w,document.getElementById('placeCount'));
+  document.getElementById('searchInput').placeholder=isMobile()?'Search places…':'Search places, states…';
+}
+placeSearch();
+window.addEventListener('resize',()=>setTimeout(()=>{placeSearch();map.invalidateSize();if(!isMobile())closeCatPanel()},100));
 
 function suggestPlace(){
   const cats=Object.keys(CATS).join(' / ');
@@ -890,12 +918,61 @@ function renderTrip(){
       const L1=legInfo(st[i-1],p),kind=L1&&L1.ok?'road':!L1?'pending':L1.sea?'sea':'none';
       h+=`<li class="tl-leg ${kind}" aria-label="Leg ${i}"><span class="leg-chip">${LEG_ICONS[kind]}<span>${legText(st[i-1],p)}</span></span></li>`;
     }
-    h+=`<li class="tl-stop" style="--c:${c.color};animation-delay:${Math.min(i,10)*25}ms"><span class="tl-num">${i+1}</span><div class="trip-info" data-i="${i}" title="Show on map"><h3>${esc(p.name)}</h3><div><span>${c.label}</span> · ${esc(p.state)}</div></div><div class="trip-ctl"><button onclick="moveStop(${i},-1)" ${i?'':'disabled'} aria-label="Move ${esc(p.name)} up" title="Move up">↑</button><button onclick="moveStop(${i},1)" ${i<st.length-1?'':'disabled'} aria-label="Move ${esc(p.name)} down" title="Move down">↓</button><button class="rm" onclick="removeStop(${i})" aria-label="Remove ${esc(p.name)}" title="Remove">✕</button></div></li>`;
+    h+=`<li class="tl-stop" style="--c:${c.color};animation-delay:${Math.min(i,10)*25}ms"><span class="tl-num" title="Drag to reorder">${i+1}</span><div class="trip-info" data-i="${i}" title="Show on map"><h3>${esc(p.name)}</h3><div><span>${c.label}</span> · ${esc(p.state)}</div></div><div class="trip-ctl"><button class="grip" data-i="${i}" aria-label="Reorder ${esc(p.name)}: drag, or use arrow keys" title="Drag to reorder">${GRIP_SVG}</button><button class="mv" onclick="moveStop(${i},-1)" ${i?'':'disabled'} aria-label="Move ${esc(p.name)} up" title="Move up">↑</button><button class="mv" onclick="moveStop(${i},1)" ${i<st.length-1?'':'disabled'} aria-label="Move ${esc(p.name)} down" title="Move down">↓</button><button class="rm" onclick="removeStop(${i})" aria-label="Remove ${esc(p.name)}" title="Remove">✕</button></div></li>`;
   });
   h+='</ol>';
   h+=`<div class="trip-actions"><button class="primary" onclick="shareTrip()">${ACT_ICONS.share}Share trip link</button>${st.length>2?`<button onclick="optimiseTrip()" title="Keeps your first stop, reorders the rest">${ACT_ICONS.opt}Shortest order</button>`:''}<button onclick="fitTrip()">${ACT_ICONS.map}Show on map</button><button onclick="emailTrip()">${ACT_ICONS.mail}Email</button><button class="ghost" onclick="clearTrip()">Clear trip</button></div>`;
   el.innerHTML=h;
   el.querySelectorAll('.trip-info').forEach(d=>d.onclick=()=>focusPlace(st[+d.dataset.i]));
+  el.querySelectorAll('.tl-stop').forEach((li,i)=>{
+    li.querySelectorAll('.tl-num,.grip').forEach(hd=>hd.addEventListener('pointerdown',e=>startStopDrag(e,li,i)));
+    li.querySelector('.grip').addEventListener('keydown',e=>{
+      const d=e.key==='ArrowUp'?-1:e.key==='ArrowDown'?1:0;if(!d)return;
+      e.preventDefault();const j=i+d;if(j<0||j>=trip.length)return;
+      moveStop(i,d);const g=document.querySelectorAll('#tripPanel .grip')[j];if(g)g.focus();
+    });
+  });
+  if(lastDropped!=null){const li=el.querySelectorAll('.tl-stop')[lastDropped];if(li)li.classList.add('dropped');lastDropped=null}
+}
+const GRIP_SVG='<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="9" cy="6" r="1.6"/><circle cx="15" cy="6" r="1.6"/><circle cx="9" cy="12" r="1.6"/><circle cx="15" cy="12" r="1.6"/><circle cx="9" cy="18" r="1.6"/><circle cx="15" cy="18" r="1.6"/></svg>';
+/* ── Drag to reorder trip stops (mouse + touch via pointer events) ──
+   The dragged stop follows the pointer; the other stops slide to make room. */
+let lastDropped=null;
+function startStopDrag(e,li,from){
+  if(e.button>0||trip.length<2)return;
+  e.preventDefault();
+  const panel=document.getElementById('tripPanel');
+  const stops=[...panel.querySelectorAll('.tl-stop')];
+  const tops=stops.map(s=>s.getBoundingClientRect().top+panel.scrollTop);
+  const y0=e.clientY,st0=panel.scrollTop;
+  let to=from,moved=false,scrollV=0,raf=0,lastY=y0;
+  const hd=e.currentTarget;try{hd.setPointerCapture(e.pointerId)}catch(_){}
+  function layout(){
+    const dy=lastY-y0+(panel.scrollTop-st0);
+    li.style.transform=`translateY(${dy}px)`;
+    const mid=tops[from]+dy+li.offsetHeight/2;
+    to=0;tops.forEach((t,k)=>{if(k!==from&&mid>t+stops[k].offsetHeight/2)to++});
+    const step=tops[from+1]!==undefined?tops[from+1]-tops[from]:(from?tops[from]-tops[from-1]:0);
+    stops.forEach((s,k)=>{if(k===from)return;
+      const sh=(from<to&&k>from&&k<=to)?-step:(from>to&&k<from&&k>=to)?step:0;
+      s.style.transform=sh?`translateY(${sh}px)`:''});
+  }
+  function tick(){if(scrollV){panel.scrollTop+=scrollV;layout()}raf=requestAnimationFrame(tick)}
+  function move(ev){
+    lastY=ev.clientY;
+    if(!moved){if(Math.abs(lastY-y0)<4)return;moved=true;li.classList.add('dragging');document.body.classList.add('tl-dragging');stops.forEach(s=>s!==li&&s.classList.add('shift'));raf=requestAnimationFrame(tick)}
+    const r=panel.getBoundingClientRect();
+    scrollV=lastY<r.top+30?-8:lastY>r.bottom-30?8:0;
+    layout();
+  }
+  function end(){
+    hd.removeEventListener('pointermove',move);hd.removeEventListener('pointerup',end);hd.removeEventListener('pointercancel',end);
+    cancelAnimationFrame(raf);document.body.classList.remove('tl-dragging');
+    stops.forEach(s=>{s.style.transform='';s.classList.remove('shift','dragging')});
+    if(moved&&to!==from){const [k]=trip.splice(from,1);trip.splice(to,0,k);lastDropped=to;tripChanged()}
+    else if(!moved&&hd.classList.contains('tl-num'))focusPlace(tripStops()[from]);
+  }
+  hd.addEventListener('pointermove',move);hd.addEventListener('pointerup',end);hd.addEventListener('pointercancel',end);
 }
 const svgI=d=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
 const LEG_ICONS={
