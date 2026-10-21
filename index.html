@@ -57,7 +57,25 @@ header h1 span{color:var(--accent)}
 .cat-btn:not(.active){color:var(--ink-dim)}
 .cat-btn:not(.active) .cat-swatch{opacity:.7}
 .filter-row{display:contents}
-.cat-summary,.cat-panel-head,.cat-check{display:none}
+.cat-summary,.cat-panel-head,.cat-check,.cat-dots,.filters-peek{display:none}
+/* Desktop: while "My trip" is open the filters fold into one line so the itinerary gets the room */
+@media(min-width:761px){
+  .filters{transition:padding .2s}
+  .cat-panel,.state-filter,.search-wrap{animation:fadeDown .22s ease both}
+  @keyframes fadeDown{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+  body.trip-view:not(.peek) .cat-panel,body.trip-view:not(.peek) .state-filter,body.trip-view:not(.peek) .search-wrap,body.trip-view:not(.peek) .filters-head .toggle-all{display:none}
+  body.trip-view:not(.peek) .filters{padding:9px 14px}
+  body.trip-view:not(.peek) .filters-head{margin:0}
+  body.trip-view .filters-peek{display:flex}
+  body.trip-view:not(.peek) .cat-dots{display:flex}
+  .cat-dots{gap:3px;margin-left:8px;align-items:center}
+  .cat-dots i{width:9px;height:9px;border-radius:50%;border:1.5px solid #fff;box-shadow:0 0 0 1px rgba(44,24,16,0.12)}
+  .filters-peek{align-items:center;gap:5px;margin-left:auto;margin-right:10px;border:none;background:none;font:600 0.66rem 'DM Sans',sans-serif;color:var(--ink-dim);cursor:pointer;padding:3px 6px;border-radius:6px}
+  .filters-peek:hover{background:var(--surface-hover);color:var(--ink)}
+  .filters-peek svg{transition:transform .2s}
+  body.peek .filters-peek svg{transform:rotate(180deg)}
+  body.trip-view:not(.peek) .filters-peek{margin-right:0}
+}
 
 /* ── State filter ── */
 .state-filter{padding:8px 14px;border-bottom:1px solid var(--border-light);display:flex;gap:8px;align-items:center}
@@ -258,7 +276,13 @@ body.tl-dragging .tl-leg{opacity:.25;transition:opacity .15s}
 .pop-trip:hover{background:var(--accent-hover)}
 .pop-trip:active{transform:scale(.98)}
 .pop-trip.in{background:var(--surface);color:var(--accent)}
-.route-num{display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--ink);color:#fff;font:700 11px 'DM Sans',sans-serif;border:2px solid #fff;box-shadow:0 0 0 2px rgba(181,69,42,0.6),0 2px 6px rgba(44,24,16,0.45)}
+/* Trip stops: numbered pins in the category colour, kept out of clusters so numbers never hide under cluster bubbles */
+.stop-pin{position:relative;width:34px;height:44px;cursor:pointer;transform-origin:50% 100%;transition:transform .18s ease;filter:drop-shadow(0 4px 5px rgba(30,20,10,0.4))}
+.stop-pin svg{position:absolute;z-index:0!important;inset:0;width:34px;height:44px}
+.stop-pin b{position:absolute;z-index:1;left:0;right:0;top:7px;text-align:center;font:700 13px/18px 'DM Sans',sans-serif;color:var(--c)}
+.stop-pin:hover,.stop-pin.hot{transform:scale(1.18)}
+.stop-pin.hot::after{content:'';position:absolute;left:50%;bottom:-4px;width:18px;height:8px;margin-left:-9px;border-radius:50%;background:var(--c);opacity:.45;animation:hotPulse 1s ease-out infinite}
+@keyframes hotPulse{from{transform:scale(.6);opacity:.6}to{transform:scale(2.2);opacity:0}}
 
 button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 
@@ -352,8 +376,10 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
         <button class="cat-toggle" id="catToggle" onclick="toggleCatPanel(event)" aria-expanded="false" aria-controls="catPanel">
           <h2>Categories</h2>
           <span class="cat-summary" id="catSummary"></span>
+          <span class="cat-dots" id="catDots" aria-hidden="true"></span>
           <svg class="chev" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
         </button>
+        <button class="filters-peek" id="filtersPeek" onclick="toggleFiltersPeek()" aria-expanded="false" title="Show category, state and search filters"><span id="peekLbl">Filters</span><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg></button>
         <button class="toggle-all" id="toggleAll" onclick="toggleAllCats()">Clear</button>
       </div>
       <div class="cat-panel" id="catPanel">
@@ -455,6 +481,7 @@ L.control.scale({imperial:false,position:'bottomright'}).addTo(map);
 
 const clusters=L.markerClusterGroup({maxClusterRadius:45,spiderfyOnMaxZoom:true,showCoverageOnHover:false,zoomToBoundsOnClick:true,disableClusteringAtZoom:12});
 map.addLayer(clusters);
+const stopPinLayer=L.layerGroup().addTo(map);
 
 // Label layers
 function mkLabel(text,lat,lng,cls){return L.marker([lat,lng],{icon:L.divIcon({className:cls,html:cls==='state-label'?text:`<div class="cl-inner"><span class="cl-dot"></span><span class="cl-name">${text}</span></div>`,iconSize:cls==='state-label'?[120,14]:[110,14],iconAnchor:cls==='state-label'?[60,7]:[3,7]}),interactive:false})}
@@ -617,7 +644,7 @@ function render(){
   // Remember an open popup so a re-render (e.g. after a state auto-loads) doesn't close it
   let reopen=null;
   for(const[k,m] of Object.entries(markerByKey)){if(m.isPopupOpen&&m.isPopupOpen()){reopen=k;break}}
-  clusters.clearLayers();markerByKey={};
+  clusters.clearLayers();stopPinLayer.clearLayers();markerByKey={};
   document.getElementById('map').style.setProperty('--pw',popW()+'px');
   const listEl=document.getElementById('placeList');listEl.innerHTML='';
   const q=(document.getElementById('searchInput').value||'').toLowerCase();
@@ -650,8 +677,9 @@ function render(){
     listEl.appendChild(card);
   });
   clusters.addLayers(markers);
+  syncStopPins();
   syncCardTripBtns();
-  if(reopen&&markerByKey[reopen]){const m=markerByKey[reopen];clusters.zoomToShowLayer(m,()=>m.openPopup())}
+  if(reopen&&markerByKey[reopen])showMarker(markerByKey[reopen]);
 
   document.getElementById('placeCountN').textContent=visible.length;
   document.getElementById('totalBadge').textContent=totalPlaces?`of ${totalPlaces}`:'';
@@ -680,7 +708,12 @@ async function focusPlace(p){
   if(!loadedStates[p.stateCode]&&statesIndex[p.stateCode]){await loadStateData(p.stateCode);render()}
   map.setView([p.lat,p.lng],Math.max(map.getZoom(),12));
   const m=markerByKey[placeKey(p)];
-  if(m)clusters.zoomToShowLayer(m,()=>m.openPopup());
+  if(m)showMarker(m);
+}
+// Open a marker's popup, unspiderfying/zooming its cluster if needed (trip stops aren't clustered)
+function showMarker(m){
+  if(stopPinLayer.hasLayer(m))m.openPopup();
+  else clusters.zoomToShowLayer(m,()=>m.openPopup());
 }
 
 function renderCatBtns(){
@@ -698,6 +731,7 @@ function renderCatBtns(){
   });
   const n=activeCats.size,all=Object.keys(CATS).length;
   document.getElementById('catSummary').textContent=n===all?'All':n+'/'+all;
+  document.getElementById('catDots').innerHTML=Object.entries(CATS).filter(([k])=>activeCats.has(k)).map(([k,c])=>`<i style="background:${c.color}" title="${c.label}"></i>`).join('')||'<span style="font-size:.62rem;color:var(--ink-light)">none</span>';
   const lbl=n===all?'Clear':'All';
   document.getElementById('toggleAll').textContent=lbl;document.getElementById('toggleAllM').textContent=lbl;
 }
@@ -718,6 +752,11 @@ function closeCatPanel(){setCatPanel(false)}
 // Tap anywhere outside the dropdown (including the map) closes it
 document.addEventListener('pointerdown',e=>{if(document.getElementById('filters').classList.contains('open')&&!e.target.closest('#filters'))closeCatPanel()},true);
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCatPanel()});
+function toggleFiltersPeek(){
+  const on=document.body.classList.toggle('peek');
+  document.getElementById('filtersPeek').setAttribute('aria-expanded',on);
+  document.getElementById('peekLbl').textContent=on?'Hide':'Filters';
+}
 function togglePlaceList(){if(!isMobile())return;document.body.classList.toggle('list-open');setTimeout(()=>map.invalidateSize(),50)}
 // Phones: the search box lives in the header row; desktop: back in the sidebar
 function placeSearch(){
@@ -749,6 +788,31 @@ function tripBtnHTML(p){
   return inTrip(p)
     ?`<button class="pop-trip in" data-trip="${k}">✓ In your trip — remove</button>`
     :`<button class="pop-trip" data-trip="${k}">+ Add to trip</button>`;
+}
+// Trip stops leave the cluster group and become numbered pins in their own layer (stopPinLayer)
+function stopIcon(p,n){
+  const c=(CATS[p.cat]||CATS.scenic).color;
+  return L.divIcon({className:'',html:`<div class="stop-pin" style="--c:${c}"><svg viewBox="0 0 34 44"><path d="M17 43C17 43 2 26 2 16a15 15 0 0130 0c0 10-15 27-15 27z" fill="${c}" stroke="#fff" stroke-width="2.4"/><circle cx="17" cy="16" r="9.5" fill="#fff"/></svg><b>${n}</b></div>`,iconSize:[34,44],iconAnchor:[17,43],popupAnchor:[0,-38],tooltipAnchor:[14,-26]});
+}
+function syncStopPins(){
+  for(const[k,m] of Object.entries(markerByKey)){
+    const i=trip.indexOf(k),wasOpen=m.isPopupOpen&&m.isPopupOpen();
+    if(i>=0){
+      if(clusters.hasLayer(m))clusters.removeLayer(m);
+      m.setIcon(stopIcon(m._place,i+1));m.setZIndexOffset(10000-i*100); // earlier stops on top when pins overlap
+      if(!stopPinLayer.hasLayer(m))stopPinLayer.addLayer(m);
+    }else if(stopPinLayer.hasLayer(m)){
+      stopPinLayer.removeLayer(m);m.setIcon(makeIcon(m._place.cat));m.setZIndexOffset(0);clusters.addLayer(m);
+    }else continue;
+    if(wasOpen&&!m.isPopupOpen())m.openPopup();
+  }
+}
+// Hovering a stop in the timeline lifts and pulses its pin on the map
+function hotStop(k,on){
+  const m=markerByKey[k],el=m&&m.getElement&&m.getElement();
+  const pin=el?el.querySelector('.stop-pin'):document.querySelector(`.stop-pin[data-k="${CSS.escape(k)}"]`);
+  if(pin)pin.classList.toggle('hot',on);
+  if(m&&stopPinLayer.hasLayer(m))m.setZIndexOffset(on?20000:10000-trip.indexOf(k)*100);
 }
 function km(a,b){
   const R=6371,r=x=>x*Math.PI/180,dLat=r(b.lat-a.lat),dLng=r(b.lng-a.lng);
@@ -810,11 +874,12 @@ function showView(v){
     document.body.classList.toggle('list-open',!(open&&wantTrip===isTrip));
   }
   document.body.classList.toggle('trip-view',wantTrip);
+  if(!wantTrip&&document.body.classList.contains('peek'))toggleFiltersPeek();
   syncTabs();renderTrip();setTimeout(()=>map.invalidateSize(),50);
 }
 const toggleTripView=()=>showView(document.body.classList.contains('trip-view')?'places':'trip');
 function tripChanged(){
-  saveTrip();renderTrip();syncCardTripBtns();
+  saveTrip();renderTrip();syncStopPins();syncCardTripBtns();
   if(location.hash.startsWith('#trip='))history.replaceState(null,'',location.pathname+location.search);
   // refresh any open popup's button
   map.eachLayer(l=>{if(l._place&&l.isPopupOpen&&l.isPopupOpen()){const p=l._place;l.getPopup().setContent(popupHTML(p,p.img||imgCache[p.wiki]||null))}});
@@ -894,7 +959,9 @@ function renderTrip(){
   }
   if(st.length>1)scheduleRouting();
   st.forEach((p,i)=>{
-    const m=L.marker([p.lat,p.lng],{icon:L.divIcon({className:'',html:`<div class="route-num">${i+1}</div>`,iconSize:[20,20],iconAnchor:[10,24]}),zIndexOffset:1000,title:`${i+1}. ${p.name}`});
+    if(markerByKey[placeKey(p)])return; // shown by syncStopPins
+    const ic=stopIcon(p,i+1);ic.options.html=ic.options.html.replace('class="stop-pin"',`class="stop-pin" data-k="${esc(placeKey(p))}"`);
+    const m=L.marker([p.lat,p.lng],{icon:ic,zIndexOffset:10000-i*100,title:`${i+1}. ${p.name}`});
     m.on('click',()=>focusPlace(p));m.addTo(tripLayer);
   });
   // sidebar panel: summary card + vertical timeline of stops and legs
@@ -925,6 +992,8 @@ function renderTrip(){
   el.innerHTML=h;
   el.querySelectorAll('.trip-info').forEach(d=>d.onclick=()=>focusPlace(st[+d.dataset.i]));
   el.querySelectorAll('.tl-stop').forEach((li,i)=>{
+    const k=placeKey(st[i]);
+    li.addEventListener('mouseenter',()=>hotStop(k,true));li.addEventListener('mouseleave',()=>hotStop(k,false));
     li.querySelectorAll('.tl-num,.grip').forEach(hd=>hd.addEventListener('pointerdown',e=>startStopDrag(e,li,i)));
     li.querySelector('.grip').addEventListener('keydown',e=>{
       const d=e.key==='ArrowUp'?-1:e.key==='ArrowDown'?1:0;if(!d)return;
