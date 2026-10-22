@@ -9,9 +9,12 @@
 - [x] **Visual refresh, pass 2 — popups & sidebar** — popups are now photo-led cards: 168px Wikipedia photo with a shimmer while it loads and a fade-in, place name and state set over the photo, category chip, a coloured header when there's no photo, and a soft pop-in animation. Each popup has Directions (Google Maps), Wikipedia and **Suggest edit** (email to utkarsh.khurana@outlook.com) links. Popups size to the screen and no longer slide under the map controls on phones. Sidebar cards got larger category tiles, a category + state line, 2-line descriptions, hover lift, a highlight for the place whose popup is open, and a one-tap **+ / ✓ Add to trip** button. Fixed Neer Mahal's coordinates (23.50, 91.32). *(2026-10-18, run 2)*
 - [x] **Visual refresh, first pass** — terrain basemap, misted neighbours with a warm wash inside India, saffron-halo boundary, teardrop category pins, cream clusters with coloured rings, tricolour header rule, serif state labels, less clutter on phones. *(2026-10-18)*
 
+## Done after the backlog
+- [x] **Day-by-day trip plan** — the My trip timeline now splits the route into driving days (Day 1, Day 2 … headers with each day's drive time and km), marks overnight stops with a 🌙 Night N tag, alternates the route colour per day on the map, and adds a "days" count to the trip summary. A **Max drive / day** switch (4 h / 6 h / 8 h, remembered on the device) re-plans instantly. Sea/air legs to the islands become their own travel day; a single leg longer than the limit is flagged as a long day; days that still use straight-line estimates are marked ≈. Email itineraries include the day headings. Fix: trips restored from a shared link or the browser now show their numbered stop pins immediately (they used to appear only after the map re-rendered). *(2026-10-22)*
+
 ## Next
 - Check the whole look on real Esri tiles on a phone (the sandbox can't load tiles) and fine-tune the colour wash / mist.
 - Check pins that fall just outside the simplified boundary.
 - Lazy photo thumbnails in the sidebar cards (only for cards scrolled into view).
-- Day-by-day split for longer trips (e.g. break legs into ~6 h driving days).
+- Optional sightseeing/rest days per stop in the day plan (e.g. "+1 day at Jaipur").
 - More Adventure places (real, well-known treks and rafting spots).

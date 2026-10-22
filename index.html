@@ -263,6 +263,23 @@ body.tl-dragging .tl-leg{opacity:.25;transition:opacity .15s}
 .leg-chip svg{width:12px;height:12px;flex-shrink:0}
 .tl-leg.road .leg-chip{color:#7A2E14;background:color-mix(in srgb,var(--accent) 8%,#fff);border-color:color-mix(in srgb,var(--accent) 22%,transparent)}
 .tl-leg.pending .leg-chip svg{animation:spin 1s linear infinite}
+/* Day-by-day plan: driving days split at a daily drive limit */
+.th-pace{position:relative;z-index:1;display:flex;align-items:center;gap:6px;margin-top:8px;font-size:0.6rem;opacity:.95}
+.th-pace span{opacity:.82;text-transform:uppercase;letter-spacing:0.08em;font-weight:600}
+.th-pace div{display:flex;background:rgba(255,255,255,0.14);border-radius:8px;padding:2px;gap:2px}
+.th-pace button{border:none;background:none;color:#fff;font:600 0.66rem 'DM Sans',sans-serif;padding:3px 8px;border-radius:6px;cursor:pointer;opacity:.8;transition:background .15s,opacity .15s}
+.th-pace button:hover{opacity:1}
+.th-pace button.on{background:#fff;color:#8E3A24;opacity:1}
+.tl-day{position:relative;z-index:2;display:flex;align-items:center;gap:8px;margin:10px 0 2px;padding:0 2px;animation:cardIn .25s ease both}
+.tl-day:first-child{margin-top:0}
+.tl-day b{flex-shrink:0;font:700 0.6rem 'DM Sans',sans-serif;letter-spacing:0.1em;text-transform:uppercase;color:#fff;background:var(--d);border-radius:6px;padding:3px 8px;box-shadow:0 2px 6px -2px color-mix(in srgb,var(--d) 60%,transparent)}
+.tl-day span{font-size:0.62rem;color:var(--ink-dim);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tl-day::after{content:'';flex:1;min-width:12px;height:1px;background:linear-gradient(90deg,var(--border),transparent)}
+.tl-day.long span{color:#A0461F}
+.tl-leg[style*="--d"]::before{border-left-color:var(--d)}
+.overnight{display:inline-flex;align-items:center;gap:3px;margin-left:6px;color:#4B4FA0!important;font-weight:700;letter-spacing:0.04em!important}
+.overnight svg{width:10px;height:10px}
+body.tl-dragging .tl-day{opacity:.25;transition:opacity .15s}
 .trip-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:8px 0 2px}
 .trip-actions button{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 10px;border-radius:9px;border:1px solid var(--border);background:var(--surface);color:var(--ink);font-family:inherit;font-size:0.7rem;font-weight:600;cursor:pointer;transition:background .15s,border-color .15s,transform .1s}
 .trip-actions button svg{width:13px;height:13px}
@@ -855,7 +872,13 @@ async function shareTrip(){
 }
 function emailTrip(){
   const st=tripStops();if(!st.length)return;
-  const lines=st.map((p,i)=>`${i+1}. ${p.name} (${p.state}) — ${CATS[p.cat]?.label||p.cat}`+(i?`  [${legText(st[i-1],p,true)} from previous]`:''));
+  const P=planDays(st),multi=P.days.length>1,lines=[];
+  st.forEach((p,i)=>{
+    if(multi&&i===0)lines.push(`Day 1 (${dayText(P.days[0])})`);
+    if(multi&&i>1&&P.legDay[i]!==P.legDay[i-1]){const d=P.legDay[i];lines.push('',`Day ${d+1} (${dayText(P.days[d])})`)}
+    lines.push(`${i+1}. ${p.name} (${p.state}) — ${CATS[p.cat]?.label||p.cat}`+(i?`  [${legText(st[i-1],p,true)} from previous]`:''));
+  });
+  if(multi)lines.push('',`(Split into driving days of up to ${paceH} h.)`);
   const T=tripTotals(st);
   const tot=[T.road?`${fmtKm(T.road)} by road (~${fmtMin(T.min)} driving)`:'',T.straight?`${fmtKm(T.straight)} straight-line`:''].filter(Boolean).join(' + ');
   const body=`My BharatYatra itinerary:\n\n${lines.join('\n')}\n\nTotal: ${tot||'—'}\n(Drive times are estimates.)\n\nOpen on the map: ${tripLink()}`;
@@ -938,6 +961,41 @@ function tripTotals(st){
   }
   return {road,min,straight,pending,fallback};
 }
+/* ── Day-by-day plan ──
+   Splits the trip into driving days: a new day starts when the next leg would push the day's
+   driving past the daily limit (the overnight stop is where the previous day ended). Sea/air
+   legs (to the islands) are a travel day of their own. Legs without a road time yet use a rough
+   estimate (straight-line × 1.3 at 45 km/h) and the day is marked "≈". */
+const PACE_LS='bharatyatra.pace.v1',PACES=[4,6,8];
+let paceH=6;try{const v=+localStorage.getItem(PACE_LS);if(PACES.includes(v))paceH=v}catch(e){}
+function setPace(h){paceH=h;try{localStorage.setItem(PACE_LS,h)}catch(e){}renderTrip()}
+const DAY_COLORS=['#B5452A','#1F6F78'];
+function planDays(st){
+  const days=[],legDay=[];
+  if(st.length<2)return {days,legDay};
+  const budget=paceH*60;
+  let cur={start:0,end:0,min:0,km:0,est:false,legs:0};
+  const close=end=>{cur.end=end;days.push(cur)};
+  for(let i=1;i<st.length;i++){
+    const a=st[i-1],b=st[i],L1=legInfo(a,b);
+    if(L1&&L1.sea){
+      if(cur.legs)close(i-1);
+      legDay[i]=days.length;days.push({start:i-1,end:i,sea:true,km:km(a,b),min:0,legs:1});
+      cur={start:i,end:i,min:0,km:0,est:false,legs:0};continue;
+    }
+    const ok=L1&&L1.ok,d=ok?L1.km:km(a,b),m=ok?L1.min:d*1.3/45*60;
+    if(cur.legs&&cur.min+m>budget){close(i-1);cur={start:i-1,end:i-1,min:0,km:0,est:false,legs:0}}
+    cur.min+=m;cur.km+=ok?d:d*1.3;cur.legs++;if(!ok)cur.est=true;
+    legDay[i]=days.length;
+  }
+  if(cur.legs)close(st.length-1);
+  return {days,legDay};
+}
+function dayText(d){
+  if(d.sea)return `Flight / ferry · ${fmtKm(d.km)} straight-line`;
+  return `${d.est?'≈':'~'}${fmtMin(d.min)} driving · ${d.est?'≈':''}${fmtKm(d.km)}`+(d.min>paceH*60+5?' · long day':'');
+}
+const MOON_SVG='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 14.5A8.5 8.5 0 019.5 4a8.5 8.5 0 1010.5 10.5z"/></svg>';
 function legText(a,b,plain){
   const L1=legInfo(a,b);
   if(L1&&L1.ok)return `${fmtKm(L1.km)} by road · ~${fmtMin(L1.min)}`;
@@ -950,11 +1008,13 @@ function renderTrip(){
   document.getElementById('tripCount').textContent=st.length;
   // map route
   tripLayer.clearLayers();
+  const P=planDays(st),multiDay=P.days.length>1;
+  const dayCol=i=>multiDay?DAY_COLORS[P.legDay[i]%2]:DAY_COLORS[0]; // alternate route colour per day
   for(let i=1;i<st.length;i++){
     const a=st[i-1],b=st[i],L1=legInfo(a,b);
     if(L1&&L1.ok){
       L.polyline(L1.coords,{color:'#fff',weight:7,opacity:0.85,interactive:false}).addTo(tripLayer);
-      L.polyline(L1.coords,{color:'#B5452A',weight:4,opacity:0.95,interactive:false}).addTo(tripLayer);
+      L.polyline(L1.coords,{color:dayCol(i),weight:4,opacity:0.95,interactive:false}).addTo(tripLayer);
     }else L.polyline([[a.lat,a.lng],[b.lat,b.lng]],{color:'#2C1810',weight:2.5,opacity:0.75,dashArray:'6 6',interactive:false}).addTo(tripLayer);
   }
   if(st.length>1)scheduleRouting();
@@ -973,19 +1033,23 @@ function renderTrip(){
   if(st.length>1){
     if(T.road)stats+=`<div><b>${fmtKm(T.road)}</b><span>by road</span></div><div><b>~${fmtMin(T.min)}</b><span>driving</span></div>`;
     if(T.straight)stats+=`<div><b>${fmtKm(T.straight)}</b><span>straight-line</span></div>`;
+    stats+=`<div><b>${P.days.length}</b><span>day${P.days.length>1?'s':''}</span></div>`;
   }
   const note=st.length<2?'Add another stop to see road distance and drive time.'
     :T.pending?'Finding road routes…'
     :'Road distances and drive times are estimates from OpenStreetMap (OSRM) and exclude stops and traffic.'+(T.fallback?' Legs without a road route (e.g. to islands) use straight-line distance.':'');
   const shortNote=st.length<2||T.pending?note:'Road km and drive times are estimates (OSRM)'+(T.fallback?'; island legs are straight-line.':'.');
-  h+=`<div class="trip-hero"><div class="th-title">Your trip</div><div class="th-stats">${stats}</div><small><span class="n-long">${note}</span><span class="n-short">${shortNote}</span></small></div><ol class="tl">`;
+  h+=`<div class="trip-hero"><div class="th-title">Your trip</div><div class="th-stats">${stats}</div><small><span class="n-long">${note}</span><span class="n-short">${shortNote}</span></small>${st.length>1?`<div class="th-pace" role="group" aria-label="Daily driving limit"><span>Max drive / day</span><div>${PACES.map(h=>`<button class="${h===paceH?'on':''}" onclick="setPace(${h})" aria-pressed="${h===paceH}">${h} h</button>`).join('')}</div></div>`:''}</div><ol class="tl">`;
+  const dayHead=d=>{const D=P.days[d];return `<li class="tl-day${D.min>paceH*60+5?' long':''}" style="--d:${DAY_COLORS[d%2]}" aria-label="Day ${d+1}"><b>Day ${d+1}</b><span>${dayText(D)}</span></li>`};
+  if(multiDay)h+=dayHead(0);
   st.forEach((p,i)=>{
     const c=CATS[p.cat]||CATS.scenic;
     if(i){
       const L1=legInfo(st[i-1],p),kind=L1&&L1.ok?'road':!L1?'pending':L1.sea?'sea':'none';
-      h+=`<li class="tl-leg ${kind}" aria-label="Leg ${i}"><span class="leg-chip">${LEG_ICONS[kind]}<span>${legText(st[i-1],p)}</span></span></li>`;
+      if(multiDay&&P.legDay[i]!==P.legDay[i-1]&&i>1)h+=dayHead(P.legDay[i]);
+      h+=`<li class="tl-leg ${kind}"${multiDay?` style="--d:${dayCol(i)}"`:''} aria-label="Leg ${i}"><span class="leg-chip">${LEG_ICONS[kind]}<span>${legText(st[i-1],p)}</span></span></li>`;
     }
-    h+=`<li class="tl-stop" style="--c:${c.color};animation-delay:${Math.min(i,10)*25}ms"><span class="tl-num" title="Drag to reorder">${i+1}</span><div class="trip-info" data-i="${i}" title="Show on map"><h3>${esc(p.name)}</h3><div><span>${c.label}</span> · ${esc(p.state)}</div></div><div class="trip-ctl"><button class="grip" data-i="${i}" aria-label="Reorder ${esc(p.name)}: drag, or use arrow keys" title="Drag to reorder">${GRIP_SVG}</button><button class="mv" onclick="moveStop(${i},-1)" ${i?'':'disabled'} aria-label="Move ${esc(p.name)} up" title="Move up">↑</button><button class="mv" onclick="moveStop(${i},1)" ${i<st.length-1?'':'disabled'} aria-label="Move ${esc(p.name)} down" title="Move down">↓</button><button class="rm" onclick="removeStop(${i})" aria-label="Remove ${esc(p.name)}" title="Remove">✕</button></div></li>`;
+    h+=`<li class="tl-stop" style="--c:${c.color};animation-delay:${Math.min(i,10)*25}ms"><span class="tl-num" title="Drag to reorder">${i+1}</span><div class="trip-info" data-i="${i}" title="Show on map"><h3>${esc(p.name)}</h3><div><span>${c.label}</span> · ${esc(p.state)}${multiDay&&P.days.some((D,d)=>d<P.days.length-1&&D.end===i)?`<span class="overnight" title="Overnight stop">${MOON_SVG}Night ${P.days.findIndex(D=>D.end===i)+1}</span>`:''}</div></div><div class="trip-ctl"><button class="grip" data-i="${i}" aria-label="Reorder ${esc(p.name)}: drag, or use arrow keys" title="Drag to reorder">${GRIP_SVG}</button><button class="mv" onclick="moveStop(${i},-1)" ${i?'':'disabled'} aria-label="Move ${esc(p.name)} up" title="Move up">↑</button><button class="mv" onclick="moveStop(${i},1)" ${i<st.length-1?'':'disabled'} aria-label="Move ${esc(p.name)} down" title="Move down">↓</button><button class="rm" onclick="removeStop(${i})" aria-label="Remove ${esc(p.name)}" title="Remove">✕</button></div></li>`;
   });
   h+='</ol>';
   h+=`<div class="trip-actions"><button class="primary" onclick="shareTrip()">${ACT_ICONS.share}Share trip link</button>${st.length>2?`<button onclick="optimiseTrip()" title="Keeps your first stop, reorders the rest">${ACT_ICONS.opt}Shortest order</button>`:''}<button onclick="fitTrip()">${ACT_ICONS.map}Show on map</button><button onclick="emailTrip()">${ACT_ICONS.mail}Email</button><button class="ghost" onclick="clearTrip()">Clear trip</button></div>`;
@@ -1075,11 +1139,11 @@ async function initTrip(){
   const m=location.hash.match(/^#trip=(.*)$/);
   if(m){
     trip=await resolve(clean(m[1].split('~').map(k=>{try{return decodeURIComponent(k)}catch(e){return ''}}).filter(Boolean)));
-    if(trip.length){saveTrip();document.body.classList.add('trip-view');syncTabs();if(isMobile())document.body.classList.add('list-open');fitTrip();renderTrip();return}
+    if(trip.length){saveTrip();document.body.classList.add('trip-view');syncTabs();if(isMobile())document.body.classList.add('list-open');fitTrip();renderTrip();syncStopPins();syncCardTripBtns();return}
   }
   let saved=[];try{saved=JSON.parse(localStorage.getItem(TRIP_LS)||'[]')}catch(e){}
   trip=await resolve(clean(saved));
-  renderTrip();
+  renderTrip();syncStopPins();syncCardTripBtns(); // restored stops become numbered pins straight away
 }
 
 init().then(initTrip);
