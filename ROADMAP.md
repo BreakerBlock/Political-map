@@ -11,10 +11,11 @@
 
 ## Done after the backlog
 - [x] **Day-by-day trip plan** — the My trip timeline now splits the route into driving days (Day 1, Day 2 … headers with each day's drive time and km), marks overnight stops with a 🌙 Night N tag, alternates the route colour per day on the map, and adds a "days" count to the trip summary. A **Max drive / day** switch (4 h / 6 h / 8 h, remembered on the device) re-plans instantly. Sea/air legs to the islands become their own travel day; a single leg longer than the limit is flagged as a long day; days that still use straight-line estimates are marked ≈. Email itineraries include the day headings. Fix: trips restored from a shared link or the browser now show their numbered stop pins immediately (they used to appear only after the map re-rendered). *(2026-10-22)*
+- [x] **Islands on the map & pins checked against the boundary** — every place (289) was tested against `india-boundary.geojson`. The outline had no Lakshadweep at all (Agatti's pin floated in open sea) and was missing Pamban island (Rameswaram), Barren Island, Narcondam and a few other outer Andaman & Nicobar islands, and two Sundarbans islands; 19 island outlines from Natural Earth 1:10m land were added (islands only — the mainland and the Kashmir boundary are untouched; the mist mask and halo pick them up). Added LAKSHADWEEP and ANDAMAN & NICOBAR map labels. Fixed three pins that sat outside India: **Sundarbans** (was in Bangladesh → 21.84, 88.89, the national park), **Singalila NP** (was in Nepal → 27.12, 88.07) and **Dawki River** (on the border line → 25.19, 92.02). Remaining near-misses are ≤2 km and come from the simplified coastline. *(2026-10-23)*
 
 ## Next
 - Check the whole look on real Esri tiles on a phone (the sandbox can't load tiles) and fine-tune the colour wash / mist.
-- Check pins that fall just outside the simplified boundary.
+- Neil Island (Shaheed Dweep) is still missing from the outline — no key-free source with it at hand; its pin sits ~5 km off the drawn coast.
 - Lazy photo thumbnails in the sidebar cards (only for cards scrolled into view).
 - Optional sightseeing/rest days per stop in the day plan (e.g. "+1 day at Jaipur").
 - More Adventure places (real, well-known treks and rafting spots).

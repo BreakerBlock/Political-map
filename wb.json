@@ -35,8 +35,8 @@
   {
    "name": "Sundarbans",
    "cat": "fauna",
-   "lat": 21.95,
-   "lng": 89.18,
+   "lat": 21.84,
+   "lng": 88.89,
    "state": "West Bengal",
    "stateCode": "WB",
    "desc": "Largest mangrove \u2014 Royal Bengal tigers",
@@ -45,8 +45,8 @@
   {
    "name": "Singalila NP",
    "cat": "fauna",
-   "lat": 27.05,
-   "lng": 88.0,
+   "lat": 27.12,
+   "lng": 88.07,
    "state": "West Bengal",
    "stateCode": "WB",
    "desc": "Red panda habitat in the eastern Himalayas",
