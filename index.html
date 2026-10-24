@@ -194,12 +194,20 @@ body.sat-on .india-fill{fill-opacity:0}
 .leaflet-tooltip.pin-label{display:none}
 body.show-pin-labels .leaflet-tooltip.pin-label{display:block}
 
-.state-label{font-family:'Cormorant Garamond',serif!important;font-size:10.5px!important;font-weight:700!important;color:rgba(90,40,20,0.5)!important;letter-spacing:0.16em!important;text-transform:uppercase!important;white-space:nowrap!important;text-shadow:0 0 5px rgba(245,237,224,1)!important;pointer-events:none!important;text-align:center!important}
-.city-label{font-family:'DM Sans',sans-serif!important;pointer-events:none!important;white-space:nowrap!important}
-.cl-inner{display:flex;align-items:center;gap:4px}
-.cl-dot{width:5px;height:5px;border-radius:50%;background:#5A4A3A;border:1px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);flex-shrink:0}
-.cl-name{font-size:10px;font-weight:500;color:#4A3A2C;text-shadow:0 0 3px #fff,0 0 5px #fff,0 0 6px #fff}
+.leaflet-labels-pane{transition:opacity .15s}
+.leaflet-labels-pane.zooming{opacity:0;transition:none}
+.state-label,.city-label{pointer-events:none!important;transition:opacity .25s ease}
+.lbl-off{opacity:0!important}
+.city-label.nodot .cl-dot{display:none}
+.sl-t{position:absolute;left:0;top:0;transform:translate(-50%,-50%);font-family:'Cormorant Garamond',Georgia,serif;font-size:10.5px;font-weight:700;color:rgba(90,40,20,0.55);letter-spacing:0.16em;text-transform:uppercase;white-space:nowrap;line-height:1.1;text-shadow:0 0 4px rgba(245,237,224,1),0 0 7px rgba(245,237,224,1)}
+.city-label{font-family:'DM Sans',sans-serif}
+.cl-dot{position:absolute;left:-3.5px;top:-3.5px;width:5px;height:5px;border-radius:50%;background:#5A4A3A;border:1px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4)}
+.cl-name{position:absolute;left:0;top:0;white-space:nowrap;line-height:1.15;font-size:10px;font-weight:500;color:#4A3A2C;text-shadow:0 0 3px #fff,0 0 5px #fff,0 0 6px #fff}
 .city-label.tier1 .cl-name{font-weight:600;font-size:10.5px}
+.city-label.tier0 .cl-name{font-weight:700;font-size:11px;color:#3A2A1E;letter-spacing:.01em}
+.city-label.tier0 .cl-dot{width:6px;height:6px;left:-4px;top:-4px;background:#7A2E14}
+body.sat-on .cl-name{color:#fff;text-shadow:0 0 3px rgba(0,0,0,.9),0 0 6px rgba(0,0,0,.7)}
+body.sat-on .sl-t{color:rgba(255,245,230,.85);text-shadow:0 0 4px rgba(0,0,0,.9)}
 
 .disclaimer{position:absolute;bottom:6px;left:10px;z-index:800;font-size:0.56rem;color:var(--ink-light);background:rgba(255,253,248,0.92);padding:3px 12px;border-radius:4px;white-space:nowrap}
 .loading-overlay{position:absolute;inset:0;z-index:900;background:rgba(245,237,224,0.9);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--ink-dim);gap:12px}
@@ -500,21 +508,75 @@ const clusters=L.markerClusterGroup({maxClusterRadius:45,spiderfyOnMaxZoom:true,
 map.addLayer(clusters);
 const stopPinLayer=L.layerGroup().addTo(map);
 
-// Label layers
-function mkLabel(text,lat,lng,cls){return L.marker([lat,lng],{icon:L.divIcon({className:cls,html:cls==='state-label'?text:`<div class="cl-inner"><span class="cl-dot"></span><span class="cl-name">${text}</span></div>`,iconSize:cls==='state-label'?[120,14]:[110,14],iconAnchor:cls==='state-label'?[60,7]:[3,7]}),interactive:false})}
-const stateLayer=L.layerGroup(STATE_LABELS.map(s=>mkLabel(s[0],s[1],s[2],'state-label'))).addTo(map);
-const cityT1=L.layerGroup(CITIES_T1.map(c=>mkLabel(c[0],c[1],c[2],'city-label tier1')));
+// Label layers — drawn in their own pane ABOVE the pins, and decluttered: a label never sits
+// on a pin, a cluster, a map control or another label. City names try right, left, above and
+// below their dot before giving up; bigger cities and states get first pick.
+const labelPane=map.createPane('labels');labelPane.style.zIndex=640;labelPane.style.pointerEvents='none';
+function mkLabel(text,lat,lng,cls){
+  const st=cls==='state-label';
+  const m=L.marker([lat,lng],{pane:'labels',interactive:false,keyboard:false,icon:L.divIcon({className:cls+' lbl-off',
+    html:st?`<span class="sl-t">${text}</span>`:`<span class="cl-dot"></span><span class="cl-name">${text}</span>`,
+    iconSize:[0,0],iconAnchor:[0,0]})});
+  m._lbl={st,big:/tier0/.test(cls),w:0,h:0};return m;
+}
+// tier0 = the six metros, shown even on the zoomed-out phone view
+const METROS=new Set(['New Delhi','Mumbai','Kolkata','Chennai','Bengaluru','Hyderabad']);
+const cityT0=L.layerGroup(CITIES_T1.filter(c=>METROS.has(c[0])).map(c=>mkLabel(c[0],c[1],c[2],'city-label tier1 tier0')));
+const cityT1=L.layerGroup(CITIES_T1.filter(c=>!METROS.has(c[0])).map(c=>mkLabel(c[0],c[1],c[2],'city-label tier1')));
 const cityT2=L.layerGroup(CITIES_T2.map(c=>mkLabel(c[0],c[1],c[2],'city-label tier2')));
+const stateLayer=L.layerGroup(STATE_LABELS.map(s=>mkLabel(s[0],s[1],s[2],'state-label')));
 
 function syncLabels(){
-  const z=map.getZoom();
-  [stateLayer,cityT1,cityT2].forEach(l=>{if(map.hasLayer(l))map.removeLayer(l)});
-  if(z>=4.5&&z<8)map.addLayer(stateLayer);
-  if(z>=4.5)map.addLayer(cityT1);
-  if(z>=7)map.addLayer(cityT2);
+  const z=map.getZoom(),want=[[cityT0,z<8.5],[cityT1,z>=4.5&&z<9.5],[stateLayer,z>=4.5&&z<8],[cityT2,z>=6.5&&z<10.5]];
+  for(const[l,on] of want){if(on&&!map.hasLayer(l))map.addLayer(l);else if(!on&&map.hasLayer(l))map.removeLayer(l)}
   document.body.classList.toggle('show-pin-labels',z>=9);
+  declutterSoon();
 }
-map.on('zoomend',syncLabels);syncLabels();
+const padR=r=>({x:r.x-4,y:r.y-1,w:r.w+8,h:r.h+2});
+const hits=(a,b)=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;
+function declutterLabels(){
+  const box=map.getContainer().getBoundingClientRect(),taken=[],P=3;
+  const rel=r=>({x:r.left-box.left-P,y:r.top-box.top-P,w:r.width+2*P,h:r.height+2*P});
+  // Obstacles: every pin/cluster on screen, visible pin name tags, and the map's own controls
+  map.getPane('markerPane').querySelectorAll('.leaflet-marker-icon').forEach(el=>{const r=el.getBoundingClientRect();if(r.width&&r.right>box.left&&r.left<box.right&&r.bottom>box.top&&r.top<box.bottom)taken.push(rel(r))});
+  if(document.body.classList.contains('show-pin-labels'))map.getPane('tooltipPane').querySelectorAll('.pin-label').forEach(el=>{const r=el.getBoundingClientRect();if(r.width)taken.push(rel(r))});
+  map.getContainer().querySelectorAll('.leaflet-control,.disclaimer,.compass').forEach(el=>{const r=el.getBoundingClientRect();if(r.width)taken.push(rel(r))});
+  // Priority: metros → states → big cities → other cities
+  const order=[cityT0,stateLayer,cityT1,cityT2].filter(l=>map.hasLayer(l)),writes=[];
+  for(const l of order)l.eachLayer(m=>{
+    const el=m.getElement();if(!el)return;const L_=m._lbl;
+    if(!L_.w){const t=el.querySelector(L_.st?'.sl-t':'.cl-name');L_.w=t.offsetWidth;L_.h=t.offsetHeight;if(!L_.w)return}
+    const pt=map.latLngToContainerPoint(m.getLatLng()),w=L_.w,h=L_.h;
+    let pos=null;
+    if(L_.st){for(const[dx,dy] of [[0,0],[0,-13],[0,13],[-18,0],[18,0],[0,-24],[0,24]]){const r={x:pt.x+dx-w/2,y:pt.y+dy-h/2,w,h};if(r.x>0&&r.y>0&&r.x+w<box.width&&r.y+h<box.height&&!taken.some(t=>hits(r,t))){taken.push(padR(r));pos=[dx,dy];break}}}
+    else{
+      const dot={x:pt.x-4,y:pt.y-4,w:8,h:8};
+      if(pt.x>0&&pt.y>0&&pt.x<box.width&&pt.y<box.height){
+        // If the city sits under a cluster/pin, hide its dot and set the name just outside that marker
+        const under=taken.filter(t=>hits(dot,t));
+        let o=dot,gap=2;
+        if(under.length){const x0=Math.min(...under.map(t=>t.x)),y0=Math.min(...under.map(t=>t.y));o={x:x0,y:y0,w:Math.max(...under.map(t=>t.x+t.w))-x0,h:Math.max(...under.map(t=>t.y+t.h))-y0};gap=0}
+        const cy=under.length?o.y+o.h/2:pt.y,cx=under.length?o.x+o.w/2:pt.x;
+        const cands=[{x:o.x+o.w+gap,y:cy-h/2},{x:o.x-gap-w,y:cy-h/2},{x:cx-w/2,y:o.y-gap-h},{x:cx-w/2,y:o.y+o.h+gap}];
+        for(const c of cands){const r={x:c.x,y:c.y,w,h};if(r.x>2&&r.x+w<box.width-2&&r.y>2&&r.y+h<box.height-2&&!taken.some(t=>hits(r,t))){pos=[r.x-pt.x,r.y-pt.y,!under.length];taken.push(padR(r));if(!under.length)taken.push(dot);break}}
+      }
+    }
+    writes.push([el,pos]);
+  });
+  for(const[el,pos] of writes){
+    el.classList.toggle('lbl-off',!pos);
+    if(pos&&el._st===undefined)el._st=!!el.querySelector('.sl-t');
+    if(Array.isArray(pos)&&el._st)el.firstChild.style.transform=`translate(calc(-50% + ${pos[0]}px),calc(-50% + ${pos[1]}px))`;
+    else if(Array.isArray(pos)){el.querySelector('.cl-name').style.transform=`translate(${Math.round(pos[0])}px,${Math.round(pos[1])}px)`;el.classList.toggle('nodot',!pos[2])}
+  }
+  labelPane.classList.remove('zooming');
+}
+let _dcT=0;function declutterSoon(ms){clearTimeout(_dcT);_dcT=setTimeout(declutterLabels,ms==null?120:ms)}
+map.on('zoomend',syncLabels);map.on('moveend resize',()=>declutterSoon());
+clusters.on('animationend',()=>declutterSoon(30));
+// Fade labels out while zooming so they never sit stale over freshly split clusters
+map.on('zoomstart',()=>labelPane.classList.add('zooming'));
+syncLabels();
 
 /* ── Boundary ── */
 async function loadBoundary(){
@@ -695,6 +757,7 @@ function render(){
   });
   clusters.addLayers(markers);
   syncStopPins();
+  declutterSoon();
   syncCardTripBtns();
   if(reopen&&markerByKey[reopen])showMarker(markerByKey[reopen]);
 
@@ -823,6 +886,7 @@ function syncStopPins(){
     }else continue;
     if(wasOpen&&!m.isPopupOpen())m.openPopup();
   }
+  declutterSoon();
 }
 // Hovering a stop in the timeline lifts and pulses its pin on the map
 function hotStop(k,on){
