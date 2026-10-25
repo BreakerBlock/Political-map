@@ -1,6 +1,12 @@
 # BharatYatra roadmap
 
-## Priority backlog (from Utkarsh, 2026-10-18)
+## Priority backlog (from Utkarsh, 2026-10-25) — current focus
+More to see, and more excitement, ahead of further trip-planner features.
+- [ ] **Data-rich map** — grow well beyond today's 289 places, state by state and category by category (thinnest first): ~25–40 real, well-known places per run with verified coordinates, each checked against `india-boundary.geojson`; deepen existing entries (better one-liners, best time to visit, Wikipedia photo titles).
+- [ ] **Highlights & must-do slides** — a full-bleed, swipeable story/carousel (touch swipe, arrow keys, buttons) for "Highlights of India" and "Must-do experiences" in each category (e.g. rafting at Rishikesh, paragliding at Bir Billing, street food in Chandni Chowk, Hornbill Festival, tigers at Ranthambore). Big photo, punchy one-liner, state, best season, **Show on map** and **+ Add to trip**. Entry points: header button, a "Must-do" link per category, an optional first-visit teaser. Slices: viewer + Highlights of India → must-do per category → per-state highlights.
+- [ ] **"Wow" moments** — richer landing, "Surprise me", seasonal picks ("Best in December").
+
+## Earlier backlog (from Utkarsh, 2026-10-18) — done
 - [x] **Zoomed-in map asked for an API key** — replaced CARTO tiles with key-free Esri tiles (World_Terrain_Base for the overview, World_Imagery satellite from zoom 11, plus a Map/Satellite toggle). Neither draws borders or labels, so `india-boundary.geojson` is the only boundary shown. *(2026-10-18)*
 - [x] **Road distances between trip stops** — each leg now shows road km and estimated drive time from the public OSRM server (no key), with the road route drawn on the map. Legs to/from Andaman & Lakshadweep, or with no road, fall back to clearly labelled straight-line distance. Results are cached per leg; requests are debounced. *(2026-10-18)*
 - [x] **Visual refresh, pass 5 — trip pins & roomier itinerary** — trip stops are now **numbered pins** in their category colour (number in a white disc) that leave the cluster group, so a stop's number never hides under a cluster bubble; earlier stops sit on top when two stops overlap, and a stop removed from the trip drops back into its cluster with its popup still open. Hovering a stop in the timeline lifts and pulses its pin and brings it to the front. On desktop, opening **My trip** folds the category grid, state picker and search into one line (Categories + coloured dots for the active categories + a **Filters ▾** button to peek), so a 5-stop trip and its actions fit without scrolling at 1366×800. *(2026-10-21)*
@@ -18,6 +24,5 @@
 - Check the whole look on real Esri tiles on a phone (the sandbox can't load tiles) and fine-tune the colour wash / mist.
 - Neil Island (Shaheed Dweep) is still missing from the outline — no key-free source with it at hand; its pin sits ~5 km off the drawn coast.
 - Lazy photo thumbnails in the sidebar cards (only for cards scrolled into view).
-- Optional sightseeing/rest days per stop in the day plan (e.g. "+1 day at Jaipur").
-- More Adventure places (real, well-known treks and rafting spots).
+- More Adventure places (real, well-known treks and rafting spots) — now part of the data-rich backlog item.
 - Name the larger clusters by area on hover (e.g. "Rajasthan · 9 places") so a bubble says where it is.
