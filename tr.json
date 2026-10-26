@@ -21,6 +21,28 @@
    "stateCode": "TR",
    "desc": "Lake palace of Tripura",
    "wiki": "Neer_Mahal"
+  },
+  {
+   "name": "Unakoti",
+   "cat": "history",
+   "lat": 24.32,
+   "lng": 92.07,
+   "state": "Tripura",
+   "stateCode": "TR",
+   "desc": "Giant 7th\u20139th century rock-cut Shiva faces carved into a forested hillside",
+   "wiki": "Unakoti",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Sepahijala WLS",
+   "cat": "fauna",
+   "lat": 23.66,
+   "lng": 91.31,
+   "state": "Tripura",
+   "stateCode": "TR",
+   "desc": "Forest sanctuary known for spectacled langurs and ~150 bird species",
+   "wiki": "Sepahijala_Wildlife_Sanctuary",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

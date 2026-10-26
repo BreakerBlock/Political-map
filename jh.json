@@ -21,6 +21,39 @@
    "stateCode": "JH",
    "desc": "Elephant and tiger reserve",
    "wiki": "Betla_National_Park"
+  },
+  {
+   "name": "Hundru Falls",
+   "cat": "scenic",
+   "lat": 23.45,
+   "lng": 85.65,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "The Subarnarekha drops about 98 m near Ranchi \u2014 fullest after the monsoon",
+   "wiki": "Hundru_Falls",
+   "best": "Jul\u2013Oct"
+  },
+  {
+   "name": "Netarhat",
+   "cat": "scenic",
+   "lat": 23.48,
+   "lng": 84.27,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "'Queen of Chotanagpur' \u2014 hill station famed for sunrises over pine forest",
+   "wiki": "Netarhat",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Shikharji",
+   "cat": "religious",
+   "lat": 23.96,
+   "lng": 86.14,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "Holiest Jain hill (Parasnath), where 20 of 24 Tirthankaras attained moksha",
+   "wiki": "Shikharji",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

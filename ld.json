@@ -11,6 +11,17 @@
    "stateCode": "LD",
    "desc": "Coral atoll with lagoon",
    "wiki": "Agatti"
+  },
+  {
+   "name": "Kavaratti",
+   "cat": "adventure",
+   "lat": 10.565,
+   "lng": 72.642,
+   "state": "Lakshadweep",
+   "stateCode": "LD",
+   "desc": "Lagoon capital of Lakshadweep \u2014 snorkelling, scuba and glass-bottom boats",
+   "wiki": "Kavaratti",
+   "best": "Oct\u2013May"
   }
  ]
 }

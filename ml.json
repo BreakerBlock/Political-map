@@ -51,6 +51,28 @@
    "stateCode": "ML",
    "desc": "India's tallest plunge waterfall",
    "wiki": "Nohkalikai_Falls"
+  },
+  {
+   "name": "Umiam Lake",
+   "cat": "scenic",
+   "lat": 25.65,
+   "lng": 91.88,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "Island-dotted reservoir on the drive into Shillong \u2014 kayaking and sunsets",
+   "wiki": "Umiam_Lake",
+   "best": "Oct\u2013May"
+  },
+  {
+   "name": "Double-Decker Root Bridge",
+   "cat": "adventure",
+   "lat": 25.25,
+   "lng": 91.67,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "Two-tier living root bridge at Nongriat, reached by a steep jungle trek",
+   "wiki": "Nongriat",
+   "best": "Oct\u2013Apr"
   }
  ]
 }

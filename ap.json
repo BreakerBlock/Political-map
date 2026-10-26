@@ -51,6 +51,28 @@
    "stateCode": "AP",
    "desc": "Hilltop Durga temple on Krishna River",
    "wiki": "Kanaka_Durga_Temple"
+  },
+  {
+   "name": "Borra Caves",
+   "cat": "adventure",
+   "lat": 18.17,
+   "lng": 83.0,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Vast limestone caves full of stalactites in the Araku hills",
+   "wiki": "Borra_Caves",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Gandikota",
+   "cat": "adventure",
+   "lat": 14.81,
+   "lng": 78.29,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "'Grand Canyon of India' \u2014 a fort above the red gorge of the Penna river",
+   "wiki": "Gandikota",
+   "best": "Oct\u2013Feb"
   }
  ]
 }

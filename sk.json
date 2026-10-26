@@ -41,6 +41,50 @@
    "stateCode": "SK",
    "desc": "Kagyu Buddhist seat",
    "wiki": "Rumtek_Monastery"
+  },
+  {
+   "name": "Tsomgo Lake",
+   "cat": "scenic",
+   "lat": 27.38,
+   "lng": 88.76,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "Glacial lake at 3,753 m on the road to Nathu La, frozen in winter",
+   "wiki": "Lake_Tsomgo",
+   "best": "Mar\u2013May, Oct\u2013Dec"
+  },
+  {
+   "name": "Nathu La",
+   "cat": "history",
+   "lat": 27.39,
+   "lng": 88.83,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "Historic Himalayan pass on the old Silk Route, at about 4,310 m (permit needed)",
+   "wiki": "Nathu_La",
+   "best": "Apr\u2013Nov"
+  },
+  {
+   "name": "Yumthang Valley",
+   "cat": "scenic",
+   "lat": 27.83,
+   "lng": 88.7,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "North Sikkim valley that blazes with rhododendrons in spring",
+   "wiki": "Yumthang_Valley_of_Flowers",
+   "best": "Apr\u2013Jun"
+  },
+  {
+   "name": "Khangchendzonga NP",
+   "cat": "fauna",
+   "lat": 27.66,
+   "lng": 88.31,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "India's first UNESCO 'mixed' World Heritage Site (2016), below Kanchenjunga",
+   "wiki": "Khangchendzonga_National_Park",
+   "best": "Mar\u2013May, Oct\u2013Nov"
   }
  ]
 }

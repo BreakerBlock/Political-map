@@ -151,6 +151,17 @@
    "stateCode": "TN",
    "desc": "Flamingo gathering and mangrove wetlands",
    "wiki": "Point_Calimere"
+  },
+  {
+   "name": "Auroville",
+   "cat": "religious",
+   "lat": 12.01,
+   "lng": 79.81,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Experimental universal township around the golden Matrimandir globe",
+   "wiki": "Auroville",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

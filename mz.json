@@ -11,6 +11,39 @@
    "stateCode": "MZ",
    "desc": "Blue Mountain \u2014 highest peak",
    "wiki": "Phawngpui"
+  },
+  {
+   "name": "Vantawng Falls",
+   "cat": "scenic",
+   "lat": 23.26,
+   "lng": 92.76,
+   "state": "Mizoram",
+   "stateCode": "MZ",
+   "desc": "Mizoram's highest waterfall, plunging about 230 m through forest",
+   "wiki": "Vantawng_Falls",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Dampa Tiger Reserve",
+   "cat": "fauna",
+   "lat": 23.57,
+   "lng": 92.37,
+   "state": "Mizoram",
+   "stateCode": "MZ",
+   "desc": "Mizoram's largest protected area \u2014 hilly evergreen forest on the western border",
+   "wiki": "Dampa_Tiger_Reserve",
+   "best": "Nov\u2013Apr"
+  },
+  {
+   "name": "Chapchar Kut",
+   "cat": "festivals",
+   "lat": 23.73,
+   "lng": 92.72,
+   "state": "Mizoram",
+   "stateCode": "MZ",
+   "desc": "Mizo spring festival of bamboo dances (Cheraw) in Aizawl, held in March",
+   "wiki": "Chapchar_Kut",
+   "best": "Mar"
   }
  ]
 }

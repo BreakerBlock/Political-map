@@ -21,6 +21,39 @@
    "stateCode": "MN",
    "desc": "Ancient Meitei royal seat",
    "wiki": "Kangla_Fort"
+  },
+  {
+   "name": "Keibul Lamjao NP",
+   "cat": "fauna",
+   "lat": 24.5,
+   "lng": 93.77,
+   "state": "Manipur",
+   "stateCode": "MN",
+   "desc": "World's only floating national park on Loktak's phumdis \u2014 home of the sangai deer",
+   "wiki": "Keibul_Lamjao_National_Park",
+   "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Ima Keithel",
+   "cat": "arts",
+   "lat": 24.81,
+   "lng": 93.94,
+   "state": "Manipur",
+   "stateCode": "MN",
+   "desc": "Imphal's 'Mothers' Market' \u2014 Asia's largest market run entirely by women",
+   "wiki": "Ima_Keithel",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Sangai Festival",
+   "cat": "festivals",
+   "lat": 24.8,
+   "lng": 93.94,
+   "state": "Manipur",
+   "stateCode": "MN",
+   "desc": "Manipur's showcase festival of dance, crafts, food and sport, 21\u201330 November",
+   "wiki": "Sangai_Festival",
+   "best": "Nov"
   }
  ]
 }

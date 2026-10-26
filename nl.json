@@ -31,6 +31,17 @@
    "stateCode": "NL",
    "desc": "WWII memorial \u2014 Battle of Kohima",
    "wiki": "Kohima_War_Cemetery"
+  },
+  {
+   "name": "Khonoma",
+   "cat": "scenic",
+   "lat": 25.65,
+   "lng": 94.03,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "Angami terraced village \u2014 India's first 'green village' after banning hunting",
+   "wiki": "Khonoma",
+   "best": "Oct\u2013May"
   }
  ]
 }

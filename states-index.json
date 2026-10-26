@@ -21,7 +21,7 @@
   "name": "Punjab",
   "lat": 31.0,
   "lng": 75.4,
-  "count": 4
+  "count": 7
  },
  "UK": {
   "name": "Uttarakhand",
@@ -51,7 +51,7 @@
   "name": "Bihar",
   "lat": 25.7,
   "lng": 85.6,
-  "count": 5
+  "count": 7
  },
  "GJ": {
   "name": "Gujarat",
@@ -69,13 +69,13 @@
   "name": "Chhattisgarh",
   "lat": 21.5,
   "lng": 82.0,
-  "count": 1
+  "count": 4
  },
  "JH": {
   "name": "Jharkhand",
   "lat": 23.6,
   "lng": 85.5,
-  "count": 2
+  "count": 5
  },
  "WB": {
   "name": "West Bengal",
@@ -87,7 +87,7 @@
   "name": "Odisha",
   "lat": 20.4,
   "lng": 84.6,
-  "count": 6
+  "count": 9
  },
  "MH": {
   "name": "Maharashtra",
@@ -99,13 +99,13 @@
   "name": "Telangana",
   "lat": 17.9,
   "lng": 79.1,
-  "count": 6
+  "count": 7
  },
  "AP": {
   "name": "Andhra Pradesh",
   "lat": 15.7,
   "lng": 79.9,
-  "count": 5
+  "count": 7
  },
  "KA": {
   "name": "Karnataka",
@@ -129,55 +129,55 @@
   "name": "Tamil Nadu",
   "lat": 11.0,
   "lng": 78.5,
-  "count": 15
+  "count": 16
  },
  "AS": {
   "name": "Assam",
   "lat": 26.3,
   "lng": 92.9,
-  "count": 6
+  "count": 7
  },
  "ML": {
   "name": "Meghalaya",
   "lat": 25.5,
   "lng": 91.2,
-  "count": 5
+  "count": 7
  },
  "AR": {
   "name": "Arunachal Pradesh",
   "lat": 28.1,
   "lng": 94.6,
-  "count": 5
+  "count": 7
  },
  "NL": {
   "name": "Nagaland",
   "lat": 26.1,
   "lng": 94.4,
-  "count": 3
+  "count": 4
  },
  "MN": {
   "name": "Manipur",
   "lat": 24.7,
   "lng": 93.9,
-  "count": 2
+  "count": 5
  },
  "MZ": {
   "name": "Mizoram",
   "lat": 23.3,
   "lng": 92.9,
-  "count": 1
+  "count": 4
  },
  "TR": {
   "name": "Tripura",
   "lat": 23.8,
   "lng": 91.7,
-  "count": 2
+  "count": 4
  },
  "SK": {
   "name": "Sikkim",
   "lat": 27.6,
   "lng": 88.5,
-  "count": 4
+  "count": 8
  },
  "AN": {
   "name": "Andaman & Nicobar",
@@ -189,18 +189,18 @@
   "name": "Lakshadweep",
   "lat": 10.6,
   "lng": 72.6,
-  "count": 1
+  "count": 2
  },
  "PY": {
   "name": "Puducherry",
   "lat": 11.9,
   "lng": 79.8,
-  "count": 1
+  "count": 2
  },
  "CH": {
   "name": "Chandigarh",
   "lat": 30.7,
   "lng": 76.8,
-  "count": 1
+  "count": 3
  }
 }

@@ -51,6 +51,28 @@
    "stateCode": "BR",
    "desc": "Sun worship at river banks",
    "wiki": "Chhath"
+  },
+  {
+   "name": "Vaishali",
+   "cat": "history",
+   "lat": 26.01,
+   "lng": 85.11,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Capital of the ancient Vajji republic, with an Ashokan lion pillar",
+   "wiki": "Vaishali_(ancient_city)",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Valmiki NP",
+   "cat": "fauna",
+   "lat": 27.33,
+   "lng": 84.16,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Bihar's only national park and tiger reserve, in the Terai by the Nepal border",
+   "wiki": "Valmiki_National_Park",
+   "best": "Nov\u2013Mar"
   }
  ]
 }

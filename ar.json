@@ -51,6 +51,28 @@
    "stateCode": "AR",
    "desc": "Easternmost tiger reserve \u2014 4 big cat species",
    "wiki": "Namdapha_National_Park"
+  },
+  {
+   "name": "Pakke Tiger Reserve",
+   "cat": "fauna",
+   "lat": 27.08,
+   "lng": 92.86,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Hornbill country in the Kameng foothills, where Bengal and Indochinese tiger ranges meet",
+   "wiki": "Pakke_Tiger_Reserve",
+   "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Tawang Monastery",
+   "cat": "religious",
+   "lat": 27.59,
+   "lng": 91.86,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "India's largest Buddhist monastery, at about 3,000 m above the Tawang valley",
+   "wiki": "Tawang_Monastery",
+   "best": "Mar\u2013Oct"
   }
  ]
 }

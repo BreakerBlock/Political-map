@@ -11,6 +11,28 @@
    "stateCode": "CH",
    "desc": "Nek Chand's recycled art park",
    "wiki": "Rock_Garden_of_Chandigarh"
+  },
+  {
+   "name": "Sukhna Lake",
+   "cat": "scenic",
+   "lat": 30.73,
+   "lng": 76.82,
+   "state": "Chandigarh",
+   "stateCode": "CH",
+   "desc": "Promenade lake at the foot of the Shivaliks \u2014 sunsets and boating",
+   "wiki": "Sukhna_Lake",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Capitol Complex",
+   "cat": "history",
+   "lat": 30.76,
+   "lng": 76.81,
+   "state": "Chandigarh",
+   "stateCode": "CH",
+   "desc": "Le Corbusier's UNESCO-listed government buildings and the Open Hand Monument",
+   "wiki": "Chandigarh_Capitol_Complex",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

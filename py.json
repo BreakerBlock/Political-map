@@ -11,6 +11,17 @@
    "stateCode": "PY",
    "desc": "Colonial streets and caf\u00e9s",
    "wiki": "Pondicherry"
+  },
+  {
+   "name": "Promenade Beach",
+   "cat": "scenic",
+   "lat": 11.93,
+   "lng": 79.835,
+   "state": "Puducherry",
+   "stateCode": "PY",
+   "desc": "Seafront walk past the French Quarter, Gandhi statue and old lighthouse",
+   "wiki": "Promenade_Beach",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

@@ -11,6 +11,39 @@
    "stateCode": "CG",
    "desc": "Niagara of India",
    "wiki": "Chitrakote_Falls"
+  },
+  {
+   "name": "Bhoramdeo Temple",
+   "cat": "religious",
+   "lat": 22.12,
+   "lng": 81.15,
+   "state": "Chhattisgarh",
+   "stateCode": "CG",
+   "desc": "Ornately carved Shiva temple in the Maikal hills \u2014 the 'Khajuraho of Chhattisgarh'",
+   "wiki": "Bhoramdeo_Temple",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Sirpur",
+   "cat": "history",
+   "lat": 21.35,
+   "lng": 82.18,
+   "state": "Chhattisgarh",
+   "stateCode": "CG",
+   "desc": "Ancient Buddhist, Hindu and Jain ruins by the Mahanadi, incl. the brick Lakshmana Temple",
+   "wiki": "Sirpur_Group_of_Monuments",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Bastar Dussehra",
+   "cat": "festivals",
+   "lat": 19.08,
+   "lng": 82.02,
+   "state": "Chhattisgarh",
+   "stateCode": "CG",
+   "desc": "Tribal Dussehra of Jagdalpur honouring goddess Danteshwari, with a giant wooden chariot",
+   "wiki": "Bastar_Dussehra",
+   "best": "Sep\u2013Oct"
   }
  ]
 }

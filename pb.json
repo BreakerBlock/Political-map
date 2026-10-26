@@ -41,6 +41,39 @@
    "stateCode": "PB",
    "desc": "Kulcha-chole and lassi",
    "wiki": "Punjabi_cuisine"
+  },
+  {
+   "name": "Hola Mohalla",
+   "cat": "festivals",
+   "lat": 31.23,
+   "lng": 76.5,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Sikh martial festival at Anandpur Sahib \u2014 Nihang horsemanship and gatka, in March",
+   "wiki": "Hola_Mohalla",
+   "best": "Mar"
+  },
+  {
+   "name": "Harike Wetland",
+   "cat": "fauna",
+   "lat": 31.15,
+   "lng": 74.97,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "North India's largest wetland, at the Beas\u2013Sutlej confluence \u2014 winter migratory birds",
+   "wiki": "Harike_Wetland",
+   "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Qila Mubarak, Patiala",
+   "cat": "history",
+   "lat": 30.32,
+   "lng": 76.4,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Patiala's royal fort with about 1,090 murals painted c. 1825\u20131850",
+   "wiki": "Qila_Mubarak,_Patiala",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

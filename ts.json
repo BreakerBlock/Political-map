@@ -61,6 +61,17 @@
    "stateCode": "TS",
    "desc": "Goddess worship festival of Telangana",
    "wiki": "Bonalu"
+  },
+  {
+   "name": "Ramappa Temple",
+   "cat": "history",
+   "lat": 18.26,
+   "lng": 79.94,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Kakatiya temple of floating bricks and dancers in stone \u2014 UNESCO site since 2021",
+   "wiki": "Ramappa_Temple",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

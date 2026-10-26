@@ -61,6 +61,39 @@
    "stateCode": "OD",
    "desc": "Annual chariot procession of Lord Jagannath",
    "wiki": "Ratha_Yatra"
+  },
+  {
+   "name": "Simlipal NP",
+   "cat": "fauna",
+   "lat": 21.83,
+   "lng": 86.33,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Tiger reserve of sal forest and waterfalls, known for rare black (melanistic) tigers",
+   "wiki": "Simlipal_National_Park",
+   "best": "Nov\u2013Jun"
+  },
+  {
+   "name": "Bhitarkanika NP",
+   "cat": "fauna",
+   "lat": 20.72,
+   "lng": 86.9,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Mangrove creeks with India's biggest saltwater crocodiles",
+   "wiki": "Bhitarkanika_National_Park",
+   "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Udayagiri & Khandagiri",
+   "cat": "history",
+   "lat": 20.26,
+   "lng": 85.79,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Jain rock-cut caves near Bhubaneswar with King Kharavela's Hathigumpha inscription",
+   "wiki": "Udayagiri_and_Khandagiri_caves",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

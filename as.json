@@ -61,6 +61,17 @@
    "stateCode": "AS",
    "desc": "Tea garden visits and tasting",
    "wiki": "Assam_tea"
+  },
+  {
+   "name": "Rang Ghar",
+   "cat": "history",
+   "lat": 26.97,
+   "lng": 94.62,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Ahom royal pavilion at Sivasagar, built with a rice-and-egg mortar",
+   "wiki": "Rang_Ghar",
+   "best": "Oct\u2013Apr"
   }
  ]
 }
