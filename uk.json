@@ -110,7 +110,8 @@
    "state": "Uttarakhand",
    "stateCode": "UK",
    "desc": "Skeleton lake at 5,029 m",
-   "wiki": "Roopkund"
+   "wiki": "Roopkund",
+   "best": "May\u2013Jun, Sep\u2013Oct"
   },
   {
    "name": "Rishikesh Rafting",
@@ -120,7 +121,8 @@
    "state": "Uttarakhand",
    "stateCode": "UK",
    "desc": "Ganges white water",
-   "wiki": "Rishikesh"
+   "wiki": "Rishikesh",
+   "best": "Sep\u2013Jun"
   },
   {
    "name": "Kedarkantha Trek",
@@ -130,7 +132,8 @@
    "state": "Uttarakhand",
    "stateCode": "UK",
    "desc": "Winter summit through snow forests",
-   "wiki": "Kedarkantha"
+   "wiki": "Kedarkantha",
+   "best": "Dec\u2013Apr"
   },
   {
    "name": "Ganga Dussehra",
@@ -140,7 +143,8 @@
    "state": "Uttarakhand",
    "stateCode": "UK",
    "desc": "Celebrating Ganga's descent to earth",
-   "wiki": "Ganga_Dussehra"
+   "wiki": "Ganga_Dussehra",
+   "best": "May\u2013Jun"
   }
  ]
 }

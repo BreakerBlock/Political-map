@@ -190,7 +190,8 @@
    "state": "Rajasthan",
    "stateCode": "RJ",
    "desc": "World's largest camel fair",
-   "wiki": "Pushkar_Fair"
+   "wiki": "Pushkar_Fair",
+   "best": "Oct\u2013Nov"
   },
   {
    "name": "Jaisalmer Desert Festival",
@@ -200,7 +201,8 @@
    "state": "Rajasthan",
    "stateCode": "RJ",
    "desc": "Folk performances on moonlit dunes",
-   "wiki": "Jaisalmer"
+   "wiki": "Jaisalmer",
+   "best": "Jan\u2013Feb"
   },
   {
    "name": "Mewar Festival Udaipur",
@@ -210,7 +212,8 @@
    "state": "Rajasthan",
    "stateCode": "RJ",
    "desc": "Spring celebration by Gangaur procession",
-   "wiki": "Gangaur"
+   "wiki": "Gangaur",
+   "best": "Mar\u2013Apr"
   },
   {
    "name": "Jaipur Block Printing",
@@ -311,6 +314,17 @@
    "stateCode": "RJ",
    "desc": "Open-air art gallery of painted mansions",
    "wiki": "Shekhawati"
+  },
+  {
+   "name": "Nagaur Fair",
+   "cat": "festivals",
+   "lat": 27.2,
+   "lng": 73.73,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Big winter livestock fair at Nagaur \u2014 cattle, camels and horses",
+   "wiki": "Nagaur",
+   "best": "Jan\u2013Feb"
   }
  ]
 }

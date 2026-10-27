@@ -150,7 +150,8 @@
    "state": "Karnataka",
    "stateCode": "KA",
    "desc": "10-day royal celebration",
-   "wiki": "Mysore_Dasara"
+   "wiki": "Mysore_Dasara",
+   "best": "Sep\u2013Oct"
   },
   {
    "name": "Channapatna Toys",
@@ -221,6 +222,39 @@
    "stateCode": "KA",
    "desc": "Legendary caramelized milk sweet",
    "wiki": "Dharwad_pedha"
+  },
+  {
+   "name": "Netrani Island Scuba",
+   "cat": "adventure",
+   "lat": 14.094,
+   "lng": 74.485,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Boats from Murudeshwar run to heart-shaped Netrani Island, a popular scuba-diving site",
+   "wiki": "Netrani_Island",
+   "best": "Oct\u2013May"
+  },
+  {
+   "name": "Kudremukh Trek",
+   "cat": "adventure",
+   "lat": 13.1295,
+   "lng": 75.2686,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Grassland-and-shola trek to the 'horse-faced' peak",
+   "wiki": "Kudremukha",
+   "best": "Oct\u2013Feb"
+  },
+  {
+   "name": "Udupi Cuisine",
+   "cat": "cuisine",
+   "lat": 13.3389,
+   "lng": 74.7451,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Vegetarian temple cuisine born at Sri Krishna Matha, served on a plantain leaf",
+   "wiki": "Udupi_cuisine",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

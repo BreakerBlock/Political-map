@@ -50,7 +50,8 @@
    "state": "Goa",
    "stateCode": "GA",
    "desc": "Portuguese-legacy float parade",
-   "wiki": "Goa_Carnival"
+   "wiki": "Goa_Carnival",
+   "best": "Feb\u2013Mar"
   },
   {
    "name": "Baga Beach",
@@ -71,6 +72,28 @@
    "stateCode": "GA",
    "desc": "Crescent-shaped serene beach in South Goa",
    "wiki": "Palolem"
+  },
+  {
+   "name": "Shigmo",
+   "cat": "festivals",
+   "lat": 15.4989,
+   "lng": 73.8278,
+   "state": "Goa",
+   "stateCode": "GA",
+   "desc": "Goa's spring festival of floats, dhol-taso drums and street dancers",
+   "wiki": "Shigmo",
+   "best": "Mar"
+  },
+  {
+   "name": "Fontainhas",
+   "cat": "history",
+   "lat": 15.496,
+   "lng": 73.831,
+   "state": "Goa",
+   "stateCode": "GA",
+   "desc": "Panaji's Latin Quarter of yellow, green and blue Portuguese-era houses",
+   "wiki": "Fontainhas_(quarter)",
+   "best": "Nov\u2013Feb"
   }
  ]
 }

@@ -50,7 +50,8 @@
    "state": "Ladakh",
    "stateCode": "LA",
    "desc": "Masked dances at monastery",
-   "wiki": "Hemis_Monastery"
+   "wiki": "Hemis_Monastery",
+   "best": "Jun\u2013Jul"
   },
   {
    "name": "Chadar Trek",
@@ -60,7 +61,8 @@
    "state": "Ladakh",
    "stateCode": "LA",
    "desc": "Frozen river walk",
-   "wiki": "Zanskar"
+   "wiki": "Zanskar",
+   "best": "Jan\u2013Feb"
   },
   {
    "name": "Stok Kangri",
@@ -80,7 +82,8 @@
    "state": "Ladakh",
    "stateCode": "LA",
    "desc": "Classic Ladakhi tea-house trek",
-   "wiki": "Markha_Valley"
+   "wiki": "Markha_Valley",
+   "best": "Jun\u2013Sep"
   },
   {
    "name": "Magnetic Hill",

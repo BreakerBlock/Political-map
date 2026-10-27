@@ -150,7 +150,52 @@
    "state": "Maharashtra",
    "stateCode": "MH",
    "desc": "Mumbai's grand Ganpati processions",
-   "wiki": "Ganesh_Chaturthi"
+   "wiki": "Ganesh_Chaturthi",
+   "best": "Aug\u2013Sep"
+  },
+  {
+   "name": "Kalsubai Peak",
+   "cat": "adventure",
+   "lat": 19.6011,
+   "lng": 73.7092,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Climb Maharashtra's highest peak (1,646 m) by iron ladders and rock steps",
+   "wiki": "Kalsubai",
+   "best": "Jul\u2013Feb"
+  },
+  {
+   "name": "Harishchandragad",
+   "cat": "adventure",
+   "lat": 19.3882,
+   "lng": 73.7759,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Sahyadri hill-fort trek to the overhanging Konkan Kada cliff",
+   "wiki": "Harishchandragad",
+   "best": "Oct\u2013Feb"
+  },
+  {
+   "name": "Lonar Crater Lake",
+   "cat": "scenic",
+   "lat": 19.975,
+   "lng": 76.5075,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Lake in the only meteorite-impact crater formed entirely in basalt rock",
+   "wiki": "Lonar_Lake",
+   "best": "Jul\u2013Feb"
+  },
+  {
+   "name": "Kolhapuri Chappal",
+   "cat": "arts",
+   "lat": 16.6917,
+   "lng": 74.2333,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Hand-made vegetable-tanned leather sandals with a GI tag",
+   "wiki": "Kolhapuri_chappal",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

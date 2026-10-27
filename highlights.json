@@ -98,7 +98,8 @@
    "state": "Rajasthan",
    "stateCode": "RJ",
    "desc": "World's largest camel fair",
-   "wiki": "Pushkar_Fair"
+   "wiki": "Pushkar_Fair",
+   "best": "Oct\u2013Nov"
   },
   {
    "name": "Jaisalmer Desert Festival",
@@ -108,7 +109,8 @@
    "state": "Rajasthan",
    "stateCode": "RJ",
    "desc": "Folk performances on moonlit dunes",
-   "wiki": "Jaisalmer"
+   "wiki": "Jaisalmer",
+   "best": "Jan\u2013Feb"
   },
   {
    "name": "Jaipur Block Printing",
@@ -208,7 +210,8 @@
    "state": "Kerala",
    "stateCode": "KL",
    "desc": "Elephant procession with parasols and drums",
-   "wiki": "Thrissur_Pooram"
+   "wiki": "Thrissur_Pooram",
+   "best": "Apr\u2013May"
   },
   {
    "name": "Onam",
@@ -218,7 +221,8 @@
    "state": "Kerala",
    "stateCode": "KL",
    "desc": "Harvest festival \u2014 boat races and sadhya feast",
-   "wiki": "Onam"
+   "wiki": "Onam",
+   "best": "Aug\u2013Sep"
   },
   {
    "name": "Malabar Cuisine",
@@ -298,7 +302,8 @@
    "state": "Uttar Pradesh",
    "stateCode": "UP",
    "desc": "Largest human gathering on earth",
-   "wiki": "Kumbh_Mela"
+   "wiki": "Kumbh_Mela",
+   "best": "Jan\u2013Feb"
   },
   {
    "name": "Holi in Barsana",
@@ -308,7 +313,8 @@
    "state": "Uttar Pradesh",
    "stateCode": "UP",
    "desc": "Lathmar Holi \u2014 colour like nowhere else",
-   "wiki": "Barsana"
+   "wiki": "Barsana",
+   "best": "Feb\u2013Mar"
   },
   {
    "name": "Lucknow Chikankari",
@@ -508,7 +514,8 @@
    "state": "Karnataka",
    "stateCode": "KA",
    "desc": "10-day royal celebration",
-   "wiki": "Mysore_Dasara"
+   "wiki": "Mysore_Dasara",
+   "best": "Sep\u2013Oct"
   },
   {
    "name": "Channapatna Toys",
@@ -748,7 +755,8 @@
    "state": "West Bengal",
    "stateCode": "WB",
    "desc": "Grand artistic pandals across Kolkata",
-   "wiki": "Durga_Puja"
+   "wiki": "Durga_Puja",
+   "best": "Sep\u2013Oct"
   },
   {
    "name": "Gangasagar Mela",
@@ -758,7 +766,8 @@
    "state": "West Bengal",
    "stateCode": "WB",
    "desc": "Where Ganga meets the sea",
-   "wiki": "Gangasagar"
+   "wiki": "Gangasagar",
+   "best": "Jan"
   },
   {
    "name": "Kolkata Bengali",
@@ -838,7 +847,8 @@
    "state": "Gujarat",
    "stateCode": "GJ",
    "desc": "White desert moonlight festival",
-   "wiki": "Rann_Utsav"
+   "wiki": "Rann_Utsav",
+   "best": "Nov\u2013Feb"
   },
   {
    "name": "Kutch Handicrafts",
@@ -918,7 +928,8 @@
    "state": "Ladakh",
    "stateCode": "LA",
    "desc": "Masked dances at monastery",
-   "wiki": "Hemis_Monastery"
+   "wiki": "Hemis_Monastery",
+   "best": "Jun\u2013Jul"
   },
   {
    "name": "Chadar Trek",
@@ -928,7 +939,8 @@
    "state": "Ladakh",
    "stateCode": "LA",
    "desc": "Frozen river walk",
-   "wiki": "Zanskar"
+   "wiki": "Zanskar",
+   "best": "Jan\u2013Feb"
   },
   {
    "name": "Stok Kangri",
@@ -948,7 +960,8 @@
    "state": "Ladakh",
    "stateCode": "LA",
    "desc": "Classic Ladakhi tea-house trek",
-   "wiki": "Markha_Valley"
+   "wiki": "Markha_Valley",
+   "best": "Jun\u2013Sep"
   },
   {
    "name": "Dal Lake",
@@ -1038,7 +1051,8 @@
    "state": "Himachal Pradesh",
    "stateCode": "HP",
    "desc": "World Cup paragliding",
-   "wiki": "Bir,_Himachal_Pradesh"
+   "wiki": "Bir,_Himachal_Pradesh",
+   "best": "Oct\u2013Nov, Mar\u2013May"
   },
   {
    "name": "Hampta Pass",
@@ -1048,7 +1062,8 @@
    "state": "Himachal Pradesh",
    "stateCode": "HP",
    "desc": "Kullu-to-Lahaul crossover",
-   "wiki": "Hampta_Pass"
+   "wiki": "Hampta_Pass",
+   "best": "Jun\u2013Sep"
   },
   {
    "name": "Pin Parvati Pass",
@@ -1058,7 +1073,8 @@
    "state": "Himachal Pradesh",
    "stateCode": "HP",
    "desc": "High-altitude crossover",
-   "wiki": "Pin_Parvati_Pass"
+   "wiki": "Pin_Parvati_Pass",
+   "best": "Jul\u2013Sep"
   },
   {
    "name": "Valley of Flowers",
@@ -1158,7 +1174,8 @@
    "state": "Uttarakhand",
    "stateCode": "UK",
    "desc": "Skeleton lake at 5,029 m",
-   "wiki": "Roopkund"
+   "wiki": "Roopkund",
+   "best": "May\u2013Jun, Sep\u2013Oct"
   },
   {
    "name": "Rishikesh Rafting",
@@ -1168,7 +1185,8 @@
    "state": "Uttarakhand",
    "stateCode": "UK",
    "desc": "Ganges white water",
-   "wiki": "Rishikesh"
+   "wiki": "Rishikesh",
+   "best": "Sep\u2013Jun"
   },
   {
    "name": "Kedarkantha Trek",
@@ -1178,7 +1196,8 @@
    "state": "Uttarakhand",
    "stateCode": "UK",
    "desc": "Winter summit through snow forests",
-   "wiki": "Kedarkantha"
+   "wiki": "Kedarkantha",
+   "best": "Dec\u2013Apr"
   },
   {
    "name": "Dudhsagar Falls",
@@ -1208,7 +1227,8 @@
    "state": "Goa",
    "stateCode": "GA",
    "desc": "Portuguese-legacy float parade",
-   "wiki": "Goa_Carnival"
+   "wiki": "Goa_Carnival",
+   "best": "Feb\u2013Mar"
   },
   {
    "name": "Konark Sun Temple",
@@ -1408,7 +1428,8 @@
    "state": "Meghalaya",
    "stateCode": "ML",
    "desc": "India's longest limestone caves",
-   "wiki": "Krem_Liat_Prah"
+   "wiki": "Krem_Liat_Prah",
+   "best": "Oct\u2013Apr"
   },
   {
    "name": "Gangtok",
@@ -1458,7 +1479,8 @@
    "state": "Arunachal Pradesh",
    "stateCode": "AR",
    "desc": "Indie music in rice fields",
-   "wiki": "Ziro_Festival_of_Music"
+   "wiki": "Ziro_Festival_of_Music",
+   "best": "Sep"
   },
   {
    "name": "Hornbill Festival",
@@ -1468,7 +1490,8 @@
    "state": "Nagaland",
    "stateCode": "NL",
    "desc": "Festival of Festivals",
-   "wiki": "Hornbill_Festival"
+   "wiki": "Hornbill_Festival",
+   "best": "Dec (1\u201310)"
   },
   {
    "name": "Dzukou Valley",
@@ -1478,7 +1501,8 @@
    "state": "Nagaland",
    "stateCode": "NL",
    "desc": "Valley of flowers",
-   "wiki": "Dz%C3%BCkou_Valley"
+   "wiki": "Dz%C3%BCkou_Valley",
+   "best": "Jun\u2013Sep"
   },
   {
    "name": "Red Fort",
@@ -1815,7 +1839,249 @@
    "desc": "Kakatiya temple of floating bricks and dancers in stone \u2014 UNESCO site since 2021",
    "wiki": "Ramappa_Temple",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Solang Valley",
+   "cat": "adventure",
+   "lat": 32.316,
+   "lng": 77.157,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Snow slopes near Manali \u2014 skiing in winter, paragliding and zorbing in summer",
+   "wiki": "Solang_Valley",
+   "best": "Dec\u2013Feb (snow), May\u2013Jun"
+  },
+  {
+   "name": "Triund",
+   "cat": "adventure",
+   "lat": 32.2496,
+   "lng": 76.3339,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Short ridge trek above McLeod Ganj, facing the Dhauladhar wall",
+   "wiki": "Triund",
+   "best": "Mar\u2013Jun, Sep\u2013Dec"
+  },
+  {
+   "name": "Kalsubai Peak",
+   "cat": "adventure",
+   "lat": 19.6011,
+   "lng": 73.7092,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Climb Maharashtra's highest peak (1,646 m) by iron ladders and rock steps",
+   "wiki": "Kalsubai",
+   "best": "Jul\u2013Feb"
+  },
+  {
+   "name": "Netrani Island Scuba",
+   "cat": "adventure",
+   "lat": 14.094,
+   "lng": 74.485,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Boats from Murudeshwar run to heart-shaped Netrani Island, a popular scuba-diving site",
+   "wiki": "Netrani_Island",
+   "best": "Oct\u2013May"
+  },
+  {
+   "name": "Chembra Peak",
+   "cat": "adventure",
+   "lat": 11.5122,
+   "lng": 76.0894,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Trek up the highest peak of the Wayanad hills, past a heart-shaped lake",
+   "wiki": "Chembra_Peak",
+   "best": "Sep\u2013Feb"
+  },
+  {
+   "name": "Sandakphu",
+   "cat": "adventure",
+   "lat": 27.1058,
+   "lng": 88.0017,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "West Bengal's highest point \u2014 Everest, Kangchenjunga, Lhotse and Makalu in one view",
+   "wiki": "Sandakphu",
+   "best": "Oct\u2013Dec, Mar\u2013May"
+  },
+  {
+   "name": "Goecha La",
+   "cat": "adventure",
+   "lat": 27.6078,
+   "lng": 88.1869,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "High-pass trek from Yuksom to face Kangchenjunga up close",
+   "wiki": "Goecha_La",
+   "best": "Apr\u2013May, Sep\u2013Nov"
+  },
+  {
+   "name": "Lonar Crater Lake",
+   "cat": "scenic",
+   "lat": 19.975,
+   "lng": 76.5075,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Lake in the only meteorite-impact crater formed entirely in basalt rock",
+   "wiki": "Lonar_Lake",
+   "best": "Jul\u2013Feb"
+  },
+  {
+   "name": "Tulip Garden, Srinagar",
+   "cat": "scenic",
+   "lat": 34.0961,
+   "lng": 74.88,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Asia's largest tulip garden, on terraces overlooking Dal Lake",
+   "wiki": "Indira_Gandhi_Memorial_Tulip_Garden",
+   "best": "Late Mar\u2013Apr"
+  },
+  {
+   "name": "Theyyam",
+   "cat": "festivals",
+   "lat": 11.8745,
+   "lng": 75.3704,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Fiery ritual dance of North Malabar in which the performer becomes the deity",
+   "wiki": "Theyyam",
+   "best": "Oct\u2013May"
+  },
+  {
+   "name": "Konark Dance Festival",
+   "cat": "festivals",
+   "lat": 19.8962,
+   "lng": 86.0836,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Five evenings of classical dance with the Sun Temple as backdrop",
+   "wiki": "Konark_Dance_Festival",
+   "best": "Dec (1\u20135)"
+  },
+  {
+   "name": "Khajuraho Dance Festival",
+   "cat": "festivals",
+   "lat": 24.854,
+   "lng": 79.921,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "A week of classical dance in an open-air auditorium beside the temples",
+   "wiki": "Khajuraho_Dance_Festival",
+   "best": "Feb (20\u201326)"
+  },
+  {
+   "name": "Chithirai Festival, Madurai",
+   "cat": "festivals",
+   "lat": 9.9197,
+   "lng": 78.1194,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Madurai's celestial wedding of Meenakshi and Sundareswarar, and Kallalagar's journey",
+   "wiki": "Meenakshi_Tirukalyanam",
+   "best": "Apr\u2013May"
+  },
+  {
+   "name": "Sonepur Cattle Fair",
+   "cat": "festivals",
+   "lat": 25.69,
+   "lng": 85.18,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Asia's biggest cattle fair, at the Gandak\u2013Ganga confluence",
+   "wiki": "Sonepur_Cattle_Fair",
+   "best": "Nov\u2013Dec"
+  },
+  {
+   "name": "Wangala (100 Drums)",
+   "cat": "festivals",
+   "lat": 25.52,
+   "lng": 90.22,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "Garo harvest festival for the sun god \u2014 the 100 Drums Festival near Tura",
+   "wiki": "Wangala",
+   "best": "Sep\u2013Dec"
+  },
+  {
+   "name": "Paranthe Wali Gali",
+   "cat": "cuisine",
+   "lat": 28.6561,
+   "lng": 77.2311,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "Chandni Chowk lane of stuffed parathas, a trade dating to the 1870s",
+   "wiki": "Gali_Paranthe_Wali",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Kashmiri Wazwan",
+   "cat": "cuisine",
+   "lat": 34.09,
+   "lng": 74.79,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Kashmir's multi-course feast \u2014 rogan josh, gushtaba and more",
+   "wiki": "Wazwan",
+   "best": "Apr\u2013Oct"
+  },
+  {
+   "name": "Litti Chokha, Patna",
+   "cat": "cuisine",
+   "lat": 25.5939,
+   "lng": 85.1375,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Smoky wheat balls stuffed with sattu, eaten with chokha",
+   "wiki": "Litti_(dish)",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Kerala Kalamandalam",
+   "cat": "arts",
+   "lat": 10.7376,
+   "lng": 76.2771,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Cheruthuruthy school of Kathakali, Mohiniyattam and Kudiyattam",
+   "wiki": "Kerala_Kalamandalam",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Bishnupur Terracotta Temples",
+   "cat": "arts",
+   "lat": 23.08,
+   "lng": 87.32,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Ornate 17th\u201318th-century terracotta temples of the Malla kings",
+   "wiki": "Bishnupur_(West_Bengal)",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Fontainhas",
+   "cat": "history",
+   "lat": 15.496,
+   "lng": 73.831,
+   "state": "Goa",
+   "stateCode": "GA",
+   "desc": "Panaji's Latin Quarter of yellow, green and blue Portuguese-era houses",
+   "wiki": "Fontainhas_(quarter)",
+   "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Akshardham, Delhi",
+   "cat": "religious",
+   "lat": 28.6125,
+   "lng": 77.2772,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "Vast Swaminarayan temple of carved pink sandstone and marble",
+   "wiki": "Swaminarayan_Akshardham_(Delhi)",
+   "best": "Oct\u2013Mar"
   }
  ],
- "total": 329
+ "total": 368
 }

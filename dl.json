@@ -81,6 +81,39 @@
    "stateCode": "DL",
    "desc": "Chandni Chowk kebabs and paranthas",
    "wiki": "Chandni_Chowk"
+  },
+  {
+   "name": "Paranthe Wali Gali",
+   "cat": "cuisine",
+   "lat": 28.6561,
+   "lng": 77.2311,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "Chandni Chowk lane of stuffed parathas, a trade dating to the 1870s",
+   "wiki": "Gali_Paranthe_Wali",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Dilli Haat",
+   "cat": "arts",
+   "lat": 28.5732,
+   "lng": 77.2085,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "Open-air craft bazaar and food plaza opposite INA Market",
+   "wiki": "Dilli_Haat",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Akshardham, Delhi",
+   "cat": "religious",
+   "lat": 28.6125,
+   "lng": 77.2772,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "Vast Swaminarayan temple of carved pink sandstone and marble",
+   "wiki": "Swaminarayan_Akshardham_(Delhi)",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

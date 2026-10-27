@@ -140,7 +140,8 @@
    "state": "Uttar Pradesh",
    "stateCode": "UP",
    "desc": "Largest human gathering on earth",
-   "wiki": "Kumbh_Mela"
+   "wiki": "Kumbh_Mela",
+   "best": "Jan\u2013Feb"
   },
   {
    "name": "Holi in Barsana",
@@ -150,7 +151,8 @@
    "state": "Uttar Pradesh",
    "stateCode": "UP",
    "desc": "Lathmar Holi \u2014 colour like nowhere else",
-   "wiki": "Barsana"
+   "wiki": "Barsana",
+   "best": "Feb\u2013Mar"
   },
   {
    "name": "Dev Deepawali Varanasi",
@@ -160,7 +162,8 @@
    "state": "Uttar Pradesh",
    "stateCode": "UP",
    "desc": "Million lamps on the Ganga ghats",
-   "wiki": "Dev_Deepawali"
+   "wiki": "Dev_Deepawali",
+   "best": "Nov"
   },
   {
    "name": "Lucknow Chikankari",

@@ -171,6 +171,28 @@
    "stateCode": "MP",
    "desc": "Gossamer fabric woven since Vedic times",
    "wiki": "Chanderi_sari"
+  },
+  {
+   "name": "Khajuraho Dance Festival",
+   "cat": "festivals",
+   "lat": 24.854,
+   "lng": 79.921,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "A week of classical dance in an open-air auditorium beside the temples",
+   "wiki": "Khajuraho_Dance_Festival",
+   "best": "Feb (20\u201326)"
+  },
+  {
+   "name": "Bagh Print",
+   "cat": "arts",
+   "lat": 22.3667,
+   "lng": 74.6667,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Natural-dye hand block printing in red and black, from Bagh village",
+   "wiki": "Bagh_print",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

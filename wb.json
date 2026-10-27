@@ -60,7 +60,8 @@
    "state": "West Bengal",
    "stateCode": "WB",
    "desc": "Grand artistic pandals across Kolkata",
-   "wiki": "Durga_Puja"
+   "wiki": "Durga_Puja",
+   "best": "Sep\u2013Oct"
   },
   {
    "name": "Gangasagar Mela",
@@ -70,7 +71,8 @@
    "state": "West Bengal",
    "stateCode": "WB",
    "desc": "Where Ganga meets the sea",
-   "wiki": "Gangasagar"
+   "wiki": "Gangasagar",
+   "best": "Jan"
   },
   {
    "name": "Kolkata Bengali",
@@ -101,6 +103,28 @@
    "stateCode": "WB",
    "desc": "Silk sarees with mythological motifs",
    "wiki": "Baluchari_sari"
+  },
+  {
+   "name": "Sandakphu",
+   "cat": "adventure",
+   "lat": 27.1058,
+   "lng": 88.0017,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "West Bengal's highest point \u2014 Everest, Kangchenjunga, Lhotse and Makalu in one view",
+   "wiki": "Sandakphu",
+   "best": "Oct\u2013Dec, Mar\u2013May"
+  },
+  {
+   "name": "Bishnupur Terracotta Temples",
+   "cat": "arts",
+   "lat": 23.08,
+   "lng": 87.32,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Ornate 17th\u201318th-century terracotta temples of the Malla kings",
+   "wiki": "Bishnupur_(West_Bengal)",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

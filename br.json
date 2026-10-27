@@ -50,7 +50,8 @@
    "state": "Bihar",
    "stateCode": "BR",
    "desc": "Sun worship at river banks",
-   "wiki": "Chhath"
+   "wiki": "Chhath",
+   "best": "Oct\u2013Nov"
   },
   {
    "name": "Vaishali",
@@ -73,6 +74,28 @@
    "desc": "Bihar's only national park and tiger reserve, in the Terai by the Nepal border",
    "wiki": "Valmiki_National_Park",
    "best": "Nov\u2013Mar"
+  },
+  {
+   "name": "Sonepur Cattle Fair",
+   "cat": "festivals",
+   "lat": 25.69,
+   "lng": 85.18,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Asia's biggest cattle fair, at the Gandak\u2013Ganga confluence",
+   "wiki": "Sonepur_Cattle_Fair",
+   "best": "Nov\u2013Dec"
+  },
+  {
+   "name": "Litti Chokha, Patna",
+   "cat": "cuisine",
+   "lat": 25.5939,
+   "lng": 85.1375,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Smoky wheat balls stuffed with sattu, eaten with chokha",
+   "wiki": "Litti_(dish)",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

@@ -50,7 +50,8 @@
    "state": "Assam",
    "stateCode": "AS",
    "desc": "Assamese new year celebration",
-   "wiki": "Bihu"
+   "wiki": "Bihu",
+   "best": "Apr"
   },
   {
    "name": "Assam Tea",
@@ -71,6 +72,28 @@
    "stateCode": "AS",
    "desc": "Ahom royal pavilion at Sivasagar, built with a rice-and-egg mortar",
    "wiki": "Rang_Ghar",
+   "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Ambubachi Mela",
+   "cat": "festivals",
+   "lat": 26.1664,
+   "lng": 91.7055,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Kamakhya's monsoon mela drawing sadhus, tantrics and lakhs of pilgrims",
+   "wiki": "Ambubachi_Mela",
+   "best": "Jun"
+  },
+  {
+   "name": "Sualkuchi Silk Town",
+   "cat": "arts",
+   "lat": 26.17,
+   "lng": 91.57,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "The 'Manchester of Assam' \u2014 looms weaving muga, pat and eri silk",
+   "wiki": "Sualkuchi",
    "best": "Oct\u2013Apr"
   }
  ]

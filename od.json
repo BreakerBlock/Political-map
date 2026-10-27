@@ -60,7 +60,8 @@
    "state": "Odisha",
    "stateCode": "OD",
    "desc": "Annual chariot procession of Lord Jagannath",
-   "wiki": "Ratha_Yatra"
+   "wiki": "Ratha_Yatra",
+   "best": "Jun\u2013Jul"
   },
   {
    "name": "Simlipal NP",
@@ -93,6 +94,28 @@
    "stateCode": "OD",
    "desc": "Jain rock-cut caves near Bhubaneswar with King Kharavela's Hathigumpha inscription",
    "wiki": "Udayagiri_and_Khandagiri_caves",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Konark Dance Festival",
+   "cat": "festivals",
+   "lat": 19.8962,
+   "lng": 86.0836,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Five evenings of classical dance with the Sun Temple as backdrop",
+   "wiki": "Konark_Dance_Festival",
+   "best": "Dec (1\u20135)"
+  },
+  {
+   "name": "Pipili Appliqu\u00e9",
+   "cat": "arts",
+   "lat": 20.12,
+   "lng": 85.83,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Bright appliqu\u00e9 canopies, umbrellas and lanterns made for Puri's Rath Yatra",
+   "wiki": "Pipili_appliqu\u00e9_work",
    "best": "Oct\u2013Mar"
   }
  ]

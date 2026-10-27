@@ -71,6 +71,39 @@
    "stateCode": "JK",
    "desc": "Mughal terraced garden on Dal Lake",
    "wiki": "Shalimar_Bagh,_Srinagar"
+  },
+  {
+   "name": "Tulip Garden, Srinagar",
+   "cat": "scenic",
+   "lat": 34.0961,
+   "lng": 74.88,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Asia's largest tulip garden, on terraces overlooking Dal Lake",
+   "wiki": "Indira_Gandhi_Memorial_Tulip_Garden",
+   "best": "Late Mar\u2013Apr"
+  },
+  {
+   "name": "Kashmiri Wazwan",
+   "cat": "cuisine",
+   "lat": 34.09,
+   "lng": 74.79,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Kashmir's multi-course feast \u2014 rogan josh, gushtaba and more",
+   "wiki": "Wazwan",
+   "best": "Apr\u2013Oct"
+  },
+  {
+   "name": "Kashmiri Pashmina",
+   "cat": "arts",
+   "lat": 34.0925,
+   "lng": 74.796,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Fine cashmere shawls, hand-spun and hand-woven in old Srinagar",
+   "wiki": "Pashmina_(material)",
+   "best": "Apr\u2013Oct"
   }
  ]
 }

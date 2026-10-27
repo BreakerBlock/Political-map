@@ -60,7 +60,8 @@
    "state": "Himachal Pradesh",
    "stateCode": "HP",
    "desc": "World Cup paragliding",
-   "wiki": "Bir,_Himachal_Pradesh"
+   "wiki": "Bir,_Himachal_Pradesh",
+   "best": "Oct\u2013Nov, Mar\u2013May"
   },
   {
    "name": "Hampta Pass",
@@ -70,7 +71,8 @@
    "state": "Himachal Pradesh",
    "stateCode": "HP",
    "desc": "Kullu-to-Lahaul crossover",
-   "wiki": "Hampta_Pass"
+   "wiki": "Hampta_Pass",
+   "best": "Jun\u2013Sep"
   },
   {
    "name": "Pin Parvati Pass",
@@ -80,7 +82,8 @@
    "state": "Himachal Pradesh",
    "stateCode": "HP",
    "desc": "High-altitude crossover",
-   "wiki": "Pin_Parvati_Pass"
+   "wiki": "Pin_Parvati_Pass",
+   "best": "Jul\u2013Sep"
   },
   {
    "name": "Great Himalayan NP",
@@ -100,7 +103,8 @@
    "state": "Himachal Pradesh",
    "stateCode": "HP",
    "desc": "Week-long valley-wide Dussehra fair",
-   "wiki": "Kullu_Dussehra"
+   "wiki": "Kullu_Dussehra",
+   "best": "Oct"
   },
   {
    "name": "Kinnauri Shawl",
@@ -121,6 +125,39 @@
    "stateCode": "HP",
    "desc": "Festive leaf-plate meal of the hills",
    "wiki": "Dham_(food)"
+  },
+  {
+   "name": "Solang Valley",
+   "cat": "adventure",
+   "lat": 32.316,
+   "lng": 77.157,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Snow slopes near Manali \u2014 skiing in winter, paragliding and zorbing in summer",
+   "wiki": "Solang_Valley",
+   "best": "Dec\u2013Feb (snow), May\u2013Jun"
+  },
+  {
+   "name": "Triund",
+   "cat": "adventure",
+   "lat": 32.2496,
+   "lng": 76.3339,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Short ridge trek above McLeod Ganj, facing the Dhauladhar wall",
+   "wiki": "Triund",
+   "best": "Mar\u2013Jun, Sep\u2013Dec"
+  },
+  {
+   "name": "Minjar Mela",
+   "cat": "festivals",
+   "lat": 32.57,
+   "lng": 76.13,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Chamba's week-long fair for the maize harvest, with a grand procession",
+   "wiki": "Minjar_Mela",
+   "best": "Jul\u2013Aug"
   }
  ]
 }

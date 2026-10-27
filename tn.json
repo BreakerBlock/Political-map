@@ -130,7 +130,8 @@
    "state": "Tamil Nadu",
    "stateCode": "TN",
    "desc": "Four-day harvest thanksgiving festival",
-   "wiki": "Thai_Pongal"
+   "wiki": "Thai_Pongal",
+   "best": "Jan"
   },
   {
    "name": "Mudumalai NP",
@@ -161,6 +162,28 @@
    "stateCode": "TN",
    "desc": "Experimental universal township around the golden Matrimandir globe",
    "wiki": "Auroville",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Chithirai Festival, Madurai",
+   "cat": "festivals",
+   "lat": 9.9197,
+   "lng": 78.1194,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Madurai's celestial wedding of Meenakshi and Sundareswarar, and Kallalagar's journey",
+   "wiki": "Meenakshi_Tirukalyanam",
+   "best": "Apr\u2013May"
+  },
+  {
+   "name": "Tirunelveli Halwa",
+   "cat": "cuisine",
+   "lat": 8.7136,
+   "lng": 77.7567,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Glossy wheat-and-ghee halwa, Tirunelveli's famous sweet",
+   "wiki": "Iruttu_Kadai",
    "best": "Oct\u2013Mar"
   }
  ]

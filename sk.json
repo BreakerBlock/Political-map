@@ -85,6 +85,17 @@
    "desc": "India's first UNESCO 'mixed' World Heritage Site (2016), below Kanchenjunga",
    "wiki": "Khangchendzonga_National_Park",
    "best": "Mar\u2013May, Oct\u2013Nov"
+  },
+  {
+   "name": "Goecha La",
+   "cat": "adventure",
+   "lat": 27.6078,
+   "lng": 88.1869,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "High-pass trek from Yuksom to face Kangchenjunga up close",
+   "wiki": "Goecha_La",
+   "best": "Apr\u2013May, Sep\u2013Nov"
   }
  ]
 }

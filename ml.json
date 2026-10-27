@@ -30,7 +30,8 @@
    "state": "Meghalaya",
    "stateCode": "ML",
    "desc": "India's longest limestone caves",
-   "wiki": "Krem_Liat_Prah"
+   "wiki": "Krem_Liat_Prah",
+   "best": "Oct\u2013Apr"
   },
   {
    "name": "Mawlynnong",
@@ -73,6 +74,17 @@
    "desc": "Two-tier living root bridge at Nongriat, reached by a steep jungle trek",
    "wiki": "Nongriat",
    "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Wangala (100 Drums)",
+   "cat": "festivals",
+   "lat": 25.52,
+   "lng": 90.22,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "Garo harvest festival for the sun god \u2014 the 100 Drums Festival near Tura",
+   "wiki": "Wangala",
+   "best": "Sep\u2013Dec"
   }
  ]
 }

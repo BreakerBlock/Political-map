@@ -120,7 +120,8 @@
    "state": "Kerala",
    "stateCode": "KL",
    "desc": "Elephant procession with parasols and drums",
-   "wiki": "Thrissur_Pooram"
+   "wiki": "Thrissur_Pooram",
+   "best": "Apr\u2013May"
   },
   {
    "name": "Onam",
@@ -130,7 +131,8 @@
    "state": "Kerala",
    "stateCode": "KL",
    "desc": "Harvest festival \u2014 boat races and sadhya feast",
-   "wiki": "Onam"
+   "wiki": "Onam",
+   "best": "Aug\u2013Sep"
   },
   {
    "name": "Nehru Trophy Boat Race",
@@ -140,7 +142,8 @@
    "state": "Kerala",
    "stateCode": "KL",
    "desc": "Snake boat race on Punnamada Lake",
-   "wiki": "Nehru_Trophy_Boat_Race"
+   "wiki": "Nehru_Trophy_Boat_Race",
+   "best": "Aug"
   },
   {
    "name": "Kerala Mural Art",
@@ -191,6 +194,61 @@
    "stateCode": "KL",
    "desc": "Kerala's signature snack fried in coconut oil",
    "wiki": "Banana_chip"
+  },
+  {
+   "name": "Chembra Peak",
+   "cat": "adventure",
+   "lat": 11.5122,
+   "lng": 76.0894,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Trek up the highest peak of the Wayanad hills, past a heart-shaped lake",
+   "wiki": "Chembra_Peak",
+   "best": "Sep\u2013Feb"
+  },
+  {
+   "name": "Theyyam",
+   "cat": "festivals",
+   "lat": 11.8745,
+   "lng": 75.3704,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Fiery ritual dance of North Malabar in which the performer becomes the deity",
+   "wiki": "Theyyam",
+   "best": "Oct\u2013May"
+  },
+  {
+   "name": "Attukal Pongala",
+   "cat": "festivals",
+   "lat": 8.4699,
+   "lng": 76.9555,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Lakhs of women cook pongala offerings to the goddess around Attukal Temple",
+   "wiki": "Attukal_Pongala",
+   "best": "Feb\u2013Mar"
+  },
+  {
+   "name": "Kerala Kalamandalam",
+   "cat": "arts",
+   "lat": 10.7376,
+   "lng": 76.2771,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Cheruthuruthy school of Kathakali, Mohiniyattam and Kudiyattam",
+   "wiki": "Kerala_Kalamandalam",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Aranmula Kannadi",
+   "cat": "arts",
+   "lat": 9.3333,
+   "lng": 76.6833,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Hand-made metal mirrors of polished bronze alloy (GI-tagged)",
+   "wiki": "Aranmula_kannadi",
+   "best": "Sep\u2013Mar"
   }
  ]
 }
