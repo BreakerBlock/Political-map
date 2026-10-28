@@ -313,6 +313,111 @@ body.tl-dragging .tl-day{opacity:.25;transition:opacity .15s}
 .stop-pin.hot::after{content:'';position:absolute;left:50%;bottom:-4px;width:18px;height:8px;margin-left:-9px;border-radius:50%;background:var(--c);opacity:.45;animation:hotPulse 1s ease-out infinite}
 @keyframes hotPulse{from{transform:scale(.6);opacity:.6}to{transform:scale(2.2);opacity:0}}
 
+/* ══ Highlights / Must-do story viewer ══ */
+.btn-hl{margin-left:auto;margin-right:10px;padding:8px 16px 8px 13px;border-radius:20px;border:none;cursor:pointer;font:700 0.75rem 'DM Sans',sans-serif;color:#fff;display:flex;align-items:center;gap:7px;background:linear-gradient(120deg,#FF9933,#E2622B 55%,#C73E6B);box-shadow:0 3px 12px rgba(199,62,107,.35);position:relative;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.btn-hl:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(199,62,107,.45)}
+.btn-hl::after{content:'';position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);animation:hlShine 4.5s ease-in-out 1.5s infinite}
+@keyframes hlShine{0%,70%{left:-60%}100%{left:130%}}
+.btn-hl svg{width:15px;height:15px;flex-shrink:0}
+.mustdo{display:flex;align-items:center;gap:6px;margin-top:6px;overflow-x:auto;scrollbar-width:none;padding:4px 4px 4px 1px}
+.mustdo::-webkit-scrollbar{display:none}
+.mustdo-lbl{font-size:0.6rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-dim);white-space:nowrap;margin-right:2px;display:flex;align-items:center;gap:4px}
+.mustdo-lbl svg{width:11px;height:11px;color:#C73E6B}
+.md-chip{flex-shrink:0;width:24px;height:24px;border-radius:50%;border:none;background:var(--c);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 2px var(--surface),0 0 0 3.5px color-mix(in srgb,var(--c) 45%,transparent);transition:transform .15s}
+.md-chip:hover{transform:scale(1.14)}
+.md-chip svg{width:13px;height:13px}
+.story{position:fixed;inset:0;z-index:5000;background:#120c08;color:#fff;overflow:hidden;opacity:0;transition:opacity .3s ease;touch-action:none;user-select:none;-webkit-user-select:none}
+.story.on{opacity:1}
+.story[hidden]{display:none}
+.st-bg{position:absolute;inset:0;opacity:0;transition:opacity .7s ease;background:radial-gradient(120% 90% at 70% 20%,color-mix(in srgb,var(--c) 85%,#fff 0%),color-mix(in srgb,var(--c) 40%,#120c08))}
+.st-bg.in{opacity:1}
+.st-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease;transform-origin:var(--ox,60%) var(--oy,40%)}
+.st-bg img.ok{opacity:1;animation:kenburns 9s ease-out forwards}
+@keyframes kenburns{from{transform:scale(1.14)}to{transform:scale(1.02)}}
+.st-bg .st-glyph{position:absolute;right:8%;top:22%;width:min(38vw,320px);opacity:.18}
+.st-bg .st-glyph svg{width:100%;height:auto}
+.st-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,6,3,.62) 0%,rgba(10,6,3,0) 22%,rgba(10,6,3,0) 42%,rgba(10,6,3,.55) 66%,rgba(10,6,3,.92) 100%),linear-gradient(90deg,rgba(10,6,3,.45),rgba(10,6,3,0) 60%)}
+.st-top{position:absolute;left:0;right:0;top:0;z-index:5;padding:12px 18px 0;padding-top:max(12px,env(safe-area-inset-top))}
+.st-bars{display:flex;gap:4px}
+.st-bar{flex:1;height:3px;border-radius:3px;background:rgba(255,255,255,.28);overflow:hidden;cursor:pointer}
+.st-bar i{display:block;height:100%;width:0;background:#fff;border-radius:3px}
+.st-bar.done i{width:100%}
+.st-bar.cur i{animation:stFill var(--dur,7s) linear forwards}
+.story.paused .st-bar.cur i{animation-play-state:paused}
+@keyframes stFill{from{width:0}to{width:100%}}
+.st-head{display:flex;align-items:center;gap:10px;margin-top:12px}
+.st-deck{flex:1;min-width:0}
+.st-deck small{display:block;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;opacity:.75;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st-deck b{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;letter-spacing:.01em}
+.st-count{font-size:.72rem;font-weight:600;opacity:.8;font-variant-numeric:tabular-nums}
+.st-ibtn{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(20,12,6,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .15s}
+.st-ibtn:hover{background:rgba(255,255,255,.2)}
+.st-ibtn svg{width:16px;height:16px}
+.st-tabs{display:flex;gap:6px;margin-top:10px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.st-tabs::-webkit-scrollbar{display:none}
+.st-tab{flex-shrink:0;display:flex;align-items:center;gap:6px;padding:5px 12px 5px 6px;border-radius:18px;border:1px solid rgba(255,255,255,.25);background:rgba(20,12,6,.3);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;font:600 .72rem 'DM Sans',sans-serif;cursor:pointer;transition:background .15s,border-color .15s}
+.st-tab span{width:20px;height:20px;border-radius:50%;background:var(--c);display:flex;align-items:center;justify-content:center}
+.st-tab span svg{width:12px;height:12px}
+.st-tab.on{background:#fff;color:#2C1810;border-color:#fff}
+.st-nav{position:absolute;top:50%;z-index:5;margin-top:-28px;width:56px;height:56px}
+.st-nav.prev{left:18px}.st-nav.next{right:18px}
+.st-nav svg{width:22px;height:22px}
+.st-card{position:absolute;z-index:4;left:0;right:0;bottom:0;padding:0 max(7vw,24px) max(40px,calc(env(safe-area-inset-bottom) + 28px));max-width:860px}
+.st-card>*{transition:opacity .45s ease,transform .55s cubic-bezier(.2,.8,.2,1)}
+.st-card.out>*{opacity:0;transform:translateX(calc(var(--dir,1) * 40px))}
+.st-card.out>*:nth-child(2){transition-delay:.03s}
+.st-card>*:nth-child(2){transition-delay:.06s}.st-card>*:nth-child(3){transition-delay:.12s}.st-card>*:nth-child(4){transition-delay:.18s}.st-card>*:nth-child(5){transition-delay:.24s}
+.st-chip{display:inline-flex;align-items:center;gap:6px;padding:4px 11px 4px 4px;border-radius:20px;background:rgba(255,253,248,.95);color:var(--c);font-size:.66rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.st-chip span{width:20px;height:20px;border-radius:50%;background:var(--c);display:flex;align-items:center;justify-content:center}
+.st-chip span svg{width:12px;height:12px}
+.st-card h2{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(2.3rem,5.6vw,4.4rem);line-height:.98;margin:12px 0 10px;text-shadow:0 2px 24px rgba(0,0,0,.45);letter-spacing:-.005em}
+.st-line{font-size:clamp(1rem,1.6vw,1.25rem);line-height:1.45;max-width:36em;opacity:.95;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.st-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.st-meta div{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:18px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-size:.78rem;font-weight:500}
+.st-meta svg{width:14px;height:14px;opacity:.85}
+.st-meta b{font-weight:700}
+.st-acts{display:flex;gap:10px;margin-top:18px}
+.st-acts button{display:flex;align-items:center;justify-content:center;gap:7px;padding:12px 20px;border-radius:26px;font:700 .86rem 'DM Sans',sans-serif;cursor:pointer;transition:transform .12s,background .15s,color .15s;border:1.5px solid #fff}
+.st-acts button:active{transform:scale(.97)}
+.st-acts svg{width:16px;height:16px}
+.st-map{background:#fff;color:#2C1810}
+.st-map:hover{background:#F5EDE0}
+.st-add{background:rgba(20,12,6,.25);color:#fff;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.st-add:hover{background:rgba(255,255,255,.18)}
+.st-add.in{background:#138808;border-color:#138808}
+.st-credit{position:absolute;z-index:4;right:16px;bottom:10px;font-size:.6rem;opacity:.55}
+.st-hint{position:absolute;z-index:6;left:50%;bottom:50%;transform:translateX(-50%);padding:9px 16px;border-radius:20px;background:rgba(20,12,6,.6);backdrop-filter:blur(8px);font-size:.78rem;font-weight:600;pointer-events:none;opacity:0;transition:opacity .4s}
+.st-hint.on{opacity:1}
+/* First-visit teaser */
+.teaser{position:absolute;z-index:850;left:50%;bottom:34px;transform:translate(-50%,20px);opacity:0;transition:opacity .45s ease,transform .55s cubic-bezier(.2,.8,.2,1);display:flex;align-items:center;gap:12px;padding:8px 8px 8px 8px;border-radius:16px;background:rgba(255,253,248,.97);box-shadow:0 14px 36px rgba(44,24,16,.3);border:1px solid var(--border-light);cursor:pointer;width:max-content;max-width:calc(100% - 28px)}
+.teaser.on{opacity:1;transform:translate(-50%,0)}
+.tz-stack{display:flex;flex-shrink:0}
+.tz-stack i{width:42px;height:54px;border-radius:9px;background:var(--c) center/cover;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.2)}
+.tz-stack i+i{margin-left:-22px;transform:rotate(6deg)}
+.tz-stack i:first-child{transform:rotate(-6deg)}
+.tz-txt{min-width:0;white-space:nowrap}
+.tz-txt small{display:block;font-size:.58rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#C73E6B}
+.tz-txt b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.12rem;line-height:1.1;color:var(--ink)}
+.tz-txt span{font-size:.68rem;color:var(--ink-dim)}
+.tz-play{flex-shrink:0;width:40px;height:40px;border-radius:50%;border:none;color:#fff;background:linear-gradient(120deg,#FF9933,#C73E6B);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.tz-play svg{width:15px;height:15px;margin-left:2px}
+.tz-x{flex-shrink:0;align-self:flex-start;border:none;background:none;color:var(--ink-light);font-size:16px;cursor:pointer;padding:0 4px;line-height:1}
+@media(max-width:760px){
+  .btn-hl{margin:0;width:36px;height:36px;padding:0;border-radius:50%;justify-content:center;flex-shrink:0}
+  .btn-hl span{display:none}
+  .btn-hl svg{width:17px;height:17px}
+  .mustdo{margin-top:10px;padding-top:9px;border-top:1px solid var(--border-light)}
+  .md-chip{width:30px;height:30px}
+  .st-nav{display:none}
+  .st-top{padding-left:12px;padding-right:12px}
+  .st-card{padding-left:20px;padding-right:20px}
+  .st-card h2{margin:10px 0 8px}
+  .st-acts button{flex:1;padding:13px 10px}
+  .teaser{bottom:44px;gap:10px}
+  .tz-stack i{width:36px;height:48px}
+  .md-chip{margin:0 1px}
+}
+@media(prefers-reduced-motion:reduce){.st-bg img.ok{animation:none}.st-card>*{transition:opacity .2s}.btn-hl::after{animation:none}}
 button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 
 @media(max-width:760px){
@@ -392,6 +497,7 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
     <div class="brand-flag"><span></span><span>☸</span><span></span></div>
     <div><h1>Bharat<span>Yatra</span></h1><div class="header-sub">Interactive India Travel Planner</div></div>
   </div>
+  <button class="btn-hl" id="btnHl" hidden onclick="openStory('india')" aria-label="Highlights of India" title="Highlights of India & must-do experiences"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 5.6L19.5 9.5l-5.6 1.9L12 17l-1.9-5.6L4.5 9.5l5.6-1.9z"/><path d="M19 14l.9 2.6 2.6.9-2.6.9L19 21l-.9-2.6-2.6-.9 2.6-.9z" opacity=".75"/></svg><span>Highlights</span></button>
   <a class="btn-suggest" href="#" onclick="return suggestPlace()" aria-label="Suggest a place" title="Suggest a place">
     <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 3.5l6 4 6-4M1 3.5v7a1 1 0 001 1h10a1 1 0 001-1v-7M1 3.5a1 1 0 011-1h10a1 1 0 011 1"/></svg>
     <span class="bs-label">Suggest a Place</span>
@@ -414,6 +520,7 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
       <div class="cat-panel" id="catPanel">
         <div class="cat-panel-head"><span>Show on map</span><button class="toggle-all" id="toggleAllM" onclick="toggleAllCats()">Clear</button><button class="cat-done" onclick="closeCatPanel()">Done</button></div>
         <div class="cat-list" id="catBtns" role="group" aria-label="Categories"></div>
+        <div class="mustdo" id="mustdo" hidden></div>
       </div>
     </div>
     <div class="state-filter">
@@ -440,8 +547,27 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
     <div class="loading-overlay" id="loader"><div class="spinner"></div>Loading places…</div>
     <div class="map-vignette"></div>
     <svg class="compass" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="44" stroke="#5A4432" stroke-width="1.5"/><circle cx="50" cy="50" r="34" stroke="#5A4432" stroke-width="0.75" opacity="0.6"/><path d="M50 8L56 46L50 50L44 46Z" fill="#B5452A"/><path d="M50 92L44 54L50 50L56 54Z" fill="#5A4432"/><path d="M8 50L46 44L50 50L46 56Z" fill="#5A4432"/><path d="M92 50L54 56L50 50L54 44Z" fill="#5A4432"/><text x="50" y="6" text-anchor="middle" font-size="11" font-weight="700" fill="#5A4432" font-family="Georgia,serif">N</text></svg>
+    <div class="teaser" id="teaser" hidden onclick="if(!event.target.closest('.tz-x'))openStory('india')" role="button" aria-label="Play Highlights of India"><div class="tz-stack"></div><div class="tz-txt"><small>New · Swipe stories</small><b></b><span></span></div><button class="tz-play" aria-label="Play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 001.5.86l12.5-7.5a1 1 0 000-1.72L8.5 3.64A1 1 0 007 4.5z"/></svg></button><button class="tz-x" onclick="event.stopPropagation();hideTeaser()" aria-label="Dismiss">✕</button></div>
     <div class="disclaimer">Boundary as per Survey of India · Map for reference only</div>
   </div>
+</div>
+<div class="story" id="story" hidden role="dialog" aria-modal="true" aria-label="Highlights of India" tabindex="-1">
+  <div id="stStage"></div>
+  <div class="st-top">
+    <div class="st-bars" id="stBars"></div>
+    <div class="st-head">
+      <div class="st-deck"><small id="stKicker"></small><b id="stTitle"></b></div>
+      <span class="st-count" id="stCount"></span>
+      <button class="st-ibtn" id="stPause" onclick="setStoryPaused(!story.paused)" aria-label="Pause"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></svg></button>
+      <button class="st-ibtn" onclick="closeStory()" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="st-tabs" id="stTabs"></div>
+  </div>
+  <button class="st-ibtn st-nav prev" onclick="prevStory()" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="st-ibtn st-nav next" onclick="nextStory()" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  <div class="st-card" id="stCard" aria-live="polite"></div>
+  <div class="st-hint" id="stHint"></div>
+  <div class="st-credit">Photos: Wikipedia / Wikimedia Commons</div>
 </div>
 
 <script>
@@ -846,7 +972,7 @@ function togglePlaceList(){if(!isMobile())return;document.body.classList.toggle(
 // Phones: the search box lives in the header row; desktop: back in the sidebar
 function placeSearch(){
   const w=document.getElementById('searchWrap'),hdr=document.querySelector('header'),inHdr=w.parentElement===hdr;
-  if(isMobile()&&!inHdr)hdr.insertBefore(w,hdr.querySelector('.btn-suggest'));
+  if(isMobile()&&!inHdr)hdr.insertBefore(w,hdr.querySelector('.btn-hl'));
   else if(!isMobile()&&inHdr)document.querySelector('.sidebar').insertBefore(w,document.getElementById('placeCount'));
   document.getElementById('searchInput').placeholder=isMobile()?'Search places…':'Search places, states…';
 }
@@ -1215,7 +1341,180 @@ async function initTrip(){
   renderTrip();syncStopPins();syncCardTripBtns(); // restored stops become numbered pins straight away
 }
 
-init().then(initTrip);
+
+/* ══════ HIGHLIGHTS / MUST-DO STORIES ══════
+   slides.json → decks of slides; each slide points at a real place by key ("SC|Name").
+   Full-bleed viewer: swipe / tap / arrow keys, auto-advance with progress bars, crossfading photos. */
+const STORY_DUR=7000,STORY_SEEN='bharatyatra.storySeen.v1';
+const SVG_SPARK='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 5.6L19.5 9.5l-5.6 1.9L12 17l-1.9-5.6L4.5 9.5l5.6-1.9z"/><path d="M19 14l.9 2.6 2.6.9-2.6.9L19 21l-.9-2.6-2.6-.9 2.6-.9z" opacity=".75"/></svg>';
+const SVG_PLAY='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 001.5.86l12.5-7.5a1 1 0 000-1.72L8.5 3.64A1 1 0 007 4.5z"/></svg>';
+const SVG_CAL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>';
+let storyDecks=[],story={deck:0,i:0,paused:false,prevHash:'',timer:0};
+const bigImgCache={};
+async function getBigImage(wiki){
+  if(!wiki)return null;if(bigImgCache[wiki]!==undefined)return bigImgCache[wiki];
+  const w=isMobile()?960:1600;
+  bigImgCache[wiki]=(async()=>{try{
+    const r=await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(wiki));if(!r.ok)throw 0;const j=await r.json();
+    const t=j.thumbnail&&j.thumbnail.source,o=j.originalimage;
+    if(!t)return null;
+    // Ask for a large rendition; keep the original if it is already smaller than that
+    if(o&&o.width&&o.width<=w)return o.source;
+    return /\/\d+px-/.test(t)?t.replace(/\/\d+px-/,'/'+w+'px-'):t;
+  }catch(e){return null}})();
+  return bigImgCache[wiki];
+}
+async function slideImage(s,p){return (s.wiki&&await getBigImage(s.wiki))||(p&&p.wiki&&await getBigImage(p.wiki))||null}
+const storyPlace=s=>allPlaces.find(p=>placeKey(p)===s.key);
+async function ensureDeckPlaces(d){
+  const need=[...new Set(d.slides.filter(s=>!storyPlace(s)).map(s=>s.key.split('|')[0]))].filter(sc=>statesIndex[sc]);
+  if(need.length){await Promise.all(need.map(loadStateData));render()}
+}
+async function loadStories(){
+  try{const r=await fetch(DATA_BASE+'slides.json?v='+Date.now());if(!r.ok)throw 0;storyDecks=(await r.json()).decks||[]}catch(e){storyDecks=[]}
+  if(!storyDecks.length)return;
+  document.getElementById('btnHl').hidden=false;
+  // "Must-do" strip under the category grid: one round chip per category that has a deck
+  const md=document.getElementById('mustdo');
+  md.innerHTML=`<span class="mustdo-lbl">${SVG_PLAY}Must-do</span>`+storyDecks.filter(d=>d.cat&&CATS[d.cat]).map(d=>`<button class="md-chip" style="--c:${CATS[d.cat].color}" title="${esc(d.title)}" aria-label="${esc(d.title)}" onclick="openStory('${d.id}')">${ICONS[d.cat]}</button>`).join('');
+  md.hidden=false;
+  const m=location.hash.match(/^#story=([\w-]+)/);
+  if(m&&storyDecks.some(d=>d.id===m[1])){openStory(m[1]);return}
+  let seen=false;try{seen=!!localStorage.getItem(STORY_SEEN)}catch(e){}
+  if(!seen&&!location.hash)setTimeout(showTeaser,1600);
+}
+async function showTeaser(){
+  if(document.getElementById('story').classList.contains('on'))return;
+  const d=storyDecks[0],t=document.getElementById('teaser');
+  const imgs=await Promise.all(d.slides.slice(0,3).map(s=>slideImage(s,storyPlace(s))));
+  t.querySelector('.tz-stack').innerHTML=d.slides.slice(0,3).map((s,i)=>{const p=storyPlace(s),c=(CATS[p?p.cat:'scenic']||CATS.scenic).color;return `<i style="--c:${c};${imgs[i]?`background-image:url('${esc(imgs[i])}')`:''}"></i>`}).join('');
+  t.querySelector('b').textContent=d.title;
+  t.querySelector('span').textContent=`${d.slides.length} unforgettable places · tap to play`;
+  t.hidden=false;requestAnimationFrame(()=>requestAnimationFrame(()=>t.classList.add('on')));
+}
+function hideTeaser(){const t=document.getElementById('teaser');t.classList.remove('on');setTimeout(()=>t.hidden=true,450);try{localStorage.setItem(STORY_SEEN,'1')}catch(e){}}
+async function openStory(id){
+  const di=Math.max(0,storyDecks.findIndex(d=>d.id===id));
+  hideTeaser();closeCatPanel();map.closePopup();
+  const el=document.getElementById('story');
+  if(!el.classList.contains('on')){
+    story.prevHash=location.hash;el.hidden=false;void el.offsetWidth;el.classList.add('on');
+    document.getElementById('stStage').innerHTML='';
+  }
+  await gotoStory(di,0,1);
+  el.focus();
+}
+function closeStory(){
+  const el=document.getElementById('story');if(el.hidden)return;
+  clearTimeout(story.timer);el.classList.remove('on');setTimeout(()=>{el.hidden=true;document.getElementById('stStage').innerHTML=''},300);
+  history.replaceState(null,'',location.pathname+location.search+(story.prevHash&&!/^#story=/.test(story.prevHash)?story.prevHash:''));
+}
+function renderStoryChrome(){
+  const d=storyDecks[story.deck];
+  document.getElementById('stKicker').textContent=d.kicker||'';
+  document.getElementById('stTitle').textContent=d.title;
+  document.getElementById('stTabs').innerHTML=storyDecks.map((x,i)=>{const c=CATS[x.cat]||{color:'#E2622B',label:'Highlights'};return `<button class="st-tab${i===story.deck?' on':''}" style="--c:${c.color}" onclick="event.stopPropagation();gotoStory(${i},0,1)"><span>${x.cat?ICONS[x.cat]:SVG_SPARK}</span>${x.cat?esc(c.label):'Highlights'}</button>`}).join('');
+  const on=document.querySelector('.st-tab.on');if(on)on.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});
+  document.getElementById('stBars').innerHTML=d.slides.map((s,i)=>`<div class="st-bar${i<story.i?' done':i===story.i?' cur':''}" onclick="event.stopPropagation();gotoStory(${story.deck},${i},${i<story.i?-1:1})"><i></i></div>`).join('');
+  document.getElementById('stCount').textContent=(story.i+1)+' / '+d.slides.length;
+  const cur=document.querySelector('.st-bar.cur i');
+  if(cur){cur.style.setProperty('--dur',STORY_DUR+'ms');cur.addEventListener('animationend',()=>nextStory(),{once:true})}
+}
+let storySeq=0;
+async function gotoStory(di,i,dir){
+  const d=storyDecks[di];if(!d)return;
+  const seq=++storySeq;
+  story.deck=di;story.i=i;
+  if(!d.slides.every(storyPlace))await ensureDeckPlaces(d);
+  if(seq!==storySeq)return;
+  const s=d.slides[i],p=storyPlace(s);if(!p){return nextStory()}
+  const c=CATS[p.cat]||CATS.scenic;
+  history.replaceState(null,'',location.pathname+location.search+'#story='+d.id);
+  // Background: a new layer crossfades over the old one
+  const stage=document.getElementById('stStage'),bg=document.createElement('div');
+  bg.className='st-bg';bg.style.setProperty('--c',c.color);
+  bg.innerHTML=`<div class="st-glyph">${ICONS[p.cat]||ICONS.scenic}</div>`;
+  stage.appendChild(bg);requestAnimationFrame(()=>bg.classList.add('in'));
+  [...stage.children].slice(0,-1).forEach(o=>setTimeout(()=>o.remove(),800));
+  slideImage(s,p).then(u=>{if(!u||!bg.isConnected)return;const im=new Image();im.alt=p.name;im.style.setProperty('--ox',(40+Math.random()*30)+'%');im.onload=()=>im.classList.add('ok');im.src=u;bg.appendChild(im)});
+  // Card: slide the old text out, swap, slide the new text in
+  const card=document.getElementById('stCard');
+  card.style.setProperty('--dir',dir<0?-1:1);
+  if(card.childElementCount){card.classList.add('out');await new Promise(r=>setTimeout(r,180));if(seq!==storySeq)return;card.style.setProperty('--dir',dir<0?1:-1)}
+  const season=s.season||p.best||'';
+  card.innerHTML=`<div><span class="st-chip" style="--c:${c.color}"><span>${ICONS[p.cat]||ICONS.scenic}</span>${esc(c.label)}</span></div>`
+    +`<h2>${esc(s.title||p.name)}</h2>`
+    +`<div class="st-line">${esc(s.line||p.desc)}</div>`
+    +`<div class="st-meta"><div>${PIN_SVG}${s.title&&s.title!==p.name?esc(p.name)+', ':''}${esc(p.state)}</div>${season?`<div>${SVG_CAL}Best <b>${esc(season)}</b></div>`:''}</div>`
+    +`<div class="st-acts"><button class="st-map" onclick="event.stopPropagation();storyShowOnMap()">${PIN_SVG}Show on map</button><button class="st-add${inTrip(p)?' in':''}" onclick="event.stopPropagation();storyToggleTrip(this)">${inTrip(p)?'✓ In your trip':'+ Add to trip'}</button></div>`;
+  card.classList.add('out');void card.offsetWidth;card.style.setProperty('--dir',dir<0?-1:1);card.classList.remove('out');
+  renderStoryChrome();
+  // Warm the next photo
+  const nx=d.slides[i+1]||(storyDecks[di+1]||{slides:[]}).slides[0];if(nx){const np=storyPlace(nx);slideImage(nx,np).then(u=>{if(u)new Image().src=u})}
+}
+function nextStory(){
+  const d=storyDecks[story.deck];
+  if(story.i<d.slides.length-1)gotoStory(story.deck,story.i+1,1);
+  else if(story.deck<storyDecks.length-1)gotoStory(story.deck+1,0,1);
+  else{setStoryPaused(true);document.querySelector('.st-bar.cur')?.classList.replace('cur','done')}
+}
+function prevStory(){
+  if(story.i>0)gotoStory(story.deck,story.i-1,-1);
+  else if(story.deck>0){const pd=storyDecks[story.deck-1];gotoStory(story.deck-1,pd.slides.length-1,-1)}
+  else gotoStory(0,0,-1);
+}
+function setStoryPaused(on){
+  story.paused=on;document.getElementById('story').classList.toggle('paused',on);
+  document.getElementById('stPause').innerHTML=on?SVG_PLAY:'<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></svg>';
+  document.getElementById('stPause').setAttribute('aria-label',on?'Play':'Pause');
+}
+function curStoryPlace(){const s=storyDecks[story.deck].slides[story.i];return storyPlace(s)}
+async function storyShowOnMap(){
+  const p=curStoryPlace();if(!p)return;
+  closeStory();
+  if(!activeCats.has(p.cat))activeCats.add(p.cat);
+  if(selectedState&&selectedState!==p.stateCode){selectedState='';document.getElementById('stateSelect').value=''}
+  const si=document.getElementById('searchInput');if(si.value)si.value='';
+  render();
+  setTimeout(()=>focusPlace(p),320);
+}
+function storyToggleTrip(b){
+  const p=curStoryPlace();if(!p)return;
+  toggleTrip(placeKey(p));
+  const on=inTrip(p);b.classList.toggle('in',on);b.textContent=on?'✓ In your trip':'+ Add to trip';
+  const h=document.getElementById('stHint');h.textContent=on?`Added to your trip · ${trip.length} stop${trip.length>1?'s':''}`:'Removed from your trip';
+  h.classList.add('on');clearTimeout(h._t);h._t=setTimeout(()=>h.classList.remove('on'),1600);
+}
+(function storyInput(){
+  const el=document.getElementById('story');
+  let x0=0,y0=0,t0=0,holdT=0,held=false,down=false;
+  el.addEventListener('pointerdown',e=>{
+    if(e.target.closest('button'))return;
+    down=true;x0=e.clientX;y0=e.clientY;t0=Date.now();held=false;
+    holdT=setTimeout(()=>{held=true;if(!story.paused){story.holdPause=true;setStoryPaused(true)}},260);
+  });
+  el.addEventListener('pointerup',e=>{
+    if(!down)return;down=false;clearTimeout(holdT);
+    if(story.holdPause){story.holdPause=false;setStoryPaused(false)}
+    const dx=e.clientX-x0,dy=e.clientY-y0;
+    if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)){dx<0?nextStory():prevStory();return}
+    if(dy>90&&Math.abs(dy)>Math.abs(dx)){closeStory();return}
+    if(held||Math.abs(dx)>10||Math.abs(dy)>10)return;
+    if(e.target.closest('.st-card .st-acts,.st-tabs,.st-bars'))return;
+    e.clientX<window.innerWidth*0.33?prevStory():nextStory();
+  });
+  el.addEventListener('pointercancel',()=>{down=false;clearTimeout(holdT);if(story.holdPause){story.holdPause=false;setStoryPaused(false)}});
+  document.addEventListener('keydown',e=>{
+    if(el.hidden)return;
+    if(e.key==='ArrowRight'){e.preventDefault();nextStory()}
+    else if(e.key==='ArrowLeft'){e.preventDefault();prevStory()}
+    else if(e.key==='Escape'){e.preventDefault();closeStory()}
+    else if(e.key===' '&&!e.target.closest('button')){e.preventDefault();setStoryPaused(!story.paused)}
+  });
+  document.addEventListener('visibilitychange',()=>{if(document.hidden&&!el.hidden)setStoryPaused(true)});
+})();
+
+init().then(initTrip).then(loadStories);
 </script>
 </body>
 </html>

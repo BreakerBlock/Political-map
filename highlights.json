@@ -8,7 +8,8 @@
    "state": "Rajasthan",
    "stateCode": "RJ",
    "desc": "Hilltop fort of mirrored halls above Maota Lake",
-   "wiki": "Amer_Fort"
+   "wiki": "Amer_Fort",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Hawa Mahal",
@@ -38,7 +39,8 @@
    "state": "Rajasthan",
    "stateCode": "RJ",
    "desc": "Living golden fort \u2014 families still reside within",
-   "wiki": "Jaisalmer_Fort"
+   "wiki": "Jaisalmer_Fort",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Chittorgarh Fort",
@@ -68,7 +70,8 @@
    "state": "Rajasthan",
    "stateCode": "RJ",
    "desc": "Sufi dargah of Moinuddin Chishti",
-   "wiki": "Ajmer_Sharif_Dargah"
+   "wiki": "Ajmer_Sharif_Dargah",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Ranthambore NP",
@@ -78,7 +81,8 @@
    "state": "Rajasthan",
    "stateCode": "RJ",
    "desc": "Tigers among ancient fort ruins",
-   "wiki": "Ranthambore_National_Park"
+   "wiki": "Ranthambore_National_Park",
+   "best": "Oct\u2013Jun"
   },
   {
    "name": "Keoladeo Ghana NP",
@@ -88,7 +92,8 @@
    "state": "Rajasthan",
    "stateCode": "RJ",
    "desc": "UNESCO bird paradise \u2014 Siberian cranes",
-   "wiki": "Keoladeo_National_Park"
+   "wiki": "Keoladeo_National_Park",
+   "best": "Oct\u2013Feb"
   },
   {
    "name": "Pushkar Camel Fair",
@@ -120,7 +125,8 @@
    "state": "Rajasthan",
    "stateCode": "RJ",
    "desc": "Sanganer and Bagru hand-block traditions",
-   "wiki": "Sanganer"
+   "wiki": "Sanganer",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Rajasthani Thali",
@@ -140,7 +146,8 @@
    "state": "Kerala",
    "stateCode": "KL",
    "desc": "Rolling tea plantations in the Western Ghats",
-   "wiki": "Munnar"
+   "wiki": "Munnar",
+   "best": "Sep\u2013Mar"
   },
   {
    "name": "Alleppey Backwaters",
@@ -150,7 +157,8 @@
    "state": "Kerala",
    "stateCode": "KL",
    "desc": "Houseboat cruises through palm-fringed canals",
-   "wiki": "Alappuzha"
+   "wiki": "Alappuzha",
+   "best": "Sep\u2013Mar"
   },
   {
    "name": "Fort Kochi",
@@ -242,7 +250,8 @@
    "state": "Uttar Pradesh",
    "stateCode": "UP",
    "desc": "Mughal marble masterpiece",
-   "wiki": "Taj_Mahal"
+   "wiki": "Taj_Mahal",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Fatehpur Sikri",
@@ -272,7 +281,8 @@
    "state": "Uttar Pradesh",
    "stateCode": "UP",
    "desc": "Oldest living city \u2014 Ganga Aarti",
-   "wiki": "Varanasi"
+   "wiki": "Varanasi",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Vrindavan",
@@ -334,7 +344,8 @@
    "state": "Uttar Pradesh",
    "stateCode": "UP",
    "desc": "Gold zari brocade weaving",
-   "wiki": "Banarasi_sari"
+   "wiki": "Banarasi_sari",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Moradabad Brass",
@@ -364,7 +375,8 @@
    "state": "Uttar Pradesh",
    "stateCode": "UP",
    "desc": "Tunday kebabs and Nawabi biryanis",
-   "wiki": "Awadhi_cuisine"
+   "wiki": "Awadhi_cuisine",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Khajuraho",
@@ -374,7 +386,8 @@
    "state": "Madhya Pradesh",
    "stateCode": "MP",
    "desc": "Medieval temples with erotic sculpture",
-   "wiki": "Khajuraho_Group_of_Monuments"
+   "wiki": "Khajuraho_Group_of_Monuments",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Sanchi Stupa",
@@ -414,7 +427,8 @@
    "state": "Madhya Pradesh",
    "stateCode": "MP",
    "desc": "Jungle Book country",
-   "wiki": "Kanha_Tiger_Reserve"
+   "wiki": "Kanha_Tiger_Reserve",
+   "best": "Oct\u2013Jun"
   },
   {
    "name": "Pench NP",
@@ -454,7 +468,8 @@
    "state": "Karnataka",
    "stateCode": "KA",
    "desc": "Vijayanagara Empire ruins",
-   "wiki": "Hampi"
+   "wiki": "Hampi",
+   "best": "Oct\u2013Feb"
   },
   {
    "name": "Mysore Palace",
@@ -565,7 +580,8 @@
    "state": "Tamil Nadu",
    "stateCode": "TN",
    "desc": "1,000-year-old Chola granite masterwork",
-   "wiki": "Brihadisvara_Temple,_Thanjavur"
+   "wiki": "Brihadisvara_Temple,_Thanjavur",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Mahabalipuram",
@@ -585,7 +601,8 @@
    "state": "Tamil Nadu",
    "stateCode": "TN",
    "desc": "Towering gopurams \u2014 painted sculptures",
-   "wiki": "Meenakshi_Temple"
+   "wiki": "Meenakshi_Temple",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Rameswaram",
@@ -625,7 +642,8 @@
    "state": "Tamil Nadu",
    "stateCode": "TN",
    "desc": "Temple town \u2014 handwoven silk sarees",
-   "wiki": "Kanchipuram_silk_sari"
+   "wiki": "Kanchipuram_silk_sari",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Kalamkari",
@@ -665,7 +683,8 @@
    "state": "Maharashtra",
    "stateCode": "MH",
    "desc": "Rock-cut Buddhist cave paintings",
-   "wiki": "Ajanta_Caves"
+   "wiki": "Ajanta_Caves",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Ellora Caves",
@@ -675,7 +694,8 @@
    "state": "Maharashtra",
    "stateCode": "MH",
    "desc": "Kailasa temple carved from one rock",
-   "wiki": "Ellora_Caves"
+   "wiki": "Ellora_Caves",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Shirdi",
@@ -715,7 +735,8 @@
    "state": "Maharashtra",
    "stateCode": "MH",
    "desc": "Vada pav, pav bhaji, bhel",
-   "wiki": "Street_food_of_Mumbai"
+   "wiki": "Street_food_of_Mumbai",
+   "best": "Nov\u2013Feb"
   },
   {
    "name": "Victoria Memorial",
@@ -745,7 +766,8 @@
    "state": "West Bengal",
    "stateCode": "WB",
    "desc": "Largest mangrove \u2014 Royal Bengal tigers",
-   "wiki": "Sundarbans_National_Park"
+   "wiki": "Sundarbans_National_Park",
+   "best": "Nov\u2013Feb"
   },
   {
    "name": "Durga Puja",
@@ -787,7 +809,8 @@
    "state": "Gujarat",
    "stateCode": "GJ",
    "desc": "Last Asiatic lion refuge",
-   "wiki": "Gir_National_Park"
+   "wiki": "Gir_National_Park",
+   "best": "Dec\u2013Mar"
   },
   {
    "name": "Little Rann of Kutch",
@@ -807,7 +830,8 @@
    "state": "Gujarat",
    "stateCode": "GJ",
    "desc": "UNESCO stepwell seven stories deep",
-   "wiki": "Rani_ki_Vav"
+   "wiki": "Rani_ki_Vav",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Dwarka",
@@ -898,7 +922,8 @@
    "state": "Ladakh",
    "stateCode": "LA",
    "desc": "Shimmering blue lake",
-   "wiki": "Pangong_Tso"
+   "wiki": "Pangong_Tso",
+   "best": "Jun\u2013Sep"
   },
   {
    "name": "Nubra Valley",
@@ -908,7 +933,8 @@
    "state": "Ladakh",
    "stateCode": "LA",
    "desc": "Sand dunes and camels",
-   "wiki": "Nubra_Valley"
+   "wiki": "Nubra_Valley",
+   "best": "Jun\u2013Sep"
   },
   {
    "name": "Hemis NP",
@@ -971,7 +997,8 @@
    "state": "Jammu & Kashmir",
    "stateCode": "JK",
    "desc": "Iconic houseboat lake",
-   "wiki": "Dal_Lake"
+   "wiki": "Dal_Lake",
+   "best": "Apr\u2013Oct"
   },
   {
    "name": "Gulmarg",
@@ -981,7 +1008,8 @@
    "state": "Jammu & Kashmir",
    "stateCode": "JK",
    "desc": "Snow meadows and gondola",
-   "wiki": "Gulmarg"
+   "wiki": "Gulmarg",
+   "best": "Dec\u2013Mar, May\u2013Sep"
   },
   {
    "name": "Sonamarg",
@@ -1041,7 +1069,8 @@
    "state": "Himachal Pradesh",
    "stateCode": "HP",
    "desc": "Cold desert monasteries",
-   "wiki": "Spiti_Valley"
+   "wiki": "Spiti_Valley",
+   "best": "May\u2013Oct"
   },
   {
    "name": "Bir Billing",
@@ -1084,7 +1113,8 @@
    "state": "Uttarakhand",
    "stateCode": "UK",
    "desc": "UNESCO alpine meadow",
-   "wiki": "Valley_of_Flowers_National_Park"
+   "wiki": "Valley_of_Flowers_National_Park",
+   "best": "Jul\u2013Sep"
   },
   {
    "name": "Chopta-Tungnath",
@@ -1134,7 +1164,8 @@
    "state": "Uttarakhand",
    "stateCode": "UK",
    "desc": "Himalayan jyotirlinga at 3,583 m",
-   "wiki": "Kedarnath_Temple"
+   "wiki": "Kedarnath_Temple",
+   "best": "May\u2013Jun, Sep\u2013Oct"
   },
   {
    "name": "Badrinath",
@@ -1164,7 +1195,8 @@
    "state": "Uttarakhand",
    "stateCode": "UK",
    "desc": "India's oldest tiger park",
-   "wiki": "Jim_Corbett_National_Park"
+   "wiki": "Jim_Corbett_National_Park",
+   "best": "Nov\u2013Jun"
   },
   {
    "name": "Roopkund Trek",
@@ -1238,7 +1270,8 @@
    "state": "Odisha",
    "stateCode": "OD",
    "desc": "13th-century chariot temple",
-   "wiki": "Konark_Sun_Temple"
+   "wiki": "Konark_Sun_Temple",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Puri Jagannath",
@@ -1248,7 +1281,8 @@
    "state": "Odisha",
    "stateCode": "OD",
    "desc": "Rath Yatra chariot festival",
-   "wiki": "Jagannath_Temple,_Puri"
+   "wiki": "Jagannath_Temple,_Puri",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Raghurajpur",
@@ -1258,7 +1292,8 @@
    "state": "Odisha",
    "stateCode": "OD",
    "desc": "Heritage crafts village \u2014 Pattachitra",
-   "wiki": "Raghurajpur"
+   "wiki": "Raghurajpur",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Golconda Fort",
@@ -1278,7 +1313,8 @@
    "state": "Telangana",
    "stateCode": "TS",
    "desc": "Dum biryani and haleem",
-   "wiki": "Hyderabadi_biryani"
+   "wiki": "Hyderabadi_biryani",
+   "best": "Oct\u2013Feb"
   },
   {
    "name": "Pochampally Ikat",
@@ -1328,7 +1364,8 @@
    "state": "Punjab",
    "stateCode": "PB",
    "desc": "Harmandir Sahib \u2014 Sikhism's holiest",
-   "wiki": "Golden_Temple"
+   "wiki": "Golden_Temple",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Amritsari Food",
@@ -1338,7 +1375,8 @@
    "state": "Punjab",
    "stateCode": "PB",
    "desc": "Kulcha-chole and lassi",
-   "wiki": "Punjabi_cuisine"
+   "wiki": "Punjabi_cuisine",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Bodh Gaya",
@@ -1348,7 +1386,8 @@
    "state": "Bihar",
    "stateCode": "BR",
    "desc": "Buddha's enlightenment site",
-   "wiki": "Bodh_Gaya"
+   "wiki": "Bodh_Gaya",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Nalanda",
@@ -1368,7 +1407,8 @@
    "state": "Bihar",
    "stateCode": "BR",
    "desc": "Mithila folk painting",
-   "wiki": "Madhubani_art"
+   "wiki": "Madhubani_art",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Kaziranga NP",
@@ -1378,7 +1418,8 @@
    "state": "Assam",
    "stateCode": "AS",
    "desc": "One-horned rhinoceros",
-   "wiki": "Kaziranga_National_Park"
+   "wiki": "Kaziranga_National_Park",
+   "best": "Nov\u2013Apr"
   },
   {
    "name": "Manas NP",
@@ -1418,7 +1459,8 @@
    "state": "Meghalaya",
    "stateCode": "ML",
    "desc": "Crystal-clear river",
-   "wiki": "Dawki"
+   "wiki": "Dawki",
+   "best": "Nov\u2013Apr"
   },
   {
    "name": "Meghalaya Caves",
@@ -1449,7 +1491,8 @@
    "state": "Sikkim",
    "stateCode": "SK",
    "desc": "Sacred lake at 5,183 m",
-   "wiki": "Gurudongmar_Lake"
+   "wiki": "Gurudongmar_Lake",
+   "best": "Apr\u2013Jun, Oct\u2013Nov"
   },
   {
    "name": "Tawang",
@@ -1522,7 +1565,8 @@
    "state": "Delhi",
    "stateCode": "DL",
    "desc": "73 m victory tower",
-   "wiki": "Qutb_Minar"
+   "wiki": "Qutb_Minar",
+   "best": "Oct\u2013Mar"
   },
   {
    "name": "Old Delhi Food",
@@ -1542,7 +1586,8 @@
    "state": "Andaman & Nicobar",
    "stateCode": "AN",
    "desc": "Radhanagar Beach",
-   "wiki": "Havelock_Island"
+   "wiki": "Havelock_Island",
+   "best": "Oct\u2013May"
   },
   {
    "name": "Agatti Island",

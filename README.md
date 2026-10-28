@@ -11,6 +11,7 @@ A travel planner for India: 368+ curated places (and growing) across 8 categorie
    india-boundary.geojson
    highlights.json
    states-index.json
+   slides.json
    rj.json, kl.json, up.json, ... (34 state files, all in the repo root)
    ```
 3. Go to **Settings → Pages → Source** → select `main` branch, `/ (root)` → Save
@@ -23,6 +24,7 @@ A travel planner for India: 368+ curated places (and growing) across 8 categorie
 - **Category pills + State dropdown**: work together as filters. Both update the sidebar list and map markers.
 - **On phones**: the controls collapse into one compact row — a **Categories** dropdown (checkbox list that overlays the map, with Clear/All and a count badge) next to the State picker — and the map opens fitted to the whole of India, including all of J&K and Ladakh.
 - **Pin click**: opens a photo card — the photo comes from Wikipedia (via the `wiki` field) — with Directions (Google Maps), Wikipedia and **Suggest edit** (emails a correction) links and **+ Add to trip**. Sidebar cards also have a one-tap add-to-trip button.
+- **Highlights & Must-do stories**: the ✦ **Highlights** button in the header (and the round **Must-do** chips under the categories) opens a full-screen, swipeable story viewer with 9 decks — *Highlights of India* plus a must-do set for every category (75 slides). Each slide has a big Wikipedia photo, a one-liner, the state, the best season, **Show on map** and **+ Add to trip**. Swipe or tap left/right (phones), ←/→ keys or the arrow buttons (desktop); slides auto-advance with progress bars (press and hold, or Space, to pause); swipe down or Esc to close. First-time visitors get a small teaser card on the map. Decks live in `slides.json` (`{decks:[{id,title,kicker,cat?,slides:[{key:"SC|Place name",line,season,title?,wiki?}]}]}`) and every slide points at a real place on the map; link straight to a deck with `#story=<id>` (e.g. `#story=adventure`).
 - **Trip planner**: every popup and sidebar card can add a place to your trip. The **My trip** tab shows the itinerary as a timeline: a summary card (stops, road km, drive time), numbered stops in order, and each leg's road distance and drive time (or straight-line distance for sea legs). On the map, stops are numbered pins in their category colour (kept out of clusters), and hovering a stop in the list highlights its pin; on desktop the filters fold into one line while the trip is open. Drag stops by their number to reorder (or use the ↑/↓ buttons or arrow keys), remove stops, use **Shortest order** to reorder by distance, and share it as a link (`#trip=…`) or email it. The trip is saved in the browser's localStorage. Longer trips are split into **driving days** (Day 1, Day 2 …, overnight stops marked) using a daily drive limit you choose (4/6/8 h).
 - **Road distances**: each trip leg shows road distance and an estimated drive time from the free public OSRM router (OpenStreetMap data), and the road route is drawn on the map. Island legs or legs with no road fall back to straight-line distance.
 - **Map labels**: state and city names are drawn above the pins and decluttered on every zoom, so they never hide under a pin or cluster; the six metros are named even on the zoomed-out phone view.
@@ -55,6 +57,7 @@ Edit the relevant state file (e.g. `rj.json`) on GitHub, add an entry to its `pl
 | desc      | ✔ | One-line description |
 | wiki      | opt | Wikipedia article title → auto-fetches photo |
 | img       | opt | Direct image URL → overrides wiki photo |
+| best      | opt | Best time to visit, e.g. `Oct–Mar` → "Best time" chip |
 
 ### Highlight vs. detail
 Set `highlight=True` in the generator for places that should appear at the country zoom level. Everything else loads only when users zoom into that state or select it from the dropdown.

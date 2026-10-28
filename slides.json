@@ -1,0 +1,467 @@
+{
+ "decks": [
+  {
+   "id": "india",
+   "title": "Highlights of India",
+   "kicker": "Swipe through the best of Bharat",
+   "slides": [
+    {
+     "key": "UP|Taj Mahal",
+     "line": "Shah Jahan's white-marble tribute to Mumtaz Mahal — see it blush pink at sunrise.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "PB|Golden Temple",
+     "line": "A gilded sanctum on a sacred pool, where the free langar kitchen feeds everyone who comes.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "UP|Varanasi",
+     "line": "Evening Ganga aarti on the ghats of one of the world's oldest living cities.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "LA|Pangong Tso",
+     "line": "A lake above 4,200 m that shifts from turquoise to deep blue as the light changes.",
+     "season": "Jun–Sep"
+    },
+    {
+     "key": "KL|Alleppey Backwaters",
+     "line": "Drift through palm-fringed canals and stay the night on a kettuvallam houseboat.",
+     "season": "Sep–Mar"
+    },
+    {
+     "key": "RJ|Jaisalmer Fort",
+     "line": "A living fort of golden sandstone rising out of the Thar Desert.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "KA|Hampi",
+     "line": "Boulder hills strewn with the ruins of the Vijayanagara capital — a UNESCO World Heritage Site.",
+     "season": "Oct–Feb"
+    },
+    {
+     "key": "ML|Double-Decker Root Bridge",
+     "line": "A bridge grown, not built: Khasi villagers train rubber-fig roots across the stream.",
+     "season": "Oct–Apr"
+    },
+    {
+     "key": "AS|Kaziranga NP",
+     "line": "Home to about two-thirds of the world's greater one-horned rhinos.",
+     "season": "Nov–Apr"
+    },
+    {
+     "key": "MH|Ajanta Caves",
+     "line": "Buddhist rock-cut caves with paintings spanning the 2nd century BCE to about 480 CE.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "NL|Hornbill Festival",
+     "line": "Ten days of Naga dance, song and food at Kisama, every 1–10 December.",
+     "season": "Dec 1–10"
+    },
+    {
+     "key": "JK|Gulmarg",
+     "line": "Ride the gondola into the snow — Kashmir's meadow of flowers turns ski resort in winter.",
+     "season": "Dec–Mar · May–Sep"
+    },
+    {
+     "key": "RJ|Ranthambore NP",
+     "line": "Tigers prowl beneath the walls of the ancient Ranthambore Fort.",
+     "season": "Oct–Jun"
+    },
+    {
+     "key": "OD|Konark Sun Temple",
+     "line": "A 13th-century temple carved as the Sun god's colossal stone chariot, wheels and all.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "AN|Havelock Island",
+     "line": "White sand and glass-clear water at Radhanagar Beach in the Andaman Sea.",
+     "season": "Oct–May"
+    },
+    {
+     "key": "UK|Valley of Flowers",
+     "line": "A UNESCO-listed alpine valley that bursts into bloom in the monsoon.",
+     "season": "Jul–Sep"
+    },
+    {
+     "key": "TN|Madurai Meenakshi",
+     "line": "Towering gopurams covered in thousands of brightly painted figures.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "HP|Spiti Valley",
+     "line": "A high cold desert of cliff-top monasteries and moonscape roads.",
+     "season": "May–Oct"
+    }
+   ]
+  },
+  {
+   "id": "adventure",
+   "cat": "adventure",
+   "title": "Must-do Adventure",
+   "kicker": "Thrills from the Himalaya to the Andaman Sea",
+   "slides": [
+    {
+     "key": "UK|Rishikesh Rafting",
+     "line": "Ride the Ganga's white-water rapids down to Rishikesh.",
+     "season": "Sep–Jun",
+     "title": "White-water rafting, Rishikesh"
+    },
+    {
+     "key": "HP|Bir Billing",
+     "line": "Paraglide off Billing over the Kangra valley — a Paragliding World Cup venue.",
+     "season": "Oct–Nov · Mar–May",
+     "title": "Paragliding at Bir Billing"
+    },
+    {
+     "key": "LA|Chadar Trek",
+     "line": "Walk the frozen Zanskar River in the depths of the Ladakh winter.",
+     "season": "Jan–Feb",
+     "wiki": "Chadar_Trek"
+    },
+    {
+     "key": "AN|Scuba Neil Island",
+     "line": "Learn to dive among the coral reefs of the Andaman Sea.",
+     "season": "Oct–May",
+     "title": "Scuba diving, Andamans"
+    },
+    {
+     "key": "UK|Kedarkantha Trek",
+     "line": "A classic winter summit trek through snow-laden pine forest.",
+     "season": "Dec–Apr"
+    },
+    {
+     "key": "HP|Solang Valley",
+     "line": "Skiing in winter, paragliding and zorbing in summer — just above Manali.",
+     "season": "Dec–Feb · May–Jun"
+    },
+    {
+     "key": "SK|Goecha La",
+     "line": "Trek to a pass face-to-face with Kangchenjunga, the world's third-highest peak.",
+     "season": "Apr–May · Sep–Nov"
+    }
+   ]
+  },
+  {
+   "id": "festivals",
+   "cat": "festivals",
+   "title": "Must-do Festivals",
+   "kicker": "Time your trip to India's greatest celebrations",
+   "slides": [
+    {
+     "key": "NL|Hornbill Festival",
+     "line": "Nagaland's tribes gather at Kisama for the \"festival of festivals\".",
+     "season": "Dec 1–10"
+    },
+    {
+     "key": "RJ|Pushkar Camel Fair",
+     "line": "Camel trading, folk music and fairground on the desert's edge around Kartik Purnima.",
+     "season": "Oct–Nov"
+    },
+    {
+     "key": "UP|Holi in Barsana",
+     "line": "Lathmar Holi: in Radha's village, women playfully drive men off with sticks.",
+     "season": "Feb–Mar",
+     "title": "Lathmar Holi, Barsana",
+     "wiki": "Lathmar_Holi"
+    },
+    {
+     "key": "WB|Durga Puja",
+     "line": "Kolkata turns into an open-air gallery of art-filled pandals — UNESCO-listed heritage.",
+     "season": "Sep–Oct",
+     "title": "Durga Puja, Kolkata"
+    },
+    {
+     "key": "KL|Thrissur Pooram",
+     "line": "Caparisoned elephants, a duel of bright parasols and thundering percussion.",
+     "season": "Apr–May"
+    },
+    {
+     "key": "OD|Rath Yatra",
+     "line": "Giant chariots of Lord Jagannath hauled by crowds down Puri's Grand Road.",
+     "season": "Jun–Jul",
+     "title": "Rath Yatra, Puri"
+    },
+    {
+     "key": "KL|Nehru Trophy Boat Race",
+     "line": "Snake boats with around a hundred rowers each race on Punnamada Lake.",
+     "season": "Aug (2nd Sat)"
+    },
+    {
+     "key": "GJ|Rann Utsav",
+     "line": "A tent city on the white salt desert of Kutch — magical under a full moon.",
+     "season": "Nov–Feb"
+    }
+   ]
+  },
+  {
+   "id": "fauna",
+   "cat": "fauna",
+   "title": "Must-do Wildlife",
+   "kicker": "Tigers, rhinos, lions and a sky full of birds",
+   "slides": [
+    {
+     "key": "RJ|Ranthambore NP",
+     "line": "Jeep safaris in search of tigers among ruined chhatris and lakes.",
+     "season": "Oct–Jun",
+     "title": "Tigers at Ranthambore"
+    },
+    {
+     "key": "AS|Kaziranga NP",
+     "line": "Elephant-grass plains holding most of the world's one-horned rhinos.",
+     "season": "Nov–Apr",
+     "title": "Rhinos at Kaziranga"
+    },
+    {
+     "key": "GJ|Gir NP",
+     "line": "The last wild home of the Asiatic lion.",
+     "season": "Dec–Mar",
+     "title": "Asiatic lions of Gir"
+    },
+    {
+     "key": "WB|Sundarbans",
+     "line": "Boat safaris through the mangrove delta of the Bengal tiger.",
+     "season": "Nov–Feb"
+    },
+    {
+     "key": "UK|Jim Corbett NP",
+     "line": "India's oldest national park, founded in 1936 — tigers, elephants and the Ramganga.",
+     "season": "Nov–Jun"
+    },
+    {
+     "key": "MP|Kanha NP",
+     "line": "Sal forest and meadows where the hard-ground barasingha was saved from extinction.",
+     "season": "Oct–Jun"
+    },
+    {
+     "key": "RJ|Keoladeo Ghana NP",
+     "line": "Cycle through Bharatpur's wetland, winter home to thousands of migratory birds.",
+     "season": "Oct–Feb",
+     "title": "Birding at Bharatpur"
+    }
+   ]
+  },
+  {
+   "id": "religious",
+   "cat": "religious",
+   "title": "Must-do Spiritual",
+   "kicker": "Aartis, langars and mountain monasteries",
+   "slides": [
+    {
+     "key": "UP|Varanasi",
+     "line": "Watch the Ganga aarti at Dashashwamedh Ghat, then a dawn boat ride.",
+     "season": "Oct–Mar",
+     "title": "Ganga aarti, Varanasi"
+    },
+    {
+     "key": "PB|Golden Temple",
+     "line": "Join the langar — volunteers serve free meals round the clock.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "BR|Bodh Gaya",
+     "line": "Sit beneath the Bodhi Tree where the Buddha attained enlightenment.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "UK|Kedarnath",
+     "line": "Trek to one of the twelve Jyotirlingas, high in the Garhwal Himalaya.",
+     "season": "May–Jun · Sep–Oct"
+    },
+    {
+     "key": "OD|Puri Jagannath",
+     "line": "One of the Char Dham — home of the Rath Yatra and its famous temple kitchen.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "AR|Tawang Monastery",
+     "line": "India's largest monastery, at about 3,000 m above the Tawang valley.",
+     "season": "Mar–Oct"
+    },
+    {
+     "key": "RJ|Ajmer Sharif Dargah",
+     "line": "Qawwali at the shrine of the Sufi saint Moinuddin Chishti.",
+     "season": "Oct–Mar"
+    }
+   ]
+  },
+  {
+   "id": "history",
+   "cat": "history",
+   "title": "Must-do Heritage",
+   "kicker": "Forts, stepwells and temples carved from rock",
+   "slides": [
+    {
+     "key": "MH|Ellora Caves",
+     "line": "The Kailasa temple — carved top-down out of a single basalt cliff.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "RJ|Amber Fort",
+     "line": "Mirror-work halls in a hilltop fort above Maota Lake.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "MP|Khajuraho",
+     "line": "Temples covered in some of India's finest medieval sculpture.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "GJ|Rani ki Vav",
+     "line": "An 11th-century stepwell with hundreds of sculptures — pictured on the ₹100 note.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "TN|Brihadisvara Temple",
+     "line": "Rajaraja Chola's great granite temple, completed in 1010 CE.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "DL|Qutub Minar",
+     "line": "A 72.5 m tower of fluted sandstone, begun around 1199.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "KA|Hampi",
+     "line": "Wander the bazaars, temples and royal enclosures of the Vijayanagara empire.",
+     "season": "Oct–Feb"
+    }
+   ]
+  },
+  {
+   "id": "scenic",
+   "cat": "scenic",
+   "title": "Must-do Scenic",
+   "kicker": "Lakes, dunes, valleys and waterfalls",
+   "slides": [
+    {
+     "key": "JK|Dal Lake",
+     "line": "Shikara rides past houseboats and floating gardens in Srinagar.",
+     "season": "Apr–Oct"
+    },
+    {
+     "key": "ML|Dawki River",
+     "line": "Boats seem to float in mid-air on the glass-clear Umngot.",
+     "season": "Nov–Apr"
+    },
+    {
+     "key": "LA|Nubra Valley",
+     "line": "Sand dunes and double-humped camels beneath the Karakoram.",
+     "season": "Jun–Sep"
+    },
+    {
+     "key": "KL|Munnar",
+     "line": "Tea gardens rolling over the hills of the Western Ghats.",
+     "season": "Sep–Mar"
+    },
+    {
+     "key": "SK|Gurudongmar Lake",
+     "line": "One of the highest lakes in the world, held sacred by Buddhists and Sikhs.",
+     "season": "Apr–Jun · Oct–Nov"
+    },
+    {
+     "key": "ML|Nohkalikai Falls",
+     "line": "India's tallest plunge waterfall, near Cherrapunji.",
+     "season": "Jun–Oct"
+    },
+    {
+     "key": "RJ|Sam Sand Dunes",
+     "line": "Camel rides and a Thar Desert sunset outside Jaisalmer.",
+     "season": "Oct–Mar"
+    }
+   ]
+  },
+  {
+   "id": "cuisine",
+   "cat": "cuisine",
+   "title": "Must-do Cuisine",
+   "kicker": "Eat your way across India",
+   "slides": [
+    {
+     "key": "DL|Paranthe Wali Gali",
+     "line": "Stuffed, deep-fried parathas in a Chandni Chowk lane — then chaat and jalebi.",
+     "season": "Oct–Mar",
+     "title": "Street food in Chandni Chowk"
+    },
+    {
+     "key": "TS|Hyderabadi Biryani",
+     "line": "Dum-cooked biryani in the city of the Nizams.",
+     "season": "Oct–Feb"
+    },
+    {
+     "key": "MH|Mumbai Street Food",
+     "line": "Vada pav, pav bhaji and bhel puri by the sea.",
+     "season": "Nov–Feb",
+     "wiki": "Vada_pav"
+    },
+    {
+     "key": "UP|Lucknow Awadhi",
+     "line": "Melt-in-the-mouth galouti kebabs and slow-cooked Awadhi dum.",
+     "season": "Oct–Mar",
+     "wiki": "Galouti_kebab"
+    },
+    {
+     "key": "PB|Amritsari Food",
+     "line": "Amritsari kulcha and tall glasses of lassi.",
+     "season": "Oct–Mar",
+     "wiki": "Kulcha"
+    },
+    {
+     "key": "JK|Kashmiri Wazwan",
+     "line": "A ceremonial multi-course feast, from rogan josh to gushtaba.",
+     "season": "Apr–Oct"
+    },
+    {
+     "key": "TN|Chettinad",
+     "line": "Fiery, spice-rich cooking from the mansion towns around Karaikudi.",
+     "season": "Oct–Mar"
+    }
+   ]
+  },
+  {
+   "id": "arts",
+   "cat": "arts",
+   "title": "Must-do Arts & Crafts",
+   "kicker": "Meet the makers behind India's crafts",
+   "slides": [
+    {
+     "key": "RJ|Jaipur Block Printing",
+     "line": "See cloth hand-printed with carved wooden blocks around Jaipur.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "OD|Raghurajpur",
+     "line": "A heritage crafts village where homes double as pattachitra studios.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "BR|Madhubani Painting",
+     "line": "Mithila painting in bold lines and bright natural colours.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "TN|Kanchipuram Silk",
+     "line": "Temple-town silk saris with heavy zari borders.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "UP|Banarasi Silk",
+     "line": "Brocade saris woven on handlooms in Varanasi.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "DL|Dilli Haat",
+     "line": "Crafts and food from every state in one open-air market.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "MH|Warli Art",
+     "line": "Tribal paintings of circles, triangles and lines that tell village stories.",
+     "season": "Oct–Mar"
+    }
+   ]
+  }
+ ]
+}
