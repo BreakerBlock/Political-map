@@ -1,0 +1,72 @@
+{
+ "state": "Haryana",
+ "code": "HR",
+ "places": [
+  {
+   "name": "Brahma Sarovar, Kurukshetra",
+   "cat": "religious",
+   "lat": 29.967,
+   "lng": 76.833,
+   "state": "Haryana",
+   "stateCode": "HR",
+   "desc": "Sacred tank of Kurukshetra, thronged at Gita Jayanti and solar eclipses",
+   "wiki": "Brahma_Sarovar",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Sultanpur National Park",
+   "cat": "fauna",
+   "lat": 28.462,
+   "lng": 76.89,
+   "state": "Haryana",
+   "stateCode": "HR",
+   "desc": "Wetland bird park near Gurugram \u2014 100+ migratory species spend the winter",
+   "wiki": "Sultanpur_National_Park",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Pinjore Gardens",
+   "cat": "history",
+   "lat": 30.794,
+   "lng": 76.914,
+   "state": "Haryana",
+   "stateCode": "HR",
+   "desc": "17th-century Mughal-style terraced garden below the Shivaliks",
+   "wiki": "Yadavindra_Gardens",
+   "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Surajkund Crafts Mela",
+   "cat": "arts",
+   "lat": 28.484,
+   "lng": 77.284,
+   "state": "Haryana",
+   "stateCode": "HR",
+   "desc": "Craft fair held since 1987 \u2014 handlooms, handicrafts, food and music",
+   "wiki": "Surajkund",
+   "best": "Feb 1\u201315"
+  },
+  {
+   "name": "Murthal Dhabas",
+   "cat": "cuisine",
+   "lat": 29.033,
+   "lng": 77.083,
+   "state": "Haryana",
+   "stateCode": "HR",
+   "desc": "Highway dhabas famed for their butter-laden paranthas",
+   "wiki": "Murthal",
+   "best": "All year"
+  },
+  {
+   "name": "Morni Hills",
+   "cat": "scenic",
+   "lat": 30.7,
+   "lng": 77.08,
+   "state": "Haryana",
+   "stateCode": "HR",
+   "desc": "Forested hills with distant Himalayan views and the Tikkar Taal lakes",
+   "wiki": "Morni",
+   "best": "Oct\u2013Mar"
+  }
+ ]
+}

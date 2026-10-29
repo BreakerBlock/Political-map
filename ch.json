@@ -33,6 +33,17 @@
    "desc": "Le Corbusier's UNESCO-listed government buildings and the Open Hand Monument",
    "wiki": "Chandigarh_Capitol_Complex",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Rose Garden, Chandigarh",
+   "cat": "scenic",
+   "lat": 30.746,
+   "lng": 76.782,
+   "state": "Chandigarh",
+   "stateCode": "CH",
+   "desc": "30 acres and ~1,600 rose varieties; Rose Festival in Feb\u2013Mar",
+   "wiki": "Zakir_Husain_Rose_Garden",
+   "best": "Feb\u2013Mar"
   }
  ]
 }

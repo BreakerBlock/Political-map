@@ -43,6 +43,28 @@
    "desc": "Forest sanctuary known for spectacled langurs and ~150 bird species",
    "wiki": "Sepahijala_Wildlife_Sanctuary",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Tripura Sundari Temple",
+   "cat": "religious",
+   "lat": 23.51,
+   "lng": 91.51,
+   "state": "Tripura",
+   "stateCode": "TR",
+   "desc": "Shakti Peetha (1501) on a tortoise-shaped hillock in Udaipur",
+   "wiki": "Tripura_Sundari_Temple",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Jampui Hills",
+   "cat": "scenic",
+   "lat": 23.966,
+   "lng": 92.277,
+   "state": "Tripura",
+   "stateCode": "TR",
+   "desc": "Ridge of Mizo villages and orange orchards",
+   "wiki": "Jampui_Hills",
+   "best": "Oct\u2013Dec"
   }
  ]
 }

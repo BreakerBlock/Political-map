@@ -74,6 +74,39 @@
    "desc": "Kakatiya temple of floating bricks and dancers in stone \u2014 UNESCO site since 2021",
    "wiki": "Ramappa_Temple",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Yadagirigutta Temple",
+   "cat": "religious",
+   "lat": 17.588,
+   "lng": 78.946,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Hilltop Narasimha temple, grandly rebuilt in stone in 2016\u201322",
+   "wiki": "Sri_Lakshmi_Narasimha_Swamy_Temple,_Yadagirigutta",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Bhadrachalam Temple",
+   "cat": "religious",
+   "lat": 17.669,
+   "lng": 80.883,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Rama temple on the Godavari; Sita\u2013Rama wedding on the eve of Rama Navami",
+   "wiki": "Sita_Ramachandraswamy_Temple,_Bhadrachalam",
+   "best": "Mar\u2013Apr (Rama Navami)"
+  },
+  {
+   "name": "Kuntala Waterfall",
+   "cat": "scenic",
+   "lat": 19.285,
+   "lng": 78.503,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Telangana's tallest waterfall, on the Kadam river in Gond forest",
+   "wiki": "Kuntala_Waterfall",
+   "best": "Jul\u2013Oct"
   }
  ]
 }

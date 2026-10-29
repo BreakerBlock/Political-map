@@ -148,6 +148,17 @@
    "desc": "Celebrating Ganga's descent to earth",
    "wiki": "Ganga_Dussehra",
    "best": "May\u2013Jun"
+  },
+  {
+   "name": "Har Ki Dun Trek",
+   "cat": "adventure",
+   "lat": 31.15,
+   "lng": 78.43,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Hanging valley of meadows ringed by snow peaks, trekked from Sankri",
+   "wiki": "Har_Ki_Doon",
+   "best": "Apr\u2013Jun, Sep"
   }
  ]
 }

@@ -145,6 +145,50 @@
    "stateCode": "GJ",
    "desc": "UNESCO pre-Mughal Islamic city",
    "wiki": "Champaner-Pavagadh"
+  },
+  {
+   "name": "Saputara",
+   "cat": "scenic",
+   "lat": 20.58,
+   "lng": 73.747,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Gujarat's hill town in the Western Ghats, at about 900 m",
+   "wiki": "Saputara",
+   "best": "Jul\u2013Mar"
+  },
+  {
+   "name": "Girnar",
+   "cat": "religious",
+   "lat": 21.495,
+   "lng": 70.506,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Sacred Jain and Hindu hill \u2014 about 10,000 steps to Neminath peak",
+   "wiki": "Girnar",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Modhera Sun Temple",
+   "cat": "history",
+   "lat": 23.584,
+   "lng": 72.133,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "11th-century Chaulukya temple to Surya, the sun god",
+   "wiki": "Sun_Temple,_Modhera",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Velavadar Blackbuck NP",
+   "cat": "fauna",
+   "lat": 22.033,
+   "lng": 72.05,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Grasslands on the Gulf of Khambhat, home to blackbuck herds",
+   "wiki": "Blackbuck_National_Park,_Velavadar",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

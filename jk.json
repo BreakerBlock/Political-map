@@ -106,6 +106,17 @@
    "desc": "Fine cashmere shawls, hand-spun and hand-woven in old Srinagar",
    "wiki": "Pashmina_(material)",
    "best": "Apr\u2013Oct"
+  },
+  {
+   "name": "Tarsar Lake Trek",
+   "cat": "adventure",
+   "lat": 34.141,
+   "lng": 75.148,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Almond-shaped alpine lake at 3,795 m, two days' trek from Aru",
+   "wiki": "Tarsar_Lake",
+   "best": "Jul\u2013Sep"
   }
  ]
 }

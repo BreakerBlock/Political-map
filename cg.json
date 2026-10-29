@@ -44,6 +44,28 @@
    "desc": "Tribal Dussehra of Jagdalpur honouring goddess Danteshwari, with a giant wooden chariot",
    "wiki": "Bastar_Dussehra",
    "best": "Sep\u2013Oct"
+  },
+  {
+   "name": "Kanger Valley NP",
+   "cat": "fauna",
+   "lat": 18.87,
+   "lng": 81.94,
+   "state": "Chhattisgarh",
+   "stateCode": "CG",
+   "desc": "Bastar forest with Kotumsar caves and Tirathgarh falls",
+   "wiki": "Kanger_Valley_National_Park",
+   "best": "Nov\u2013Jun"
+  },
+  {
+   "name": "Danteshwari Temple",
+   "cat": "religious",
+   "lat": 18.897,
+   "lng": 81.345,
+   "state": "Chhattisgarh",
+   "stateCode": "CG",
+   "desc": "14th-century Shakti Peetha at the heart of Bastar Dussehra",
+   "wiki": "Danteshwari_Temple",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

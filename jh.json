@@ -54,6 +54,17 @@
    "desc": "Holiest Jain hill (Parasnath), where 20 of 24 Tirthankaras attained moksha",
    "wiki": "Shikharji",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Dassam Falls",
+   "cat": "scenic",
+   "lat": 23.143,
+   "lng": 85.466,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "The Kanchi river drops 44 m off the edge of the Ranchi plateau",
+   "wiki": "Dassam_Falls",
+   "best": "Jul\u2013Oct"
   }
  ]
 }

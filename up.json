@@ -228,6 +228,28 @@
    "stateCode": "UP",
    "desc": "Translucent ash-gourd sweet",
    "wiki": "Petha"
+  },
+  {
+   "name": "Jhansi Fort",
+   "cat": "history",
+   "lat": 25.458,
+   "lng": 78.575,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Rani Lakshmibai's stronghold in the revolt of 1857",
+   "wiki": "Jhansi_Fort",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Ram Mandir, Ayodhya",
+   "cat": "religious",
+   "lat": 26.796,
+   "lng": 82.194,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Nagara-style temple to Rama, consecrated in January 2024",
+   "wiki": "Ram_Mandir",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

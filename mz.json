@@ -44,6 +44,28 @@
    "desc": "Mizo spring festival of bamboo dances (Cheraw) in Aizawl, held in March",
    "wiki": "Chapchar_Kut",
    "best": "Mar"
+  },
+  {
+   "name": "Murlen National Park",
+   "cat": "fauna",
+   "lat": 23.617,
+   "lng": 93.3,
+   "state": "Mizoram",
+   "stateCode": "MZ",
+   "desc": "Dense hill forest by the Myanmar border \u2014 hoolock gibbons, Hume's pheasant",
+   "wiki": "Murlen_National_Park",
+   "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Solomon's Temple, Aizawl",
+   "cat": "religious",
+   "lat": 23.748,
+   "lng": 92.688,
+   "state": "Mizoram",
+   "stateCode": "MZ",
+   "desc": "One of Mizoram's largest churches, a landmark of Aizawl",
+   "wiki": "Solomon's_Temple,_Aizawl",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

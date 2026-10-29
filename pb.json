@@ -76,6 +76,17 @@
    "desc": "Patiala's royal fort with about 1,090 murals painted c. 1825\u20131850",
    "wiki": "Qila_Mubarak,_Patiala",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Takht Kesgarh Sahib",
+   "cat": "religious",
+   "lat": 31.236,
+   "lng": 76.501,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Where Guru Gobind Singh founded the Khalsa in 1699, Anandpur Sahib",
+   "wiki": "Takht_Kesgarh_Sahib",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

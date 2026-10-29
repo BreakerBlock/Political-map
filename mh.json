@@ -200,6 +200,39 @@
    "desc": "Hand-made vegetable-tanned leather sandals with a GI tag",
    "wiki": "Kolhapuri_chappal",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Kaas Plateau",
+   "cat": "scenic",
+   "lat": 17.72,
+   "lng": 73.82,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "UNESCO-listed basalt plateau that bursts into wildflower carpets after the rains",
+   "wiki": "Kaas_Plateau",
+   "best": "Aug\u2013early Oct"
+  },
+  {
+   "name": "Bhimashankar Temple",
+   "cat": "religious",
+   "lat": 19.072,
+   "lng": 73.536,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Jyotirlinga shrine to Shiva in the Sahyadri forests",
+   "wiki": "Bhimashankar_Temple",
+   "best": "Aug\u2013Feb"
+  },
+  {
+   "name": "Kolad River Rafting",
+   "cat": "adventure",
+   "lat": 18.42,
+   "lng": 73.24,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Maharashtra's white-water rafting on the dam-fed Kundalika",
+   "wiki": "Kolad",
+   "best": "Jun\u2013Sep"
   }
  ]
 }

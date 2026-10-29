@@ -116,6 +116,28 @@
    "stateCode": "LA",
    "desc": "Mini Potala \u2014 12-storey gompa",
    "wiki": "Thiksey_Monastery"
+  },
+  {
+   "name": "Tso Moriri",
+   "cat": "scenic",
+   "lat": 32.9,
+   "lng": 78.3,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Ramsar-listed lake at 4,522 m, haunt of black-necked cranes",
+   "wiki": "Tso_Moriri",
+   "best": "Jun\u2013Sep"
+  },
+  {
+   "name": "Lamayuru Monastery",
+   "cat": "religious",
+   "lat": 34.283,
+   "lng": 76.774,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Ancient gompa above a moonscape of eroded hills",
+   "wiki": "Lamayuru_Monastery",
+   "best": "May\u2013Sep"
   }
  ]
 }

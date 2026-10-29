@@ -332,6 +332,50 @@
    "desc": "Big winter livestock fair at Nagaur \u2014 cattle, camels and horses",
    "wiki": "Nagaur",
    "best": "Jan\u2013Feb"
+  },
+  {
+   "name": "Lake Pichola",
+   "cat": "scenic",
+   "lat": 24.572,
+   "lng": 73.679,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Udaipur's lake of island palaces \u2014 best from a sunset boat",
+   "wiki": "Lake_Pichola",
+   "best": "Sep\u2013Mar"
+  },
+  {
+   "name": "Chand Baori",
+   "cat": "history",
+   "lat": 27.007,
+   "lng": 76.607,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "3,500-step, 8th\u20139th-century stepwell at Abhaneri, ~30 m deep",
+   "wiki": "Chand_Baori",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Karni Mata Temple",
+   "cat": "religious",
+   "lat": 27.791,
+   "lng": 73.341,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Deshnoke's \"Temple of Rats\", where rats are revered",
+   "wiki": "Karni_Mata_Temple",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Dilwara Temples",
+   "cat": "religious",
+   "lat": 24.609,
+   "lng": 72.723,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "White-marble Jain temples (11th\u201316th c.) of exquisite carving, Mount Abu",
+   "wiki": "Dilwara_Temples",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

@@ -256,6 +256,28 @@
    "desc": "Vegetarian temple cuisine born at Sri Krishna Matha, served on a plantain leaf",
    "wiki": "Udupi_cuisine",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Shravanabelagola",
+   "cat": "religious",
+   "lat": 12.859,
+   "lng": 76.489,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "57-ft monolithic Gommateshwara; Mahamastakabhisheka every 12 years",
+   "wiki": "Shravanabelagola",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Mangalorean Cuisine",
+   "cat": "cuisine",
+   "lat": 12.87,
+   "lng": 74.84,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Coastal fish curries in coconut and curry leaf, Pathal Bakri and pork bafat",
+   "wiki": "Mangalorean_cuisine",
+   "best": "All year"
   }
  ]
 }

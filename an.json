@@ -53,6 +53,28 @@
    "desc": "Pristine coral reef diving",
    "wiki": "Neil_Island",
    "best": "Oct\u2013May"
+  },
+  {
+   "name": "Radhanagar Beach",
+   "cat": "scenic",
+   "lat": 11.982,
+   "lng": 92.964,
+   "state": "Andaman & Nicobar",
+   "stateCode": "AN",
+   "desc": "Havelock's pale-sand, Blue Flag beach with a jungle backdrop",
+   "wiki": "Radhanagar_Beach",
+   "best": "Nov\u2013Apr"
+  },
+  {
+   "name": "Mahatma Gandhi Marine NP",
+   "cat": "fauna",
+   "lat": 11.59,
+   "lng": 92.622,
+   "state": "Andaman & Nicobar",
+   "stateCode": "AN",
+   "desc": "Coral reefs and turtle-nesting islands off Wandoor (est. 1983)",
+   "wiki": "Mahatma_Gandhi_Marine_National_Park",
+   "best": "Nov\u2013Apr"
   }
  ]
 }

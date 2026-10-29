@@ -96,6 +96,17 @@
    "desc": "The 'Manchester of Assam' \u2014 looms weaving muga, pat and eri silk",
    "wiki": "Sualkuchi",
    "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Pobitora Wildlife Sanctuary",
+   "cat": "fauna",
+   "lat": 26.241,
+   "lng": 92.058,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Small grassland sanctuary with one of Assam's largest rhino populations",
+   "wiki": "Pobitora_Wildlife_Sanctuary",
+   "best": "Nov\u2013Apr"
   }
  ]
 }

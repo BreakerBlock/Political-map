@@ -22,6 +22,17 @@
    "desc": "Seafront walk past the French Quarter, Gandhi statue and old lighthouse",
    "wiki": "Promenade_Beach",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Sri Aurobindo Ashram",
+   "cat": "religious",
+   "lat": 11.937,
+   "lng": 79.834,
+   "state": "Puducherry",
+   "stateCode": "PY",
+   "desc": "Spiritual community founded in 1926 by Sri Aurobindo and The Mother",
+   "wiki": "Sri_Aurobindo_Ashram",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

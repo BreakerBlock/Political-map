@@ -141,6 +141,21 @@
      "key": "SK|Goecha La",
      "line": "Trek to a pass face-to-face with Kangchenjunga, the world's third-highest peak.",
      "season": "Apr–May · Sep–Nov"
+    },
+    {
+     "key": "UK|Har Ki Dun Trek",
+     "line": "Walk from Sankri into a hanging valley of meadows ringed by Garhwal snow peaks.",
+     "season": "Apr–Jun, Sep"
+    },
+    {
+     "key": "MH|Kolad River Rafting",
+     "line": "White water on the Kundalika, fed by morning releases from a dam upstream.",
+     "season": "Jun–Sep"
+    },
+    {
+     "key": "JK|Tarsar Lake Trek",
+     "line": "Two days from Aru to an almond-shaped alpine lake at 3,795 m.",
+     "season": "Jul–Sep"
     }
    ]
   },
@@ -240,6 +255,11 @@
      "line": "Cycle through Bharatpur's wetland, winter home to thousands of migratory birds.",
      "season": "Oct–Feb",
      "title": "Birding at Bharatpur"
+    },
+    {
+     "key": "GJ|Velavadar Blackbuck NP",
+     "line": "Blackbuck herds on open grassland by the Gulf of Khambhat.",
+     "season": "Oct–Mar"
     }
    ]
   },
@@ -284,6 +304,11 @@
      "key": "RJ|Ajmer Sharif Dargah",
      "line": "Qawwali at the shrine of the Sufi saint Moinuddin Chishti.",
      "season": "Oct–Mar"
+    },
+    {
+     "key": "RJ|Dilwara Temples",
+     "line": "Jain temples of white marble carved so finely the ceilings look like lace.",
+     "season": "Oct–Mar"
     }
    ]
   },
@@ -327,6 +352,16 @@
      "key": "KA|Hampi",
      "line": "Wander the bazaars, temples and royal enclosures of the Vijayanagara empire.",
      "season": "Oct–Feb"
+    },
+    {
+     "key": "RJ|Chand Baori",
+     "line": "Some 3,500 steps zig-zag 30 m down this 8th–9th-century stepwell at Abhaneri.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "GJ|Modhera Sun Temple",
+     "line": "An 11th-century Chaulukya temple to Surya, carved from top to bottom.",
+     "season": "Oct–Mar"
     }
    ]
   },
@@ -370,6 +405,16 @@
      "key": "RJ|Sam Sand Dunes",
      "line": "Camel rides and a Thar Desert sunset outside Jaisalmer.",
      "season": "Oct–Mar"
+    },
+    {
+     "key": "MH|Kaas Plateau",
+     "line": "A basalt plateau that turns into carpets of wildflowers after the monsoon — part of a UNESCO World Heritage Site.",
+     "season": "Aug–early Oct"
+    },
+    {
+     "key": "LA|Tso Moriri",
+     "line": "A high lake at 4,522 m on the Changthang plateau, where black-necked cranes come to breed.",
+     "season": "Jun–Sep"
     }
    ]
   },
@@ -417,6 +462,11 @@
      "key": "TN|Chettinad",
      "line": "Fiery, spice-rich cooking from the mansion towns around Karaikudi.",
      "season": "Oct–Mar"
+    },
+    {
+     "key": "HR|Murthal Dhabas",
+     "line": "Pull over on the highway north of Delhi for paranthas dripping with white butter.",
+     "season": "All year"
     }
    ]
   },
@@ -460,6 +510,11 @@
      "key": "MH|Warli Art",
      "line": "Tribal paintings of circles, triangles and lines that tell village stories.",
      "season": "Oct–Mar"
+    },
+    {
+     "key": "HR|Surajkund Crafts Mela",
+     "line": "Two weeks every February of handlooms, crafts, folk music and food from India and abroad.",
+     "season": "Feb 1–15"
     }
    ]
   }

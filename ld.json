@@ -22,6 +22,17 @@
    "desc": "Lagoon capital of Lakshadweep \u2014 snorkelling, scuba and glass-bottom boats",
    "wiki": "Kavaratti",
    "best": "Oct\u2013May"
+  },
+  {
+   "name": "Minicoy",
+   "cat": "scenic",
+   "lat": 8.272,
+   "lng": 73.056,
+   "state": "Lakshadweep",
+   "stateCode": "LD",
+   "desc": "Southernmost Lakshadweep island, with an 1885 lighthouse and Maldivian roots",
+   "wiki": "Minicoy",
+   "best": "Oct\u2013Apr"
   }
  ]
 }

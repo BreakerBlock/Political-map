@@ -189,6 +189,50 @@
    "desc": "Glossy wheat-and-ghee halwa, Tirunelveli's famous sweet",
    "wiki": "Iruttu_Kadai",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Kanyakumari & Vivekananda Rock",
+   "cat": "scenic",
+   "lat": 8.08,
+   "lng": 77.55,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "India's southern tip \u2014 sea-rock memorial (1970), sunrise and sunset",
+   "wiki": "Vivekananda_Rock_Memorial",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Hogenakkal Falls",
+   "cat": "scenic",
+   "lat": 12.118,
+   "lng": 77.774,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "The Kaveri crashes through ancient rock \u2014 ride a round coracle",
+   "wiki": "Hogenakkal_Falls",
+   "best": "Oct\u2013Feb"
+  },
+  {
+   "name": "Chidambaram Nataraja Temple",
+   "cat": "religious",
+   "lat": 11.399,
+   "lng": 79.694,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Shiva as Nataraja, lord of dance; Natyanjali festival on Maha Shivaratri",
+   "wiki": "Thillai_Nataraja_Temple,_Chidambaram",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Anamalai Tiger Reserve",
+   "cat": "fauna",
+   "lat": 10.417,
+   "lng": 77.057,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Hills of tigers, elephants, Nilgiri tahr and lion-tailed macaques",
+   "wiki": "Anamalai_Tiger_Reserve",
+   "best": "Nov\u2013May"
   }
  ]
 }
