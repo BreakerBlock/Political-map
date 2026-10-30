@@ -357,6 +357,7 @@ body.tl-dragging .tl-day{opacity:.25;transition:opacity .15s}
 .st-tabs::-webkit-scrollbar{display:none}
 .st-tab{flex-shrink:0;display:flex;align-items:center;gap:6px;padding:5px 12px 5px 6px;border-radius:18px;border:1px solid rgba(255,255,255,.25);background:rgba(20,12,6,.3);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;font:600 .72rem 'DM Sans',sans-serif;cursor:pointer;transition:background .15s,border-color .15s}
 .st-tab span{width:20px;height:20px;border-radius:50%;background:var(--c);display:flex;align-items:center;justify-content:center}
+.st-tab span{color:#fff}
 .st-tab span svg{width:12px;height:12px}
 .st-tab.on{background:#fff;color:#2C1810;border-color:#fff}
 .st-nav{position:absolute;top:50%;z-index:5;margin-top:-28px;width:56px;height:56px}
@@ -388,6 +389,21 @@ body.tl-dragging .tl-day{opacity:.25;transition:opacity .15s}
 .st-credit{position:absolute;z-index:4;right:16px;bottom:10px;font-size:.6rem;opacity:.55}
 .st-hint{position:absolute;z-index:6;left:50%;bottom:50%;transform:translateX(-50%);padding:9px 16px;border-radius:20px;background:rgba(20,12,6,.6);backdrop-filter:blur(8px);font-size:.78rem;font-weight:600;pointer-events:none;opacity:0;transition:opacity .4s}
 .st-hint.on{opacity:1}
+/* Seasonal & state decks */
+.st-ttl{display:flex;align-items:center;gap:8px;min-width:0}
+.st-ttl b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st-mon{display:flex;gap:4px;flex-shrink:0}
+.st-mbtn{width:26px;height:26px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(20,12,6,.35);color:#fff;font:700 1rem/1 'DM Sans',sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 2px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.st-mbtn:hover{background:rgba(255,255,255,.22)}
+.st-mon[hidden]{display:none}
+.st-why{display:inline-flex;align-items:center;gap:6px;margin-left:8px;padding:4px 10px;border-radius:20px;background:linear-gradient(120deg,#FF9933,#C73E6B);font-size:.64rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;vertical-align:middle}
+.st-why svg{width:12px;height:12px}
+.state-play{flex-shrink:0;display:flex;align-items:center;gap:5px;padding:6px 11px 6px 9px;border-radius:16px;border:none;background:linear-gradient(120deg,#FF9933,#C73E6B);color:#fff;font:700 .72rem 'DM Sans',sans-serif;cursor:pointer;box-shadow:0 2px 8px rgba(199,62,107,.3);transition:transform .15s}
+.state-play:hover{transform:scale(1.05)}
+.state-play svg{width:11px;height:11px}
+.state-play[hidden]{display:none}
+.md-chip.md-season{background:linear-gradient(135deg,#FF9933,#C73E6B);--c:#E2622B;color:#fff}
+.md-chip.md-season svg{width:14px;height:14px}
 /* First-visit teaser */
 .teaser{position:absolute;z-index:850;left:50%;bottom:34px;transform:translate(-50%,20px);opacity:0;transition:opacity .45s ease,transform .55s cubic-bezier(.2,.8,.2,1);display:flex;align-items:center;gap:12px;padding:8px 8px 8px 8px;border-radius:16px;background:rgba(255,253,248,.97);box-shadow:0 14px 36px rgba(44,24,16,.3);border:1px solid var(--border-light);cursor:pointer;width:max-content;max-width:calc(100% - 28px)}
 .teaser.on{opacity:1;transform:translate(-50%,0)}
@@ -416,6 +432,10 @@ body.tl-dragging .tl-day{opacity:.25;transition:opacity .15s}
   .teaser{bottom:44px;gap:10px}
   .tz-stack i{width:36px;height:48px}
   .md-chip{margin:0 1px}
+  .state-play{width:34px;height:34px;padding:0;border-radius:50%;justify-content:center}
+  .state-play span{display:none}
+  .state-play svg{width:13px;height:13px;margin-left:2px}
+  .st-why{margin-left:4px}
 }
 @media(prefers-reduced-motion:reduce){.st-bg img.ok{animation:none}.st-card>*{transition:opacity .2s}.btn-hl::after{animation:none}}
 button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
@@ -526,6 +546,7 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
     <div class="state-filter">
       <label for="stateSelect">State</label>
       <select id="stateSelect" onchange="onStateSelect(this.value)" aria-label="State"><option value="">All India</option></select>
+      <button class="state-play" id="stateStoryBtn" hidden onclick="openStateStory(selectedState)" aria-label="Play this state's stories" title="Play this state as swipe stories"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 001.5.86l12.5-7.5a1 1 0 000-1.72L8.5 3.64A1 1 0 007 4.5z"/></svg><span>Stories</span></button>
     </div>
     </div>
     <div class="search-wrap" id="searchWrap">
@@ -556,7 +577,7 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
   <div class="st-top">
     <div class="st-bars" id="stBars"></div>
     <div class="st-head">
-      <div class="st-deck"><small id="stKicker"></small><b id="stTitle"></b></div>
+      <div class="st-deck"><small id="stKicker"></small><div class="st-ttl"><b id="stTitle"></b><span class="st-mon" id="stMon" hidden><button class="st-mbtn" onclick="event.stopPropagation();shiftSeason(-1)" aria-label="Previous month">‹</button><button class="st-mbtn" onclick="event.stopPropagation();shiftSeason(1)" aria-label="Next month">›</button></span></div></div>
       <span class="st-count" id="stCount"></span>
       <button class="st-ibtn" id="stPause" onclick="setStoryPaused(!story.paused)" aria-label="Pause"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></svg></button>
       <button class="st-ibtn" onclick="closeStory()" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
@@ -796,7 +817,7 @@ function populateStateSelect(){
 }
 
 async function onStateSelect(sc){
-  selectedState=sc;
+  selectedState=sc;syncStateStoryBtn();
   if(sc){
     await loadStateData(sc);
     const s=statesIndex[sc];
@@ -1366,6 +1387,100 @@ async function getBigImage(wiki){
 }
 async function slideImage(s,p){return (s.wiki&&await getBigImage(s.wiki))||(p&&p.wiki&&await getBigImage(p.wiki))||null}
 const storyPlace=s=>allPlaces.find(p=>placeKey(p)===s.key);
+/* ── Generated decks: "Best in <month>" (from each place's `best`) and per-state stories ── */
+const MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+const MON3=MONTHS.map(m=>m.slice(0,3).toLowerCase());
+// "Oct–Mar" → {10,11,12,1,2,3}; "Dec–Feb (snow), May–Jun" → both ranges; "Feb (20–26)" → {2}; "All year" → all
+function bestMonths(b){
+  const out=new Set();if(!b)return out;
+  if(/all\s*year/i.test(b)){for(let i=0;i<12;i++)out.add(i);return out}
+  for(const seg of String(b).split(/[,;]/)){
+    const ms=[...seg.toLowerCase().matchAll(/\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*/g)].map(m=>MON3.indexOf(m[1]));
+    if(!ms.length)continue;
+    if(ms.length===1){out.add(ms[0]);continue}
+    const a=ms[0],z=ms[ms.length-1];for(let i=a;;i=(i+1)%12){out.add(i);if(i===z)break}
+  }
+  return out;
+}
+const curatedLine=key=>{for(const d of storyDecks){if(d.gen)continue;const s=d.slides.find(x=>x.key===key);if(s)return s}return null};
+const hlKeys=()=>new Set(highlightPlaces.map(placeKey));
+// Every place in the repo, without putting them all on the map (state files are fetched once and cached)
+const peekCache={};
+function peekState(sc){
+  if(loadedStates[sc])return Promise.resolve(loadedStates[sc]);
+  if(!peekCache[sc])peekCache[sc]=fetch(DATA_BASE+sc.toLowerCase()+'.json?v='+Date.now()).then(r=>r.ok?r.json():{places:[]}).then(d=>d.places||[]).catch(()=>[]);
+  return peekCache[sc];
+}
+async function everyPlace(){return (await Promise.all(Object.keys(statesIndex).map(peekState))).flat()}
+// Pick n slides: best score first, at most `perState` per state and `perCat` per category, then
+// deal them out so two neighbours rarely share a category.
+function pickVaried(cands,n,perState,perCat){
+  const byS={},byC={},picked=[];
+  for(const c of cands){
+    const p=c.p;if(picked.length>=n)break;
+    if((byS[p.stateCode]||0)>=perState||(byC[p.cat]||0)>=perCat)continue;
+    byS[p.stateCode]=(byS[p.stateCode]||0)+1;byC[p.cat]=(byC[p.cat]||0)+1;picked.push(c);
+  }
+  const out=[];let pool=picked.slice();
+  while(pool.length){const last=out.length?out[out.length-1].p.cat:'';const i=pool.findIndex(c=>c.p.cat!==last);out.push(pool.splice(i<0?0:i,1)[0])}
+  return out;
+}
+function defaultSeasonMonth(){const d=new Date();return d.getDate()>20?(d.getMonth()+1)%12:d.getMonth()} // late in the month, plan for the next one
+async function buildSeasonDeck(d){
+  const m=d.month,hl=hlKeys();
+  const all=await everyPlace();
+  const cands=[];
+  for(const p of all){
+    const ms=bestMonths(p.best);if(!ms.has(m)||ms.size>9)continue;
+    const key=placeKey(p),cur=curatedLine(key);
+    // Narrow windows first (a festival that happens this month beats "Oct–Mar"), then curated and highlighted places
+    let sc=(12-ms.size)*1.2+(cur?4:0)+(hl.has(key)?2.5:0)+(p.wiki?1:-6)+(ms.size<=2&&p.cat==='festivals'?3:0);
+    cands.push({p,key,cur,sc});
+  }
+  cands.sort((a,b)=>b.sc-a.sc||a.p.name.localeCompare(b.p.name));
+  d.slides=pickVaried(cands,16,2,4).map(c=>({key:c.key,line:(c.cur&&c.cur.line)||c.p.desc,season:c.p.best,why:(n=>n===1?'Only in '+MONTHS[m].slice(0,3):n===2?'Short season':'')(bestMonths(c.p.best).size)}));
+  d.title='Best in '+MONTHS[m];
+  d.kicker=d.slides.length?`Where to go in ${MONTHS[m]} · ${d.slides.length} picks`:'Nothing listed for this month yet';
+  d.id='season';
+}
+async function buildStateDeck(d){
+  const sc=d.state,hl=hlKeys();
+  const places=await loadStateData(sc);render();
+  const cands=places.map(p=>{const key=placeKey(p),cur=curatedLine(key);return {p,key,cur,sc:(cur?6:0)+(hl.has(key)?3:0)+(p.wiki?2:-8)+(p.best?.5:0)}});
+  cands.sort((a,b)=>b.sc-a.sc||a.p.name.localeCompare(b.p.name));
+  d.slides=pickVaried(cands,12,99,4).map(c=>({key:c.key,line:(c.cur&&c.cur.line)||c.p.desc,season:(c.cur&&c.cur.season)||c.p.best}));
+  const name=(statesIndex[sc]||{}).name||sc;
+  d.title=name;d.kicker=`Stories from ${name} · ${d.slides.length} places`;
+}
+async function prepDeck(d){
+  if(!d||!d.gen||d.ready)return;
+  if(!d._p)d._p=(d.gen==='season'?buildSeasonDeck(d):buildStateDeck(d)).then(()=>{d.ready=true;d._p=null});
+  await d._p;
+}
+function seasonDeck(){return storyDecks.find(d=>d.gen==='season')}
+async function shiftSeason(k){
+  const d=seasonDeck();if(!d)return;
+  d.month=(d.month+k+12)%12;d.ready=false;
+  await prepDeck(d);
+  gotoStory(storyDecks.indexOf(d),0,k);
+}
+function stateDeckFor(sc){
+  let d=storyDecks.find(x=>x.gen==='state'&&x.state===sc);
+  if(!d){
+    // One state deck at a time, placed right after Highlights of India / Best in <month>
+    storyDecks=storyDecks.filter(x=>x.gen!=='state');
+    d={id:'state-'+sc.toLowerCase(),gen:'state',state:sc,title:(statesIndex[sc]||{}).name||sc,kicker:'',slides:[]};
+    storyDecks.splice(Math.min(2,storyDecks.length),0,d);
+  }
+  return d;
+}
+function openStateStory(sc){if(!sc||!statesIndex[sc])return;openStory(stateDeckFor(sc).id)}
+function syncStateStoryBtn(){
+  const b=document.getElementById('stateStoryBtn');if(!b)return;
+  b.hidden=!(selectedState&&storyDecks.length);
+  if(!b.hidden){const n=(statesIndex[selectedState]||{}).name||'';b.title=`Play ${n} as swipe stories`;b.setAttribute('aria-label',`Play ${n} stories`)}
+}
+
 async function ensureDeckPlaces(d){
   const need=[...new Set(d.slides.filter(s=>!storyPlace(s)).map(s=>s.key.split('|')[0]))].filter(sc=>statesIndex[sc]);
   if(need.length){await Promise.all(need.map(loadStateData));render()}
@@ -1373,13 +1488,22 @@ async function ensureDeckPlaces(d){
 async function loadStories(){
   try{const r=await fetch(DATA_BASE+'slides.json?v='+Date.now());if(!r.ok)throw 0;storyDecks=(await r.json()).decks||[]}catch(e){storyDecks=[]}
   if(!storyDecks.length)return;
+  storyDecks.splice(1,0,{id:'season',gen:'season',month:defaultSeasonMonth(),title:'Best in '+MONTHS[defaultSeasonMonth()],kicker:'',slides:[]});
   document.getElementById('btnHl').hidden=false;
+  syncStateStoryBtn();
   // "Must-do" strip under the category grid: one round chip per category that has a deck
   const md=document.getElementById('mustdo');
-  md.innerHTML=`<span class="mustdo-lbl">${SVG_PLAY}Must-do</span>`+storyDecks.filter(d=>d.cat&&CATS[d.cat]).map(d=>`<button class="md-chip" style="--c:${CATS[d.cat].color}" title="${esc(d.title)}" aria-label="${esc(d.title)}" onclick="openStory('${d.id}')">${ICONS[d.cat]}</button>`).join('');
+  md.innerHTML=`<span class="mustdo-lbl">${SVG_PLAY}Must-do</span>`
+    +`<button class="md-chip md-season" title="Best in ${MONTHS[seasonDeck().month]}" aria-label="Best in ${MONTHS[seasonDeck().month]}" onclick="openStory('season')">${SVG_CAL}</button>`
+    +storyDecks.filter(d=>d.cat&&CATS[d.cat]).map(d=>`<button class="md-chip" style="--c:${CATS[d.cat].color}" title="${esc(d.title)}" aria-label="${esc(d.title)}" onclick="openStory('${d.id}')">${ICONS[d.cat]}</button>`).join('');
   md.hidden=false;
   const m=location.hash.match(/^#story=([\w-]+)/);
-  if(m&&storyDecks.some(d=>d.id===m[1])){openStory(m[1]);return}
+  if(m){
+    const id=m[1],sm=id.match(/^season-([a-z]{3})$/),st=id.match(/^state-([a-z]{2})$/);
+    if(sm&&MON3.includes(sm[1])){seasonDeck().month=MON3.indexOf(sm[1]);openStory('season');return}
+    if(st&&statesIndex[st[1].toUpperCase()]){openStateStory(st[1].toUpperCase());return}
+    if(storyDecks.some(d=>d.id===id)){openStory(id);return}
+  }
   let seen=false;try{seen=!!localStorage.getItem(STORY_SEEN)}catch(e){}
   if(!seen&&!location.hash)setTimeout(showTeaser,1600);
 }
@@ -1413,7 +1537,11 @@ function renderStoryChrome(){
   const d=storyDecks[story.deck];
   document.getElementById('stKicker').textContent=d.kicker||'';
   document.getElementById('stTitle').textContent=d.title;
-  document.getElementById('stTabs').innerHTML=storyDecks.map((x,i)=>{const c=CATS[x.cat]||{color:'#E2622B',label:'Highlights'};return `<button class="st-tab${i===story.deck?' on':''}" style="--c:${c.color}" onclick="event.stopPropagation();gotoStory(${i},0,1)"><span>${x.cat?ICONS[x.cat]:SVG_SPARK}</span>${x.cat?esc(c.label):'Highlights'}</button>`}).join('');
+  document.getElementById('stTabs').innerHTML=storyDecks.map((x,i)=>{
+    const c=CATS[x.cat]||{color:'#E2622B',label:'Highlights'};
+    const [ico,lbl,col]=x.gen==='season'?[SVG_CAL,'Best in '+MONTHS[x.month].slice(0,3),'#C73E6B']:x.gen==='state'?[PIN_SVG,x.title,'#5A4432']:[x.cat?ICONS[x.cat]:SVG_SPARK,x.cat?c.label:'Highlights',c.color];
+    return `<button class="st-tab${i===story.deck?' on':''}" style="--c:${col}" onclick="event.stopPropagation();gotoStory(${i},0,1)"><span>${ico}</span>${esc(lbl)}</button>`}).join('');
+  document.getElementById('stMon').hidden=d.gen!=='season';
   const on=document.querySelector('.st-tab.on');if(on)on.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});
   document.getElementById('stBars').innerHTML=d.slides.map((s,i)=>`<div class="st-bar${i<story.i?' done':i===story.i?' cur':''}" onclick="event.stopPropagation();gotoStory(${story.deck},${i},${i<story.i?-1:1})"><i></i></div>`).join('');
   document.getElementById('stCount').textContent=(story.i+1)+' / '+d.slides.length;
@@ -1425,11 +1553,13 @@ async function gotoStory(di,i,dir){
   const d=storyDecks[di];if(!d)return;
   const seq=++storySeq;
   story.deck=di;story.i=i;
+  if(d.gen&&!d.ready){await prepDeck(d);if(seq!==storySeq)return;if(i<0)i=story.i=Math.max(0,d.slides.length-1)}
+  if(!d.slides.length){return di<storyDecks.length-1?gotoStory(di+1,0,1):undefined}
   if(!d.slides.every(storyPlace))await ensureDeckPlaces(d);
   if(seq!==storySeq)return;
   const s=d.slides[i],p=storyPlace(s);if(!p){return nextStory()}
   const c=CATS[p.cat]||CATS.scenic;
-  history.replaceState(null,'',location.pathname+location.search+'#story='+d.id);
+  history.replaceState(null,'',location.pathname+location.search+'#story='+(d.gen==='season'?'season-'+MON3[d.month]:d.id));
   // Background: a new layer crossfades over the old one
   const stage=document.getElementById('stStage'),bg=document.createElement('div');
   bg.className='st-bg';bg.style.setProperty('--c',c.color);
@@ -1442,7 +1572,7 @@ async function gotoStory(di,i,dir){
   card.style.setProperty('--dir',dir<0?-1:1);
   if(card.childElementCount){card.classList.add('out');await new Promise(r=>setTimeout(r,180));if(seq!==storySeq)return;card.style.setProperty('--dir',dir<0?1:-1)}
   const season=s.season||p.best||'';
-  card.innerHTML=`<div><span class="st-chip" style="--c:${c.color}"><span>${ICONS[p.cat]||ICONS.scenic}</span>${esc(c.label)}</span></div>`
+  card.innerHTML=`<div><span class="st-chip" style="--c:${c.color}"><span>${ICONS[p.cat]||ICONS.scenic}</span>${esc(c.label)}</span>${s.why?`<span class="st-why">${SVG_CAL}${esc(s.why)}</span>`:''}</div>`
     +`<h2>${esc(s.title||p.name)}</h2>`
     +`<div class="st-line">${esc(s.line||p.desc)}</div>`
     +`<div class="st-meta"><div>${PIN_SVG}${s.title&&s.title!==p.name?esc(p.name)+', ':''}${esc(p.state)}</div>${season?`<div>${SVG_CAL}Best <b>${esc(season)}</b></div>`:''}</div>`
@@ -1460,7 +1590,7 @@ function nextStory(){
 }
 function prevStory(){
   if(story.i>0)gotoStory(story.deck,story.i-1,-1);
-  else if(story.deck>0){const pd=storyDecks[story.deck-1];gotoStory(story.deck-1,pd.slides.length-1,-1)}
+  else if(story.deck>0){const pd=storyDecks[story.deck-1];gotoStory(story.deck-1,pd.gen&&!pd.ready?-1:Math.max(0,pd.slides.length-1),-1)}
   else gotoStory(0,0,-1);
 }
 function setStoryPaused(on){
@@ -1473,7 +1603,7 @@ async function storyShowOnMap(){
   const p=curStoryPlace();if(!p)return;
   closeStory();
   if(!activeCats.has(p.cat))activeCats.add(p.cat);
-  if(selectedState&&selectedState!==p.stateCode){selectedState='';document.getElementById('stateSelect').value=''}
+  if(selectedState&&selectedState!==p.stateCode){selectedState='';document.getElementById('stateSelect').value='';syncStateStoryBtn()}
   const si=document.getElementById('searchInput');if(si.value)si.value='';
   render();
   setTimeout(()=>focusPlace(p),320);
