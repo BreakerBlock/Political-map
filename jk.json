@@ -117,6 +117,17 @@
    "desc": "Almond-shaped alpine lake at 3,795 m, two days' trek from Aru",
    "wiki": "Tarsar_Lake",
    "best": "Jul\u2013Sep"
+  },
+  {
+   "name": "Gulmarg Gondola",
+   "cat": "adventure",
+   "lat": 34.0453,
+   "lng": 74.3844,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "One of the world's highest cable cars, up to ~3,950 m for skiers",
+   "wiki": "Gulmarg_Gondola",
+   "best": "Dec\u2013Mar"
   }
  ]
 }

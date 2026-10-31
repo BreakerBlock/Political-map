@@ -1,0 +1,49 @@
+{
+ "state": "Dadra & Nagar Haveli and Daman & Diu",
+ "code": "DH",
+ "places": [
+  {
+   "name": "Diu Fortress",
+   "cat": "history",
+   "lat": 20.714,
+   "lng": 70.996,
+   "state": "Dadra & Nagar Haveli and Daman & Diu",
+   "stateCode": "DH",
+   "desc": "Portuguese sea fort begun in 1535, with a double moat and lighthouse",
+   "wiki": "Diu_Fortress",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Nagoa Beach",
+   "cat": "scenic",
+   "lat": 20.7053,
+   "lng": 70.9158,
+   "state": "Dadra & Nagar Haveli and Daman & Diu",
+   "stateCode": "DH",
+   "desc": "Horseshoe of sand at Nagoa village on Diu island",
+   "wiki": "Nago\u00e1_Beach",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "St. Paul's Church, Diu",
+   "cat": "religious",
+   "lat": 20.7135,
+   "lng": 70.9865,
+   "state": "Dadra & Nagar Haveli and Daman & Diu",
+   "stateCode": "DH",
+   "desc": "Baroque Portuguese church completed in 1610, still in use",
+   "wiki": "St._Paul's_Church,_Diu"
+  },
+  {
+   "name": "Moti Daman Fort",
+   "cat": "history",
+   "lat": 20.41,
+   "lng": 72.835,
+   "state": "Dadra & Nagar Haveli and Daman & Diu",
+   "stateCode": "DH",
+   "desc": "16th-century Portuguese walled town guarding Daman",
+   "wiki": "Daman,_India",
+   "best": "Oct\u2013Mar"
+  }
+ ]
+}

@@ -250,6 +250,17 @@
    "desc": "Nagara-style temple to Rama, consecrated in January 2024",
    "wiki": "Ram_Mandir",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Tunday Kababi, Lucknow",
+   "cat": "cuisine",
+   "lat": 26.85,
+   "lng": 80.93,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Melt-in-the-mouth galouti kebabs, served since 1905",
+   "wiki": "Tunde_ke_kabab",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

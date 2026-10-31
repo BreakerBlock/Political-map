@@ -233,6 +233,28 @@
    "desc": "Hills of tigers, elephants, Nilgiri tahr and lion-tailed macaques",
    "wiki": "Anamalai_Tiger_Reserve",
    "best": "Nov\u2013May"
+  },
+  {
+   "name": "Kolli Hills",
+   "cat": "scenic",
+   "lat": 11.3297,
+   "lng": 78.3933,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Hill station with the Agaya Gangai waterfall",
+   "wiki": "Kolli_Hills",
+   "best": "Sep\u2013Feb"
+  },
+  {
+   "name": "Palani Murugan Temple",
+   "cat": "religious",
+   "lat": 10.4388,
+   "lng": 77.5203,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Hilltop Murugan shrine; Thaipusam draws vast crowds",
+   "wiki": "Dhandayuthapani_Swamy_Temple",
+   "best": "Jan\u2013Feb (Thaipusam)"
   }
  ]
 }

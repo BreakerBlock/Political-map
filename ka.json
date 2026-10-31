@@ -278,6 +278,28 @@
    "desc": "Coastal fish curries in coconut and curry leaf, Pathal Bakri and pork bafat",
    "wiki": "Mangalorean_cuisine",
    "best": "All year"
+  },
+  {
+   "name": "Kumara Parvatha Trek",
+   "cat": "adventure",
+   "lat": 12.6667,
+   "lng": 75.6833,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "One of South India's toughest day treks (1,712 m)",
+   "wiki": "Pushpagiri_(mountain)",
+   "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Mullayanagiri",
+   "cat": "adventure",
+   "lat": 13.391,
+   "lng": 75.7214,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Karnataka's highest peak (1,925 m), a trekkers' favourite",
+   "wiki": "Mullayyanagiri",
+   "best": "Sep\u2013Feb"
   }
  ]
 }

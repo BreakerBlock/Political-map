@@ -251,6 +251,27 @@
    "desc": "Hand-made metal mirrors of polished bronze alloy (GI-tagged)",
    "wiki": "Aranmula_kannadi",
    "best": "Sep\u2013Mar"
+  },
+  {
+   "name": "Vagamon",
+   "cat": "adventure",
+   "lat": 9.6878,
+   "lng": 76.9069,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Idukki hill station for paragliding, rock climbing and hikes",
+   "wiki": "Vagamon",
+   "best": "Sep\u2013May"
+  },
+  {
+   "name": "Mittai Theruvu (SM Street)",
+   "cat": "cuisine",
+   "lat": 11.2506,
+   "lng": 75.7817,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Kozhikode's Sweetmeat Street, famed for halwa",
+   "wiki": "S._M._Street"
   }
  ]
 }

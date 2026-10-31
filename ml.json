@@ -87,6 +87,38 @@
    "desc": "Garo harvest festival for the sun god \u2014 the 100 Drums Festival near Tura",
    "wiki": "Wangala",
    "best": "Sep\u2013Dec"
+  },
+  {
+   "name": "Balpakram National Park",
+   "cat": "fauna",
+   "lat": 25.417,
+   "lng": 90.867,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "Garo Hills plateau park near the Bangladesh border",
+   "wiki": "Balpakram_National_Park",
+   "best": "Nov\u2013Mar"
+  },
+  {
+   "name": "Nokrek National Park",
+   "cat": "fauna",
+   "lat": 25.533,
+   "lng": 90.117,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "Core of the Nokrek Biosphere Reserve in the Garo Hills",
+   "wiki": "Nokrek_National_Park",
+   "best": "Nov\u2013Mar"
+  },
+  {
+   "name": "Jadoh, Jowai",
+   "cat": "cuisine",
+   "lat": 25.45,
+   "lng": 92.2,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "Khasi\u2013Jaintia pork-and-rice dishes like jadoh and doh khleh",
+   "wiki": "Jowai"
   }
  ]
 }

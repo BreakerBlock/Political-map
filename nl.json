@@ -44,6 +44,27 @@
    "desc": "Angami terraced village \u2014 India's first 'green village' after banning hunting",
    "wiki": "Khonoma",
    "best": "Oct\u2013May"
+  },
+  {
+   "name": "Longwa",
+   "cat": "history",
+   "lat": 26.6614,
+   "lng": 95.204,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "Konyak Naga village that straddles the India\u2013Myanmar border",
+   "wiki": "Lungwa"
+  },
+  {
+   "name": "Naga Cuisine, Kohima",
+   "cat": "cuisine",
+   "lat": 25.67,
+   "lng": 94.11,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "Smoked meats, bamboo shoot and fiery raja mircha",
+   "wiki": "Naga_cuisine",
+   "best": "Oct\u2013May"
   }
  ]
 }

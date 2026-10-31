@@ -74,6 +74,39 @@
    "desc": "India's largest Buddhist monastery, at about 3,000 m above the Tawang valley",
    "wiki": "Tawang_Monastery",
    "best": "Mar\u2013Oct"
+  },
+  {
+   "name": "Mechuka",
+   "cat": "scenic",
+   "lat": 28.605,
+   "lng": 94.128,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Remote valley on the Siyom river at about 1,800 m",
+   "wiki": "Mechuka",
+   "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Parshuram Kund",
+   "cat": "religious",
+   "lat": 27.8775,
+   "lng": 96.3592,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Lohit river pilgrimage; huge Makar Sankranti mela",
+   "wiki": "Parshuram_Kund",
+   "best": "Jan (Makar Sankranti)"
+  },
+  {
+   "name": "Dree Festival, Ziro",
+   "cat": "festivals",
+   "lat": 27.56,
+   "lng": 93.84,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Apatani farming festival in the Ziro valley",
+   "wiki": "Dree_Festival",
+   "best": "Jul (5\u20137)"
   }
  ]
 }

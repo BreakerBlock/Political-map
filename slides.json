@@ -156,6 +156,24 @@
      "key": "JK|Tarsar Lake Trek",
      "line": "Two days from Aru to an almond-shaped alpine lake at 3,795 m.",
      "season": "Jul–Sep"
+    },
+    {
+     "key": "JK|Gulmarg Gondola",
+     "line": "Ride one of the world's highest cable cars to powder runs near 4,000 m.",
+     "season": "Dec–Mar",
+     "title": "Skiing off the Gulmarg Gondola"
+    },
+    {
+     "key": "LA|Zanskar River Rafting",
+     "line": "Paddle the Zanskar's canyon from Chiling to its meeting with the Indus at Nimmu.",
+     "season": "Jun–Sep",
+     "title": "Rafting the Zanskar gorge"
+    },
+    {
+     "key": "KA|Kumara Parvatha Trek",
+     "line": "An 8–10 hour climb, rated one of South India's toughest and most rewarding treks.",
+     "season": "Nov–Feb",
+     "title": "Summit Kumara Parvatha"
     }
    ]
   },
@@ -208,6 +226,18 @@
      "key": "GJ|Rann Utsav",
      "line": "A tent city on the white salt desert of Kutch — magical under a full moon.",
      "season": "Nov–Feb"
+    },
+    {
+     "key": "AR|Dree Festival, Ziro",
+     "line": "The Apatani people of Ziro pray for a good harvest over three days each July.",
+     "season": "Jul (5–7)",
+     "title": "Dree in the Ziro valley"
+    },
+    {
+     "key": "SK|Losoong Festival",
+     "line": "Sikkim's Bhutia harvest new year, ushered in with masked cham dances.",
+     "season": "Dec",
+     "title": "Losoong, Sikkim"
     }
    ]
   },
@@ -362,6 +392,12 @@
      "key": "GJ|Modhera Sun Temple",
      "line": "An 11th-century Chaulukya temple to Surya, carved from top to bottom.",
      "season": "Oct–Mar"
+    },
+    {
+     "key": "DH|Diu Fortress",
+     "line": "Walk the sea walls of a 1535 Portuguese fortress ringed by a double moat.",
+     "season": "Oct–Mar",
+     "title": "Diu's sea fort"
     }
    ]
   },
@@ -467,6 +503,18 @@
      "key": "HR|Murthal Dhabas",
      "line": "Pull over on the highway north of Delhi for paranthas dripping with white butter.",
      "season": "All year"
+    },
+    {
+     "key": "UP|Tunday Kababi, Lucknow",
+     "line": "Galouti kebabs so soft they melt — a Lucknow institution since 1905.",
+     "season": "Oct–Mar",
+     "title": "Galouti kebabs at Tunday's"
+    },
+    {
+     "key": "OD|Chhena Poda, Dasapalla",
+     "line": "Odisha's 'burnt cheese' — fresh chhena baked into a sweet, smoky cake.",
+     "season": "All year",
+     "title": "Chhena poda, Odisha"
     }
    ]
   },
@@ -515,6 +563,12 @@
      "key": "HR|Surajkund Crafts Mela",
      "line": "Two weeks every February of handlooms, crafts, folk music and food from India and abroad.",
      "season": "Feb 1–15"
+    },
+    {
+     "key": "CG|Dhokra Craft, Kondagaon",
+     "line": "Watch Bastar artisans cast bell-metal figures by the lost-wax method.",
+     "season": "Oct–Mar",
+     "title": "Dhokra casting, Bastar"
     }
    ]
   }

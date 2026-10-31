@@ -97,6 +97,49 @@
    "desc": "High-pass trek from Yuksom to face Kangchenjunga up close",
    "wiki": "Goecha_La",
    "best": "Apr\u2013May, Sep\u2013Nov"
+  },
+  {
+   "name": "Pemayangtse Monastery",
+   "cat": "religious",
+   "lat": 27.3044,
+   "lng": 88.2528,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "Hilltop Buddhist monastery near Pelling and Gyalshing",
+   "wiki": "Pemayangtse_Monastery",
+   "best": "Mar\u2013May"
+  },
+  {
+   "name": "Buddha Park, Ravangla",
+   "cat": "religious",
+   "lat": 27.315,
+   "lng": 88.36,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "Tathagata Tsal \u2014 giant Buddha statue above Ravangla",
+   "wiki": "Buddha_Park_of_Ravangla",
+   "best": "Mar\u2013May"
+  },
+  {
+   "name": "Losoong Festival",
+   "cat": "festivals",
+   "lat": 27.29,
+   "lng": 88.565,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "Bhutia harvest new year with masked cham dances at Rumtek",
+   "wiki": "Losoong_Festival",
+   "best": "Dec"
+  },
+  {
+   "name": "Sikkimese Cuisine, Gangtok",
+   "cat": "cuisine",
+   "lat": 27.33,
+   "lng": 88.615,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "Momos, thukpa and gundruk on MG Marg",
+   "wiki": "Sikkimese_cuisine"
   }
  ]
 }

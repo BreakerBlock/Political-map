@@ -2456,7 +2456,255 @@
    "desc": "Almond-shaped alpine lake at 3,795 m, two days' trek from Aru",
    "wiki": "Tarsar_Lake",
    "best": "Jul\u2013Sep"
+  },
+  {
+   "name": "Diu Fortress",
+   "cat": "history",
+   "lat": 20.714,
+   "lng": 70.996,
+   "state": "Dadra & Nagar Haveli and Daman & Diu",
+   "stateCode": "DH",
+   "desc": "Portuguese sea fort begun in 1535, with a double moat and lighthouse",
+   "wiki": "Diu_Fortress",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Nagoa Beach",
+   "cat": "scenic",
+   "lat": 20.7053,
+   "lng": 70.9158,
+   "state": "Dadra & Nagar Haveli and Daman & Diu",
+   "stateCode": "DH",
+   "desc": "Horseshoe of sand at Nagoa village on Diu island",
+   "wiki": "Nago\u00e1_Beach",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Moti Daman Fort",
+   "cat": "history",
+   "lat": 20.41,
+   "lng": 72.835,
+   "state": "Dadra & Nagar Haveli and Daman & Diu",
+   "stateCode": "DH",
+   "desc": "16th-century Portuguese walled town guarding Daman",
+   "wiki": "Daman,_India",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Longwa",
+   "cat": "history",
+   "lat": 26.6614,
+   "lng": 95.204,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "Konyak Naga village that straddles the India\u2013Myanmar border",
+   "wiki": "Lungwa"
+  },
+  {
+   "name": "Naga Cuisine, Kohima",
+   "cat": "cuisine",
+   "lat": 25.67,
+   "lng": 94.11,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "Smoked meats, bamboo shoot and fiery raja mircha",
+   "wiki": "Naga_cuisine",
+   "best": "Oct\u2013May"
+  },
+  {
+   "name": "Balpakram National Park",
+   "cat": "fauna",
+   "lat": 25.417,
+   "lng": 90.867,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "Garo Hills plateau park near the Bangladesh border",
+   "wiki": "Balpakram_National_Park",
+   "best": "Nov\u2013Mar"
+  },
+  {
+   "name": "Pemayangtse Monastery",
+   "cat": "religious",
+   "lat": 27.3044,
+   "lng": 88.2528,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "Hilltop Buddhist monastery near Pelling and Gyalshing",
+   "wiki": "Pemayangtse_Monastery",
+   "best": "Mar\u2013May"
+  },
+  {
+   "name": "Losoong Festival",
+   "cat": "festivals",
+   "lat": 27.29,
+   "lng": 88.565,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "Bhutia harvest new year with masked cham dances at Rumtek",
+   "wiki": "Losoong_Festival",
+   "best": "Dec"
+  },
+  {
+   "name": "Mechuka",
+   "cat": "scenic",
+   "lat": 28.605,
+   "lng": 94.128,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Remote valley on the Siyom river at about 1,800 m",
+   "wiki": "Mechuka",
+   "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Parshuram Kund",
+   "cat": "religious",
+   "lat": 27.8775,
+   "lng": 96.3592,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Lohit river pilgrimage; huge Makar Sankranti mela",
+   "wiki": "Parshuram_Kund",
+   "best": "Jan (Makar Sankranti)"
+  },
+  {
+   "name": "Dree Festival, Ziro",
+   "cat": "festivals",
+   "lat": 27.56,
+   "lng": 93.84,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Apatani farming festival in the Ziro valley",
+   "wiki": "Dree_Festival",
+   "best": "Jul (5\u20137)"
+  },
+  {
+   "name": "Zanskar River Rafting",
+   "cat": "adventure",
+   "lat": 34.15,
+   "lng": 77.3,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Rafting the Zanskar gorge from Chiling to Nimmu",
+   "wiki": "Zanskar_River",
+   "best": "Jun\u2013Sep"
+  },
+  {
+   "name": "Gulmarg Gondola",
+   "cat": "adventure",
+   "lat": 34.0453,
+   "lng": 74.3844,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "One of the world's highest cable cars, up to ~3,950 m for skiers",
+   "wiki": "Gulmarg_Gondola",
+   "best": "Dec\u2013Mar"
+  },
+  {
+   "name": "Lohagad Fort Trek",
+   "cat": "adventure",
+   "lat": 18.7089,
+   "lng": 73.4767,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Hill-fort walk near Lonavala, best in the monsoon",
+   "wiki": "Lohagad",
+   "best": "Jun\u2013Sep"
+  },
+  {
+   "name": "Baratang Island",
+   "cat": "adventure",
+   "lat": 12.18,
+   "lng": 92.8,
+   "state": "Andaman & Nicobar",
+   "stateCode": "AN",
+   "desc": "Limestone caves, mangrove creeks and mud volcanoes",
+   "wiki": "Baratang_Island",
+   "best": "Nov\u2013Apr"
+  },
+  {
+   "name": "Vagamon",
+   "cat": "adventure",
+   "lat": 9.6878,
+   "lng": 76.9069,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Idukki hill station for paragliding, rock climbing and hikes",
+   "wiki": "Vagamon",
+   "best": "Sep\u2013May"
+  },
+  {
+   "name": "Palani Murugan Temple",
+   "cat": "religious",
+   "lat": 10.4388,
+   "lng": 77.5203,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Hilltop Murugan shrine; Thaipusam draws vast crowds",
+   "wiki": "Dhandayuthapani_Swamy_Temple",
+   "best": "Jan\u2013Feb (Thaipusam)"
+  },
+  {
+   "name": "Kumara Parvatha Trek",
+   "cat": "adventure",
+   "lat": 12.6667,
+   "lng": 75.6833,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "One of South India's toughest day treks (1,712 m)",
+   "wiki": "Pushpagiri_(mountain)",
+   "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Tunday Kababi, Lucknow",
+   "cat": "cuisine",
+   "lat": 26.85,
+   "lng": 80.93,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Melt-in-the-mouth galouti kebabs, served since 1905",
+   "wiki": "Tunde_ke_kabab",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Chhena Poda, Dasapalla",
+   "cat": "cuisine",
+   "lat": 20.33,
+   "lng": 84.85,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Odisha's 'burnt cheese' dessert, born in Dasapalla",
+   "wiki": "Chhena_poda"
+  },
+  {
+   "name": "Dhokra Craft, Kondagaon",
+   "cat": "arts",
+   "lat": 19.59,
+   "lng": 81.66,
+   "state": "Chhattisgarh",
+   "stateCode": "CG",
+   "desc": "Bastar's lost-wax bell-metal casting hub",
+   "wiki": "Dhokra"
+  },
+  {
+   "name": "Phulkari, Patiala",
+   "cat": "arts",
+   "lat": 30.335,
+   "lng": 76.39,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Punjab's bright floral embroidery, revived in Patiala",
+   "wiki": "Phulkari"
+  },
+  {
+   "name": "Cheriyal Scroll Painting",
+   "cat": "arts",
+   "lat": 17.92,
+   "lng": 78.97,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "GI-tagged storytelling scrolls from Cheriyal",
+   "wiki": "Cheriyal_scroll_painting"
   }
  ],
- "total": 415
+ "total": 447
 }

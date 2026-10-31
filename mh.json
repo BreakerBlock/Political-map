@@ -233,6 +233,28 @@
    "desc": "Maharashtra's white-water rafting on the dam-fed Kundalika",
    "wiki": "Kolad",
    "best": "Jun\u2013Sep"
+  },
+  {
+   "name": "Lohagad Fort Trek",
+   "cat": "adventure",
+   "lat": 18.7089,
+   "lng": 73.4767,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Hill-fort walk near Lonavala, best in the monsoon",
+   "wiki": "Lohagad",
+   "best": "Jun\u2013Sep"
+  },
+  {
+   "name": "Sinhagad",
+   "cat": "history",
+   "lat": 18.3657,
+   "lng": 73.7553,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Lion's Fort \u2014 hilltop fortress 28 km from Pune",
+   "wiki": "Sinhagad",
+   "best": "Jun\u2013Feb"
   }
  ]
 }

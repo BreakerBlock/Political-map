@@ -87,6 +87,16 @@
    "desc": "Where Guru Gobind Singh founded the Khalsa in 1699, Anandpur Sahib",
    "wiki": "Takht_Kesgarh_Sahib",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Phulkari, Patiala",
+   "cat": "arts",
+   "lat": 30.335,
+   "lng": 76.39,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Punjab's bright floral embroidery, revived in Patiala",
+   "wiki": "Phulkari"
   }
  ]
 }

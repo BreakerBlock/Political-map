@@ -107,6 +107,16 @@
    "desc": "Telangana's tallest waterfall, on the Kadam river in Gond forest",
    "wiki": "Kuntala_Waterfall",
    "best": "Jul\u2013Oct"
+  },
+  {
+   "name": "Cheriyal Scroll Painting",
+   "cat": "arts",
+   "lat": 17.92,
+   "lng": 78.97,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "GI-tagged storytelling scrolls from Cheriyal",
+   "wiki": "Cheriyal_scroll_painting"
   }
  ]
 }

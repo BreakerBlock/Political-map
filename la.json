@@ -138,6 +138,17 @@
    "desc": "Ancient gompa above a moonscape of eroded hills",
    "wiki": "Lamayuru_Monastery",
    "best": "May\u2013Sep"
+  },
+  {
+   "name": "Zanskar River Rafting",
+   "cat": "adventure",
+   "lat": 34.15,
+   "lng": 77.3,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Rafting the Zanskar gorge from Chiling to Nimmu",
+   "wiki": "Zanskar_River",
+   "best": "Jun\u2013Sep"
   }
  ]
 }

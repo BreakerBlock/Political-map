@@ -75,6 +75,17 @@
    "desc": "Coral reefs and turtle-nesting islands off Wandoor (est. 1983)",
    "wiki": "Mahatma_Gandhi_Marine_National_Park",
    "best": "Nov\u2013Apr"
+  },
+  {
+   "name": "Baratang Island",
+   "cat": "adventure",
+   "lat": 12.18,
+   "lng": 92.8,
+   "state": "Andaman & Nicobar",
+   "stateCode": "AN",
+   "desc": "Limestone caves, mangrove creeks and mud volcanoes",
+   "wiki": "Baratang_Island",
+   "best": "Nov\u2013Apr"
   }
  ]
 }
