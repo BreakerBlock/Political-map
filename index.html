@@ -418,6 +418,50 @@ body.tl-dragging .tl-day{opacity:.25;transition:opacity .15s}
 .tz-play{flex-shrink:0;width:40px;height:40px;border-radius:50%;border:none;color:#fff;background:linear-gradient(120deg,#FF9933,#C73E6B);display:flex;align-items:center;justify-content:center;cursor:pointer}
 .tz-play svg{width:15px;height:15px;margin-left:2px}
 .tz-x{flex-shrink:0;align-self:flex-start;border:none;background:none;color:var(--ink-light);font-size:16px;cursor:pointer;padding:0 4px;line-height:1}
+/* Surprise me */
+.sp-btn{display:flex;align-items:center;gap:7px;margin-top:8px!important;padding:7px 13px 7px 10px;border-radius:18px;border:none;cursor:pointer;font:700 .74rem 'DM Sans',sans-serif;color:#fff;background:linear-gradient(120deg,#138808,#0E7C86 60%,#2B5FA8);box-shadow:0 3px 12px rgba(14,124,134,.35);transition:transform .15s,box-shadow .15s}
+.sp-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(14,124,134,.45)}
+.sp-btn svg{width:16px;height:16px;flex-shrink:0}
+.sp-btn.rolling svg,.sp-again.rolling svg{animation:spRoll .5s linear infinite}
+@keyframes spRoll{to{transform:rotate(360deg)}}
+.sp{position:absolute;z-index:860;left:50%;bottom:34px;width:360px;max-width:calc(100% - 24px);transform:translate(-50%,24px) scale(.97);opacity:0;transition:opacity .35s ease,transform .45s cubic-bezier(.2,.8,.2,1);border-radius:18px;overflow:hidden;background:#FFFDF8;box-shadow:0 18px 44px rgba(44,24,16,.35);border:1px solid var(--border-light)}
+.sp.on{opacity:1;transform:translate(-50%,0) scale(1)}
+.sp-hero{position:relative;height:170px;background:linear-gradient(135deg,var(--c,#E2622B),color-mix(in srgb,var(--c,#E2622B) 55%,#2C1810));transition:background .2s;overflow:hidden}
+.sp-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity .6s ease,transform 6s ease-out}
+.sp-hero img.ok{opacity:1;transform:scale(1)}
+.sp-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.28) 0%,transparent 35%,transparent 45%,rgba(20,10,5,.82) 100%);pointer-events:none}
+.sp-glyph{position:absolute;right:-14px;top:-10px;width:130px;height:130px;opacity:.22}
+.sp-glyph svg{width:100%;height:100%}
+.sp-top{position:absolute;z-index:2;left:12px;right:10px;top:10px;display:flex;align-items:center;gap:6px}
+.sp-kick{font-size:.6rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.32);backdrop-filter:blur(4px);padding:4px 9px 4px 7px;border-radius:12px;display:flex;align-items:center;gap:5px}
+.sp-kick svg{width:12px;height:12px}
+.sp-chip{font-size:.62rem;font-weight:700;color:#fff;background:var(--c);padding:4px 9px 4px 6px;border-radius:12px;display:flex;align-items:center;gap:4px}
+.sp-chip span{display:flex;width:12px;height:12px}.sp-chip svg{width:12px;height:12px}
+.sp-x{margin-left:auto;width:28px;height:28px;border-radius:50%;border:none;background:rgba(0,0,0,.35);color:#fff;font-size:13px;cursor:pointer;backdrop-filter:blur(4px)}
+.sp-ttl{position:absolute;z-index:2;left:14px;right:14px;bottom:11px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.sp-ttl b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.65rem;line-height:1.05;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sp-ttl span{display:flex;align-items:center;gap:4px;font-size:.74rem;opacity:.92;margin-top:3px}
+.sp-ttl span svg{width:12px;height:12px}
+.sp.spin .sp-ttl b{animation:spTick .09s ease-out}
+@keyframes spTick{from{transform:translateY(-40%);opacity:.3;filter:blur(2px)}to{transform:none;opacity:1;filter:none}}
+.sp-body{padding:12px 14px 13px}
+.sp-desc{font-size:.84rem;line-height:1.45;color:var(--ink);min-height:2.4em}
+.sp-best{display:inline-flex;align-items:center;gap:5px;margin-top:7px;font-size:.7rem;color:var(--ink-dim);background:#F6EEDF;border-radius:10px;padding:3px 9px}
+.sp-best svg{width:12px;height:12px}.sp-best b{color:var(--ink)}
+.sp-best[hidden],.sp-chip[hidden]{display:none}
+.sp-acts{display:flex;gap:7px;margin-top:11px}
+.sp-acts button{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;padding:9px 6px;border-radius:11px;font:700 .74rem 'DM Sans',sans-serif;cursor:pointer;border:1px solid var(--border);background:#fff;color:var(--ink);transition:transform .12s,background .15s}
+.sp-acts button:active{transform:scale(.97)}
+.sp-acts svg{width:14px;height:14px;flex-shrink:0}
+.sp-go{background:var(--ink)!important;color:#fff!important;border-color:var(--ink)!important}
+.sp-add.in{background:#EAF5E6;border-color:#9CCB8E;color:#2E6B1F}
+.sp-again{background:linear-gradient(120deg,#138808,#0E7C86 60%,#2B5FA8)!important;color:#fff!important;border:none!important}
+.sp.spin .sp-body{opacity:.45;pointer-events:none}
+.sp.spin .sp-desc{background:linear-gradient(90deg,#EFE6D6 25%,#F8F2E7 50%,#EFE6D6 75%) 0 0/200% 100%;animation:shimmer 1.2s linear infinite;color:transparent;border-radius:6px}
+.sp-pulse{pointer-events:none}
+.sp-pulse i{position:absolute;left:50%;top:50%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;border:3px solid var(--c);animation:spPulse 1.6s ease-out 3}
+.sp-pulse i+i{animation-delay:.5s}
+@keyframes spPulse{from{transform:scale(.6);opacity:1}to{transform:scale(4.2);opacity:0}}
 @media(max-width:760px){
   .btn-hl{margin:0;width:36px;height:36px;padding:0;border-radius:50%;justify-content:center;flex-shrink:0}
   .btn-hl span{display:none}
@@ -436,8 +480,12 @@ body.tl-dragging .tl-day{opacity:.25;transition:opacity .15s}
   .state-play span{display:none}
   .state-play svg{width:13px;height:13px;margin-left:2px}
   .st-why{margin-left:4px}
+  .sp{bottom:40px}
+  .sp-hero{height:140px}
+  .sp-ttl b{font-size:1.45rem}
+  .sp-btn{padding:7px 11px 7px 9px;font-size:.7rem}
 }
-@media(prefers-reduced-motion:reduce){.st-bg img.ok{animation:none}.st-card>*{transition:opacity .2s}.btn-hl::after{animation:none}}
+@media(prefers-reduced-motion:reduce){.st-bg img.ok{animation:none}.st-card>*{transition:opacity .2s}.btn-hl::after{animation:none}.sp-hero img{transition:opacity .3s}.sp-pulse i{animation:none}}
 button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 
 @media(max-width:760px){
@@ -568,7 +616,14 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
     <div class="loading-overlay" id="loader"><div class="spinner"></div>Loading places…</div>
     <div class="map-vignette"></div>
     <svg class="compass" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="44" stroke="#5A4432" stroke-width="1.5"/><circle cx="50" cy="50" r="34" stroke="#5A4432" stroke-width="0.75" opacity="0.6"/><path d="M50 8L56 46L50 50L44 46Z" fill="#B5452A"/><path d="M50 92L44 54L50 50L56 54Z" fill="#5A4432"/><path d="M8 50L46 44L50 50L46 56Z" fill="#5A4432"/><path d="M92 50L54 56L50 50L54 44Z" fill="#5A4432"/><text x="50" y="6" text-anchor="middle" font-size="11" font-weight="700" fill="#5A4432" font-family="Georgia,serif">N</text></svg>
-    <div class="teaser" id="teaser" hidden onclick="if(!event.target.closest('.tz-x'))openStory('india')" role="button" aria-label="Play Highlights of India"><div class="tz-stack"></div><div class="tz-txt"><small>New · Swipe stories</small><b></b><span></span></div><button class="tz-play" aria-label="Play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 001.5.86l12.5-7.5a1 1 0 000-1.72L8.5 3.64A1 1 0 007 4.5z"/></svg></button><button class="tz-x" onclick="event.stopPropagation();hideTeaser()" aria-label="Dismiss">✕</button></div>
+    <div class="teaser" id="teaser" hidden onclick="if(!event.target.closest('.tz-x'))openStory(this.dataset.deck||'india')" role="button" aria-label="Play Highlights of India"><div class="tz-stack"></div><div class="tz-txt"><small>New · Swipe stories</small><b></b><span></span></div><button class="tz-play" aria-label="Play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 001.5.86l12.5-7.5a1 1 0 000-1.72L8.5 3.64A1 1 0 007 4.5z"/></svg></button><button class="tz-x" onclick="event.stopPropagation();hideTeaser()" aria-label="Dismiss">✕</button></div>
+    <div class="sp" id="surprise" hidden role="dialog" aria-label="Surprise pick" aria-live="polite">
+      <div class="sp-hero" id="spHero"><div class="sp-glyph" id="spGlyph"></div>
+        <div class="sp-top"><span class="sp-kick" id="spKick"></span><span class="sp-chip" id="spChip" hidden></span><button class="sp-x" onclick="hideSurprise()" aria-label="Close">✕</button></div>
+        <div class="sp-ttl"><b id="spName"></b><span id="spState"></span></div></div>
+      <div class="sp-body"><div class="sp-desc" id="spDesc"></div><div class="sp-best" id="spBest" hidden></div>
+        <div class="sp-acts"><button class="sp-go" onclick="surpriseExplore()" id="spGo"></button><button class="sp-add" id="spAdd" onclick="surpriseToggleTrip()"></button><button class="sp-again" id="spAgain" onclick="surprise()"></button></div></div>
+    </div>
     <div class="disclaimer">Boundary as per Survey of India · Map for reference only</div>
   </div>
 </div>
@@ -1504,22 +1559,32 @@ async function loadStories(){
     if(st&&statesIndex[st[1].toUpperCase()]){openStateStory(st[1].toUpperCase());return}
     if(storyDecks.some(d=>d.id===id)){openStory(id);return}
   }
-  let seen=false;try{seen=!!localStorage.getItem(STORY_SEEN)}catch(e){}
-  if(!seen&&!location.hash)setTimeout(showTeaser,1600);
+  let seen=false,seenMon='';try{seen=!!localStorage.getItem(STORY_SEEN);seenMon=localStorage.getItem(SEASON_SEEN)||''}catch(e){}
+  if(location.hash)return;
+  // First visit: Highlights of India. Coming back in a new month: that month's Best-in deck, once.
+  if(!seen)setTimeout(()=>showTeaser('india'),1600);
+  else if(seenMon!==seasonTag())setTimeout(()=>showTeaser('season'),1800);
 }
-async function showTeaser(){
-  if(document.getElementById('story').classList.contains('on'))return;
-  const d=storyDecks[0],t=document.getElementById('teaser');
+const SEASON_SEEN='bharatyatra.seasonSeen.v1';
+const seasonTag=()=>new Date().getFullYear()+'-'+defaultSeasonMonth();
+async function showTeaser(id){
+  if(document.getElementById('story').classList.contains('on')||!document.getElementById('surprise').hidden)return;
+  const d=storyDecks.find(x=>x.id===(id||'india'))||storyDecks[0],t=document.getElementById('teaser');
+  if(d.gen){await prepDeck(d);if(!d.slides.length)return;await ensureDeckPlaces(d)}
+  if(document.getElementById('story').classList.contains('on')||!document.getElementById('surprise').hidden)return;
+  t.dataset.deck=d.id;
+  t.querySelector('small').textContent=d.gen==='season'?'This month · Swipe stories':'New · Swipe stories';
+  t.setAttribute('aria-label','Play '+d.title);
   const imgs=await Promise.all(d.slides.slice(0,3).map(s=>slideImage(s,storyPlace(s))));
   t.querySelector('.tz-stack').innerHTML=d.slides.slice(0,3).map((s,i)=>{const p=storyPlace(s),c=(CATS[p?p.cat:'scenic']||CATS.scenic).color;return `<i style="--c:${c};${imgs[i]?`background-image:url('${esc(imgs[i])}')`:''}"></i>`}).join('');
   t.querySelector('b').textContent=d.title;
-  t.querySelector('span').textContent=`${d.slides.length} unforgettable places · tap to play`;
+  t.querySelector('span').textContent=d.gen==='season'?`${d.slides.length} picks for this month · tap to play`:`${d.slides.length} unforgettable places · tap to play`;
   t.hidden=false;requestAnimationFrame(()=>requestAnimationFrame(()=>t.classList.add('on')));
 }
-function hideTeaser(){const t=document.getElementById('teaser');t.classList.remove('on');setTimeout(()=>t.hidden=true,450);try{localStorage.setItem(STORY_SEEN,'1')}catch(e){}}
+function hideTeaser(){const t=document.getElementById('teaser');t.classList.remove('on');setTimeout(()=>t.hidden=true,450);try{localStorage.setItem(STORY_SEEN,'1');localStorage.setItem(SEASON_SEEN,seasonTag())}catch(e){}}
 async function openStory(id){
   const di=Math.max(0,storyDecks.findIndex(d=>d.id===id));
-  hideTeaser();closeCatPanel();map.closePopup();
+  hideTeaser();hideSurprise();closeCatPanel();map.closePopup();
   const el=document.getElementById('story');
   if(!el.classList.contains('on')){
     story.prevHash=location.hash;el.hidden=false;void el.offsetWidth;el.classList.add('on');
@@ -1643,6 +1708,118 @@ function storyToggleTrip(b){
   });
   document.addEventListener('visibilitychange',()=>{if(document.hidden&&!el.hidden)setStoryPaused(true)});
 })();
+
+/* ── Surprise me: roll a random real place, fly there, show a photo card ── */
+const SVG_DICE='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><g fill="currentColor" stroke="none"><circle cx="8.6" cy="8.6" r="1.55"/><circle cx="15.4" cy="8.6" r="1.55"/><circle cx="12" cy="12" r="1.55"/><circle cx="8.6" cy="15.4" r="1.55"/><circle cx="15.4" cy="15.4" r="1.55"/></g></svg>';
+const SP_SEEN='bharatyatra.surpriseSeen.v1';
+const reduceMotion=()=>window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+let spPool=null,spSeq=0,spCur=null,spPulse=null,spSeen=[];
+try{spSeen=JSON.parse(localStorage.getItem(SP_SEEN)||'[]')}catch(e){spSeen=[]}
+const SurpriseCtl=L.Control.extend({options:{position:'topright'},onAdd(){
+  const b=L.DomUtil.create('button','sp-btn');b.id='spBtn';b.type='button';
+  b.innerHTML=SVG_DICE+'<span>Surprise me</span>';b.title='Roll the dice: jump to a random place in India';b.setAttribute('aria-label','Surprise me — show a random place');
+  L.DomEvent.disableClickPropagation(b);L.DomEvent.on(b,'click',()=>surprise());
+  return b;
+}});
+new SurpriseCtl().addTo(map);
+{const el=document.getElementById('surprise');L.DomEvent.disableClickPropagation(el);L.DomEvent.disableScrollPropagation(el)}
+async function surprisePool(){
+  // Only places with a photo, so every roll lands on a picture
+  if(!spPool)spPool=(await everyPlace()).filter(p=>p.wiki&&isFinite(p.lat)&&isFinite(p.lng));
+  return spPool;
+}
+function pickSurprise(pool){
+  const hl=hlKeys(),recent=new Set(spSeen.slice(-Math.min(60,Math.floor(pool.length/2))));
+  let c=pool.filter(p=>!recent.has(placeKey(p))&&(!spCur||(p.cat!==spCur.cat&&p.stateCode!==spCur.stateCode)));
+  if(!c.length)c=pool.filter(p=>!spCur||placeKey(p)!==placeKey(spCur));
+  // Curated must-dos and highlights come up a bit more often, but anything can
+  const w=c.map(p=>{const k=placeKey(p);return 1+(hl.has(k)?1:0)+(curatedLine(k)?1.5:0)});
+  let r=Math.random()*w.reduce((a,b)=>a+b,0);
+  for(let i=0;i<c.length;i++){r-=w[i];if(r<=0)return c[i]}
+  return c[c.length-1];
+}
+function spSet(p,{rolling}={}){
+  const c=CATS[p.cat]||CATS.scenic,el=document.getElementById('surprise');
+  el.style.setProperty('--c',c.color);
+  document.getElementById('spGlyph').innerHTML=ICONS[p.cat]||ICONS.scenic;
+  const nm=document.getElementById('spName');nm.textContent=p.name;
+  if(rolling){nm.style.animation='none';void nm.offsetWidth;nm.style.animation=''}
+  document.getElementById('spState').innerHTML=PIN_SVG+esc(p.state);
+  const ch=document.getElementById('spChip');ch.hidden=false;ch.innerHTML=`<span>${ICONS[p.cat]||ICONS.scenic}</span>${esc(c.label)}`;
+}
+function spButtons(){
+  const p=spCur,add=document.getElementById('spAdd'),on=p&&inTrip(p);
+  document.getElementById('spGo').innerHTML=PIN_SVG+'Explore';
+  add.classList.toggle('in',!!on);add.textContent=on?'✓ In trip':'+ Add to trip';
+  document.getElementById('spAgain').innerHTML=SVG_DICE+'Again';
+}
+async function surprise(){
+  const seq=++spSeq,el=document.getElementById('surprise');
+  if(!document.getElementById('teaser').hidden)hideTeaser();
+  closeCatPanel();map.closePopup();
+  if(isMobile()&&document.body.classList.contains('list-open')){document.body.classList.remove('list-open');setTimeout(()=>map.invalidateSize(),50)}
+  const btns=[document.getElementById('spBtn'),document.getElementById('spAgain')];
+  btns.forEach(b=>b&&b.classList.add('rolling'));
+  el.classList.add('spin');
+  document.getElementById('spKick').innerHTML=SVG_DICE+'Rolling the dice…';
+  const hero=document.getElementById('spHero');hero.querySelectorAll('img').forEach(i=>{i.classList.remove('ok');setTimeout(()=>i.remove(),400)});
+  document.getElementById('spBest').hidden=true;
+  document.getElementById('spDesc').textContent='…';
+  spButtons();
+  if(el.hidden){el.hidden=false;void el.offsetWidth;el.classList.add('on')}
+  const pool=await surprisePool();if(seq!==spSeq)return;
+  if(!pool.length){hideSurprise();return}
+  const pick=pickSurprise(pool),key=placeKey(pick);
+  spSeen=spSeen.filter(k=>k!==key).concat(key).slice(-120);try{localStorage.setItem(SP_SEEN,JSON.stringify(spSeen))}catch(e){}
+  // Meanwhile: load the pick's state, make sure its pin will show, warm the photo
+  const prep=(async()=>{
+    if(!loadedStates[pick.stateCode]&&statesIndex[pick.stateCode])await loadStateData(pick.stateCode);
+    if(!activeCats.has(pick.cat))activeCats.add(pick.cat);
+    if(selectedState&&selectedState!==pick.stateCode){selectedState='';document.getElementById('stateSelect').value='';syncStateStoryBtn()}
+    const si=document.getElementById('searchInput');if(si.value)si.value='';
+    render();
+  })();
+  const img=getBigImage(pick.wiki);
+  // Slot-machine: flick through names, slowing down, then land on the pick
+  if(!reduceMotion()){
+    let delay=45;const t0=Date.now();
+    while(Date.now()-t0<1150){
+      const r=pool[Math.floor(Math.random()*pool.length)];spSet(r,{rolling:true});
+      await new Promise(res=>setTimeout(res,delay));if(seq!==spSeq)return;delay=Math.min(delay*1.17,190);
+    }
+  }
+  await prep;if(seq!==spSeq)return;
+  spCur=findPlace(key)||pick;
+  spSet(spCur,{rolling:true});
+  el.classList.remove('spin');btns.forEach(b=>b&&b.classList.remove('rolling'));
+  document.getElementById('spKick').innerHTML=SVG_DICE+'Surprise pick';
+  document.getElementById('spDesc').textContent=(curatedLine(key)||{}).line||spCur.desc||'';
+  const best=document.getElementById('spBest');
+  best.hidden=!spCur.best;if(spCur.best)best.innerHTML=SVG_CAL+'Best time <b>'+esc(spCur.best)+'</b>';
+  spButtons();
+  img.then(u=>{if(!u||seq!==spSeq)return;const im=new Image();im.alt=spCur.name;im.onload=()=>im.classList.add('ok');im.src=u;hero.insertBefore(im,hero.firstChild.nextSibling)});
+  // Fly there, keeping the pin clear of the card at the bottom of the map
+  const z=isMobile()?8.5:9,cardH=el.offsetHeight+parseInt(getComputedStyle(el).bottom||0);
+  const mapH=map.getSize().y,shift=Math.max(0,cardH-mapH/2+60)/1;
+  const target=map.unproject(map.project([spCur.lat,spCur.lng],z).add([0,shift]),z);
+  if(spPulse){map.removeLayer(spPulse);spPulse=null}
+  const pulse=()=>{if(seq!==spSeq)return;const c=(CATS[spCur.cat]||CATS.scenic).color;
+    spPulse=L.marker([spCur.lat,spCur.lng],{interactive:false,keyboard:false,zIndexOffset:-1000,icon:L.divIcon({className:'sp-pulse',html:`<i style="--c:${c}"></i><i style="--c:${c}"></i>`,iconSize:[0,0]})}).addTo(map);
+    setTimeout(()=>{if(spPulse){map.removeLayer(spPulse);spPulse=null}},5200)};
+  if(reduceMotion())map.setView(target,z);else{map.flyTo(target,z,{duration:1.8});}
+  map.once('moveend',pulse);
+}
+map.on('popupopen',()=>{if(!document.getElementById('surprise').hidden&&!document.getElementById('surprise').classList.contains('spin'))hideSurprise()});
+function hideSurprise(){
+  spSeq++;const el=document.getElementById('surprise');if(el.hidden)return;
+  el.classList.remove('on');setTimeout(()=>{if(!el.classList.contains('on'))el.hidden=true},400);
+  document.getElementById('spBtn')?.classList.remove('rolling');
+}
+function surpriseExplore(){const p=spCur;if(!p)return;hideSurprise();focusPlace(findPlace(placeKey(p))||p)}
+function surpriseToggleTrip(){if(!spCur)return;toggleTrip(placeKey(spCur));spButtons()}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'&&!document.getElementById('surprise').hidden&&document.getElementById('story').hidden)hideSurprise();
+});
 
 init().then(initTrip).then(loadStories);
 </script>
