@@ -94,6 +94,28 @@
    "desc": "Panaji's Latin Quarter of yellow, green and blue Portuguese-era houses",
    "wiki": "Fontainhas_(quarter)",
    "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Mangueshi Temple",
+   "cat": "religious",
+   "lat": 15.442,
+   "lng": 73.966,
+   "state": "Goa",
+   "stateCode": "GA",
+   "desc": "Goa's grand Shiva temple at Mangeshi, Ponda",
+   "wiki": "Mangueshi_Temple",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Chapora Fort",
+   "cat": "history",
+   "lat": 15.604,
+   "lng": 73.749,
+   "state": "Goa",
+   "stateCode": "GA",
+   "desc": "Hilltop fort with views over the Chapora river to Morjim",
+   "wiki": "Chapora_Fort",
+   "best": "Nov\u2013Mar"
   }
  ]
 }

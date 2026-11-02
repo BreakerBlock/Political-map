@@ -44,6 +44,17 @@
    "desc": "16th-century Portuguese walled town guarding Daman",
    "wiki": "Daman,_India",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Silvassa",
+   "cat": "scenic",
+   "lat": 20.271,
+   "lng": 73.005,
+   "state": "Dadra & Nagar Haveli and Daman & Diu",
+   "stateCode": "DH",
+   "desc": "Headquarters of Dadra & Nagar Haveli, in the forested Sahyadri foothills",
+   "wiki": "Silvassa",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

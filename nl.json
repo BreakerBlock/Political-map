@@ -65,6 +65,28 @@
    "desc": "Smoked meats, bamboo shoot and fiery raja mircha",
    "wiki": "Naga_cuisine",
    "best": "Oct\u2013May"
+  },
+  {
+   "name": "Mount Japf\u00fc",
+   "cat": "adventure",
+   "lat": 25.598,
+   "lng": 94.067,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "3,048 m \u2014 highest peak of the Barail Range, a sunrise trek above Kohima",
+   "wiki": "Mount_Japf\u00fc",
+   "best": "Oct\u2013May"
+  },
+  {
+   "name": "Sekrenyi",
+   "cat": "festivals",
+   "lat": 25.674,
+   "lng": 94.11,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "Angami purification festival around Kohima, starting late February",
+   "wiki": "Sekrenyi",
+   "best": "Feb"
   }
  ]
 }

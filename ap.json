@@ -84,6 +84,50 @@
    "desc": "GI-tagged painted toys carved from soft Tella Poniki wood",
    "wiki": "Kondapalli_toys",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Belum Caves",
+   "cat": "adventure",
+   "lat": 15.104,
+   "lng": 78.131,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "3.2 km of caverns \u2014 India's second-largest cave network",
+   "wiki": "Belum_Caves",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Undavalli Caves",
+   "cat": "history",
+   "lat": 16.496,
+   "lng": 80.58,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Rock-cut sandstone cave temples above the Krishna, 4th\u20135th century",
+   "wiki": "Undavalli_Caves",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Srisailam Mallikarjuna",
+   "cat": "religious",
+   "lat": 16.074,
+   "lng": 78.868,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Jyotirlinga and Shakti Peetha temple in the Nallamala hills",
+   "wiki": "Mallikarjuna_Temple,_Srisailam",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Horsley Hills",
+   "cat": "scenic",
+   "lat": 13.66,
+   "lng": 78.4,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Cool hill station of the Rayalaseema plateau",
+   "wiki": "Horsley_Hills",
+   "best": "Oct\u2013Jun"
   }
  ]
 }

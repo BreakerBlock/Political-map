@@ -174,6 +174,18 @@
      "line": "An 8–10 hour climb, rated one of South India's toughest and most rewarding treks.",
      "season": "Nov–Feb",
      "title": "Summit Kumara Parvatha"
+    },
+    {
+     "key": "AP|Belum Caves",
+     "line": "Walk deep into India's second-longest cave system, past stalactites and underground chambers.",
+     "season": "Oct–Mar",
+     "title": "Go underground at Belum"
+    },
+    {
+     "key": "NL|Mount Japfü",
+     "line": "Climb before dawn to the top of the Barail Range for a sunrise over Kohima's hills.",
+     "season": "Oct–May",
+     "title": "Sunrise on Mount Japfü"
     }
    ]
   },
@@ -238,6 +250,12 @@
      "line": "Sikkim's Bhutia harvest new year, ushered in with masked cham dances.",
      "season": "Dec",
      "title": "Losoong, Sikkim"
+    },
+    {
+     "key": "MN|Yaoshang",
+     "line": "Manipur's five-day spring festival — sports by day, Thabal Chongba dances by moonlight.",
+     "season": "Feb–Mar",
+     "title": "Spring in Imphal for Yaoshang"
     }
    ]
   },
@@ -339,6 +357,11 @@
      "key": "RJ|Dilwara Temples",
      "line": "Jain temples of white marble carved so finely the ceilings look like lace.",
      "season": "Oct–Mar"
+    },
+    {
+     "key": "BR|Takht Sri Patna Sahib",
+     "line": "The gurdwara at the birthplace of Guru Gobind Singh, one of Sikhism's five takhts.",
+     "season": "Oct–Mar"
     }
    ]
   },
@@ -398,6 +421,17 @@
      "line": "Walk the sea walls of a 1535 Portuguese fortress ringed by a double moat.",
      "season": "Oct–Mar",
      "title": "Diu's sea fort"
+    },
+    {
+     "key": "BR|Sher Shah Suri Tomb",
+     "line": "An Afghan emperor's red-sandstone mausoleum rising from its lake at Sasaram.",
+     "season": "Oct–Mar"
+    },
+    {
+     "key": "TR|Chabimura",
+     "line": "Giant gods carved into jungle cliffs above the Gomati river.",
+     "season": "Oct–Mar",
+     "title": "Boat to the cliff gods of Chabimura"
     }
    ]
   },
@@ -451,6 +485,17 @@
      "key": "LA|Tso Moriri",
      "line": "A high lake at 4,522 m on the Changthang plateau, where black-necked cranes come to breed.",
      "season": "Jun–Sep"
+    },
+    {
+     "key": "MN|Shirui Lily, Ukhrul",
+     "line": "Hike the Shirui hills while the lily that grows wild nowhere else is in bloom.",
+     "season": "May–Jun",
+     "title": "Find the Shirui lily"
+    },
+    {
+     "key": "CG|Tirathgarh Falls",
+     "line": "A 91 m single plunge of white water in the forests of Bastar's Kanger Valley.",
+     "season": "Jul–Feb"
     }
    ]
   },
@@ -569,6 +614,12 @@
      "line": "Watch Bastar artisans cast bell-metal figures by the lost-wax method.",
      "season": "Oct–Mar",
      "title": "Dhokra casting, Bastar"
+    },
+    {
+     "key": "MN|Longpi Pottery",
+     "line": "Black pots of crushed stone and clay, shaped by hand without a wheel in a Tangkhul Naga village.",
+     "season": "All year",
+     "title": "Watch Longpi pots take shape"
     }
    ]
   }

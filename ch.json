@@ -44,6 +44,16 @@
    "desc": "30 acres and ~1,600 rose varieties; Rose Festival in Feb\u2013Mar",
    "wiki": "Zakir_Husain_Rose_Garden",
    "best": "Feb\u2013Mar"
+  },
+  {
+   "name": "Government Museum & Art Gallery",
+   "cat": "arts",
+   "lat": 30.749,
+   "lng": 76.788,
+   "state": "Chandigarh",
+   "stateCode": "CH",
+   "desc": "Chandigarh's museum of art, born of Partition \u2014 miniatures, Gandhara sculpture",
+   "wiki": "Government_Museum_and_Art_Gallery,_Chandigarh"
   }
  ]
 }

@@ -1,6 +1,6 @@
 # BharatYatra — Interactive India Travel Map
 
-A travel planner for India: 447+ curated places (and growing) across 8 categories and 36 states/UTs, with marker clustering, state-level lazy loading, Wikipedia photos, and a vintage-atlas map.
+A travel planner for India: 480+ curated places (and growing) across 8 categories and 36 states/UTs, with marker clustering, state-level lazy loading, Wikipedia photos, and a vintage-atlas map.
 
 ## Deploy in 5 minutes (GitHub Pages)
 

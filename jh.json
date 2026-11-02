@@ -65,6 +65,49 @@
    "desc": "The Kanchi river drops 44 m off the edge of the Ranchi plateau",
    "wiki": "Dassam_Falls",
    "best": "Jul\u2013Oct"
+  },
+  {
+   "name": "Rajrappa (Chhinnamasta Temple)",
+   "cat": "religious",
+   "lat": 23.632,
+   "lng": 85.711,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "Chhinnamasta temple at the Damodar\u2013Bhairavi confluence, a major pilgrimage",
+   "wiki": "Rajrappa"
+  },
+  {
+   "name": "Maluti Temples",
+   "cat": "history",
+   "lat": 24.161,
+   "lng": 87.675,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "Village of 72 old terracotta temples in Dumka district",
+   "wiki": "Maluti",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Dalma Wildlife Sanctuary",
+   "cat": "fauna",
+   "lat": 22.904,
+   "lng": 86.216,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "Hill sanctuary near Jamshedpur known for its elephants, opened in 1975",
+   "wiki": "Dalma_Wildlife_Sanctuary",
+   "best": "Nov\u2013Jun"
+  },
+  {
+   "name": "Jonha Falls",
+   "cat": "scenic",
+   "lat": 23.342,
+   "lng": 85.608,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "43 m waterfall in the hills near Ranchi",
+   "wiki": "Jonha_Falls",
+   "best": "Jul\u2013Oct"
   }
  ]
 }

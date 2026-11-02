@@ -67,6 +67,28 @@
    "desc": "Forested hills with distant Himalayan views and the Tikkar Taal lakes",
    "wiki": "Morni",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Kalesar National Park",
+   "cat": "fauna",
+   "lat": 30.367,
+   "lng": 77.533,
+   "state": "Haryana",
+   "stateCode": "HR",
+   "desc": "Sal forests in the Shivalik foothills, a national park since 2003",
+   "wiki": "Kalesar_National_Park",
+   "best": "Oct\u2013Jun"
+  },
+  {
+   "name": "Sheikh Chilli's Tomb",
+   "cat": "history",
+   "lat": 29.977,
+   "lng": 76.828,
+   "state": "Haryana",
+   "stateCode": "HR",
+   "desc": "Mughal tomb, madrasa and gardens at Thanesar, Kurukshetra",
+   "wiki": "Sheikh_Chilli's_Tomb",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

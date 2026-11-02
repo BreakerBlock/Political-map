@@ -33,6 +33,17 @@
    "desc": "Spiritual community founded in 1926 by Sri Aurobindo and The Mother",
    "wiki": "Sri_Aurobindo_Ashram",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Manakula Vinayagar Temple",
+   "cat": "religious",
+   "lat": 11.936,
+   "lng": 79.834,
+   "state": "Puducherry",
+   "stateCode": "PY",
+   "desc": "Much-visited Ganesha temple in the heart of Puducherry",
+   "wiki": "Manakula_Vinayagar_Temple",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

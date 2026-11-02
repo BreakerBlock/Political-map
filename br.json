@@ -98,6 +98,61 @@
    "desc": "Smoky wheat balls stuffed with sattu, eaten with chokha",
    "wiki": "Litti_(dish)",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Kesariya Stupa",
+   "cat": "history",
+   "lat": 26.334,
+   "lng": 84.855,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "One of the largest Buddhist stupas, a protected national monument",
+   "wiki": "Kesariya_Stupa",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Vikramashila",
+   "cat": "history",
+   "lat": 25.325,
+   "lng": 87.285,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Ruins of the great Pala-era Buddhist university, destroyed c. 1193",
+   "wiki": "Vikramashila",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Takht Sri Patna Sahib",
+   "cat": "religious",
+   "lat": 25.596,
+   "lng": 85.23,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Birthplace of Guru Gobind Singh, one of the five Sikh takhts",
+   "wiki": "Takht_Sri_Patna_Sahib",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Sher Shah Suri Tomb",
+   "cat": "history",
+   "lat": 24.952,
+   "lng": 84.015,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Sasaram's red-sandstone mausoleum rising from a lake, completed 1545",
+   "wiki": "Tomb_of_Sher_Shah_Suri",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Kakolat Falls",
+   "cat": "scenic",
+   "lat": 24.7,
+   "lng": 85.628,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Waterfall stepping about 50 m down into the Lohabar river",
+   "wiki": "Kakolat_Falls",
+   "best": "Jul\u2013Oct"
   }
  ]
 }

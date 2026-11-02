@@ -65,6 +65,38 @@
    "desc": "Imphal's great Radha\u2013Krishna temple, the biggest Vaishnava shrine in its district",
    "wiki": "Shree_Govindajee_Temple",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Shirui Lily, Ukhrul",
+   "cat": "scenic",
+   "lat": 25.129,
+   "lng": 94.419,
+   "state": "Manipur",
+   "stateCode": "MN",
+   "desc": "Shirui hills, the only home of the rare Shirui lily \u2014 festival in May",
+   "wiki": "Lilium_mackliniae",
+   "best": "May\u2013Jun"
+  },
+  {
+   "name": "Yaoshang",
+   "cat": "festivals",
+   "lat": 24.808,
+   "lng": 93.938,
+   "state": "Manipur",
+   "stateCode": "MN",
+   "desc": "Manipur's biggest festival, five days of Holi-time sports and Thabal Chongba dancing",
+   "wiki": "Yaosang",
+   "best": "Feb\u2013Mar"
+  },
+  {
+   "name": "Longpi Pottery",
+   "cat": "arts",
+   "lat": 25.206,
+   "lng": 94.448,
+   "state": "Manipur",
+   "stateCode": "MN",
+   "desc": "Black stone-and-clay pottery shaped without a wheel, in Longpi village",
+   "wiki": "Longpi"
   }
  ]
 }

@@ -2704,7 +2704,235 @@
    "stateCode": "TS",
    "desc": "GI-tagged storytelling scrolls from Cheriyal",
    "wiki": "Cheriyal_scroll_painting"
+  },
+  {
+   "name": "Government Museum & Art Gallery",
+   "cat": "arts",
+   "lat": 30.749,
+   "lng": 76.788,
+   "state": "Chandigarh",
+   "stateCode": "CH",
+   "desc": "Chandigarh's museum of art, born of Partition \u2014 miniatures, Gandhara sculpture",
+   "wiki": "Government_Museum_and_Art_Gallery,_Chandigarh"
+  },
+  {
+   "name": "Manakula Vinayagar Temple",
+   "cat": "religious",
+   "lat": 11.936,
+   "lng": 79.834,
+   "state": "Puducherry",
+   "stateCode": "PY",
+   "desc": "Much-visited Ganesha temple in the heart of Puducherry",
+   "wiki": "Manakula_Vinayagar_Temple",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Sheikh Chilli's Tomb",
+   "cat": "history",
+   "lat": 29.977,
+   "lng": 76.828,
+   "state": "Haryana",
+   "stateCode": "HR",
+   "desc": "Mughal tomb, madrasa and gardens at Thanesar, Kurukshetra",
+   "wiki": "Sheikh_Chilli's_Tomb",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Rajrappa (Chhinnamasta Temple)",
+   "cat": "religious",
+   "lat": 23.632,
+   "lng": 85.711,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "Chhinnamasta temple at the Damodar\u2013Bhairavi confluence, a major pilgrimage",
+   "wiki": "Rajrappa"
+  },
+  {
+   "name": "Maluti Temples",
+   "cat": "history",
+   "lat": 24.161,
+   "lng": 87.675,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "Village of 72 old terracotta temples in Dumka district",
+   "wiki": "Maluti",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Shirui Lily, Ukhrul",
+   "cat": "scenic",
+   "lat": 25.129,
+   "lng": 94.419,
+   "state": "Manipur",
+   "stateCode": "MN",
+   "desc": "Shirui hills, the only home of the rare Shirui lily \u2014 festival in May",
+   "wiki": "Lilium_mackliniae",
+   "best": "May\u2013Jun"
+  },
+  {
+   "name": "Yaoshang",
+   "cat": "festivals",
+   "lat": 24.808,
+   "lng": 93.938,
+   "state": "Manipur",
+   "stateCode": "MN",
+   "desc": "Manipur's biggest festival, five days of Holi-time sports and Thabal Chongba dancing",
+   "wiki": "Yaosang",
+   "best": "Feb\u2013Mar"
+  },
+  {
+   "name": "Longpi Pottery",
+   "cat": "arts",
+   "lat": 25.206,
+   "lng": 94.448,
+   "state": "Manipur",
+   "stateCode": "MN",
+   "desc": "Black stone-and-clay pottery shaped without a wheel, in Longpi village",
+   "wiki": "Longpi"
+  },
+  {
+   "name": "Mount Japf\u00fc",
+   "cat": "adventure",
+   "lat": 25.598,
+   "lng": 94.067,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "3,048 m \u2014 highest peak of the Barail Range, a sunrise trek above Kohima",
+   "wiki": "Mount_Japf\u00fc",
+   "best": "Oct\u2013May"
+  },
+  {
+   "name": "Chabimura",
+   "cat": "history",
+   "lat": 23.47,
+   "lng": 91.67,
+   "state": "Tripura",
+   "stateCode": "TR",
+   "desc": "Giant rock carvings of Durga and other deities on the Gomati river cliffs",
+   "wiki": "Chabimura",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Virasat-e-Khalsa",
+   "cat": "history",
+   "lat": 31.232,
+   "lng": 76.503,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Museum of Sikh history at Anandpur Sahib, opened in 2011",
+   "wiki": "Virasat-e-Khalsa",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Kesariya Stupa",
+   "cat": "history",
+   "lat": 26.334,
+   "lng": 84.855,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "One of the largest Buddhist stupas, a protected national monument",
+   "wiki": "Kesariya_Stupa",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Vikramashila",
+   "cat": "history",
+   "lat": 25.325,
+   "lng": 87.285,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Ruins of the great Pala-era Buddhist university, destroyed c. 1193",
+   "wiki": "Vikramashila",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Takht Sri Patna Sahib",
+   "cat": "religious",
+   "lat": 25.596,
+   "lng": 85.23,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Birthplace of Guru Gobind Singh, one of the five Sikh takhts",
+   "wiki": "Takht_Sri_Patna_Sahib",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Sher Shah Suri Tomb",
+   "cat": "history",
+   "lat": 24.952,
+   "lng": 84.015,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Sasaram's red-sandstone mausoleum rising from a lake, completed 1545",
+   "wiki": "Tomb_of_Sher_Shah_Suri",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Belum Caves",
+   "cat": "adventure",
+   "lat": 15.104,
+   "lng": 78.131,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "3.2 km of caverns \u2014 India's second-largest cave network",
+   "wiki": "Belum_Caves",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Undavalli Caves",
+   "cat": "history",
+   "lat": 16.496,
+   "lng": 80.58,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Rock-cut sandstone cave temples above the Krishna, 4th\u20135th century",
+   "wiki": "Undavalli_Caves",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Srisailam Mallikarjuna",
+   "cat": "religious",
+   "lat": 16.074,
+   "lng": 78.868,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Jyotirlinga and Shakti Peetha temple in the Nallamala hills",
+   "wiki": "Mallikarjuna_Temple,_Srisailam",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Tirathgarh Falls",
+   "cat": "scenic",
+   "lat": 18.914,
+   "lng": 81.865,
+   "state": "Chhattisgarh",
+   "stateCode": "CG",
+   "desc": "91 m single-drop waterfall in Kanger Valley, Bastar",
+   "wiki": "Teerathgarh_Falls",
+   "best": "Jul\u2013Feb"
+  },
+  {
+   "name": "Mangueshi Temple",
+   "cat": "religious",
+   "lat": 15.442,
+   "lng": 73.966,
+   "state": "Goa",
+   "stateCode": "GA",
+   "desc": "Goa's grand Shiva temple at Mangeshi, Ponda",
+   "wiki": "Mangueshi_Temple",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Chapora Fort",
+   "cat": "history",
+   "lat": 15.604,
+   "lng": 73.749,
+   "state": "Goa",
+   "stateCode": "GA",
+   "desc": "Hilltop fort with views over the Chapora river to Morjim",
+   "wiki": "Chapora_Fort",
+   "best": "Nov\u2013Mar"
   }
  ],
- "total": 447
+ "total": 482
 }

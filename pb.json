@@ -97,6 +97,39 @@
    "stateCode": "PB",
    "desc": "Punjab's bright floral embroidery, revived in Patiala",
    "wiki": "Phulkari"
+  },
+  {
+   "name": "Virasat-e-Khalsa",
+   "cat": "history",
+   "lat": 31.232,
+   "lng": 76.503,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Museum of Sikh history at Anandpur Sahib, opened in 2011",
+   "wiki": "Virasat-e-Khalsa",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Gobindgarh Fort",
+   "cat": "history",
+   "lat": 31.627,
+   "lng": 74.86,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Amritsar fort held by the Army for decades, open to visitors since 2017",
+   "wiki": "Gobindgarh_Fort",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Durgiana Temple",
+   "cat": "religious",
+   "lat": 31.64,
+   "lng": 74.86,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Amritsar's 'Silver Temple', named for its silver doors",
+   "wiki": "Durgiana_Temple",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

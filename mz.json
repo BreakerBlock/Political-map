@@ -66,6 +66,28 @@
    "desc": "One of Mizoram's largest churches, a landmark of Aizawl",
    "wiki": "Solomon's_Temple,_Aizawl",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Reiek",
+   "cat": "scenic",
+   "lat": 23.678,
+   "lng": 92.603,
+   "state": "Mizoram",
+   "stateCode": "MZ",
+   "desc": "1,465 m mountain with sweeping views over Aizawl's hills",
+   "wiki": "Reiek",
+   "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Tam Dil",
+   "cat": "scenic",
+   "lat": 23.739,
+   "lng": 92.953,
+   "state": "Mizoram",
+   "stateCode": "MZ",
+   "desc": "Lake set in forest near Saitual",
+   "wiki": "Tam_Dil",
+   "best": "Oct\u2013Apr"
   }
  ]
 }

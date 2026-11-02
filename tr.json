@@ -65,6 +65,28 @@
    "desc": "Ridge of Mizo villages and orange orchards",
    "wiki": "Jampui_Hills",
    "best": "Oct\u2013Dec"
+  },
+  {
+   "name": "Chabimura",
+   "cat": "history",
+   "lat": 23.47,
+   "lng": 91.67,
+   "state": "Tripura",
+   "stateCode": "TR",
+   "desc": "Giant rock carvings of Durga and other deities on the Gomati river cliffs",
+   "wiki": "Chabimura",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Kharchi Puja",
+   "cat": "festivals",
+   "lat": 23.835,
+   "lng": 91.35,
+   "state": "Tripura",
+   "stateCode": "TR",
+   "desc": "Week-long festival of the fourteen gods at Old Agartala, in July",
+   "wiki": "Kharchi_puja",
+   "best": "Jul"
   }
  ]
 }

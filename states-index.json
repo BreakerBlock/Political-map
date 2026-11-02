@@ -21,13 +21,13 @@
   "name": "Punjab",
   "lat": 31.0,
   "lng": 75.4,
-  "count": 9
+  "count": 12
  },
  "HR": {
   "name": "Haryana",
   "lat": 29.2,
   "lng": 76.1,
-  "count": 6
+  "count": 8
  },
  "UK": {
   "name": "Uttarakhand",
@@ -57,7 +57,7 @@
   "name": "Bihar",
   "lat": 25.7,
   "lng": 85.6,
-  "count": 9
+  "count": 14
  },
  "GJ": {
   "name": "Gujarat",
@@ -75,13 +75,13 @@
   "name": "Chhattisgarh",
   "lat": 21.5,
   "lng": 82.0,
-  "count": 7
+  "count": 9
  },
  "JH": {
   "name": "Jharkhand",
   "lat": 23.6,
   "lng": 85.5,
-  "count": 6
+  "count": 10
  },
  "WB": {
   "name": "West Bengal",
@@ -111,7 +111,7 @@
   "name": "Andhra Pradesh",
   "lat": 15.7,
   "lng": 79.9,
-  "count": 8
+  "count": 12
  },
  "KA": {
   "name": "Karnataka",
@@ -123,7 +123,7 @@
   "name": "Goa",
   "lat": 15.4,
   "lng": 74.0,
-  "count": 9
+  "count": 11
  },
  "KL": {
   "name": "Kerala",
@@ -159,25 +159,25 @@
   "name": "Nagaland",
   "lat": 26.1,
   "lng": 94.4,
-  "count": 6
+  "count": 8
  },
  "MN": {
   "name": "Manipur",
   "lat": 24.7,
   "lng": 93.9,
-  "count": 6
+  "count": 9
  },
  "MZ": {
   "name": "Mizoram",
   "lat": 23.3,
   "lng": 92.9,
-  "count": 6
+  "count": 8
  },
  "TR": {
   "name": "Tripura",
   "lat": 23.8,
   "lng": 91.7,
-  "count": 6
+  "count": 8
  },
  "SK": {
   "name": "Sikkim",
@@ -189,7 +189,7 @@
   "name": "Andaman & Nicobar",
   "lat": 11.6,
   "lng": 92.7,
-  "count": 8
+  "count": 9
  },
  "LD": {
   "name": "Lakshadweep",
@@ -201,18 +201,18 @@
   "name": "Puducherry",
   "lat": 11.9,
   "lng": 79.8,
-  "count": 3
+  "count": 4
  },
  "CH": {
   "name": "Chandigarh",
   "lat": 30.7,
   "lng": 76.8,
-  "count": 4
+  "count": 5
  },
  "DH": {
   "name": "Dadra & Nagar Haveli and Daman & Diu",
   "lat": 20.55,
   "lng": 71.9,
-  "count": 4
+  "count": 5
  }
 }
