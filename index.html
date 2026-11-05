@@ -968,12 +968,12 @@ function editMailto(p){
   return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(sub)}&body=${encodeURIComponent(body)}`;
 }
 // img: a URL, or null. While a Wikipedia photo is still being fetched the hero shows a shimmer.
-function popupHTML(p,img){
+function popupHTML(p,img,done){
   const c=CATS[p.cat]||CATS.scenic;
-  const loading=!img&&p.wiki&&imgCache[p.wiki]===undefined;
+  const loading=!done&&!img&&p.wiki&&imgCache[p.wiki]===undefined;
   const hero=`<div class="pop-hero${img?'':loading?' loading':' noimg'}" style="--c:${c.color}">`
     +`<div class="ph-glyph">${ICONS[p.cat]||ICONS.scenic}</div>`
-    +(img?`<img src="${esc(img)}" alt="${esc(p.name)}" onload="this.classList.add('ok')" onerror="this.parentElement.classList.add('noimg');this.remove()">`:'')
+    +(img&&img.length?`<img src="${esc(img[0])}" data-alt="${esc(img.slice(1).join('\n'))}" alt="${esc(p.name)}" decoding="async" referrerpolicy="strict-origin-when-cross-origin" onload="this.classList.add('ok')" onerror="imgFail(this)">`:'')
     +`<div class="pop-chip"><span>${ICONS[p.cat]||ICONS.scenic}</span>${c.label}</div>`
     +`<div class="pop-title"><div class="pop-name">${esc(p.name)}</div><div class="pop-state">${PIN_SVG}${esc(p.state)}</div></div></div>`;
   const links=`<div class="pop-links">`
@@ -983,9 +983,79 @@ function popupHTML(p,img){
   const best=p.best?`<div class="pop-best" title="Best time to visit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Best time <b>${esc(p.best)}</b></div>`:'';
   return `${hero}<div class="pop-body"><div class="pop-desc">${esc(p.desc)}</div>${best}${gettingThereHTML(p)}${links}${tripBtnHTML(p)}</div>`;
 }
+/* ── Wikipedia photos ──
+   Why images used to fail on desktop: the code rewrote every thumbnail URL to an arbitrary width
+   (/500px- in popups, /1600px- in stories and Surprise me on desktop, /960px- on phones). Wikimedia
+   only serves a fixed set of thumbnail widths now and rejects or throttles other sizes and any
+   upscale beyond the original, so the 1600px desktop photos (and 500px ones of small originals)
+   broke; failures were also cached for the whole session and several summaries were fetched at once.
+   Now: standard widths only, never wider than the original; on <img> error fall back to the plain
+   thumbnail, then the original file; summary fetches are queued (max 4) and retried once on 429. */
+const WM_STEPS=[250,330,500,960,1280,1920];
+const WM_WEB=/\.(jpe?g|png|gif|webp|svg)$/i;
+const sumCache={};let sumActive=0;const sumQueue=[];
+function sumSlot(){return new Promise(r=>{if(sumActive<4){sumActive++;r()}else sumQueue.push(r)})}
+function sumDone(){const n=sumQueue.shift();if(n)n();else sumActive--}
+async function wikiSummary(title){
+  const c=sumCache[title];if(c&&(c.ok||Date.now()-c.t<60000))return c.p;
+  const p=(async()=>{
+    await sumSlot();
+    try{
+      const url='https://en.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(title.replace(/ /g,'_'));
+      for(let a=0;a<2;a++){
+        const r=await fetch(url);
+        if(r.status===429&&a===0){const ra=parseFloat(r.headers.get('Retry-After'))||0;await new Promise(z=>setTimeout(z,Math.min(4000,Math.max(800,ra*1000))));continue}
+        if(r.status===404){sumCache[title].ok=true;return null}  // no such page: don't retry
+        if(!r.ok)return null;
+        sumCache[title].ok=true;return await r.json();
+      }
+      return null;
+    }catch(e){return null}finally{sumDone()}
+  })();
+  sumCache[title]={p,t:Date.now(),ok:false};
+  return p;
+}
+// Ordered candidate URLs for a photo at about `want` px wide: [standard-width thumb, plain thumb, original]
+function wikiImgSet(j,want){
+  if(!j)return null;const t=j.thumbnail&&j.thumbnail.source,o=j.originalimage;
+  if(!t&&!o)return null;
+  const ow=o&&o.width||0,file=o&&o.source||'',vector=/\.svg$/i.test(file);
+  const out=[];
+  if(!vector&&ow&&ow<=want&&WM_WEB.test(file))out.push(file);  // original is already small: use it as is
+  else if(t){
+    const m=t.match(/^(.*\/)(\d+)px-([^/]+)$/);
+    if(m){
+      const fits=x=>vector||!ow||x<ow;  // never ask for an upscale
+      const w=WM_STEPS.find(x=>x>=want*0.85&&fits(x))||[...WM_STEPS].reverse().find(fits);
+      if(w)out.push(m[1]+w+'px-'+m[3]);
+    }
+  }
+  if(t)out.push(t);
+  if(o&&o.source&&WM_WEB.test(o.source)&&(!ow||ow<=6000))out.push(o.source);
+  return [...new Set(out)];
+}
+// Point an <img> at the first candidate; on error it moves on to the next one
+function imgChain(im,urls,onFail){
+  im.decoding='async';im.referrerPolicy='strict-origin-when-cross-origin';
+  let i=0;im.onerror=()=>{i++;if(i<urls.length)im.src=urls[i];else if(onFail)onFail(im)};
+  im.src=urls[0];return im;
+}
+// Inline-HTML version (popups): data-alt carries the fallbacks
+function imgFail(im){
+  const a=(im.dataset.alt||'').split('\n').filter(Boolean);
+  if(a.length){im.src=a.shift();im.dataset.alt=a.join('\n')}
+  else{im.parentElement&&im.parentElement.classList.add('noimg');im.remove()}
+}
+// Resolve with the first candidate that actually loads (for CSS backgrounds), or null
+function firstLoadable(urls){
+  return new Promise(res=>{if(!urls||!urls.length)return res(null);const im=new Image();im.onload=()=>res(im.currentSrc||im.src);imgChain(im,urls,()=>res(null))});
+}
+const popImgW=()=>Math.max(330,Math.min(1280,popW()*Math.min(2,window.devicePixelRatio||1)));
 async function getImage(p){
-  if(p.img)return p.img;if(!p.wiki)return null;if(imgCache[p.wiki]!==undefined)return imgCache[p.wiki];
-  try{const r=await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(p.wiki));if(!r.ok)throw 0;const j=await r.json();const u=(j.thumbnail&&j.thumbnail.source)?j.thumbnail.source.replace(/\/\d+px-/,'/500px-'):null;imgCache[p.wiki]=u;return u}catch(e){imgCache[p.wiki]=null;return null}
+  if(p.img)return [p.img];if(!p.wiki)return null;if(imgCache[p.wiki]!==undefined)return imgCache[p.wiki];
+  const set=wikiImgSet(await wikiSummary(p.wiki),popImgW());
+  const c=sumCache[p.wiki];if(set||(c&&c.ok))imgCache[p.wiki]=set;  // transient failures are retried next time
+  return set;
 }
 
 /* ══════ RENDER ══════ */
@@ -1008,12 +1078,12 @@ function render(){
   visible.forEach(p=>{
     const c=CATS[p.cat]||CATS.scenic;
     const m=L.marker([p.lat,p.lng],{icon:makeIcon(p.cat)});
-    m.bindPopup(()=>popupHTML(p,p.img||imgCache[p.wiki]||null),{maxWidth:popW(),minWidth:popW(),autoPanPaddingTopLeft:[16,64],autoPanPaddingBottomRight:[16,36]});
+    m.bindPopup(()=>popupHTML(p,p.img?[p.img]:imgCache[p.wiki]||null),{maxWidth:popW(),minWidth:popW(),autoPanPaddingTopLeft:[16,64],autoPanPaddingBottomRight:[16,36]});
     m.bindTooltip(p.name,{permanent:true,direction:'right',offset:[2,0],className:'pin-label'});
     m.on('popupopen',async()=>{
       selectCard(placeKey(p));
       const had=imgCache[p.wiki]!==undefined,u=await getImage(p);
-      if(!had&&m.isPopupOpen())m.getPopup().setContent(popupHTML(p,u));
+      if(!had&&m.isPopupOpen())m.getPopup().setContent(popupHTML(p,u,true));
     });
     m.on('popupclose',()=>selectCard(null));
     m._place=p;
@@ -1248,7 +1318,7 @@ function tripChanged(){
   saveTrip();renderTrip();syncStopPins();syncCardTripBtns();
   if(location.hash.startsWith('#trip='))history.replaceState(null,'',location.pathname+location.search);
   // refresh any open popup's button
-  map.eachLayer(l=>{if(l._place&&l.isPopupOpen&&l.isPopupOpen()){const p=l._place;l.getPopup().setContent(popupHTML(p,p.img||imgCache[p.wiki]||null))}});
+  map.eachLayer(l=>{if(l._place&&l.isPopupOpen&&l.isPopupOpen()){const p=l._place;l.getPopup().setContent(popupHTML(p,p.img?[p.img]:imgCache[p.wiki]||null))}});
 }
 /* ── Road routing (free, key-less public OSRM server) ──
    One request per leg, cached per coordinate pair, so a leg with no road (e.g. to the
@@ -1570,18 +1640,12 @@ const SVG_PLAY='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a
 const SVG_CAL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>';
 let storyDecks=[],story={deck:0,i:0,paused:false,prevHash:'',timer:0};
 const bigImgCache={};
+// Big photo for stories / Surprise me: a candidate list (see wikiImgSet) or null
+function bigImgW(){const w=Math.max(window.innerWidth,window.innerHeight*0.75)*Math.min(2,window.devicePixelRatio||1);return w>1500?1920:w>1000?1280:960}
 async function getBigImage(wiki){
   if(!wiki)return null;if(bigImgCache[wiki]!==undefined)return bigImgCache[wiki];
-  const w=isMobile()?960:1600;
-  bigImgCache[wiki]=(async()=>{try{
-    const r=await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(wiki));if(!r.ok)throw 0;const j=await r.json();
-    const t=j.thumbnail&&j.thumbnail.source,o=j.originalimage;
-    if(!t)return null;
-    // Ask for a large rendition; keep the original if it is already smaller than that
-    if(o&&o.width&&o.width<=w)return o.source;
-    return /\/\d+px-/.test(t)?t.replace(/\/\d+px-/,'/'+w+'px-'):t;
-  }catch(e){return null}})();
-  return bigImgCache[wiki];
+  const p=wikiSummary(wiki).then(j=>{const set=wikiImgSet(j,bigImgW());const c=sumCache[wiki];if(!set&&!(c&&c.ok))delete bigImgCache[wiki];return set});
+  bigImgCache[wiki]=p;return p;
 }
 async function slideImage(s,p){return (s.wiki&&await getBigImage(s.wiki))||(p&&p.wiki&&await getBigImage(p.wiki))||null}
 const storyPlace=s=>allPlaces.find(p=>placeKey(p)===s.key);
@@ -1718,7 +1782,7 @@ async function showTeaser(id){
   t.dataset.deck=d.id;
   t.querySelector('small').textContent=d.gen==='season'?'This month · Swipe stories':'New · Swipe stories';
   t.setAttribute('aria-label','Play '+d.title);
-  const imgs=await Promise.all(d.slides.slice(0,3).map(s=>slideImage(s,storyPlace(s))));
+  const imgs=await Promise.all(d.slides.slice(0,3).map(s=>slideImage(s,storyPlace(s)).then(firstLoadable)));
   t.querySelector('.tz-stack').innerHTML=d.slides.slice(0,3).map((s,i)=>{const p=storyPlace(s),c=(CATS[p?p.cat:'scenic']||CATS.scenic).color;return `<i style="--c:${c};${imgs[i]?`background-image:url('${esc(imgs[i])}')`:''}"></i>`}).join('');
   t.querySelector('b').textContent=d.title;
   t.querySelector('span').textContent=d.gen==='season'?`${d.slides.length} picks for this month · tap to play`:`${d.slides.length} unforgettable places · tap to play`;
@@ -1774,7 +1838,7 @@ async function gotoStory(di,i,dir){
   bg.innerHTML=`<div class="st-glyph">${ICONS[p.cat]||ICONS.scenic}</div>`;
   stage.appendChild(bg);requestAnimationFrame(()=>bg.classList.add('in'));
   [...stage.children].slice(0,-1).forEach(o=>setTimeout(()=>o.remove(),800));
-  slideImage(s,p).then(u=>{if(!u||!bg.isConnected)return;const im=new Image();im.alt=p.name;im.style.setProperty('--ox',(40+Math.random()*30)+'%');im.onload=()=>im.classList.add('ok');im.src=u;bg.appendChild(im)});
+  slideImage(s,p).then(u=>{if(!u||!bg.isConnected)return;const im=new Image();im.alt=p.name;im.style.setProperty('--ox',(40+Math.random()*30)+'%');im.onload=()=>im.classList.add('ok');imgChain(im,u,x=>x.remove());bg.appendChild(im)});
   // Card: slide the old text out, swap, slide the new text in
   const card=document.getElementById('stCard');
   card.style.setProperty('--dir',dir<0?-1:1);
@@ -1788,7 +1852,7 @@ async function gotoStory(di,i,dir){
   card.classList.add('out');void card.offsetWidth;card.style.setProperty('--dir',dir<0?-1:1);card.classList.remove('out');
   renderStoryChrome();
   // Warm the next photo
-  const nx=d.slides[i+1]||(storyDecks[di+1]||{slides:[]}).slides[0];if(nx){const np=storyPlace(nx);slideImage(nx,np).then(u=>{if(u)new Image().src=u})}
+  const nx=d.slides[i+1]||(storyDecks[di+1]||{slides:[]}).slides[0];if(nx){const np=storyPlace(nx);slideImage(nx,np).then(u=>{if(u)imgChain(new Image(),u)})}
 }
 function nextStory(){
   const d=storyDecks[story.deck];
@@ -1941,7 +2005,7 @@ async function surprise(){
   best.hidden=!spCur.best;if(spCur.best)best.innerHTML=SVG_CAL+'Best time <b>'+esc(spCur.best)+'</b>';
   const hb=document.getElementById('spHubs'),hbh=spHubsHTML(spCur);hb.innerHTML=hbh;hb.hidden=!hbh;
   spButtons();
-  img.then(u=>{if(!u||seq!==spSeq)return;const im=new Image();im.alt=spCur.name;im.onload=()=>im.classList.add('ok');im.src=u;hero.insertBefore(im,hero.firstChild.nextSibling)});
+  img.then(u=>{if(!u||seq!==spSeq)return;const im=new Image();im.alt=spCur.name;im.onload=()=>im.classList.add('ok');imgChain(im,u,x=>x.remove());hero.insertBefore(im,hero.firstChild.nextSibling)});
   // Fly there, keeping the pin clear of the card at the bottom of the map
   const z=isMobile()?8.5:9,cardH=el.offsetHeight+parseInt(getComputedStyle(el).bottom||0);
   const mapH=map.getSize().y,shift=Math.max(0,cardH-mapH/2+60)/1;
