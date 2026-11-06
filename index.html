@@ -394,6 +394,12 @@ body.tl-dragging .tl-day{opacity:.25;transition:opacity .15s}
 .st-meta div{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:18px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-size:.78rem;font-weight:500}
 .st-meta svg{width:14px;height:14px;opacity:.85}
 .st-meta b{font-weight:700}
+.st-meta .st-go{gap:7px;flex-wrap:wrap}
+.st-go small{font-size:.6rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;opacity:.75;margin-right:1px}
+.st-go span{display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+.st-go span b{margin-right:2px}
+.st-go i{width:1px;height:12px;background:rgba(255,255,255,.4)}
+@media(max-width:760px){.st-go small{display:none}}
 .st-acts{display:flex;gap:10px;margin-top:18px}
 .st-acts button{display:flex;align-items:center;justify-content:center;gap:7px;padding:12px 20px;border-radius:26px;font:700 .86rem 'DM Sans',sans-serif;cursor:pointer;transition:transform .12s,background .15s,color .15s;border:1.5px solid #fff}
 .st-acts button:active{transform:scale(.97)}
@@ -1268,7 +1274,12 @@ function optimiseTrip(){
     }}
   trip=ord.map(placeKey);tripChanged();
 }
-function tripLink(){return location.origin+location.pathname+'#trip='+trip.map(encodeURIComponent).join('~')}
+function tripLink(){
+  // Chosen fly/train legs ride along as "&m=" + one letter per leg (f fly, r train, - road), e.g. &m=-f-r
+  const st=tripStops();let m=st.slice(1).map((p,i)=>({fly:'f',rail:'r'})[legMode(st[i],p)]||'-').join('');
+  m=m.replace(/-+$/,'');
+  return location.origin+location.pathname+'#trip='+trip.map(encodeURIComponent).join('~')+(m?'&m='+m:'');
+}
 async function shareTrip(){
   const url=tripLink();
   try{
@@ -1620,9 +1631,15 @@ async function initTrip(){
     if(states.length){await Promise.all(states.map(loadStateData));render()}
     return keys.filter(k=>findPlace(k));
   }
-  const m=location.hash.match(/^#trip=(.*)$/);
+  const m=location.hash.match(/^#trip=([^&]*)(?:&m=([-fr]*))?/);
   if(m){
     trip=await resolve(clean(m[1].split('~').map(k=>{try{return decodeURIComponent(k)}catch(e){return ''}}).filter(Boolean)));
+    if(m[2]&&trip.length){ // restore the sender's fly/train choices (a leg is only used if it still qualifies)
+      const st=trip.map(findPlace);
+      for(let i=1;i<st.length;i++){const c=m[2][i-1],k=st[i-1]&&st[i]&&modeKey(st[i-1],st[i]);if(!k)continue;
+        if(c==='f')legModes[k]='fly';else if(c==='r')legModes[k]='rail';else delete legModes[k]}
+      try{localStorage.setItem(MODE_LS,JSON.stringify(legModes))}catch(e){}
+    }
     if(trip.length){saveTrip();document.body.classList.add('trip-view');syncTabs();if(isMobile())document.body.classList.add('list-open');fitTrip();renderTrip();syncStopPins();syncCardTripBtns();return}
   }
   let saved=[];try{saved=JSON.parse(localStorage.getItem(TRIP_LS)||'[]')}catch(e){}
@@ -1847,7 +1864,7 @@ async function gotoStory(di,i,dir){
   card.innerHTML=`<div><span class="st-chip" style="--c:${c.color}"><span>${ICONS[p.cat]||ICONS.scenic}</span>${esc(c.label)}</span>${s.why?`<span class="st-why">${SVG_CAL}${esc(s.why)}</span>`:''}</div>`
     +`<h2>${esc(s.title||p.name)}</h2>`
     +`<div class="st-line">${esc(s.line||p.desc)}</div>`
-    +`<div class="st-meta"><div>${PIN_SVG}${s.title&&s.title!==p.name?esc(p.name)+', ':''}${esc(p.state)}</div>${season?`<div>${SVG_CAL}Best <b>${esc(season)}</b></div>`:''}</div>`
+    +`<div class="st-meta"><div>${PIN_SVG}${s.title&&s.title!==p.name?esc(p.name)+', ':''}${esc(p.state)}</div>${season?`<div>${SVG_CAL}Best <b>${esc(season)}</b></div>`:''}${storyHubsHTML(p)}</div>`
     +`<div class="st-acts"><button class="st-map" onclick="event.stopPropagation();storyShowOnMap()">${PIN_SVG}Show on map</button><button class="st-add${inTrip(p)?' in':''}" onclick="event.stopPropagation();storyToggleTrip(this)">${inTrip(p)?'✓ In your trip':'+ Add to trip'}</button></div>`;
   card.classList.add('out');void card.offsetWidth;card.style.setProperty('--dir',dir<0?-1:1);card.classList.remove('out');
   renderStoryChrome();
@@ -2066,6 +2083,13 @@ function gettingThereHTML(p){
 function cardHubsHTML(p){
   const n=nearestHubs(p);if(!n)return '';
   return `<div class="pc-hubs">${n.air?`<span class="a" title="Nearest airport: ${esc(n.air.h.name)} (straight-line distance)">${SVG_PLANE}<b>${esc(n.air.h.iata)}</b>${approxKm(n.air.d)}</span>`:''}${n.rail?`<span class="r" title="Nearest major railhead: ${esc(n.rail.h.name)} (straight-line distance)">${SVG_TRAIN}<b>${esc(n.rail.h.code)}</b>${approxKm(n.rail.d)}</span>`:n.island?`<span class="r">${SVG_TRAIN}no rail</span>`:''}</div>`;
+}
+/* Story slides: one frosted "Getting there" chip — nearest airport and major railhead, straight line */
+function storyHubsHTML(p){
+  const n=nearestHubs(p);if(!n||(!n.air&&!n.rail&&!n.island))return '';
+  const a=n.air?`<span title="Nearest airport: ${esc(n.air.h.name)} (straight-line distance)">${SVG_PLANE}<b>${esc(n.air.h.iata)}</b>${esc(n.air.h.city)} ${approxKm(n.air.d)}</span>`:'';
+  const r=n.rail?`<span title="Nearest major railhead: ${esc(n.rail.h.name)} (straight-line distance)">${SVG_TRAIN}<b>${esc(n.rail.h.code)}</b>${esc(n.rail.h.name)} ${approxKm(n.rail.d)}</span>`:n.island?`<span>${SVG_TRAIN}No rail · ship or fly</span>`:'';
+  return `<div class="st-go"><small>Getting there</small>${a}${a&&r?'<i></i>':''}${r}</div>`;
 }
 function spHubsHTML(p){
   const n=nearestHubs(p);if(!n)return '';

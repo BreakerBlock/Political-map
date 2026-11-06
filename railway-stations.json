@@ -817,6 +817,223 @@
    "city": "Visakhapatnam",
    "lat": 17.7215,
    "lng": 83.29
+  },
+  {
+   "code": "RN",
+   "name": "Ratnagiri",
+   "city": "Ratnagiri",
+   "lat": 17.0034,
+   "lng": 73.3582
+  },
+  {
+   "code": "KOP",
+   "name": "Chhatrapati Shahu Maharaj Terminus",
+   "city": "Kolhapur",
+   "lat": 16.7027,
+   "lng": 74.2377
+  },
+  {
+   "code": "KRMI",
+   "name": "Karmali",
+   "city": "Old Goa",
+   "lat": 15.4907,
+   "lng": 73.9245
+  },
+  {
+   "code": "THVM",
+   "name": "Thivim",
+   "city": "Mapusa",
+   "lat": 15.6307,
+   "lng": 73.8769
+  },
+  {
+   "code": "SNSI",
+   "name": "Sainagar Shirdi",
+   "city": "Shirdi",
+   "lat": 19.7808,
+   "lng": 74.4801
+  },
+  {
+   "code": "RJT",
+   "name": "Rajkot Junction",
+   "city": "Rajkot",
+   "lat": 22.3116,
+   "lng": 70.8028
+  },
+  {
+   "code": "BVC",
+   "name": "Bhavnagar Terminus",
+   "city": "Bhavnagar",
+   "lat": 21.7818,
+   "lng": 72.1422
+  },
+  {
+   "code": "DWK",
+   "name": "Dwarka",
+   "city": "Dwarka",
+   "lat": 22.2496,
+   "lng": 68.9812
+  },
+  {
+   "code": "BHUJ",
+   "name": "Bhuj",
+   "city": "Bhuj",
+   "lat": 23.266,
+   "lng": 69.6784
+  },
+  {
+   "code": "RKMP",
+   "name": "Rani Kamlapati",
+   "city": "Bhopal",
+   "lat": 23.2216,
+   "lng": 77.4401
+  },
+  {
+   "code": "TPTY",
+   "name": "Tirupati",
+   "city": "Tirupati",
+   "lat": 13.6279,
+   "lng": 79.4194
+  },
+  {
+   "code": "RJY",
+   "name": "Rajahmundry",
+   "city": "Rajahmundry",
+   "lat": 16.9845,
+   "lng": 81.7843
+  },
+  {
+   "code": "SWV",
+   "name": "Sawantwadi Road",
+   "city": "Sawantwadi",
+   "lat": 15.8666,
+   "lng": 73.7852
+  },
+  {
+   "code": "KAWR",
+   "name": "Karwar",
+   "city": "Karwar",
+   "lat": 14.8201,
+   "lng": 74.1826
+  },
+  {
+   "code": "JRBM",
+   "name": "Jiribam",
+   "city": "Jiribam",
+   "lat": 24.794,
+   "lng": 93.0996
+  },
+  {
+   "code": "SANG",
+   "name": "Sairang",
+   "city": "Aizawl",
+   "lat": 23.7989,
+   "lng": 92.6522
+  },
+  {
+   "code": "MCTM",
+   "name": "Udhampur",
+   "city": "Udhampur",
+   "lat": 32.9263,
+   "lng": 75.1537
+  },
+  {
+   "code": "RMR",
+   "name": "Ramnagar",
+   "city": "Ramnagar",
+   "lat": 29.3898,
+   "lng": 79.122
+  },
+  {
+   "code": "NRL",
+   "name": "Neral Junction",
+   "city": "Neral (for Matheran)",
+   "lat": 19.0267,
+   "lng": 73.3184
+  },
+  {
+   "code": "LNL",
+   "name": "Lonavala",
+   "city": "Lonavala",
+   "lat": 18.7493,
+   "lng": 73.4081
+  },
+  {
+   "code": "STR",
+   "name": "Satara",
+   "city": "Satara",
+   "lat": 17.6884,
+   "lng": 74.0633
+  },
+  {
+   "code": "EKNR",
+   "name": "Ekta Nagar",
+   "city": "Kevadia",
+   "lat": 21.8875,
+   "lng": 73.6888
+  },
+  {
+   "code": "JND",
+   "name": "Junagadh Junction",
+   "city": "Junagadh",
+   "lat": 21.529,
+   "lng": 70.4575
+  },
+  {
+   "code": "VRL",
+   "name": "Veraval Junction",
+   "city": "Veraval (for Somnath)",
+   "lat": 20.9124,
+   "lng": 70.3709
+  },
+  {
+   "code": "GOK",
+   "name": "Gokarna Road",
+   "city": "Gokarna",
+   "lat": 14.5839,
+   "lng": 74.3677
+  },
+  {
+   "code": "MRDW",
+   "name": "Murdeshwar",
+   "city": "Murudeshwar",
+   "lat": 14.1008,
+   "lng": 74.5053
+  },
+  {
+   "code": "KQN",
+   "name": "Kodaikanal Road",
+   "city": "Kodai Road",
+   "lat": 10.1796,
+   "lng": 77.9096
+  },
+  {
+   "code": "KMU",
+   "name": "Kumbakonam",
+   "city": "Kumbakonam",
+   "lat": 10.9544,
+   "lng": 79.3894
+  },
+  {
+   "code": "JL",
+   "name": "Jalgaon Junction",
+   "city": "Jalgaon",
+   "lat": 21.0182,
+   "lng": 75.563
+  },
+  {
+   "code": "AWY",
+   "name": "Aluva",
+   "city": "Aluva",
+   "lat": 10.108,
+   "lng": 76.356
+  },
+  {
+   "code": "BHNG",
+   "name": "Bhalukpong",
+   "city": "Bhalukpong",
+   "lat": 27.0006,
+   "lng": 92.6447
   }
  ]
 }
