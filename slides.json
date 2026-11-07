@@ -186,6 +186,30 @@
      "line": "Climb before dawn to the top of the Barail Range for a sunrise over Kohima's hills.",
      "season": "Oct–May",
      "title": "Sunrise on Mount Japfü"
+    },
+    {
+     "key": "LA|Khardung La",
+     "line": "Ride up to 5,359 m on one of the world's highest motorable roads, gateway to Nubra.",
+     "season": "Jun–Sep",
+     "title": "Ride over Khardung La"
+    },
+    {
+     "key": "KA|Kali River Rafting, Dandeli",
+     "line": "Shoot the Kali's rapids through the forests of Dandeli.",
+     "season": "Oct–Jun",
+     "title": "White water on the Kali"
+    },
+    {
+     "key": "HP|Sar Pass Trek",
+     "line": "Cross a 4,220 m pass above the Parvati Valley — and slide down the snow on the other side.",
+     "season": "May–Jun",
+     "title": "Slide down from Sar Pass"
+    },
+    {
+     "key": "MH|Kamshet Paragliding",
+     "line": "Launch off the Western Ghats near Lonavala, Maharashtra's paragliding hub.",
+     "season": "Oct–May",
+     "title": "Fly at Kamshet"
     }
    ]
   },
@@ -496,6 +520,24 @@
      "key": "CG|Tirathgarh Falls",
      "line": "A 91 m single plunge of white water in the forests of Bastar's Kanger Valley.",
      "season": "Jul–Feb"
+    },
+    {
+     "key": "LA|Hanle Dark Sky Reserve",
+     "line": "Look up at the Milky Way from India's first dark-sky reserve, beside the Indian Astronomical Observatory.",
+     "season": "May–Oct",
+     "title": "Stargaze at Hanle"
+    },
+    {
+     "key": "HP|Chandra Taal",
+     "line": "Camp by the crescent Moon Lake at 4,250 m in Lahaul.",
+     "season": "Jun–Sep",
+     "title": "Camp by Chandra Taal"
+    },
+    {
+     "key": "MP|Bhedaghat Marble Rocks",
+     "line": "Boat between glowing white marble cliffs on the Narmada — best on a full-moon night.",
+     "season": "Oct–Mar",
+     "title": "Moonlight at the Marble Rocks"
     }
    ]
   },
@@ -560,6 +602,36 @@
      "line": "Odisha's 'burnt cheese' — fresh chhena baked into a sweet, smoky cake.",
      "season": "All year",
      "title": "Chhena poda, Odisha"
+    },
+    {
+     "key": "WB|Darjeeling Tea, Happy Valley",
+     "line": "Sip first-flush Darjeeling where it grows — India's first GI-tagged product, on an estate dating to 1854.",
+     "season": "Mar–May",
+     "title": "Tea on the slopes of Darjeeling"
+    },
+    {
+     "key": "TS|Hyderabadi Haleem",
+     "line": "Queue in Ramzan for slow-cooked haleem, India's first GI-tagged meat dish.",
+     "season": "Ramzan",
+     "title": "Haleem nights in Hyderabad"
+    },
+    {
+     "key": "GJ|Manek Chowk Night Market",
+     "line": "Ahmedabad's old square turns into a food street after 9:30 pm.",
+     "season": "Oct–Mar",
+     "title": "Midnight snacks at Manek Chowk"
+    },
+    {
+     "key": "TN|Jigarthanda, Madurai",
+     "line": "Cool off with Madurai's milk, almond gum and ice-cream drink.",
+     "season": "All year",
+     "title": "A glass of jigarthanda"
+    },
+    {
+     "key": "UP|Banarasi Paan",
+     "line": "End a Varanasi evening with the city's GI-tagged betel-leaf paan.",
+     "season": "Oct–Mar",
+     "title": "Banarasi paan by the ghats"
     }
    ]
   },

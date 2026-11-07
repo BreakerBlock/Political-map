@@ -117,6 +117,27 @@
    "stateCode": "TS",
    "desc": "GI-tagged storytelling scrolls from Cheriyal",
    "wiki": "Cheriyal_scroll_painting"
+  },
+  {
+   "name": "Hyderabadi Haleem",
+   "cat": "cuisine",
+   "lat": 17.36,
+   "lng": 78.474,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Slow-cooked Ramzan stew \u2014 India's first GI-tagged meat dish (2010)",
+   "wiki": "Hyderabadi_haleem"
+  },
+  {
+   "name": "Bhongir Fort",
+   "cat": "adventure",
+   "lat": 17.516,
+   "lng": 78.893,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "11th-c. Chalukya fort atop a monolithic rock \u2014 a popular trek",
+   "wiki": "Bhongir_Fort",
+   "best": "Oct\u2013Feb"
   }
  ]
 }

@@ -159,6 +159,94 @@
    "desc": "Chamba's week-long fair for the maize harvest, with a grand procession",
    "wiki": "Minjar_Mela",
    "best": "Jul\u2013Aug"
+  },
+  {
+   "name": "Sar Pass Trek",
+   "cat": "adventure",
+   "lat": 32.07,
+   "lng": 77.388,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Parvati Valley trek over a 4,220 m pass with a snow slide down",
+   "wiki": "Sar_Pass_Trek",
+   "best": "May\u2013Jun"
+  },
+  {
+   "name": "Indrahar Pass Trek",
+   "cat": "adventure",
+   "lat": 32.298,
+   "lng": 76.381,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "4,342 m Dhauladhar pass above McLeod Ganj, past Triund",
+   "wiki": "Indrahar_Pass",
+   "best": "Apr\u2013Oct"
+  },
+  {
+   "name": "Rohtang Pass",
+   "cat": "scenic",
+   "lat": 32.371,
+   "lng": 77.246,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "3,978 m snow pass above Manali, now bypassed by the Atal Tunnel",
+   "wiki": "Rohtang_Pass",
+   "best": "May\u2013Nov"
+  },
+  {
+   "name": "Chandra Taal",
+   "cat": "scenic",
+   "lat": 32.475,
+   "lng": 77.617,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Crescent 'Moon Lake' at 4,250 m, a Ramsar wetland in Lahaul",
+   "wiki": "Chandra_Taal",
+   "best": "Jun\u2013Sep"
+  },
+  {
+   "name": "Key Monastery",
+   "cat": "religious",
+   "lat": 32.298,
+   "lng": 78.012,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Spiti's largest monastery, a Gelug gompa stacked on a hill at 4,166 m",
+   "wiki": "Key_Monastery",
+   "best": "Jun\u2013Sep"
+  },
+  {
+   "name": "Chitkul",
+   "cat": "scenic",
+   "lat": 31.352,
+   "lng": 78.437,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Last village on the old Hindustan\u2013Tibet road, in the Baspa valley",
+   "wiki": "Chitkul",
+   "best": "May\u2013Oct"
+  },
+  {
+   "name": "Khajjiar",
+   "cat": "scenic",
+   "lat": 32.546,
+   "lng": 76.058,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Deodar-ringed meadow and lake called 'Mini Switzerland of India'",
+   "wiki": "Khajjiar",
+   "best": "Mar\u2013Jun, Sep\u2013Nov"
+  },
+  {
+   "name": "Hidimba Devi Temple",
+   "cat": "religious",
+   "lat": 32.242,
+   "lng": 77.187,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Pagoda-roofed wooden temple of 1553 in a Manali cedar forest",
+   "wiki": "Hidimba_Devi_Temple",
+   "best": "Mar\u2013Jun, Sep\u2013Nov"
   }
  ]
 }

@@ -255,6 +255,26 @@
    "desc": "Hilltop Murugan shrine; Thaipusam draws vast crowds",
    "wiki": "Dhandayuthapani_Swamy_Temple",
    "best": "Jan\u2013Feb (Thaipusam)"
+  },
+  {
+   "name": "Jigarthanda, Madurai",
+   "cat": "cuisine",
+   "lat": 9.925,
+   "lng": 78.12,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Madurai's cold drink of milk, almond gum, sarsaparilla and ice cream",
+   "wiki": "Jigarthanda_(drink)"
+  },
+  {
+   "name": "Kumbakonam Degree Coffee",
+   "cat": "cuisine",
+   "lat": 10.96,
+   "lng": 79.385,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Temple-town filter coffee made strong with fresh cow's milk",
+   "wiki": "Kumbakonam_Degree_Coffee"
   }
  ]
 }

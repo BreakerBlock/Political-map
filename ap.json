@@ -128,6 +128,16 @@
    "desc": "Cool hill station of the Rayalaseema plateau",
    "wiki": "Horsley_Hills",
    "best": "Oct\u2013Jun"
+  },
+  {
+   "name": "Pootharekulu, Atreyapuram",
+   "cat": "cuisine",
+   "lat": 16.834,
+   "lng": 81.787,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Paper-thin rice-film sweet born in this Godavari-delta village",
+   "wiki": "Pootharekulu"
   }
  ]
 }

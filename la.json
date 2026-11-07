@@ -149,6 +149,50 @@
    "desc": "Rafting the Zanskar gorge from Chiling to Nimmu",
    "wiki": "Zanskar_River",
    "best": "Jun\u2013Sep"
+  },
+  {
+   "name": "Khardung La",
+   "cat": "adventure",
+   "lat": 34.278,
+   "lng": 77.604,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "5,359 m pass on one of the world's highest motorable roads \u2014 a biker's rite",
+   "wiki": "Khardung_La",
+   "best": "Jun\u2013Sep"
+  },
+  {
+   "name": "Alchi Monastery",
+   "cat": "religious",
+   "lat": 34.217,
+   "lng": 77.167,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Holds some of the oldest surviving paintings in Ladakh",
+   "wiki": "Alchi_Monastery",
+   "best": "May\u2013Oct"
+  },
+  {
+   "name": "Hanle Dark Sky Reserve",
+   "cat": "scenic",
+   "lat": 32.779,
+   "lng": 78.964,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "India's first dark-sky reserve (2022), by the Indian Astronomical Observatory",
+   "wiki": "Indian_Astronomical_Observatory",
+   "best": "May\u2013Oct"
+  },
+  {
+   "name": "Turtuk",
+   "cat": "scenic",
+   "lat": 34.847,
+   "lng": 76.827,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Balti village of apricot orchards near the LoC, opened to visitors in 2010",
+   "wiki": "Turtuk",
+   "best": "May\u2013Oct"
   }
  ]
 }

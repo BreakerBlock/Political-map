@@ -126,6 +126,27 @@
    "desc": "Ornate 17th\u201318th-century terracotta temples of the Malla kings",
    "wiki": "Bishnupur_(West_Bengal)",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Park Street Food Trail",
+   "cat": "cuisine",
+   "lat": 22.554,
+   "lng": 88.35,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Kolkata's 'Food Street' \u2014 the street that never sleeps, home of Peter Cat and Mocambo",
+   "wiki": "Park_Street,_Kolkata"
+  },
+  {
+   "name": "Darjeeling Tea, Happy Valley",
+   "cat": "cuisine",
+   "lat": 27.052,
+   "lng": 88.259,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "1854 tea estate; Darjeeling tea was India's first GI-tagged product",
+   "wiki": "Darjeeling_tea",
+   "best": "Mar\u2013May, Oct\u2013Nov"
   }
  ]
 }

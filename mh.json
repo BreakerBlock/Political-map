@@ -255,6 +255,38 @@
    "desc": "Lion's Fort \u2014 hilltop fortress 28 km from Pune",
    "wiki": "Sinhagad",
    "best": "Jun\u2013Feb"
+  },
+  {
+   "name": "Kolhapuri Tambda-Pandhara Rassa",
+   "cat": "cuisine",
+   "lat": 16.692,
+   "lng": 74.233,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Kolhapur's fiery red and mellow white mutton curries",
+   "wiki": "Kolhapur"
+  },
+  {
+   "name": "Kamshet Paragliding",
+   "cat": "adventure",
+   "lat": 18.763,
+   "lng": 73.557,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Western Ghats village near Lonavala, Maharashtra's paragliding hub",
+   "wiki": "Kamshet",
+   "best": "Oct\u2013May"
+  },
+  {
+   "name": "Rajmachi Fort Trek",
+   "cat": "adventure",
+   "lat": 18.826,
+   "lng": 73.396,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Twin-hilltop Maratha fort trek from Lonavala, lush in the monsoon",
+   "wiki": "Rajmachi",
+   "best": "Jun\u2013Feb"
   }
  ]
 }

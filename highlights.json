@@ -2932,7 +2932,190 @@
    "desc": "Hilltop fort with views over the Chapora river to Morjim",
    "wiki": "Chapora_Fort",
    "best": "Nov\u2013Mar"
+  },
+  {
+   "name": "Park Street Food Trail",
+   "cat": "cuisine",
+   "lat": 22.554,
+   "lng": 88.35,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Kolkata's 'Food Street' \u2014 the street that never sleeps, home of Peter Cat and Mocambo",
+   "wiki": "Park_Street,_Kolkata"
+  },
+  {
+   "name": "Banarasi Paan",
+   "cat": "cuisine",
+   "lat": 25.315,
+   "lng": 83.01,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Varanasi's famous betel-leaf paan, GI-tagged in 2023",
+   "wiki": "Banaras_Pan"
+  },
+  {
+   "name": "Manek Chowk Night Market",
+   "cat": "cuisine",
+   "lat": 23.024,
+   "lng": 72.589,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Ahmedabad square that turns into a food street after 9:30 pm",
+   "wiki": "Manek_Chowk_(Ahmedabad)",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Jigarthanda, Madurai",
+   "cat": "cuisine",
+   "lat": 9.925,
+   "lng": 78.12,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Madurai's cold drink of milk, almond gum, sarsaparilla and ice cream",
+   "wiki": "Jigarthanda_(drink)"
+  },
+  {
+   "name": "Darjeeling Tea, Happy Valley",
+   "cat": "cuisine",
+   "lat": 27.052,
+   "lng": 88.259,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "1854 tea estate; Darjeeling tea was India's first GI-tagged product",
+   "wiki": "Darjeeling_tea",
+   "best": "Mar\u2013May, Oct\u2013Nov"
+  },
+  {
+   "name": "Hyderabadi Haleem",
+   "cat": "cuisine",
+   "lat": 17.36,
+   "lng": 78.474,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Slow-cooked Ramzan stew \u2014 India's first GI-tagged meat dish (2010)",
+   "wiki": "Hyderabadi_haleem"
+  },
+  {
+   "name": "Khardung La",
+   "cat": "adventure",
+   "lat": 34.278,
+   "lng": 77.604,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "5,359 m pass on one of the world's highest motorable roads \u2014 a biker's rite",
+   "wiki": "Khardung_La",
+   "best": "Jun\u2013Sep"
+  },
+  {
+   "name": "Kamshet Paragliding",
+   "cat": "adventure",
+   "lat": 18.763,
+   "lng": 73.557,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Western Ghats village near Lonavala, Maharashtra's paragliding hub",
+   "wiki": "Kamshet",
+   "best": "Oct\u2013May"
+  },
+  {
+   "name": "Sar Pass Trek",
+   "cat": "adventure",
+   "lat": 32.07,
+   "lng": 77.388,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Parvati Valley trek over a 4,220 m pass with a snow slide down",
+   "wiki": "Sar_Pass_Trek",
+   "best": "May\u2013Jun"
+  },
+  {
+   "name": "Kali River Rafting, Dandeli",
+   "cat": "adventure",
+   "lat": 15.267,
+   "lng": 74.617,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "White-water rafting on the Kali through the Dandeli forests",
+   "wiki": "Kali_River_(Karnataka)",
+   "best": "Oct\u2013Jun"
+  },
+  {
+   "name": "Bhedaghat Marble Rocks",
+   "cat": "scenic",
+   "lat": 23.131,
+   "lng": 79.797,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Narmada boat ride through a gorge of white marble, by Dhuandhar Falls",
+   "wiki": "Marble_Rocks",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Rohtang Pass",
+   "cat": "scenic",
+   "lat": 32.371,
+   "lng": 77.246,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "3,978 m snow pass above Manali, now bypassed by the Atal Tunnel",
+   "wiki": "Rohtang_Pass",
+   "best": "May\u2013Nov"
+  },
+  {
+   "name": "Chandra Taal",
+   "cat": "scenic",
+   "lat": 32.475,
+   "lng": 77.617,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Crescent 'Moon Lake' at 4,250 m, a Ramsar wetland in Lahaul",
+   "wiki": "Chandra_Taal",
+   "best": "Jun\u2013Sep"
+  },
+  {
+   "name": "Key Monastery",
+   "cat": "religious",
+   "lat": 32.298,
+   "lng": 78.012,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Spiti's largest monastery, a Gelug gompa stacked on a hill at 4,166 m",
+   "wiki": "Key_Monastery",
+   "best": "Jun\u2013Sep"
+  },
+  {
+   "name": "Hidimba Devi Temple",
+   "cat": "religious",
+   "lat": 32.242,
+   "lng": 77.187,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Pagoda-roofed wooden temple of 1553 in a Manali cedar forest",
+   "wiki": "Hidimba_Devi_Temple",
+   "best": "Mar\u2013Jun, Sep\u2013Nov"
+  },
+  {
+   "name": "Alchi Monastery",
+   "cat": "religious",
+   "lat": 34.217,
+   "lng": 77.167,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Holds some of the oldest surviving paintings in Ladakh",
+   "wiki": "Alchi_Monastery",
+   "best": "May\u2013Oct"
+  },
+  {
+   "name": "Hanle Dark Sky Reserve",
+   "cat": "scenic",
+   "lat": 32.779,
+   "lng": 78.964,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "India's first dark-sky reserve (2022), by the Indian Astronomical Observatory",
+   "wiki": "Indian_Astronomical_Observatory",
+   "best": "May\u2013Oct"
   }
  ],
- "total": 482
+ "total": 516
 }

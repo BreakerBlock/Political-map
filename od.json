@@ -130,6 +130,17 @@
    "stateCode": "OD",
    "desc": "Odisha's 'burnt cheese' dessert, born in Dasapalla",
    "wiki": "Chhena_poda"
+  },
+  {
+   "name": "Deomali Peak",
+   "cat": "adventure",
+   "lat": 18.676,
+   "lng": 82.982,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Odisha's highest peak (1,672 m) in the Koraput hills",
+   "wiki": "Deomali_(mountain)",
+   "best": "Oct\u2013Feb"
   }
  ]
 }

@@ -300,6 +300,49 @@
    "desc": "Karnataka's highest peak (1,925 m), a trekkers' favourite",
    "wiki": "Mullayyanagiri",
    "best": "Sep\u2013Feb"
+  },
+  {
+   "name": "Mysore Pak",
+   "cat": "cuisine",
+   "lat": 12.309,
+   "lng": 76.653,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Ghee-rich gram-flour sweet created in the Mysore royal kitchens",
+   "wiki": "Mysore_pak"
+  },
+  {
+   "name": "Ramanagara Rock Climbing",
+   "cat": "adventure",
+   "lat": 12.723,
+   "lng": 77.286,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Granite hills where Sholay was shot \u2014 Bengaluru's climbing crag",
+   "wiki": "Ramanagara",
+   "best": "Oct\u2013Feb"
+  },
+  {
+   "name": "Kodachadri Trek",
+   "cat": "adventure",
+   "lat": 13.861,
+   "lng": 74.875,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "1,343 m Western Ghats peak with sunset views to the Arabian Sea",
+   "wiki": "Kodachadri",
+   "best": "Oct\u2013Feb"
+  },
+  {
+   "name": "Kali River Rafting, Dandeli",
+   "cat": "adventure",
+   "lat": 15.267,
+   "lng": 74.617,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "White-water rafting on the Kali through the Dandeli forests",
+   "wiki": "Kali_River_(Karnataka)",
+   "best": "Oct\u2013Jun"
   }
  ]
 }

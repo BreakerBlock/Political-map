@@ -261,6 +261,26 @@
    "desc": "Melt-in-the-mouth galouti kebabs, served since 1905",
    "wiki": "Tunde_ke_kabab",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Banarasi Paan",
+   "cat": "cuisine",
+   "lat": 25.315,
+   "lng": 83.01,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Varanasi's famous betel-leaf paan, GI-tagged in 2023",
+   "wiki": "Banaras_Pan"
+  },
+  {
+   "name": "Mathura Peda",
+   "cat": "cuisine",
+   "lat": 27.495,
+   "lng": 77.675,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Khoya sweet of Krishna's birthplace, offered as prasad at Janmashtami",
+   "wiki": "Mathura_peda"
   }
  ]
 }

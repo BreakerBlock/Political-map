@@ -195,6 +195,28 @@
    "desc": "Natural-dye hand block printing in red and black, from Bagh village",
    "wiki": "Bagh_print",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Bhedaghat Marble Rocks",
+   "cat": "scenic",
+   "lat": 23.131,
+   "lng": 79.797,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Narmada boat ride through a gorge of white marble, by Dhuandhar Falls",
+   "wiki": "Marble_Rocks",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Dhupgarh",
+   "cat": "scenic",
+   "lat": 22.449,
+   "lng": 78.373,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Highest point of Madhya Pradesh (1,352 m), Pachmarhi's sunset point",
+   "wiki": "Dhupgarh",
+   "best": "Oct\u2013Jun"
   }
  ]
 }

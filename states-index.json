@@ -9,13 +9,13 @@
   "name": "Ladakh",
   "lat": 34.3,
   "lng": 77.6,
-  "count": 14
+  "count": 18
  },
  "HP": {
   "name": "Himachal Pradesh",
   "lat": 31.8,
   "lng": 77.3,
-  "count": 15
+  "count": 23
  },
  "PB": {
   "name": "Punjab",
@@ -33,7 +33,7 @@
   "name": "Uttarakhand",
   "lat": 30.1,
   "lng": 79.2,
-  "count": 15
+  "count": 17
  },
  "DL": {
   "name": "Delhi",
@@ -51,7 +51,7 @@
   "name": "Uttar Pradesh",
   "lat": 27.0,
   "lng": 80.5,
-  "count": 25
+  "count": 27
  },
  "BR": {
   "name": "Bihar",
@@ -63,13 +63,13 @@
   "name": "Gujarat",
   "lat": 22.6,
   "lng": 71.6,
-  "count": 18
+  "count": 19
  },
  "MP": {
   "name": "Madhya Pradesh",
   "lat": 23.4,
   "lng": 78.6,
-  "count": 19
+  "count": 21
  },
  "CG": {
   "name": "Chhattisgarh",
@@ -87,37 +87,37 @@
   "name": "West Bengal",
   "lat": 24.0,
   "lng": 87.9,
-  "count": 12
+  "count": 14
  },
  "OD": {
   "name": "Odisha",
   "lat": 20.4,
   "lng": 84.6,
-  "count": 12
+  "count": 13
  },
  "MH": {
   "name": "Maharashtra",
   "lat": 19.3,
   "lng": 76.2,
-  "count": 24
+  "count": 27
  },
  "TS": {
   "name": "Telangana",
   "lat": 17.9,
   "lng": 79.1,
-  "count": 11
+  "count": 13
  },
  "AP": {
   "name": "Andhra Pradesh",
   "lat": 15.7,
   "lng": 79.9,
-  "count": 12
+  "count": 13
  },
  "KA": {
   "name": "Karnataka",
   "lat": 14.8,
   "lng": 76.1,
-  "count": 29
+  "count": 33
  },
  "GA": {
   "name": "Goa",
@@ -135,7 +135,7 @@
   "name": "Tamil Nadu",
   "lat": 11.0,
   "lng": 78.5,
-  "count": 24
+  "count": 26
  },
  "AS": {
   "name": "Assam",

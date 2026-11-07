@@ -159,6 +159,27 @@
    "desc": "Hanging valley of meadows ringed by snow peaks, trekked from Sankri",
    "wiki": "Har_Ki_Doon",
    "best": "Apr\u2013Jun, Sep"
+  },
+  {
+   "name": "Bal Mithai, Almora",
+   "cat": "cuisine",
+   "lat": 29.597,
+   "lng": 79.659,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Fudge-like Kumaoni sweet of roasted khoa coated in sugar balls",
+   "wiki": "Bal_mithai"
+  },
+  {
+   "name": "Nag Tibba Trek",
+   "cat": "adventure",
+   "lat": 30.586,
+   "lng": 78.151,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Short Garhwal trek to the 3,022 m 'Serpent's Peak' above Mussoorie",
+   "wiki": "Nag_Tibba",
+   "best": "Oct\u2013Jun"
   }
  ]
 }
