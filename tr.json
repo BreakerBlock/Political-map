@@ -87,6 +87,17 @@
    "desc": "Week-long festival of the fourteen gods at Old Agartala, in July",
    "wiki": "Kharchi_puja",
    "best": "Jul"
+  },
+  {
+   "name": "Garia Puja",
+   "cat": "festivals",
+   "lat": 23.831,
+   "lng": 91.287,
+   "state": "Tripura",
+   "stateCode": "TR",
+   "desc": "Seven-day Tripuri festival honouring Baba Garia at the start of Boishakh",
+   "wiki": "Garia_puja",
+   "best": "Apr"
   }
  ]
 }

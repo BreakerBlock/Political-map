@@ -107,6 +107,28 @@
    "desc": "Apatani farming festival in the Ziro valley",
    "wiki": "Dree_Festival",
    "best": "Jul (5\u20137)"
+  },
+  {
+   "name": "Solung, Pasighat",
+   "cat": "festivals",
+   "lat": 28.07,
+   "lng": 95.33,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "The Adi people's chief festival, five days around the harvest",
+   "wiki": "Solung",
+   "best": "Sep"
+  },
+  {
+   "name": "Bomdila Monastery",
+   "cat": "religious",
+   "lat": 27.265,
+   "lng": 92.42,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Tibetan Buddhist monastery in the hill town of Bomdila",
+   "wiki": "Bomdila",
+   "best": "Oct\u2013Apr"
   }
  ]
 }

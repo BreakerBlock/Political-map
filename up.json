@@ -281,6 +281,27 @@
    "stateCode": "UP",
    "desc": "Khoya sweet of Krishna's birthplace, offered as prasad at Janmashtami",
    "wiki": "Mathura_peda"
+  },
+  {
+   "name": "Taj Mahotsav",
+   "cat": "festivals",
+   "lat": 27.166,
+   "lng": 78.053,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Ten days of crafts, music and food at Shilpgram, near the Taj",
+   "wiki": "Taj_Mahotsav",
+   "best": "Feb"
+  },
+  {
+   "name": "Bhadohi Carpets",
+   "cat": "arts",
+   "lat": 25.42,
+   "lng": 82.57,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "India's great centre of hand-knotted carpet weaving",
+   "wiki": "Bhadohi"
   }
  ]
 }

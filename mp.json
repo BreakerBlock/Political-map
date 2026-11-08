@@ -217,6 +217,17 @@
    "desc": "Highest point of Madhya Pradesh (1,352 m), Pachmarhi's sunset point",
    "wiki": "Dhupgarh",
    "best": "Oct\u2013Jun"
+  },
+  {
+   "name": "Maheshwari Saree, Maheshwar",
+   "cat": "arts",
+   "lat": 22.11,
+   "lng": 75.35,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Cotton-silk handloom saris woven on the banks of the Narmada",
+   "wiki": "Maheshwari_saree",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

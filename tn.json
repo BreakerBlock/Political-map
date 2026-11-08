@@ -275,6 +275,49 @@
    "stateCode": "TN",
    "desc": "Temple-town filter coffee made strong with fresh cow's milk",
    "wiki": "Kumbakonam_Degree_Coffee"
+  },
+  {
+   "name": "Jallikattu, Alanganallur",
+   "cat": "festivals",
+   "lat": 10.047,
+   "lng": 78.09,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "The most famous bull-taming arena of Tamil Nadu, held at Pongal",
+   "wiki": "Jallikattu",
+   "best": "Jan"
+  },
+  {
+   "name": "Karthigai Deepam, Tiruvannamalai",
+   "cat": "festivals",
+   "lat": 12.232,
+   "lng": 79.067,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "A great ghee beacon is lit atop Arunachala hill above the temple",
+   "wiki": "Karthika_Deepam",
+   "best": "Nov\u2013Dec"
+  },
+  {
+   "name": "Swamimalai Bronzes",
+   "cat": "arts",
+   "lat": 10.96,
+   "lng": 79.333,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Temple town where icons are still cast by the lost-wax method",
+   "wiki": "Swamimalai"
+  },
+  {
+   "name": "Athangudi Tiles",
+   "cat": "arts",
+   "lat": 10.123,
+   "lng": 78.669,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Chettinad village making the handmade tiles of its mansions",
+   "wiki": "Attangudi",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

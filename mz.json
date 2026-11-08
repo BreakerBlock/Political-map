@@ -88,6 +88,17 @@
    "desc": "Lake set in forest near Saitual",
    "wiki": "Tam_Dil",
    "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Pawl Kut",
+   "cat": "festivals",
+   "lat": 23.733,
+   "lng": 92.718,
+   "state": "Mizoram",
+   "stateCode": "MZ",
+   "desc": "Mizo post-harvest thanksgiving with feasting, celebrated in Aizawl",
+   "wiki": "Pawl_Kut",
+   "best": "Dec"
   }
  ]
 }

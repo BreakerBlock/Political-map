@@ -130,6 +130,27 @@
    "desc": "Amritsar's 'Silver Temple', named for its silver doors",
    "wiki": "Durgiana_Temple",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Qila Mubarak, Bathinda",
+   "cat": "history",
+   "lat": 30.208,
+   "lng": 74.938,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Ancient brick fort where Razia Sultan was imprisoned",
+   "wiki": "Qila_Mubarak,_Bathinda",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Partition Museum, Amritsar",
+   "cat": "history",
+   "lat": 31.626,
+   "lng": 74.879,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Stories of 1947's Partition, told in Amritsar's Town Hall",
+   "wiki": "Partition_Museum"
   }
  ]
 }

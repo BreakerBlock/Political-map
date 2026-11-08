@@ -55,6 +55,17 @@
    "desc": "Headquarters of Dadra & Nagar Haveli, in the forested Sahyadri foothills",
    "wiki": "Silvassa",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Gangeshwar Mahadev Temple",
+   "cat": "religious",
+   "lat": 20.705,
+   "lng": 70.957,
+   "state": "Dadra & Nagar Haveli and Daman & Diu",
+   "stateCode": "DH",
+   "desc": "Seashore Shiva shrine at Fudam, Diu, its lingas washed by the tide",
+   "wiki": "Gangeshwar_Mahadev_Temple",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

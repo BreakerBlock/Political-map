@@ -119,6 +119,17 @@
    "stateCode": "ML",
    "desc": "Khasi\u2013Jaintia pork-and-rice dishes like jadoh and doh khleh",
    "wiki": "Jowai"
+  },
+  {
+   "name": "Nongkrem Dance, Smit",
+   "cat": "festivals",
+   "lat": 25.502,
+   "lng": 91.904,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "Khasi thanksgiving dance at Smit honouring the goddess Ka Blei Synshar",
+   "wiki": "Meghalaya",
+   "best": "Nov"
   }
  ]
 }

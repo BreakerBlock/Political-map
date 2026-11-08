@@ -54,6 +54,17 @@
    "stateCode": "CH",
    "desc": "Chandigarh's museum of art, born of Partition \u2014 miniatures, Gandhara sculpture",
    "wiki": "Government_Museum_and_Art_Gallery,_Chandigarh"
+  },
+  {
+   "name": "Rose Festival, Chandigarh",
+   "cat": "festivals",
+   "lat": 30.746,
+   "lng": 76.782,
+   "state": "Chandigarh",
+   "stateCode": "CH",
+   "desc": "Chandigarh's annual festival in the Zakir Husain Rose Garden",
+   "wiki": "Rose_Festival_(Chandigarh)",
+   "best": "Feb"
   }
  ]
 }

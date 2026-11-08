@@ -89,6 +89,28 @@
    "desc": "Mughal tomb, madrasa and gardens at Thanesar, Kurukshetra",
    "wiki": "Sheikh_Chilli's_Tomb",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Rakhigarhi",
+   "cat": "history",
+   "lat": 29.293,
+   "lng": 76.114,
+   "state": "Haryana",
+   "stateCode": "HR",
+   "desc": "One of the largest Indus Valley Civilisation sites, in Hisar district",
+   "wiki": "Rakhigarhi",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Bhindawas Bird Sanctuary",
+   "cat": "fauna",
+   "lat": 28.533,
+   "lng": 76.552,
+   "state": "Haryana",
+   "stateCode": "HR",
+   "desc": "Wetland and Ramsar site in Jhajjar, busy with winter migrants",
+   "wiki": "Bhindawas_Wildlife_Sanctuary",
+   "best": "Nov\u2013Mar"
   }
  ]
 }

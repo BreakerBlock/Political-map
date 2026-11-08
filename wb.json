@@ -147,6 +147,26 @@
    "desc": "1854 tea estate; Darjeeling tea was India's first GI-tagged product",
    "wiki": "Darjeeling_tea",
    "best": "Mar\u2013May, Oct\u2013Nov"
+  },
+  {
+   "name": "Kumartuli",
+   "cat": "arts",
+   "lat": 22.6,
+   "lng": 88.361,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Kolkata's potters' quarter, where the city's Durga idols are sculpted",
+   "wiki": "Kumortuli"
+  },
+  {
+   "name": "Kalighat Painting",
+   "cat": "arts",
+   "lat": 22.518,
+   "lng": 88.346,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Bold 19th-century patua paintings born around the Kalighat temple",
+   "wiki": "Kalighat_painting"
   }
  ]
 }

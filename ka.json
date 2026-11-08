@@ -343,6 +343,16 @@
    "desc": "White-water rafting on the Kali through the Dandeli forests",
    "wiki": "Kali_River_(Karnataka)",
    "best": "Oct\u2013Jun"
+  },
+  {
+   "name": "Mysore Silk",
+   "cat": "arts",
+   "lat": 12.309,
+   "lng": 76.653,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Lustrous mulberry-silk saris from the state's own Mysore factory",
+   "wiki": "Mysore_silk"
   }
  ]
 }

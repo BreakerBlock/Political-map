@@ -153,6 +153,16 @@
    "desc": "Waterfall stepping about 50 m down into the Lohabar river",
    "wiki": "Kakolat_Falls",
    "best": "Jul\u2013Oct"
+  },
+  {
+   "name": "Bhagalpuri Silk",
+   "cat": "arts",
+   "lat": 25.25,
+   "lng": 87.0,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Tussar silk from Bhagalpur, the \"Silk City\" of Bihar",
+   "wiki": "Bhagalpuri_silk"
   }
  ]
 }

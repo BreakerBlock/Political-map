@@ -141,6 +141,28 @@
    "desc": "Odisha's highest peak (1,672 m) in the Koraput hills",
    "wiki": "Deomali_(mountain)",
    "best": "Oct\u2013Feb"
+  },
+  {
+   "name": "Dhanu Jatra, Bargarh",
+   "cat": "festivals",
+   "lat": 21.333,
+   "lng": 83.617,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "The whole town becomes the stage for an open-air Krishna\u2013Kansa drama",
+   "wiki": "Dhanu_jatra",
+   "best": "Dec\u2013Jan"
+  },
+  {
+   "name": "Sambalpuri Saree",
+   "cat": "arts",
+   "lat": 21.47,
+   "lng": 83.97,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Ikat saris with the pattern tie-dyed into the threads before weaving",
+   "wiki": "Sambalpuri_sari",
+   "best": "Sep\u2013Mar"
   }
  ]
 }

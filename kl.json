@@ -272,6 +272,17 @@
    "stateCode": "KL",
    "desc": "Kozhikode's Sweetmeat Street, famed for halwa",
    "wiki": "S._M._Street"
+  },
+  {
+   "name": "Aranmula Boat Race",
+   "cat": "festivals",
+   "lat": 9.328,
+   "lng": 76.688,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Snake boats race on the Pamba by the Aranmula Parthasarathy temple, at Onam",
+   "wiki": "Aranmula_Boat_Race",
+   "best": "Aug\u2013Sep"
   }
  ]
 }

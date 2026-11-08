@@ -193,6 +193,17 @@
    "desc": "Balti village of apricot orchards near the LoC, opened to visitors in 2010",
    "wiki": "Turtuk",
    "best": "May\u2013Oct"
+  },
+  {
+   "name": "Sindhu Darshan Festival",
+   "cat": "festivals",
+   "lat": 34.073,
+   "lng": 77.639,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "A celebration of the Indus river on its banks at Shey, near Leh",
+   "wiki": "Sindhu_Darshan_Festival",
+   "best": "Jun"
   }
  ]
 }

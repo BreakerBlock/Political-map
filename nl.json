@@ -87,6 +87,17 @@
    "desc": "Angami purification festival around Kohima, starting late February",
    "wiki": "Sekrenyi",
    "best": "Feb"
+  },
+  {
+   "name": "Moatsu, Mokokchung",
+   "cat": "festivals",
+   "lat": 26.326,
+   "lng": 94.532,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "The Ao Naga festival of song, dance and feasting after the sowing",
+   "wiki": "Ao_Naga",
+   "best": "May"
   }
  ]
 }

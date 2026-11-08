@@ -3115,7 +3115,158 @@
    "desc": "India's first dark-sky reserve (2022), by the Indian Astronomical Observatory",
    "wiki": "Indian_Astronomical_Observatory",
    "best": "May\u2013Oct"
+  },
+  {
+   "name": "Jallikattu, Alanganallur",
+   "cat": "festivals",
+   "lat": 10.047,
+   "lng": 78.09,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "The most famous bull-taming arena of Tamil Nadu, held at Pongal",
+   "wiki": "Jallikattu",
+   "best": "Jan"
+  },
+  {
+   "name": "Karthigai Deepam, Tiruvannamalai",
+   "cat": "festivals",
+   "lat": 12.232,
+   "lng": 79.067,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "A great ghee beacon is lit atop Arunachala hill above the temple",
+   "wiki": "Karthika_Deepam",
+   "best": "Nov\u2013Dec"
+  },
+  {
+   "name": "Swamimalai Bronzes",
+   "cat": "arts",
+   "lat": 10.96,
+   "lng": 79.333,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Temple town where icons are still cast by the lost-wax method",
+   "wiki": "Swamimalai"
+  },
+  {
+   "name": "Aranmula Boat Race",
+   "cat": "festivals",
+   "lat": 9.328,
+   "lng": 76.688,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Snake boats race on the Pamba by the Aranmula Parthasarathy temple, at Onam",
+   "wiki": "Aranmula_Boat_Race",
+   "best": "Aug\u2013Sep"
+  },
+  {
+   "name": "Dhanu Jatra, Bargarh",
+   "cat": "festivals",
+   "lat": 21.333,
+   "lng": 83.617,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "The whole town becomes the stage for an open-air Krishna\u2013Kansa drama",
+   "wiki": "Dhanu_jatra",
+   "best": "Dec\u2013Jan"
+  },
+  {
+   "name": "Pandharpur Wari",
+   "cat": "festivals",
+   "lat": 17.67,
+   "lng": 75.33,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Varkari pilgrims walk for weeks, singing, to Vithoba at Ashadhi Ekadashi",
+   "wiki": "Pandharpur_Wari",
+   "best": "Jun\u2013Jul"
+  },
+  {
+   "name": "Uttarayan Kite Festival",
+   "cat": "festivals",
+   "lat": 23.034,
+   "lng": 72.572,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Gujarat's sky fills with kites at Makar Sankranti; Ahmedabad's riverfront hosts the fest",
+   "wiki": "International_Kite_Festival_in_Gujarat_\u2013_Uttarayan",
+   "best": "Jan"
+  },
+  {
+   "name": "Rogan Art, Nirona",
+   "cat": "arts",
+   "lat": 23.347,
+   "lng": 69.261,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Kutch village where cloth is painted with castor-oil paste from a stylus",
+   "wiki": "Rogan_painting",
+   "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Sindhu Darshan Festival",
+   "cat": "festivals",
+   "lat": 34.073,
+   "lng": 77.639,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "A celebration of the Indus river on its banks at Shey, near Leh",
+   "wiki": "Sindhu_Darshan_Festival",
+   "best": "Jun"
+  },
+  {
+   "name": "Mandi Shivaratri Fair",
+   "cat": "festivals",
+   "lat": 31.72,
+   "lng": 76.92,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "A week of village deities in procession to Mandi's Paddal ground",
+   "wiki": "Mandi_Shivaratri_Fair",
+   "best": "Feb\u2013Mar"
+  },
+  {
+   "name": "Taj Mahotsav",
+   "cat": "festivals",
+   "lat": 27.166,
+   "lng": 78.053,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Ten days of crafts, music and food at Shilpgram, near the Taj",
+   "wiki": "Taj_Mahotsav",
+   "best": "Feb"
+  },
+  {
+   "name": "Kumartuli",
+   "cat": "arts",
+   "lat": 22.6,
+   "lng": 88.361,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Kolkata's potters' quarter, where the city's Durga idols are sculpted",
+   "wiki": "Kumortuli"
+  },
+  {
+   "name": "Partition Museum, Amritsar",
+   "cat": "history",
+   "lat": 31.626,
+   "lng": 74.879,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Stories of 1947's Partition, told in Amritsar's Town Hall",
+   "wiki": "Partition_Museum"
+  },
+  {
+   "name": "Rakhigarhi",
+   "cat": "history",
+   "lat": 29.293,
+   "lng": 76.114,
+   "state": "Haryana",
+   "stateCode": "HR",
+   "desc": "One of the largest Indus Valley Civilisation sites, in Hisar district",
+   "wiki": "Rakhigarhi",
+   "best": "Oct\u2013Mar"
   }
  ],
- "total": 516
+ "total": 554
 }

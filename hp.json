@@ -247,6 +247,28 @@
    "desc": "Pagoda-roofed wooden temple of 1553 in a Manali cedar forest",
    "wiki": "Hidimba_Devi_Temple",
    "best": "Mar\u2013Jun, Sep\u2013Nov"
+  },
+  {
+   "name": "Mandi Shivaratri Fair",
+   "cat": "festivals",
+   "lat": 31.72,
+   "lng": 76.92,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "A week of village deities in procession to Mandi's Paddal ground",
+   "wiki": "Mandi_Shivaratri_Fair",
+   "best": "Feb\u2013Mar"
+  },
+  {
+   "name": "Chamba Rumal",
+   "cat": "arts",
+   "lat": 32.57,
+   "lng": 76.13,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Fine double-satin-stitch embroidery, a traditional wedding gift",
+   "wiki": "Chamba_Rumal",
+   "best": "Mar\u2013Jun"
   }
  ]
 }

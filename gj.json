@@ -200,6 +200,28 @@
    "desc": "Ahmedabad square that turns into a food street after 9:30 pm",
    "wiki": "Manek_Chowk_(Ahmedabad)",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Uttarayan Kite Festival",
+   "cat": "festivals",
+   "lat": 23.034,
+   "lng": 72.572,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Gujarat's sky fills with kites at Makar Sankranti; Ahmedabad's riverfront hosts the fest",
+   "wiki": "International_Kite_Festival_in_Gujarat_\u2013_Uttarayan",
+   "best": "Jan"
+  },
+  {
+   "name": "Rogan Art, Nirona",
+   "cat": "arts",
+   "lat": 23.347,
+   "lng": 69.261,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Kutch village where cloth is painted with castor-oil paste from a stylus",
+   "wiki": "Rogan_painting",
+   "best": "Nov\u2013Feb"
   }
  ]
 }
