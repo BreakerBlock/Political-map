@@ -66,6 +66,39 @@
    "desc": "Seashore Shiva shrine at Fudam, Diu, its lingas washed by the tide",
    "wiki": "Gangeshwar_Mahadev_Temple",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Devka Beach, Daman",
+   "cat": "scenic",
+   "lat": 20.4431,
+   "lng": 72.8315,
+   "state": "Dadra & Nagar Haveli and Daman & Diu",
+   "stateCode": "DH",
+   "desc": "Rocky Nani Daman beach with a seafront promenade (swimming discouraged)",
+   "wiki": "Daman,_India",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Naida Caves, Diu",
+   "cat": "scenic",
+   "lat": 20.7103,
+   "lng": 70.9807,
+   "state": "Dadra & Nagar Haveli and Daman & Diu",
+   "stateCode": "DH",
+   "desc": "Sunlit maze of rock tunnels outside the walls of Diu Fort",
+   "wiki": "Diu,_India",
+   "best": "Oct\u2013Feb"
+  },
+  {
+   "name": "INS Khukri Memorial, Diu",
+   "cat": "history",
+   "lat": 20.7028,
+   "lng": 70.9768,
+   "state": "Dadra & Nagar Haveli and Daman & Diu",
+   "stateCode": "DH",
+   "desc": "Hilltop memorial to the frigate sunk off Diu on 9 December 1971",
+   "wiki": "INS_Khukri_(F149)",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

@@ -65,6 +65,17 @@
    "desc": "Chandigarh's annual festival in the Zakir Husain Rose Garden",
    "wiki": "Rose_Festival_(Chandigarh)",
    "best": "Feb"
+  },
+  {
+   "name": "Sukhna Wildlife Sanctuary",
+   "cat": "fauna",
+   "lat": 30.745,
+   "lng": 76.8228,
+   "state": "Chandigarh",
+   "stateCode": "CH",
+   "desc": "Shivalik-hills forest beside Sukhna Lake; entry needs a forest permit",
+   "wiki": "Sukhna_Wildlife_Sanctuary",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

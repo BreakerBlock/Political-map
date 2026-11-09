@@ -3266,7 +3266,161 @@
    "desc": "One of the largest Indus Valley Civilisation sites, in Hisar district",
    "wiki": "Rakhigarhi",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Nameri National Park",
+   "cat": "fauna",
+   "lat": 27.01,
+   "lng": 92.79,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Foothill forest on the Jia Bhoreli near Tezpur; a tiger reserve since 2000",
+   "wiki": "Nameri_National_Park",
+   "best": "Nov\u2013Apr"
+  },
+  {
+   "name": "Dibru-Saikhowa National Park",
+   "cat": "fauna",
+   "lat": 27.667,
+   "lng": 95.383,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Swamp forest and river islands near Tinsukia, known for feral horses and white-winged wood ducks",
+   "wiki": "Dibru-Saikhowa_National_Park",
+   "best": "Nov\u2013Apr"
+  },
+  {
+   "name": "Amur Falcons, Pangti",
+   "cat": "fauna",
+   "lat": 26.2595,
+   "lng": 94.321,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "The \"Falcon Capital of the World\": huge Amur falcon roosts on their autumn migration",
+   "wiki": "Pangti",
+   "best": "Oct\u2013Nov"
+  },
+  {
+   "name": "Manipuri Cuisine, Imphal",
+   "cat": "cuisine",
+   "lat": 24.8074,
+   "lng": 93.9384,
+   "state": "Manipur",
+   "stateCode": "MN",
+   "desc": "Rice and ngari (fermented fish): eromba, singju and black-rice chak-hao kheer",
+   "wiki": "Manipuri_cuisine",
+   "best": "All year"
+  },
+  {
+   "name": "Paradise Beach",
+   "cat": "scenic",
+   "lat": 11.8735,
+   "lng": 79.8213,
+   "state": "Puducherry",
+   "stateCode": "PY",
+   "desc": "Sand spit south of town, reached by ferry from the Chunnambar boat house",
+   "wiki": "Puducherry",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Naida Caves, Diu",
+   "cat": "scenic",
+   "lat": 20.7103,
+   "lng": 70.9807,
+   "state": "Dadra & Nagar Haveli and Daman & Diu",
+   "stateCode": "DH",
+   "desc": "Sunlit maze of rock tunnels outside the walls of Diu Fort",
+   "wiki": "Diu,_India",
+   "best": "Oct\u2013Feb"
+  },
+  {
+   "name": "Dachigam National Park",
+   "cat": "fauna",
+   "lat": 34.1372,
+   "lng": 75.0378,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Zabarwan Range park near Srinagar, home of the hangul (Kashmir stag)",
+   "wiki": "Dachigam_National_Park",
+   "best": "Apr\u2013Oct"
+  },
+  {
+   "name": "Satkosia Tiger Reserve",
+   "cat": "fauna",
+   "lat": 20.5401,
+   "lng": 84.8316,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Where the Mahanadi cuts a 22 km gorge through the Eastern Ghats",
+   "wiki": "Satkosia_Tiger_Reserve",
+   "best": "Nov\u2013Jun"
+  },
+  {
+   "name": "Neora Valley National Park",
+   "cat": "fauna",
+   "lat": 27.0647,
+   "lng": 88.789,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Kalimpong hill forests known for red pandas",
+   "wiki": "Neora_Valley_National_Park",
+   "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Jaldapara National Park",
+   "cat": "fauna",
+   "lat": 26.6909,
+   "lng": 89.2763,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Terai grassland and riverine forest, known for one-horned rhinos",
+   "wiki": "Jaldapara_National_Park",
+   "best": "Oct\u2013May"
+  },
+  {
+   "name": "Marine National Park, Gulf of Kutch",
+   "cat": "fauna",
+   "lat": 22.4,
+   "lng": 69.72,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Coral reefs and mangroves; walk the Narara reef at low tide",
+   "wiki": "Marine_National_Park,_Gulf_of_Kutch",
+   "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Mihidana & Sitabhog, Bardhaman",
+   "cat": "cuisine",
+   "lat": 23.233,
+   "lng": 87.867,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Bardhaman's twin GI-tagged sweets: fine grains of mihidana and chhena sitabhog",
+   "wiki": "Mihidana",
+   "best": "All year"
+  },
+  {
+   "name": "Thalassery Biryani",
+   "cat": "cuisine",
+   "lat": 11.752,
+   "lng": 75.5,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Malabar biryani made with small, fragrant kaima rice instead of basmati",
+   "wiki": "Thalassery_cuisine",
+   "best": "All year"
+  },
+  {
+   "name": "Kheerganga Trek",
+   "cat": "adventure",
+   "lat": 31.9918,
+   "lng": 77.5072,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Trek from Barshaini up the Parvati valley to a hot-spring meadow",
+   "wiki": "Parvati_Valley",
+   "best": "May\u2013Jun, Sep\u2013Oct"
   }
  ],
- "total": 554
+ "total": 591
 }

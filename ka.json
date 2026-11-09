@@ -353,6 +353,17 @@
    "stateCode": "KA",
    "desc": "Lustrous mulberry-silk saris from the state's own Mysore factory",
    "wiki": "Mysore_silk"
+  },
+  {
+   "name": "Barapole River Rafting",
+   "cat": "adventure",
+   "lat": 12.0276,
+   "lng": 75.932,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Monsoon white-water on the Barapole in south Coorg",
+   "wiki": "Kodagu_district",
+   "best": "Jul\u2013Oct"
   }
  ]
 }

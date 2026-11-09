@@ -107,6 +107,39 @@
    "desc": "Small grassland sanctuary with one of Assam's largest rhino populations",
    "wiki": "Pobitora_Wildlife_Sanctuary",
    "best": "Nov\u2013Apr"
+  },
+  {
+   "name": "Nameri National Park",
+   "cat": "fauna",
+   "lat": 27.01,
+   "lng": 92.79,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Foothill forest on the Jia Bhoreli near Tezpur; a tiger reserve since 2000",
+   "wiki": "Nameri_National_Park",
+   "best": "Nov\u2013Apr"
+  },
+  {
+   "name": "Dibru-Saikhowa National Park",
+   "cat": "fauna",
+   "lat": 27.667,
+   "lng": 95.383,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Swamp forest and river islands near Tinsukia, known for feral horses and white-winged wood ducks",
+   "wiki": "Dibru-Saikhowa_National_Park",
+   "best": "Nov\u2013Apr"
+  },
+  {
+   "name": "Assamese Cuisine, Guwahati",
+   "cat": "cuisine",
+   "lat": 26.1722,
+   "lng": 91.7458,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Rice and fish with few spices \u2014 try khar (alkaline) and tenga (sour) dishes",
+   "wiki": "Assamese_cuisine",
+   "best": "All year"
   }
  ]
 }

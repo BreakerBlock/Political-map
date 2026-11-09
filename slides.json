@@ -210,6 +210,16 @@
      "line": "Launch off the Western Ghats near Lonavala, Maharashtra's paragliding hub.",
      "season": "Oct\u2013May",
      "title": "Fly at Kamshet"
+    },
+    {
+     "key": "HP|Kheerganga Trek",
+     "line": "Hike up the Parvati valley from Barshaini and soak in a hot spring at the top.",
+     "season": "May\u2013Jun, Sep\u2013Oct"
+    },
+    {
+     "key": "KA|Barapole River Rafting",
+     "line": "Monsoon white-water through the forests of south Coorg.",
+     "season": "Jul\u2013Oct"
     }
    ]
   },
@@ -368,6 +378,36 @@
      "key": "GJ|Velavadar Blackbuck NP",
      "line": "Blackbuck herds on open grassland by the Gulf of Khambhat.",
      "season": "Oct\u2013Mar"
+    },
+    {
+     "key": "NL|Amur Falcons, Pangti",
+     "line": "Every autumn, migrating Amur falcons roost in huge flocks around Pangti \u2014 the \"Falcon Capital of the World\".",
+     "season": "Oct\u2013Nov"
+    },
+    {
+     "key": "JK|Dachigam National Park",
+     "line": "Climb the Zabarwan slopes above Srinagar looking for the hangul, the rare Kashmir stag.",
+     "season": "Apr\u2013Oct"
+    },
+    {
+     "key": "WB|Jaldapara National Park",
+     "line": "Tall Dooars grassland where one-horned rhinos graze below the Himalayan foothills.",
+     "season": "Oct\u2013May"
+    },
+    {
+     "key": "OD|Satkosia Tiger Reserve",
+     "line": "The Mahanadi slices a 22 km gorge through the forested Eastern Ghats.",
+     "season": "Nov\u2013Jun"
+    },
+    {
+     "key": "WB|Neora Valley National Park",
+     "line": "Misty Kalimpong forests known for the elusive red panda.",
+     "season": "Oct\u2013Apr"
+    },
+    {
+     "key": "GJ|Marine National Park, Gulf of Kutch",
+     "line": "At low tide, walk out over the Narara reef to find corals and sea creatures in the pools.",
+     "season": "Nov\u2013Feb"
     }
    ]
   },
@@ -668,6 +708,21 @@
      "line": "End a Varanasi evening with the city's GI-tagged betel-leaf paan.",
      "season": "Oct\u2013Mar",
      "title": "Banarasi paan by the ghats"
+    },
+    {
+     "key": "KL|Thalassery Biryani",
+     "line": "Malabar's own biryani \u2014 small, fragrant kaima rice instead of basmati.",
+     "season": "All year"
+    },
+    {
+     "key": "MN|Manipuri Cuisine, Imphal",
+     "line": "Eromba, singju and purple-black chak-hao kheer, all built on rice and fermented ngari.",
+     "season": "All year"
+    },
+    {
+     "key": "WB|Mihidana & Sitabhog, Bardhaman",
+     "line": "Bardhaman's twin GI-tagged sweets: golden grains of mihidana and rice-like sitabhog.",
+     "season": "All year"
     }
    ]
   },

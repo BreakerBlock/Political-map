@@ -55,6 +55,39 @@
    "desc": "Ruins of a Roman-era trading port on the Ariyankuppam river",
    "wiki": "Arikamedu",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Paradise Beach",
+   "cat": "scenic",
+   "lat": 11.8735,
+   "lng": 79.8213,
+   "state": "Puducherry",
+   "stateCode": "PY",
+   "desc": "Sand spit south of town, reached by ferry from the Chunnambar boat house",
+   "wiki": "Puducherry",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Basilica of the Sacred Heart of Jesus",
+   "cat": "religious",
+   "lat": 11.9263,
+   "lng": 79.827,
+   "state": "Puducherry",
+   "stateCode": "PY",
+   "desc": "Gothic Revival church on the south boulevard, a basilica since 2011",
+   "wiki": "Basilica_of_the_Sacred_Heart_of_Jesus,_Pondicherry",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Ousteri Lake",
+   "cat": "fauna",
+   "lat": 11.955,
+   "lng": 79.745,
+   "state": "Puducherry",
+   "stateCode": "PY",
+   "desc": "Wetland bird sanctuary shared with Tamil Nadu; migratory birds arrive after November",
+   "wiki": "Ousteri_Lake",
+   "best": "Nov\u2013Mar"
   }
  ]
 }

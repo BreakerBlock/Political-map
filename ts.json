@@ -148,6 +148,17 @@
    "stateCode": "TS",
    "desc": "Carved and painted wooden toys by the Naqqash artisans of Nirmal",
    "wiki": "Nirmal_toys_and_craft"
+  },
+  {
+   "name": "Amrabad Tiger Reserve",
+   "cat": "fauna",
+   "lat": 16.5957,
+   "lng": 78.8335,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Tiger reserve in the Nallamala forest of the Eastern Ghats",
+   "wiki": "Amrabad_Tiger_Reserve",
+   "best": "Oct\u2013Jun"
   }
  ]
 }

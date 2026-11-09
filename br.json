@@ -163,6 +163,17 @@
    "stateCode": "BR",
    "desc": "Tussar silk from Bhagalpur, the \"Silk City\" of Bihar",
    "wiki": "Bhagalpuri_silk"
+  },
+  {
+   "name": "Silao Khaja",
+   "cat": "cuisine",
+   "lat": 25.081,
+   "lng": 85.428,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Layered fried pastry in syrup; Silao's version is GI-tagged",
+   "wiki": "Khaja",
+   "best": "All year"
   }
  ]
 }

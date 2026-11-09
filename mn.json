@@ -97,6 +97,28 @@
    "stateCode": "MN",
    "desc": "Black stone-and-clay pottery shaped without a wheel, in Longpi village",
    "wiki": "Longpi"
+  },
+  {
+   "name": "Manipuri Cuisine, Imphal",
+   "cat": "cuisine",
+   "lat": 24.8074,
+   "lng": 93.9384,
+   "state": "Manipur",
+   "stateCode": "MN",
+   "desc": "Rice and ngari (fermented fish): eromba, singju and black-rice chak-hao kheer",
+   "wiki": "Manipuri_cuisine",
+   "best": "All year"
+  },
+  {
+   "name": "INA Memorial, Moirang",
+   "cat": "history",
+   "lat": 24.5027,
+   "lng": 93.777,
+   "state": "Manipur",
+   "stateCode": "MN",
+   "desc": "Where the INA raised the tricolour on 14 April 1944; with the INA War Museum",
+   "wiki": "INA_Martyrs'_Memorial_Complex",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

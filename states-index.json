@@ -3,7 +3,7 @@
   "name": "Jammu & Kashmir",
   "lat": 33.8,
   "lng": 75.5,
-  "count": 13
+  "count": 14
  },
  "LA": {
   "name": "Ladakh",
@@ -15,7 +15,7 @@
   "name": "Himachal Pradesh",
   "lat": 31.8,
   "lng": 77.3,
-  "count": 25
+  "count": 27
  },
  "PB": {
   "name": "Punjab",
@@ -57,13 +57,13 @@
   "name": "Bihar",
   "lat": 25.7,
   "lng": 85.6,
-  "count": 15
+  "count": 16
  },
  "GJ": {
   "name": "Gujarat",
   "lat": 22.6,
   "lng": 71.6,
-  "count": 21
+  "count": 22
  },
  "MP": {
   "name": "Madhya Pradesh",
@@ -75,7 +75,7 @@
   "name": "Chhattisgarh",
   "lat": 21.5,
   "lng": 82.0,
-  "count": 9
+  "count": 10
  },
  "JH": {
   "name": "Jharkhand",
@@ -87,13 +87,13 @@
   "name": "West Bengal",
   "lat": 24.0,
   "lng": 87.9,
-  "count": 16
+  "count": 19
  },
  "OD": {
   "name": "Odisha",
   "lat": 20.4,
   "lng": 84.6,
-  "count": 15
+  "count": 17
  },
  "MH": {
   "name": "Maharashtra",
@@ -105,43 +105,43 @@
   "name": "Telangana",
   "lat": 17.9,
   "lng": 79.1,
-  "count": 14
+  "count": 15
  },
  "AP": {
   "name": "Andhra Pradesh",
   "lat": 15.7,
   "lng": 79.9,
-  "count": 14
+  "count": 16
  },
  "KA": {
   "name": "Karnataka",
   "lat": 14.8,
   "lng": 76.1,
-  "count": 34
+  "count": 35
  },
  "GA": {
   "name": "Goa",
   "lat": 15.4,
   "lng": 74.0,
-  "count": 12
+  "count": 13
  },
  "KL": {
   "name": "Kerala",
   "lat": 10.4,
   "lng": 76.4,
-  "count": 27
+  "count": 28
  },
  "TN": {
   "name": "Tamil Nadu",
   "lat": 11.0,
   "lng": 78.5,
-  "count": 30
+  "count": 31
  },
  "AS": {
   "name": "Assam",
   "lat": 26.3,
   "lng": 92.9,
-  "count": 10
+  "count": 13
  },
  "ML": {
   "name": "Meghalaya",
@@ -159,25 +159,25 @@
   "name": "Nagaland",
   "lat": 26.1,
   "lng": 94.4,
-  "count": 9
+  "count": 11
  },
  "MN": {
   "name": "Manipur",
   "lat": 24.7,
   "lng": 93.9,
-  "count": 9
+  "count": 11
  },
  "MZ": {
   "name": "Mizoram",
   "lat": 23.3,
   "lng": 92.9,
-  "count": 9
+  "count": 11
  },
  "TR": {
   "name": "Tripura",
   "lat": 23.8,
   "lng": 91.7,
-  "count": 9
+  "count": 12
  },
  "SK": {
   "name": "Sikkim",
@@ -201,18 +201,18 @@
   "name": "Puducherry",
   "lat": 11.9,
   "lng": 79.8,
-  "count": 5
+  "count": 8
  },
  "CH": {
   "name": "Chandigarh",
   "lat": 30.7,
   "lng": 76.8,
-  "count": 6
+  "count": 7
  },
  "DH": {
   "name": "Dadra & Nagar Haveli and Daman & Diu",
   "lat": 20.55,
   "lng": 71.9,
-  "count": 6
+  "count": 9
  }
 }

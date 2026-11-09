@@ -318,6 +318,17 @@
    "desc": "Chettinad village making the handmade tiles of its mansions",
    "wiki": "Attangudi",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Srivilliputhur Palkova",
+   "cat": "cuisine",
+   "lat": 9.512,
+   "lng": 77.633,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "The temple town's famous milk sweet",
+   "wiki": "Srivilliputhur",
+   "best": "All year"
   }
  ]
 }

@@ -167,6 +167,39 @@
    "stateCode": "WB",
    "desc": "Bold 19th-century patua paintings born around the Kalighat temple",
    "wiki": "Kalighat_painting"
+  },
+  {
+   "name": "Neora Valley National Park",
+   "cat": "fauna",
+   "lat": 27.0647,
+   "lng": 88.789,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Kalimpong hill forests known for red pandas",
+   "wiki": "Neora_Valley_National_Park",
+   "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Jaldapara National Park",
+   "cat": "fauna",
+   "lat": 26.6909,
+   "lng": 89.2763,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Terai grassland and riverine forest, known for one-horned rhinos",
+   "wiki": "Jaldapara_National_Park",
+   "best": "Oct\u2013May"
+  },
+  {
+   "name": "Mihidana & Sitabhog, Bardhaman",
+   "cat": "cuisine",
+   "lat": 23.233,
+   "lng": 87.867,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Bardhaman's twin GI-tagged sweets: fine grains of mihidana and chhena sitabhog",
+   "wiki": "Mihidana",
+   "best": "All year"
   }
  ]
 }

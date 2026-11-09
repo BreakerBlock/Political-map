@@ -163,6 +163,28 @@
    "desc": "Ikat saris with the pattern tie-dyed into the threads before weaving",
    "wiki": "Sambalpuri_sari",
    "best": "Sep\u2013Mar"
+  },
+  {
+   "name": "Satkosia Tiger Reserve",
+   "cat": "fauna",
+   "lat": 20.5401,
+   "lng": 84.8316,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Where the Mahanadi cuts a 22 km gorge through the Eastern Ghats",
+   "wiki": "Satkosia_Tiger_Reserve",
+   "best": "Nov\u2013Jun"
+  },
+  {
+   "name": "Pahala Rasagola",
+   "cat": "cuisine",
+   "lat": 20.3483,
+   "lng": 85.8999,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Roadside sweet shops between Bhubaneswar and Cuttack famous for Odisha rasagola",
+   "wiki": "Rasgulla",
+   "best": "All year"
   }
  ]
 }

@@ -98,6 +98,39 @@
    "desc": "Seven-day Tripuri festival honouring Baba Garia at the start of Boishakh",
    "wiki": "Garia_puja",
    "best": "Apr"
+  },
+  {
+   "name": "Trishna Wildlife Sanctuary",
+   "cat": "fauna",
+   "lat": 23.4217,
+   "lng": 91.3131,
+   "state": "Tripura",
+   "stateCode": "TR",
+   "desc": "South Tripura sanctuary (1988) known for Indian gaur (bison) and primates",
+   "wiki": "Trishna_Wildlife_Sanctuary",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Dumboor Lake",
+   "cat": "scenic",
+   "lat": 23.4263,
+   "lng": 91.8223,
+   "state": "Tripura",
+   "stateCode": "TR",
+   "desc": "Island-dotted reservoir where the Raima and Sarma rivers meet, inside Gumti Wildlife Sanctuary",
+   "wiki": "Gumti_Wildlife_Sanctuary",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Tripuri Cuisine, Agartala",
+   "cat": "cuisine",
+   "lat": 23.8314,
+   "lng": 91.2869,
+   "state": "Tripura",
+   "stateCode": "TR",
+   "desc": "Berma (fermented fish), mosdeng relishes and chuak rice beer",
+   "wiki": "Tripuri_cuisine",
+   "best": "All year"
   }
  ]
 }

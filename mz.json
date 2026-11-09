@@ -99,6 +99,28 @@
    "desc": "Mizo post-harvest thanksgiving with feasting, celebrated in Aizawl",
    "wiki": "Pawl_Kut",
    "best": "Dec"
+  },
+  {
+   "name": "Mizo Cuisine, Aizawl",
+   "cat": "cuisine",
+   "lat": 23.733,
+   "lng": 92.718,
+   "state": "Mizoram",
+   "stateCode": "MZ",
+   "desc": "Bai, a herb-and-vegetable stew, and sawhchiar, rice cooked with meat",
+   "wiki": "Mizo_cuisine",
+   "best": "All year"
+  },
+  {
+   "name": "Hmuifang",
+   "cat": "scenic",
+   "lat": 23.4499,
+   "lng": 92.7577,
+   "state": "Mizoram",
+   "stateCode": "MZ",
+   "desc": "Forested 1,619 m mountain about 50 km from Aizawl, with a hilltop tourist resort",
+   "wiki": "Hmuifang",
+   "best": "Nov\u2013Feb"
   }
  ]
 }

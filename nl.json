@@ -98,6 +98,28 @@
    "desc": "The Ao Naga festival of song, dance and feasting after the sowing",
    "wiki": "Ao_Naga",
    "best": "May"
+  },
+  {
+   "name": "Ntangki (Intanki) National Park",
+   "cat": "fauna",
+   "lat": 25.74,
+   "lng": 93.5267,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "Peren district forests, a national park since 1993, with hoolock gibbons and sloth bears",
+   "wiki": "Ntangki_National_Park",
+   "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Amur Falcons, Pangti",
+   "cat": "fauna",
+   "lat": 26.2595,
+   "lng": 94.321,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "The \"Falcon Capital of the World\": huge Amur falcon roosts on their autumn migration",
+   "wiki": "Pangti",
+   "best": "Oct\u2013Nov"
   }
  ]
 }

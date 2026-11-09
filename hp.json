@@ -269,6 +269,28 @@
    "desc": "Fine double-satin-stitch embroidery, a traditional wedding gift",
    "wiki": "Chamba_Rumal",
    "best": "Mar\u2013Jun"
+  },
+  {
+   "name": "Kheerganga Trek",
+   "cat": "adventure",
+   "lat": 31.9918,
+   "lng": 77.5072,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Trek from Barshaini up the Parvati valley to a hot-spring meadow",
+   "wiki": "Parvati_Valley",
+   "best": "May\u2013Jun, Sep\u2013Oct"
+  },
+  {
+   "name": "Beas Kund Trek",
+   "cat": "adventure",
+   "lat": 32.3664,
+   "lng": 77.0856,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Glacial lake at the source of the Beas, trekked from Dhundi in Solang Valley",
+   "wiki": "Beas_River",
+   "best": "May\u2013Jun, Sep\u2013Oct"
   }
  ]
 }

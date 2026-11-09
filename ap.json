@@ -148,6 +148,28 @@
    "stateCode": "AP",
    "desc": "Village of lacquered, turned-wood toys coloured with natural dyes",
    "wiki": "Etikoppaka"
+  },
+  {
+   "name": "Coringa Wildlife Sanctuary",
+   "cat": "fauna",
+   "lat": 16.8314,
+   "lng": 82.3367,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Godavari estuary mangroves near Kakinada, rich in birds",
+   "wiki": "Coringa_Wildlife_Sanctuary",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Bandar Laddu, Machilipatnam",
+   "cat": "cuisine",
+   "lat": 16.17,
+   "lng": 81.13,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "GI-tagged gram-flour, jaggery and ghee laddu from Machilipatnam",
+   "wiki": "Bandar_laddu",
+   "best": "All year"
   }
  ]
 }

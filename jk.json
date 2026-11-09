@@ -139,6 +139,17 @@
    "desc": "Srinagar's painted paper-pulp boxes, vases and ornaments",
    "wiki": "Kashmir_papier-m\u00e2ch\u00e9",
    "best": "Apr\u2013Oct"
+  },
+  {
+   "name": "Dachigam National Park",
+   "cat": "fauna",
+   "lat": 34.1372,
+   "lng": 75.0378,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Zabarwan Range park near Srinagar, home of the hangul (Kashmir stag)",
+   "wiki": "Dachigam_National_Park",
+   "best": "Apr\u2013Oct"
   }
  ]
 }

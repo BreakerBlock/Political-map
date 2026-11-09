@@ -98,6 +98,17 @@
    "desc": "Sal-forest sanctuary of the Maikal hills, established 1975",
    "wiki": "Achanakmar_Wildlife_Sanctuary",
    "best": "Nov\u2013Jun"
+  },
+  {
+   "name": "Indravati National Park",
+   "cat": "fauna",
+   "lat": 19.205,
+   "lng": 81.0314,
+   "state": "Chhattisgarh",
+   "stateCode": "CG",
+   "desc": "Bastar tiger reserve, one of the last homes of the wild water buffalo",
+   "wiki": "Indravati_National_Park",
+   "best": "Dec\u2013Jun"
   }
  ]
 }
