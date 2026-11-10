@@ -329,6 +329,28 @@
    "desc": "The temple town's famous milk sweet",
    "wiki": "Srivilliputhur",
    "best": "All year"
+  },
+  {
+   "name": "Toda Embroidery, Nilgiris",
+   "cat": "arts",
+   "lat": 11.41,
+   "lng": 76.7,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "GI-tagged red-and-black embroidery of the Toda people on white shawls",
+   "wiki": "Toda_Embroidery",
+   "best": "Oct\u2013Jun"
+  },
+  {
+   "name": "Ambur Biryani",
+   "cat": "cuisine",
+   "lat": 12.78,
+   "lng": 78.718,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Arcot-era biryani of seeraga samba rice and tender meat",
+   "wiki": "Ambur",
+   "best": "All year"
   }
  ]
 }

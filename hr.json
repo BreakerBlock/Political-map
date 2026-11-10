@@ -111,6 +111,28 @@
    "desc": "Wetland and Ramsar site in Jhajjar, busy with winter migrants",
    "wiki": "Bhindawas_Wildlife_Sanctuary",
    "best": "Nov\u2013Mar"
+  },
+  {
+   "name": "International Gita Mahotsav",
+   "cat": "festivals",
+   "lat": 29.96,
+   "lng": 76.83,
+   "state": "Haryana",
+   "stateCode": "HR",
+   "desc": "Kurukshetra celebrates Gita Jayanti with aartis, crafts and performances around Brahma Sarovar",
+   "wiki": "Gita_Mahotsav",
+   "best": "Nov\u2013Dec"
+  },
+  {
+   "name": "Damdama Lake",
+   "cat": "adventure",
+   "lat": 28.3039,
+   "lng": 77.1289,
+   "state": "Haryana",
+   "stateCode": "HR",
+   "desc": "Aravalli reservoir near Sohna for boating, rock climbing and weekend camps",
+   "wiki": "Damdama_Lake",
+   "best": "Jul\u2013Mar"
   }
  ]
 }

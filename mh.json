@@ -298,6 +298,17 @@
    "desc": "Varkari pilgrims walk for weeks, singing, to Vithoba at Ashadhi Ekadashi",
    "wiki": "Pandharpur_Wari",
    "best": "Jun\u2013Jul"
+  },
+  {
+   "name": "Malvani Cuisine, Malvan",
+   "cat": "cuisine",
+   "lat": 16.0667,
+   "lng": 73.4667,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Konkan coconut-and-kokum fish curries, sol kadhi and vade",
+   "wiki": "Malvani_cuisine",
+   "best": "Oct\u2013May"
   }
  ]
 }

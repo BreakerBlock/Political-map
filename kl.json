@@ -294,6 +294,17 @@
    "desc": "Malabar biryani made with small, fragrant kaima rice instead of basmati",
    "wiki": "Thalassery_cuisine",
    "best": "All year"
+  },
+  {
+   "name": "Agasthyakoodam Trek",
+   "cat": "adventure",
+   "lat": 8.6163,
+   "lng": 77.2457,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Two-day permit-only trek from Bonacaud to a 1,868 m Western Ghats peak",
+   "wiki": "Agastya_Mala",
+   "best": "Jan\u2013Mar"
   }
  ]
 }

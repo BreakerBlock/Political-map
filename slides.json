@@ -220,6 +220,21 @@
      "key": "KA|Barapole River Rafting",
      "line": "Monsoon white-water through the forests of south Coorg.",
      "season": "Jul\u2013Oct"
+    },
+    {
+     "key": "JK|Patnitop Paragliding",
+     "line": "Take off from the meadows above Patnitop and glide over deodar and pine forests.",
+     "season": "Apr\u2013Oct"
+    },
+    {
+     "key": "KL|Agasthyakoodam Trek",
+     "line": "A permit-only, two-day climb from Bonacaud to one of the Western Ghats' most sacred summits.",
+     "season": "Jan\u2013Mar"
+    },
+    {
+     "key": "WB|Teesta River Rafting",
+     "line": "Bounce through Class I\u2013III rapids on the Teesta below Kalimpong.",
+     "season": "Oct\u2013Mar"
     }
    ]
   },
@@ -326,6 +341,26 @@
      "line": "A whole town turns into a stage for the story of Krishna and Kansa.",
      "season": "Dec\u2013Jan",
      "title": "Theatre the size of a town"
+    },
+    {
+     "key": "PB|Kila Raipur Rural Olympics",
+     "line": "Bullock-cart races, tractor stunts and kabaddi at Punjab's village Olympics.",
+     "season": "Feb"
+    },
+    {
+     "key": "RJ|Bikaner Camel Festival",
+     "line": "Decorated camels, camel races and folk music in the Thar.",
+     "season": "Jan"
+    },
+    {
+     "key": "AS|Raas Mahotsav, Majuli",
+     "line": "Night after night of Krishna Raas Leela, staged by the island's satras.",
+     "season": "Nov"
+    },
+    {
+     "key": "HR|International Gita Mahotsav",
+     "line": "Aartis and lamps around Brahma Sarovar, where the Gita is said to have been spoken.",
+     "season": "Nov\u2013Dec"
     }
    ]
   },
@@ -461,6 +496,11 @@
     {
      "key": "BR|Takht Sri Patna Sahib",
      "line": "The gurdwara at the birthplace of Guru Gobind Singh, one of Sikhism's five takhts.",
+     "season": "Oct\u2013Mar"
+    },
+    {
+     "key": "DL|Gurudwara Bangla Sahib",
+     "line": "Join the free langar and sit by the sarovar of Delhi's best-loved gurdwara.",
      "season": "Oct\u2013Mar"
     }
    ]
@@ -723,6 +763,16 @@
      "key": "WB|Mihidana & Sitabhog, Bardhaman",
      "line": "Bardhaman's twin GI-tagged sweets: golden grains of mihidana and rice-like sitabhog.",
      "season": "All year"
+    },
+    {
+     "key": "TN|Ambur Biryani",
+     "line": "Eat the Arcot-style biryani that made this small town famous across the south.",
+     "season": "All year"
+    },
+    {
+     "key": "MH|Malvani Cuisine, Malvan",
+     "line": "Kokum, coconut and the day's catch on the Konkan coast \u2014 finish with sol kadhi.",
+     "season": "Oct\u2013May"
     }
    ]
   },
@@ -807,6 +857,21 @@
      "line": "Look for embroidery so fine it looks the same on both sides, a Chamba wedding gift.",
      "season": "Mar\u2013Jun",
      "title": "The Chamba rumal"
+    },
+    {
+     "key": "JH|Seraikela Chhau",
+     "line": "Watch masked Chhau dancers at Seraikela's spring Chaitra Parv.",
+     "season": "Mar\u2013Apr"
+    },
+    {
+     "key": "JH|Sohrai & Khovar Painting, Hazaribagh",
+     "line": "Village walls painted with animals and vines for the harvest festival.",
+     "season": "Oct\u2013Feb"
+    },
+    {
+     "key": "GJ|Ajrakh Block Printing, Bhuj",
+     "line": "See indigo and madder cloth printed and washed at Ajrakhpur.",
+     "season": "Nov\u2013Feb"
     }
    ]
   }

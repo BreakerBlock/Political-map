@@ -108,6 +108,50 @@
    "desc": "43 m waterfall in the hills near Ranchi",
    "wiki": "Jonha_Falls",
    "best": "Jul\u2013Oct"
+  },
+  {
+   "name": "Sohrai & Khovar Painting, Hazaribagh",
+   "cat": "arts",
+   "lat": 23.98,
+   "lng": 85.35,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "GI-tagged mural art painted on mud-house walls at harvest and weddings",
+   "wiki": "Sohrai_and_Khovar_painting",
+   "best": "Oct\u2013Feb"
+  },
+  {
+   "name": "Seraikela Chhau",
+   "cat": "arts",
+   "lat": 22.7022,
+   "lng": 85.9316,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "Masked martial dance of Seraikela, performed at the Chaitra Parv in spring",
+   "wiki": "Saraikela",
+   "best": "Mar\u2013Apr"
+  },
+  {
+   "name": "Sarhul, Ranchi",
+   "cat": "festivals",
+   "lat": 23.36,
+   "lng": 85.33,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "Adivasi spring festival of the sal blossom, with huge processions through Ranchi",
+   "wiki": "Sarhul",
+   "best": "Mar\u2013Apr"
+  },
+  {
+   "name": "Patratu Valley",
+   "cat": "scenic",
+   "lat": 23.67,
+   "lng": 85.28,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "Hairpin-bend ghat road above the Patratu Dam reservoir",
+   "wiki": "Patratu",
+   "best": "Jul\u2013Feb"
   }
  ]
 }

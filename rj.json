@@ -387,6 +387,39 @@
    "desc": "Women in finery follow the Gauri procession out of the City Palace",
    "wiki": "Gangaur",
    "best": "Mar\u2013Apr"
+  },
+  {
+   "name": "Pichwai Painting, Nathdwara",
+   "cat": "arts",
+   "lat": 24.93,
+   "lng": 73.82,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Temple-town painters make cloth pichwais of Shrinathji",
+   "wiki": "Nathdwara_painting",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Bikaner Camel Festival",
+   "cat": "festivals",
+   "lat": 28.0167,
+   "lng": 73.3119,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Camel races, decorated camels and folk music in the Thar desert city",
+   "wiki": "Bikaner",
+   "best": "Jan"
+  },
+  {
+   "name": "Kota Kachori",
+   "cat": "cuisine",
+   "lat": 25.18,
+   "lng": 75.83,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Kota's famous crisp dal kachori with spicy chutneys",
+   "wiki": "Kachori",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

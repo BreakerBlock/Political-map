@@ -151,6 +151,28 @@
    "stateCode": "PB",
    "desc": "Stories of 1947's Partition, told in Amritsar's Town Hall",
    "wiki": "Partition_Museum"
+  },
+  {
+   "name": "Kila Raipur Rural Olympics",
+   "cat": "festivals",
+   "lat": 30.7619,
+   "lng": 75.8228,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Village sports festival: bullock-cart races, tractor stunts and kabaddi",
+   "wiki": "Qila_Raipur_Sports_Festival",
+   "best": "Feb"
+  },
+  {
+   "name": "Takht Sri Damdama Sahib",
+   "cat": "religious",
+   "lat": 29.9869,
+   "lng": 75.0786,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "One of the five Sikh Takhts, where Guru Gobind Singh compiled the final Guru Granth Sahib",
+   "wiki": "Takht_Sri_Damdama_Sahib",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

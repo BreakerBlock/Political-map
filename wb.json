@@ -200,6 +200,17 @@
    "desc": "Bardhaman's twin GI-tagged sweets: fine grains of mihidana and chhena sitabhog",
    "wiki": "Mihidana",
    "best": "All year"
+  },
+  {
+   "name": "Teesta River Rafting",
+   "cat": "adventure",
+   "lat": 27.06,
+   "lng": 88.43,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Class I\u2013III rafting runs on the Teesta at Teesta Bazaar, Kalimpong",
+   "wiki": "Teesta_Bazaar",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

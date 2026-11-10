@@ -233,6 +233,28 @@
    "desc": "Coral reefs and mangroves; walk the Narara reef at low tide",
    "wiki": "Marine_National_Park,_Gulf_of_Kutch",
    "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Ajrakh Block Printing, Bhuj",
+   "cat": "arts",
+   "lat": 23.25,
+   "lng": 69.67,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Indigo-and-madder resist block printing from Ajrakhpur, near Bhuj",
+   "wiki": "Ajrak",
+   "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Dabeli, Mandvi",
+   "cat": "cuisine",
+   "lat": 22.85,
+   "lng": 69.36,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Kutch's spiced potato bun with pomegranate and peanuts, born in Mandvi in the 1960s",
+   "wiki": "Dabeli",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

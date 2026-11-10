@@ -364,6 +364,28 @@
    "desc": "Monsoon white-water on the Barapole in south Coorg",
    "wiki": "Kodagu_district",
    "best": "Jul\u2013Oct"
+  },
+  {
+   "name": "Hampi Utsav",
+   "cat": "festivals",
+   "lat": 15.3344,
+   "lng": 76.4622,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Music, dance and light shows among the Vijayanagara ruins",
+   "wiki": "Hampi",
+   "best": "Jan\u2013Mar"
+  },
+  {
+   "name": "Tadiandamol Trek",
+   "cat": "adventure",
+   "lat": 12.2176,
+   "lng": 75.6088,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Climb Kodagu's grassy 1,748 m summit through shola forest",
+   "wiki": "Tadiandamol",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

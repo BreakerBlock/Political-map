@@ -115,6 +115,61 @@
    "desc": "Vast Swaminarayan temple of carved pink sandstone and marble",
    "wiki": "Swaminarayan_Akshardham_(Delhi)",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Gurudwara Bangla Sahib",
+   "cat": "religious",
+   "lat": 28.6267,
+   "lng": 77.2089,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "White-marble gurdwara with a golden dome, a holy sarovar and a free langar kitchen open to all",
+   "wiki": "Gurdwara_Bangla_Sahib",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Hazrat Nizamuddin Dargah",
+   "cat": "religious",
+   "lat": 28.5914,
+   "lng": 77.242,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "Sufi shrine where qawwali singers perform on Thursday evenings",
+   "wiki": "Hazrat_Nizamuddin_Dargah",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Lodhi Garden",
+   "cat": "scenic",
+   "lat": 28.593,
+   "lng": 77.22,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "90-acre park dotted with 15th-century Lodi and Sayyid tombs",
+   "wiki": "Lodi_Gardens",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Phool Walon Ki Sair",
+   "cat": "festivals",
+   "lat": 28.525,
+   "lng": 77.1825,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "Mehrauli's flower-sellers' procession honouring both Yogmaya Temple and the dargah of Bakhtiyar Kaki",
+   "wiki": "Phool_Walon_Ki_Sair",
+   "best": "Sep\u2013Nov"
+  },
+  {
+   "name": "Majnu Ka Tilla",
+   "cat": "cuisine",
+   "lat": 28.7014,
+   "lng": 77.2282,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "Tibetan colony on the Yamuna \u2014 momos, thukpa and laphing in narrow lanes",
+   "wiki": "Majnu_Ka_Tilla",
+   "best": "All year"
   }
  ]
 }

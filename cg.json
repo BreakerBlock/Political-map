@@ -109,6 +109,39 @@
    "desc": "Bastar tiger reserve, one of the last homes of the wild water buffalo",
    "wiki": "Indravati_National_Park",
    "best": "Dec\u2013Jun"
+  },
+  {
+   "name": "Mainpat",
+   "cat": "scenic",
+   "lat": 22.837,
+   "lng": 83.315,
+   "state": "Chhattisgarh",
+   "stateCode": "CG",
+   "desc": "Plateau hill station of Surguja, known as the 'Shimla of Chhattisgarh', with a Tibetan settlement",
+   "wiki": "Mainpat",
+   "best": "Jul\u2013Feb"
+  },
+  {
+   "name": "Rajim Kumbh",
+   "cat": "festivals",
+   "lat": 20.964,
+   "lng": 81.8775,
+   "state": "Chhattisgarh",
+   "stateCode": "CG",
+   "desc": "Annual fair at the Triveni Sangam by the Rajiv Lochan Temple in Rajim",
+   "wiki": "Rajiv_Lochan_Temple",
+   "best": "Feb\u2013Mar"
+  },
+  {
+   "name": "Kosa Silk, Champa",
+   "cat": "arts",
+   "lat": 22.05,
+   "lng": 82.65,
+   "state": "Chhattisgarh",
+   "stateCode": "CG",
+   "desc": "Champa's Dewangan weavers turn wild tussar (Kosa) silk into lustrous saris",
+   "wiki": "Champa,_Chhattisgarh",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

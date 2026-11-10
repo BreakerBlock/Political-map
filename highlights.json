@@ -3420,7 +3420,183 @@
    "desc": "Trek from Barshaini up the Parvati valley to a hot-spring meadow",
    "wiki": "Parvati_Valley",
    "best": "May\u2013Jun, Sep\u2013Oct"
+  },
+  {
+   "name": "Gurudwara Bangla Sahib",
+   "cat": "religious",
+   "lat": 28.6267,
+   "lng": 77.2089,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "White-marble gurdwara with a golden dome, a holy sarovar and a free langar kitchen open to all",
+   "wiki": "Gurdwara_Bangla_Sahib",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Hazrat Nizamuddin Dargah",
+   "cat": "religious",
+   "lat": 28.5914,
+   "lng": 77.242,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "Sufi shrine where qawwali singers perform on Thursday evenings",
+   "wiki": "Hazrat_Nizamuddin_Dargah",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Rajim Kumbh",
+   "cat": "festivals",
+   "lat": 20.964,
+   "lng": 81.8775,
+   "state": "Chhattisgarh",
+   "stateCode": "CG",
+   "desc": "Annual fair at the Triveni Sangam by the Rajiv Lochan Temple in Rajim",
+   "wiki": "Rajiv_Lochan_Temple",
+   "best": "Feb\u2013Mar"
+  },
+  {
+   "name": "Sohrai & Khovar Painting, Hazaribagh",
+   "cat": "arts",
+   "lat": 23.98,
+   "lng": 85.35,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "GI-tagged mural art painted on mud-house walls at harvest and weddings",
+   "wiki": "Sohrai_and_Khovar_painting",
+   "best": "Oct\u2013Feb"
+  },
+  {
+   "name": "Seraikela Chhau",
+   "cat": "arts",
+   "lat": 22.7022,
+   "lng": 85.9316,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "Masked martial dance of Seraikela, performed at the Chaitra Parv in spring",
+   "wiki": "Saraikela",
+   "best": "Mar\u2013Apr"
+  },
+  {
+   "name": "International Gita Mahotsav",
+   "cat": "festivals",
+   "lat": 29.96,
+   "lng": 76.83,
+   "state": "Haryana",
+   "stateCode": "HR",
+   "desc": "Kurukshetra celebrates Gita Jayanti with aartis, crafts and performances around Brahma Sarovar",
+   "wiki": "Gita_Mahotsav",
+   "best": "Nov\u2013Dec"
+  },
+  {
+   "name": "Kila Raipur Rural Olympics",
+   "cat": "festivals",
+   "lat": 30.7619,
+   "lng": 75.8228,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Village sports festival: bullock-cart races, tractor stunts and kabaddi",
+   "wiki": "Qila_Raipur_Sports_Festival",
+   "best": "Feb"
+  },
+  {
+   "name": "Pichwai Painting, Nathdwara",
+   "cat": "arts",
+   "lat": 24.93,
+   "lng": 73.82,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Temple-town painters make cloth pichwais of Shrinathji",
+   "wiki": "Nathdwara_painting",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Bikaner Camel Festival",
+   "cat": "festivals",
+   "lat": 28.0167,
+   "lng": 73.3119,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Camel races, decorated camels and folk music in the Thar desert city",
+   "wiki": "Bikaner",
+   "best": "Jan"
+  },
+  {
+   "name": "Ajrakh Block Printing, Bhuj",
+   "cat": "arts",
+   "lat": 23.25,
+   "lng": 69.67,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Indigo-and-madder resist block printing from Ajrakhpur, near Bhuj",
+   "wiki": "Ajrak",
+   "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Raas Mahotsav, Majuli",
+   "cat": "festivals",
+   "lat": 27.0,
+   "lng": 94.217,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "The satras of Majuli stage the Krishna Raas Leela over several nights",
+   "wiki": "Raslila",
+   "best": "Nov"
+  },
+  {
+   "name": "Malvani Cuisine, Malvan",
+   "cat": "cuisine",
+   "lat": 16.0667,
+   "lng": 73.4667,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Konkan coconut-and-kokum fish curries, sol kadhi and vade",
+   "wiki": "Malvani_cuisine",
+   "best": "Oct\u2013May"
+  },
+  {
+   "name": "Ambur Biryani",
+   "cat": "cuisine",
+   "lat": 12.78,
+   "lng": 78.718,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Arcot-era biryani of seeraga samba rice and tender meat",
+   "wiki": "Ambur",
+   "best": "All year"
+  },
+  {
+   "name": "Patnitop Paragliding",
+   "cat": "adventure",
+   "lat": 33.0903,
+   "lng": 75.3264,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Glide over pine forests from the meadows of this Jammu hill station",
+   "wiki": "Patnitop",
+   "best": "Apr\u2013Oct"
+  },
+  {
+   "name": "Agasthyakoodam Trek",
+   "cat": "adventure",
+   "lat": 8.6163,
+   "lng": 77.2457,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Two-day permit-only trek from Bonacaud to a 1,868 m Western Ghats peak",
+   "wiki": "Agastya_Mala",
+   "best": "Jan\u2013Mar"
+  },
+  {
+   "name": "Teesta River Rafting",
+   "cat": "adventure",
+   "lat": 27.06,
+   "lng": 88.43,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Class I\u2013III rafting runs on the Teesta at Teesta Bazaar, Kalimpong",
+   "wiki": "Teesta_Bazaar",
+   "best": "Oct\u2013Mar"
   }
  ],
- "total": 591
+ "total": 622
 }

@@ -140,6 +140,17 @@
    "desc": "Rice and fish with few spices \u2014 try khar (alkaline) and tenga (sour) dishes",
    "wiki": "Assamese_cuisine",
    "best": "All year"
+  },
+  {
+   "name": "Raas Mahotsav, Majuli",
+   "cat": "festivals",
+   "lat": 27.0,
+   "lng": 94.217,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "The satras of Majuli stage the Krishna Raas Leela over several nights",
+   "wiki": "Raslila",
+   "best": "Nov"
   }
  ]
 }

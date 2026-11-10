@@ -228,6 +228,17 @@
    "desc": "Cotton-silk handloom saris woven on the banks of the Narmada",
    "wiki": "Maheshwari_saree",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Ratlami Sev",
+   "cat": "cuisine",
+   "lat": 23.334,
+   "lng": 75.037,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "GI-tagged spicy gram-flour sev, Ratlam's most famous snack",
+   "wiki": "Sev_(food)",
+   "best": "All year"
   }
  ]
 }

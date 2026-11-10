@@ -150,6 +150,17 @@
    "desc": "Zabarwan Range park near Srinagar, home of the hangul (Kashmir stag)",
    "wiki": "Dachigam_National_Park",
    "best": "Apr\u2013Oct"
+  },
+  {
+   "name": "Patnitop Paragliding",
+   "cat": "adventure",
+   "lat": 33.0903,
+   "lng": 75.3264,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Glide over pine forests from the meadows of this Jammu hill station",
+   "wiki": "Patnitop",
+   "best": "Apr\u2013Oct"
   }
  ]
 }
