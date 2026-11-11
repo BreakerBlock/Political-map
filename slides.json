@@ -875,5 +875,12 @@
     }
    ]
   }
+ ],
+ "flyover": [
+  "LA|Pangong Tso",
+  "RJ|Jaisalmer Fort",
+  "UP|Taj Mahal",
+  "AS|Kaziranga NP",
+  "KL|Alleppey Backwaters"
  ]
 }

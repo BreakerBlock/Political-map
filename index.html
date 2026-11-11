@@ -485,6 +485,51 @@ body.tl-dragging .tl-day{opacity:.25;transition:opacity .15s}
 .sp-pulse i{position:absolute;left:50%;top:50%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;border:3px solid var(--c);animation:spPulse 1.6s ease-out 3}
 .sp-pulse i+i{animation-delay:.5s}
 @keyframes spPulse{from{transform:scale(.6);opacity:1}to{transform:scale(4.2);opacity:0}}
+/* ── Fly-over: first-visit landing tour of a few highlights ── */
+.fo{position:absolute;z-index:870;left:16px;bottom:34px;width:340px;max-width:calc(100% - 24px);border-radius:18px;overflow:hidden;background:#FFFDF8;box-shadow:0 18px 44px rgba(44,24,16,.38);border:1px solid var(--border-light);opacity:0;transform:translateY(24px) scale(.97);transition:opacity .4s ease,transform .5s cubic-bezier(.2,.8,.2,1)}
+.fo.on{opacity:1;transform:none}
+.fo-hero{position:relative;height:178px;background:linear-gradient(135deg,var(--c,#E2622B),color-mix(in srgb,var(--c,#E2622B) 55%,#2C1810));transition:background .4s;overflow:hidden}
+.fo-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.1);transition:opacity .7s ease,transform 7s ease-out}
+.fo-hero img.ok{opacity:1;transform:scale(1)}
+.fo-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.34) 0%,transparent 34%,transparent 45%,rgba(20,10,5,.84) 100%);pointer-events:none}
+.fo-top{position:absolute;z-index:2;left:12px;right:10px;top:10px;display:flex;align-items:center;gap:6px}
+.fo-kick{font-size:.6rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.34);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);padding:4px 9px 4px 7px;border-radius:12px;display:flex;align-items:center;gap:5px;white-space:nowrap}
+.fo-kick svg{width:12px;height:12px}
+.fo-skip{margin-left:auto;border:none;border-radius:13px;padding:5px 11px;background:rgba(0,0,0,.38);color:#fff;font:700 .68rem 'DM Sans',sans-serif;cursor:pointer;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.fo-skip:hover{background:rgba(0,0,0,.55)}
+.fo-ttl{position:absolute;z-index:2;left:14px;right:14px;bottom:11px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.45);transition:opacity .25s,transform .35s cubic-bezier(.2,.8,.2,1)}
+.fo-ttl b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.7rem;line-height:1.05;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fo-ttl span{display:flex;align-items:center;gap:5px;font-size:.74rem;opacity:.94;margin-top:3px}
+.fo-ttl span svg{width:12px;height:12px}
+.fo-ttl i{font-style:normal;font-size:.6rem;font-weight:700;background:var(--c);border-radius:9px;padding:2px 7px;margin-left:3px}
+.fo.swap .fo-ttl,.fo.swap .fo-line{opacity:0;transform:translateY(8px)}
+.fo-body{padding:11px 14px 12px}
+.fo-line{font-size:.84rem;line-height:1.45;color:var(--ink);min-height:2.9em;transition:opacity .25s,transform .35s cubic-bezier(.2,.8,.2,1)}
+.fo-prog{display:flex;gap:4px;margin-top:10px}
+.fo-prog b{flex:1;height:3px;border-radius:2px;background:#EADFCB;overflow:hidden;cursor:pointer}
+.fo-prog b i{display:block;height:100%;width:0;background:var(--c,#E2622B)}
+.fo-prog b.done i{width:100%}
+.fo-prog b.cur i{animation:foFill var(--dur,3200ms) linear forwards}
+@keyframes foFill{to{width:100%}}
+.fo-acts{display:flex;gap:7px;margin-top:10px}
+.fo-acts button{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;padding:9px 6px;border-radius:11px;font:700 .74rem 'DM Sans',sans-serif;cursor:pointer;border:1px solid var(--border);background:#fff;color:var(--ink);transition:transform .12s,background .15s}
+.fo-acts button:active{transform:scale(.97)}
+.fo-acts svg{width:14px;height:14px;flex-shrink:0}
+.fo-next{background:var(--ink)!important;color:#fff!important;border-color:var(--ink)!important}
+body.flying .teaser,body.flying .sp{display:none}
+body.flying .leaflet-control-scale{opacity:0;transition:opacity .3s}
+.md-chip.md-fly{background:linear-gradient(135deg,#24508F,#0E7C86);--c:#24508F;color:#fff}
+.md-chip.md-dice{background:linear-gradient(135deg,#138808,#0E7C86);--c:#0E7C86;color:#fff}
+.md-chip.md-fly svg,.md-chip.md-dice svg{width:14px;height:14px}
+.st-shuf svg{width:14px;height:14px}
+@media(max-width:760px){
+  .fo{left:50%;bottom:16px;width:360px;transform:translate(-50%,24px) scale(.97)}
+  .fo.on{transform:translate(-50%,0)}
+  .fo-hero{height:138px}
+  .fo-ttl b{font-size:1.45rem}
+  .fo-line{font-size:.8rem;min-height:0}
+}
+@media(prefers-reduced-motion:reduce){.fo-hero img{transition:opacity .3s}.fo-prog b.cur i{animation:none;width:100%}}
 /* ── Getting there: nearest airport / railhead ── */
 .pop-go{margin-top:9px;border:1px solid var(--border-light,#EADFCB);border-radius:12px;overflow:hidden;background:#FFFCF6}
 .pg-row{display:flex;align-items:center;gap:8px;padding:6px 9px;text-decoration:none!important;color:var(--ink)!important;transition:background .15s}
@@ -695,6 +740,13 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
       <div class="sp-body"><div class="sp-desc" id="spDesc"></div><div class="sp-best" id="spBest" hidden></div><div class="sp-hubs" id="spHubs" hidden></div>
         <div class="sp-acts"><button class="sp-go" onclick="surpriseExplore()" id="spGo"></button><button class="sp-add" id="spAdd" onclick="surpriseToggleTrip()"></button><button class="sp-again" id="spAgain" onclick="surprise()"></button></div></div>
     </div>
+    <div class="fo" id="flyover" hidden role="region" aria-label="Fly-over of India's highlights" aria-live="polite">
+      <div class="fo-hero" id="foHero">
+        <div class="fo-top"><span class="fo-kick" id="foKick"></span><button class="fo-skip" onclick="endFlyover()">Skip ✕</button></div>
+        <div class="fo-ttl"><b id="foName"></b><span id="foState"></span></div></div>
+      <div class="fo-body"><div class="fo-line" id="foLine"></div><div class="fo-prog" id="foProg"></div>
+        <div class="fo-acts"><button id="foHere" onclick="flyoverStopHere()"></button><button class="fo-next" id="foNext" onclick="flyoverNext()"></button></div></div>
+    </div>
     <div class="disclaimer">Boundary as per Survey of India · Map for reference only</div>
   </div>
 </div>
@@ -703,7 +755,7 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
   <div class="st-top">
     <div class="st-bars" id="stBars"></div>
     <div class="st-head">
-      <div class="st-deck"><small id="stKicker"></small><div class="st-ttl"><b id="stTitle"></b><span class="st-mon" id="stMon" hidden><button class="st-mbtn" onclick="event.stopPropagation();shiftSeason(-1)" aria-label="Previous month">‹</button><button class="st-mbtn" onclick="event.stopPropagation();shiftSeason(1)" aria-label="Next month">›</button></span></div></div>
+      <div class="st-deck"><small id="stKicker"></small><div class="st-ttl"><b id="stTitle"></b><span class="st-mon" id="stShuf" hidden><button class="st-mbtn st-shuf" onclick="event.stopPropagation();shuffleSurpriseDeck()" aria-label="Shuffle: new random places" title="Shuffle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg></button></span><span class="st-mon" id="stMon" hidden><button class="st-mbtn" onclick="event.stopPropagation();shiftSeason(-1)" aria-label="Previous month">‹</button><button class="st-mbtn" onclick="event.stopPropagation();shiftSeason(1)" aria-label="Next month">›</button></span></div></div>
       <span class="st-count" id="stCount"></span>
       <button class="st-ibtn" id="stPause" onclick="setStoryPaused(!story.paused)" aria-label="Pause"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></svg></button>
       <button class="st-ibtn" onclick="closeStory()" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
@@ -1731,9 +1783,24 @@ async function buildStateDeck(d){
   const name=(statesIndex[sc]||{}).name||sc;
   d.title=name;d.kicker=`Stories from ${name} · ${d.slides.length} places`;
 }
+// "Surprise me" deck: 12 random places with photos, one per state and at most two per category; reshuffled on demand
+async function buildSurpriseDeck(d){
+  const pool=await surprisePool(),hl=hlKeys();
+  const cands=pool.map(p=>{const key=placeKey(p),cur=curatedLine(key);return {p,key,cur,sc:Math.random()*(1+(hl.has(key)?.5:0)+(cur?.7:0))}});
+  cands.sort((a,b)=>b.sc-a.sc);
+  d.slides=pickVaried(cands,12,1,2).map(c=>({key:c.key,line:(c.cur&&c.cur.line)||c.p.desc,season:(c.cur&&c.cur.season)||c.p.best}));
+  d.kicker=`${d.slides.length} random places`;
+}
+function surpriseDeck(){return storyDecks.find(d=>d.gen==='surprise')}
+async function shuffleSurpriseDeck(){
+  const d=surpriseDeck();if(!d)return;
+  d.ready=false;await prepDeck(d);
+  gotoStory(storyDecks.indexOf(d),0,1);
+}
+function openSurpriseStory(){const d=surpriseDeck();if(!d)return;if(d.ready&&!document.getElementById('story').classList.contains('on'))d.ready=false;openStory('surprise')}
 async function prepDeck(d){
   if(!d||!d.gen||d.ready)return;
-  if(!d._p)d._p=(d.gen==='season'?buildSeasonDeck(d):buildStateDeck(d)).then(()=>{d.ready=true;d._p=null});
+  if(!d._p)d._p=(d.gen==='season'?buildSeasonDeck(d):d.gen==='surprise'?buildSurpriseDeck(d):buildStateDeck(d)).then(()=>{d.ready=true;d._p=null});
   await d._p;
 }
 function seasonDeck(){return storyDecks.find(d=>d.gen==='season')}
@@ -1764,15 +1831,19 @@ async function ensureDeckPlaces(d){
   const need=[...new Set(d.slides.filter(s=>!storyPlace(s)).map(s=>s.key.split('|')[0]))].filter(sc=>statesIndex[sc]);
   if(need.length){await Promise.all(need.map(loadStateData));render()}
 }
+let storiesRaw={};
 async function loadStories(){
-  try{const r=await fetch(DATA_BASE+'slides.json?v='+Date.now());if(!r.ok)throw 0;storyDecks=(await r.json()).decks||[]}catch(e){storyDecks=[]}
+  try{const r=await fetch(DATA_BASE+'slides.json?v='+Date.now());if(!r.ok)throw 0;storiesRaw=await r.json();storyDecks=storiesRaw.decks||[]}catch(e){storyDecks=[]}
   if(!storyDecks.length)return;
-  storyDecks.splice(1,0,{id:'season',gen:'season',month:defaultSeasonMonth(),title:'Best in '+MONTHS[defaultSeasonMonth()],kicker:'',slides:[]});
+  storyDecks.splice(1,0,{id:'season',gen:'season',month:defaultSeasonMonth(),title:'Best in '+MONTHS[defaultSeasonMonth()],kicker:'',slides:[]},{id:'surprise',gen:'surprise',title:'Surprise me',kicker:'',slides:[]});
+  flyKeys=Array.isArray(storiesRaw.flyover)?storiesRaw.flyover:[];
   document.getElementById('btnHl').hidden=false;
   syncStateStoryBtn();
   // "Must-do" strip under the category grid: one round chip per category that has a deck
   const md=document.getElementById('mustdo');
   md.innerHTML=`<span class="mustdo-lbl">${SVG_PLAY}Must-do</span>`
+    +`<button class="md-chip md-fly" title="Fly over India" aria-label="Fly over India: a short tour of the highlights" onclick="startFlyover()">${SVG_PLANE}</button>`
+    +`<button class="md-chip md-dice" title="Surprise me: random places as stories" aria-label="Surprise me: random places as stories" onclick="openSurpriseStory()">${SVG_DICE}</button>`
     +`<button class="md-chip md-season" title="Best in ${MONTHS[seasonDeck().month]}" aria-label="Best in ${MONTHS[seasonDeck().month]}" onclick="openStory('season')">${SVG_CAL}</button>`
     +storyDecks.filter(d=>d.cat&&CATS[d.cat]).map(d=>`<button class="md-chip" style="--c:${CATS[d.cat].color}" title="${esc(d.title)}" aria-label="${esc(d.title)}" onclick="openStory('${d.id}')">${ICONS[d.cat]}</button>`).join('');
   md.hidden=false;
@@ -1786,12 +1857,16 @@ async function loadStories(){
   let seen=false,seenMon='';try{seen=!!localStorage.getItem(STORY_SEEN);seenMon=localStorage.getItem(SEASON_SEEN)||''}catch(e){}
   if(location.hash)return;
   // First visit: Highlights of India. Coming back in a new month: that month's Best-in deck, once.
-  if(!seen)setTimeout(()=>showTeaser('india'),1600);
+  // A brand-new visitor gets the fly-over first (it ends on the Highlights teaser); reduced motion skips straight to the teaser
+  let flown=false;try{flown=!!localStorage.getItem(FLY_SEEN)}catch(e){}
+  if(!seen&&!flown&&!reduceMotion()&&flyKeys.length)setTimeout(()=>startFlyover({auto:true}),1200);
+  else if(!seen)setTimeout(()=>showTeaser('india'),1600);
   else if(seenMon!==seasonTag())setTimeout(()=>showTeaser('season'),1800);
 }
 const SEASON_SEEN='bharatyatra.seasonSeen.v1';
 const seasonTag=()=>new Date().getFullYear()+'-'+defaultSeasonMonth();
 async function showTeaser(id){
+  if(fly)return;
   if(document.getElementById('story').classList.contains('on')||!document.getElementById('surprise').hidden)return;
   const d=storyDecks.find(x=>x.id===(id||'india'))||storyDecks[0],t=document.getElementById('teaser');
   if(d.gen){await prepDeck(d);if(!d.slides.length)return;await ensureDeckPlaces(d)}
@@ -1808,6 +1883,7 @@ async function showTeaser(id){
 function hideTeaser(){const t=document.getElementById('teaser');t.classList.remove('on');setTimeout(()=>t.hidden=true,450);try{localStorage.setItem(STORY_SEEN,'1');localStorage.setItem(SEASON_SEEN,seasonTag())}catch(e){}}
 async function openStory(id){
   const di=Math.max(0,storyDecks.findIndex(d=>d.id===id));
+  if(fly)endFlyover({stay:true});
   hideTeaser();hideSurprise();closeCatPanel();map.closePopup();
   const el=document.getElementById('story');
   if(!el.classList.contains('on')){
@@ -1828,9 +1904,10 @@ function renderStoryChrome(){
   document.getElementById('stTitle').textContent=d.title;
   document.getElementById('stTabs').innerHTML=storyDecks.map((x,i)=>{
     const c=CATS[x.cat]||{color:'#E2622B',label:'Highlights'};
-    const [ico,lbl,col]=x.gen==='season'?[SVG_CAL,'Best in '+MONTHS[x.month].slice(0,3),'#C73E6B']:x.gen==='state'?[PIN_SVG,x.title,'#5A4432']:[x.cat?ICONS[x.cat]:SVG_SPARK,x.cat?c.label:'Highlights',c.color];
+    const [ico,lbl,col]=x.gen==='season'?[SVG_CAL,'Best in '+MONTHS[x.month].slice(0,3),'#C73E6B']:x.gen==='surprise'?[SVG_DICE,'Surprise me','#0E7C86']:x.gen==='state'?[PIN_SVG,x.title,'#5A4432']:[x.cat?ICONS[x.cat]:SVG_SPARK,x.cat?c.label:'Highlights',c.color];
     return `<button class="st-tab${i===story.deck?' on':''}" style="--c:${col}" onclick="event.stopPropagation();gotoStory(${i},0,1)"><span>${ico}</span>${esc(lbl)}</button>`}).join('');
   document.getElementById('stMon').hidden=d.gen!=='season';
+  document.getElementById('stShuf').hidden=d.gen!=='surprise';
   const on=document.querySelector('.st-tab.on');if(on)on.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});
   document.getElementById('stBars').innerHTML=d.slides.map((s,i)=>`<div class="st-bar${i<story.i?' done':i===story.i?' cur':''}" onclick="event.stopPropagation();gotoStory(${story.deck},${i},${i<story.i?-1:1})"><i></i></div>`).join('');
   document.getElementById('stCount').textContent=(story.i+1)+' / '+d.slides.length;
@@ -2046,6 +2123,96 @@ document.addEventListener('keydown',e=>{
   if(e.key==='Escape'&&!document.getElementById('surprise').hidden&&document.getElementById('story').hidden)hideSurprise();
 });
 
+
+/* ── Fly-over: a first-visit landing moment. The map glides across a handful of highlights
+   (slides.json → "flyover"), each with a photo card, then settles back on all of India and
+   offers the Highlights stories. Any touch on the map, Esc or Skip ends it. ── */
+const FLY_SEEN='bharatyatra.flyoverSeen.v1',FLY_DWELL=3400;
+let flyKeys=[],fly=null,foPulse=null;
+async function startFlyover(opts={}){
+  if(fly)return;
+  const keys=flyKeys.length?flyKeys:((storyDecks.find(d=>d.id==='india')||{slides:[]}).slides.slice(0,5).map(s=>s.key));
+  const places=(await Promise.all(keys.map(async k=>{const [sc,nm]=k.split('|');return allPlaces.find(p=>placeKey(p)===k)||(statesIndex[sc]?(await peekState(sc)).find(p=>p.name===nm):null)}))).filter(p=>p&&isFinite(p.lat)&&isFinite(p.lng));
+  if(!places.length||fly)return;
+  if(opts.auto&&(document.getElementById('story').classList.contains('on')||!document.getElementById('surprise').hidden))return;
+  try{localStorage.setItem(FLY_SEEN,'1')}catch(e){}
+  const t=document.getElementById('teaser');if(!t.hidden){t.classList.remove('on');t.hidden=true}
+  hideSurprise();closeCatPanel();map.closePopup();
+  if(isMobile()&&document.body.classList.contains('list-open')){document.body.classList.remove('list-open');setTimeout(()=>map.invalidateSize(),50)}
+  places.forEach(p=>getBigImage(p.wiki));
+  fly={seq:0,i:-1,places,auto:!!opts.auto,timer:0};
+  document.body.classList.add('flying');
+  const el=document.getElementById('flyover');
+  document.getElementById('foProg').innerHTML=places.map((p,i)=>`<b onclick="flyStep(${i})" title="${esc(p.name)}"><i></i></b>`).join('');
+  el.hidden=false;void el.offsetWidth;el.classList.add('on');
+  flyStep(0);
+}
+async function flyStep(i){
+  const f=fly;if(!f)return;
+  clearTimeout(f.timer);const seq=++f.seq;
+  if(i>=f.places.length){endFlyover();return}
+  f.i=i;
+  const p=f.places[i],c=CATS[p.cat]||CATS.scenic,el=document.getElementById('flyover'),last=i===f.places.length-1;
+  el.style.setProperty('--c',c.color);
+  document.getElementById('foKick').innerHTML=`${SVG_PLANE}Fly-over · ${i+1} / ${f.places.length}`;
+  document.getElementById('foHere').innerHTML=PIN_SVG+'Explore here';
+  document.getElementById('foNext').innerHTML=last?'Finish ✓':'Next ›';
+  [...document.querySelectorAll('#foProg b')].forEach((b,j)=>{b.className=j<i?'done':'';b.style.removeProperty('--dur')});
+  // Swap the text (fade out → in) and crossfade the photo
+  el.classList.add('swap');
+  setTimeout(()=>{
+    if(seq!==f.seq||fly!==f)return;
+    document.getElementById('foName').textContent=p.name;
+    document.getElementById('foState').innerHTML=`${PIN_SVG}${esc(p.state)}<i>${esc(c.label)}</i>`;
+    document.getElementById('foLine').textContent=(curatedLine(placeKey(p))||{}).line||p.desc||'';
+    el.classList.remove('swap');
+  },220);
+  const hero=document.getElementById('foHero');
+  hero.querySelectorAll('img').forEach(im=>{im.classList.remove('ok');setTimeout(()=>im.remove(),700)});
+  getBigImage(p.wiki).then(u=>{if(!u||seq!==f.seq||fly!==f)return;const im=new Image();im.alt=p.name;im.decoding='async';im.onload=()=>im.classList.add('ok');imgChain(im,u,x=>x.remove());hero.insertBefore(im,hero.firstChild)});
+  // Fly so the place sits in the open part of the map, clear of the card
+  if(foPulse){map.removeLayer(foPulse);foPulse=null}
+  const z=isMobile()?7:7.5,sz=map.getSize(),cw=el.offsetWidth,ch=el.offsetHeight;
+  const off=isMobile()?L.point(0,Math.max(0,(ch+16)/2)):L.point(-Math.min(sz.x/4,(cw+16)/2),0);
+  const target=map.unproject(map.project([p.lat,p.lng],z).add(off),z);
+  await new Promise(res=>{
+    let done=false;const fin=()=>{if(!done){done=true;res()}};
+    map.stop();map.once('moveend',fin);setTimeout(fin,4200);
+    if(reduceMotion())map.setView(target,z,{animate:false});else map.flyTo(target,z,{duration:i?2.6:2.2,easeLinearity:.2});
+  });
+  if(seq!==f.seq||fly!==f)return;
+  foPulse=L.marker([p.lat,p.lng],{interactive:false,keyboard:false,zIndexOffset:-1000,icon:L.divIcon({className:'sp-pulse',html:`<i style="--c:${c.color}"></i><i style="--c:${c.color}"></i>`,iconSize:[0,0]})}).addTo(map);
+  const bar=document.querySelectorAll('#foProg b')[i];if(bar){bar.style.setProperty('--dur',FLY_DWELL+'ms');bar.className='cur'}
+  f.timer=setTimeout(()=>{if(seq===f.seq&&fly===f)flyStep(i+1)},FLY_DWELL);
+}
+function flyoverNext(){if(fly)flyStep(fly.i+1)}
+function endFlyover(opts={}){
+  const f=fly;if(!f)return;
+  fly=null;clearTimeout(f.timer);
+  const el=document.getElementById('flyover');el.classList.remove('on');setTimeout(()=>{if(!fly)el.hidden=true},450);
+  document.body.classList.remove('flying');
+  if(foPulse){map.removeLayer(foPulse);foPulse=null}
+  if(opts.stay)return;
+  map.stop();showAllIndia(!reduceMotion());
+  if(f.auto)setTimeout(()=>showTeaser('india'),1100);
+}
+function flyoverStopHere(){
+  const f=fly;if(!f)return;const p=f.places[f.i];
+  endFlyover({stay:true});if(!p)return;
+  if(!activeCats.has(p.cat))activeCats.add(p.cat);
+  if(selectedState&&selectedState!==p.stateCode){selectedState='';document.getElementById('stateSelect').value='';syncStateStoryBtn()}
+  const go=()=>focusPlace(findPlace(placeKey(p))||p);
+  if(!loadedStates[p.stateCode]&&statesIndex[p.stateCode])loadStateData(p.stateCode).then(()=>{render();go()});else{render();go()}
+}
+{
+  const el=document.getElementById('flyover');L.DomEvent.disableClickPropagation(el);L.DomEvent.disableScrollPropagation(el);
+  // Taking hold of the map ends the tour where it is
+  const stop=e=>{if(fly&&!e.target.closest('.fo'))endFlyover({stay:true})};
+  map.getContainer().addEventListener('pointerdown',stop,true);
+  map.getContainer().addEventListener('wheel',stop,{capture:true,passive:true});
+  document.addEventListener('keydown',e=>{if(fly&&e.key==='Escape'){e.preventDefault();endFlyover()}});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden&&fly)endFlyover({stay:true})});
+}
 /* ══════ GETTING THERE: nearest airport & railhead ══════
    airports.json / railway-stations.json hold real airports (IATA) and major stations (IR code)
    with verified coordinates. Distances are straight-line ("~62 km"); no routes, schedules or
