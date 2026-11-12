@@ -180,6 +180,127 @@
    "desc": "Short Garhwal trek to the 3,022 m 'Serpent's Peak' above Mussoorie",
    "wiki": "Nag_Tibba",
    "best": "Oct\u2013Jun"
+  },
+  {
+   "name": "Gangotri",
+   "cat": "religious",
+   "lat": 30.9939,
+   "lng": 78.9411,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Char Dham shrine to the Ganga at 3,100 m, near the river's glacier source",
+   "wiki": "Gangotri",
+   "best": "May\u2013Jun, Sep\u2013Oct"
+  },
+  {
+   "name": "Yamunotri",
+   "cat": "religious",
+   "lat": 31.0167,
+   "lng": 78.45,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Char Dham temple to the Yamuna at 3,291 m, reached on foot from Janki Chatti",
+   "wiki": "Yamunotri_Temple",
+   "best": "May\u2013Jun, Sep\u2013Oct"
+  },
+  {
+   "name": "Hemkund Sahib",
+   "cat": "religious",
+   "lat": 30.7002,
+   "lng": 79.616,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Sikh gurdwara at 4,572 m beside a glacial lake, above the Valley of Flowers",
+   "wiki": "Gurdwara_Hemkund_Sahib",
+   "best": "Jun\u2013Sep"
+  },
+  {
+   "name": "Mussoorie",
+   "cat": "scenic",
+   "lat": 30.45,
+   "lng": 78.0833,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "The 'Queen of the Hills' \u2014 Mall Road and Doon Valley views",
+   "wiki": "Mussoorie",
+   "best": "Mar\u2013Jun, Sep\u2013Nov"
+  },
+  {
+   "name": "Jageshwar Temples",
+   "cat": "history",
+   "lat": 29.6333,
+   "lng": 79.85,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Cluster of 125 stone temples from the 7th\u201314th centuries in a deodar grove",
+   "wiki": "Jageshwar",
+   "best": "Mar\u2013Jun, Sep\u2013Nov"
+  },
+  {
+   "name": "Kausani",
+   "cat": "scenic",
+   "lat": 29.8541,
+   "lng": 79.5966,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Kumaoni hill town with a 300 km sweep of Himalayan peaks \u2014 Gandhi's 'Switzerland of India'",
+   "wiki": "Kausani",
+   "best": "Oct\u2013Jun"
+  },
+  {
+   "name": "Tehri Lake Water Sports",
+   "cat": "adventure",
+   "lat": 30.3778,
+   "lng": 78.4806,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Jet skis, kayaks and boats on Uttarakhand's largest lake, behind the 260 m Tehri Dam",
+   "wiki": "Tehri_Dam",
+   "best": "Oct\u2013Jun"
+  },
+  {
+   "name": "Pindari Glacier Trek",
+   "cat": "adventure",
+   "lat": 30.3,
+   "lng": 80.0167,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Classic Kumaon trek through Khati and Dwali to the snout of a 9 km glacier",
+   "wiki": "Pindari_Glacier",
+   "best": "May\u2013Jun, Sep\u2013Oct"
+  },
+  {
+   "name": "Dayara Bugyal Trek",
+   "cat": "adventure",
+   "lat": 30.8384,
+   "lng": 78.555,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Easy trek from Raithal or Barsu to vast high meadows topping out near 3,640 m",
+   "wiki": "Dayara_Bugyal",
+   "best": "Dec\u2013Mar, May\u2013Jun"
+  },
+  {
+   "name": "Aipan Art, Almora",
+   "cat": "arts",
+   "lat": 29.5971,
+   "lng": 79.6591,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Kumaoni ritual floor and wall art in white rice paste on brick-red geru",
+   "wiki": "Aipan_art",
+   "best": "All year"
+  },
+  {
+   "name": "Binsar Wildlife Sanctuary",
+   "cat": "fauna",
+   "lat": 29.7064,
+   "lng": 79.7561,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Oak-and-rhododendron forest ridge with birdlife and a Zero Point Himalayan view",
+   "wiki": "Binsar_Wildlife_Sanctuary",
+   "best": "Oct\u2013Jun"
   }
  ]
 }

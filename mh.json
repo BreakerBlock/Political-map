@@ -309,6 +309,39 @@
    "desc": "Konkan coconut-and-kokum fish curries, sol kadhi and vade",
    "wiki": "Malvani_cuisine",
    "best": "Oct\u2013May"
+  },
+  {
+   "name": "Elephanta Caves",
+   "cat": "history",
+   "lat": 18.9633,
+   "lng": 72.9314,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "UNESCO rock-cut Shiva cave temples on an island in Mumbai harbour",
+   "wiki": "Elephanta_Caves",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Matheran",
+   "cat": "scenic",
+   "lat": 18.9866,
+   "lng": 73.2679,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Car-free hill station at 800 m, reached by a toy train",
+   "wiki": "Matheran",
+   "best": "Oct\u2013May"
+  },
+  {
+   "name": "Tarkarli",
+   "cat": "scenic",
+   "lat": 16.0565,
+   "lng": 73.4688,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Clear-water Konkan beach where the Karli River meets the Arabian Sea, near Malvan",
+   "wiki": "Tarkarli",
+   "best": "Oct\u2013May"
   }
  ]
 }

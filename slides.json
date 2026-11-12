@@ -235,6 +235,21 @@
      "key": "WB|Teesta River Rafting",
      "line": "Bounce through Class I\u2013III rapids on the Teesta below Kalimpong.",
      "season": "Oct\u2013Mar"
+    },
+    {
+     "key": "UK|Dayara Bugyal Trek",
+     "line": "Snowshoe or stroll across high Garhwal meadows with the Bandarpunch range ahead.",
+     "season": "Dec\u2013Mar \u00b7 May\u2013Jun"
+    },
+    {
+     "key": "AN|Saddle Peak Trek",
+     "line": "Climb through rainforest to the highest point of the Andaman Islands.",
+     "season": "Nov\u2013Apr"
+    },
+    {
+     "key": "UK|Tehri Lake Water Sports",
+     "line": "Jet-ski and kayak on a Himalayan reservoir.",
+     "season": "Oct\u2013Jun"
     }
    ]
   },
@@ -502,6 +517,21 @@
      "key": "DL|Gurudwara Bangla Sahib",
      "line": "Join the free langar and sit by the sarovar of Delhi's best-loved gurdwara.",
      "season": "Oct\u2013Mar"
+    },
+    {
+     "key": "UK|Hemkund Sahib",
+     "line": "Climb to a Sikh shrine at 4,572 m, mirrored in a glacial lake above the Valley of Flowers.",
+     "season": "Jun\u2013Sep"
+    },
+    {
+     "key": "UP|Kushinagar",
+     "line": "Stand before the reclining Buddha where he passed into parinirvana.",
+     "season": "Oct\u2013Mar"
+    },
+    {
+     "key": "UK|Gangotri",
+     "line": "Pray at the Ganga's mountain temple, a day's walk from its glacier source.",
+     "season": "May\u2013Jun \u00b7 Sep\u2013Oct"
     }
    ]
   },
@@ -572,6 +602,26 @@
      "line": "Giant gods carved into jungle cliffs above the Gomati river.",
      "season": "Oct\u2013Mar",
      "title": "Boat to the cliff gods of Chabimura"
+    },
+    {
+     "key": "KA|Gol Gumbaz",
+     "line": "Whisper under one of the world's largest domes and hear it come back across the gallery.",
+     "season": "Oct\u2013Feb"
+    },
+    {
+     "key": "MH|Elephanta Caves",
+     "line": "Take the ferry across Mumbai harbour to the giant three-headed Shiva carved in rock.",
+     "season": "Oct\u2013Mar"
+    },
+    {
+     "key": "GJ|Sabarmati Ashram",
+     "line": "Walk through Gandhi's riverside home, where the 1930 Salt March began.",
+     "season": "Oct\u2013Mar"
+    },
+    {
+     "key": "GJ|Statue of Unity",
+     "line": "Ride up the world's tallest statue for views over the Narmada.",
+     "season": "Oct\u2013Mar"
     }
    ]
   },
@@ -654,6 +704,16 @@
      "line": "Boat between glowing white marble cliffs on the Narmada \u2014 best on a full-moon night.",
      "season": "Oct\u2013Mar",
      "title": "Moonlight at the Marble Rocks"
+    },
+    {
+     "key": "KL|Athirappilly Falls",
+     "line": "Feel the spray of Kerala's biggest waterfall at full monsoon roar.",
+     "season": "Jun\u2013Jan"
+    },
+    {
+     "key": "MH|Matheran",
+     "line": "Ride the toy train up to a hill station with no cars at all.",
+     "season": "Oct\u2013May"
     }
    ]
   },

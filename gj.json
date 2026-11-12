@@ -255,6 +255,39 @@
    "desc": "Kutch's spiced potato bun with pomegranate and peanuts, born in Mandvi in the 1960s",
    "wiki": "Dabeli",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Statue of Unity",
+   "cat": "history",
+   "lat": 21.838,
+   "lng": 73.7191,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "The world's tallest statue \u2014 Sardar Patel, 182 m, by the Narmada",
+   "wiki": "Statue_of_Unity",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Sabarmati Ashram",
+   "cat": "history",
+   "lat": 23.06,
+   "lng": 72.5808,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Gandhi's riverside home, where the Dandi Salt March began in 1930",
+   "wiki": "Sabarmati_Ashram",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Adalaj Stepwell",
+   "cat": "history",
+   "lat": 23.1669,
+   "lng": 72.5802,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Five-storey carved stepwell built in 1498 by Queen Rudabai",
+   "wiki": "Adalaj_Stepwell",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

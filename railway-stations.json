@@ -1034,6 +1034,57 @@
    "city": "Bhalukpong",
    "lat": 27.0006,
    "lng": 92.6447
+  },
+  {
+   "code": "SA",
+   "name": "Salem Junction",
+   "city": "Salem",
+   "lat": 11.6714,
+   "lng": 78.1132,
+   "major": true
+  },
+  {
+   "code": "BJP",
+   "name": "Vijayapura (Bijapur)",
+   "city": "Vijayapura",
+   "lat": 16.8306,
+   "lng": 75.7395
+  },
+  {
+   "code": "BGP",
+   "name": "Bhagalpur Junction",
+   "city": "Bhagalpur",
+   "lat": 25.2415,
+   "lng": 86.9725,
+   "major": true
+  },
+  {
+   "code": "KGQ",
+   "name": "Kasaragod",
+   "city": "Kasaragod",
+   "lat": 12.4913,
+   "lng": 74.9877
+  },
+  {
+   "code": "PND",
+   "name": "Pendra Road",
+   "city": "Pendra",
+   "lat": 22.7561,
+   "lng": 81.8991
+  },
+  {
+   "code": "KIK",
+   "name": "Karaikal",
+   "city": "Karaikal",
+   "lat": 10.9327,
+   "lng": 79.8319
+  },
+  {
+   "code": "KRMR",
+   "name": "Karimnagar",
+   "city": "Karimnagar",
+   "lat": 18.459,
+   "lng": 79.1423
   }
  ]
 }

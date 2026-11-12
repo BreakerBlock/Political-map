@@ -239,6 +239,17 @@
    "desc": "GI-tagged spicy gram-flour sev, Ratlam's most famous snack",
    "wiki": "Sev_(food)",
    "best": "All year"
+  },
+  {
+   "name": "Amarkantak",
+   "cat": "religious",
+   "lat": 22.822,
+   "lng": 81.7532,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Sacred source of the Narmada at 1,048 m, where the Vindhyas meet the Satpuras",
+   "wiki": "Amarkantak",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

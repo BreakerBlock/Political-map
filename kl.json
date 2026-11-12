@@ -305,6 +305,50 @@
    "desc": "Two-day permit-only trek from Bonacaud to a 1,868 m Western Ghats peak",
    "wiki": "Agastya_Mala",
    "best": "Jan\u2013Mar"
+  },
+  {
+   "name": "Bekal Fort",
+   "cat": "history",
+   "lat": 12.369,
+   "lng": 75.056,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Kerala's largest fort, a 17th-century keyhole-shaped bastion on the sea",
+   "wiki": "Bekal_Fort",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Athirappilly Falls",
+   "cat": "scenic",
+   "lat": 10.2847,
+   "lng": 76.5686,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Kerala's largest waterfall, the Chalakudy River tumbling 25 m through forest",
+   "wiki": "Athirappilly_Falls",
+   "best": "Jun\u2013Jan"
+  },
+  {
+   "name": "Kovalam",
+   "cat": "scenic",
+   "lat": 8.4004,
+   "lng": 76.9787,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Three crescent beaches split by rocky headlands, below the Vizhinjam lighthouse",
+   "wiki": "Kovalam",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Meesapulimala Trek",
+   "cat": "adventure",
+   "lat": 10.0974,
+   "lng": 77.2034,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Trek through tea and grassland to a 2,640 m peak above Munnar's clouds",
+   "wiki": "Meesapulimala",
+   "best": "Sep\u2013Mar"
   }
  ]
 }

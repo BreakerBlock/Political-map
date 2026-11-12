@@ -88,6 +88,17 @@
    "desc": "Wetland bird sanctuary shared with Tamil Nadu; migratory birds arrive after November",
    "wiki": "Ousteri_Lake",
    "best": "Nov\u2013Mar"
+  },
+  {
+   "name": "Thirunallar Saniswaran Temple",
+   "cat": "religious",
+   "lat": 10.9264,
+   "lng": 79.792,
+   "state": "Puducherry",
+   "stateCode": "PY",
+   "desc": "Karaikal's Dharbaranyeswarar temple, India's best-known shrine to Saturn (Shani)",
+   "wiki": "Dharbaranyeswarar_Temple",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

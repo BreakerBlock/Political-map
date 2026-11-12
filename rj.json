@@ -420,6 +420,17 @@
    "desc": "Kota's famous crisp dal kachori with spicy chutneys",
    "wiki": "Kachori",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Bhangarh Fort",
+   "cat": "history",
+   "lat": 27.0958,
+   "lng": 76.2875,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Ruined 16th-century fort town, famous for its legends of a curse",
+   "wiki": "Bhangarh_Fort",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

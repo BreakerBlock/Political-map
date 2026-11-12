@@ -302,6 +302,17 @@
    "stateCode": "UP",
    "desc": "India's great centre of hand-knotted carpet weaving",
    "wiki": "Bhadohi"
+  },
+  {
+   "name": "Kushinagar",
+   "cat": "religious",
+   "lat": 26.741,
+   "lng": 83.888,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Where the Buddha attained parinirvana \u2014 a 6 m reclining Buddha in red sandstone",
+   "wiki": "Parinirvana_Stupa",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

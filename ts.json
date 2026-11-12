@@ -159,6 +159,17 @@
    "desc": "Tiger reserve in the Nallamala forest of the Eastern Ghats",
    "wiki": "Amrabad_Tiger_Reserve",
    "best": "Oct\u2013Jun"
+  },
+  {
+   "name": "Silver Filigree, Karimnagar",
+   "cat": "arts",
+   "lat": 18.4386,
+   "lng": 79.1288,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "GI-tagged lacework of fine silver wire twisted into trays, boxes and jewellery",
+   "wiki": "Silver_Filigree_of_Karimnagar",
+   "best": "All year"
   }
  ]
 }

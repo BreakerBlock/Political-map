@@ -3596,7 +3596,172 @@
    "desc": "Class I\u2013III rafting runs on the Teesta at Teesta Bazaar, Kalimpong",
    "wiki": "Teesta_Bazaar",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Saddle Peak Trek",
+   "cat": "adventure",
+   "lat": 13.1584,
+   "lng": 93.0061,
+   "state": "Andaman & Nicobar",
+   "stateCode": "AN",
+   "desc": "Rainforest trek near Diglipur to the 732 m summit, the highest point of the islands",
+   "wiki": "Saddle_Peak_(Andaman_Islands)",
+   "best": "Nov\u2013Apr"
+  },
+  {
+   "name": "Statue of Unity",
+   "cat": "history",
+   "lat": 21.838,
+   "lng": 73.7191,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "The world's tallest statue \u2014 Sardar Patel, 182 m, by the Narmada",
+   "wiki": "Statue_of_Unity",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Sabarmati Ashram",
+   "cat": "history",
+   "lat": 23.06,
+   "lng": 72.5808,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Gandhi's riverside home, where the Dandi Salt March began in 1930",
+   "wiki": "Sabarmati_Ashram",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Gol Gumbaz",
+   "cat": "history",
+   "lat": 16.83,
+   "lng": 75.7361,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Adil Shahi mausoleum with one of the world's largest domes and a whispering gallery",
+   "wiki": "Gol_Gumbaz",
+   "best": "Oct\u2013Feb"
+  },
+  {
+   "name": "Bekal Fort",
+   "cat": "history",
+   "lat": 12.369,
+   "lng": 75.056,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Kerala's largest fort, a 17th-century keyhole-shaped bastion on the sea",
+   "wiki": "Bekal_Fort",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Athirappilly Falls",
+   "cat": "scenic",
+   "lat": 10.2847,
+   "lng": 76.5686,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Kerala's largest waterfall, the Chalakudy River tumbling 25 m through forest",
+   "wiki": "Athirappilly_Falls",
+   "best": "Jun\u2013Jan"
+  },
+  {
+   "name": "Elephanta Caves",
+   "cat": "history",
+   "lat": 18.9633,
+   "lng": 72.9314,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "UNESCO rock-cut Shiva cave temples on an island in Mumbai harbour",
+   "wiki": "Elephanta_Caves",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Matheran",
+   "cat": "scenic",
+   "lat": 18.9866,
+   "lng": 73.2679,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Car-free hill station at 800 m, reached by a toy train",
+   "wiki": "Matheran",
+   "best": "Oct\u2013May"
+  },
+  {
+   "name": "Gangotri",
+   "cat": "religious",
+   "lat": 30.9939,
+   "lng": 78.9411,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Char Dham shrine to the Ganga at 3,100 m, near the river's glacier source",
+   "wiki": "Gangotri",
+   "best": "May\u2013Jun, Sep\u2013Oct"
+  },
+  {
+   "name": "Hemkund Sahib",
+   "cat": "religious",
+   "lat": 30.7002,
+   "lng": 79.616,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Sikh gurdwara at 4,572 m beside a glacial lake, above the Valley of Flowers",
+   "wiki": "Gurdwara_Hemkund_Sahib",
+   "best": "Jun\u2013Sep"
+  },
+  {
+   "name": "Mussoorie",
+   "cat": "scenic",
+   "lat": 30.45,
+   "lng": 78.0833,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "The 'Queen of the Hills' \u2014 Mall Road and Doon Valley views",
+   "wiki": "Mussoorie",
+   "best": "Mar\u2013Jun, Sep\u2013Nov"
+  },
+  {
+   "name": "Jageshwar Temples",
+   "cat": "history",
+   "lat": 29.6333,
+   "lng": 79.85,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Cluster of 125 stone temples from the 7th\u201314th centuries in a deodar grove",
+   "wiki": "Jageshwar",
+   "best": "Mar\u2013Jun, Sep\u2013Nov"
+  },
+  {
+   "name": "Tehri Lake Water Sports",
+   "cat": "adventure",
+   "lat": 30.3778,
+   "lng": 78.4806,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Jet skis, kayaks and boats on Uttarakhand's largest lake, behind the 260 m Tehri Dam",
+   "wiki": "Tehri_Dam",
+   "best": "Oct\u2013Jun"
+  },
+  {
+   "name": "Dayara Bugyal Trek",
+   "cat": "adventure",
+   "lat": 30.8384,
+   "lng": 78.555,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Easy trek from Raithal or Barsu to vast high meadows topping out near 3,640 m",
+   "wiki": "Dayara_Bugyal",
+   "best": "Dec\u2013Mar, May\u2013Jun"
+  },
+  {
+   "name": "Kushinagar",
+   "cat": "religious",
+   "lat": 26.741,
+   "lng": 83.888,
+   "state": "Uttar Pradesh",
+   "stateCode": "UP",
+   "desc": "Where the Buddha attained parinirvana \u2014 a 6 m reclining Buddha in red sandstone",
+   "wiki": "Parinirvana_Stupa",
+   "best": "Oct\u2013Mar"
   }
  ],
- "total": 622
+ "total": 653
 }

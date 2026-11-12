@@ -351,6 +351,28 @@
    "desc": "Arcot-era biryani of seeraga samba rice and tender meat",
    "wiki": "Ambur",
    "best": "All year"
+  },
+  {
+   "name": "Velliangiri Mountains Trek",
+   "cat": "adventure",
+   "lat": 10.9888,
+   "lng": 76.6873,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Steep pilgrim trek over seven hills to a 1,778 m Shiva shrine near Coimbatore",
+   "wiki": "Velliangiri_Mountains",
+   "best": "Feb\u2013May"
+  },
+  {
+   "name": "Yercaud",
+   "cat": "scenic",
+   "lat": 11.7794,
+   "lng": 78.2034,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Coffee-country hill station at 1,515 m in the Shevaroy Hills",
+   "wiki": "Yercaud",
+   "best": "Oct\u2013Jun"
   }
  ]
 }

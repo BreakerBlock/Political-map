@@ -386,6 +386,17 @@
    "desc": "Climb Kodagu's grassy 1,748 m summit through shola forest",
    "wiki": "Tadiandamol",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Gol Gumbaz",
+   "cat": "history",
+   "lat": 16.83,
+   "lng": 75.7361,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Adil Shahi mausoleum with one of the world's largest domes and a whispering gallery",
+   "wiki": "Gol_Gumbaz",
+   "best": "Oct\u2013Feb"
   }
  ]
 }
