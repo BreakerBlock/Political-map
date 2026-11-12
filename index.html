@@ -957,6 +957,10 @@ async function init(){
     statesIndex=siData;
     allPlaces=[...highlightPlaces];
     populateStateSelect();
+    // Load every state up front so the map and the list show all places, not just highlights
+    // (each state file is small; failures fall back to that state's highlights).
+    await Promise.all(Object.keys(statesIndex).map(loadStateData));
+    totalPlaces=Math.max(totalPlaces,allPlaces.length);
   }catch(e){console.warn('Init:',e.message)}
   document.getElementById('loader').style.display='none';
   render();
@@ -1162,7 +1166,7 @@ function render(){
   if(reopen&&markerByKey[reopen])showMarker(markerByKey[reopen]);
 
   document.getElementById('placeCountN').textContent=visible.length;
-  document.getElementById('totalBadge').textContent=totalPlaces?`of ${totalPlaces}`:'';
+  document.getElementById('totalBadge').textContent=totalPlaces&&visible.length<totalPlaces?`of ${totalPlaces}`:'';
   renderCatBtns();
 }
 
