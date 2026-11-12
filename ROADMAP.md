@@ -1,6 +1,13 @@
 # BharatYatra roadmap
 
-## Priority backlog (from Utkarsh, 2026-10-25) — current focus
+## New priority items (from Utkarsh, 2026-11-12) — do these first
+- [ ] **N1 · Site icon** — the site has no favicon: add an SVG favicon in the site palette, apple-touch-icon and theme-color.
+- [ ] **N2 · Capital & city labels** — plain black label text doesn't look nice: restyle (light text with a soft dark halo, refined weight/spacing, a tasteful capital marker), readable on satellite.
+- [ ] **N3 · Satellite only** — drop the Map/Satellite toggle and terrain basemap; Esri World_Imagery at every zoom; re-tune mist, boundary halo, labels and pins for imagery. (N1–N3 can ship together.)
+- [ ] **N4 · Itinerary designer** — a "Design my trip" section that asks a few questions (days, month, start, interests, pace, road/train/flight) and builds a day-by-day itinerary from real places, opening in My trip to edit, share and email.
+- [ ] **N5 · Train & air, comprehensive** — grow airports/stations so every place has a sensible nearest railhead and airport (~60 km where a real one exists); add verified details (junctions/zones, international airports, famous and heritage toy trains); show them in popups and cards. No invented routes, schedules or fares.
+
+## Priority backlog (from Utkarsh, 2026-10-25)
 More to see, and more excitement, ahead of further trip-planner features.
 - [x] **Images didn't load properly on Windows or Mac** *(fixed 2026-11-05 — see Progress)*
 - [x] **Train & air connectivity** *(from Utkarsh 2026-11-02 — slice 1 shipped 2026-11-03; slice 2 2026-11-04; slice 3 2026-11-06 — done; more railheads can still be added)* — show how to reach each place by rail and air. Slice 1: `airports.json` and `railway-stations.json` (real, verified codes and coordinates); "Nearest airport / Nearest railhead · ~km" in every popup and sidebar card, with key-free search links; toggle layers with plane/train icons. Slice 2: trip legs suggest "Fly XXX→YYY" or "Train" for long legs (and flights/ferries for the islands), in the timeline, day plan and email. Slice 3: a "Getting there" line on story slides and the Surprise-me card. Never claim direct flights or trains unless verified.
