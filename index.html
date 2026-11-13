@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>BharatYatra — India Travel Planner</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="theme-color" content="#B5452A">
+<meta name="apple-mobile-web-app-title" content="BharatYatra">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css"/>
@@ -120,16 +124,10 @@ header h1 span{color:var(--accent)}
 .pc-add.in{background:var(--accent);border-color:var(--accent);color:#fff;font-size:13px}
 
 /* ── Map ── */
-#map{flex:1;background:#B9D3DC;position:relative}
-.tile-terrain{filter:saturate(1.15) contrast(1.05) brightness(1.02)}
-.tile-sat{filter:saturate(1.08) contrast(1.03)}
-body.sat-on .india-mask{fill-opacity:0.35}
-body.sat-on .india-fill{fill-opacity:0}
-.map-vignette{position:absolute;inset:0;pointer-events:none;z-index:350;box-shadow:inset 0 0 70px 6px rgba(30,40,50,0.14)}
-.base-toggle{display:flex;background:rgba(255,253,248,0.94);border-radius:10px;padding:3px;box-shadow:0 2px 10px rgba(44,24,16,0.18);backdrop-filter:blur(6px)}
-.base-toggle button{border:none;background:none;font:600 11px 'DM Sans',sans-serif;color:var(--ink-dim);padding:6px 10px;border-radius:7px;cursor:pointer;transition:background .15s,color .15s}
-.base-toggle button.on{background:var(--ink);color:#fff}
-.compass{position:absolute;left:12px;bottom:32px;z-index:800;width:54px;height:54px;opacity:0.45;pointer-events:none;filter:drop-shadow(0 1px 2px rgba(255,253,248,0.8))}
+#map{flex:1;background:#0E1B24;position:relative}
+.tile-sat{filter:saturate(1.12) contrast(1.06) brightness(1.03)}
+.map-vignette{position:absolute;inset:0;pointer-events:none;z-index:350;box-shadow:inset 0 0 90px 10px rgba(6,12,18,0.42)}
+.compass{position:absolute;left:12px;bottom:32px;z-index:800;width:54px;height:54px;opacity:0.7;pointer-events:none;filter:invert(1) sepia(.35) drop-shadow(0 1px 3px rgba(0,0,0,0.8))}
 .leaflet-control-zoom a{background:var(--surface)!important;color:var(--ink)!important;border-color:var(--border)!important;font-size:16px!important;width:32px!important;height:32px!important;line-height:32px!important}
 
 /* ── Cluster styling ── */
@@ -203,15 +201,17 @@ body.show-pin-labels .leaflet-tooltip.pin-label{display:block}
 .state-label,.city-label{pointer-events:none!important;transition:opacity .25s ease}
 .lbl-off{opacity:0!important}
 .city-label.nodot .cl-dot{display:none}
-.sl-t{position:absolute;left:0;top:0;transform:translate(-50%,-50%);font-family:'Cormorant Garamond',Georgia,serif;font-size:10.5px;font-weight:700;color:rgba(90,40,20,0.55);letter-spacing:0.16em;text-transform:uppercase;white-space:nowrap;line-height:1.1;text-shadow:0 0 4px rgba(245,237,224,1),0 0 7px rgba(245,237,224,1)}
+/* Map labels on satellite imagery: warm cream type on a soft dark halo, capitals marked with a saffron ring */
+.sl-t{position:absolute;left:0;top:0;transform:translate(-50%,-50%);font-family:'Cormorant Garamond',Georgia,serif;font-size:11px;font-weight:700;color:rgba(255,236,206,0.82);letter-spacing:0.26em;text-transform:uppercase;white-space:nowrap;line-height:1.1;text-shadow:0 0 2px rgba(10,6,2,.75),0 1px 4px rgba(10,6,2,.65),0 0 10px rgba(10,6,2,.4)}
 .city-label{font-family:'DM Sans',sans-serif}
-.cl-dot{position:absolute;left:-3.5px;top:-3.5px;width:5px;height:5px;border-radius:50%;background:#5A4A3A;border:1px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4)}
-.cl-name{position:absolute;left:0;top:0;white-space:nowrap;line-height:1.15;font-size:10px;font-weight:500;color:#4A3A2C;text-shadow:0 0 3px #fff,0 0 5px #fff,0 0 6px #fff}
-.city-label.tier1 .cl-name{font-weight:600;font-size:10.5px}
-.city-label.tier0 .cl-name{font-weight:700;font-size:11px;color:#3A2A1E;letter-spacing:.01em}
-.city-label.tier0 .cl-dot{width:6px;height:6px;left:-4px;top:-4px;background:#7A2E14}
-body.sat-on .cl-name{color:#fff;text-shadow:0 0 3px rgba(0,0,0,.9),0 0 6px rgba(0,0,0,.7)}
-body.sat-on .sl-t{color:rgba(255,245,230,.85);text-shadow:0 0 4px rgba(0,0,0,.9)}
+.cl-dot{position:absolute;left:-3px;top:-3px;width:6px;height:6px;border-radius:50%;background:#FFF6E6;box-shadow:0 0 0 1.2px rgba(20,12,6,.7),0 1px 3px rgba(0,0,0,.55)}
+.cl-name{position:absolute;left:0;top:0;white-space:nowrap;line-height:1.15;font-size:10.5px;font-weight:500;letter-spacing:.02em;color:#FFF8EE;text-shadow:0 0 1.5px rgba(8,5,2,.95),0 0 3px rgba(8,5,2,.8),0 1px 6px rgba(8,5,2,.55)}
+.city-label.tier1 .cl-name{font-weight:600;font-size:11px}
+.city-label.tier0 .cl-name{font-weight:700;font-size:12px;letter-spacing:.045em;color:#FFFFFF}
+.city-label.cap .cl-name{color:#FFE7BD}
+.city-label.cap .cl-dot{left:-4.5px;top:-4.5px;width:9px;height:9px;background:#FFF6E6;box-shadow:inset 0 0 0 2.4px #F29B38,0 0 0 1.2px rgba(20,12,6,.75),0 1px 4px rgba(0,0,0,.6)}
+.city-label.natcap .cl-dot{left:-6px;top:-6px;width:12px;height:12px;background:#F29B38;box-shadow:inset 0 0 0 2.4px #FFF6E6,0 0 0 1.4px rgba(20,12,6,.8),0 0 10px rgba(242,155,56,.65)}
+.city-label.natcap .cl-name{color:#FFDCA0}
 
 .disclaimer{position:absolute;bottom:6px;left:10px;z-index:800;font-size:0.56rem;color:var(--ink-light);background:rgba(255,253,248,0.92);padding:3px 12px;border-radius:4px;white-space:nowrap}
 .loading-overlay{position:absolute;inset:0;z-index:900;background:rgba(245,237,224,0.9);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--ink-dim);gap:12px}
@@ -798,7 +798,7 @@ const imgCache={};
 /* ── City and state labels ── */
 const STATE_LABELS=[["J&K",33.6,74.9],["LADAKH",34.4,77.6],["HIMACHAL",31.9,77.3],["PUNJAB",30.9,75.4],["HARYANA",29.2,76.1],["UTTARAKHAND",30.1,79.2],["RAJASTHAN",26.6,73.0],["UTTAR PRADESH",27.0,80.5],["BIHAR",25.7,85.6],["GUJARAT",22.6,71.6],["MADHYA PRADESH",23.4,78.6],["CHHATTISGARH",21.5,82.0],["JHARKHAND",23.6,85.5],["WEST BENGAL",24.0,87.9],["ODISHA",20.4,84.6],["MAHARASHTRA",19.3,76.2],["TELANGANA",17.9,79.1],["ANDHRA PRADESH",15.7,79.9],["KARNATAKA",14.8,76.1],["GOA",15.35,74.05],["KERALA",10.4,76.4],["TAMIL NADU",11.0,78.5],["ASSAM",26.3,92.9],["MEGHALAYA",25.5,91.2],["ARUNACHAL",28.1,94.6],["NAGALAND",26.1,94.4],["MANIPUR",24.7,93.9],["MIZORAM",23.3,92.9],["TRIPURA",23.8,91.7],["SIKKIM",27.6,88.5],["DELHI",28.65,77.1],["LAKSHADWEEP",10.3,70.6],["ANDAMAN & NICOBAR",10.6,95.9]];
 const CITIES_T1=[["New Delhi",28.61,77.21],["Mumbai",19.08,72.88],["Kolkata",22.57,88.36],["Chennai",13.08,80.27],["Bengaluru",12.97,77.59],["Hyderabad",17.39,78.49],["Ahmedabad",23.02,72.57],["Pune",18.52,73.86],["Jaipur",26.92,75.79],["Lucknow",26.85,80.95],["Srinagar",34.08,74.80],["Leh",34.15,77.58],["Chandigarh",30.73,76.78],["Bhopal",23.26,77.41],["Patna",25.59,85.14],["Guwahati",26.14,91.74],["Kochi",9.93,76.27],["Panaji",15.49,73.83],["Varanasi",25.32,83.01],["Amritsar",31.63,74.87],["Indore",22.72,75.86]];
-const CITIES_T2=[["Shimla",31.10,77.17],["Dehradun",30.32,78.03],["Jammu",32.73,74.86],["Ranchi",23.34,85.31],["Raipur",21.25,81.63],["Bhubaneswar",20.30,85.82],["Thiruvananthapuram",8.52,76.94],["Madurai",9.93,78.12],["Coimbatore",11.02,76.96],["Mysuru",12.30,76.64],["Mangaluru",12.91,74.86],["Surat",21.17,72.83],["Vadodara",22.31,73.19],["Jodhpur",26.24,73.02],["Udaipur",24.58,73.68],["Agra",27.18,78.02],["Prayagraj",25.44,81.85],["Nashik",20.00,73.79],["Visakhapatnam",17.69,83.22],["Nagpur",21.15,79.09],["Imphal",24.82,93.94],["Shillong",25.57,91.88],["Gangtok",27.33,88.62],["Siliguri",26.73,88.40],["Dharamshala",32.22,76.32],["Rishikesh",30.09,78.27],["Port Blair",11.62,92.73]];
+const CITIES_T2=[["Shimla",31.10,77.17],["Dehradun",30.32,78.03],["Jammu",32.73,74.86],["Ranchi",23.34,85.31],["Raipur",21.25,81.63],["Bhubaneswar",20.30,85.82],["Thiruvananthapuram",8.52,76.94],["Madurai",9.93,78.12],["Coimbatore",11.02,76.96],["Mysuru",12.30,76.64],["Mangaluru",12.91,74.86],["Surat",21.17,72.83],["Vadodara",22.31,73.19],["Jodhpur",26.24,73.02],["Udaipur",24.58,73.68],["Agra",27.18,78.02],["Prayagraj",25.44,81.85],["Nashik",20.00,73.79],["Visakhapatnam",17.69,83.22],["Nagpur",21.15,79.09],["Imphal",24.82,93.94],["Shillong",25.57,91.88],["Gangtok",27.33,88.62],["Siliguri",26.73,88.40],["Dharamshala",32.22,76.32],["Rishikesh",30.09,78.27],["Port Blair",11.62,92.73],["Gandhinagar",23.22,72.65],["Dispur",26.14,91.79],["Itanagar",27.08,93.61],["Kohima",25.67,94.11],["Aizawl",23.73,92.72],["Agartala",23.83,91.28],["Puducherry",11.93,79.83],["Amaravati",16.51,80.52],["Kavaratti",10.57,72.64],["Daman",20.41,72.83]];
 
 /* ══════ MAP ══════ */
 // Full extent of India's official boundary, incl. all of J&K and Ladakh (Gilgit-Baltistan, Aksai Chin)
@@ -807,30 +807,11 @@ const map=L.map('map',{zoomControl:true,minZoom:4,zoomSnap:0.25,maxBounds:[[3,60
 // Fit the whole country into whatever space the map has (phones used to open on a zoom-5 view that cut off Kashmir and the south)
 function showAllIndia(animate){map.fitBounds(INDIA_BOUNDS,{padding:[8,8],animate:!!animate})}
 showAllIndia();
-/* Basemaps: key-free Esri tiles with NO drawn borders or labels, so india-boundary.geojson
-   is the only boundary on the map. Terrain for the overview; satellite imagery when zoomed in
-   (terrain only goes to native z13), or always if the visitor picks "Satellite". */
+/* Basemap: key-free Esri World_Imagery satellite at every zoom (satellite only, per Utkarsh 2026-11-12).
+   The imagery draws NO borders or labels, so india-boundary.geojson stays the only boundary on the map. */
 const ESRI='https://server.arcgisonline.com/ArcGIS/rest/services/';
-const terrainTiles=L.tileLayer(ESRI+'World_Terrain_Base/MapServer/tile/{z}/{y}/{x}',{attribution:'Terrain &copy; Esri, USGS, NOAA',maxNativeZoom:13,maxZoom:19,className:'tile-terrain'});
-const satTiles=L.tileLayer(ESRI+'World_Imagery/MapServer/tile/{z}/{y}/{x}',{attribution:'Imagery &copy; Esri, Maxar, Earthstar Geographics',maxNativeZoom:18,maxZoom:19,className:'tile-sat'});
-const SAT_FROM_ZOOM=11;
-let baseMode='map'; // 'map' = terrain → satellite when zoomed in; 'sat' = satellite always
-function syncBasemap(){
-  const wantSat=baseMode==='sat'||map.getZoom()>=SAT_FROM_ZOOM;
-  const on=wantSat?satTiles:terrainTiles,off=wantSat?terrainTiles:satTiles;
-  if(!map.hasLayer(on))on.addTo(map).bringToBack();
-  if(map.hasLayer(off))map.removeLayer(off);
-  document.body.classList.toggle('sat-on',wantSat);
-}
-const BaseToggle=L.Control.extend({options:{position:'topright'},onAdd(){
-  const d=L.DomUtil.create('div','base-toggle');
-  d.innerHTML='<button data-m="map" class="on">Map</button><button data-m="sat">Satellite</button>';
-  L.DomEvent.disableClickPropagation(d);
-  d.onclick=e=>{const b=e.target.closest('button');if(!b)return;baseMode=b.dataset.m;d.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));syncBasemap()};
-  return d;
-}});
-new BaseToggle().addTo(map);
-map.on('zoomend',syncBasemap);syncBasemap();
+const satTiles=L.tileLayer(ESRI+'World_Imagery/MapServer/tile/{z}/{y}/{x}',{attribution:'Imagery &copy; Esri, Maxar, Earthstar Geographics',maxNativeZoom:18,maxZoom:19,className:'tile-sat'}).addTo(map);
+document.body.classList.add('sat-on');
 L.control.scale({imperial:false,position:'bottomright'}).addTo(map);
 
 const clusters=L.markerClusterGroup({maxClusterRadius:45,spiderfyOnMaxZoom:true,showCoverageOnHover:false,zoomToBoundsOnClick:true,disableClusteringAtZoom:12});
@@ -850,9 +831,12 @@ function mkLabel(text,lat,lng,cls){
 }
 // tier0 = the six metros, shown even on the zoomed-out phone view
 const METROS=new Set(['New Delhi','Mumbai','Kolkata','Chennai','Bengaluru','Hyderabad']);
-const cityT0=L.layerGroup(CITIES_T1.filter(c=>METROS.has(c[0])).map(c=>mkLabel(c[0],c[1],c[2],'city-label tier1 tier0')));
-const cityT1=L.layerGroup(CITIES_T1.filter(c=>!METROS.has(c[0])).map(c=>mkLabel(c[0],c[1],c[2],'city-label tier1')));
-const cityT2=L.layerGroup(CITIES_T2.map(c=>mkLabel(c[0],c[1],c[2],'city-label tier2')));
+// State / UT capitals get a saffron ring; New Delhi (national capital) a filled saffron marker
+const CAPITALS=new Set(['Mumbai','Kolkata','Chennai','Bengaluru','Hyderabad','Jaipur','Lucknow','Srinagar','Leh','Chandigarh','Bhopal','Patna','Panaji','Shimla','Dehradun','Jammu','Ranchi','Raipur','Bhubaneswar','Thiruvananthapuram','Imphal','Shillong','Gangtok','Port Blair','Gandhinagar','Dispur','Itanagar','Kohima','Aizawl','Agartala','Puducherry','Amaravati','Kavaratti','Daman']);
+const capCls=n=>n==='New Delhi'?' cap natcap':CAPITALS.has(n)?' cap':'';
+const cityT0=L.layerGroup(CITIES_T1.filter(c=>METROS.has(c[0])).map(c=>mkLabel(c[0],c[1],c[2],'city-label tier1 tier0'+capCls(c[0]))));
+const cityT1=L.layerGroup(CITIES_T1.filter(c=>!METROS.has(c[0])).map(c=>mkLabel(c[0],c[1],c[2],'city-label tier1'+capCls(c[0]))));
+const cityT2=L.layerGroup(CITIES_T2.map(c=>mkLabel(c[0],c[1],c[2],'city-label tier2'+capCls(c[0]))));
 const stateLayer=L.layerGroup(STATE_LABELS.map(s=>mkLabel(s[0],s[1],s[2],'state-label')));
 
 function syncLabels(){
@@ -900,7 +884,8 @@ function declutterLabels(){
   }
   labelPane.classList.remove('zooming');
 }
-let _dcT=0;function declutterSoon(ms){clearTimeout(_dcT);_dcT=setTimeout(declutterLabels,ms==null?120:ms)}
+// A trailing second pass catches clusters that settle after the first one (e.g. after state data loads)
+let _dcT=0,_dcT2=0;function declutterSoon(ms){clearTimeout(_dcT);clearTimeout(_dcT2);_dcT=setTimeout(declutterLabels,ms==null?120:ms);_dcT2=setTimeout(declutterLabels,600)}
 map.on('zoomend',syncLabels);map.on('moveend resize',()=>declutterSoon());
 clusters.on('animationend',()=>declutterSoon(30));
 // Fade labels out while zooming so they never sit stale over freshly split clusters
@@ -913,11 +898,11 @@ async function loadBoundary(){
     const r=await fetch('india-boundary.geojson');if(!r.ok)throw 0;
     const g=await r.json();
     const holes=g.features[0].geometry.coordinates.map(p=>p[0].map(pt=>[pt[1],pt[0]]));
-    // Neighbouring countries fade into a soft mist so India stands out
-    L.polygon([[ [-89,-179],[-89,179],[89,179],[89,-179] ],...holes],{stroke:false,fillColor:'#EEF1F2',fillOpacity:0.62,interactive:false,className:'india-mask'}).addTo(map);
-    // Saffron halo + crisp ink line
-    L.geoJSON(g,{style:{color:'#F2A541',weight:9,opacity:0.28,fill:false,lineJoin:'round'},interactive:false}).addTo(map);
-    L.geoJSON(g,{style:{color:'#7A2E14',weight:1.8,opacity:0.95,fillColor:'#FFE6BF',fillOpacity:0.14,lineJoin:'round',className:'india-fill'},interactive:false}).addTo(map);
+    // Neighbouring countries sink into a deep blue-grey veil so India glows on the satellite imagery
+    L.polygon([[ [-89,-179],[-89,179],[89,179],[89,-179] ],...holes],{stroke:false,fillColor:'#0A1218',fillOpacity:0.5,interactive:false,className:'india-mask'}).addTo(map);
+    // Saffron glow + a crisp cream line (readable on forest, desert, snow and sea)
+    L.geoJSON(g,{style:{color:'#FF9F3A',weight:8,opacity:0.38,fill:false,lineJoin:'round',className:'india-glow'},interactive:false}).addTo(map);
+    L.geoJSON(g,{style:{color:'#FFE9C7',weight:1.7,opacity:0.95,fillColor:'#FFC67A',fillOpacity:0.05,lineJoin:'round',className:'india-fill'},interactive:false}).addTo(map);
   }catch(e){console.warn('Boundary:',e)}
 }
 loadBoundary();
