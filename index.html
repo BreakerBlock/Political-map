@@ -308,6 +308,8 @@ body.tl-dragging .tl-leg{opacity:.25;transition:opacity .15s}
 .tl-leg[style*="--d"]::before{border-left-color:var(--d)}
 .overnight{display:inline-flex;align-items:center;gap:3px;margin-left:6px;color:#4B4FA0!important;font-weight:700;letter-spacing:0.04em!important}
 .overnight svg{width:10px;height:10px}
+.trip-info .tl-night{display:flex;align-items:center;margin-top:3px;overflow:visible}
+.tl-night .overnight{margin-left:0;text-transform:uppercase;font-size:0.55rem}
 body.tl-dragging .tl-day{opacity:.25;transition:opacity .15s}
 .trip-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:8px 0 2px}
 .trip-actions button{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 10px;border-radius:9px;border:1px solid var(--border);background:var(--surface);color:var(--ink);font-family:inherit;font-size:0.7rem;font-weight:600;cursor:pointer;transition:background .15s,border-color .15s,transform .1s}
@@ -673,6 +675,143 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
   .trip-ctl button{width:32px;height:32px}
   .compass{display:none}
 }
+/* ── Itinerary designer ── */
+.btn-dz{margin-right:10px;padding:8px 15px 8px 12px;border-radius:20px;border:1.5px solid var(--ink);background:var(--ink);color:#FFF6EA;cursor:pointer;font:700 0.75rem 'DM Sans',sans-serif;display:flex;align-items:center;gap:7px;transition:transform .15s,box-shadow .15s;box-shadow:0 3px 10px rgba(44,24,16,.25)}
+.btn-dz:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(44,24,16,.35)}
+.btn-dz svg{width:15px;height:15px;color:#FFB15C}
+.dz-cta{display:flex;align-items:center;gap:12px;width:100%;margin-top:16px;padding:12px 14px;border:none;border-radius:14px;cursor:pointer;text-align:left;color:#fff;font-family:inherit;background:linear-gradient(120deg,#E2622B,#B5452A 55%,#6E2A1A);box-shadow:0 10px 24px -10px rgba(110,42,26,.7);transition:transform .15s}
+.dz-cta:hover{transform:translateY(-1px)}
+.dz-cta>svg{width:30px;height:30px;flex-shrink:0;padding:6px;border-radius:9px;background:rgba(255,255,255,.16)}
+.dz-cta b{display:block;font-size:.84rem}
+.dz-cta small{display:block;font-size:.64rem;opacity:.82;margin-top:1px}
+.dz{position:fixed;inset:0;z-index:3000;display:flex;align-items:center;justify-content:center;padding:24px}
+.dz[hidden]{display:none}
+.dz-scrim{position:absolute;inset:0;background:rgba(28,16,10,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;transition:opacity .3s}
+.dz.on .dz-scrim{opacity:1}
+.dz-sheet{position:relative;width:min(780px,100%);max-height:min(880px,calc(100dvh - 48px));display:flex;flex-direction:column;background:var(--surface);border-radius:22px;overflow:hidden;box-shadow:0 30px 80px -20px rgba(20,10,5,.65);transform:translateY(24px) scale(.98);opacity:0;transition:transform .38s cubic-bezier(.2,.8,.2,1),opacity .3s}
+.dz.on .dz-sheet{transform:none;opacity:1}
+.dz-hero{position:relative;padding:22px 26px 18px;color:#fff;background:radial-gradient(120% 160% at 0% 0%,#F08A3C 0%,#C9502C 36%,#7A2E1C 78%,#4E1F14 100%);overflow:hidden;flex-shrink:0}
+.dz-hero::before{content:'';position:absolute;right:-10px;top:-6px;width:300px;height:140px;opacity:.22;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 140' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M10 120C70 120 60 40 130 50s70 70 120 40 30-60 40-70' stroke-dasharray='2 9'/%3E%3Ccircle cx='10' cy='120' r='6' fill='%23fff'/%3E%3Ccircle cx='130' cy='50' r='6' fill='%23fff'/%3E%3Ccircle cx='250' cy='90' r='6' fill='%23fff'/%3E%3C/svg%3E") no-repeat right top/contain}
+.dz-hero small{position:relative;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;opacity:.85}
+.dz-hero h2{position:relative;font:700 2.1rem/1.05 'Cormorant Garamond',serif;margin:4px 0 6px;letter-spacing:.01em}
+.dz-hero p{position:relative;font-size:.8rem;opacity:.9;max-width:460px;line-height:1.45}
+.dz.result .dz-hero p{display:none}
+.dz.result .dz-hero{padding-bottom:14px}
+.dz-x{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;border:none;background:rgba(255,255,255,.18);color:#fff;font-size:15px;cursor:pointer;transition:background .15s}
+.dz-x:hover{background:rgba(255,255,255,.3)}
+.dz-body{flex:1;overflow-y:auto;padding:4px 26px 18px;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.dz-q{padding:16px 0 14px;border-bottom:1px solid var(--border-light)}
+.dz-q:last-child{border-bottom:none}
+.dz-q h3{display:flex;align-items:center;gap:9px;font:700 1.12rem 'Cormorant Garamond',serif;margin-bottom:10px;color:var(--ink)}
+.dz-q h3 i{font:700 .6rem 'DM Sans',sans-serif;font-style:normal;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;display:inline-flex;align-items:center;justify-content:center}
+.dz-chips{display:flex;flex-wrap:wrap;gap:7px}
+.dz-chip{font:600 .76rem 'DM Sans',sans-serif;color:var(--ink);background:var(--parchment);border:1.5px solid var(--border-light);border-radius:999px;padding:8px 14px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:background .15s,border-color .15s,color .15s,box-shadow .15s,transform .1s}
+.dz-chip:hover{border-color:var(--ink-light);background:#fff}
+.dz-chip:active{transform:scale(.97)}
+.dz-chip.on{background:var(--ink);border-color:var(--ink);color:#fff;box-shadow:0 5px 14px -5px rgba(44,24,16,.55)}
+.dz-chip>svg{width:14px;height:14px;color:#E2622B}
+.dz-days .dz-chip{flex-direction:column;gap:1px;border-radius:14px;padding:9px 0 7px;width:66px}
+.dz-days b{font:700 1.45rem/1 'Cormorant Garamond',serif}
+.dz-days small{font-size:.56rem;text-transform:uppercase;letter-spacing:.12em;opacity:.7}
+.dz-months{display:grid;grid-template-columns:repeat(12,1fr);gap:5px}
+.dz-months .dz-chip{justify-content:center;padding:9px 0;border-radius:10px}
+.dz-cats .dz-chip{padding:5px 13px 5px 5px}
+.dz-cats .dz-chip i{width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;opacity:.75}
+.dz-cats .dz-chip i svg{width:12px;height:12px}
+.dz-cats .dz-chip.on{background:var(--c);border-color:var(--c);box-shadow:0 5px 14px -6px var(--c)}
+.dz-cats .dz-chip.on i{opacity:1;background:rgba(255,255,255,.22)!important}
+.dz-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.dz-modes{grid-template-columns:repeat(4,1fr)}
+.dz-cards .dz-chip{flex-direction:column;align-items:flex-start;text-align:left;border-radius:14px;padding:11px 13px;gap:2px;white-space:normal}
+.dz-cards b{font-size:.84rem}
+.dz-cards small{font-size:.66rem;font-weight:500;color:var(--ink-dim);line-height:1.35}
+.dz-cards .dz-chip.on small{color:rgba(255,255,255,.75)}
+.dz-modes i{width:30px;height:30px;border-radius:9px;background:rgba(44,24,16,.07);display:flex;align-items:center;justify-content:center;margin-bottom:6px}
+.dz-modes .on i{background:rgba(255,255,255,.14);color:#FFB15C}
+.dz-modes i svg{width:17px;height:17px}
+.dz-other{font:600 .76rem 'DM Sans',sans-serif;border:1.5px dashed var(--border);background:transparent;border-radius:999px;padding:7px 12px;color:var(--ink-dim);cursor:pointer;max-width:100%}
+.dz-other.on{border-style:solid;border-color:var(--ink);color:#fff;background:var(--ink)}
+.dz-hint{font-size:.68rem;color:var(--ink-dim);margin-top:9px}
+.dz-foot{display:flex;align-items:center;gap:10px;padding:12px 26px calc(12px + env(safe-area-inset-bottom));border-top:1px solid var(--border-light);background:linear-gradient(#FFFDF8,#FBF5EA);flex-shrink:0}
+.dz-sumq{flex:1;font-size:.72rem;color:var(--ink-dim);font-weight:600}
+.dz-go{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;border:none;background:linear-gradient(120deg,#FF9933,#E2622B 50%,#B5452A);color:#fff;font:700 .84rem 'DM Sans',sans-serif;cursor:pointer;box-shadow:0 8px 20px -6px rgba(181,69,42,.6);transition:transform .15s,box-shadow .15s}
+.dz-go:hover{transform:translateY(-1px);box-shadow:0 12px 26px -8px rgba(181,69,42,.7)}
+.dz-go svg{width:16px;height:16px}
+.dz-go.busy{pointer-events:none;opacity:.9}
+.dz-go.busy svg{animation:spin 1s linear infinite}
+.dz-back{border:none;background:none;font:600 .76rem 'DM Sans',sans-serif;color:var(--ink-dim);cursor:pointer;padding:8px 4px}
+.dz-back:hover{color:var(--accent)}
+.dz-alt{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--border);background:var(--surface);border-radius:999px;padding:10px 16px;font:600 .78rem 'DM Sans',sans-serif;cursor:pointer;color:var(--ink)}
+.dz-alt:hover{border-color:var(--ink-light);background:#fff}
+.dz-alt svg{width:15px;height:15px}
+.dz-res-head{padding:16px 0 4px}
+.dz-res-head small{font-size:.64rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.dz-stats{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:9px}
+.dz-stats b{display:block;font:700 1.65rem/1 'Cormorant Garamond',serif;color:var(--ink)}
+.dz-stats span{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-dim);font-weight:600}
+.dz-plan{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:11px;position:relative}
+.dz-day{display:flex;gap:14px;padding:12px;border:1px solid var(--border-light);border-radius:16px;background:#fff;box-shadow:0 6px 18px -14px rgba(44,24,16,.45);animation:cardIn .4s ease both}
+.dz-ph{position:relative;width:116px;height:116px;flex-shrink:0;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,var(--c,#7A6B5D),color-mix(in srgb,var(--c,#7A6B5D) 55%,#2C1810));display:flex;align-items:center;justify-content:center;color:#fff}
+.dz-ph>svg{width:30px;height:30px;opacity:.55}
+.dz-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s}
+.dz-ph img.ok{opacity:1}
+.dz-dbody{flex:1;min-width:0}
+.dz-dh{display:flex;align-items:center;gap:9px}
+.dz-dh b{flex-shrink:0;font:700 .6rem 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--accent);padding:3px 8px;border-radius:6px}
+.dz-dh span{font:700 1.1rem/1.15 'Cormorant Garamond',serif;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dz-move{display:inline-flex;align-items:center;gap:5px;margin:7px 0 5px;font-size:.66rem;font-weight:600;color:var(--ink-dim);background:var(--parchment);border-radius:999px;padding:3px 10px 3px 8px}
+.dz-move svg{width:12px;height:12px;flex-shrink:0}
+.dz-move.fly{background:#E6EDF8;color:#24508F}
+.dz-move.rail{background:#F6E6E6;color:#8A2B2B}
+.dz-move.rest{background:#ECEBF7;color:#4B4FA0}
+.dz-day ul{list-style:none;display:flex;flex-direction:column;gap:7px;margin-top:3px}
+.dz-day ul li{display:flex;gap:9px}
+.dz-day ul li>i{width:8px;height:8px;border-radius:50%;background:var(--c);margin-top:5px;flex-shrink:0;box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 18%,transparent)}
+.dz-day ul b{font-size:.8rem;color:var(--ink)}
+.dz-day ul span{display:block;font-size:.64rem;color:var(--ink-dim)}
+.dz-day ul em{font-style:normal;color:#3D7A35;font-weight:600}
+.dz-day ul p{font-size:.68rem;color:var(--ink-dim);line-height:1.4;margin-top:1px}
+.dz-note{font-size:.64rem;color:var(--ink-light);line-height:1.5;margin:14px 0 4px}
+body.dz-open .leaflet-control-container{visibility:hidden}
+.nstep{display:inline-flex;margin-left:5px;gap:2px;vertical-align:middle}
+.nstep button{width:18px;height:18px;border-radius:50%;border:1px solid #C9C8E6;background:#F3F3FB;color:#4B4FA0;font:700 11px/1 'DM Sans',sans-serif;cursor:pointer;padding:0}
+.nstep button:hover:not(:disabled){background:#4B4FA0;color:#fff}
+.nstep button:disabled{opacity:.35;cursor:default}
+.tl-day.rest b{background:#4B4FA0}
+@media(max-width:760px){
+  .btn-dz{margin:0;width:36px;height:36px;padding:0;border-radius:50%;justify-content:center;flex-shrink:0}
+  .btn-dz span{display:none}
+  .btn-dz svg{width:18px;height:18px}
+  .dz{padding:0;align-items:flex-end}
+  .dz-sheet{width:100%;max-height:calc(100dvh - 20px);border-radius:20px 20px 0 0;transform:translateY(100%);opacity:1}
+  .dz-hero{padding:16px 18px 13px}
+  .dz-hero h2{font-size:1.7rem}
+  .dz-hero p{font-size:.74rem;padding-right:24px}
+  .dz-body{padding:2px 16px 14px}
+  .dz-q{padding:13px 0 12px}
+  .dz-days{flex-wrap:nowrap;gap:5px}
+  .dz-days .dz-chip{width:auto;flex:1;min-width:0}
+  .dz-months{grid-template-columns:repeat(6,1fr)}
+  .dz-cards{grid-template-columns:1fr;gap:6px}
+  .dz-cards .dz-chip{flex-direction:row;align-items:center;gap:10px;padding:10px 13px}
+  .dz-cards .dz-chip small{margin-left:auto;text-align:right}
+  .dz-modes{grid-template-columns:1fr 1fr}
+  .dz-modes .dz-chip{flex-direction:column;align-items:flex-start;gap:1px}
+  .dz-modes .dz-chip small{margin-left:0;text-align:left}
+  .dz-modes i{margin-bottom:4px}
+  .dz-foot{padding:10px 16px calc(10px + env(safe-area-inset-bottom));gap:6px}
+  .dz-sumq{display:none}
+  .dz-go{flex:1;padding:13px 16px}
+  .dz-alt span{display:none}
+  .dz-alt{padding:11px 12px}
+  .dz-back{font-size:.72rem}
+  .dz-day{gap:11px;padding:10px}
+  .dz-ph{width:72px;height:72px;border-radius:10px}
+  .dz-dh span{font-size:1rem}
+  .dz-stats{gap:6px 18px}
+  .dz-stats b{font-size:1.4rem}
+}
+@media(prefers-reduced-motion:reduce){.dz-sheet,.dz-scrim{transition:none}.dz-day{animation:none}}
 </style>
 </head>
 <body>
@@ -682,6 +821,7 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
     <div><h1>Bharat<span>Yatra</span></h1><div class="header-sub">Interactive India Travel Planner</div></div>
   </div>
   <button class="btn-hl" id="btnHl" hidden onclick="openStory('india')" aria-label="Highlights of India" title="Highlights of India & must-do experiences"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 5.6L19.5 9.5l-5.6 1.9L12 17l-1.9-5.6L4.5 9.5l5.6-1.9z"/><path d="M19 14l.9 2.6 2.6.9-2.6.9L19 21l-.9-2.6-2.6-.9 2.6-.9z" opacity=".75"/></svg><span>Highlights</span></button>
+  <button class="btn-dz" onclick="openDesigner()" aria-label="Design my trip" title="Design my trip: a day-by-day plan from a few questions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="2.2"/><path d="M8.2 19H15a3.5 3.5 0 000-7H9a3.5 3.5 0 010-7h6.5"/><path d="M18 2.5c-1.7 0-3 1.3-3 2.9 0 2.2 3 5.1 3 5.1s3-2.9 3-5.1c0-1.6-1.3-2.9-3-2.9z" fill="currentColor" stroke="none"/></svg><span>Design my trip</span></button>
   <a class="btn-suggest" href="#" onclick="return suggestPlace()" aria-label="Suggest a place" title="Suggest a place">
     <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 3.5l6 4 6-4M1 3.5v7a1 1 0 001 1h10a1 1 0 001-1v-7M1 3.5a1 1 0 011-1h10a1 1 0 011 1"/></svg>
     <span class="bs-label">Suggest a Place</span>
@@ -748,6 +888,14 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
         <div class="fo-acts"><button id="foHere" onclick="flyoverStopHere()"></button><button class="fo-next" id="foNext" onclick="flyoverNext()"></button></div></div>
     </div>
     <div class="disclaimer">Boundary as per Survey of India · Map for reference only</div>
+  </div>
+</div>
+<div class="dz" id="designer" hidden role="dialog" aria-modal="true" aria-labelledby="dzTitle">
+  <div class="dz-scrim" onclick="closeDesigner()"></div>
+  <div class="dz-sheet">
+    <div class="dz-hero"><small>Itinerary designer</small><h2 id="dzTitle">Design my trip</h2><p>Six quick questions — then a day-by-day plan built from real places on the map, in season, with drive times and the nearest airports and stations.</p><button class="dz-x" onclick="closeDesigner()" aria-label="Close">✕</button></div>
+    <div class="dz-body" id="dzBody"></div>
+    <div class="dz-foot" id="dzFoot"></div>
   </div>
 </div>
 <div class="story" id="story" hidden role="dialog" aria-modal="true" aria-label="Highlights of India" tabindex="-1">
@@ -1232,7 +1380,7 @@ function placeSearch(){
   const w=document.getElementById('searchWrap'),hdr=document.querySelector('header'),inHdr=w.parentElement===hdr;
   if(isMobile()&&!inHdr)hdr.insertBefore(w,hdr.querySelector('.btn-hl'));
   else if(!isMobile()&&inHdr)document.querySelector('.sidebar').insertBefore(w,document.getElementById('placeCount'));
-  document.getElementById('searchInput').placeholder=isMobile()?'Search places…':'Search places, states…';
+  document.getElementById('searchInput').placeholder=isMobile()?'Search…':'Search places, states…';
 }
 placeSearch();
 window.addEventListener('resize',()=>setTimeout(()=>{placeSearch();map.invalidateSize();if(!isMobile())closeCatPanel()},100));
@@ -1290,7 +1438,16 @@ function km(a,b){
   return 2*R*Math.asin(Math.sqrt(h));
 }
 const fmtKm=d=>d<10?d.toFixed(1)+' km':Math.round(d).toLocaleString('en-IN')+' km';
-function saveTrip(){try{localStorage.setItem(TRIP_LS,JSON.stringify(trip))}catch(e){}}
+// Nights per stop ({key: n}), set by the itinerary designer or the ± night buttons. n nights at a stop
+// end the day there (and add n-1 stay days); at the last stop they add n stay days before heading home.
+const STAY_LS='bharatyatra.stays.v1';
+let stays={};try{const v=JSON.parse(localStorage.getItem(STAY_LS)||'{}');if(v&&typeof v==='object')stays=v}catch(e){}
+const staysOf=k=>Math.max(0,Math.min(30,Math.floor(+stays[k]||0)));
+function saveTrip(){
+  for(const k of Object.keys(stays))if(!trip.includes(k)||!staysOf(k))delete stays[k];
+  try{localStorage.setItem(TRIP_LS,JSON.stringify(trip));localStorage.setItem(STAY_LS,JSON.stringify(stays))}catch(e){}
+}
+function setStay(i,d){const k=trip[i];if(!k)return;stays[k]=Math.max(0,Math.min(30,staysOf(k)+d));tripChanged()}
 function tripStops(){return trip.map(findPlace).filter(Boolean)}
 function toggleTrip(key){
   const i=trip.indexOf(key);
@@ -1319,7 +1476,8 @@ function tripLink(){
   // Chosen fly/train legs ride along as "&m=" + one letter per leg (f fly, r train, - road), e.g. &m=-f-r
   const st=tripStops();let m=st.slice(1).map((p,i)=>({fly:'f',rail:'r'})[legMode(st[i],p)]||'-').join('');
   m=m.replace(/-+$/,'');
-  return location.origin+location.pathname+'#trip='+trip.map(encodeURIComponent).join('~')+(m?'&m='+m:'');
+  const n=trip.map(k=>staysOf(k).toString(36)).join('').replace(/0+$/,''); // nights per stop, one base-36 digit each
+  return location.origin+location.pathname+'#trip='+trip.map(encodeURIComponent).join('~')+(m?'&m='+m:'')+(n?'&n='+n:'');
 }
 async function shareTrip(){
   const url=tripLink();
@@ -1331,19 +1489,23 @@ async function shareTrip(){
 function emailTrip(){
   const st=tripStops();if(!st.length)return;
   const P=planDays(st),multi=P.days.length>1,lines=[];
+  const dayLine=d=>{const D=P.days[d];return D.rest?`Day ${d+1} (${d?'stay in':'start in'} ${st[D.start].name})`:`Day ${d+1} (${dayText(D)})`};
+  let shown=0;
   st.forEach((p,i)=>{
-    if(multi&&i===0)lines.push(`Day 1 (${dayText(P.days[0])})`);
-    if(multi&&i>1&&P.legDay[i]!==P.legDay[i-1]){const d=P.legDay[i];lines.push('',`Day ${d+1} (${dayText(P.days[d])})`)}
+    if(multi&&i===0)lines.push(dayLine(0));
+    if(multi&&i)while(shown<P.legDay[i]){shown++;lines.push('',dayLine(shown))}
     let alt='';
     if(i&&!legMode(st[i-1],p)){const A=legAlts(st[i-1],p)||{},o=[];
       if(A.fly)o.push(`fly ${altLabel('fly',A.fly)} (nearest airports)`);
       if(A.rail)o.push(`train ${altLabel('rail',A.rail)} (nearest major stations)`);
       if(A.ship)o.push(A.ship.toLowerCase());
       if(o.length)alt=`; or ${o.join(' / ')}`;}
-    lines.push(`${i+1}. ${p.name} (${p.state}) — ${CATS[p.cat]?.label||p.cat}`+(i?`  [${legText(st[i-1],p,true)} from previous${alt}]`:''));
+    const nn=multi?nightsAt(P,i):[];
+    lines.push(`${i+1}. ${p.name} (${p.state}) — ${CATS[p.cat]?.label||p.cat}`+(i?`  [${legText(st[i-1],p,true)} from previous${alt}]`:'')+(nn.length?` — ${nightLabel(nn).toLowerCase()} here`:''));
   });
+  if(multi)while(shown<P.days.length-1){shown++;lines.push('',dayLine(shown))}
   if(st.some((p,i)=>i&&(legMode(st[i-1],p)||Object.keys(legAlts(st[i-1],p)||{}).length)))lines.push('','Flight and train options name the nearest airports and major railway stations only — check airlines and IRCTC for actual services.');
-  if(multi)lines.push('',`(Split into driving days of up to ${paceH} h.)`);
+  if(multi)lines.push('',`(${P.days.length} days; driving days of up to ${paceH} h.)`);
   const T=tripTotals(st);
   const tot=[T.road?`${fmtKm(T.road)} by road (~${fmtMin(T.min)} driving)`:'',T.straight?`${fmtKm(T.straight)} straight-line`:'',T.fly?`${T.fly} flight${T.fly>1?'s':''}`:'',T.rail?`${T.rail} train${T.rail>1?'s':''}`:''].filter(Boolean).join(' + ');
   const body=`My BharatYatra itinerary:\n\n${lines.join('\n')}\n\nTotal: ${tot||'—'}\n(Drive times are estimates.)\n\nOpen on the map: ${tripLink()}`;
@@ -1438,27 +1600,41 @@ function setPace(h){paceH=h;try{localStorage.setItem(PACE_LS,h)}catch(e){}render
 const DAY_COLORS=['#B5452A','#1F6F78'];
 function planDays(st){
   const days=[],legDay=[];
-  if(st.length<2)return {days,legDay};
+  const nights=j=>staysOf(placeKey(st[j]));
+  if(st.length<2&&!(st.length&&nights(0)))return {days,legDay};
   const budget=paceH*60;
-  let cur={start:0,end:0,min:0,km:0,est:false,legs:0};
-  const close=end=>{cur.end=end;days.push(cur)};
+  let cur;const fresh=s=>cur={start:s,end:s,min:0,km:0,est:false,legs:0};fresh(0);
+  const close=end=>{cur.end=end;if(!cur.legs)cur.rest=true;days.push(cur)};
+  // Planned nights at stop j: the day ends here (unless a flight/sea day already ended here), plus stay days
+  const stayAt=j=>{
+    const n=nights(j);if(!n)return;
+    if(cur.legs||j===0)close(j);
+    for(let k=j===st.length-1?0:1;k<n;k++)days.push({start:j,end:j,rest:true,min:0,km:0,legs:0});
+    fresh(j);
+  };
+  stayAt(0);
   for(let i=1;i<st.length;i++){
     const a=st[i-1],b=st[i],L1=legInfo(a,b);
     const md=legMode(a,b);
     if(L1&&L1.sea||md){
       if(cur.legs)close(i-1);
       legDay[i]=days.length;days.push({start:i-1,end:i,sea:!md,mode:md,alt:md&&legAlts(a,b)[md],km:km(a,b),min:0,legs:1});
-      cur={start:i,end:i,min:0,km:0,est:false,legs:0};continue;
+      fresh(i);stayAt(i);continue;
     }
     const ok=L1&&L1.ok,d=ok?L1.km:km(a,b),m=ok?L1.min:d*1.3/45*60;
-    if(cur.legs&&cur.min+m>budget){close(i-1);cur={start:i-1,end:i-1,min:0,km:0,est:false,legs:0}}
+    if(cur.legs&&cur.min+m>budget){close(i-1);fresh(i-1)}
     cur.min+=m;cur.km+=ok?d:d*1.3;cur.legs++;if(!ok)cur.est=true;
     legDay[i]=days.length;
+    stayAt(i);
   }
   if(cur.legs)close(st.length-1);
   return {days,legDay};
 }
+// Days whose night is spent at stop i (1-based day numbers), e.g. [3,4] → "Nights 3–4"
+const nightsAt=(P,i)=>P.days.map((D,d)=>d<P.days.length-1&&D.end===i?d+1:0).filter(Boolean);
+const nightLabel=n=>n.length>1?`Nights ${n[0]}–${n[n.length-1]}`:`Night ${n[0]}`;
 function dayText(d){
+  if(d.rest)return 'Stay & explore · no long drive';
   if(d.sea)return `Flight / ferry · ${fmtKm(d.km)} straight-line`;
   if(d.mode)return `${d.mode==='fly'?'Flight':'Train'} ${altLabel(d.mode,d.alt)} · ~${fmtKm(d.alt.km)} + transfers`;
   return `${d.est?'≈':'~'}${fmtMin(d.min)} driving · ${d.est?'≈':''}${fmtKm(d.km)}`+(d.min>paceH*60+5?' · long day':'');
@@ -1557,7 +1733,7 @@ function renderTrip(){
   });
   // sidebar panel: summary card + vertical timeline of stops and legs
   const el=document.getElementById('tripPanel');
-  if(!st.length){el.innerHTML=`<div class="trip-empty"><svg viewBox="0 0 120 64" fill="none"><path d="M14 50C34 50 30 18 58 22s30 26 50 10" stroke="#B5452A" stroke-width="2.5" stroke-dasharray="5 6" stroke-linecap="round"/><circle cx="14" cy="50" r="7" fill="#1A7A6D" stroke="#fff" stroke-width="2.5"/><circle cx="58" cy="22" r="7" fill="#8B6914" stroke="#fff" stroke-width="2.5"/><circle cx="108" cy="32" r="7" fill="#C4563A" stroke="#fff" stroke-width="2.5"/></svg><h3>Plan your yatra</h3>Tap any pin, or the <b>+</b> on a place card, to add it to your trip. Stops are numbered on the map, joined by road, and saved on this device — then reorder, find the shortest order, and share or email the plan.</div>`;return}
+  if(!st.length){el.innerHTML=`<div class="trip-empty"><svg viewBox="0 0 120 64" fill="none"><path d="M14 50C34 50 30 18 58 22s30 26 50 10" stroke="#B5452A" stroke-width="2.5" stroke-dasharray="5 6" stroke-linecap="round"/><circle cx="14" cy="50" r="7" fill="#1A7A6D" stroke="#fff" stroke-width="2.5"/><circle cx="58" cy="22" r="7" fill="#8B6914" stroke="#fff" stroke-width="2.5"/><circle cx="108" cy="32" r="7" fill="#C4563A" stroke="#fff" stroke-width="2.5"/></svg><h3>Plan your yatra</h3>Tap any pin, or the <b>+</b> on a place card, to add it to your trip. Stops are numbered on the map, joined by road, and saved on this device — then reorder, find the shortest order, and share or email the plan.<button class="dz-cta" onclick="openDesigner()">${SVG_ROUTE}<span><b>Design my trip for me</b><small>Answer 6 quick questions · get a day-by-day plan</small></span></button></div>`;return}
   let h='';
   const T=tripTotals(st);
   let stats=`<div><b>${st.length}</b><span>stop${st.length>1?'s':''}</span></div>`;
@@ -1573,19 +1749,21 @@ function renderTrip(){
     :'Road distances and drive times are estimates from OpenStreetMap (OSRM) and exclude stops and traffic.'+(T.fallback?' Legs without a road route (e.g. to islands) use straight-line distance.':'');
   const shortNote=st.length<2||T.pending?note:'Road km and drive times are estimates (OSRM)'+(T.fallback?'; island legs are straight-line.':'.');
   h+=`<div class="trip-hero"><div class="th-title">Your trip</div><div class="th-stats">${stats}</div><small><span class="n-long">${note}</span><span class="n-short">${shortNote}</span></small>${st.length>1?`<div class="th-pace" role="group" aria-label="Daily driving limit"><span>Max drive / day</span><div>${PACES.map(h=>`<button class="${h===paceH?'on':''}" onclick="setPace(${h})" aria-pressed="${h===paceH}">${h} h</button>`).join('')}</div></div>`:''}</div><ol class="tl">`;
-  const dayHead=d=>{const D=P.days[d];return `<li class="tl-day${D.min>paceH*60+5?' long':''}" style="--d:${DAY_COLORS[d%2]}" aria-label="Day ${d+1}"><b>Day ${d+1}</b><span>${dayText(D)}</span></li>`};
+  const dayHead=d=>{const D=P.days[d];return `<li class="tl-day${D.min>paceH*60+5?' long':''}${D.rest?' rest':''}" style="--d:${DAY_COLORS[d%2]}" aria-label="Day ${d+1}"><b>Day ${d+1}</b><span>${D.rest?`${d?'Stay in':'Start in'} ${esc(st[D.start].name)} · explore`:dayText(D)}</span></li>`};
+  let shown=0;
   if(multiDay)h+=dayHead(0);
   st.forEach((p,i)=>{
     const c=CATS[p.cat]||CATS.scenic;
     if(i){
       const L1=legInfo(st[i-1],p),md=legMode(st[i-1],p),kind=md||(L1&&L1.ok?'road':!L1?'pending':L1.sea?'sea':'none');
-      if(multiDay&&P.legDay[i]!==P.legDay[i-1]&&i>1)h+=dayHead(P.legDay[i]);
+      if(multiDay)while(shown<P.legDay[i]){shown++;h+=dayHead(shown)}
       h+=`<li class="tl-leg ${kind}"${multiDay?` style="--d:${dayCol(i)}"`:''} aria-label="Leg ${i}"><span class="leg-chip">${LEG_ICONS[kind]}<span>${legText(st[i-1],p)}</span>${md?`<a href="${md==='fly'?flightsBetweenUrl(legAlts(st[i-1],p).fly.from,legAlts(st[i-1],p).fly.to):trainsBetweenUrl(legAlts(st[i-1],p).rail.from,legAlts(st[i-1],p).rail.to)}" target="_blank" rel="noopener" title="${esc(altTitle(md,legAlts(st[i-1],p)[md]))}">${md==='fly'?'Flights':'Trains'} ↗</a>`:''}</span>${legAltsHTML(i,st[i-1],p)}</li>`;
     }
-    h+=`<li class="tl-stop" style="--c:${c.color};animation-delay:${Math.min(i,10)*25}ms"><span class="tl-num" title="Drag to reorder">${i+1}</span><div class="trip-info" data-i="${i}" title="Show on map"><h3>${esc(p.name)}</h3><div><span>${c.label}</span> · ${esc(p.state)}${multiDay&&P.days.some((D,d)=>d<P.days.length-1&&D.end===i)?`<span class="overnight" title="Overnight stop">${MOON_SVG}Night ${P.days.findIndex(D=>D.end===i)+1}</span>`:''}</div></div><div class="trip-ctl"><button class="grip" data-i="${i}" aria-label="Reorder ${esc(p.name)}: drag, or use arrow keys" title="Drag to reorder">${GRIP_SVG}</button><button class="mv" onclick="moveStop(${i},-1)" ${i?'':'disabled'} aria-label="Move ${esc(p.name)} up" title="Move up">↑</button><button class="mv" onclick="moveStop(${i},1)" ${i<st.length-1?'':'disabled'} aria-label="Move ${esc(p.name)} down" title="Move down">↓</button><button class="rm" onclick="removeStop(${i})" aria-label="Remove ${esc(p.name)}" title="Remove">✕</button></div></li>`;
+    h+=`<li class="tl-stop" style="--c:${c.color};animation-delay:${Math.min(i,10)*25}ms"><span class="tl-num" title="Drag to reorder">${i+1}</span><div class="trip-info" data-i="${i}" title="Show on map"><h3>${esc(p.name)}</h3><div><span>${c.label}</span> · ${esc(p.state)}</div>${(multiDay&&nightsAt(P,i).length)||staysOf(placeKey(p))?`<div class="tl-night">${multiDay&&nightsAt(P,i).length?`<span class="overnight" title="Overnight stop">${MOON_SVG}${nightLabel(nightsAt(P,i))}</span>`:''}`:''}${(multiDay&&nightsAt(P,i).length)||staysOf(placeKey(p))?`<span class="nstep" role="group" aria-label="Nights planned here"><button onclick="event.stopPropagation();setStay(${i},-1)" ${staysOf(placeKey(p))?'':'disabled'} aria-label="One night fewer at ${esc(p.name)}" title="One night fewer">−</button><button onclick="event.stopPropagation();setStay(${i},1)" aria-label="One more night at ${esc(p.name)}" title="One more night">+</button></span>`:''}${(multiDay&&nightsAt(P,i).length)||staysOf(placeKey(p))?'</div>':''}</div><div class="trip-ctl"><button class="grip" data-i="${i}" aria-label="Reorder ${esc(p.name)}: drag, or use arrow keys" title="Drag to reorder">${GRIP_SVG}</button><button class="mv" onclick="moveStop(${i},-1)" ${i?'':'disabled'} aria-label="Move ${esc(p.name)} up" title="Move up">↑</button><button class="mv" onclick="moveStop(${i},1)" ${i<st.length-1?'':'disabled'} aria-label="Move ${esc(p.name)} down" title="Move down">↓</button><button class="rm" onclick="removeStop(${i})" aria-label="Remove ${esc(p.name)}" title="Remove">✕</button></div></li>`;
   });
+  if(multiDay)while(shown<P.days.length-1){shown++;h+=dayHead(shown)}
   h+='</ol>';
-  h+=`<div class="trip-actions"><button class="primary" onclick="shareTrip()">${ACT_ICONS.share}Share trip link</button>${st.length>2?`<button onclick="optimiseTrip()" title="Keeps your first stop, reorders the rest">${ACT_ICONS.opt}Shortest order</button>`:''}<button onclick="fitTrip()">${ACT_ICONS.map}Show on map</button><button onclick="emailTrip()">${ACT_ICONS.mail}Email</button><button class="ghost" onclick="clearTrip()">Clear trip</button></div>`;
+  h+=`<div class="trip-actions"><button class="primary" onclick="shareTrip()">${ACT_ICONS.share}Share trip link</button>${st.length>2?`<button onclick="optimiseTrip()" title="Keeps your first stop, reorders the rest">${ACT_ICONS.opt}Shortest order</button>`:''}<button onclick="fitTrip()">${ACT_ICONS.map}Show on map</button><button onclick="emailTrip()">${ACT_ICONS.mail}Email</button><button onclick="openDesigner()">${SVG_ROUTE}Design a new trip</button><button class="ghost" onclick="clearTrip()">Clear trip</button></div>`;
   el.innerHTML=h;
   el.querySelectorAll('.trip-info').forEach(d=>d.onclick=()=>focusPlace(st[+d.dataset.i]));
   el.querySelectorAll('.tl-stop').forEach((li,i)=>{
@@ -1672,9 +1850,11 @@ async function initTrip(){
     if(states.length){await Promise.all(states.map(loadStateData));render()}
     return keys.filter(k=>findPlace(k));
   }
-  const m=location.hash.match(/^#trip=([^&]*)(?:&m=([-fr]*))?/);
+  const m=location.hash.match(/^#trip=([^&]*)(?:&m=([-fr]*))?(?:&n=([0-9a-z]*))?/);
   if(m){
-    trip=await resolve(clean(m[1].split('~').map(k=>{try{return decodeURIComponent(k)}catch(e){return ''}}).filter(Boolean)));
+    const keys=clean(m[1].split('~').map(k=>{try{return decodeURIComponent(k)}catch(e){return ''}}).filter(Boolean));
+    trip=await resolve(keys);
+    if(trip.length){stays={};if(m[3])keys.forEach((k,i)=>{const n=parseInt(m[3][i]||'0',36);if(n&&trip.includes(k))stays[k]=n})}
     if(m[2]&&trip.length){ // restore the sender's fly/train choices (a leg is only used if it still qualifies)
       const st=trip.map(findPlace);
       for(let i=1;i<st.length;i++){const c=m[2][i-1],k=st[i-1]&&st[i]&&modeKey(st[i-1],st[i]);if(!k)continue;
@@ -2293,7 +2473,245 @@ new HubToggle().addTo(map);
 map.on('zoomend',syncHubLayers);
 loadHubs().then(()=>{if(Object.keys(statesIndex).length)render();renderTrip()});
 
-init().then(initTrip).then(loadStories);
+
+/* ══════ ITINERARY DESIGNER ("Design my trip") ══════
+   Six questions → a day-by-day plan built only from places on the map: in season for the chosen
+   month (each place's `best`), in the chosen categories, a day's driving kept under the pace's limit
+   (rough estimate: straight-line × 1.3 at 45 km/h, as in My trip), and long hops by train or flight
+   only where both ends are near a listed station/airport (the same rules as My trip's fly/train legs).
+   "Open in My trip" hands it to the trip planner with nights per stop, so it can be edited, shared and emailed. */
+const SVG_ROUTE='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="2.2"/><path d="M8.2 19H15a3.5 3.5 0 000-7H9a3.5 3.5 0 010-7h6.5"/><path d="M18 2.5c-1.7 0-3 1.3-3 2.9 0 2.2 3 5.1 3 5.1s3-2.9 3-5.1c0-1.6-1.3-2.9-3-2.9z" fill="currentColor" stroke="none"/></svg>';
+const SVG_CAR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v2.5H3z"/><circle cx="7.5" cy="13" r=".6" fill="currentColor"/><circle cx="16.5" cy="13" r=".6" fill="currentColor"/></svg>';
+const DZ_LS='bharatyatra.design.v1';
+const DZ_PACE={relaxed:{h:4,visit:210,max:2,label:'Relaxed',sub:'1–2 places a day · up to 4 h on the road'},
+  balanced:{h:6,visit:150,max:3,label:'Balanced',sub:'2–3 places a day · up to 6 h on the road'},
+  packed:{h:8,visit:105,max:4,label:'Packed',sub:'3–4 places a day · up to 8 h on the road'}};
+const DZ_MODES={road:{m:[],label:'Road trip',sub:'Drive between every stop'},rail:{m:['rail'],label:'Road + trains',sub:'Trains for the long hops'},
+  fly:{m:['fly'],label:'Road + flights',sub:'Fly the long hops'},mix:{m:['fly','rail'],label:'Mix it up',sub:'Train or fly, whichever fits'}};
+const DZ_DAYS=[3,4,5,7,10,14];
+const DZ_STARTS=[['Anywhere'],['Delhi','New Delhi'],['Mumbai'],['Bengaluru'],['Kolkata'],['Chennai'],['Hyderabad'],['Jaipur'],['Kochi'],['Goa','Panaji'],['Guwahati']];
+const DZ_DAYMIN=660; // a sightseeing day: driving + visits
+let dz={days:7,month:defaultSeasonMonth(),start:'Anywhere',cats:['scenic','history','fauna','cuisine'],pace:'balanced',mode:'mix'};
+try{const v=JSON.parse(localStorage.getItem(DZ_LS)||'null');if(v&&typeof v==='object'){
+  if(DZ_DAYS.includes(v.days))dz.days=v.days;if(v.pace in DZ_PACE)dz.pace=v.pace;if(v.mode in DZ_MODES)dz.mode=v.mode;
+  if(typeof v.start==='string')dz.start=v.start;if(Array.isArray(v.cats)){const c=v.cats.filter(x=>CATS[x]);if(c.length)dz.cats=c}}}catch(e){}
+let dzPlan=null,dzSeed=0;
+const dzCity=n=>{const c=[...CITIES_T1,...CITIES_T2].find(c=>c[0]===n);return c?{lat:c[1],lng:c[2],name:n}:null};
+const dzStartPt=()=>{if(dz.start==='Anywhere')return null;const q=DZ_STARTS.find(s=>s[0]===dz.start);return dzCity(q?(q[1]||q[0]):dz.start)};
+const estMin=(a,b)=>km(a,b)*1.3/45*60;
+function dzRng(seed){return()=>{seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+
+// Candidate places with a score: highlights and curated story places first, short in-season windows get a lift
+function dzPool(o,R){
+  const hl=hlKeys(),seen=new Set(),out=[],fly=DZ_MODES[o.mode].m.includes('fly');
+  for(const p of allPlaces){
+    const k=placeKey(p);if(seen.has(k))continue;seen.add(k);
+    if(!o.cats.includes(p.cat))continue;
+    if(ISLANDS.has(p.stateCode)&&!fly)continue;            // islands only by air
+    const bm=bestMonths(p.best),inS=bm.has(o.month);
+    if(bm.size&&!inS)continue;                             // out of season
+    if(p.cat==='festivals'&&!bm.size)continue;             // a festival with no known month
+    let s=1+(hl.has(k)?1.4:0)+(curatedLine(k)?0.8:0)+(inS?(bm.size<=3?1.2:bm.size<=6?0.6:0.2):0)+R()*0.7;
+    if(p.cat==='festivals'&&inS)s+=0.5;
+    out.push({p,k,s});
+  }
+  return out;
+}
+// How good is the area around c? (c plus its best unused neighbours within a day's drive)
+function dzArea(c,pool,used,radius){
+  const near=[];for(const x of pool)if(x!==c&&!used.has(x.k)&&km(c.p,x.p)<=radius&&ISLANDS.has(x.p.stateCode)===ISLANDS.has(c.p.stateCode))near.push(x.s);
+  near.sort((a,b)=>b-a);return c.s+near.slice(0,5).reduce((a,b)=>a+b,0)*0.55;
+}
+// A long hop by train/flight to a strong new area (only where My trip would offer that fly/train leg)
+function dzHop(from,pool,used,modes,R,radius){
+  const opts=[];
+  for(const c of pool){
+    if(used.has(c.k))continue;
+    const A=legAlts(from.p,c.p);if(!A)continue;
+    const L1=legInfo(from.p,c.p),sea=!!(L1&&L1.sea),d=km(from.p,c.p);
+    let m=null;
+    if(sea){if(modes.includes('fly')&&A.fly)m='fly'}
+    else{
+      const canR=modes.includes('rail')&&A.rail&&d>=TRAIN_KM,canF=modes.includes('fly')&&A.fly&&d>=FLY_KM;
+      m=canR&&canF?(d>1100?'fly':'rail'):canR?'rail':canF?'fly':null;
+    }
+    if(!m||A[m].dB>60)continue; // land somewhere near the airport/station, not deep in the hills
+    opts.push({c,m,v:dzArea(c,pool,used,radius)-A[m].dB/40+R()*1.2});
+  }
+  opts.sort((a,b)=>b.v-a.v);
+  return opts.length?opts[Math.floor(R()*Math.min(3,opts.length))]:null;
+}
+function designTrip(o,seed){
+  const R=dzRng(seed),P=DZ_PACE[o.pace],cap=P.h*60,modes=DZ_MODES[o.mode].m;
+  const pool=dzPool(o,R);if(!pool.length)return null;
+  const used=new Set(),catN={},radius=cap/60*45/1.3;
+  let cur=dzStartPt(),onIsl=false;
+  if(!cur){ // "Anywhere": start in the strongest area for the month (mainland), with a little variety
+    const seeds=pool.filter(c=>!ISLANDS.has(c.p.stateCode)).sort((a,b)=>b.s-a.s).slice(0,120).map(c=>({c,v:dzArea(c,pool,used,radius)+R()*1.5})).sort((a,b)=>b.v-a.v);
+    if(!seeds.length)return null;
+    const c=seeds[Math.floor(R()*Math.min(4,seeds.length))].c;cur={lat:c.p.lat,lng:c.p.lng,name:c.p.name};
+  }
+  const D=o.days,regionLen=D<=5?99:Math.max(3,Math.round(D/Math.ceil(D/4.5)));
+  const days=[];let here=null,inRegion=0;
+  const val=(c,from,dc)=>c.s-estMin(from,c.p)/60*0.5-(dc[c.p.cat]||0)*0.6-(catN[c.p.cat]||0)*0.12;
+  const take=(day,c,m)=>{day.stops.push(c);day.min+=m;used.add(c.k);catN[c.p.cat]=(catN[c.p.cat]||0)+1;here=c;cur=c.p;onIsl=ISLANDS.has(c.p.stateCode)};
+  for(let d=0;d<D;d++){
+    const day={stops:[],min:0,hop:null};
+    // A travel day by train/flight: when this area has had its days, or has nothing good left
+    if(here&&modes.length&&D-d>=2){
+      let lb=-Infinity;for(const c of pool){if(used.has(c.k)||ISLANDS.has(c.p.stateCode)!==onIsl)continue;const m=estMin(cur,c.p);if(m<=cap){const v=val(c,cur,{});if(v>lb)lb=v}}
+      if(inRegion>=regionLen||lb<1.2){
+        const h=dzHop(here,pool,used,modes,R,radius);
+        if(h){day.hop={m:h.m,alt:legAlts(here.p,h.c.p)[h.m],from:here};take(day,h.c,0);days.push(day);inRegion=1;continue}
+      }
+    }
+    // A sightseeing day: add the best next place until the day's driving or time runs out
+    const dc={};let t=0;
+    while(day.stops.length<P.max){
+      let best=null,bv=-Infinity,bm=0;
+      for(const c of pool){
+        if(used.has(c.k)||ISLANDS.has(c.p.stateCode)!==onIsl)continue;
+        const m=estMin(cur,c.p);
+        if(day.min+m>cap||(day.stops.length&&t+m+P.visit>DZ_DAYMIN))continue;
+        const v=val(c,cur,dc);if(v>bv){bv=v;best=c;bm=m}
+      }
+      if(!best&&d===0&&!here){ // nothing within reach of the start city: take the nearest good place anyway
+        for(const c of pool){if(ISLANDS.has(c.p.stateCode))continue;const v=c.s-estMin(cur,c.p)/60*0.3;if(v>bv){bv=v;best=c;bm=estMin(cur,c.p)}}
+      }
+      if(!best&&!day.stops.length&&here){ // nothing within today's limit: one longer drive beats a wasted day
+        for(const c of pool){if(used.has(c.k)||ISLANDS.has(c.p.stateCode)!==onIsl)continue;const m=estMin(cur,c.p);if(m>cap*1.75)continue;const v=val(c,cur,dc);if(v>bv){bv=v;best=c;bm=m}}
+        if(best)day.long=true;
+      }
+      if(!best||day.stops.length&&bv<0.6)break;
+      t+=bm+P.visit;dc[best.p.cat]=(dc[best.p.cat]||0)+1;take(day,best,bm);
+    }
+    if(!day.stops.length)day.rest=true;
+    days.push(day);inRegion++;
+  }
+  // Flatten into trip stops; each night is spent at the day's last place
+  const stops=[],nights={},modesOut={};
+  days.forEach((day,d)=>{
+    for(const c of day.stops)stops.push(c);
+    if(day.hop&&stops.length>1)modesOut[modeKey(day.hop.from.p,day.stops[0].p)]=day.hop.m;
+    const endK=stops.length?stops[stops.length-1].k:null;
+    if(d<D-1&&endK)nights[endK]=(nights[endK]||0)+1;
+  });
+  if(!stops.length)return null;
+  // A rest day before any stop (rare): fold it into the first stop
+  const lead=days.findIndex(x=>x.stops.length);if(lead>0)nights[stops[0].k]=(nights[stops[0].k]||0)+lead;
+  return {o:{...o,cats:[...o.cats]},days,stops,nights,modes:modesOut,start:dzStartPt(),pool:pool.length};
+}
+
+/* ── Designer UI ── */
+function dzSave(){try{localStorage.setItem(DZ_LS,JSON.stringify(dz))}catch(e){}}
+function dzChip(group,val,label,on,extra=''){return `<button class="dz-chip${on?' on':''}" data-g="${group}" data-v="${esc(val)}" aria-pressed="${on}" ${extra}>${label}</button>`}
+function dzQuestions(){
+  const others=[...CITIES_T1,...CITIES_T2].map(c=>c[0]).filter(n=>!DZ_STARTS.some(s=>(s[1]||s[0])===n)&&!['Port Blair','Kavaratti','Dispur'].includes(n)).sort();
+  const isOther=!DZ_STARTS.some(s=>s[0]===dz.start);
+  return `<form class="dz-form" onsubmit="event.preventDefault();dzBuild()">
+  <section class="dz-q"><h3><i>1</i>How many days?</h3><div class="dz-chips dz-days">${DZ_DAYS.map(n=>dzChip('days',n,`<b>${n}</b><small>days</small>`,dz.days===n)).join('')}</div></section>
+  <section class="dz-q"><h3><i>2</i>When are you going?</h3><div class="dz-chips dz-months">${MONTHS.map((m,i)=>dzChip('month',i,m.slice(0,3),dz.month===i,`title="${m}"`)).join('')}</div></section>
+  <section class="dz-q"><h3><i>3</i>Starting from</h3><div class="dz-chips">${DZ_STARTS.map(s=>dzChip('start',s[0],s[0]==='Anywhere'?`${SVG_SPARK}Anywhere`:s[0],dz.start===s[0])).join('')}
+    <select class="dz-other${isOther?' on':''}" aria-label="Another starting city" onchange="if(this.value){dz.start=this.value;dzSave();dzRender()}"><option value="">Other city…</option>${others.map(n=>`<option${dz.start===n?' selected':''}>${n}</option>`).join('')}</select></div>
+    <p class="dz-hint">${dz.start==='Anywhere'?'We’ll start you in the best area for '+MONTHS[dz.month]+'.':'Day 1 begins near '+esc(dz.start)+'.'}</p></section>
+  <section class="dz-q"><h3><i>4</i>What do you love?</h3><div class="dz-chips dz-cats">${Object.entries(CATS).map(([k,c])=>dzChip('cats',k,`<i style="background:${c.color}">${ICONS[k]}</i>${c.label}`,dz.cats.includes(k),`style="--c:${c.color}"`)).join('')}</div></section>
+  <section class="dz-q"><h3><i>5</i>Your pace</h3><div class="dz-cards">${Object.entries(DZ_PACE).map(([k,p])=>dzChip('pace',k,`<b>${p.label}</b><small>${p.sub}</small>`,dz.pace===k)).join('')}</div></section>
+  <section class="dz-q"><h3><i>6</i>Getting around</h3><div class="dz-cards dz-modes">${Object.entries(DZ_MODES).map(([k,m])=>dzChip('mode',k,`<i>${k==='road'?SVG_CAR:k==='rail'?SVG_TRAIN:k==='fly'?SVG_PLANE:SVG_ROUTE}</i><b>${m.label}</b><small>${m.sub}</small>`,dz.mode===k)).join('')}</div></section>
+  </form>`;
+}
+function dzRender(){
+  const body=document.getElementById('dzBody'),foot=document.getElementById('dzFoot'),sh=document.getElementById('designer');
+  sh.classList.toggle('result',!!dzPlan);
+  document.getElementById('dzTitle').textContent=dzPlan?`Your ${dzPlan.o.days} days in India`:'Design my trip';
+  if(!dzPlan){
+    const top=body.scrollTop;
+    body.innerHTML=dzQuestions();body.scrollTop=top;
+    foot.innerHTML=`<span class="dz-sumq">${dz.days} days · ${MONTHS[dz.month]} · ${dz.cats.length} interest${dz.cats.length>1?'s':''}</span><button class="dz-go" onclick="dzBuild()">${SVG_SPARK}Build my itinerary</button>`;
+    return;
+  }
+  body.innerHTML=dzResultHTML(dzPlan);body.scrollTop=0;
+  foot.innerHTML=`<button class="dz-back" onclick="dzPlan=null;dzRender()">‹ Change answers</button><button class="dz-alt" onclick="dzBuild(true)" title="Another plan with the same answers">${SVG_DICE}<span>Shuffle</span></button><button class="dz-go" onclick="dzApply()">Open in My trip ›</button>`;
+  dzPhotos();
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('#designer .dz-chip');if(!b)return;
+  e.preventDefault();const g=b.dataset.g,v=b.dataset.v;
+  if(g==='cats'){const i=dz.cats.indexOf(v);if(i>=0){if(dz.cats.length>1)dz.cats.splice(i,1)}else dz.cats.push(v)}
+  else if(g==='days'||g==='month')dz[g]=+v;else dz[g]=v;
+  dzSave();dzRender();
+});
+function dzDayTitle(day,i,plan){
+  if(day.rest){let k=null;for(let j=i;j>=0;j--){const x=plan.days[j].stops;if(x.length){k=x[x.length-1];break}}return k?`Stay in ${k.p.name}`:'Free day'}
+  const names=day.stops.map(c=>c.p.name);return names.length>2?`${names[0]}, ${names[1]} & more`:names.join(' & ');
+}
+function dzResultHTML(P){
+  const o=P.o,st=P.stops.map(c=>c.p),states=new Set(st.map(p=>p.stateCode));
+  let road=0,fl=0,tr=0;P.days.forEach(d=>{if(d.hop){d.hop.m==='fly'?fl++:tr++}else road+=d.min});
+  const roadKm=P.stops.reduce((s,c,i)=>i&&!P.days.some(d=>d.hop&&d.stops[0]===c)?s+km(P.stops[i-1].p,c.p)*1.3:s,0);
+  let h=`<div class="dz-res-head"><small>${o.days}-day plan · ${MONTHS[o.month]} · ${P.start?'from '+esc(P.start.name):'best area for the month'} · ${DZ_PACE[o.pace].label.toLowerCase()} pace</small>
+    <div class="dz-stats"><div><b>${st.length}</b><span>places</span></div><div><b>${states.size}</b><span>state${states.size>1?'s':''}</span></div><div><b>≈${fmtKm(roadKm)}</b><span>by road</span></div>${tr?`<div><b>${tr}</b><span>train${tr>1?'s':''}</span></div>`:''}${fl?`<div><b>${fl}</b><span>flight${fl>1?'s':''}</span></div>`:''}</div></div><ol class="dz-plan">`;
+  let prev=P.start;
+  P.days.forEach((day,i)=>{
+    let move='';
+    if(day.hop){const a=day.hop.alt;move=`<span class="dz-move ${day.hop.m}">${day.hop.m==='fly'?SVG_PLANE:SVG_TRAIN}${day.hop.m==='fly'?'Fly':'Train'} <b>${altLabel(day.hop.m,a)}</b> · nearest ${day.hop.m==='fly'?'airports':'stations'}</span>`}
+    else if(day.rest)move=`<span class="dz-move rest">${MOON_SVG}No long drive — explore, rest, shop</span>`;
+    else if(day.min>=10||i===0&&P.start)move=`<span class="dz-move">${SVG_CAR}≈${fmtMin(Math.max(day.min,5))} on the road${i===0&&P.start?' from '+esc(P.start.name):''}</span>`;
+    else move=`<span class="dz-move">${SVG_CAR}All close by</span>`;
+    const first=day.stops[0];
+    h+=`<li class="dz-day" style="animation-delay:${Math.min(i,12)*45}ms"><div class="dz-ph"${first?` data-k="${esc(first.k)}" style="--c:${CATS[first.p.cat].color}"`:''}>${first?ICONS[first.p.cat]:MOON_SVG}</div>
+      <div class="dz-dbody"><div class="dz-dh"><b>Day ${i+1}</b><span>${esc(dzDayTitle(day,i,P))}</span></div>${move}
+      ${day.stops.length?`<ul>${day.stops.map(c=>{const b=bestMonths(c.p.best);return `<li style="--c:${CATS[c.p.cat].color}"><i></i><div><b>${esc(c.p.name)}</b><span>${CATS[c.p.cat].label} · ${esc(c.p.state)}${b.size&&b.size<=4?` · <em>best ${esc(c.p.best)}</em>`:''}</span>${c.p.desc?`<p>${esc(c.p.desc)}</p>`:''}</div></li>`}).join('')}</ul>`:''}</div></li>`;
+    if(day.stops.length)prev=day.stops[day.stops.length-1].p;
+  });
+  h+=`</ol><p class="dz-note">Built from ${P.pool} places that suit ${MONTHS[o.month]} and your interests. Drive times here are rough; My trip fetches real road routes. Trains and flights name the nearest major stations and airports only — check IRCTC and airlines for actual services.</p>`;
+  return h;
+}
+async function dzPhotos(){
+  for(const el of document.querySelectorAll('#dzBody .dz-ph[data-k]')){
+    const p=findPlace(el.dataset.k);if(!p)continue;
+    getImage(p).then(urls=>{if(!urls||!el.isConnected)return;const im=new Image();im.alt='';im.onload=()=>im.classList.add('ok');imgChain(im,urls,()=>im.remove());el.appendChild(im)});
+  }
+}
+async function dzBuild(shuffle){
+  if(!airports.length)await loadHubs();
+  dzSeed=shuffle?dzSeed+1:(Date.now()%100000);
+  const go=document.querySelector('#dzFoot .dz-go');if(go)go.classList.add('busy');
+  await new Promise(r=>setTimeout(r,shuffle?120:380)); // a beat so the build feels considered, and the spinner shows
+  let plan=designTrip(dz,dzSeed);
+  if(!plan){alert('No places match those answers for '+MONTHS[dz.month]+' — try adding an interest or another month.');if(go)go.classList.remove('busy');return}
+  dzPlan=plan;dzRender();
+}
+function dzApply(){
+  const P=dzPlan;if(!P)return;
+  if(trip.length&&!confirm(`Replace your current trip (${trip.length} stop${trip.length>1?'s':''}) with this ${P.o.days}-day plan?`))return;
+  trip=P.stops.map(c=>c.k);stays={...P.nights};
+  for(const[k,m] of Object.entries(P.modes))legModes[k]=m;
+  try{localStorage.setItem(MODE_LS,JSON.stringify(legModes))}catch(e){}
+  paceH=DZ_PACE[P.o.pace].h;try{localStorage.setItem(PACE_LS,paceH)}catch(e){}
+  closeDesigner();tripChanged();
+  document.body.classList.add('trip-view');if(isMobile())document.body.classList.add('list-open');syncTabs();renderTrip();
+  const tp=document.getElementById('tripPanel');if(tp)tp.scrollTop=0;
+  // Show the whole route; on phones keep the itinerary drawer open (fitTrip would close it)
+  setTimeout(()=>{map.invalidateSize();const st=tripStops();if(st.length)map.fitBounds(st.map(p=>[p.lat,p.lng]),{padding:[40,40],maxZoom:10})},80);
+}
+let dzPrevFocus=null;
+function openDesigner(){
+  if(typeof endFlyover==='function'&&fly)endFlyover();
+  const el=document.getElementById('designer');dzPrevFocus=document.activeElement;
+  if(typeof hideTeaser==='function'&&!document.getElementById('teaser').hidden)hideTeaser();
+  dzPlan=null;dzRender();el.hidden=false;requestAnimationFrame(()=>el.classList.add('on'));
+  document.body.classList.add('dz-open');setTimeout(()=>el.querySelector('.dz-x').focus(),60);
+  if(location.hash!=='#design')history.replaceState(null,'',location.pathname+location.search+'#design');
+}
+function closeDesigner(){
+  const el=document.getElementById('designer');el.classList.remove('on');document.body.classList.remove('dz-open');
+  setTimeout(()=>{el.hidden=true},300);
+  if(location.hash==='#design')history.replaceState(null,'',location.pathname+location.search);
+  if(dzPrevFocus&&dzPrevFocus.focus)dzPrevFocus.focus();
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.getElementById('designer').hidden)closeDesigner()});
+
+init().then(initTrip).then(loadStories).then(()=>{if(location.hash==='#design')openDesigner()});
 </script>
 </body>
 </html>
