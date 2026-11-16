@@ -522,7 +522,8 @@ body.flying .teaser,body.flying .sp{display:none}
 body.flying .leaflet-control-scale{opacity:0;transition:opacity .3s}
 .md-chip.md-fly{background:linear-gradient(135deg,#24508F,#0E7C86);--c:#24508F;color:#fff}
 .md-chip.md-dice{background:linear-gradient(135deg,#138808,#0E7C86);--c:#0E7C86;color:#fff}
-.md-chip.md-fly svg,.md-chip.md-dice svg{width:14px;height:14px}
+.md-chip.md-toy{background:linear-gradient(135deg,#B8862B,#8A2B2B);--c:#B8862B;color:#fff}
+.md-chip.md-fly svg,.md-chip.md-dice svg,.md-chip.md-toy svg{width:14px;height:14px}
 .st-shuf svg{width:14px;height:14px}
 @media(max-width:760px){
   .fo{left:50%;bottom:16px;width:360px;transform:translate(-50%,24px) scale(.97)}
@@ -536,11 +537,23 @@ body.flying .leaflet-control-scale{opacity:0;transition:opacity .3s}
 .pop-go{margin-top:9px;border:1px solid var(--border-light,#EADFCB);border-radius:12px;overflow:hidden;background:#FFFCF6}
 .pg-row{display:flex;align-items:center;gap:8px;padding:6px 9px;text-decoration:none!important;color:var(--ink)!important;transition:background .15s}
 .pg-row+.pg-row{border-top:1px solid var(--border-light,#EADFCB)}
-a.pg-row:hover{background:#F6EEDF}
+a.pg-row:hover,button.pg-row:hover{background:#F6EEDF}
+button.pg-row{width:100%;border:0;font:inherit;text-align:left;cursor:pointer;margin:0}
 .pg-ic{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff}
 .pg-ic svg{width:13px;height:13px}
 .pg-ic.air,.hub-ic.air{background:#24508F}.pg-ic.rail,.hub-ic.rail{background:#8A2B2B}
 .pg-ic.none{background:#9AA3A8}
+.pg-ic.toy,.hub-ic.toy{background:linear-gradient(135deg,#B8862B,#8A2B2B)}
+.hub-ic.toy{width:24px;height:24px}.hub-ic.toy svg{width:13px;height:13px}
+.pg-badge{display:inline-block;font-size:8px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:1px 5px;border-radius:6px;margin-left:5px;vertical-align:1px;background:#E4ECF7;color:#24508F}
+.pg-badge.toy{background:#F5E9D0;color:#8A5A12}
+.pg-row.toy{background:linear-gradient(90deg,#FBF3E2,#FFFCF6)}
+.pg-row.toy .pg-t{white-space:normal}
+.pg-row.toy .pg-t em{display:block;font-style:normal;font-size:9.5px;color:var(--ink-light);margin-top:1px}
+.hub-pop .hp-b{display:inline-block;font-size:8.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:2px 6px;border-radius:6px;background:#E4ECF7;color:#24508F;margin-top:5px}
+.hub-pop .hp-b.toy{background:#F5E9D0;color:#8A5A12}
+.hub-pop .hp-d{font-size:10.5px;color:var(--ink-dim);margin-top:5px;line-height:1.35}
+.hub-pop a.hp-s{background:linear-gradient(135deg,#B8862B,#8A2B2B);margin-right:4px}
 .pg-t{flex:1;min-width:0;font-size:11px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pg-t small{display:block;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-light)}
 .pg-t b{font-weight:800;letter-spacing:.02em;margin-right:3px}
@@ -549,7 +562,7 @@ a.pg-row:hover{background:#F6EEDF}
 .pc-hubs{display:flex;gap:10px;margin-top:4px;font-size:0.62rem;color:var(--ink-dim);white-space:nowrap;overflow:hidden}
 .pc-hubs span{display:inline-flex;align-items:center;gap:3px}
 .pc-hubs svg{width:10px;height:10px}
-.pc-hubs .a svg{color:#24508F}.pc-hubs .r svg{color:#8A2B2B}
+.pc-hubs .a svg{color:#24508F}.pc-hubs .r svg{color:#8A2B2B}.pc-hubs .t svg{color:#B8862B}.pc-hubs .t{font-weight:700;color:#8A5A12}
 .pc-hubs b{font-weight:800;color:var(--ink)}
 .sp-hubs{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
 .sp-hubs span{display:inline-flex;align-items:center;gap:5px;font-size:.7rem;color:var(--ink-dim);background:#EEF2F7;border-radius:10px;padding:3px 9px 3px 4px}
@@ -1531,14 +1544,14 @@ function emailTrip(){
     let alt='';
     if(i&&!legMode(st[i-1],p)){const A=legAlts(st[i-1],p)||{},o=[];
       if(A.fly)o.push(`fly ${altLabel('fly',A.fly)} (nearest airports)`);
-      if(A.rail)o.push(`train ${altLabel('rail',A.rail)} (nearest major stations)`);
+      if(A.rail)o.push(`train ${altLabel('rail',A.rail)} (nearest stations)`);
       if(A.ship)o.push(A.ship.toLowerCase());
       if(o.length)alt=`; or ${o.join(' / ')}`;}
     const nn=multi?nightsAt(P,i):[];
     lines.push(`${i+1}. ${p.name} (${p.state}) — ${CATS[p.cat]?.label||p.cat}`+(i?`  [${legText(st[i-1],p,true)} from previous${alt}]`:'')+(nn.length?` — ${nightLabel(nn).toLowerCase()} here`:''));
   });
   if(multi)while(shown<P.days.length-1){shown++;lines.push('',dayLine(shown))}
-  if(st.some((p,i)=>i&&(legMode(st[i-1],p)||Object.keys(legAlts(st[i-1],p)||{}).length)))lines.push('','Flight and train options name the nearest airports and major railway stations only — check airlines and IRCTC for actual services.');
+  if(st.some((p,i)=>i&&(legMode(st[i-1],p)||Object.keys(legAlts(st[i-1],p)||{}).length)))lines.push('','Flight and train options name the nearest airports and railway stations only — check airlines and IRCTC for actual services.');
   if(multi)lines.push('',`(${P.days.length} days; driving days of up to ${paceH} h.)`);
   const T=tripTotals(st);
   const tot=[T.road?`${fmtKm(T.road)} by road (~${fmtMin(T.min)} driving)`:'',T.straight?`${fmtKm(T.straight)} straight-line`:'',T.fly?`${T.fly} flight${T.fly>1?'s':''}`:'',T.rail?`${T.rail} train${T.rail>1?'s':''}`:''].filter(Boolean).join(' + ');
@@ -1720,7 +1733,7 @@ const trainsBetweenUrl=(f,t)=>`https://www.google.com/maps/dir/?api=1&origin=${f
 const altLabel=(m,x)=>m==='fly'?`${x.from.iata} → ${x.to.iata}`:`${x.from.code} → ${x.to.code}`;
 function altTitle(m,x){
   return m==='fly'?`Nearest airports: ${x.from.name} (${x.from.city}, ~${Math.round(x.dA)} km from the first stop) → ${x.to.name} (${x.to.city}, ~${Math.round(x.dB)} km from the next). Not necessarily a direct flight — check airlines.`
-    :`Nearest major stations: ${x.from.name} (~${Math.round(x.dA)} km) → ${x.to.name} (~${Math.round(x.dB)} km). Check Indian Railways / IRCTC for trains — a change may be needed.`;
+    :`Nearest stations: ${x.from.name} (~${Math.round(x.dA)} km) → ${x.to.name} (~${Math.round(x.dB)} km). Check Indian Railways / IRCTC for trains — a change may be needed.`;
 }
 function legAltsHTML(i,a,b){
   const A=legAlts(a,b);if(!A)return '';
@@ -1739,7 +1752,7 @@ function legAltsHTML(i,a,b){
 function modeLegText(m,A,plain){
   const x=A[m];
   if(m==='fly')return `Fly ${altLabel(m,x)} · ~${fmtKm(x.km)} apart`+(plain?` (nearest airports: ${x.from.city} → ${x.to.city}; check airlines for routes)`:'');
-  return `Train ${altLabel(m,x)} · ~${fmtKm(x.km)} apart`+(plain?` (nearest major stations: ${x.from.name} → ${x.to.name}; check IRCTC for trains)`:'');
+  return `Train ${altLabel(m,x)} · ~${fmtKm(x.km)} apart`+(plain?` (nearest stations: ${x.from.name} → ${x.to.name}; check IRCTC for trains)`:'');
 }
 function renderTrip(){
   const st=tripStops();
@@ -2047,6 +2060,7 @@ async function loadStories(){
   md.innerHTML=`<span class="mustdo-lbl">${SVG_PLAY}Must-do</span>`
     +`<button class="md-chip md-fly" title="Fly over India" aria-label="Fly over India: a short tour of the highlights" onclick="startFlyover()">${SVG_PLANE}</button>`
     +`<button class="md-chip md-dice" title="Surprise me: random places as stories" aria-label="Surprise me: random places as stories" onclick="openSurpriseStory()">${SVG_DICE}</button>`
+    +(storyDecks.some(d=>d.id==='toytrains')?`<button class="md-chip md-toy" title="Heritage toy trains" aria-label="Heritage toy trains: India's mountain railways as stories" onclick="openStory('toytrains')">${SVG_TOY}</button>`:'')
     +`<button class="md-chip md-season" title="Best in ${MONTHS[seasonDeck().month]}" aria-label="Best in ${MONTHS[seasonDeck().month]}" onclick="openStory('season')">${SVG_CAL}</button>`
     +storyDecks.filter(d=>d.cat&&CATS[d.cat]).map(d=>`<button class="md-chip" style="--c:${CATS[d.cat].color}" title="${esc(d.title)}" aria-label="${esc(d.title)}" onclick="openStory('${d.id}')">${ICONS[d.cat]}</button>`).join('');
   md.hidden=false;
@@ -2084,7 +2098,7 @@ async function showTeaser(id){
   t.hidden=false;requestAnimationFrame(()=>requestAnimationFrame(()=>t.classList.add('on')));
 }
 function hideTeaser(){const t=document.getElementById('teaser');t.classList.remove('on');setTimeout(()=>t.hidden=true,450);try{localStorage.setItem(STORY_SEEN,'1');localStorage.setItem(SEASON_SEEN,seasonTag())}catch(e){}}
-async function openStory(id){
+async function openStory(id,at=0){
   const di=Math.max(0,storyDecks.findIndex(d=>d.id===id));
   if(fly)endFlyover({stay:true});
   hideTeaser();hideSurprise();closeCatPanel();map.closePopup();
@@ -2093,7 +2107,7 @@ async function openStory(id){
     story.prevHash=location.hash;el.hidden=false;void el.offsetWidth;el.classList.add('on');
     document.getElementById('stStage').innerHTML='';
   }
-  await gotoStory(di,0,1);
+  await gotoStory(di,at,1);
   el.focus();
 }
 function closeStory(){
@@ -2107,7 +2121,7 @@ function renderStoryChrome(){
   document.getElementById('stTitle').textContent=d.title;
   document.getElementById('stTabs').innerHTML=storyDecks.map((x,i)=>{
     const c=CATS[x.cat]||{color:'#E2622B',label:'Highlights'};
-    const [ico,lbl,col]=x.gen==='season'?[SVG_CAL,'Best in '+MONTHS[x.month].slice(0,3),'#C73E6B']:x.gen==='surprise'?[SVG_DICE,'Surprise me','#0E7C86']:x.gen==='state'?[PIN_SVG,x.title,'#5A4432']:[x.cat?ICONS[x.cat]:SVG_SPARK,x.cat?c.label:'Highlights',c.color];
+    const [ico,lbl,col]=x.gen==='season'?[SVG_CAL,'Best in '+MONTHS[x.month].slice(0,3),'#C73E6B']:x.gen==='surprise'?[SVG_DICE,'Surprise me','#0E7C86']:x.gen==='state'?[PIN_SVG,x.title,'#5A4432']:x.id==='toytrains'?[SVG_TOY,'Toy trains','#B8862B']:[x.cat?ICONS[x.cat]:SVG_SPARK,x.cat?c.label:'Highlights',c.color];
     return `<button class="st-tab${i===story.deck?' on':''}" style="--c:${col}" onclick="event.stopPropagation();gotoStory(${i},0,1)"><span>${ico}</span>${esc(lbl)}</button>`}).join('');
   document.getElementById('stMon').hidden=d.gen!=='season';
   document.getElementById('stShuf').hidden=d.gen!=='surprise';
@@ -2423,11 +2437,11 @@ function flyoverStopHere(){
 const SVG_PLANE='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>';
 const SVG_TRAIN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="14" rx="3.5"/><path d="M5 10h14M8.5 13.3h.01M15.5 13.3h.01M8.5 19.5L7 22M15.5 19.5L17 22"/></svg>';
 const NO_RAIL_STATES={AN:'Andaman & Nicobar',LD:'Lakshadweep'}; // no railway: reach by air or sea
-let airports=[],stations=[];const hubMemo={};
+let airports=[],stations=[],heritage=[];const hubMemo={};
 async function loadHubs(){
   try{
     const [a,s]=await Promise.all(['airports.json','railway-stations.json'].map(f=>fetch(DATA_BASE+f+'?v='+Date.now()).then(r=>r.ok?r.json():null)));
-    airports=(a&&a.airports)||[];stations=(s&&s.stations)||[];
+    airports=(a&&a.airports)||[];stations=(s&&s.stations)||[];heritage=(s&&s.heritage)||[];
   }catch(e){console.warn('Hubs:',e)}
   syncHubLayers();
 }
@@ -2438,6 +2452,23 @@ function nearestHubs(p){
   if(hubMemo[k])return hubMemo[k];
   return hubMemo[k]={air:nearestOf(airports,p),rail:NO_RAIL_STATES[p.stateCode]?null:nearestOf(stations,p),island:!!NO_RAIL_STATES[p.stateCode]};
 }
+const SVG_TOY='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17V9h6v8M9 12h7l2 5M3 9l1-3h4l1 3M5 6V3.5"/><circle cx="6" cy="18.5" r="2" fill="currentColor"/><circle cx="14" cy="18.5" r="2" fill="currentColor"/><path d="M18 6.5c1.2-.8 2.4-.8 3.5 0"/></svg>';
+/* Heritage mountain railways ("toy trains") near a place: within 30 km of a verified station on the line */
+const TOY_REACH=30,toyMemo={};
+function nearToyTrain(p){
+  if(!heritage.length)return null;
+  const k=p.lat.toFixed(4)+','+p.lng.toFixed(4);if(k in toyMemo)return toyMemo[k];
+  let best=null,bd=Infinity;
+  for(const t of heritage)for(const q of t.pts||[]){const d=km(p,{lat:q[0],lng:q[1]});if(d<bd){bd=d;best=t}}
+  return toyMemo[k]=bd<=TOY_REACH?best:null;
+}
+const toyDeckHas=t=>{const d=storyDecks.find(x=>x.id==='toytrains');return !!(d&&d.slides.some(s=>s.rail===t.id))};
+function openToyStory(id){
+  const d=storyDecks.find(x=>x.id==='toytrains');if(!d)return;
+  map.closePopup();const i=Math.max(0,d.slides.findIndex(s=>s.rail===id));
+  openStory('toytrains',i);
+}
+const toyFacts=t=>[t.gauge,t.opened?'since '+t.opened:'',t.km?'~'+t.km+' km':''].filter(Boolean).join(' · ');
 const approxKm=d=>d<1?'<1 km':'~'+Math.round(d).toLocaleString('en-IN')+' km';
 const flightsUrl=a=>'https://www.google.com/travel/flights?q='+encodeURIComponent('Flights to '+a.iata);
 const transitUrl=s=>`https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lng}&travelmode=transit`;
@@ -2445,20 +2476,23 @@ function gettingThereHTML(p){
   const n=nearestHubs(p);if(!n)return '';
   const KM_NOTE='<i>straight line</i>';
   let h='<div class="pop-go">';
-  if(n.air)h+=`<a class="pg-row" href="${flightsUrl(n.air.h)}" target="_blank" rel="noopener" title="Search flights to ${esc(n.air.h.iata)} (Google Flights)"><span class="pg-ic air">${SVG_PLANE}</span><span class="pg-t"><small>Nearest airport</small><b>${esc(n.air.h.iata)}</b>${esc(n.air.h.city)}</span><span class="pg-km">${approxKm(n.air.d)}${KM_NOTE}</span></a>`;
-  if(n.rail)h+=`<a class="pg-row" href="${transitUrl(n.rail.h)}" target="_blank" rel="noopener" title="${esc(n.rail.h.name)} — directions by public transport (Google Maps)"><span class="pg-ic rail">${SVG_TRAIN}</span><span class="pg-t"><small>Nearest major railhead</small><b>${esc(n.rail.h.code)}</b>${esc(n.rail.h.name)}</span><span class="pg-km">${approxKm(n.rail.d)}${KM_NOTE}</span></a>`;
+  if(n.air)h+=`<a class="pg-row" href="${flightsUrl(n.air.h)}" target="_blank" rel="noopener" title="Search flights to ${esc(n.air.h.iata)} (Google Flights)"><span class="pg-ic air">${SVG_PLANE}</span><span class="pg-t"><small>Nearest airport${n.air.h.intl?'<span class="pg-badge">International</span>':''}</small><b>${esc(n.air.h.iata)}</b>${esc(n.air.h.city)}</span><span class="pg-km">${approxKm(n.air.d)}${KM_NOTE}</span></a>`;
+  if(n.rail)h+=`<a class="pg-row" href="${transitUrl(n.rail.h)}" target="_blank" rel="noopener" title="${esc(n.rail.h.name)} — directions by public transport (Google Maps)"><span class="pg-ic rail">${SVG_TRAIN}</span><span class="pg-t"><small>Nearest railhead</small><b>${esc(n.rail.h.code)}</b>${esc(n.rail.h.name)}</span><span class="pg-km">${approxKm(n.rail.d)}${KM_NOTE}</span></a>`;
   else if(n.island)h+=`<div class="pg-row"><span class="pg-ic none">${SVG_TRAIN}</span><span class="pg-t"><small>Railway</small>No rail link — fly or take a ship</span></div>`;
+  const t=nearToyTrain(p);
+  if(t){const story=toyDeckHas(t);
+    h+=`<${story?'button type="button" onclick="openToyStory(\''+t.id+'\')"':'a href="https://en.wikipedia.org/wiki/'+encodeURIComponent(t.wiki)+'" target="_blank" rel="noopener"'} class="pg-row toy" title="${esc(t.name)}${t.status?' — '+esc(t.status):''}"><span class="pg-ic toy">${SVG_TOY}</span><span class="pg-t"><small>Heritage toy train nearby<span class="pg-badge toy">${/World Heritage/.test(t.unesco)?'UNESCO':'Heritage'}</span></small><b>${esc(t.name)}</b><em>${esc(t.from)} → ${esc(t.to)} · ${esc(toyFacts(t))}${t.status?' · check service':''}</em></span><span class="pg-km">${story?'Story ›':'Wiki ↗'}</span></${story?'button':'a'}>`}
   return h+'</div>';
 }
 function cardHubsHTML(p){
   const n=nearestHubs(p);if(!n)return '';
-  return `<div class="pc-hubs">${n.air?`<span class="a" title="Nearest airport: ${esc(n.air.h.name)} (straight-line distance)">${SVG_PLANE}<b>${esc(n.air.h.iata)}</b>${approxKm(n.air.d)}</span>`:''}${n.rail?`<span class="r" title="Nearest major railhead: ${esc(n.rail.h.name)} (straight-line distance)">${SVG_TRAIN}<b>${esc(n.rail.h.code)}</b>${approxKm(n.rail.d)}</span>`:n.island?`<span class="r">${SVG_TRAIN}no rail</span>`:''}</div>`;
+  return `<div class="pc-hubs">${n.air?`<span class="a" title="Nearest airport: ${esc(n.air.h.name)} (straight-line distance)">${SVG_PLANE}<b>${esc(n.air.h.iata)}</b>${approxKm(n.air.d)}</span>`:''}${n.rail?`<span class="r" title="Nearest railhead: ${esc(n.rail.h.name)} (straight-line distance)">${SVG_TRAIN}<b>${esc(n.rail.h.code)}</b>${approxKm(n.rail.d)}</span>`:n.island?`<span class="r">${SVG_TRAIN}no rail</span>`:''}${nearToyTrain(p)?`<span class="t" title="${esc(nearToyTrain(p).name)} nearby">${SVG_TOY}Toy train</span>`:''}</div>`;
 }
 /* Story slides: one frosted "Getting there" chip — nearest airport and major railhead, straight line */
 function storyHubsHTML(p){
   const n=nearestHubs(p);if(!n||(!n.air&&!n.rail&&!n.island))return '';
   const a=n.air?`<span title="Nearest airport: ${esc(n.air.h.name)} (straight-line distance)">${SVG_PLANE}<b>${esc(n.air.h.iata)}</b>${esc(n.air.h.city)} ${approxKm(n.air.d)}</span>`:'';
-  const r=n.rail?`<span title="Nearest major railhead: ${esc(n.rail.h.name)} (straight-line distance)">${SVG_TRAIN}<b>${esc(n.rail.h.code)}</b>${esc(n.rail.h.name)} ${approxKm(n.rail.d)}</span>`:n.island?`<span>${SVG_TRAIN}No rail · ship or fly</span>`:'';
+  const r=n.rail?`<span title="Nearest railhead: ${esc(n.rail.h.name)} (straight-line distance)">${SVG_TRAIN}<b>${esc(n.rail.h.code)}</b>${esc(n.rail.h.name)} ${approxKm(n.rail.d)}</span>`:n.island?`<span>${SVG_TRAIN}No rail · ship or fly</span>`:'';
   return `<div class="st-go"><small>Getting there</small>${a}${a&&r?'<i></i>':''}${r}</div>`;
 }
 function spHubsHTML(p){
@@ -2481,10 +2515,28 @@ function hubMarker(kind,h){
   m.bindTooltip(`${code} · ${air?h.city:h.name}`,{direction:'top',offset:[0,-9],className:'hub-tip'});
   m.bindPopup(`<div class="hub-pop"><div class="hp-k">${air?'Airport':'Railway station'} · ${esc(code)}</div><div class="hp-n">${esc(h.name)}</div><div class="hp-c">${esc(h.city)}</div>`
     +(air?`<a href="${flightsUrl(h)}" target="_blank" rel="noopener">Search flights to ${esc(code)}</a>`:`<a href="${transitUrl(h)}" target="_blank" rel="noopener">Directions to the station</a>`)
+    +(air&&h.intl?'<div><span class="hp-b">International airport</span></div>':'')
     +`<div class="hp-note">${air?'Check airlines for current routes.':'Check Indian Railways / IRCTC for trains and schedules.'}</div></div>`,{maxWidth:240});
   return m;
 }
-const hubMarkers={air:null,rail:null};
+const hubMarkers={air:null,rail:null,toy:null};
+function toyMarkers(){
+  const out=[];
+  for(const t of heritage){
+    const ends=[t.pts[0],t.pts[t.pts.length-1]];
+    ends.forEach((q,j)=>{
+      const icon=L.divIcon({className:'',html:`<div class="hub-ic toy">${SVG_TOY}</div>`,iconSize:[24,24],iconAnchor:[12,12]});
+      const m=L.marker(q,{icon,pane:'hubs',keyboard:false,title:'',zIndexOffset:50});
+      m.bindTooltip(`${esc(t.short)} · ${esc(j?t.to:t.from)}`,{direction:'top',offset:[0,-11],className:'hub-tip'});
+      const story=toyDeckHas(t);
+      m.bindPopup(`<div class="hub-pop"><div class="hp-k">Heritage mountain railway</div><div class="hp-n">${esc(t.name)}</div><div class="hp-c">${esc(t.from)} → ${esc(t.to)}</div><div><span class="hp-b toy">${esc(t.unesco)}</span></div><div class="hp-d">${esc(toyFacts(t))}${t.status?'<br>'+esc(t.status):''}</div>`
+        +(story?`<a class="hp-s" href="#" onclick="event.preventDefault();openToyStory('${t.id}')">▶ Story</a>`:'')
+        +`<a href="https://en.wikipedia.org/wiki/${encodeURIComponent(t.wiki)}" target="_blank" rel="noopener">About the line ↗</a><div class="hp-note">Check Indian Railways / IRCTC for current services.</div></div>`,{maxWidth:250});
+      out.push({h:{major:true},m});
+    });
+  }
+  return out;
+}
 function syncHubLayers(){
   const z=map.getZoom();
   for(const kind of ['air','rail']){
@@ -2493,12 +2545,13 @@ function syncHubLayers(){
     if(!hubMarkers[kind])hubMarkers[kind]=(kind==='air'?airports:stations).map(h=>({h,m:hubMarker(kind,h)}));
     const all=z>=HUB_ALL_FROM[kind];
     hubMarkers[kind].forEach(({h,m})=>{if(all||h.major)lyr.addLayer(m)});
+    if(kind==='rail'){if(!hubMarkers.toy)hubMarkers.toy=toyMarkers();hubMarkers.toy.forEach(({m})=>lyr.addLayer(m))}
   }
   document.querySelectorAll('.hub-toggle button').forEach(b=>{const on=hubOn[b.dataset.h];b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)});
 }
 const HubToggle=L.Control.extend({options:{position:'topright'},onAdd(){
   const d=L.DomUtil.create('div','hub-toggle');
-  d.innerHTML=`<button data-h="air" title="Show airports" aria-label="Show airports"><i>${SVG_PLANE}</i><span>Airports</span></button><button data-h="rail" title="Show major railway stations" aria-label="Show railway stations"><i>${SVG_TRAIN}</i><span>Rail</span></button>`;
+  d.innerHTML=`<button data-h="air" title="Show airports" aria-label="Show airports"><i>${SVG_PLANE}</i><span>Airports</span></button><button data-h="rail" title="Show railway stations and heritage toy trains" aria-label="Show railway stations"><i>${SVG_TRAIN}</i><span>Rail</span></button>`;
   L.DomEvent.disableClickPropagation(d);
   d.onclick=e=>{const b=e.target.closest('button');if(!b)return;hubOn[b.dataset.h]=!hubOn[b.dataset.h];try{localStorage.setItem(HUB_LS,JSON.stringify(hubOn))}catch(e){}syncHubLayers();declutterSoon()};
   return d;
@@ -2877,7 +2930,7 @@ function dzResultHTML(P){
     if(day.stops.length)prev=day.stops[day.stops.length-1].p;
   });
   if(P.back){const b=P.back;h+=`<li class="dz-day dz-home" style="animation-delay:${Math.min(P.days.length,12)*45}ms"><div class="dz-ph home">${SVG_HOME}</div><div class="dz-dbody"><div class="dz-dh"><b>Home</b><span>Back to ${esc(P.start.name)}</span></div>${b.ship?`<span class="dz-move">${LEG_ICONS.ship}Ship or flight back to the mainland, then on home · check schedules</span>`:b.m?`<span class="dz-move ${b.m}">${b.m==='fly'?SVG_PLANE:SVG_TRAIN}${b.m==='fly'?'Fly':'Train'} <b>${altLabel(b.m,b.alt)}</b> · nearest ${b.m==='fly'?'airports':'stations'}</span>`:`<span class="dz-move${b.long?' long':''}">${SVG_CAR}≈${fmtMin(Math.max(b.min,5))} drive from ${esc(P.stops[P.stops.length-1].p.name)}${b.long?' · long drive':''}</span>`}<p class="dz-hp">On the evening of day ${o.days}, or the morning after.</p></div></li>`}
-  h+=`</ol><p class="dz-note">Tap ${SVG_SWAP} for something else in that slot, or ${SVG_X} to drop a place. Built from ${P.pool} places that suit ${MONTHS[o.month]} and your interests. Drive times here are rough; My trip fetches real road routes. Trains and flights name the nearest major stations and airports only — check IRCTC and airlines for actual services.${P.days[0].hop&&P.days[0].hop.city||P.back?' Getting there from and back to your start city is shown here only; My trip begins at the first place.':''}</p>`;
+  h+=`</ol><p class="dz-note">Tap ${SVG_SWAP} for something else in that slot, or ${SVG_X} to drop a place. Built from ${P.pool} places that suit ${MONTHS[o.month]} and your interests. Drive times here are rough; My trip fetches real road routes. Trains and flights name the nearest stations and airports only — check IRCTC and airlines for actual services.${P.days[0].hop&&P.days[0].hop.city||P.back?' Getting there from and back to your start city is shown here only; My trip begins at the first place.':''}</p>`;
   return h;
 }
 async function dzPhotos(){

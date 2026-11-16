@@ -1,5 +1,5 @@
 {
- "note": "Straight-line 'nearest' lookups only. Codes, names and coordinates checked against each English Wikipedia article (Nov 2026). No routes, schedules or fares are implied.",
+ "note": "Straight-line 'nearest' lookups only. Codes, names and coordinates checked against each English Wikipedia article (Nov 2026). No routes, schedules or fares are implied. 'heritage' lists India's mountain railways ('pts' = verified station coordinates along each line: both ends, plus Kangra and Palampur on the Kangra line) — check current service before travelling.",
  "stations": [
   {
    "code": "NDLS",
@@ -1085,6 +1085,744 @@
    "city": "Karimnagar",
    "lat": 18.459,
    "lng": 79.1423
+  },
+  {
+   "code": "YA",
+   "name": "Yerraguntla Junction",
+   "city": "Yerraguntla",
+   "lat": 14.6394,
+   "lng": 78.5349
+  },
+  {
+   "code": "MRK",
+   "name": "Markapur Road",
+   "city": "Markapur",
+   "lat": 15.73,
+   "lng": 79.26
+  },
+  {
+   "code": "HUP",
+   "name": "Hindupur",
+   "city": "Hindupur",
+   "lat": 13.8187,
+   "lng": 77.5
+  },
+  {
+   "code": "ARK",
+   "name": "Araku",
+   "city": "Araku Valley",
+   "lat": 18.33,
+   "lng": 82.86
+  },
+  {
+   "code": "AKP",
+   "name": "Anakapalle",
+   "city": "Anakapalle",
+   "lat": 17.695,
+   "lng": 83.0082
+  },
+  {
+   "code": "MTM",
+   "name": "Machilipatnam",
+   "city": "Machilipatnam",
+   "lat": 16.1719,
+   "lng": 81.1384
+  },
+  {
+   "code": "HX",
+   "name": "Kadapa",
+   "city": "Kadapa",
+   "lat": 14.4513,
+   "lng": 78.8288
+  },
+  {
+   "code": "BIDR",
+   "name": "Bidar",
+   "city": "Bidar",
+   "lat": 17.9118,
+   "lng": 77.5153
+  },
+  {
+   "code": "CMGR",
+   "name": "Chikkamagaluru",
+   "city": "Chikkamagaluru",
+   "lat": 13.3031,
+   "lng": 75.7894
+  },
+  {
+   "code": "BDM",
+   "name": "Badami",
+   "city": "Badami",
+   "lat": 15.9591,
+   "lng": 75.6747
+  },
+  {
+   "code": "SBHR",
+   "name": "Subrahmanya Road",
+   "city": "Kukke Subrahmanya",
+   "lat": 12.7315,
+   "lng": 75.5579
+  },
+  {
+   "code": "BDCR",
+   "name": "Bhadrachalam Road",
+   "city": "Kothagudem (for Bhadrachalam)",
+   "lat": 17.55,
+   "lng": 80.63
+  },
+  {
+   "code": "ADB",
+   "name": "Adilabad",
+   "city": "Adilabad",
+   "lat": 19.6805,
+   "lng": 78.536
+  },
+  {
+   "code": "ZN",
+   "name": "Jangaon",
+   "city": "Jangaon",
+   "lat": 17.72,
+   "lng": 79.18
+  },
+  {
+   "code": "AB",
+   "name": "Ambur",
+   "city": "Ambur",
+   "lat": 12.78,
+   "lng": 78.72
+  },
+  {
+   "code": "CJ",
+   "name": "Kanchipuram",
+   "city": "Kanchipuram",
+   "lat": 12.8484,
+   "lng": 79.7051
+  },
+  {
+   "code": "TNM",
+   "name": "Tiruvannamalai",
+   "city": "Tiruvannamalai",
+   "lat": 12.2385,
+   "lng": 79.0777
+  },
+  {
+   "code": "KKDI",
+   "name": "Karaikudi Junction",
+   "city": "Karaikudi",
+   "lat": 10.0678,
+   "lng": 78.7924
+  },
+  {
+   "code": "SVPR",
+   "name": "Srivilliputtur",
+   "city": "Srivilliputhur",
+   "lat": 9.4978,
+   "lng": 77.6451
+  },
+  {
+   "code": "POY",
+   "name": "Pollachi Junction",
+   "city": "Pollachi",
+   "lat": 10.6529,
+   "lng": 77.0011
+  },
+  {
+   "code": "DPJ",
+   "name": "Dharmapuri",
+   "city": "Dharmapuri",
+   "lat": 12.1258,
+   "lng": 78.1542
+  },
+  {
+   "code": "CNGR",
+   "name": "Chengannur",
+   "city": "Chengannur (for Sabarimala)",
+   "lat": 9.3194,
+   "lng": 76.6083
+  },
+  {
+   "code": "BGK",
+   "name": "Bagalkot",
+   "city": "Bagalkot",
+   "lat": 16.18,
+   "lng": 75.7
+  },
+  {
+   "code": "KT",
+   "name": "Kumta",
+   "city": "Kumta (for Gokarna)",
+   "lat": 14.4372,
+   "lng": 74.4211
+  },
+  {
+   "code": "SKLR",
+   "name": "Sakleshpur",
+   "city": "Sakleshpur",
+   "lat": 12.9454,
+   "lng": 75.7791
+  },
+  {
+   "code": "ABKP",
+   "name": "Ambikapur",
+   "city": "Ambikapur",
+   "lat": 23.1365,
+   "lng": 83.1436
+  },
+  {
+   "code": "RPH",
+   "name": "Rampurhat Junction",
+   "city": "Rampurhat",
+   "lat": 24.1792,
+   "lng": 87.7819
+  },
+  {
+   "code": "JSME",
+   "name": "Jasidih Junction",
+   "city": "Jasidih (for Deoghar)",
+   "lat": 24.5149,
+   "lng": 86.6444
+  },
+  {
+   "code": "LAD",
+   "name": "Lohardaga",
+   "city": "Lohardaga",
+   "lat": 23.4467,
+   "lng": 84.7067
+  },
+  {
+   "code": "HZBN",
+   "name": "Hazaribagh Town",
+   "city": "Hazaribagh",
+   "lat": 23.9837,
+   "lng": 85.3402
+  },
+  {
+   "code": "BHP",
+   "name": "Bolpur Shantiniketan",
+   "city": "Bolpur",
+   "lat": 23.6578,
+   "lng": 87.6981
+  },
+  {
+   "code": "VSU",
+   "name": "Bishnupur",
+   "city": "Bishnupur",
+   "lat": 23.0651,
+   "lng": 87.3013
+  },
+  {
+   "code": "BWN",
+   "name": "Barddhaman Junction",
+   "city": "Bardhaman",
+   "lat": 23.25,
+   "lng": 87.87
+  },
+  {
+   "code": "NMKA",
+   "name": "Namkhana",
+   "city": "Namkhana",
+   "lat": 21.7718,
+   "lng": 88.2391
+  },
+  {
+   "code": "CG",
+   "name": "Canning",
+   "city": "Canning (for the Sundarbans)",
+   "lat": 22.3137,
+   "lng": 88.6681
+  },
+  {
+   "code": "HSA",
+   "name": "Hasimara",
+   "city": "Hasimara",
+   "lat": 26.7309,
+   "lng": 89.3506
+  },
+  {
+   "code": "MBI",
+   "name": "Madhubani",
+   "city": "Madhubani",
+   "lat": 26.3487,
+   "lng": 86.0773
+  },
+  {
+   "code": "SSM",
+   "name": "Sasaram Junction",
+   "city": "Sasaram",
+   "lat": 24.9562,
+   "lng": 84.0192
+  },
+  {
+   "code": "VKNR",
+   "name": "Valmikinagar Road",
+   "city": "Valmiki Nagar",
+   "lat": 27.1951,
+   "lng": 84.0346
+  },
+  {
+   "code": "NWD",
+   "name": "Nawada",
+   "city": "Nawada",
+   "lat": 24.8865,
+   "lng": 85.5483
+  },
+  {
+   "code": "SBP",
+   "name": "Sambalpur Junction",
+   "city": "Sambalpur",
+   "lat": 21.4831,
+   "lng": 83.9611
+  },
+  {
+   "code": "BRGA",
+   "name": "Bargarh Road",
+   "city": "Bargarh",
+   "lat": 21.3331,
+   "lng": 83.6435
+  },
+  {
+   "code": "KRPU",
+   "name": "Koraput Junction",
+   "city": "Koraput",
+   "lat": 18.7921,
+   "lng": 82.7191
+  },
+  {
+   "code": "ANGL",
+   "name": "Angul",
+   "city": "Angul",
+   "lat": 20.8333,
+   "lng": 85.1
+  },
+  {
+   "code": "BHC",
+   "name": "Bhadrak",
+   "city": "Bhadrak",
+   "lat": 21.06,
+   "lng": 86.5
+  },
+  {
+   "code": "BPO",
+   "name": "Baripada",
+   "city": "Baripada",
+   "lat": 21.9234,
+   "lng": 86.7375
+  },
+  {
+   "code": "MNDP",
+   "name": "Mendipathar",
+   "city": "Mendipathar (North Garo Hills)",
+   "lat": 25.8943,
+   "lng": 90.5998
+  },
+  {
+   "code": "MZS",
+   "name": "Murkongselek",
+   "city": "Jonai (for Pasighat)",
+   "lat": 27.8291,
+   "lng": 95.2192
+  },
+  {
+   "code": "BPRD",
+   "name": "Barpeta Road",
+   "city": "Barpeta Road",
+   "lat": 26.502,
+   "lng": 90.9647
+  },
+  {
+   "code": "SLGR",
+   "name": "Simaluguri Junction",
+   "city": "Simaluguri (for Sivasagar)",
+   "lat": 26.9169,
+   "lng": 94.7519
+  },
+  {
+   "code": "JTTN",
+   "name": "Jorhat Town",
+   "city": "Jorhat",
+   "lat": 26.7505,
+   "lng": 94.2171
+  },
+  {
+   "code": "KUGT",
+   "name": "Kumarghat",
+   "city": "Kumarghat",
+   "lat": 24.1513,
+   "lng": 92.0353
+  },
+  {
+   "code": "UDPU",
+   "name": "Udaipur Tripura",
+   "city": "Udaipur (Tripura)",
+   "lat": 23.5098,
+   "lng": 91.4795
+  },
+  {
+   "code": "LAR",
+   "name": "Lalitpur Junction",
+   "city": "Lalitpur",
+   "lat": 24.6882,
+   "lng": 78.3959
+  },
+  {
+   "code": "PPI",
+   "name": "Pipariya",
+   "city": "Pipariya (for Pachmarhi)",
+   "lat": 22.754,
+   "lng": 78.3553
+  },
+  {
+   "code": "SEY",
+   "name": "Seoni",
+   "city": "Seoni",
+   "lat": 22.0869,
+   "lng": 79.5435
+  },
+  {
+   "code": "NIR",
+   "name": "Nainpur Junction",
+   "city": "Nainpur",
+   "lat": 22.4257,
+   "lng": 80.1094
+  },
+  {
+   "code": "RTM",
+   "name": "Ratlam Junction",
+   "city": "Ratlam",
+   "lat": 23.3408,
+   "lng": 75.051
+  },
+  {
+   "code": "JJN",
+   "name": "Jhunjhunu",
+   "city": "Jhunjhunu",
+   "lat": 28.1069,
+   "lng": 75.39
+  },
+  {
+   "code": "KTW",
+   "name": "Kotdwar",
+   "city": "Kotdwar",
+   "lat": 29.75,
+   "lng": 78.53
+  },
+  {
+   "code": "TPU",
+   "name": "Tanakpur",
+   "city": "Tanakpur",
+   "lat": 29.0673,
+   "lng": 80.1097
+  },
+  {
+   "code": "MB",
+   "name": "Moradabad Junction",
+   "city": "Moradabad",
+   "lat": 28.831,
+   "lng": 78.766
+  },
+  {
+   "code": "ETW",
+   "name": "Etawah Junction",
+   "city": "Etawah",
+   "lat": 26.7865,
+   "lng": 79.0223
+  },
+  {
+   "code": "BRK",
+   "name": "Bahraich",
+   "city": "Bahraich",
+   "lat": 27.5816,
+   "lng": 81.6054
+  },
+  {
+   "code": "LMP",
+   "name": "Lakhimpur",
+   "city": "Lakhimpur Kheri",
+   "lat": 27.9473,
+   "lng": 80.7775
+  },
+  {
+   "code": "HSR",
+   "name": "Hisar Junction",
+   "city": "Hisar",
+   "lat": 29.1519,
+   "lng": 75.7244
+  },
+  {
+   "code": "KKDE",
+   "name": "Kurukshetra Junction",
+   "city": "Kurukshetra",
+   "lat": 29.9695,
+   "lng": 76.8519
+  },
+  {
+   "code": "ROK",
+   "name": "Rohtak Junction",
+   "city": "Rohtak",
+   "lat": 28.8907,
+   "lng": 76.5801
+  },
+  {
+   "code": "BTI",
+   "name": "Bathinda Junction",
+   "city": "Bathinda",
+   "lat": 30.2102,
+   "lng": 74.9329
+  },
+  {
+   "code": "ANSB",
+   "name": "Anandpur Sahib",
+   "city": "Anandpur Sahib",
+   "lat": 31.2299,
+   "lng": 76.5005
+  },
+  {
+   "code": "ANT",
+   "name": "Anantnag",
+   "city": "Anantnag",
+   "lat": 33.7386,
+   "lng": 75.1074
+  },
+  {
+   "code": "NGO",
+   "name": "Nagaur",
+   "city": "Nagaur",
+   "lat": 27.2001,
+   "lng": 73.7235
+  },
+  {
+   "code": "NWH",
+   "name": "Nawalgarh",
+   "city": "Nawalgarh",
+   "lat": 27.8437,
+   "lng": 75.2461
+  },
+  {
+   "code": "BKI",
+   "name": "Bandikui Junction",
+   "city": "Bandikui",
+   "lat": 27.0394,
+   "lng": 76.5664
+  },
+  {
+   "code": "AWR",
+   "name": "Alwar Junction",
+   "city": "Alwar",
+   "lat": 27.5605,
+   "lng": 76.6214
+  },
+  {
+   "code": "FA",
+   "name": "Falna",
+   "city": "Falna (for Ranakpur)",
+   "lat": 25.2359,
+   "lng": 73.2351
+  },
+  {
+   "code": "PTN",
+   "name": "Patan Junction",
+   "city": "Patan",
+   "lat": 23.8531,
+   "lng": 72.1315
+  },
+  {
+   "code": "MSH",
+   "name": "Mahesana Junction",
+   "city": "Mehsana",
+   "lat": 23.6033,
+   "lng": 72.3884
+  },
+  {
+   "code": "DHG",
+   "name": "Dhrangadhra Junction",
+   "city": "Dhrangadhra",
+   "lat": 22.987,
+   "lng": 71.4792
+  },
+  {
+   "code": "JAM",
+   "name": "Jamnagar",
+   "city": "Jamnagar",
+   "lat": 22.493,
+   "lng": 70.0535
+  },
+  {
+   "code": "VAPI",
+   "name": "Vapi",
+   "city": "Vapi (for Daman & Silvassa)",
+   "lat": 20.3734,
+   "lng": 72.9087
+  },
+  {
+   "code": "DRD",
+   "name": "Dahanu Road",
+   "city": "Dahanu",
+   "lat": 19.9915,
+   "lng": 72.7436
+  },
+  {
+   "code": "IGP",
+   "name": "Igatpuri",
+   "city": "Igatpuri",
+   "lat": 19.6946,
+   "lng": 73.5622
+  },
+  {
+   "code": "PVR",
+   "name": "Pandharpur",
+   "city": "Pandharpur",
+   "lat": 17.6692,
+   "lng": 75.3196
+  },
+  {
+   "code": "CD",
+   "name": "Chandrapur",
+   "city": "Chandrapur",
+   "lat": 19.96,
+   "lng": 79.3
+  },
+  {
+   "code": "J",
+   "name": "Jalna",
+   "city": "Jalna",
+   "lat": 19.8306,
+   "lng": 75.8931
+  },
+  {
+   "code": "WHM",
+   "name": "Washim",
+   "city": "Washim",
+   "lat": 20.103,
+   "lng": 77.148
+  },
+  {
+   "code": "MAE",
+   "name": "Matheran",
+   "city": "Matheran",
+   "lat": 18.9889,
+   "lng": 73.2711
+  }
+ ],
+ "heritage": [
+  {
+   "id": "dhr",
+   "name": "Darjeeling Himalayan Railway",
+   "short": "Darjeeling toy train",
+   "from": "New Jalpaiguri (NJP)",
+   "to": "Darjeeling (DJ)",
+   "pts": [
+    [
+     26.6831,
+     88.443
+    ],
+    [
+     27.0416,
+     88.2663
+    ]
+   ],
+   "km": 88,
+   "gauge": "2 ft narrow gauge",
+   "opened": 1881,
+   "unesco": "UNESCO World Heritage (1999)",
+   "wiki": "Darjeeling_Himalayan_Railway"
+  },
+  {
+   "id": "ksr",
+   "name": "Kalka–Shimla Railway",
+   "short": "Kalka–Shimla toy train",
+   "from": "Kalka (KLK)",
+   "to": "Shimla (SML)",
+   "pts": [
+    [
+     30.841,
+     76.9367
+    ],
+    [
+     31.1036,
+     77.1627
+    ]
+   ],
+   "km": 96,
+   "gauge": "2 ft 6 in narrow gauge",
+   "opened": 1903,
+   "unesco": "UNESCO World Heritage (2008)",
+   "wiki": "Kalka–Shimla_Railway"
+  },
+  {
+   "id": "nmr",
+   "name": "Nilgiri Mountain Railway",
+   "short": "Ooty toy train",
+   "from": "Mettupalayam (MTP)",
+   "to": "Ooty (UAM)",
+   "pts": [
+    [
+     11.2983,
+     76.942
+    ],
+    [
+     11.4045,
+     76.6974
+    ]
+   ],
+   "km": 46,
+   "gauge": "Metre gauge, rack section",
+   "opened": 1908,
+   "unesco": "UNESCO World Heritage (2005)",
+   "wiki": "Nilgiri_Mountain_Railway"
+  },
+  {
+   "id": "mhr",
+   "name": "Matheran Hill Railway",
+   "short": "Matheran toy train",
+   "from": "Neral (NRL)",
+   "to": "Matheran (MAE)",
+   "pts": [
+    [
+     19.0267,
+     73.3184
+    ],
+    [
+     18.9889,
+     73.2711
+    ]
+   ],
+   "km": 20,
+   "gauge": "2 ft narrow gauge",
+   "opened": 1907,
+   "unesco": "On UNESCO's tentative list",
+   "wiki": "Matheran_Hill_Railway",
+   "status": "Neral–Matheran trains pause in the monsoon; the short Aman Lodge–Matheran shuttle usually runs — check before you go."
+  },
+  {
+   "id": "kvr",
+   "name": "Kangra Valley Railway",
+   "short": "Kangra Valley toy train",
+   "from": "Pathankot",
+   "to": "Joginder Nagar",
+   "pts": [
+    [
+     32.2716,
+     75.6438
+    ],
+    [
+     32.0851,
+     76.2625
+    ],
+    [
+     32.0814,
+     76.5158
+    ],
+    [
+     31.9889,
+     76.7895
+    ]
+   ],
+   "km": 164,
+   "gauge": "2 ft 6 in narrow gauge",
+   "opened": 1929,
+   "unesco": "On UNESCO's tentative list",
+   "wiki": "Kangra_Valley_Railway",
+   "status": "Service was suspended in 2022 and only partly restored in 2026 (to Baijnath) — check current status."
   }
  ]
 }

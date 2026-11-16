@@ -934,6 +934,42 @@
      "season": "Nov\u2013Feb"
     }
    ]
+  },
+  {
+   "id": "toytrains",
+   "title": "Heritage toy trains",
+   "kicker": "Mountain railways \u00b7 three are UNESCO sites",
+   "slides": [
+    {
+     "key": "WB|Darjeeling",
+     "rail": "dhr",
+     "wiki": "Darjeeling_Himalayan_Railway",
+     "title": "Darjeeling Himalayan Railway",
+     "line": "The 1881 two-foot 'toy train' zig-zags and loops up from the plains to Darjeeling \u2014 UNESCO World Heritage since 1999."
+    },
+    {
+     "key": "HP|Shimla",
+     "rail": "ksr",
+     "wiki": "Kalka\u2013Shimla_Railway",
+     "title": "Kalka\u2013Shimla Railway",
+     "line": "96 km of narrow gauge, opened in 1903, climbing through more than 100 tunnels to the old summer capital."
+    },
+    {
+     "key": "TN|Ooty",
+     "rail": "nmr",
+     "wiki": "Nilgiri_Mountain_Railway",
+     "title": "Nilgiri Mountain Railway",
+     "line": "India's only rack railway \u2014 a steam-hauled climb from Mettupalayam through the Nilgiri forests to Ooty."
+    },
+    {
+     "key": "MH|Matheran",
+     "rail": "mhr",
+     "wiki": "Matheran_Hill_Railway",
+     "title": "Matheran Hill Railway",
+     "line": "A two-foot line from Neral up to car-free Matheran, running since 1907; it pauses in the monsoon, so check before you go.",
+     "season": "Oct\u2013May"
+    }
+   ]
   }
  ],
  "flyover": [

@@ -1,5 +1,5 @@
 {
- "note": "Straight-line 'nearest' lookups only. Codes, names and coordinates checked against each English Wikipedia article (Nov 2026). No routes, schedules or fares are implied.",
+ "note": "Straight-line 'nearest' lookups only. Codes, names and coordinates checked against each English Wikipedia article (Nov 2026). No routes, schedules or fares are implied. 'intl' marks airports designated international (Wikipedia, List of airports in India, Nov 2026).",
  "airports": [
   {
    "iata": "DEL",
@@ -7,7 +7,8 @@
    "city": "New Delhi",
    "lat": 28.5665,
    "lng": 77.1031,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "HDO",
@@ -22,7 +23,8 @@
    "city": "Jaipur",
    "lat": 26.8242,
    "lng": 75.8122,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "UDR",
@@ -74,7 +76,8 @@
    "city": "Amritsar",
    "lat": 31.7096,
    "lng": 74.7973,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "IXL",
@@ -90,7 +93,8 @@
    "city": "Srinagar",
    "lat": 33.9871,
    "lng": 74.7742,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "IXJ",
@@ -141,7 +145,8 @@
    "city": "Lucknow",
    "lat": 26.7606,
    "lng": 80.8893,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "VNS",
@@ -149,7 +154,8 @@
    "city": "Varanasi",
    "lat": 25.4524,
    "lng": 82.8593,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "AGR",
@@ -184,7 +190,8 @@
    "name": "Maharishi Valmiki International Airport",
    "city": "Ayodhya",
    "lat": 26.7514,
-   "lng": 82.1497
+   "lng": 82.1497,
+   "intl": true
   },
   {
    "iata": "BEK",
@@ -199,7 +206,8 @@
    "city": "Mumbai",
    "lat": 19.0896,
    "lng": 72.8656,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "PNQ",
@@ -215,7 +223,8 @@
    "city": "Nagpur",
    "lat": 21.0922,
    "lng": 79.0472,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "IXU",
@@ -251,7 +260,8 @@
    "city": "Goa",
    "lat": 15.3808,
    "lng": 73.8314,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "GOX",
@@ -259,7 +269,8 @@
    "city": "Mopa, Goa",
    "lat": 15.7322,
    "lng": 73.868,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "AMD",
@@ -267,7 +278,8 @@
    "city": "Ahmedabad",
    "lat": 23.0772,
    "lng": 72.6347,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "BDQ",
@@ -281,14 +293,16 @@
    "name": "Surat International Airport",
    "city": "Surat",
    "lat": 21.1141,
-   "lng": 72.7418
+   "lng": 72.7418,
+   "intl": true
   },
   {
    "iata": "HSR",
    "name": "Rajkot International Airport",
    "city": "Hirasar, Rajkot",
    "lat": 22.3881,
-   "lng": 71.0283
+   "lng": 71.0283,
+   "intl": true
   },
   {
    "iata": "BHU",
@@ -395,7 +409,8 @@
    "city": "Kolkata",
    "lat": 22.6547,
    "lng": 88.4467,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "IXB",
@@ -454,7 +469,8 @@
    "city": "Bhubaneswar",
    "lat": 20.2444,
    "lng": 85.8178,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "JRG",
@@ -469,7 +485,8 @@
    "city": "Guwahati",
    "lat": 26.1061,
    "lng": 91.5859,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "IXA",
@@ -484,7 +501,8 @@
    "city": "Imphal",
    "lat": 24.76,
    "lng": 93.8967,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "IXS",
@@ -562,7 +580,8 @@
    "city": "Port Blair",
    "lat": 11.6412,
    "lng": 92.7297,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "AGX",
@@ -578,14 +597,16 @@
    "city": "Chennai",
    "lat": 12.9822,
    "lng": 80.1636,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "TRZ",
    "name": "Tiruchirappalli International Airport",
    "city": "Tiruchirappalli",
    "lat": 10.7654,
-   "lng": 78.7097
+   "lng": 78.7097,
+   "intl": true
   },
   {
    "iata": "IXM",
@@ -593,7 +614,8 @@
    "city": "Madurai",
    "lat": 9.8345,
    "lng": 78.0934,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "CJB",
@@ -601,7 +623,8 @@
    "city": "Coimbatore",
    "lat": 11.03,
    "lng": 77.0434,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "TCR",
@@ -630,7 +653,8 @@
    "city": "Bengaluru",
    "lat": 13.1986,
    "lng": 77.7066,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "IXE",
@@ -638,7 +662,8 @@
    "city": "Mangaluru",
    "lat": 12.9613,
    "lng": 74.8901,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "MYQ",
@@ -674,7 +699,8 @@
    "city": "Kochi",
    "lat": 10.1533,
    "lng": 76.3882,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "TRV",
@@ -682,21 +708,24 @@
    "city": "Thiruvananthapuram",
    "lat": 8.4821,
    "lng": 76.92,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "CCJ",
    "name": "Calicut International Airport",
    "city": "Kozhikode",
    "lat": 11.1368,
-   "lng": 75.9553
+   "lng": 75.9553,
+   "intl": true
   },
   {
    "iata": "CNN",
    "name": "Kannur International Airport",
    "city": "Kannur",
    "lat": 11.9186,
-   "lng": 75.5472
+   "lng": 75.5472,
+   "intl": true
   },
   {
    "iata": "HYD",
@@ -704,7 +733,8 @@
    "city": "Hyderabad",
    "lat": 17.2403,
    "lng": 78.4294,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "VTZ",
@@ -712,21 +742,24 @@
    "city": "Visakhapatnam (Bhogapuram)",
    "lat": 17.9761,
    "lng": 83.5039,
-   "major": true
+   "major": true,
+   "intl": true
   },
   {
    "iata": "VGA",
    "name": "Vijayawada Airport",
    "city": "Vijayawada",
    "lat": 16.5304,
-   "lng": 80.7968
+   "lng": 80.7968,
+   "intl": true
   },
   {
    "iata": "TIR",
    "name": "Tirupati Airport",
    "city": "Tirupati",
    "lat": 13.6325,
-   "lng": 79.5433
+   "lng": 79.5433,
+   "intl": true
   },
   {
    "iata": "RJA",
@@ -741,6 +774,22 @@
    "city": "Kadapa",
    "lat": 14.51,
    "lng": 78.7728
+  },
+  {
+   "iata": "NMI",
+   "name": "Navi Mumbai International Airport",
+   "city": "Navi Mumbai",
+   "lat": 18.9919,
+   "lng": 73.0617,
+   "intl": true
+  },
+  {
+   "iata": "DXN",
+   "name": "Noida International Airport",
+   "city": "Jewar (Noida)",
+   "lat": 28.17,
+   "lng": 77.61,
+   "intl": true
   }
  ]
 }
