@@ -1,5 +1,5 @@
 {
- "note": "Straight-line 'nearest' lookups only. Codes, names and coordinates checked against each English Wikipedia article (Nov 2026). No routes, schedules or fares are implied. 'intl' marks airports designated international (Wikipedia, List of airports in India, Nov 2026).",
+ "note": "Straight-line 'nearest' lookups only. Codes, names and coordinates checked against each English Wikipedia article (Nov 2026). No routes, schedules or fares are implied. 'intl' marks airports designated international (Wikipedia, List of airports in India, Nov 2026). Regional (UDAN-era) airports are listed only where Wikipedia shows current scheduled flights (Nov 2026); regional routes start and stop often.",
  "airports": [
   {
    "iata": "DEL",
@@ -790,6 +790,132 @@
    "lat": 28.17,
    "lng": 77.61,
    "intl": true
+  },
+  {
+   "iata": "GBI",
+   "name": "Kalaburagi Airport",
+   "city": "Kalaburagi",
+   "lat": 17.3078,
+   "lng": 76.9581
+  },
+  {
+   "iata": "JLG",
+   "name": "Jalgaon Airport",
+   "city": "Jalgaon",
+   "lat": 20.9619,
+   "lng": 75.6267
+  },
+  {
+   "iata": "RQY",
+   "name": "Rashtrakavi Kuvempu Airport",
+   "city": "Shivamogga",
+   "lat": 13.8547,
+   "lng": 75.6106
+  },
+  {
+   "iata": "NNS",
+   "name": "Naini Saini Airport",
+   "city": "Pithoragarh",
+   "lat": 29.5914,
+   "lng": 80.2401
+  },
+  {
+   "iata": "PYB",
+   "name": "Jeypore Airport",
+   "city": "Jeypore",
+   "lat": 18.8802,
+   "lng": 82.5523
+  },
+  {
+   "iata": "RRK",
+   "name": "Rourkela Airport",
+   "city": "Rourkela",
+   "lat": 22.2564,
+   "lng": 84.8144
+  },
+  {
+   "iata": "UKE",
+   "name": "Utkela Airport",
+   "city": "Bhawanipatna",
+   "lat": 20.0978,
+   "lng": 83.1833
+  },
+  {
+   "iata": "IXT",
+   "name": "Pasighat Airport",
+   "city": "Pasighat",
+   "lat": 28.0685,
+   "lng": 95.3345
+  },
+  {
+   "iata": "ZER",
+   "name": "Ziro Airport",
+   "city": "Ziro",
+   "lat": 27.5883,
+   "lng": 93.8281
+  },
+  {
+   "iata": "RUP",
+   "name": "Rupsi Airport",
+   "city": "Dhubri",
+   "lat": 26.1411,
+   "lng": 89.9067
+  },
+  {
+   "iata": "SSE",
+   "name": "Solapur Airport",
+   "city": "Solapur",
+   "lat": 17.625,
+   "lng": 75.9361
+  },
+  {
+   "iata": "AVR",
+   "name": "Amravati Airport",
+   "city": "Amravati",
+   "lat": 20.8133,
+   "lng": 77.7178
+  },
+  {
+   "iata": "BUP",
+   "name": "Bathinda Airport",
+   "city": "Bathinda",
+   "lat": 30.27,
+   "lng": 74.7556
+  },
+  {
+   "iata": "HWR",
+   "name": "Halwara Airport",
+   "city": "Ludhiana",
+   "lat": 30.7478,
+   "lng": 75.6308
+  },
+  {
+   "iata": "IXP",
+   "name": "Pathankot Airport",
+   "city": "Pathankot",
+   "lat": 32.2336,
+   "lng": 75.6344
+  },
+  {
+   "iata": "REW",
+   "name": "Rewa Airport",
+   "city": "Rewa",
+   "lat": 24.5033,
+   "lng": 81.2203
+  },
+  {
+   "iata": "KJB",
+   "name": "Uyyalawada Narasimha Reddy Airport",
+   "city": "Kurnool",
+   "lat": 15.7061,
+   "lng": 78.1608
+  },
+  {
+   "iata": "IXK",
+   "name": "Keshod Airport",
+   "city": "Keshod (Junagadh)",
+   "lat": 21.3169,
+   "lng": 70.2703
   }
  ]
 }

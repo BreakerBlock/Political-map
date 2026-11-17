@@ -1,5 +1,25 @@
 {
- "note": "Straight-line 'nearest' lookups only. Codes, names and coordinates checked against each English Wikipedia article (Nov 2026). No routes, schedules or fares are implied. 'heritage' lists India's mountain railways ('pts' = verified station coordinates along each line: both ends, plus Kangra and Palampur on the Kangra line) — check current service before travelling.",
+ "note": "Straight-line 'nearest' lookups only. Codes, names and coordinates checked against each English Wikipedia article (Nov 2026). No routes, schedules or fares are implied. 'heritage' lists India's mountain railways ('pts' = verified station coordinates along each line: both ends, plus Kangra and Palampur on the Kangra line) — check current service before travelling. 'zone' is the Indian Railways zone (Konkan Railway, 'KR', is a separate corporation); South Coast Railway (SCoR) has run since 1 June 2026. A station is a junction when its official name says so.",
+ "zones": {
+  "NR": "Northern Railway",
+  "NCR": "North Central Railway",
+  "NER": "North Eastern Railway",
+  "NWR": "North Western Railway",
+  "NFR": "Northeast Frontier Railway",
+  "ER": "Eastern Railway",
+  "ECR": "East Central Railway",
+  "ECoR": "East Coast Railway",
+  "SER": "South Eastern Railway",
+  "SECR": "South East Central Railway",
+  "SR": "Southern Railway",
+  "SCR": "South Central Railway",
+  "SCoR": "South Coast Railway",
+  "SWR": "South Western Railway",
+  "CR": "Central Railway",
+  "WR": "Western Railway",
+  "WCR": "West Central Railway",
+  "KR": "Konkan Railway"
+ },
  "stations": [
   {
    "code": "NDLS",
@@ -7,21 +27,24 @@
    "city": "New Delhi",
    "lat": 28.6431,
    "lng": 77.2197,
-   "major": true
+   "major": true,
+   "zone": "NR"
   },
   {
    "code": "DLI",
    "name": "Delhi Junction (Old Delhi)",
    "city": "Delhi",
    "lat": 28.661,
-   "lng": 77.2273
+   "lng": 77.2273,
+   "zone": "NR"
   },
   {
    "code": "NZM",
    "name": "Hazrat Nizamuddin",
    "city": "Delhi",
    "lat": 28.5888,
-   "lng": 77.2533
+   "lng": 77.2533,
+   "zone": "NR"
   },
   {
    "code": "AGC",
@@ -29,14 +52,16 @@
    "city": "Agra",
    "lat": 27.1586,
    "lng": 77.9913,
-   "major": true
+   "major": true,
+   "zone": "NCR"
   },
   {
    "code": "MTJ",
    "name": "Mathura Junction",
    "city": "Mathura",
    "lat": 27.4801,
-   "lng": 77.6731
+   "lng": 77.6731,
+   "zone": "NCR"
   },
   {
    "code": "LKO",
@@ -44,14 +69,16 @@
    "city": "Lucknow",
    "lat": 26.8318,
    "lng": 80.9196,
-   "major": true
+   "major": true,
+   "zone": "NR"
   },
   {
    "code": "CNB",
    "name": "Kanpur Central",
    "city": "Kanpur",
    "lat": 26.4537,
-   "lng": 80.3511
+   "lng": 80.3511,
+   "zone": "NCR"
   },
   {
    "code": "BSB",
@@ -59,98 +86,112 @@
    "city": "Varanasi",
    "lat": 25.327,
    "lng": 82.9871,
-   "major": true
+   "major": true,
+   "zone": "NR"
   },
   {
    "code": "DDU",
    "name": "Pt. Deen Dayal Upadhyaya Junction",
    "city": "Chandauli",
    "lat": 25.2766,
-   "lng": 83.1166
+   "lng": 83.1166,
+   "zone": "ECR"
   },
   {
    "code": "PRYJ",
    "name": "Prayagraj Junction",
    "city": "Prayagraj",
    "lat": 25.4475,
-   "lng": 81.829
+   "lng": 81.829,
+   "zone": "NCR"
   },
   {
    "code": "GKP",
    "name": "Gorakhpur Junction",
    "city": "Gorakhpur",
    "lat": 26.759,
-   "lng": 83.3812
+   "lng": 83.3812,
+   "zone": "NER"
   },
   {
    "code": "AYC",
    "name": "Ayodhya Cantt",
    "city": "Ayodhya",
    "lat": 26.7686,
-   "lng": 82.135
+   "lng": 82.135,
+   "zone": "NR"
   },
   {
    "code": "VGLJ",
    "name": "Virangana Lakshmibai Jhansi Junction",
    "city": "Jhansi",
    "lat": 25.4439,
-   "lng": 78.5534
+   "lng": 78.5534,
+   "zone": "NCR"
   },
   {
    "code": "GWL",
    "name": "Gwalior Junction",
    "city": "Gwalior",
    "lat": 26.2155,
-   "lng": 78.1831
+   "lng": 78.1831,
+   "zone": "NCR"
   },
   {
    "code": "HW",
    "name": "Haridwar Junction",
    "city": "Haridwar",
    "lat": 29.948,
-   "lng": 78.1597
+   "lng": 78.1597,
+   "zone": "NR"
   },
   {
    "code": "DDN",
    "name": "Dehradun",
    "city": "Dehradun",
    "lat": 30.3149,
-   "lng": 78.0326
+   "lng": 78.0326,
+   "zone": "NR"
   },
   {
    "code": "YNRK",
    "name": "Yog Nagari Rishikesh",
    "city": "Rishikesh",
    "lat": 30.11,
-   "lng": 78.2781
+   "lng": 78.2781,
+   "zone": "NR"
   },
   {
    "code": "KGM",
    "name": "Kathgodam",
    "city": "Haldwani",
    "lat": 29.2667,
-   "lng": 79.54
+   "lng": 79.54,
+   "zone": "NER"
   },
   {
    "code": "CDG",
    "name": "Chandigarh",
    "city": "Chandigarh",
    "lat": 30.7011,
-   "lng": 76.8216
+   "lng": 76.8216,
+   "zone": "NR"
   },
   {
    "code": "KLK",
    "name": "Kalka",
    "city": "Kalka",
    "lat": 30.841,
-   "lng": 76.9367
+   "lng": 76.9367,
+   "zone": "NR"
   },
   {
    "code": "SML",
    "name": "Shimla",
    "city": "Shimla",
    "lat": 31.1036,
-   "lng": 77.1627
+   "lng": 77.1627,
+   "zone": "NR"
   },
   {
    "code": "ASR",
@@ -158,28 +199,32 @@
    "city": "Amritsar",
    "lat": 31.6324,
    "lng": 74.8682,
-   "major": true
+   "major": true,
+   "zone": "NR"
   },
   {
    "code": "JUC",
    "name": "Jalandhar City",
    "city": "Jalandhar",
    "lat": 31.3354,
-   "lng": 75.5821
+   "lng": 75.5821,
+   "zone": "NR"
   },
   {
    "code": "LDH",
    "name": "Ludhiana Junction",
    "city": "Ludhiana",
    "lat": 30.9124,
-   "lng": 75.8489
+   "lng": 75.8489,
+   "zone": "NR"
   },
   {
    "code": "PTKC",
    "name": "Pathankot Cantt",
    "city": "Pathankot",
    "lat": 32.2592,
-   "lng": 75.6362
+   "lng": 75.6362,
+   "zone": "NR"
   },
   {
    "code": "JAT",
@@ -187,21 +232,24 @@
    "city": "Jammu",
    "lat": 32.7058,
    "lng": 74.8836,
-   "major": true
+   "major": true,
+   "zone": "NR"
   },
   {
    "code": "SVDK",
    "name": "Shri Mata Vaishno Devi Katra",
    "city": "Katra",
    "lat": 32.9822,
-   "lng": 74.9353
+   "lng": 74.9353,
+   "zone": "NR"
   },
   {
    "code": "SINA",
    "name": "Srinagar",
    "city": "Srinagar",
    "lat": 34.0236,
-   "lng": 74.8471
+   "lng": 74.8471,
+   "zone": "NR"
   },
   {
    "code": "JP",
@@ -209,14 +257,16 @@
    "city": "Jaipur",
    "lat": 26.9197,
    "lng": 75.7878,
-   "major": true
+   "major": true,
+   "zone": "NWR"
   },
   {
    "code": "AII",
    "name": "Ajmer Junction",
    "city": "Ajmer",
    "lat": 26.4567,
-   "lng": 74.6344
+   "lng": 74.6344,
+   "zone": "NWR"
   },
   {
    "code": "UDZ",
@@ -224,7 +274,8 @@
    "city": "Udaipur",
    "lat": 24.5687,
    "lng": 73.7006,
-   "major": true
+   "major": true,
+   "zone": "NWR"
   },
   {
    "code": "JU",
@@ -232,49 +283,56 @@
    "city": "Jodhpur",
    "lat": 26.2847,
    "lng": 73.0234,
-   "major": true
+   "major": true,
+   "zone": "NWR"
   },
   {
    "code": "JSM",
    "name": "Jaisalmer",
    "city": "Jaisalmer",
    "lat": 26.9152,
-   "lng": 70.9269
+   "lng": 70.9269,
+   "zone": "NWR"
   },
   {
    "code": "BKN",
    "name": "Bikaner Junction",
    "city": "Bikaner",
    "lat": 28.017,
-   "lng": 73.3204
+   "lng": 73.3204,
+   "zone": "NWR"
   },
   {
    "code": "SWM",
    "name": "Sawai Madhopur Junction",
    "city": "Sawai Madhopur",
    "lat": 26.0189,
-   "lng": 76.3572
+   "lng": 76.3572,
+   "zone": "WCR"
   },
   {
    "code": "KOTA",
    "name": "Kota Junction",
    "city": "Kota",
    "lat": 25.2223,
-   "lng": 75.8818
+   "lng": 75.8818,
+   "zone": "WCR"
   },
   {
    "code": "ABR",
    "name": "Abu Road",
    "city": "Abu Road (for Mount Abu)",
    "lat": 24.4799,
-   "lng": 72.7849
+   "lng": 72.7849,
+   "zone": "NWR"
   },
   {
    "code": "COR",
    "name": "Chittaurgarh Junction",
    "city": "Chittorgarh",
    "lat": 24.8754,
-   "lng": 74.6178
+   "lng": 74.6178,
+   "zone": "NWR"
   },
   {
    "code": "CSMT",
@@ -282,21 +340,24 @@
    "city": "Mumbai",
    "lat": 18.9398,
    "lng": 72.8355,
-   "major": true
+   "major": true,
+   "zone": "CR"
   },
   {
    "code": "MMCT",
    "name": "Mumbai Central",
    "city": "Mumbai",
    "lat": 18.9696,
-   "lng": 72.8195
+   "lng": 72.8195,
+   "zone": "WR"
   },
   {
    "code": "LTT",
    "name": "Lokmanya Tilak Terminus",
    "city": "Mumbai",
    "lat": 19.0697,
-   "lng": 72.8907
+   "lng": 72.8907,
+   "zone": "CR"
   },
   {
    "code": "PUNE",
@@ -304,7 +365,8 @@
    "city": "Pune",
    "lat": 18.5286,
    "lng": 73.8743,
-   "major": true
+   "major": true,
+   "zone": "CR"
   },
   {
    "code": "NGP",
@@ -312,21 +374,24 @@
    "city": "Nagpur",
    "lat": 21.1522,
    "lng": 79.0889,
-   "major": true
+   "major": true,
+   "zone": "CR"
   },
   {
    "code": "CPSN",
    "name": "Chhatrapati Sambhajinagar",
    "city": "Chhatrapati Sambhajinagar",
    "lat": 19.864,
-   "lng": 75.322
+   "lng": 75.322,
+   "zone": "SCR"
   },
   {
    "code": "NK",
    "name": "Nashik Road",
    "city": "Nashik",
    "lat": 19.9478,
-   "lng": 73.8422
+   "lng": 73.8422,
+   "zone": "CR"
   },
   {
    "code": "MAO",
@@ -334,7 +399,8 @@
    "city": "Margao, Goa",
    "lat": 15.2727,
    "lng": 73.9686,
-   "major": true
+   "major": true,
+   "zone": "KR"
   },
   {
    "code": "ADI",
@@ -342,21 +408,24 @@
    "city": "Ahmedabad",
    "lat": 23.0262,
    "lng": 72.6011,
-   "major": true
+   "major": true,
+   "zone": "WR"
   },
   {
    "code": "BRC",
    "name": "Vadodara Junction",
    "city": "Vadodara",
    "lat": 22.3105,
-   "lng": 73.181
+   "lng": 73.181,
+   "zone": "WR"
   },
   {
    "code": "ST",
    "name": "Surat",
    "city": "Surat",
    "lat": 21.205,
-   "lng": 72.8406
+   "lng": 72.8406,
+   "zone": "WR"
   },
   {
    "code": "BPL",
@@ -364,77 +433,88 @@
    "city": "Bhopal",
    "lat": 23.2675,
    "lng": 77.4126,
-   "major": true
+   "major": true,
+   "zone": "WCR"
   },
   {
    "code": "INDB",
    "name": "Indore Junction",
    "city": "Indore",
    "lat": 22.7172,
-   "lng": 75.8679
+   "lng": 75.8679,
+   "zone": "WR"
   },
   {
    "code": "UJN",
    "name": "Ujjain Junction",
    "city": "Ujjain",
    "lat": 23.1797,
-   "lng": 75.7805
+   "lng": 75.7805,
+   "zone": "WR"
   },
   {
    "code": "JBP",
    "name": "Jabalpur Junction",
    "city": "Jabalpur",
    "lat": 23.164,
-   "lng": 79.9505
+   "lng": 79.9505,
+   "zone": "WCR"
   },
   {
    "code": "KURJ",
    "name": "Khajuraho",
    "city": "Khajuraho",
    "lat": 24.7968,
-   "lng": 79.8893
+   "lng": 79.8893,
+   "zone": "NCR"
   },
   {
    "code": "ET",
    "name": "Itarsi Junction",
    "city": "Itarsi",
    "lat": 22.611,
-   "lng": 77.7608
+   "lng": 77.7608,
+   "zone": "WCR"
   },
   {
    "code": "KTE",
    "name": "Katni Junction",
    "city": "Katni",
    "lat": 23.8292,
-   "lng": 80.4002
+   "lng": 80.4002,
+   "zone": "WCR"
   },
   {
    "code": "UMR",
    "name": "Umaria",
    "city": "Umaria (for Bandhavgarh)",
    "lat": 23.5231,
-   "lng": 80.8226
+   "lng": 80.8226,
+   "zone": "SECR"
   },
   {
    "code": "R",
    "name": "Raipur Junction",
    "city": "Raipur",
    "lat": 21.2558,
-   "lng": 81.6305
+   "lng": 81.6305,
+   "zone": "SECR"
   },
   {
    "code": "BSP",
    "name": "Bilaspur Junction",
    "city": "Bilaspur",
    "lat": 22.0572,
-   "lng": 82.1678
+   "lng": 82.1678,
+   "zone": "SECR"
   },
   {
    "code": "JDB",
    "name": "Jagdalpur",
    "city": "Jagdalpur",
    "lat": 19.0661,
-   "lng": 82.0141
+   "lng": 82.0141,
+   "zone": "ECoR"
   },
   {
    "code": "HWH",
@@ -442,14 +522,16 @@
    "city": "Kolkata",
    "lat": 22.5839,
    "lng": 88.3426,
-   "major": true
+   "major": true,
+   "zone": "ER"
   },
   {
    "code": "SDAH",
    "name": "Sealdah",
    "city": "Kolkata",
    "lat": 22.5675,
-   "lng": 88.3708
+   "lng": 88.3708,
+   "zone": "ER"
   },
   {
    "code": "NJP",
@@ -457,14 +539,16 @@
    "city": "Siliguri",
    "lat": 26.6831,
    "lng": 88.443,
-   "major": true
+   "major": true,
+   "zone": "NFR"
   },
   {
    "code": "DJ",
    "name": "Darjeeling",
    "city": "Darjeeling",
    "lat": 27.0416,
-   "lng": 88.2663
+   "lng": 88.2663,
+   "zone": "NFR"
   },
   {
    "code": "PNBE",
@@ -472,35 +556,40 @@
    "city": "Patna",
    "lat": 25.603,
    "lng": 85.1376,
-   "major": true
+   "major": true,
+   "zone": "ECR"
   },
   {
    "code": "GAYA",
    "name": "Gaya Junction",
    "city": "Gaya",
    "lat": 24.8031,
-   "lng": 84.9996
+   "lng": 84.9996,
+   "zone": "ECR"
   },
   {
    "code": "RNC",
    "name": "Ranchi Junction",
    "city": "Ranchi",
    "lat": 23.348,
-   "lng": 85.3384
+   "lng": 85.3384,
+   "zone": "SER"
   },
   {
    "code": "TATA",
    "name": "Tatanagar Junction",
    "city": "Jamshedpur",
    "lat": 22.7695,
-   "lng": 86.2026
+   "lng": 86.2026,
+   "zone": "SER"
   },
   {
    "code": "DHN",
    "name": "Dhanbad Junction",
    "city": "Dhanbad",
    "lat": 23.7914,
-   "lng": 86.4296
+   "lng": 86.4296,
+   "zone": "ECR"
   },
   {
    "code": "BBS",
@@ -508,28 +597,32 @@
    "city": "Bhubaneswar",
    "lat": 20.2667,
    "lng": 85.8434,
-   "major": true
+   "major": true,
+   "zone": "ECoR"
   },
   {
    "code": "PURI",
    "name": "Puri",
    "city": "Puri",
    "lat": 19.8097,
-   "lng": 85.8404
+   "lng": 85.8404,
+   "zone": "ECoR"
   },
   {
    "code": "CTC",
    "name": "Cuttack Junction",
    "city": "Cuttack",
    "lat": 20.4686,
-   "lng": 85.8977
+   "lng": 85.8977,
+   "zone": "ECoR"
   },
   {
    "code": "BAM",
    "name": "Brahmapur",
    "city": "Berhampur",
    "lat": 19.2966,
-   "lng": 84.7968
+   "lng": 84.7968,
+   "zone": "ECoR"
   },
   {
    "code": "GHY",
@@ -537,49 +630,56 @@
    "city": "Guwahati",
    "lat": 26.1817,
    "lng": 91.7508,
-   "major": true
+   "major": true,
+   "zone": "NFR"
   },
   {
    "code": "KYQ",
    "name": "Kamakhya Junction",
    "city": "Guwahati",
    "lat": 26.1571,
-   "lng": 91.6907
+   "lng": 91.6907,
+   "zone": "NFR"
   },
   {
    "code": "DBRG",
    "name": "Dibrugarh",
    "city": "Dibrugarh",
    "lat": 27.4588,
-   "lng": 94.9302
+   "lng": 94.9302,
+   "zone": "NFR"
   },
   {
    "code": "DMV",
    "name": "Dimapur",
    "city": "Dimapur",
    "lat": 25.9064,
-   "lng": 93.7268
+   "lng": 93.7268,
+   "zone": "NFR"
   },
   {
    "code": "SCL",
    "name": "Silchar",
    "city": "Silchar",
    "lat": 24.8264,
-   "lng": 92.7856
+   "lng": 92.7856,
+   "zone": "NFR"
   },
   {
    "code": "AGTL",
    "name": "Agartala",
    "city": "Agartala",
    "lat": 23.796,
-   "lng": 91.2817
+   "lng": 91.2817,
+   "zone": "NFR"
   },
   {
    "code": "NHLN",
    "name": "Naharlagun",
    "city": "Itanagar",
    "lat": 27.1076,
-   "lng": 93.6977
+   "lng": 93.6977,
+   "zone": "NFR"
   },
   {
    "code": "MAS",
@@ -587,14 +687,16 @@
    "city": "Chennai",
    "lat": 13.0827,
    "lng": 80.2752,
-   "major": true
+   "major": true,
+   "zone": "SR"
   },
   {
    "code": "MS",
    "name": "Chennai Egmore",
    "city": "Chennai",
    "lat": 13.0784,
-   "lng": 80.261
+   "lng": 80.261,
+   "zone": "SR"
   },
   {
    "code": "MDU",
@@ -602,70 +704,80 @@
    "city": "Madurai",
    "lat": 9.9195,
    "lng": 78.1105,
-   "major": true
+   "major": true,
+   "zone": "SR"
   },
   {
    "code": "TPJ",
    "name": "Tiruchchirappalli Junction",
    "city": "Tiruchirappalli",
    "lat": 10.7952,
-   "lng": 78.6855
+   "lng": 78.6855,
+   "zone": "SR"
   },
   {
    "code": "CBE",
    "name": "Coimbatore Junction",
    "city": "Coimbatore",
    "lat": 10.9966,
-   "lng": 76.9662
+   "lng": 76.9662,
+   "zone": "SR"
   },
   {
    "code": "TEN",
    "name": "Tirunelveli Junction",
    "city": "Tirunelveli",
    "lat": 8.731,
-   "lng": 77.7066
+   "lng": 77.7066,
+   "zone": "SR"
   },
   {
    "code": "CAPE",
    "name": "Kanniyakumari",
    "city": "Kanyakumari",
    "lat": 8.0864,
-   "lng": 77.5432
+   "lng": 77.5432,
+   "zone": "SR"
   },
   {
    "code": "RMM",
    "name": "Rameswaram",
    "city": "Rameswaram",
    "lat": 9.2883,
-   "lng": 79.3076
+   "lng": 79.3076,
+   "zone": "SR"
   },
   {
    "code": "TJ",
    "name": "Thanjavur Junction",
    "city": "Thanjavur",
    "lat": 10.7836,
-   "lng": 79.1338
+   "lng": 79.1338,
+   "zone": "SR"
   },
   {
    "code": "MTP",
    "name": "Mettupalayam",
    "city": "Mettupalayam",
    "lat": 11.2983,
-   "lng": 76.942
+   "lng": 76.942,
+   "zone": "SR"
   },
   {
    "code": "UAM",
    "name": "Udagamandalam",
    "city": "Ooty",
    "lat": 11.4045,
-   "lng": 76.6974
+   "lng": 76.6974,
+   "zone": "SR"
   },
   {
    "code": "PDY",
    "name": "Puducherry",
    "city": "Puducherry",
    "lat": 11.9278,
-   "lng": 79.827
+   "lng": 79.827,
+   "zone": "SR"
   },
   {
    "code": "SBC",
@@ -673,49 +785,56 @@
    "city": "Bengaluru",
    "lat": 12.9781,
    "lng": 77.5695,
-   "major": true
+   "major": true,
+   "zone": "SWR"
   },
   {
    "code": "YPR",
    "name": "Yesvantpur Junction",
    "city": "Bengaluru",
    "lat": 13.0232,
-   "lng": 77.5502
+   "lng": 77.5502,
+   "zone": "SWR"
   },
   {
    "code": "MYS",
    "name": "Mysuru Junction",
    "city": "Mysuru",
    "lat": 12.3164,
-   "lng": 76.6457
+   "lng": 76.6457,
+   "zone": "SWR"
   },
   {
    "code": "UBL",
    "name": "SSS Hubballi Junction",
    "city": "Hubballi",
    "lat": 15.348,
-   "lng": 75.144
+   "lng": 75.144,
+   "zone": "SWR"
   },
   {
    "code": "HPT",
    "name": "Hosapete Junction",
    "city": "Hosapete (for Hampi)",
    "lat": 15.2865,
-   "lng": 76.3867
+   "lng": 76.3867,
+   "zone": "SWR"
   },
   {
    "code": "MAQ",
    "name": "Mangaluru Central",
    "city": "Mangaluru",
    "lat": 12.864,
-   "lng": 74.842
+   "lng": 74.842,
+   "zone": "SR"
   },
   {
    "code": "UD",
    "name": "Udupi",
    "city": "Udupi",
    "lat": 13.3361,
-   "lng": 74.7708
+   "lng": 74.7708,
+   "zone": "KR"
   },
   {
    "code": "TVC",
@@ -723,7 +842,8 @@
    "city": "Thiruvananthapuram",
    "lat": 8.4874,
    "lng": 76.952,
-   "major": true
+   "major": true,
+   "zone": "SR"
   },
   {
    "code": "ERS",
@@ -731,56 +851,64 @@
    "city": "Kochi",
    "lat": 9.9696,
    "lng": 76.2911,
-   "major": true
+   "major": true,
+   "zone": "SR"
   },
   {
    "code": "ALLP",
    "name": "Alappuzha",
    "city": "Alappuzha",
    "lat": 9.49,
-   "lng": 76.3196
+   "lng": 76.3196,
+   "zone": "SR"
   },
   {
    "code": "KTYM",
    "name": "Kottayam",
    "city": "Kottayam",
    "lat": 9.595,
-   "lng": 76.531
+   "lng": 76.531,
+   "zone": "SR"
   },
   {
    "code": "TCR",
    "name": "Thrissur",
    "city": "Thrissur",
    "lat": 10.5153,
-   "lng": 76.2097
+   "lng": 76.2097,
+   "zone": "SR"
   },
   {
    "code": "CLT",
    "name": "Kozhikode",
    "city": "Kozhikode",
    "lat": 11.247,
-   "lng": 75.7804
+   "lng": 75.7804,
+   "zone": "SR"
   },
   {
    "code": "CAN",
    "name": "Kannur",
    "city": "Kannur",
    "lat": 11.8724,
-   "lng": 75.3697
+   "lng": 75.3697,
+   "zone": "SR"
   },
   {
    "code": "QLN",
    "name": "Kollam Junction",
    "city": "Kollam",
    "lat": 8.886,
-   "lng": 76.596
+   "lng": 76.596,
+   "zone": "SR"
   },
   {
    "code": "VAK",
    "name": "Varkala Sivagiri",
    "city": "Varkala",
    "lat": 8.7381,
-   "lng": 76.7246
+   "lng": 76.7246,
+   "zone": "SR"
   },
   {
    "code": "SC",
@@ -788,252 +916,288 @@
    "city": "Hyderabad",
    "lat": 17.4337,
    "lng": 78.5016,
-   "major": true
+   "major": true,
+   "zone": "SCR"
   },
   {
    "code": "HYB",
    "name": "Hyderabad Deccan (Nampally)",
    "city": "Hyderabad",
    "lat": 17.3923,
-   "lng": 78.4675
+   "lng": 78.4675,
+   "zone": "SCR"
   },
   {
    "code": "WL",
    "name": "Warangal",
    "city": "Warangal",
    "lat": 17.973,
-   "lng": 79.601
+   "lng": 79.601,
+   "zone": "SCR"
   },
   {
    "code": "BZA",
    "name": "Vijayawada Junction",
    "city": "Vijayawada",
    "lat": 16.5179,
-   "lng": 80.6197
+   "lng": 80.6197,
+   "zone": "SCoR"
   },
   {
    "code": "VSKP",
    "name": "Visakhapatnam Junction",
    "city": "Visakhapatnam",
    "lat": 17.7215,
-   "lng": 83.29
+   "lng": 83.29,
+   "zone": "SCoR"
   },
   {
    "code": "RN",
    "name": "Ratnagiri",
    "city": "Ratnagiri",
    "lat": 17.0034,
-   "lng": 73.3582
+   "lng": 73.3582,
+   "zone": "KR"
   },
   {
    "code": "KOP",
    "name": "Chhatrapati Shahu Maharaj Terminus",
    "city": "Kolhapur",
    "lat": 16.7027,
-   "lng": 74.2377
+   "lng": 74.2377,
+   "zone": "CR"
   },
   {
    "code": "KRMI",
    "name": "Karmali",
    "city": "Old Goa",
    "lat": 15.4907,
-   "lng": 73.9245
+   "lng": 73.9245,
+   "zone": "KR"
   },
   {
    "code": "THVM",
    "name": "Thivim",
    "city": "Mapusa",
    "lat": 15.6307,
-   "lng": 73.8769
+   "lng": 73.8769,
+   "zone": "KR"
   },
   {
    "code": "SNSI",
    "name": "Sainagar Shirdi",
    "city": "Shirdi",
    "lat": 19.7808,
-   "lng": 74.4801
+   "lng": 74.4801,
+   "zone": "CR"
   },
   {
    "code": "RJT",
    "name": "Rajkot Junction",
    "city": "Rajkot",
    "lat": 22.3116,
-   "lng": 70.8028
+   "lng": 70.8028,
+   "zone": "WR"
   },
   {
    "code": "BVC",
    "name": "Bhavnagar Terminus",
    "city": "Bhavnagar",
    "lat": 21.7818,
-   "lng": 72.1422
+   "lng": 72.1422,
+   "zone": "WR"
   },
   {
    "code": "DWK",
    "name": "Dwarka",
    "city": "Dwarka",
    "lat": 22.2496,
-   "lng": 68.9812
+   "lng": 68.9812,
+   "zone": "WR"
   },
   {
    "code": "BHUJ",
    "name": "Bhuj",
    "city": "Bhuj",
    "lat": 23.266,
-   "lng": 69.6784
+   "lng": 69.6784,
+   "zone": "WR"
   },
   {
    "code": "RKMP",
    "name": "Rani Kamlapati",
    "city": "Bhopal",
    "lat": 23.2216,
-   "lng": 77.4401
+   "lng": 77.4401,
+   "zone": "WCR"
   },
   {
    "code": "TPTY",
    "name": "Tirupati",
    "city": "Tirupati",
    "lat": 13.6279,
-   "lng": 79.4194
+   "lng": 79.4194,
+   "zone": "SCoR"
   },
   {
    "code": "RJY",
    "name": "Rajahmundry",
    "city": "Rajahmundry",
    "lat": 16.9845,
-   "lng": 81.7843
+   "lng": 81.7843,
+   "zone": "SCoR"
   },
   {
    "code": "SWV",
    "name": "Sawantwadi Road",
    "city": "Sawantwadi",
    "lat": 15.8666,
-   "lng": 73.7852
+   "lng": 73.7852,
+   "zone": "KR"
   },
   {
    "code": "KAWR",
    "name": "Karwar",
    "city": "Karwar",
    "lat": 14.8201,
-   "lng": 74.1826
+   "lng": 74.1826,
+   "zone": "KR"
   },
   {
    "code": "JRBM",
    "name": "Jiribam",
    "city": "Jiribam",
    "lat": 24.794,
-   "lng": 93.0996
+   "lng": 93.0996,
+   "zone": "NFR"
   },
   {
    "code": "SANG",
    "name": "Sairang",
    "city": "Aizawl",
    "lat": 23.7989,
-   "lng": 92.6522
+   "lng": 92.6522,
+   "zone": "NFR"
   },
   {
    "code": "MCTM",
    "name": "Udhampur",
    "city": "Udhampur",
    "lat": 32.9263,
-   "lng": 75.1537
+   "lng": 75.1537,
+   "zone": "NR"
   },
   {
    "code": "RMR",
    "name": "Ramnagar",
    "city": "Ramnagar",
    "lat": 29.3898,
-   "lng": 79.122
+   "lng": 79.122,
+   "zone": "NER"
   },
   {
    "code": "NRL",
    "name": "Neral Junction",
    "city": "Neral (for Matheran)",
    "lat": 19.0267,
-   "lng": 73.3184
+   "lng": 73.3184,
+   "zone": "CR"
   },
   {
    "code": "LNL",
    "name": "Lonavala",
    "city": "Lonavala",
    "lat": 18.7493,
-   "lng": 73.4081
+   "lng": 73.4081,
+   "zone": "CR"
   },
   {
    "code": "STR",
    "name": "Satara",
    "city": "Satara",
    "lat": 17.6884,
-   "lng": 74.0633
+   "lng": 74.0633,
+   "zone": "CR"
   },
   {
    "code": "EKNR",
    "name": "Ekta Nagar",
    "city": "Kevadia",
    "lat": 21.8875,
-   "lng": 73.6888
+   "lng": 73.6888,
+   "zone": "WR"
   },
   {
    "code": "JND",
    "name": "Junagadh Junction",
    "city": "Junagadh",
    "lat": 21.529,
-   "lng": 70.4575
+   "lng": 70.4575,
+   "zone": "WR"
   },
   {
    "code": "VRL",
    "name": "Veraval Junction",
    "city": "Veraval (for Somnath)",
    "lat": 20.9124,
-   "lng": 70.3709
+   "lng": 70.3709,
+   "zone": "WR"
   },
   {
    "code": "GOK",
    "name": "Gokarna Road",
    "city": "Gokarna",
    "lat": 14.5839,
-   "lng": 74.3677
+   "lng": 74.3677,
+   "zone": "KR"
   },
   {
    "code": "MRDW",
    "name": "Murdeshwar",
    "city": "Murudeshwar",
    "lat": 14.1008,
-   "lng": 74.5053
+   "lng": 74.5053,
+   "zone": "KR"
   },
   {
    "code": "KQN",
    "name": "Kodaikanal Road",
    "city": "Kodai Road",
    "lat": 10.1796,
-   "lng": 77.9096
+   "lng": 77.9096,
+   "zone": "SR"
   },
   {
    "code": "KMU",
    "name": "Kumbakonam",
    "city": "Kumbakonam",
    "lat": 10.9544,
-   "lng": 79.3894
+   "lng": 79.3894,
+   "zone": "SR"
   },
   {
    "code": "JL",
    "name": "Jalgaon Junction",
    "city": "Jalgaon",
    "lat": 21.0182,
-   "lng": 75.563
+   "lng": 75.563,
+   "zone": "CR"
   },
   {
    "code": "AWY",
    "name": "Aluva",
    "city": "Aluva",
    "lat": 10.108,
-   "lng": 76.356
+   "lng": 76.356,
+   "zone": "SR"
   },
   {
    "code": "BHNG",
    "name": "Bhalukpong",
    "city": "Bhalukpong",
    "lat": 27.0006,
-   "lng": 92.6447
+   "lng": 92.6447,
+   "zone": "NFR"
   },
   {
    "code": "SA",
@@ -1041,14 +1205,16 @@
    "city": "Salem",
    "lat": 11.6714,
    "lng": 78.1132,
-   "major": true
+   "major": true,
+   "zone": "SR"
   },
   {
    "code": "BJP",
    "name": "Vijayapura (Bijapur)",
    "city": "Vijayapura",
    "lat": 16.8306,
-   "lng": 75.7395
+   "lng": 75.7395,
+   "zone": "SWR"
   },
   {
    "code": "BGP",
@@ -1056,56 +1222,64 @@
    "city": "Bhagalpur",
    "lat": 25.2415,
    "lng": 86.9725,
-   "major": true
+   "major": true,
+   "zone": "ER"
   },
   {
    "code": "KGQ",
    "name": "Kasaragod",
    "city": "Kasaragod",
    "lat": 12.4913,
-   "lng": 74.9877
+   "lng": 74.9877,
+   "zone": "SR"
   },
   {
    "code": "PND",
    "name": "Pendra Road",
    "city": "Pendra",
    "lat": 22.7561,
-   "lng": 81.8991
+   "lng": 81.8991,
+   "zone": "SECR"
   },
   {
    "code": "KIK",
    "name": "Karaikal",
    "city": "Karaikal",
    "lat": 10.9327,
-   "lng": 79.8319
+   "lng": 79.8319,
+   "zone": "SR"
   },
   {
    "code": "KRMR",
    "name": "Karimnagar",
    "city": "Karimnagar",
    "lat": 18.459,
-   "lng": 79.1423
+   "lng": 79.1423,
+   "zone": "SCR"
   },
   {
    "code": "YA",
    "name": "Yerraguntla Junction",
    "city": "Yerraguntla",
    "lat": 14.6394,
-   "lng": 78.5349
+   "lng": 78.5349,
+   "zone": "SCoR"
   },
   {
    "code": "MRK",
    "name": "Markapur Road",
    "city": "Markapur",
    "lat": 15.73,
-   "lng": 79.26
+   "lng": 79.26,
+   "zone": "SCoR"
   },
   {
    "code": "HUP",
    "name": "Hindupur",
    "city": "Hindupur",
    "lat": 13.8187,
-   "lng": 77.5
+   "lng": 77.5,
+   "zone": "SWR"
   },
   {
    "code": "ARK",
@@ -1119,588 +1293,672 @@
    "name": "Anakapalle",
    "city": "Anakapalle",
    "lat": 17.695,
-   "lng": 83.0082
+   "lng": 83.0082,
+   "zone": "SCoR"
   },
   {
    "code": "MTM",
    "name": "Machilipatnam",
    "city": "Machilipatnam",
    "lat": 16.1719,
-   "lng": 81.1384
+   "lng": 81.1384,
+   "zone": "SCoR"
   },
   {
    "code": "HX",
    "name": "Kadapa",
    "city": "Kadapa",
    "lat": 14.4513,
-   "lng": 78.8288
+   "lng": 78.8288,
+   "zone": "SCR"
   },
   {
    "code": "BIDR",
    "name": "Bidar",
    "city": "Bidar",
    "lat": 17.9118,
-   "lng": 77.5153
+   "lng": 77.5153,
+   "zone": "SCR"
   },
   {
    "code": "CMGR",
    "name": "Chikkamagaluru",
    "city": "Chikkamagaluru",
    "lat": 13.3031,
-   "lng": 75.7894
+   "lng": 75.7894,
+   "zone": "SWR"
   },
   {
    "code": "BDM",
    "name": "Badami",
    "city": "Badami",
    "lat": 15.9591,
-   "lng": 75.6747
+   "lng": 75.6747,
+   "zone": "SWR"
   },
   {
    "code": "SBHR",
    "name": "Subrahmanya Road",
    "city": "Kukke Subrahmanya",
    "lat": 12.7315,
-   "lng": 75.5579
+   "lng": 75.5579,
+   "zone": "SWR"
   },
   {
    "code": "BDCR",
    "name": "Bhadrachalam Road",
    "city": "Kothagudem (for Bhadrachalam)",
    "lat": 17.55,
-   "lng": 80.63
+   "lng": 80.63,
+   "zone": "SCR"
   },
   {
    "code": "ADB",
    "name": "Adilabad",
    "city": "Adilabad",
    "lat": 19.6805,
-   "lng": 78.536
+   "lng": 78.536,
+   "zone": "SCR"
   },
   {
    "code": "ZN",
    "name": "Jangaon",
    "city": "Jangaon",
    "lat": 17.72,
-   "lng": 79.18
+   "lng": 79.18,
+   "zone": "SCR"
   },
   {
    "code": "AB",
    "name": "Ambur",
    "city": "Ambur",
    "lat": 12.78,
-   "lng": 78.72
+   "lng": 78.72,
+   "zone": "SR"
   },
   {
    "code": "CJ",
    "name": "Kanchipuram",
    "city": "Kanchipuram",
    "lat": 12.8484,
-   "lng": 79.7051
+   "lng": 79.7051,
+   "zone": "SR"
   },
   {
    "code": "TNM",
    "name": "Tiruvannamalai",
    "city": "Tiruvannamalai",
    "lat": 12.2385,
-   "lng": 79.0777
+   "lng": 79.0777,
+   "zone": "SR"
   },
   {
    "code": "KKDI",
    "name": "Karaikudi Junction",
    "city": "Karaikudi",
    "lat": 10.0678,
-   "lng": 78.7924
+   "lng": 78.7924,
+   "zone": "SR"
   },
   {
    "code": "SVPR",
    "name": "Srivilliputtur",
    "city": "Srivilliputhur",
    "lat": 9.4978,
-   "lng": 77.6451
+   "lng": 77.6451,
+   "zone": "SR"
   },
   {
    "code": "POY",
    "name": "Pollachi Junction",
    "city": "Pollachi",
    "lat": 10.6529,
-   "lng": 77.0011
+   "lng": 77.0011,
+   "zone": "SR"
   },
   {
    "code": "DPJ",
    "name": "Dharmapuri",
    "city": "Dharmapuri",
    "lat": 12.1258,
-   "lng": 78.1542
+   "lng": 78.1542,
+   "zone": "SWR"
   },
   {
    "code": "CNGR",
    "name": "Chengannur",
    "city": "Chengannur (for Sabarimala)",
    "lat": 9.3194,
-   "lng": 76.6083
+   "lng": 76.6083,
+   "zone": "SR"
   },
   {
    "code": "BGK",
    "name": "Bagalkot",
    "city": "Bagalkot",
    "lat": 16.18,
-   "lng": 75.7
+   "lng": 75.7,
+   "zone": "SWR"
   },
   {
    "code": "KT",
    "name": "Kumta",
    "city": "Kumta (for Gokarna)",
    "lat": 14.4372,
-   "lng": 74.4211
+   "lng": 74.4211,
+   "zone": "KR"
   },
   {
    "code": "SKLR",
    "name": "Sakleshpur",
    "city": "Sakleshpur",
    "lat": 12.9454,
-   "lng": 75.7791
+   "lng": 75.7791,
+   "zone": "SWR"
   },
   {
    "code": "ABKP",
    "name": "Ambikapur",
    "city": "Ambikapur",
    "lat": 23.1365,
-   "lng": 83.1436
+   "lng": 83.1436,
+   "zone": "SECR"
   },
   {
    "code": "RPH",
    "name": "Rampurhat Junction",
    "city": "Rampurhat",
    "lat": 24.1792,
-   "lng": 87.7819
+   "lng": 87.7819,
+   "zone": "ER"
   },
   {
    "code": "JSME",
    "name": "Jasidih Junction",
    "city": "Jasidih (for Deoghar)",
    "lat": 24.5149,
-   "lng": 86.6444
+   "lng": 86.6444,
+   "zone": "ER"
   },
   {
    "code": "LAD",
    "name": "Lohardaga",
    "city": "Lohardaga",
    "lat": 23.4467,
-   "lng": 84.7067
+   "lng": 84.7067,
+   "zone": "SER"
   },
   {
    "code": "HZBN",
    "name": "Hazaribagh Town",
    "city": "Hazaribagh",
    "lat": 23.9837,
-   "lng": 85.3402
+   "lng": 85.3402,
+   "zone": "ECR"
   },
   {
    "code": "BHP",
    "name": "Bolpur Shantiniketan",
    "city": "Bolpur",
    "lat": 23.6578,
-   "lng": 87.6981
+   "lng": 87.6981,
+   "zone": "ER"
   },
   {
    "code": "VSU",
    "name": "Bishnupur",
    "city": "Bishnupur",
    "lat": 23.0651,
-   "lng": 87.3013
+   "lng": 87.3013,
+   "zone": "SER"
   },
   {
    "code": "BWN",
    "name": "Barddhaman Junction",
    "city": "Bardhaman",
    "lat": 23.25,
-   "lng": 87.87
+   "lng": 87.87,
+   "zone": "ER"
   },
   {
    "code": "NMKA",
    "name": "Namkhana",
    "city": "Namkhana",
    "lat": 21.7718,
-   "lng": 88.2391
+   "lng": 88.2391,
+   "zone": "ER"
   },
   {
    "code": "CG",
    "name": "Canning",
    "city": "Canning (for the Sundarbans)",
    "lat": 22.3137,
-   "lng": 88.6681
+   "lng": 88.6681,
+   "zone": "ER"
   },
   {
    "code": "HSA",
    "name": "Hasimara",
    "city": "Hasimara",
    "lat": 26.7309,
-   "lng": 89.3506
+   "lng": 89.3506,
+   "zone": "NFR"
   },
   {
    "code": "MBI",
    "name": "Madhubani",
    "city": "Madhubani",
    "lat": 26.3487,
-   "lng": 86.0773
+   "lng": 86.0773,
+   "zone": "ECR"
   },
   {
    "code": "SSM",
    "name": "Sasaram Junction",
    "city": "Sasaram",
    "lat": 24.9562,
-   "lng": 84.0192
+   "lng": 84.0192,
+   "zone": "ECR"
   },
   {
    "code": "VKNR",
    "name": "Valmikinagar Road",
    "city": "Valmiki Nagar",
    "lat": 27.1951,
-   "lng": 84.0346
+   "lng": 84.0346,
+   "zone": "ECR"
   },
   {
    "code": "NWD",
    "name": "Nawada",
    "city": "Nawada",
    "lat": 24.8865,
-   "lng": 85.5483
+   "lng": 85.5483,
+   "zone": "ECR"
   },
   {
    "code": "SBP",
    "name": "Sambalpur Junction",
    "city": "Sambalpur",
    "lat": 21.4831,
-   "lng": 83.9611
+   "lng": 83.9611,
+   "zone": "ECoR"
   },
   {
    "code": "BRGA",
    "name": "Bargarh Road",
    "city": "Bargarh",
    "lat": 21.3331,
-   "lng": 83.6435
+   "lng": 83.6435,
+   "zone": "ECoR"
   },
   {
    "code": "KRPU",
    "name": "Koraput Junction",
    "city": "Koraput",
    "lat": 18.7921,
-   "lng": 82.7191
+   "lng": 82.7191,
+   "zone": "ECoR"
   },
   {
    "code": "ANGL",
    "name": "Angul",
    "city": "Angul",
    "lat": 20.8333,
-   "lng": 85.1
+   "lng": 85.1,
+   "zone": "ECoR"
   },
   {
    "code": "BHC",
    "name": "Bhadrak",
    "city": "Bhadrak",
    "lat": 21.06,
-   "lng": 86.5
+   "lng": 86.5,
+   "zone": "ECoR"
   },
   {
    "code": "BPO",
    "name": "Baripada",
    "city": "Baripada",
    "lat": 21.9234,
-   "lng": 86.7375
+   "lng": 86.7375,
+   "zone": "SER"
   },
   {
    "code": "MNDP",
    "name": "Mendipathar",
    "city": "Mendipathar (North Garo Hills)",
    "lat": 25.8943,
-   "lng": 90.5998
+   "lng": 90.5998,
+   "zone": "NFR"
   },
   {
    "code": "MZS",
    "name": "Murkongselek",
    "city": "Jonai (for Pasighat)",
    "lat": 27.8291,
-   "lng": 95.2192
+   "lng": 95.2192,
+   "zone": "NFR"
   },
   {
    "code": "BPRD",
    "name": "Barpeta Road",
    "city": "Barpeta Road",
    "lat": 26.502,
-   "lng": 90.9647
+   "lng": 90.9647,
+   "zone": "NFR"
   },
   {
    "code": "SLGR",
    "name": "Simaluguri Junction",
    "city": "Simaluguri (for Sivasagar)",
    "lat": 26.9169,
-   "lng": 94.7519
+   "lng": 94.7519,
+   "zone": "NFR"
   },
   {
    "code": "JTTN",
    "name": "Jorhat Town",
    "city": "Jorhat",
    "lat": 26.7505,
-   "lng": 94.2171
+   "lng": 94.2171,
+   "zone": "NFR"
   },
   {
    "code": "KUGT",
    "name": "Kumarghat",
    "city": "Kumarghat",
    "lat": 24.1513,
-   "lng": 92.0353
+   "lng": 92.0353,
+   "zone": "NFR"
   },
   {
    "code": "UDPU",
    "name": "Udaipur Tripura",
    "city": "Udaipur (Tripura)",
    "lat": 23.5098,
-   "lng": 91.4795
+   "lng": 91.4795,
+   "zone": "NFR"
   },
   {
    "code": "LAR",
    "name": "Lalitpur Junction",
    "city": "Lalitpur",
    "lat": 24.6882,
-   "lng": 78.3959
+   "lng": 78.3959,
+   "zone": "NCR"
   },
   {
    "code": "PPI",
    "name": "Pipariya",
    "city": "Pipariya (for Pachmarhi)",
    "lat": 22.754,
-   "lng": 78.3553
+   "lng": 78.3553,
+   "zone": "WCR"
   },
   {
    "code": "SEY",
    "name": "Seoni",
    "city": "Seoni",
    "lat": 22.0869,
-   "lng": 79.5435
+   "lng": 79.5435,
+   "zone": "SECR"
   },
   {
    "code": "NIR",
    "name": "Nainpur Junction",
    "city": "Nainpur",
    "lat": 22.4257,
-   "lng": 80.1094
+   "lng": 80.1094,
+   "zone": "SECR"
   },
   {
    "code": "RTM",
    "name": "Ratlam Junction",
    "city": "Ratlam",
    "lat": 23.3408,
-   "lng": 75.051
+   "lng": 75.051,
+   "zone": "WR"
   },
   {
    "code": "JJN",
    "name": "Jhunjhunu",
    "city": "Jhunjhunu",
    "lat": 28.1069,
-   "lng": 75.39
+   "lng": 75.39,
+   "zone": "NWR"
   },
   {
    "code": "KTW",
    "name": "Kotdwar",
    "city": "Kotdwar",
    "lat": 29.75,
-   "lng": 78.53
+   "lng": 78.53,
+   "zone": "NR"
   },
   {
    "code": "TPU",
    "name": "Tanakpur",
    "city": "Tanakpur",
    "lat": 29.0673,
-   "lng": 80.1097
+   "lng": 80.1097,
+   "zone": "NER"
   },
   {
    "code": "MB",
    "name": "Moradabad Junction",
    "city": "Moradabad",
    "lat": 28.831,
-   "lng": 78.766
+   "lng": 78.766,
+   "zone": "NR"
   },
   {
    "code": "ETW",
    "name": "Etawah Junction",
    "city": "Etawah",
    "lat": 26.7865,
-   "lng": 79.0223
+   "lng": 79.0223,
+   "zone": "NCR"
   },
   {
    "code": "BRK",
    "name": "Bahraich",
    "city": "Bahraich",
    "lat": 27.5816,
-   "lng": 81.6054
+   "lng": 81.6054,
+   "zone": "NER"
   },
   {
    "code": "LMP",
    "name": "Lakhimpur",
    "city": "Lakhimpur Kheri",
    "lat": 27.9473,
-   "lng": 80.7775
+   "lng": 80.7775,
+   "zone": "NER"
   },
   {
    "code": "HSR",
    "name": "Hisar Junction",
    "city": "Hisar",
    "lat": 29.1519,
-   "lng": 75.7244
+   "lng": 75.7244,
+   "zone": "NWR"
   },
   {
    "code": "KKDE",
    "name": "Kurukshetra Junction",
    "city": "Kurukshetra",
    "lat": 29.9695,
-   "lng": 76.8519
+   "lng": 76.8519,
+   "zone": "NR"
   },
   {
    "code": "ROK",
    "name": "Rohtak Junction",
    "city": "Rohtak",
    "lat": 28.8907,
-   "lng": 76.5801
+   "lng": 76.5801,
+   "zone": "NR"
   },
   {
    "code": "BTI",
    "name": "Bathinda Junction",
    "city": "Bathinda",
    "lat": 30.2102,
-   "lng": 74.9329
+   "lng": 74.9329,
+   "zone": "NR"
   },
   {
    "code": "ANSB",
    "name": "Anandpur Sahib",
    "city": "Anandpur Sahib",
    "lat": 31.2299,
-   "lng": 76.5005
+   "lng": 76.5005,
+   "zone": "NR"
   },
   {
    "code": "ANT",
    "name": "Anantnag",
    "city": "Anantnag",
    "lat": 33.7386,
-   "lng": 75.1074
+   "lng": 75.1074,
+   "zone": "NR"
   },
   {
    "code": "NGO",
    "name": "Nagaur",
    "city": "Nagaur",
    "lat": 27.2001,
-   "lng": 73.7235
+   "lng": 73.7235,
+   "zone": "NWR"
   },
   {
    "code": "NWH",
    "name": "Nawalgarh",
    "city": "Nawalgarh",
    "lat": 27.8437,
-   "lng": 75.2461
+   "lng": 75.2461,
+   "zone": "NWR"
   },
   {
    "code": "BKI",
    "name": "Bandikui Junction",
    "city": "Bandikui",
    "lat": 27.0394,
-   "lng": 76.5664
+   "lng": 76.5664,
+   "zone": "NWR"
   },
   {
    "code": "AWR",
    "name": "Alwar Junction",
    "city": "Alwar",
    "lat": 27.5605,
-   "lng": 76.6214
+   "lng": 76.6214,
+   "zone": "NWR"
   },
   {
    "code": "FA",
    "name": "Falna",
    "city": "Falna (for Ranakpur)",
    "lat": 25.2359,
-   "lng": 73.2351
+   "lng": 73.2351,
+   "zone": "NWR"
   },
   {
    "code": "PTN",
    "name": "Patan Junction",
    "city": "Patan",
    "lat": 23.8531,
-   "lng": 72.1315
+   "lng": 72.1315,
+   "zone": "WR"
   },
   {
    "code": "MSH",
    "name": "Mahesana Junction",
    "city": "Mehsana",
    "lat": 23.6033,
-   "lng": 72.3884
+   "lng": 72.3884,
+   "zone": "WR"
   },
   {
    "code": "DHG",
    "name": "Dhrangadhra Junction",
    "city": "Dhrangadhra",
    "lat": 22.987,
-   "lng": 71.4792
+   "lng": 71.4792,
+   "zone": "WR"
   },
   {
    "code": "JAM",
    "name": "Jamnagar",
    "city": "Jamnagar",
    "lat": 22.493,
-   "lng": 70.0535
+   "lng": 70.0535,
+   "zone": "WR"
   },
   {
    "code": "VAPI",
    "name": "Vapi",
    "city": "Vapi (for Daman & Silvassa)",
    "lat": 20.3734,
-   "lng": 72.9087
+   "lng": 72.9087,
+   "zone": "WR"
   },
   {
    "code": "DRD",
    "name": "Dahanu Road",
    "city": "Dahanu",
    "lat": 19.9915,
-   "lng": 72.7436
+   "lng": 72.7436,
+   "zone": "WR"
   },
   {
    "code": "IGP",
    "name": "Igatpuri",
    "city": "Igatpuri",
    "lat": 19.6946,
-   "lng": 73.5622
+   "lng": 73.5622,
+   "zone": "CR"
   },
   {
    "code": "PVR",
    "name": "Pandharpur",
    "city": "Pandharpur",
    "lat": 17.6692,
-   "lng": 75.3196
+   "lng": 75.3196,
+   "zone": "CR"
   },
   {
    "code": "CD",
    "name": "Chandrapur",
    "city": "Chandrapur",
    "lat": 19.96,
-   "lng": 79.3
+   "lng": 79.3,
+   "zone": "CR"
   },
   {
    "code": "J",
    "name": "Jalna",
    "city": "Jalna",
    "lat": 19.8306,
-   "lng": 75.8931
+   "lng": 75.8931,
+   "zone": "SCR"
   },
   {
    "code": "WHM",
    "name": "Washim",
    "city": "Washim",
    "lat": 20.103,
-   "lng": 77.148
+   "lng": 77.148,
+   "zone": "SCR"
   },
   {
    "code": "MAE",
    "name": "Matheran",
    "city": "Matheran",
    "lat": 18.9889,
-   "lng": 73.2711
+   "lng": 73.2711,
+   "zone": "CR"
   }
  ],
  "heritage": [

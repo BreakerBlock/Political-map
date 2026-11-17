@@ -552,6 +552,19 @@ button.pg-row{width:100%;border:0;font:inherit;text-align:left;cursor:pointer;ma
 .pg-row.toy .pg-t em{display:block;font-style:normal;font-size:9.5px;color:var(--ink-light);margin-top:1px}
 .hub-pop .hp-b{display:inline-block;font-size:8.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:2px 6px;border-radius:6px;background:#E4ECF7;color:#24508F;margin-top:5px}
 .hub-pop .hp-b.toy{background:#F5E9D0;color:#8A5A12}
+.pg-badge.rail,.hub-pop .hp-b.rail{background:#E3F1EA;color:#1F6B4A}
+.pg-badge.jn,.hub-pop .hp-b.jn{background:#F3E6DA;color:#8A4A1F}
+.hub-pop .hp-z{font-size:10.5px;color:var(--ink-dim);margin-top:5px;display:flex;align-items:center;flex-wrap:wrap;gap:4px}
+.hub-pop .hp-z .hp-b{margin-top:0}
+.hub-pop .hp-near:empty{display:none}
+.hub-pop .hp-near{margin-top:8px;border-top:1px solid rgba(0,0,0,.08);padding-top:6px}
+.hub-pop .hp-near small{display:block;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-light);margin-bottom:3px}
+.hub-pop .hp-near button{display:flex;align-items:center;gap:6px;width:100%;border:0;background:none;padding:4px 2px;border-radius:6px;font:inherit;font-size:11.5px;color:var(--ink);cursor:pointer;text-align:left}
+.hub-pop .hp-near button:hover{background:rgba(0,0,0,.05)}
+.hub-pop .hp-near i{width:8px;height:8px;border-radius:50%;flex:none}
+.hub-pop .hp-near span{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+.hub-pop .hp-near em{font-style:normal;font-size:10px;color:var(--ink-light)}
+.hub-pop .hp-more{font-size:10px;color:var(--ink-light);padding:2px 2px 0}
 .hub-pop .hp-d{font-size:10.5px;color:var(--ink-dim);margin-top:5px;line-height:1.35}
 .hub-pop a.hp-s{background:linear-gradient(135deg,#B8862B,#8A2B2B);margin-right:4px}
 .pg-t{flex:1;min-width:0;font-size:11px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -581,7 +594,8 @@ button.pg-row{width:100%;border:0;font:inherit;text-align:left;cursor:pointer;ma
 .hub-ic svg{width:11px;height:11px}
 .hub-ic.minor{width:16px;height:16px;border-width:1.5px}.hub-ic.minor svg{width:9px;height:9px}
 .hub-tip{font:700 10.5px 'DM Sans',sans-serif!important;padding:3px 7px!important;border-radius:8px!important}
-.hub-pop{font-family:'DM Sans',sans-serif;min-width:170px}
+.hub-pop{font-family:'DM Sans',sans-serif;min-width:170px;padding:13px 16px 11px}
+.hub-pop .hp-k,.hub-pop .hp-n{padding-right:26px}
 .hub-pop .hp-k{font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light)}
 .hub-pop .hp-n{font-size:13px;font-weight:700;color:var(--ink);margin:2px 0 1px}
 .hub-pop .hp-c{font-size:11px;color:var(--ink-dim)}
@@ -2437,11 +2451,11 @@ function flyoverStopHere(){
 const SVG_PLANE='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>';
 const SVG_TRAIN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="14" rx="3.5"/><path d="M5 10h14M8.5 13.3h.01M15.5 13.3h.01M8.5 19.5L7 22M15.5 19.5L17 22"/></svg>';
 const NO_RAIL_STATES={AN:'Andaman & Nicobar',LD:'Lakshadweep'}; // no railway: reach by air or sea
-let airports=[],stations=[],heritage=[];const hubMemo={};
+let airports=[],stations=[],heritage=[],railZones={};const hubMemo={};
 async function loadHubs(){
   try{
     const [a,s]=await Promise.all(['airports.json','railway-stations.json'].map(f=>fetch(DATA_BASE+f+'?v='+Date.now()).then(r=>r.ok?r.json():null)));
-    airports=(a&&a.airports)||[];stations=(s&&s.stations)||[];heritage=(s&&s.heritage)||[];
+    airports=(a&&a.airports)||[];stations=(s&&s.stations)||[];heritage=(s&&s.heritage)||[];railZones=(s&&s.zones)||{};
   }catch(e){console.warn('Hubs:',e)}
   syncHubLayers();
 }
@@ -2469,6 +2483,15 @@ function openToyStory(id){
   openStory('toytrains',i);
 }
 const toyFacts=t=>[t.gauge,t.opened?'since '+t.opened:'',t.km?'~'+t.km+' km':''].filter(Boolean).join(' · ');
+const zoneName=h=>h&&h.zone&&railZones[h.zone]?railZones[h.zone]:'';
+const isJn=h=>/\bJunction\b/.test(h.name||'');
+const zoneBadge=h=>zoneName(h)?`<span class="pg-badge rail" title="${esc(zoneName(h))}${h.zone==='KR'?'':' zone'}">${esc(h.zone)}</span>`:'';
+/* Places on the map within reach of an airport or station (straight line), nearest first */
+function placesNearHub(h,r){
+  const out=[];for(const p of allPlaces){const d=km(p,h);if(d<=r)out.push({p,d})}
+  return out.sort((a,b)=>a.d-b.d);
+}
+function openNearPlace(k){const p=findPlace(k);if(p)focusPlace(p)}
 const approxKm=d=>d<1?'<1 km':'~'+Math.round(d).toLocaleString('en-IN')+' km';
 const flightsUrl=a=>'https://www.google.com/travel/flights?q='+encodeURIComponent('Flights to '+a.iata);
 const transitUrl=s=>`https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lng}&travelmode=transit`;
@@ -2477,7 +2500,7 @@ function gettingThereHTML(p){
   const KM_NOTE='<i>straight line</i>';
   let h='<div class="pop-go">';
   if(n.air)h+=`<a class="pg-row" href="${flightsUrl(n.air.h)}" target="_blank" rel="noopener" title="Search flights to ${esc(n.air.h.iata)} (Google Flights)"><span class="pg-ic air">${SVG_PLANE}</span><span class="pg-t"><small>Nearest airport${n.air.h.intl?'<span class="pg-badge">International</span>':''}</small><b>${esc(n.air.h.iata)}</b>${esc(n.air.h.city)}</span><span class="pg-km">${approxKm(n.air.d)}${KM_NOTE}</span></a>`;
-  if(n.rail)h+=`<a class="pg-row" href="${transitUrl(n.rail.h)}" target="_blank" rel="noopener" title="${esc(n.rail.h.name)} — directions by public transport (Google Maps)"><span class="pg-ic rail">${SVG_TRAIN}</span><span class="pg-t"><small>Nearest railhead</small><b>${esc(n.rail.h.code)}</b>${esc(n.rail.h.name)}</span><span class="pg-km">${approxKm(n.rail.d)}${KM_NOTE}</span></a>`;
+  if(n.rail)h+=`<a class="pg-row" href="${transitUrl(n.rail.h)}" target="_blank" rel="noopener" title="${esc(n.rail.h.name)} — directions by public transport (Google Maps)"><span class="pg-ic rail">${SVG_TRAIN}</span><span class="pg-t"><small>Nearest railhead${isJn(n.rail.h)?'<span class="pg-badge jn">Junction</span>':''}${zoneBadge(n.rail.h)}</small><b>${esc(n.rail.h.code)}</b>${esc(n.rail.h.name)}</span><span class="pg-km">${approxKm(n.rail.d)}${KM_NOTE}</span></a>`;
   else if(n.island)h+=`<div class="pg-row"><span class="pg-ic none">${SVG_TRAIN}</span><span class="pg-t"><small>Railway</small>No rail link — fly or take a ship</span></div>`;
   const t=nearToyTrain(p);
   if(t){const story=toyDeckHas(t);
@@ -2516,7 +2539,18 @@ function hubMarker(kind,h){
   m.bindPopup(`<div class="hub-pop"><div class="hp-k">${air?'Airport':'Railway station'} · ${esc(code)}</div><div class="hp-n">${esc(h.name)}</div><div class="hp-c">${esc(h.city)}</div>`
     +(air?`<a href="${flightsUrl(h)}" target="_blank" rel="noopener">Search flights to ${esc(code)}</a>`:`<a href="${transitUrl(h)}" target="_blank" rel="noopener">Directions to the station</a>`)
     +(air&&h.intl?'<div><span class="hp-b">International airport</span></div>':'')
-    +`<div class="hp-note">${air?'Check airlines for current routes.':'Check Indian Railways / IRCTC for trains and schedules.'}</div></div>`,{maxWidth:240});
+    +(!air&&(zoneName(h)||isJn(h))?`<div class="hp-z">${isJn(h)?'<span class="hp-b jn">Junction</span>':''}${zoneName(h)?`<span class="hp-b rail">${esc(h.zone)}</span>${esc(zoneName(h))}${h.zone==='KR'?' (KRCL)':' zone'}`:''}</div>`:'')
+    +'<div class="hp-near"></div>'
+    +`<div class="hp-note">${air?'Check airlines for current routes.':'Check Indian Railways / IRCTC for trains and schedules.'}</div></div>`,{maxWidth:250});
+  m.on('popupopen',e=>{
+    const el=e.popup.getElement()&&e.popup.getElement().querySelector('.hp-near');if(!el)return;
+    const R=air?120:50,near=placesNearHub(h,R);
+    if(!near.length){el.innerHTML='';return}
+    el.innerHTML=`<small>${near.length} place${near.length>1?'s':''} on the map within ~${R} km</small>`
+      +near.slice(0,4).map(({p,d})=>`<button type="button" data-k="${esc(placeKey(p))}"><i style="background:${(CATS[p.cat]||{}).color||'#888'}"></i><span>${esc(p.name)}</span><em>${approxKm(d)}</em></button>`).join('')
+      +(near.length>4?`<div class="hp-more">+${near.length-4} more nearby</div>`:'');
+    el.onclick=ev=>{const b=ev.target.closest('button[data-k]');if(b)openNearPlace(b.dataset.k)};
+  });
   return m;
 }
 const hubMarkers={air:null,rail:null,toy:null};
