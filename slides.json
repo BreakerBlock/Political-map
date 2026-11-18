@@ -970,6 +970,91 @@
      "season": "Oct\u2013May"
     }
    ]
+  },
+  {
+   "id": "greattrains",
+   "title": "Great train journeys",
+   "kicker": "Bridges, coastlines and royal rails \u00b7 real services, nearest stops on the map",
+   "slides": [
+    {
+     "key": "JK|Vaishno Devi",
+     "wiki": "Chenab_Rail_Bridge",
+     "title": "Chenab Rail Bridge",
+     "line": "359 m above the river, the world's highest railway arch bridge carries trains from Katra into the Kashmir Valley \u2014 open to traffic since 6 June 2025, when Vande Bharat services to Srinagar began."
+    },
+    {
+     "key": "TN|Rameswaram",
+     "wiki": "New_Pamban_Bridge",
+     "title": "New Pamban Bridge",
+     "line": "India's first vertical-lift sea bridge runs 2.07 km across the sea to Rameswaram island \u2014 opened in April 2025 beside the 1914 original."
+    },
+    {
+     "key": "TN|Kanyakumari & Vivekananda Rock",
+     "wiki": "Dibrugarh\u2013Kanniyakumari_Vivek_Express",
+     "title": "Vivek Express",
+     "line": "India's longest train route: about 4,189 km from Dibrugarh in Assam to the southern tip at Kanniyakumari, some 75 hours aboard. Running since 2011."
+    },
+    {
+     "key": "KA|Gokarna",
+     "wiki": "Konkan_Railway_zone",
+     "title": "Konkan Railway",
+     "line": "Opened end to end in 1998: about 740 km between the Western Ghats and the Arabian Sea, through 91 tunnels and over the 64 m Panval Nadi viaduct."
+    },
+    {
+     "key": "GA|Dudhsagar Falls",
+     "title": "Dudhsagar by rail",
+     "line": "The Goa\u2013Belagavi line crosses right in front of this milk-white cascade. Passengers may no longer get off at the falls, so watch from the window."
+    },
+    {
+     "key": "AP|Araku Valley",
+     "wiki": "Kothavalasa\u2013Kirandul_line",
+     "title": "Araku Vistadome",
+     "line": "Glass-roofed Vistadome coaches climb from Visakhapatnam into the Eastern Ghats on a line with 58 tunnels, passing over the Borra Caves on the way to Araku."
+    },
+    {
+     "key": "MZ|Solomon's Temple, Aizawl",
+     "wiki": "Bairabi\u2013Sairang_line",
+     "title": "Bairabi\u2013Sairang line",
+     "line": "Mizoram joined India's rail map on 13 Sept 2025: 51 km with 45 tunnels to Sairang, about 15 km from Aizawl."
+    },
+    {
+     "key": "RJ|Hawa Mahal",
+     "wiki": "Palace_on_Wheels",
+     "title": "Palace on Wheels",
+     "line": "India's original royal-rail holiday, first run in 1982: a week-long loop through Rajasthan's palace cities, starting from Delhi.",
+     "season": "Sep\u2013Apr"
+    },
+    {
+     "key": "RJ|Udaipur City Palace",
+     "wiki": "Maharajas'_Express",
+     "title": "Maharajas' Express",
+     "line": "IRCTC's flagship luxury train since 2010, with week-long journeys through India's heritage cities.",
+     "season": "Oct\u2013Apr"
+    },
+    {
+     "key": "KA|Mysore Palace",
+     "title": "Golden Chariot",
+     "line": "Karnataka's luxury train, first run in 2008 and now operated by IRCTC \u2014 journeys from Bengaluru include Mysuru and Hampi, with an upgraded train announced for 2026\u201327."
+    },
+    {
+     "key": "UP|Varanasi",
+     "wiki": "Vande_Bharat_Express",
+     "title": "Vande Bharat Express",
+     "line": "India's own semi-high-speed trainset, built at ICF Chennai \u2014 the very first one ran New Delhi to Varanasi on 15 Feb 2019."
+    },
+    {
+     "key": "UP|Taj Mahal",
+     "wiki": "Gatiman_Express",
+     "title": "Gatimaan Express",
+     "line": "Launched in April 2016 to put the Taj within a day trip of Delhi: Hazrat Nizamuddin to Agra Cantt, now running on to Jhansi."
+    },
+    {
+     "key": "WB|Howrah Bridge",
+     "wiki": "Rajdhani_Express",
+     "title": "Rajdhani Express",
+     "line": "The first Rajdhani left for Howrah on 1 March 1969 \u2014 about 1,450 km from New Delhi in roughly 17 hours."
+    }
+   ]
   }
  ],
  "flyover": [

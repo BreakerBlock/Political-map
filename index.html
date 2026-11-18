@@ -390,6 +390,7 @@ body.tl-dragging .tl-day{opacity:.25;transition:opacity .15s}
 .st-chip{display:inline-flex;align-items:center;gap:6px;padding:4px 11px 4px 4px;border-radius:20px;background:rgba(255,253,248,.95);color:var(--c);font-size:.66rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
 .st-chip span{width:20px;height:20px;border-radius:50%;background:var(--c);display:flex;align-items:center;justify-content:center}
 .st-chip span svg{width:12px;height:12px}
+.st-chip span{color:#fff}
 .st-card h2{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(2.3rem,5.6vw,4.4rem);line-height:.98;margin:12px 0 10px;text-shadow:0 2px 24px rgba(0,0,0,.45);letter-spacing:-.005em}
 .st-line{font-size:clamp(1rem,1.6vw,1.25rem);line-height:1.45;max-width:36em;opacity:.95;text-shadow:0 1px 10px rgba(0,0,0,.5)}
 .st-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
@@ -523,7 +524,21 @@ body.flying .leaflet-control-scale{opacity:0;transition:opacity .3s}
 .md-chip.md-fly{background:linear-gradient(135deg,#24508F,#0E7C86);--c:#24508F;color:#fff}
 .md-chip.md-dice{background:linear-gradient(135deg,#138808,#0E7C86);--c:#0E7C86;color:#fff}
 .md-chip.md-toy{background:linear-gradient(135deg,#B8862B,#8A2B2B);--c:#B8862B;color:#fff}
-.md-chip.md-fly svg,.md-chip.md-dice svg,.md-chip.md-toy svg{width:14px;height:14px}
+.md-chip.md-gt{background:linear-gradient(135deg,#1F5F8B,#2C1810);--c:#1F5F8B;color:#fff}
+.md-chip.md-fly svg,.md-chip.md-dice svg,.md-chip.md-toy svg,.md-chip.md-gt svg{width:14px;height:14px}
+/* State stories: closing "Getting there" slide */
+.st-hubs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px;margin-top:16px;max-width:760px}
+.st-hub{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:14px;background:rgba(20,12,6,.32);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;text-align:left;font:500 .8rem 'DM Sans',sans-serif;cursor:pointer;transition:background .15s,transform .12s}
+.st-hub:hover{background:rgba(255,255,255,.16)}.st-hub:active{transform:scale(.98)}
+.st-hub>i{flex-shrink:0;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#24508F}
+.st-hub>i.r{background:#1E6B47}.st-hub>i.t{background:#B8862B}
+.st-hub>i svg{width:15px;height:15px;color:#fff}
+.st-hub span{min-width:0;flex:1;line-height:1.25}
+.st-hub b{font-weight:800;margin-right:5px;letter-spacing:.03em}
+.st-hub em{display:block;font-style:normal;font-size:.7rem;opacity:.78;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st-hub .bd{display:inline-block;margin-left:5px;padding:1px 6px;border-radius:8px;background:rgba(255,255,255,.2);font-size:.58rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;vertical-align:1px}
+.st-note{margin-top:10px;font-size:.72rem;opacity:.7}
+@media(max-width:760px){.st-hubs{grid-template-columns:1fr;gap:6px;margin-top:12px}.st-hub{padding:7px 10px}.st-hub:nth-child(n+6){display:none}}
 .st-shuf svg{width:14px;height:14px}
 @media(max-width:760px){
   .fo{left:50%;bottom:16px;width:360px;transform:translate(-50%,24px) scale(.97)}
@@ -2010,8 +2025,10 @@ async function buildStateDeck(d){
   const cands=places.map(p=>{const key=placeKey(p),cur=curatedLine(key);return {p,key,cur,sc:(cur?6:0)+(hl.has(key)?3:0)+(p.wiki?2:-8)+(p.best?.5:0)}});
   cands.sort((a,b)=>b.sc-a.sc||a.p.name.localeCompare(b.p.name));
   d.slides=pickVaried(cands,12,99,4).map(c=>({key:c.key,line:(c.cur&&c.cur.line)||c.p.desc,season:(c.cur&&c.cur.season)||c.p.best}));
+  // Closing slide: the airports and railheads most of the state's places are reached from
+  if(d.slides.length&&(airports.length||stations.length))d.slides.push({kind:'go',state:sc,key:d.slides[0].key});
   const name=(statesIndex[sc]||{}).name||sc;
-  d.title=name;d.kicker=`Stories from ${name} · ${d.slides.length} places`;
+  d.title=name;d.kicker=`Stories from ${name} · ${d.slides.filter(x=>!x.kind).length} places`;
 }
 // "Surprise me" deck: 12 random places with photos, one per state and at most two per category; reshuffled on demand
 async function buildSurpriseDeck(d){
@@ -2075,6 +2092,7 @@ async function loadStories(){
     +`<button class="md-chip md-fly" title="Fly over India" aria-label="Fly over India: a short tour of the highlights" onclick="startFlyover()">${SVG_PLANE}</button>`
     +`<button class="md-chip md-dice" title="Surprise me: random places as stories" aria-label="Surprise me: random places as stories" onclick="openSurpriseStory()">${SVG_DICE}</button>`
     +(storyDecks.some(d=>d.id==='toytrains')?`<button class="md-chip md-toy" title="Heritage toy trains" aria-label="Heritage toy trains: India's mountain railways as stories" onclick="openStory('toytrains')">${SVG_TOY}</button>`:'')
+    +(storyDecks.some(d=>d.id==='greattrains')?`<button class="md-chip md-gt" title="Great train journeys" aria-label="Great train journeys: famous trains and rail routes as stories" onclick="openStory('greattrains')">${SVG_TRAIN}</button>`:'')
     +`<button class="md-chip md-season" title="Best in ${MONTHS[seasonDeck().month]}" aria-label="Best in ${MONTHS[seasonDeck().month]}" onclick="openStory('season')">${SVG_CAL}</button>`
     +storyDecks.filter(d=>d.cat&&CATS[d.cat]).map(d=>`<button class="md-chip" style="--c:${CATS[d.cat].color}" title="${esc(d.title)}" aria-label="${esc(d.title)}" onclick="openStory('${d.id}')">${ICONS[d.cat]}</button>`).join('');
   md.hidden=false;
@@ -2135,7 +2153,7 @@ function renderStoryChrome(){
   document.getElementById('stTitle').textContent=d.title;
   document.getElementById('stTabs').innerHTML=storyDecks.map((x,i)=>{
     const c=CATS[x.cat]||{color:'#E2622B',label:'Highlights'};
-    const [ico,lbl,col]=x.gen==='season'?[SVG_CAL,'Best in '+MONTHS[x.month].slice(0,3),'#C73E6B']:x.gen==='surprise'?[SVG_DICE,'Surprise me','#0E7C86']:x.gen==='state'?[PIN_SVG,x.title,'#5A4432']:x.id==='toytrains'?[SVG_TOY,'Toy trains','#B8862B']:[x.cat?ICONS[x.cat]:SVG_SPARK,x.cat?c.label:'Highlights',c.color];
+    const [ico,lbl,col]=x.gen==='season'?[SVG_CAL,'Best in '+MONTHS[x.month].slice(0,3),'#C73E6B']:x.gen==='surprise'?[SVG_DICE,'Surprise me','#0E7C86']:x.gen==='state'?[PIN_SVG,x.title,'#5A4432']:x.id==='toytrains'?[SVG_TOY,'Toy trains','#B8862B']:x.id==='greattrains'?[SVG_TRAIN,'Great trains','#1F5F8B']:[x.cat?ICONS[x.cat]:SVG_SPARK,x.cat?c.label:'Highlights',c.color];
     return `<button class="st-tab${i===story.deck?' on':''}" style="--c:${col}" onclick="event.stopPropagation();gotoStory(${i},0,1)"><span>${ico}</span>${esc(lbl)}</button>`}).join('');
   document.getElementById('stMon').hidden=d.gen!=='season';
   document.getElementById('stShuf').hidden=d.gen!=='surprise';
@@ -2168,11 +2186,14 @@ async function gotoStory(di,i,dir){
   const card=document.getElementById('stCard');
   card.style.setProperty('--dir',dir<0?-1:1);
   if(card.childElementCount){card.classList.add('out');await new Promise(r=>setTimeout(r,180));if(seq!==storySeq)return;card.style.setProperty('--dir',dir<0?1:-1)}
-  const season=s.season||p.best||'';
-  card.innerHTML=`<div><span class="st-chip" style="--c:${c.color}"><span>${ICONS[p.cat]||ICONS.scenic}</span>${esc(c.label)}</span>${s.why?`<span class="st-why">${SVG_CAL}${esc(s.why)}</span>`:''}</div>`
+  const rail=d.id==='toytrains'||d.id==='greattrains';
+  const season=rail?(s.season||''):(s.season||p.best||'');
+  if(rail||s.kind==='go'){bg.style.setProperty('--c',d.id==='toytrains'?'#B8862B':'#1F5F8B');bg.querySelector('.st-glyph').innerHTML=d.id==='toytrains'?SVG_TOY:SVG_TRAIN}
+  if(s.kind==='go')card.innerHTML=stateGoHTML(s.state);
+  else card.innerHTML=`<div>${rail?`<span class="st-chip" style="--c:${d.id==='toytrains'?'#B8862B':'#1F5F8B'}"><span>${d.id==='toytrains'?SVG_TOY:SVG_TRAIN}</span>${d.id==='toytrains'?'Heritage toy train':'Great train journey'}</span>`:`<span class="st-chip" style="--c:${c.color}"><span>${ICONS[p.cat]||ICONS.scenic}</span>${esc(c.label)}</span>`}${s.why?`<span class="st-why">${SVG_CAL}${esc(s.why)}</span>`:''}</div>`
     +`<h2>${esc(s.title||p.name)}</h2>`
     +`<div class="st-line">${esc(s.line||p.desc)}</div>`
-    +`<div class="st-meta"><div>${PIN_SVG}${s.title&&s.title!==p.name?esc(p.name)+', ':''}${esc(p.state)}</div>${season?`<div>${SVG_CAL}Best <b>${esc(season)}</b></div>`:''}${storyHubsHTML(p)}</div>`
+    +`<div class="st-meta"><div>${PIN_SVG}${rail?'On the map: ':''}${s.title&&s.title!==p.name?esc(p.name)+', ':''}${esc(p.state)}</div>${season?`<div>${SVG_CAL}Best <b>${esc(season)}</b></div>`:''}${storyHubsHTML(p)}</div>`
     +`<div class="st-acts"><button class="st-map" onclick="event.stopPropagation();storyShowOnMap()">${PIN_SVG}Show on map</button><button class="st-add${inTrip(p)?' in':''}" onclick="event.stopPropagation();storyToggleTrip(this)">${inTrip(p)?'✓ In your trip':'+ Add to trip'}</button></div>`;
   card.classList.add('out');void card.offsetWidth;card.style.setProperty('--dir',dir<0?-1:1);card.classList.remove('out');
   renderStoryChrome();
@@ -2517,6 +2538,46 @@ function storyHubsHTML(p){
   const a=n.air?`<span title="Nearest airport: ${esc(n.air.h.name)} (straight-line distance)">${SVG_PLANE}<b>${esc(n.air.h.iata)}</b>${esc(n.air.h.city)} ${approxKm(n.air.d)}</span>`:'';
   const r=n.rail?`<span title="Nearest railhead: ${esc(n.rail.h.name)} (straight-line distance)">${SVG_TRAIN}<b>${esc(n.rail.h.code)}</b>${esc(n.rail.h.name)} ${approxKm(n.rail.d)}</span>`:n.island?`<span>${SVG_TRAIN}No rail · ship or fly</span>`:'';
   return `<div class="st-go"><small>Getting there</small>${a}${a&&r?'<i></i>':''}${r}</div>`;
+}
+/* State stories, closing slide: which airports and railheads the state's places are nearest to.
+   Ranked by how many of the state's places each one serves; straight-line distances, no routes implied. */
+function stateGateways(sc){
+  const places=(loadedStates[sc]||allPlaces.filter(p=>p.stateCode===sc)).filter(p=>isFinite(p.lat));
+  const air={},rail={},toy={};
+  for(const p of places){
+    const n=nearestHubs(p);if(!n)continue;
+    if(n.air){const k=n.air.h.iata,o=air[k]||(air[k]={h:n.air.h,n:0,ds:[]});o.n++;o.ds.push(n.air.d)}
+    if(n.rail){const k=n.rail.h.code,o=rail[k]||(rail[k]={h:n.rail.h,n:0,ds:[]});o.n++;o.ds.push(n.rail.d)}
+    const t=nearToyTrain(p);if(t)toy[t.id]=t;
+  }
+  const rank=o=>Object.values(o).map(x=>({...x,med:x.ds.sort((a,b)=>a-b)[x.ds.length>>1]})).sort((a,b)=>b.n-a.n||a.med-b.med);
+  return {total:places.length,air:rank(air),rail:rank(rail),toy:Object.values(toy),island:!!NO_RAIL_STATES[sc]};
+}
+function stateGoHTML(sc){
+  const g=stateGateways(sc),name=(statesIndex[sc]||{}).name||sc;
+  const air=g.air.slice(0,3),rail=g.rail.slice(0,g.toy.length?3:4);
+  const of=x=>`nearest for ${x.n} of ${g.total} place${g.total>1?'s':''}`;
+  const rows=air.map(x=>`<button class="st-hub" type="button" onclick="event.stopPropagation();storyGoHub('air','${esc(x.h.iata)}')" title="${esc(x.h.name)} — show on the map"><i>${SVG_PLANE}</i><span><b>${esc(x.h.iata)}</b>${esc(x.h.city)}${x.h.intl?'<span class="bd">Intl</span>':''}<em>Airport · ${of(x)}</em></span></button>`)
+    .concat(rail.map(x=>`<button class="st-hub" type="button" onclick="event.stopPropagation();storyGoHub('rail','${esc(x.h.code)}')" title="${esc(x.h.name)} — show on the map"><i class="r">${SVG_TRAIN}</i><span><b>${esc(x.h.code)}</b>${esc(x.h.name)}${isJn(x.h)?'<span class="bd">Jn</span>':''}${x.h.zone?`<span class="bd">${esc(x.h.zone)}</span>`:''}<em>Railhead · ${of(x)}</em></span></button>`))
+    .concat(g.toy.map(t=>`<button class="st-hub" type="button" onclick="event.stopPropagation();openToyStory('${t.id}')" title="${esc(t.name)}"><i class="t">${SVG_TOY}</i><span><b>${esc(t.short)}</b><em>${esc(t.from)} → ${esc(t.to)}</em></span></button>`));
+  if(g.island)rows.push(`<div class="st-hub" style="cursor:default"><i class="r">${SVG_TRAIN}</i><span><b>No railway</b><em>Reach the islands by air or by ship</em></span></div>`);
+  return `<div><span class="st-chip" style="--c:#1F5F8B"><span>${SVG_TRAIN}</span>Getting there</span></div>`
+    +`<h2>Getting to ${esc(name)}</h2>`
+    +`<div class="st-line">The airports and railway stations that most places on the map in ${esc(name)} are closest to.</div>`
+    +`<div class="st-hubs">${rows.join('')}</div>`
+    +`<div class="st-note">Straight-line nearest hubs, not routes. Check airlines and IRCTC for current flights and trains.</div>`
+    +`<div class="st-acts"><button class="st-map" onclick="event.stopPropagation();storyGoMap('${sc}')">${SVG_TRAIN}Airports &amp; rail on the map</button></div>`;
+}
+function showHubLayers(){hubOn.air=true;hubOn.rail=true;try{localStorage.setItem(HUB_LS,JSON.stringify(hubOn))}catch(e){}syncHubLayers();declutterSoon()}
+function storyGoMap(sc){
+  closeStory();showHubLayers();
+  const pts=(loadedStates[sc]||[]).filter(p=>isFinite(p.lat)).map(p=>[p.lat,p.lng]);
+  setTimeout(()=>{if(pts.length)map.fitBounds(pts,{padding:[40,40],maxZoom:8});else{const s=statesIndex[sc];if(s)map.setView([s.lat,s.lng],7)}},320);
+}
+function storyGoHub(kind,code){
+  const h=(kind==='air'?airports:stations).find(x=>(kind==='air'?x.iata:x.code)===code);if(!h)return;
+  closeStory();showHubLayers();
+  setTimeout(()=>{map.setView([h.lat,h.lng],9);setTimeout(()=>{const m=(hubMarkers[kind]||[]).find(x=>x.h===h);if(m)m.m.openPopup()},450)},320);
 }
 function spHubsHTML(p){
   const n=nearestHubs(p);if(!n)return '';
