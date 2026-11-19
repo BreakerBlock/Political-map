@@ -565,6 +565,10 @@ button.pg-row{width:100%;border:0;font:inherit;text-align:left;cursor:pointer;ma
 .pg-row.toy{background:linear-gradient(90deg,#FBF3E2,#FFFCF6)}
 .pg-row.toy .pg-t{white-space:normal}
 .pg-row.toy .pg-t em{display:block;font-style:normal;font-size:9.5px;color:var(--ink-light);margin-top:1px}
+.pg-ic.gt{background:linear-gradient(135deg,#1F5F8B,#24508F)}
+.pg-row.gt{background:linear-gradient(90deg,#E9F0F8,#FAFCFE)}
+.pg-row.gt .pg-t{white-space:normal}
+.pg-row.gt .pg-t em{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-style:normal;font-size:9.5px;color:var(--ink-light);margin-top:1px;line-height:1.3}
 .hub-pop .hp-b{display:inline-block;font-size:8.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:2px 6px;border-radius:6px;background:#E4ECF7;color:#24508F;margin-top:5px}
 .hub-pop .hp-b.toy{background:#F5E9D0;color:#8A5A12}
 .pg-badge.rail,.hub-pop .hp-b.rail{background:#E3F1EA;color:#1F6B4A}
@@ -590,7 +594,7 @@ button.pg-row{width:100%;border:0;font:inherit;text-align:left;cursor:pointer;ma
 .pc-hubs{display:flex;gap:10px;margin-top:4px;font-size:0.62rem;color:var(--ink-dim);white-space:nowrap;overflow:hidden}
 .pc-hubs span{display:inline-flex;align-items:center;gap:3px}
 .pc-hubs svg{width:10px;height:10px}
-.pc-hubs .a svg{color:#24508F}.pc-hubs .r svg{color:#8A2B2B}.pc-hubs .t svg{color:#B8862B}.pc-hubs .t{font-weight:700;color:#8A5A12}
+.pc-hubs .a svg{color:#24508F}.pc-hubs .r svg{color:#8A2B2B}.pc-hubs .t svg{color:#B8862B}.pc-hubs .t{font-weight:700;color:#8A5A12}.pc-hubs .g svg{color:#1F5F8B}.pc-hubs .g{font-weight:700;color:#1F5F8B}
 .pc-hubs b{font-weight:800;color:var(--ink)}
 .sp-hubs{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
 .sp-hubs span{display:inline-flex;align-items:center;gap:5px;font-size:.7rem;color:var(--ink-dim);background:#EEF2F7;border-radius:10px;padding:3px 9px 3px 4px}
@@ -2503,6 +2507,25 @@ function openToyStory(id){
   map.closePopup();const i=Math.max(0,d.slides.findIndex(s=>s.rail===id));
   openStory('toytrains',i);
 }
+/* Great train journeys near a place: a slide in the "greattrains" deck pinned to this place or to one within GT_REACH km */
+const GT_REACH=20,gtMemo={};
+function nearGreatTrains(p){
+  const d=storyDecks.find(x=>x.id==='greattrains');if(!d)return [];
+  const k=p.lat.toFixed(4)+','+p.lng.toFixed(4);if(k in gtMemo)return gtMemo[k];
+  const out=[];
+  d.slides.forEach((s,i)=>{const q=s.key===placeKey(p)?p:findPlace(s.key);if(!q)return;const dd=q===p?0:km(p,q);if(dd<=GT_REACH)out.push({s,i,d:dd})});
+  out.sort((a,b)=>a.d-b.d);
+  return gtMemo[k]=out.slice(0,2);
+}
+/* Cards rendered before slides.json loaded: add the Famous train tag in place */
+function tagGreatTrainCards(){
+  document.querySelectorAll('#placeList .place-card').forEach(c=>{
+    const hubs=c.querySelector('.pc-hubs');if(!hubs||hubs.querySelector('.t,.g'))return;
+    const p=findPlace(c.dataset.key);if(!p)return;const g=nearGreatTrains(p);if(!g.length)return;
+    hubs.insertAdjacentHTML('beforeend',`<span class="g" title="Famous train: ${esc(g[0].s.title)}">${SVG_TRAIN}Famous train</span>`);
+  });
+}
+function openGreatTrain(i){map.closePopup();openStory('greattrains',i)}
 const toyFacts=t=>[t.gauge,t.opened?'since '+t.opened:'',t.km?'~'+t.km+' km':''].filter(Boolean).join(' · ');
 const zoneName=h=>h&&h.zone&&railZones[h.zone]?railZones[h.zone]:'';
 const isJn=h=>/\bJunction\b/.test(h.name||'');
@@ -2526,11 +2549,13 @@ function gettingThereHTML(p){
   const t=nearToyTrain(p);
   if(t){const story=toyDeckHas(t);
     h+=`<${story?'button type="button" onclick="openToyStory(\''+t.id+'\')"':'a href="https://en.wikipedia.org/wiki/'+encodeURIComponent(t.wiki)+'" target="_blank" rel="noopener"'} class="pg-row toy" title="${esc(t.name)}${t.status?' — '+esc(t.status):''}"><span class="pg-ic toy">${SVG_TOY}</span><span class="pg-t"><small>Heritage toy train nearby<span class="pg-badge toy">${/World Heritage/.test(t.unesco)?'UNESCO':'Heritage'}</span></small><b>${esc(t.name)}</b><em>${esc(t.from)} → ${esc(t.to)} · ${esc(toyFacts(t))}${t.status?' · check service':''}</em></span><span class="pg-km">${story?'Story ›':'Wiki ↗'}</span></${story?'button':'a'}>`}
+  for(const g of nearGreatTrains(p))
+    h+=`<button type="button" onclick="openGreatTrain(${g.i})" class="pg-row gt" title="${esc(g.s.title)} — open the Great train journeys story"><span class="pg-ic gt">${SVG_TRAIN}</span><span class="pg-t"><small>Famous train${g.d?' nearby':' here'}</small><b>${esc(g.s.title)}</b><em>${esc(g.s.line)}</em></span><span class="pg-km">Story ›</span></button>`;
   return h+'</div>';
 }
 function cardHubsHTML(p){
   const n=nearestHubs(p);if(!n)return '';
-  return `<div class="pc-hubs">${n.air?`<span class="a" title="Nearest airport: ${esc(n.air.h.name)} (straight-line distance)">${SVG_PLANE}<b>${esc(n.air.h.iata)}</b>${approxKm(n.air.d)}</span>`:''}${n.rail?`<span class="r" title="Nearest railhead: ${esc(n.rail.h.name)} (straight-line distance)">${SVG_TRAIN}<b>${esc(n.rail.h.code)}</b>${approxKm(n.rail.d)}</span>`:n.island?`<span class="r">${SVG_TRAIN}no rail</span>`:''}${nearToyTrain(p)?`<span class="t" title="${esc(nearToyTrain(p).name)} nearby">${SVG_TOY}Toy train</span>`:''}</div>`;
+  return `<div class="pc-hubs">${n.air?`<span class="a" title="Nearest airport: ${esc(n.air.h.name)} (straight-line distance)">${SVG_PLANE}<b>${esc(n.air.h.iata)}</b>${approxKm(n.air.d)}</span>`:''}${n.rail?`<span class="r" title="Nearest railhead: ${esc(n.rail.h.name)} (straight-line distance)">${SVG_TRAIN}<b>${esc(n.rail.h.code)}</b>${approxKm(n.rail.d)}</span>`:n.island?`<span class="r">${SVG_TRAIN}no rail</span>`:''}${nearToyTrain(p)?`<span class="t" title="${esc(nearToyTrain(p).name)} nearby">${SVG_TOY}Toy train</span>`:nearGreatTrains(p).length?`<span class="g" title="Famous train: ${esc(nearGreatTrains(p)[0].s.title)}">${SVG_TRAIN}Famous train</span>`:''}</div>`;
 }
 /* Story slides: one frosted "Getting there" chip — nearest airport and major railhead, straight line */
 function storyHubsHTML(p){
@@ -3073,7 +3098,7 @@ function closeDesigner(){
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.getElementById('designer').hidden)closeDesigner()});
 
-init().then(initTrip).then(loadStories).then(()=>{if(location.hash==='#design')openDesigner()});
+init().then(initTrip).then(loadStories).then(()=>{tagGreatTrainCards();if(location.hash==='#design')openDesigner()});
 </script>
 </body>
 </html>

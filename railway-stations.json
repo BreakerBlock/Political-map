@@ -1959,6 +1959,78 @@
    "lat": 18.9889,
    "lng": 73.2711,
    "zone": "CR"
+  },
+  {
+   "code": "BAHL",
+   "name": "Banihal",
+   "city": "Banihal",
+   "lat": 33.4507,
+   "lng": 75.1892,
+   "zone": "NR"
+  },
+  {
+   "code": "QG",
+   "name": "Qazigund",
+   "city": "Qazigund",
+   "lat": 33.5886,
+   "lng": 75.158,
+   "zone": "NR"
+  },
+  {
+   "code": "BDGM",
+   "name": "Budgam",
+   "city": "Budgam",
+   "lat": 34.0387,
+   "lng": 74.7365,
+   "zone": "NR"
+  },
+  {
+   "code": "BRML",
+   "name": "Baramulla",
+   "city": "Baramulla",
+   "lat": 34.2208,
+   "lng": 74.3884,
+   "zone": "NR"
+  },
+  {
+   "code": "KGRA",
+   "name": "Kangra",
+   "city": "Kangra",
+   "lat": 32.0851,
+   "lng": 76.2625,
+   "zone": "NR"
+  },
+  {
+   "code": "CCT",
+   "name": "Kakinada Town",
+   "city": "Kakinada",
+   "lat": 16.9673,
+   "lng": 82.2329,
+   "zone": "SCoR"
+  },
+  {
+   "code": "CAA",
+   "name": "Chakia",
+   "city": "Chakia",
+   "lat": 26.4172,
+   "lng": 85.0464,
+   "zone": "ECR"
+  },
+  {
+   "code": "BRWD",
+   "name": "Barwadih Junction",
+   "city": "Barwadih",
+   "lat": 23.8438,
+   "lng": 84.1168,
+   "zone": "ECR"
+  },
+  {
+   "code": "FKG",
+   "name": "Furkating Junction",
+   "city": "Golaghat",
+   "lat": 26.4655,
+   "lng": 94.0027,
+   "zone": "NFR"
   }
  ],
  "heritage": [
