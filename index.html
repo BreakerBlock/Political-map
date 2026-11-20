@@ -856,6 +856,61 @@ body.dz-open .leaflet-control-container{visibility:hidden}
 .nstep button:hover:not(:disabled){background:#4B4FA0;color:#fff}
 .nstep button:disabled{opacity:.35;cursor:default}
 .tl-day.rest b{background:#4B4FA0}
+/* must-see picker */
+.dz-opt{font:600 .58rem 'DM Sans',sans-serif;font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-light);margin-left:2px}
+.dz-must{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.dz-mchip{display:inline-flex;align-items:center;gap:7px;padding:4px 4px 4px 4px;border-radius:999px;background:color-mix(in srgb,var(--c) 12%,#fff);border:1.5px solid color-mix(in srgb,var(--c) 45%,#fff);animation:cardIn .3s ease both}
+.dz-mchip i{width:24px;height:24px;border-radius:50%;background:var(--c);color:#fff;display:inline-flex;align-items:center;justify-content:center}
+.dz-mchip i svg{width:12px;height:12px}
+.dz-mchip b{font-size:.76rem;color:var(--ink)}
+.dz-mchip small{font-size:.64rem;color:var(--ink-dim)}
+.dz-mchip button{width:24px;height:24px;border-radius:50%;border:none;background:rgba(44,24,16,.07);color:var(--ink-dim);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.dz-mchip button:hover{background:#B5452A;color:#fff}
+.dz-mchip button svg{width:11px;height:11px}
+.dz-mfind{position:relative;flex:1;min-width:240px}
+.dz-mfind>svg{position:absolute;left:13px;top:50%;width:15px;height:15px;transform:translateY(-50%);color:var(--ink-light);pointer-events:none}
+.dz-mfind input{width:100%;font:500 .8rem 'DM Sans',sans-serif;color:var(--ink);padding:10px 14px 10px 36px;border-radius:999px;border:1.5px solid var(--border-light);background:var(--parchment);outline:none;transition:border-color .15s,background .15s,box-shadow .15s}
+.dz-mfind input:focus{border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px rgba(181,69,42,.1)}
+.dz-mfind ul{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:5;list-style:none;background:#fff;border:1px solid var(--border-light);border-radius:14px;box-shadow:0 18px 40px -16px rgba(44,24,16,.45);padding:5px;display:none;max-height:260px;overflow-y:auto}
+.dz-mfind ul.on{display:block}
+.dz-mfind li{display:flex;align-items:center;gap:9px;padding:7px 9px;border-radius:10px;cursor:pointer}
+.dz-mfind li.sel,.dz-mfind li[data-k]:hover{background:var(--parchment)}
+.dz-mfind li i{width:24px;height:24px;border-radius:50%;background:var(--c);color:#fff;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.dz-mfind li i svg{width:12px;height:12px}
+.dz-mfind li b{font-size:.78rem;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dz-mfind li small{margin-left:auto;font-size:.62rem;color:var(--ink-dim);white-space:nowrap}
+.dz-mfind li.none{font-size:.72rem;color:var(--ink-dim);cursor:default}
+.dz-mtag{font-weight:700;color:#B5452A}
+.dz-day ul em.off{color:#9A4A12}
+/* route map */
+.dz-map{margin:14px 0 0;border-radius:16px;overflow:hidden;background:#0C151C;box-shadow:0 14px 30px -18px rgba(12,21,28,.8);animation:cardIn .45s ease both}
+.dz-map svg{display:block;width:100%;height:auto}
+.dz-map .in{fill:#3A2B1F;fill-opacity:.92;stroke:#FFE9C7;stroke-width:1.1;stroke-linejoin:round}
+.dz-map .in-glow{fill:none;stroke:#FF9F3A;stroke-opacity:.28;stroke-width:6;stroke-linejoin:round}
+.dz-map .lg{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.dz-map .lg.rail{stroke-dasharray:8 5;stroke-linecap:butt}
+.dz-map .lg.fly{stroke-width:2.2;stroke-dasharray:.1 6}
+.dz-map .lg.back{stroke-width:1.6;stroke-dasharray:4 5}
+.dz-map .st circle{stroke:#fff;stroke-width:1.6}
+.dz-map .st .ring{fill:none;stroke:#FFD27A;stroke-width:1.8;stroke-dasharray:3 2.4}
+.dz-map .st text{font:700 9px 'DM Sans',sans-serif;fill:#1A100A;text-anchor:middle}
+.dz-map .home rect{fill:#FFE9C7;stroke:#2C1810;stroke-width:1.5}
+.dz-map .home text{font:700 11px 'DM Sans',sans-serif;fill:#FFE9C7;paint-order:stroke;stroke:#0C151C;stroke-width:3;letter-spacing:.04em}
+.dz-map g.d{transition:opacity .2s}
+.dz-map.hl g.d:not(.on){opacity:.16}
+.dz-map.hl g.d.on .st circle:not(.ring){stroke-width:2.6}
+.dz-map figcaption{display:flex;align-items:center;flex-wrap:wrap;gap:5px;padding:9px 12px 10px;background:#121E27;border-top:1px solid rgba(255,233,199,.08)}
+.dz-dk{width:24px;height:24px;border-radius:50%;border:none;background:color-mix(in srgb,var(--c) 22%,#121E27);color:var(--c);font:700 .66rem 'DM Sans',sans-serif;cursor:pointer;transition:background .15s,color .15s,transform .1s;padding:0}
+.dz-dk:hover,.dz-dk.on{background:var(--c);color:#1A100A}
+.dz-dk:active{transform:scale(.92)}
+.dz-map figcaption span{margin-left:auto;display:flex;align-items:center;gap:5px;font-size:.6rem;color:rgba(255,233,199,.6);font-weight:600;letter-spacing:.04em}
+.dz-map figcaption span i{display:inline-block;width:16px;height:0;border-top:2.5px solid rgba(255,233,199,.75);margin-left:6px}
+.dz-map figcaption .k-rail{border-top-style:dashed}
+.dz-map figcaption .k-fly{border-top-style:dotted}
+.dz-map figcaption .k-must{width:9px;height:9px;border:1.6px dashed #FFD27A;border-radius:50%}
+.dz-dh b s{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--dc);margin-right:6px;vertical-align:1px;box-shadow:0 0 0 1.5px rgba(255,255,255,.7)}
+.dz-day{transition:border-color .2s,box-shadow .2s}
+.dz-day.lit{border-color:var(--dc);box-shadow:0 0 0 2px color-mix(in srgb,var(--dc) 35%,transparent),0 10px 24px -14px rgba(44,24,16,.5)}
 @media(max-width:760px){
   .btn-dz{margin:0;width:36px;height:36px;padding:0;border-radius:50%;justify-content:center;flex-shrink:0}
   .btn-dz span{display:none}
@@ -890,6 +945,8 @@ body.dz-open .leaflet-control-container{visibility:hidden}
   .dz-dh span{font-size:1rem}
   .dz-stats{gap:6px 18px}
   .dz-stats b{font-size:1.4rem}
+  .dz-mfind{min-width:100%}
+  .dz-map figcaption span{margin-left:0;width:100%;justify-content:flex-end}
 }
 @media(prefers-reduced-motion:reduce){.dz-sheet,.dz-scrim{transition:none}.dz-day{animation:none}}
 </style>
@@ -973,7 +1030,7 @@ body.dz-open .leaflet-control-container{visibility:hidden}
 <div class="dz" id="designer" hidden role="dialog" aria-modal="true" aria-labelledby="dzTitle">
   <div class="dz-scrim" onclick="closeDesigner()"></div>
   <div class="dz-sheet">
-    <div class="dz-hero"><small>Itinerary designer</small><h2 id="dzTitle">Design my trip</h2><p>Seven quick questions — then a day-by-day plan built from real places on the map, in season, with drive times and the nearest airports and stations.</p><button class="dz-x" onclick="closeDesigner()" aria-label="Close">✕</button></div>
+    <div class="dz-hero"><small>Itinerary designer</small><h2 id="dzTitle">Design my trip</h2><p>Seven quick questions (plus any must-sees) — then a day-by-day plan built from real places on the map, in season, with drive times and the nearest airports and stations.</p><button class="dz-x" onclick="closeDesigner()" aria-label="Close">✕</button></div>
     <div class="dz-body" id="dzBody"></div>
     <div class="dz-foot" id="dzFoot"></div>
   </div>
@@ -1121,10 +1178,11 @@ map.on('zoomstart',()=>labelPane.classList.add('zooming'));
 syncLabels();
 
 /* ── Boundary ── */
+let indiaGeo=null; // the official outline, kept for the designer's route map
 async function loadBoundary(){
   try{
     const r=await fetch('india-boundary.geojson');if(!r.ok)throw 0;
-    const g=await r.json();
+    const g=await r.json();indiaGeo=g;
     const holes=g.features[0].geometry.coordinates.map(p=>p[0].map(pt=>[pt[1],pt[0]]));
     // Neighbouring countries sink into a deep blue-grey veil so India glows on the satellite imagery
     L.polygon([[ [-89,-179],[-89,179],[89,179],[89,-179] ],...holes],{stroke:false,fillColor:'#0A1218',fillOpacity:0.5,interactive:false,className:'india-mask'}).addTo(map);
@@ -2703,10 +2761,12 @@ const DZ_REGIONS={all:{label:'All of India'},himalaya:{label:'Himalaya',s:['JK',
   north:{label:'North & Rajasthan',s:['DL','PB','HR','CH','RJ','UP']},northeast:{label:'Northeast',s:['AS','AR','MN','ML','MZ','NL','TR','SK']},
   south:{label:'South',s:['KA','KL','TN','AP','TS','PY']},west:{label:'West & Goa',s:['MH','GA','GJ','DH']},
   central:{label:'Central & East',s:['MP','CG','JH','BR','WB','OD']},islands:{label:'Islands',s:['AN','LD'],fly:true}};
-let dz={days:7,month:defaultSeasonMonth(),start:'Anywhere',region:'all',round:false,cats:['scenic','history','fauna','cuisine'],pace:'balanced',mode:'mix'};
+let dz={days:7,month:defaultSeasonMonth(),start:'Anywhere',region:'all',round:false,cats:['scenic','history','fauna','cuisine'],pace:'balanced',mode:'mix',must:[]};
+const DZ_MUST_MAX=3;
 try{const v=JSON.parse(localStorage.getItem(DZ_LS)||'null');if(v&&typeof v==='object'){
   if(DZ_DAYS.includes(v.days))dz.days=v.days;if(v.pace in DZ_PACE)dz.pace=v.pace;if(v.mode in DZ_MODES)dz.mode=v.mode;
-  if(typeof v.start==='string')dz.start=v.start;if(v.region in DZ_REGIONS)dz.region=v.region;dz.round=v.round===true;if(Array.isArray(v.cats)){const c=v.cats.filter(x=>CATS[x]);if(c.length)dz.cats=c}}}catch(e){}
+  if(typeof v.start==='string')dz.start=v.start;if(v.region in DZ_REGIONS)dz.region=v.region;dz.round=v.round===true;if(Array.isArray(v.cats)){const c=v.cats.filter(x=>CATS[x]);if(c.length)dz.cats=c}
+  if(Array.isArray(v.must))dz.must=v.must.filter(x=>typeof x==='string').slice(0,DZ_MUST_MAX)}}catch(e){}
 let dzPlan=null,dzSeed=0;
 const dzCity=n=>{const c=[...CITIES_T1,...CITIES_T2].find(c=>c[0]===n);return c?{lat:c[1],lng:c[2],name:n}:null};
 const dzStartPt=()=>{if(dz.start==='Anywhere')return null;const q=DZ_STARTS.find(s=>s[0]===dz.start);return dzCity(q?(q[1]||q[0]):dz.start)};
@@ -2715,9 +2775,13 @@ function dzRng(seed){return()=>{seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed
 
 // Candidate places with a score: highlights and curated story places first, short in-season windows get a lift
 function dzPool(o,R){
-  const hl=hlKeys(),seen=new Set(),out=[],fly=DZ_MODES[o.mode].m.includes('fly'),reg=DZ_REGIONS[o.region||'all'];
+  const hl=hlKeys(),seen=new Set(),out=[],fly=DZ_MODES[o.mode].m.includes('fly'),reg=DZ_REGIONS[o.region||'all'],must=new Set(o.must||[]);
   for(const p of allPlaces){
     const k=placeKey(p);if(seen.has(k))continue;seen.add(k);
+    if(must.has(k)){ // a must-see is in, whatever the interests, region or season (islands still need a flight)
+      if(ISLANDS.has(p.stateCode)&&!fly&&!reg.fly)continue;
+      const bm=bestMonths(p.best);out.push({p,k,s:7+(hl.has(k)?1:0)+R()*0.3,must:true,off:bm.size>0&&!bm.has(o.month)});continue;
+    }
     if(!o.cats.includes(p.cat))continue;
     if(reg.s&&!reg.s.includes(p.stateCode))continue;       // outside the chosen region
     if(ISLANDS.has(p.stateCode)&&!fly&&!reg.fly)continue;  // islands only by air (or when asked for)
@@ -2750,7 +2814,7 @@ function dzHop(from,pool,used,modes,R,radius,pen){
     }
     if(!m||A[m].dB>60)continue; // land somewhere near the airport/station, not deep in the hills
     const pn=pen?pen(c,true):0;if(pn>=1e8)continue;
-    opts.push({c,m,v:dzArea(c,pool,used,radius)-A[m].dB/40+R()*1.2-pn});
+    opts.push({c,m,v:dzArea(c,pool,used,radius)-A[m].dB/40+R()*1.2-pn+(c.must?2.5:0)});
   }
   opts.sort((a,b)=>b.v-a.v);
   return opts.length?opts[Math.floor(R()*Math.min(3,opts.length))]:null;
@@ -2795,6 +2859,10 @@ function designTrip(o,seed){
       if(!arrive){cur=null;note=`${home.name} is a long way from ${reg.s?'the '+reg.label:'these places'} — the plan begins there; add your own ${modes.length?'train or flight':'travel'} to get in${round?' and back':''}.`;round=false}
     }
   }
+  const musts=pool.filter(c=>c.must);
+  if(!cur&&!arrive&&musts.length){ // "Anywhere" with must-sees: begin at the one in the strongest area
+    const c=musts.map(c=>({c,v:dzArea(c,pool,used,radius)})).sort((a,b)=>b.v-a.v)[0].c;cur={lat:c.p.lat,lng:c.p.lng,name:c.p.name};
+  }
   if(!cur&&!arrive){ // "Anywhere": start in the strongest area for the month, with a little variety
     const sd=seeds.slice().sort((a,b)=>b.s-a.s).slice(0,120).map(c=>({c,v:dzArea(c,pool,used,radius)+R()*1.5})).sort((a,b)=>b.v-a.v);
     const c=sd[Math.floor(R()*Math.min(4,sd.length))].c;cur={lat:c.p.lat,lng:c.p.lng,name:c.p.name};
@@ -2809,16 +2877,21 @@ function designTrip(o,seed){
     if(!modes.length)return m<=left*cap*0.75+cap*1.25;if(left>1||m<=(left+1.25)*cap)return true;
     return backMemo[c.k]!==undefined?backMemo[c.k]:(backMemo[c.k]=!!dzCityMode(home,c.p,modes,true))};
   const skip=c=>used.has(c.k)||ISLANDS.has(c.p.stateCode)!==onIsl||!backOK(c);
-  const val=(c,from,dc)=>c.s-estMin(from,c.p)/60*0.5-(dc[c.p.cat]||0)*0.6-(catN[c.p.cat]||0)*0.12-backPen(c);
-  const take=(day,c,m)=>{day.stops.push(c);day.min+=m;used.add(c.k);catN[c.p.cat]=(catN[c.p.cat]||0)+1;here=c;cur=c.p;onIsl=ISLANDS.has(c.p.stateCode)};
+  // Must-sees not yet in the plan pull the route towards the nearest of them
+  let tgt=null;const aim=()=>{tgt=null;let b=Infinity;if(!cur)return;for(const c of musts)if(!used.has(c.k)){const m=estMin(cur,c.p);if(m<b){b=m;tgt=c}}};
+  const pull=c=>tgt&&c!==tgt?(estMin(cur,tgt.p)-estMin(c.p,tgt.p))/60*0.35:0;
+  const val=(c,from,dc)=>c.s-estMin(from,c.p)/60*0.5-(dc[c.p.cat]||0)*0.6-(catN[c.p.cat]||0)*0.12-backPen(c)+pull(c);
+  const take=(day,c,m)=>{day.stops.push(c);day.min+=m;used.add(c.k);catN[c.p.cat]=(catN[c.p.cat]||0)+1;here=c;cur=c.p;onIsl=ISLANDS.has(c.p.stateCode);aim()};
+  aim();
   if(arrive){const day={stops:[],min:0,hop:{m:arrive.m,alt:arrive.alt,city:home}};take(day,arrive.c,0);days.push(day);inRegion=1;d=1}
   for(;d<D;d++){
     const day={stops:[],min:0,hop:null};
     // A travel day by train/flight: when this area has had its days, or has nothing good left
     if(here&&modes.length&&D-d>=2){
       let lb=-Infinity;for(const c of pool){if(skip(c))continue;const m=estMin(cur,c.p);if(m<=cap){const v=val(c,cur,{});if(v>lb)lb=v}}
-      if(inRegion>=regionLen||lb<1.2){
-        const h=dzHop(here,pool,used,modes,R,radius,(c,hp)=>backOK(c,hp)?backPen(c,hp):1e9);
+      const far=tgt&&inRegion>=2&&estMin(cur,tgt.p)>cap*1.75; // a must-see is a long way off: go and get it
+      if(inRegion>=regionLen||lb<1.2||far){
+        const h=dzHop(here,pool,used,modes,R,radius,(c,hp)=>backOK(c,hp)?backPen(c,hp)+(tgt&&c!==tgt?estMin(c.p,tgt.p)/60*0.5:0):1e9);
         if(h){day.hop={m:h.m,alt:legAlts(here.p,h.c.p)[h.m],from:here};take(day,h.c,0);days.push(day);inRegion=1;continue}
       }
     }
@@ -2849,9 +2922,10 @@ function designTrip(o,seed){
     if(!day.stops.length)day.rest=true;
     days.push(day);inRegion++;
   }
-  const plan={o:{...o,cats:[...o.cats]},days,start:home,from0:home&&!arrive&&!note?home:null,round,note,cand:pool,pool:pool.length,cap,modes};
+  const plan={o:{...o,cats:[...o.cats],must:[...(o.must||[])]},days,start:home,from0:home&&!arrive&&!note?home:null,round,note,cand:pool,pool:pool.length,cap,modes};
   dzOrder(plan);
   if(!dzFinish(plan)||!plan.stops.length)return null;
+  plan.mustKeys=new Set(musts.map(c=>c.k));
   return plan;
 }
 // The point a day starts from: the previous day's last stop, or the start city on day 1
@@ -2933,6 +3007,7 @@ function dzSwap(di,si){
   const idx=P.stops.indexOf(old),prevC=P.stops[idx-1],nextC=P.stops[idx+1];
   const isArr=!!(day.hop&&si===0),nd=nextC&&P.days.find(x=>x.hop&&x.stops[0]===nextC);
   const prev=isArr?null:prevC?prevC.p:P.from0,next=nd?null:nextC?nextC.p:null;
+  if(P.mustKeys&&P.mustKeys.has(old.k)){dzSay(old.p.name+' is one of your must-sees — tap ✕ to drop it, or change it under “Change answers”.');return}
   const tk=di+':'+si;P.tried=P.tried||{};const tried=P.tried[tk]=P.tried[tk]||new Set();tried.add(old.k);
   const inPlan=new Set(P.stops.map(c=>c.k)),radius=P.cap/60*45/1.3;
   const base=(prev?estMin(prev,old.p):0)+(next?estMin(old.p,next):0);
@@ -2991,8 +3066,40 @@ function dzQuestions(){
   <section class="dz-q"><h3><i>5</i>What do you love?</h3><div class="dz-chips dz-cats">${Object.entries(CATS).map(([k,c])=>dzChip('cats',k,`<i style="background:${c.color}">${ICONS[k]}</i>${c.label}`,dz.cats.includes(k),`style="--c:${c.color}"`)).join('')}</div></section>
   <section class="dz-q"><h3><i>6</i>Your pace</h3><div class="dz-cards">${Object.entries(DZ_PACE).map(([k,p])=>dzChip('pace',k,`<b>${p.label}</b><small>${p.sub}</small>`,dz.pace===k)).join('')}</div></section>
   <section class="dz-q"><h3><i>7</i>Getting around</h3><div class="dz-cards dz-modes">${Object.entries(DZ_MODES).map(([k,m])=>dzChip('mode',k,`<i>${k==='road'?SVG_CAR:k==='rail'?SVG_TRAIN:k==='fly'?SVG_PLANE:SVG_ROUTE}</i><b>${m.label}</b><small>${m.sub}</small>`,dz.mode===k)).join('')}</div></section>
+  <section class="dz-q"><h3><i>8</i>Any must-sees? <em class="dz-opt">optional</em></h3>${dzMustHTML()}</section>
   </form>`;
 }
+// Must-see places: up to three, always planned in (whatever the interests, region or season)
+function dzMustHTML(){
+  const ps=dz.must.map(findPlace).filter(Boolean);
+  return `<div class="dz-must">${ps.map(p=>`<span class="dz-mchip" style="--c:${CATS[p.cat].color}"><i>${ICONS[p.cat]}</i><b>${esc(p.name)}</b><small>${esc(p.state)}</small><button type="button" data-k="${esc(placeKey(p))}" aria-label="Remove ${esc(p.name)}">${SVG_X}</button></span>`).join('')}
+    ${ps.length<DZ_MUST_MAX?`<div class="dz-mfind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input type="search" id="dzMustIn" autocomplete="off" placeholder="${ps.length?'Add another place…':'Search a place — e.g. Taj Mahal, Hampi, Pangong'}" aria-label="Add a must-see place" aria-controls="dzMustList"><ul id="dzMustList" role="listbox"></ul></div>`:''}</div>
+    <p class="dz-hint">${ps.length?'Planned in for sure — the route bends to reach '+(ps.length>1?'them':'it')+'.':'Up to '+DZ_MUST_MAX+' places the plan must include, even outside your interests.'}</p>`;
+}
+function dzMustSearch(q){
+  const ul=document.getElementById('dzMustList');if(!ul)return;
+  q=q.trim().toLowerCase();if(q.length<2){ul.innerHTML='';ul.classList.remove('on');return}
+  const seen=new Set(),hit=[];
+  for(const p of allPlaces){const k=placeKey(p);if(seen.has(k)||dz.must.includes(k))continue;seen.add(k);
+    const n=p.name.toLowerCase(),i=n.indexOf(q);if(i<0&&!p.state.toLowerCase().startsWith(q))continue;
+    hit.push({p,k,r:i===0?0:i>0&&/\W/.test(n[i-1])?1:i>0?2:3})}
+  hit.sort((a,b)=>a.r-b.r||a.p.name.length-b.p.name.length);
+  ul.innerHTML=hit.slice(0,6).map((h,j)=>`<li role="option" data-k="${esc(h.k)}"${j?'':' class="sel"'} style="--c:${CATS[h.p.cat].color}"><i>${ICONS[h.p.cat]}</i><b>${esc(h.p.name)}</b><small>${CATS[h.p.cat].label} · ${esc(h.p.state)}</small></li>`).join('')||'<li class="none">No place by that name on the map yet</li>';
+  ul.classList.add('on');
+}
+function dzMustAdd(k){if(!k||dz.must.includes(k)||dz.must.length>=DZ_MUST_MAX)return;dz.must.push(k);dzSave();dzRender();
+  const i=document.getElementById('dzMustIn');if(i&&!isMobile())i.focus()}
+document.addEventListener('input',e=>{if(e.target.id==='dzMustIn')dzMustSearch(e.target.value)});
+document.addEventListener('keydown',e=>{
+  if(e.target.id!=='dzMustIn')return;const ul=document.getElementById('dzMustList'),li=[...ul.querySelectorAll('li[data-k]')];
+  if(e.key==='Enter'){e.preventDefault();const s=ul.querySelector('li.sel');if(s)dzMustAdd(s.dataset.k);return}
+  if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();if(!li.length)return;let i=li.findIndex(x=>x.classList.contains('sel'));i=(i+(e.key==='ArrowDown'?1:-1)+li.length)%li.length;li.forEach((x,j)=>x.classList.toggle('sel',j===i))}
+});
+document.addEventListener('click',e=>{
+  const li=e.target.closest('#dzMustList li[data-k]');if(li){e.preventDefault();dzMustAdd(li.dataset.k);return}
+  const x=e.target.closest('.dz-mchip button');if(x){e.preventDefault();dz.must=dz.must.filter(k=>k!==x.dataset.k);dzSave();dzRender();return}
+  if(!e.target.closest('.dz-mfind')){const ul=document.getElementById('dzMustList');if(ul)ul.classList.remove('on')}
+});
 function dzRender(keep){
   const body=document.getElementById('dzBody'),foot=document.getElementById('dzFoot'),sh=document.getElementById('designer');
   sh.classList.toggle('result',!!dzPlan);
@@ -3000,7 +3107,7 @@ function dzRender(keep){
   if(!dzPlan){
     const top=body.scrollTop;
     body.innerHTML=dzQuestions();body.scrollTop=top;
-    foot.innerHTML=`<span class="dz-sumq">${dz.days} days · ${MONTHS[dz.month]}${dz.region!=='all'?' · '+DZ_REGIONS[dz.region].label:''} · ${dz.cats.length} interest${dz.cats.length>1?'s':''}</span><button class="dz-go" onclick="dzBuild()">${SVG_SPARK}Build my itinerary</button>`;
+    foot.innerHTML=`<span class="dz-sumq">${dz.days} days · ${MONTHS[dz.month]}${dz.region!=='all'?' · '+DZ_REGIONS[dz.region].label:''} · ${dz.cats.length} interest${dz.cats.length>1?'s':''}${dz.must.length?` · ${dz.must.length} must-see${dz.must.length>1?'s':''}`:''}</span><button class="dz-go" onclick="dzBuild()">${SVG_SPARK}Build my itinerary</button>`;
     return;
   }
   const top=body.scrollTop;body.innerHTML=dzResultHTML(dzPlan);body.scrollTop=keep?top:0;
@@ -3022,9 +3129,85 @@ document.addEventListener('click',e=>{
 const SVG_SWAP='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13l-3.5-3.5"/><path d="M20 15H7l3.5 3.5"/></svg>';
 const SVG_X='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>';
 const SVG_HOME='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3.5 11L12 4l8.5 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5h4v5"/></svg>';
+/* Route map: an SVG sketch of the plan on India's official outline (the same india-boundary.geojson the map
+   draws), one colour per day; road legs solid, trains dashed, flights as dotted arcs. Hover or tap a day to light it up. */
+const DZ_DAYC=['#FF9933','#3FC1AE','#F4C542','#F0729A','#7FB2FF','#A6DB5E','#C99BFF','#FF7A59','#5AD1E6','#E8B07A'];
+const dzDayCol=i=>DZ_DAYC[i%DZ_DAYC.length];
+function dzMapSVG(P){
+  const mob=isMobile(),W=mob?400:640,H=mob?330:300,pts=P.stops.map(c=>c.p).concat(P.start?[P.start]:[]);
+  if(!pts.length)return '';
+  let a=90,b=-90,c=180,d=-180;for(const p of pts){a=Math.min(a,p.lat);b=Math.max(b,p.lat);c=Math.min(c,p.lng);d=Math.max(d,p.lng)}
+  const cy=(a+b)/2,cx=(c+d)/2,k=Math.cos(cy*Math.PI/180);
+  let la=Math.max((b-a)*1.3,2.6),lo=Math.max((d-c)*1.3,2.6/k);
+  const sc=Math.min(W/(lo*k),H/la)*0.9;
+  const X=lng=>(lng-cx)*k*sc+W/2,Y=lat=>H/2-(lat-cy)*sc,f=v=>Math.round(v*10)/10;
+  let outline='';
+  if(indiaGeo){
+    for(const poly of indiaGeo.features[0].geometry.coordinates)for(const ring of poly){
+      let seg='',px=null,py=null,n=0;
+      for(const [lng,lat] of ring){const x=X(lng),y=Y(lat);if(px!==null&&Math.abs(x-px)+Math.abs(y-py)<1.4)continue;seg+=(n?'L':'M')+f(x)+' '+f(y);px=x;py=y;n++}
+      if(n>2)outline+=seg+'Z';
+    }
+  }
+  const hopOf=new Map();P.days.forEach(day=>{if(day.hop&&day.stops[0])hopOf.set(day.stops[0],day.hop.m)});
+  const dayOf=new Map();P.days.forEach((day,i)=>day.stops.forEach(c=>dayOf.set(c,i)));
+  const leg=(p,q,m,col,extra='')=>{
+    const x1=f(X(p.lng)),y1=f(Y(p.lat)),x2=f(X(q.lng)),y2=f(Y(q.lat));
+    if(m==='fly'){const mx=(x1+x2)/2,my=(y1+y2)/2,dx=x2-x1,dy=y2-y1,L=Math.hypot(dx,dy)||1,o=Math.min(60,L*0.22);
+      return `<path class="lg fly" d="M${x1} ${y1}Q${f(mx-dy/L*o)} ${f(my+dx/L*o)} ${x2} ${y2}" stroke="${col}"${extra}/>`}
+    return `<path class="lg${m==='rail'?' rail':''}" d="M${x1} ${y1}L${x2} ${y2}" stroke="${col}"${extra}/>`;
+  };
+  let g={};const add=(i,h)=>{(g[i]=g[i]||[]).push(h)};
+  let prev=P.from0||null;
+  P.days.forEach((day,i)=>{
+    day.stops.forEach((c,j)=>{
+      const m=j===0?hopOf.get(c):null;
+      if(day.hop&&day.hop.city&&j===0)add(i,leg(day.hop.city,c.p,m,dzDayCol(i)));
+      else if(prev)add(i,leg(prev,c.p,m,dzDayCol(i)));
+      prev=c.p;
+    });
+  });
+  let back='';
+  if(P.back&&P.start&&P.stops.length){const last=P.stops[P.stops.length-1].p;back=leg(last,P.start,P.back.m||(P.back.ship?'fly':null),'#FFE9C7',' opacity=".55"').replace('class="lg','class="lg back')}
+  let dots='';
+  P.stops.forEach((c,n)=>{const i=dayOf.get(c),x=f(X(c.p.lng)),y=f(Y(c.p.lat)),must=P.mustKeys&&P.mustKeys.has(c.k);
+    add(i,`<g class="st${must?' must':''}" transform="translate(${x} ${y})"><title>${esc(c.p.name)} · Day ${i+1}</title>${must?'<circle r="12" class="ring"/>':''}<circle r="8.5" fill="${dzDayCol(i)}"/><text y="3.3">${n+1}</text></g>`)});
+  let home='';
+  if(P.start){const x=f(X(P.start.lng)),y=f(Y(P.start.lat)),right=x<W-90;
+    home=`<g class="home" transform="translate(${x} ${y})"><rect x="-7" y="-7" width="14" height="14" rx="3.5" transform="rotate(45)"/><text x="${right?13:-13}" y="4" text-anchor="${right?'start':'end'}">${esc(P.start.name)}</text></g>`}
+  const days=Object.keys(g).map(Number).sort((x,y)=>x-y);
+  // legs first (under every stop), then stops; each day in its own group so it can be lit up
+  const legs=days.map(i=>`<g class="d" data-d="${i}">${g[i].filter(h=>h.startsWith('<path')).join('')}</g>`).join('');
+  const stops=days.map(i=>`<g class="d" data-d="${i}">${g[i].filter(h=>!h.startsWith('<path')).join('')}</g>`).join('');
+  return `<figure class="dz-map" id="dzMap"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Route map of the plan"><defs><radialGradient id="dzSea" cx="50%" cy="40%" r="75%"><stop offset="0" stop-color="#1D2E3A"/><stop offset="1" stop-color="#0C151C"/></radialGradient></defs>
+    <rect width="${W}" height="${H}" fill="url(#dzSea)"/><path class="in-glow" d="${outline}"/><path class="in" d="${outline}"/>${back}${legs}${home}${stops}</svg>
+    <figcaption>${days.map(i=>`<button type="button" class="dz-dk" data-d="${i}" style="--c:${dzDayCol(i)}">${i+1}</button>`).join('')}<span><i class="k-road"></i>road<i class="k-rail"></i>train<i class="k-fly"></i>flight${P.mustKeys&&P.mustKeys.size?'<i class="k-must"></i>must-see':''}</span></figcaption></figure>`;
+}
+function dzLight(d){
+  const m=document.getElementById('dzMap');if(!m)return;
+  m.classList.toggle('hl',d!=null);
+  m.querySelectorAll('[data-d]').forEach(e=>e.classList.toggle('on',d!=null&&e.dataset.d===String(d)));
+  document.querySelectorAll('#dzBody .dz-day[data-d]').forEach(e=>e.classList.toggle('lit',d!=null&&e.dataset.d===String(d)));
+}
+document.addEventListener('mouseover',e=>{
+  if(!e.target.closest||!e.target.closest('#designer'))return;
+  const t=e.target.closest('#dzBody .dz-day[data-d],#dzMap [data-d]');dzLight(t?t.dataset.d:null);
+});
+document.addEventListener('click',e=>{
+  const t=e.target.closest('#dzMap [data-d]');if(!t)return;
+  const d=t.dataset.d;if(t.classList.contains('dz-dk')&&t.classList.contains('on')){dzLight(null);return}
+  dzLight(d);const card=document.querySelector(`#dzBody .dz-day[data-d="${d}"]`);
+  if(card)card.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});
+});
 function dzDayTitle(day,i,plan){
   if(day.rest){let k=null;for(let j=i;j>=0;j--){const x=plan.days[j].stops;if(x.length){k=x[x.length-1];break}}return k?`Stay in ${k.p.name}`:'Free day'}
   const names=day.stops.map(c=>c.p.name);return names.length>2?`${names[0]}, ${names[1]} & more`:names.join(' & ');
+}
+function dzMissHTML(P){
+  const inPlan=new Set(P.stops.map(c=>c.k)),miss=(P.o.must||[]).filter(k=>!inPlan.has(k)).map(findPlace).filter(Boolean);
+  if(!miss.length)return '';
+  const isl=miss.some(p=>ISLANDS.has(p.stateCode))&&!P.modes.includes('fly');
+  return `<p class="dz-warn">Couldn’t fit <b>${miss.map(p=>esc(p.name)).join('</b> and <b>')}</b> into ${P.o.days} days at this pace${isl?' — the islands need a flight: choose <i>Road + flights</i> or <i>Mix it up</i>':' — try more days, a faster pace'+(P.modes.length?'':', trains or flights')+(P.round?' or switch off round trip':'')}.</p>`;
 }
 function dzResultHTML(P){
   const o=P.o,st=P.stops.map(c=>c.p),states=new Set(st.map(p=>p.stateCode));
@@ -3035,7 +3218,7 @@ function dzResultHTML(P){
   if(P.back&&P.back.min)roadKm+=km(P.stops[P.stops.length-1].p,P.start)*1.3;
   const reg=DZ_REGIONS[o.region||'all'];
   let h=`<div class="dz-res-head"><small>${o.days}-day plan · ${MONTHS[o.month]}${reg.s?' · '+reg.label:''} · ${P.start?(P.round?'round trip from ':'from ')+esc(P.start.name):'best area for the month'} · ${DZ_PACE[o.pace].label.toLowerCase()} pace</small>
-    <div class="dz-stats"><div><b>${st.length}</b><span>place${st.length>1?'s':''}</span></div><div><b>${states.size}</b><span>state${states.size>1?'s':''}</span></div><div><b>≈${fmtKm(roadKm)}</b><span>by road</span></div>${tr?`<div><b>${tr}</b><span>train${tr>1?'s':''}</span></div>`:''}${fl?`<div><b>${fl}</b><span>flight${fl>1?'s':''}</span></div>`:''}</div>${P.note?`<p class="dz-warn">${esc(P.note)}</p>`:''}</div><ol class="dz-plan">`;
+    <div class="dz-stats"><div><b>${st.length}</b><span>place${st.length>1?'s':''}</span></div><div><b>${states.size}</b><span>state${states.size>1?'s':''}</span></div><div><b>≈${fmtKm(roadKm)}</b><span>by road</span></div>${tr?`<div><b>${tr}</b><span>train${tr>1?'s':''}</span></div>`:''}${fl?`<div><b>${fl}</b><span>flight${fl>1?'s':''}</span></div>`:''}</div>${P.note?`<p class="dz-warn">${esc(P.note)}</p>`:''}${dzMissHTML(P)}</div>${dzMapSVG(P)}<ol class="dz-plan">`;
   let prev=P.start;
   P.days.forEach((day,i)=>{
     let move='';
@@ -3044,9 +3227,9 @@ function dzResultHTML(P){
     else if(day.min>=10||i===0&&P.from0)move=`<span class="dz-move${day.min>P.cap+5?' long':''}">${SVG_CAR}≈${fmtMin(Math.max(day.min,5))} on the road${i===0&&P.from0?' from '+esc(P.from0.name):''}${day.min>P.cap+5?' · long day':''}</span>`;
     else move=`<span class="dz-move">${SVG_CAR}All close by</span>`;
     const first=day.stops[0];
-    h+=`<li class="dz-day" style="animation-delay:${Math.min(i,12)*45}ms"><div class="dz-ph"${first?` data-k="${esc(first.k)}" style="--c:${CATS[first.p.cat].color}"`:''}>${first?ICONS[first.p.cat]:MOON_SVG}</div>
-      <div class="dz-dbody"><div class="dz-dh"><b>Day ${i+1}</b><span>${esc(dzDayTitle(day,i,P))}</span></div>${move}
-      ${day.stops.length?`<ul>${day.stops.map((c,j)=>{const b=bestMonths(c.p.best),arr=day.hop&&j===0;return `<li class="${c.k===P.flash?'fresh':''}" style="--c:${CATS[c.p.cat].color}"><i></i><div class="dz-pt"><b>${esc(c.p.name)}</b><span>${CATS[c.p.cat].label} · ${esc(c.p.state)}${b.size&&b.size<=4?` · <em>best ${esc(c.p.best)}</em>`:''}</span>${c.p.desc?`<p>${esc(c.p.desc)}</p>`:''}</div><div class="dz-acts"><button class="dz-swap" data-d="${i}" data-s="${j}" title="Something else here" aria-label="Swap ${esc(c.p.name)} for something else">${SVG_SWAP}</button>${arr?'':`<button class="dz-rm" data-d="${i}" data-s="${j}" title="Remove from the plan" aria-label="Remove ${esc(c.p.name)}">${SVG_X}</button>`}</div></li>`}).join('')}</ul>`:''}</div></li>`;
+    h+=`<li class="dz-day" data-d="${i}" style="animation-delay:${Math.min(i,12)*45}ms;--dc:${dzDayCol(i)}"><div class="dz-ph"${first?` data-k="${esc(first.k)}" style="--c:${CATS[first.p.cat].color}"`:''}>${first?ICONS[first.p.cat]:MOON_SVG}</div>
+      <div class="dz-dbody"><div class="dz-dh"><b><s></s>Day ${i+1}</b><span>${esc(dzDayTitle(day,i,P))}</span></div>${move}
+      ${day.stops.length?`<ul>${day.stops.map((c,j)=>{const b=bestMonths(c.p.best),arr=day.hop&&j===0;return `<li class="${c.k===P.flash?'fresh':''}" style="--c:${CATS[c.p.cat].color}"><i></i><div class="dz-pt"><b>${esc(c.p.name)}</b><span>${P.mustKeys&&P.mustKeys.has(c.k)?'<strong class="dz-mtag">★ Must-see</strong> ':''}${CATS[c.p.cat].label} · ${esc(c.p.state)}${b.size&&(b.size<=4||!b.has(P.o.month))?` · <em${b.has(P.o.month)?'':' class="off"'}>best ${esc(c.p.best)}</em>`:''}</span>${c.p.desc?`<p>${esc(c.p.desc)}</p>`:''}</div><div class="dz-acts"><button class="dz-swap" data-d="${i}" data-s="${j}" title="Something else here" aria-label="Swap ${esc(c.p.name)} for something else">${SVG_SWAP}</button>${arr?'':`<button class="dz-rm" data-d="${i}" data-s="${j}" title="Remove from the plan" aria-label="Remove ${esc(c.p.name)}">${SVG_X}</button>`}</div></li>`}).join('')}</ul>`:''}</div></li>`;
     if(day.stops.length)prev=day.stops[day.stops.length-1].p;
   });
   if(P.back){const b=P.back;h+=`<li class="dz-day dz-home" style="animation-delay:${Math.min(P.days.length,12)*45}ms"><div class="dz-ph home">${SVG_HOME}</div><div class="dz-dbody"><div class="dz-dh"><b>Home</b><span>Back to ${esc(P.start.name)}</span></div>${b.ship?`<span class="dz-move">${LEG_ICONS.ship}Ship or flight back to the mainland, then on home · check schedules</span>`:b.m?`<span class="dz-move ${b.m}">${b.m==='fly'?SVG_PLANE:SVG_TRAIN}${b.m==='fly'?'Fly':'Train'} <b>${altLabel(b.m,b.alt)}</b> · nearest ${b.m==='fly'?'airports':'stations'}</span>`:`<span class="dz-move${b.long?' long':''}">${SVG_CAR}≈${fmtMin(Math.max(b.min,5))} drive from ${esc(P.stops[P.stops.length-1].p.name)}${b.long?' · long drive':''}</span>`}<p class="dz-hp">On the evening of day ${o.days}, or the morning after.</p></div></li>`}
