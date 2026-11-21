@@ -911,6 +911,17 @@ body.dz-open .leaflet-control-container{visibility:hidden}
 .dz-dh b s{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--dc);margin-right:6px;vertical-align:1px;box-shadow:0 0 0 1.5px rgba(255,255,255,.7)}
 .dz-day{transition:border-color .2s,box-shadow .2s}
 .dz-day.lit{border-color:var(--dc);box-shadow:0 0 0 2px color-mix(in srgb,var(--dc) 35%,transparent),0 10px 24px -14px rgba(44,24,16,.5)}
+.dz-dtools{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px;padding-top:8px;border-top:1px dashed var(--border-light);opacity:.6;transition:opacity .15s}
+.dz-day:hover .dz-dtools,.dz-dtools:focus-within{opacity:1}
+.dz-dt{display:inline-flex;align-items:center;gap:5px;font:600 .64rem 'DM Sans',sans-serif;color:var(--ink-dim);background:var(--parchment);border:1px solid var(--border-light);border-radius:999px;padding:4px 10px 4px 8px;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.dz-dt svg{width:11px;height:11px}
+.dz-dt:hover{background:var(--ink);border-color:var(--ink);color:#FFB15C}
+.dz-dt.rm{margin-left:auto}
+.dz-dt.rm:hover{background:#B5452A;border-color:#B5452A;color:#fff}
+.dz-dt:active{transform:scale(.95)}
+.dz-dt:disabled{opacity:.4;pointer-events:none}
+.dz-day.fresh-day{animation:cardIn .4s ease both,dzDayGlow 1.6s ease .1s}
+@keyframes dzDayGlow{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--dc) 60%,transparent)}35%{box-shadow:0 0 0 7px color-mix(in srgb,var(--dc) 28%,transparent)}100%{box-shadow:0 6px 18px -14px rgba(44,24,16,.45)}}
 @media(max-width:760px){
   .btn-dz{margin:0;width:36px;height:36px;padding:0;border-radius:50%;justify-content:center;flex-shrink:0}
   .btn-dz span{display:none}
@@ -932,6 +943,10 @@ body.dz-open .leaflet-control-container{visibility:hidden}
   .dz-modes .dz-chip{flex-direction:column;align-items:flex-start;gap:1px}
   .dz-modes .dz-chip small{margin-left:0;text-align:left}
   .dz-acts{opacity:.8}
+  .dz-dtools{opacity:1;gap:5px}
+  .dz-dt{padding:6px 10px 6px 8px}
+  .dz-dt.rm{padding:6px 8px}
+  .dz-dt.rm span{display:none}
   .dz-acts button{width:30px;height:30px}
   .dz-modes i{margin-bottom:4px}
   .dz-foot{padding:10px 16px calc(10px + env(safe-area-inset-bottom));gap:6px}
@@ -3042,6 +3057,88 @@ function dzRemove(di,si){
   if(!dzFinish(P)||!dzValid(P)){day.stops.splice(si,0,old);dzFinish(P);dzSay('Without '+old.p.name+' the next leg gets too long — swap it for something else instead.');return}
   P.flash=null;dzRender(true);dzSay(`Removed ${old.p.name}.`,true);
 }
+/* ── Day tools: new places for one day, add a day after it, drop a day ──
+   A day is refilled from the same in-season candidates (keeping its must-sees), starting where the day
+   starts and ending somewhere that keeps tomorrow's driving and any train/flight leg valid. */
+const DZ_MAXDAYS=21;
+// Every non-hop day stays within the pace (or no worse than before the edit)
+function dzSane(P,before){
+  return P.days.every(day=>{if(day.hop||!day.stops.length)return true;const was=before.get(day);return day.min<=Math.max(P.cap,was==null?0:was)+5});
+}
+function dzFill(P,di,avoid){
+  const day=P.days[di],pace=DZ_PACE[P.o.pace],cap=P.cap,radius=cap/60*45/1.3;
+  const keep=day.stops.filter(c=>P.mustKeys&&P.mustKeys.has(c.k)),old=day.stops.slice();
+  const inPlan=new Set(P.stops.map(c=>c.k));old.forEach(c=>{if(!keep.includes(c))inPlan.delete(c.k)});
+  const prev=dzPrevPt(P,di),nx=dzNextFirst(P,di),anchor=prev||(old[0]&&old[0].p)||(nx&&nx.p);if(!anchor)return false;
+  const onIsl=!!(anchor.stateCode&&ISLANDS.has(anchor.stateCode));
+  const cand=P.cand.filter(c=>!inPlan.has(c.k)&&!avoid.has(c.k)&&ISLANDS.has(c.p.stateCode)===onIsl&&km(c.p,anchor)<=radius*1.6);
+  const before=new Map();P.days.forEach(d=>{if(d!==day)before.set(d,d.min)});
+  const tail=nx&&!nx.hop&&!nx.home?nx.p:null,catN={};
+  // tomorrow's driving if today ends at q (tomorrow's own legs stay as they are)
+  const nd=tail?P.days.slice(di+1).find(x=>x.stops.length):null,ndIn=nd?nd.min-estMin(dzPrevPt(P,P.days.indexOf(nd))||tail,tail):0,ndLim=nd?Math.max(cap,nd.min):0;
+  const over=q=>tail?Math.max(0,estMin(q,tail)+ndIn-ndLim):0;P.stops.forEach(c=>{if(!old.includes(c))catN[c.p.cat]=(catN[c.p.cat]||0)+1});
+  const R=dzRng((dzSeed+1)*7919+(P.rc=(P.rc||0)+1)*104729);
+  const snap=P.days.map(d=>d.stops.slice());let best=null,bs=-Infinity;
+  for(let a=0;a<24;a++){
+    P.days.forEach((d,j)=>{if(d!==day)d.stops=snap[j].slice()});
+    const pick=[...keep],dc={};let cur=keep.length?keep[keep.length-1].p:prev,min=0,t=keep.length*pace.visit;
+    keep.forEach(c=>dc[c.p.cat]=(dc[c.p.cat]||0)+1);
+    while(pick.length<pace.max){
+      let b=null,bv=-Infinity,bm=0;
+      for(const c of cand){
+        if(pick.includes(c))continue;
+        const m=cur?estMin(cur,c.p):0;
+        if(min+m>cap||(pick.length&&t+m+pace.visit>DZ_DAYMIN))continue;
+        const v=c.s+R()*1.3-m/60*0.5-(dc[c.p.cat]||0)*0.6-(catN[c.p.cat]||0)*0.1-(tail?Math.max(0,estMin(c.p,tail)-cap*0.8)/60*0.3+over(c.p)/60*2:0);
+        if(v>bv){bv=v;b=c;bm=m}
+      }
+      if(!b||pick.length&&bv<0.6)break;
+      pick.push(b);dc[b.p.cat]=(dc[b.p.cat]||0)+1;min+=bm;t+=bm+pace.visit;cur=b.p;
+    }
+    if(pick.length===keep.length)continue;
+    const sig=pick.map(c=>c.k).sort().join('|');
+    day.stops=pick;dzOrder(P);
+    if(!dzFinish(P)||!dzValid(P)||!dzSane(P,before)||day.min>cap+5)continue;
+    const s=pick.reduce((x,c)=>x+c.s,0)-day.min/60*0.4+R()*0.5;
+    if(s>bs&&sig!==old.map(c=>c.k).sort().join('|')){bs=s;best=P.days.map(d=>d.stops.slice())}
+  }
+  const use=best||snap;P.days.forEach((d,j)=>d.stops=use[j]);dzFinish(P);
+  return !!best;
+}
+function dzRedoDay(di){
+  const P=dzPlan,day=P&&P.days[di];if(!day)return;
+  if(day.hop){dzSay('This is a travel day — swap the place it arrives at instead.');return}
+  P.redo=P.redo||new Map();const seen=P.redo.get(day)||new Set();day.stops.forEach(c=>{if(!(P.mustKeys&&P.mustKeys.has(c.k)))seen.add(c.k)});P.redo.set(day,seen);
+  const wasRest=!day.stops.length;
+  let ok=dzFill(P,di,seen);
+  if(!ok&&seen.size){const now=new Set(day.stops.map(c=>c.k));P.redo.set(day,now);ok=dzFill(P,di,now)} // every option tried: start the cycle again
+  if(!ok){dzSay(wasRest?'Nothing else in season is close enough to fill this day — it stays a free day.':'Nothing else in season fits this day without a long drive.');return}
+  Object.keys(P.tried||{}).forEach(k=>{if(k.startsWith(di+':'))delete P.tried[k]});
+  P.flash=null;P.flashDay=day;dzRender(true);
+  dzSay(`Day ${di+1}: ${day.stops.map(c=>c.p.name).join(', ')}.`,true);
+}
+function dzAddDay(di){
+  const P=dzPlan;if(!P||!P.days[di])return;
+  if(P.days.length>=DZ_MAXDAYS){dzSay(`Plans go up to ${DZ_MAXDAYS} days.`);return}
+  const day={stops:[],min:0,hop:null,rest:true};P.days.splice(di+1,0,day);
+  const filled=dzFill(P,di+1,new Set());
+  if(!filled){day.stops=[];dzFinish(P)}
+  P.o.days=P.days.length;P.tried={};P.flash=null;P.flashDay=day;dzRender(true);
+  let at=null;for(let j=di;j>=0&&!at;j--){const x=P.days[j].stops;if(x.length)at=x[x.length-1]}
+  dzSay(filled?`Added Day ${di+2} — ${day.stops.map(c=>c.p.name).join(', ')}.`:`Added Day ${di+2} — a free day${at?' in '+at.p.name:''}.`,true);
+  requestAnimationFrame(()=>{const el=document.querySelector(`#dzBody .dz-day[data-d="${di+1}"]`);if(el)el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'})});
+}
+function dzDropDay(di){
+  const P=dzPlan,day=P&&P.days[di];if(!day)return;
+  if(P.days.length<2){dzSay('Your plan needs at least one day.');return}
+  if(P.stops.length===day.stops.length){dzSay('This day holds every place in the plan — add another day first.');return}
+  const before=new Map();P.days.forEach(d=>before.set(d,d.min));
+  P.days.splice(di,1);
+  if(!dzFinish(P)||!dzValid(P)||!dzSane(P,before)){P.days.splice(di,0,day);dzFinish(P);
+    dzSay(`Without Day ${di+1} the next ${day.hop?'stretch':'drive'} gets too long — try “New places” instead.`);return}
+  P.o.days=P.days.length;P.tried={};P.flash=null;P.flashDay=null;dzRender(true);
+  dzSay(`Dropped Day ${di+1}${day.stops.length?' ('+day.stops.map(c=>c.p.name).join(', ')+')':''} — ${P.days.length} days now.`,true);
+}
 let dzSayT=0;
 function dzSay(msg,ok){
   let el=document.getElementById('dzSay');if(!el)return;
@@ -3123,10 +3220,16 @@ document.addEventListener('click',e=>{
   dzSave();dzRender();
 });
 document.addEventListener('click',e=>{
+  const t=e.target.closest('#designer .dz-dt');if(!t)return;
+  e.preventDefault();const d=+t.dataset.d;({redo:dzRedoDay,add:dzAddDay,drop:dzDropDay})[t.dataset.a](d);
+});
+document.addEventListener('click',e=>{
   const b=e.target.closest('#designer .dz-swap,#designer .dz-rm');if(!b)return;
   e.preventDefault();(b.classList.contains('dz-swap')?dzSwap:dzRemove)(+b.dataset.d,+b.dataset.s);
 });
 const SVG_SWAP='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13l-3.5-3.5"/><path d="M20 15H7l3.5 3.5"/></svg>';
+const SVG_REDO='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 12a7.5 7.5 0 11-2.2-5.3"/><path d="M19.5 4v4.5H15"/></svg>';
+const SVG_PLUS='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5.5v13M5.5 12h13"/></svg>';
 const SVG_X='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>';
 const SVG_HOME='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3.5 11L12 4l8.5 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5h4v5"/></svg>';
 /* Route map: an SVG sketch of the plan on India's official outline (the same india-boundary.geojson the map
@@ -3227,13 +3330,15 @@ function dzResultHTML(P){
     else if(day.min>=10||i===0&&P.from0)move=`<span class="dz-move${day.min>P.cap+5?' long':''}">${SVG_CAR}≈${fmtMin(Math.max(day.min,5))} on the road${i===0&&P.from0?' from '+esc(P.from0.name):''}${day.min>P.cap+5?' · long day':''}</span>`;
     else move=`<span class="dz-move">${SVG_CAR}All close by</span>`;
     const first=day.stops[0];
-    h+=`<li class="dz-day" data-d="${i}" style="animation-delay:${Math.min(i,12)*45}ms;--dc:${dzDayCol(i)}"><div class="dz-ph"${first?` data-k="${esc(first.k)}" style="--c:${CATS[first.p.cat].color}"`:''}>${first?ICONS[first.p.cat]:MOON_SVG}</div>
+    const tools=`<div class="dz-dtools">${day.hop?'':`<button type="button" class="dz-dt" data-a="redo" data-d="${i}" title="${day.rest?'Fill this day with places nearby':'Different places for this day'}">${SVG_REDO}<span>${day.rest?'Fill this day':'New places'}</span></button>`}<button type="button" class="dz-dt" data-a="add" data-d="${i}" title="Add a day after Day ${i+1}"${P.days.length>=DZ_MAXDAYS?' disabled':''}>${SVG_PLUS}<span>Add a day</span></button>${P.days.length>1?`<button type="button" class="dz-dt rm" data-a="drop" data-d="${i}" title="Drop Day ${i+1}">${SVG_X}<span>Drop day</span></button>`:''}</div>`;
+    h+=`<li class="dz-day${day===P.flashDay?' fresh-day':''}" data-d="${i}" style="animation-delay:${Math.min(i,12)*45}ms;--dc:${dzDayCol(i)}"><div class="dz-ph"${first?` data-k="${esc(first.k)}" style="--c:${CATS[first.p.cat].color}"`:''}>${first?ICONS[first.p.cat]:MOON_SVG}</div>
       <div class="dz-dbody"><div class="dz-dh"><b><s></s>Day ${i+1}</b><span>${esc(dzDayTitle(day,i,P))}</span></div>${move}
-      ${day.stops.length?`<ul>${day.stops.map((c,j)=>{const b=bestMonths(c.p.best),arr=day.hop&&j===0;return `<li class="${c.k===P.flash?'fresh':''}" style="--c:${CATS[c.p.cat].color}"><i></i><div class="dz-pt"><b>${esc(c.p.name)}</b><span>${P.mustKeys&&P.mustKeys.has(c.k)?'<strong class="dz-mtag">★ Must-see</strong> ':''}${CATS[c.p.cat].label} · ${esc(c.p.state)}${b.size&&(b.size<=4||!b.has(P.o.month))?` · <em${b.has(P.o.month)?'':' class="off"'}>best ${esc(c.p.best)}</em>`:''}</span>${c.p.desc?`<p>${esc(c.p.desc)}</p>`:''}</div><div class="dz-acts"><button class="dz-swap" data-d="${i}" data-s="${j}" title="Something else here" aria-label="Swap ${esc(c.p.name)} for something else">${SVG_SWAP}</button>${arr?'':`<button class="dz-rm" data-d="${i}" data-s="${j}" title="Remove from the plan" aria-label="Remove ${esc(c.p.name)}">${SVG_X}</button>`}</div></li>`}).join('')}</ul>`:''}</div></li>`;
+      ${day.stops.length?`<ul>${day.stops.map((c,j)=>{const b=bestMonths(c.p.best),arr=day.hop&&j===0;return `<li class="${c.k===P.flash?'fresh':''}" style="--c:${CATS[c.p.cat].color}"><i></i><div class="dz-pt"><b>${esc(c.p.name)}</b><span>${P.mustKeys&&P.mustKeys.has(c.k)?'<strong class="dz-mtag">★ Must-see</strong> ':''}${CATS[c.p.cat].label} · ${esc(c.p.state)}${b.size&&(b.size<=4||!b.has(P.o.month))?` · <em${b.has(P.o.month)?'':' class="off"'}>best ${esc(c.p.best)}</em>`:''}</span>${c.p.desc?`<p>${esc(c.p.desc)}</p>`:''}</div><div class="dz-acts"><button class="dz-swap" data-d="${i}" data-s="${j}" title="Something else here" aria-label="Swap ${esc(c.p.name)} for something else">${SVG_SWAP}</button>${arr?'':`<button class="dz-rm" data-d="${i}" data-s="${j}" title="Remove from the plan" aria-label="Remove ${esc(c.p.name)}">${SVG_X}</button>`}</div></li>`}).join('')}</ul>`:''}${tools}</div></li>`;
     if(day.stops.length)prev=day.stops[day.stops.length-1].p;
   });
   if(P.back){const b=P.back;h+=`<li class="dz-day dz-home" style="animation-delay:${Math.min(P.days.length,12)*45}ms"><div class="dz-ph home">${SVG_HOME}</div><div class="dz-dbody"><div class="dz-dh"><b>Home</b><span>Back to ${esc(P.start.name)}</span></div>${b.ship?`<span class="dz-move">${LEG_ICONS.ship}Ship or flight back to the mainland, then on home · check schedules</span>`:b.m?`<span class="dz-move ${b.m}">${b.m==='fly'?SVG_PLANE:SVG_TRAIN}${b.m==='fly'?'Fly':'Train'} <b>${altLabel(b.m,b.alt)}</b> · nearest ${b.m==='fly'?'airports':'stations'}</span>`:`<span class="dz-move${b.long?' long':''}">${SVG_CAR}≈${fmtMin(Math.max(b.min,5))} drive from ${esc(P.stops[P.stops.length-1].p.name)}${b.long?' · long drive':''}</span>`}<p class="dz-hp">On the evening of day ${o.days}, or the morning after.</p></div></li>`}
-  h+=`</ol><p class="dz-note">Tap ${SVG_SWAP} for something else in that slot, or ${SVG_X} to drop a place. Built from ${P.pool} places that suit ${MONTHS[o.month]} and your interests. Drive times here are rough; My trip fetches real road routes. Trains and flights name the nearest stations and airports only — check IRCTC and airlines for actual services.${P.days[0].hop&&P.days[0].hop.city||P.back?' Getting there from and back to your start city is shown here only; My trip begins at the first place.':''}</p>`;
+  P.flashDay=null;
+  h+=`</ol><p class="dz-note">Tap ${SVG_SWAP} for something else in that slot, or ${SVG_X} to drop a place; under each day, ${SVG_REDO} gives that day new places, ${SVG_PLUS} adds a day after it. Built from ${P.pool} places that suit ${MONTHS[o.month]} and your interests. Drive times here are rough; My trip fetches real road routes. Trains and flights name the nearest stations and airports only — check IRCTC and airlines for actual services.${P.days[0].hop&&P.days[0].hop.city||P.back?' Getting there from and back to your start city is shown here only; My trip begins at the first place.':''}</p>`;
   return h;
 }
 async function dzPhotos(){
