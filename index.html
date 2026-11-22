@@ -801,6 +801,28 @@ button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-acti
 .dz-ph>svg{width:30px;height:30px;opacity:.55}
 .dz-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s}
 .dz-ph img.ok{opacity:1}
+/* Day collage: up to three photos; tap plays the day as stories */
+button.dz-ph{border:0;padding:0;cursor:pointer;font:inherit;display:grid;align-items:stretch;justify-items:stretch;gap:2px;background:#fff;grid-template-columns:1fr;grid-template-rows:1fr}
+button.dz-ph.n2{grid-template-columns:1fr 1fr}
+button.dz-ph.n3{grid-template-columns:1.35fr 1fr;grid-template-rows:1fr 1fr}
+button.dz-ph.n3 .dz-cell:first-child{grid-row:1/3}
+.dz-cell{position:relative;overflow:hidden;min-width:0;background:linear-gradient(135deg,var(--c,#7A6B5D),color-mix(in srgb,var(--c,#7A6B5D) 55%,#2C1810));display:flex;align-items:center;justify-content:center;color:#fff;transition:filter .25s,opacity .25s}
+.dz-cell>svg{width:22px;height:22px;opacity:.55}
+.dz-cell img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s,transform .6s ease}
+.dz-cell img.ok{opacity:1}
+button.dz-ph:hover .dz-cell img{transform:scale(1.06)}
+button.dz-ph.focus .dz-cell:not(.on){filter:saturate(.4) brightness(.6)}
+button.dz-ph.focus .dz-cell.on img{transform:scale(1.08)}
+.dz-more{position:absolute;right:5px;bottom:5px;font:700 .6rem/1 'DM Sans',sans-serif;font-style:normal;color:#fff;background:rgba(20,12,8,.62);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);padding:3px 6px;border-radius:99px;pointer-events:none}
+.dz-pplay{position:absolute;left:50%;top:50%;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;background:rgba(255,255,255,.92);color:#2C1810;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px -6px rgba(0,0,0,.6);opacity:0;transform:scale(.8);transition:opacity .2s,transform .2s;pointer-events:none}
+.dz-pplay svg{width:14px;height:14px;margin-left:2px}
+button.dz-ph:hover .dz-pplay,button.dz-ph:focus-visible .dz-pplay{opacity:1;transform:none}
+button.dz-ph:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(hover:none){.dz-pplay{opacity:.9;transform:scale(.72);left:auto;top:auto;right:4px;bottom:4px;margin:0}.dz-ph:has(.dz-more) .dz-pplay{bottom:24px}}
+.dz-playall{display:inline-flex;align-items:center;gap:8px;margin-top:12px;border:0;cursor:pointer;font:600 .74rem 'DM Sans',sans-serif;color:#fff;background:linear-gradient(135deg,#2C1810,#4E1F14);padding:9px 16px 9px 10px;border-radius:99px;box-shadow:0 8px 20px -10px rgba(44,24,16,.7);transition:transform .15s,box-shadow .15s}
+.dz-playall svg{width:12px;height:12px;padding:5px;box-sizing:content-box;border-radius:50%;background:#FFB15C;color:#2C1810}
+.dz-playall:hover{transform:translateY(-1px);box-shadow:0 12px 24px -10px rgba(44,24,16,.8)}
+.st-use{background:#FFB15C!important;color:#2C1810!important;border-color:transparent!important}
 .dz-dbody{flex:1;min-width:0}
 .dz-dh{display:flex;align-items:center;gap:9px}
 .dz-dh b{flex-shrink:0;font:700 .6rem 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--accent);padding:3px 8px;border-radius:6px}
@@ -2027,6 +2049,8 @@ async function initTrip(){
    Full-bleed viewer: swipe / tap / arrow keys, auto-advance with progress bars, crossfading photos. */
 const STORY_DUR=7000,STORY_SEEN='bharatyatra.storySeen.v1';
 const SVG_SPARK='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 5.6L19.5 9.5l-5.6 1.9L12 17l-1.9-5.6L4.5 9.5l5.6-1.9z"/><path d="M19 14l.9 2.6 2.6.9-2.6.9L19 21l-.9-2.6-2.6-.9 2.6-.9z" opacity=".75"/></svg>';
+const SVG_BACK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>';
+const SVG_ROUTE_S='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="2.2"/><circle cx="18" cy="5" r="2.2"/><path d="M8.2 19H15a3.5 3.5 0 000-7H9a3.5 3.5 0 010-7h6.8"/></svg>';
 const SVG_PLAY='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 001.5.86l12.5-7.5a1 1 0 000-1.72L8.5 3.64A1 1 0 007 4.5z"/></svg>';
 const SVG_CAL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>';
 let storyDecks=[],story={deck:0,i:0,paused:false,prevHash:'',timer:0};
@@ -2221,7 +2245,7 @@ async function openStory(id,at=0){
 }
 function closeStory(){
   const el=document.getElementById('story');if(el.hidden)return;
-  clearTimeout(story.timer);el.classList.remove('on');setTimeout(()=>{el.hidden=true;document.getElementById('stStage').innerHTML=''},300);
+  clearTimeout(story.timer);el.classList.remove('on');setTimeout(()=>{el.hidden=true;document.getElementById('stStage').innerHTML='';storyDecks=storyDecks.filter(x=>x.gen!=='trip')},300);
   history.replaceState(null,'',location.pathname+location.search+(story.prevHash&&!/^#story=/.test(story.prevHash)?story.prevHash:''));
 }
 function renderStoryChrome(){
@@ -2230,7 +2254,7 @@ function renderStoryChrome(){
   document.getElementById('stTitle').textContent=d.title;
   document.getElementById('stTabs').innerHTML=storyDecks.map((x,i)=>{
     const c=CATS[x.cat]||{color:'#E2622B',label:'Highlights'};
-    const [ico,lbl,col]=x.gen==='season'?[SVG_CAL,'Best in '+MONTHS[x.month].slice(0,3),'#C73E6B']:x.gen==='surprise'?[SVG_DICE,'Surprise me','#0E7C86']:x.gen==='state'?[PIN_SVG,x.title,'#5A4432']:x.id==='toytrains'?[SVG_TOY,'Toy trains','#B8862B']:x.id==='greattrains'?[SVG_TRAIN,'Great trains','#1F5F8B']:[x.cat?ICONS[x.cat]:SVG_SPARK,x.cat?c.label:'Highlights',c.color];
+    const [ico,lbl,col]=x.gen==='season'?[SVG_CAL,'Best in '+MONTHS[x.month].slice(0,3),'#C73E6B']:x.gen==='surprise'?[SVG_DICE,'Surprise me','#0E7C86']:x.gen==='trip'?[SVG_ROUTE_S,'Your trip','#2C1810']:x.gen==='state'?[PIN_SVG,x.title,'#5A4432']:x.id==='toytrains'?[SVG_TOY,'Toy trains','#B8862B']:x.id==='greattrains'?[SVG_TRAIN,'Great trains','#1F5F8B']:[x.cat?ICONS[x.cat]:SVG_SPARK,x.cat?c.label:'Highlights',c.color];
     return `<button class="st-tab${i===story.deck?' on':''}" style="--c:${col}" onclick="event.stopPropagation();gotoStory(${i},0,1)"><span>${ico}</span>${esc(lbl)}</button>`}).join('');
   document.getElementById('stMon').hidden=d.gen!=='season';
   document.getElementById('stShuf').hidden=d.gen!=='surprise';
@@ -2251,7 +2275,7 @@ async function gotoStory(di,i,dir){
   if(seq!==storySeq)return;
   const s=d.slides[i],p=storyPlace(s);if(!p){return nextStory()}
   const c=CATS[p.cat]||CATS.scenic;
-  history.replaceState(null,'',location.pathname+location.search+'#story='+(d.gen==='season'?'season-'+MON3[d.month]:d.id));
+  if(d.gen!=='trip')history.replaceState(null,'',location.pathname+location.search+'#story='+(d.gen==='season'?'season-'+MON3[d.month]:d.id));
   // Background: a new layer crossfades over the old one
   const stage=document.getElementById('stStage'),bg=document.createElement('div');
   bg.className='st-bg';bg.style.setProperty('--c',c.color);
@@ -2271,7 +2295,8 @@ async function gotoStory(di,i,dir){
     +`<h2>${esc(s.title||p.name)}</h2>`
     +`<div class="st-line">${esc(s.line||p.desc)}</div>`
     +`<div class="st-meta"><div>${PIN_SVG}${rail?'On the map: ':''}${s.title&&s.title!==p.name?esc(p.name)+', ':''}${esc(p.state)}</div>${season?`<div>${SVG_CAL}Best <b>${esc(season)}</b></div>`:''}${storyHubsHTML(p)}</div>`
-    +`<div class="st-acts"><button class="st-map" onclick="event.stopPropagation();storyShowOnMap()">${PIN_SVG}Show on map</button><button class="st-add${inTrip(p)?' in':''}" onclick="event.stopPropagation();storyToggleTrip(this)">${inTrip(p)?'✓ In your trip':'+ Add to trip'}</button></div>`;
+    +(d.gen==='trip'?`<div class="st-acts"><button class="st-map" onclick="event.stopPropagation();closeStory()">${SVG_BACK}Back to plan</button><button class="st-add st-use" onclick="event.stopPropagation();storyUsePlan()">Use this plan →</button></div>`
+    :`<div class="st-acts"><button class="st-map" onclick="event.stopPropagation();storyShowOnMap()">${PIN_SVG}Show on map</button><button class="st-add${inTrip(p)?' in':''}" onclick="event.stopPropagation();storyToggleTrip(this)">${inTrip(p)?'✓ In your trip':'+ Add to trip'}</button></div>`);
   card.classList.add('out');void card.offsetWidth;card.style.setProperty('--dir',dir<0?-1:1);card.classList.remove('out');
   renderStoryChrome();
   // Warm the next photo
@@ -2280,7 +2305,7 @@ async function gotoStory(di,i,dir){
 function nextStory(){
   const d=storyDecks[story.deck];
   if(story.i<d.slides.length-1)gotoStory(story.deck,story.i+1,1);
-  else if(story.deck<storyDecks.length-1)gotoStory(story.deck+1,0,1);
+  else if(story.deck<storyDecks.length-1&&d.gen!=='trip')gotoStory(story.deck+1,0,1);
   else{setStoryPaused(true);document.querySelector('.st-bar.cur')?.classList.replace('cur','done')}
 }
 function prevStory(){
@@ -2297,6 +2322,7 @@ function curStoryPlace(){const s=storyDecks[story.deck].slides[story.i];return s
 async function storyShowOnMap(){
   const p=curStoryPlace();if(!p)return;
   closeStory();
+  if(!document.getElementById('designer').hidden)closeDesigner();
   if(!activeCats.has(p.cat))activeCats.add(p.cat);
   if(selectedState&&selectedState!==p.stateCode){selectedState='';document.getElementById('stateSelect').value='';syncStateStoryBtn()}
   const si=document.getElementById('searchInput');if(si.value)si.value='';
@@ -3321,7 +3347,7 @@ function dzResultHTML(P){
   if(P.back&&P.back.min)roadKm+=km(P.stops[P.stops.length-1].p,P.start)*1.3;
   const reg=DZ_REGIONS[o.region||'all'];
   let h=`<div class="dz-res-head"><small>${o.days}-day plan · ${MONTHS[o.month]}${reg.s?' · '+reg.label:''} · ${P.start?(P.round?'round trip from ':'from ')+esc(P.start.name):'best area for the month'} · ${DZ_PACE[o.pace].label.toLowerCase()} pace</small>
-    <div class="dz-stats"><div><b>${st.length}</b><span>place${st.length>1?'s':''}</span></div><div><b>${states.size}</b><span>state${states.size>1?'s':''}</span></div><div><b>≈${fmtKm(roadKm)}</b><span>by road</span></div>${tr?`<div><b>${tr}</b><span>train${tr>1?'s':''}</span></div>`:''}${fl?`<div><b>${fl}</b><span>flight${fl>1?'s':''}</span></div>`:''}</div>${P.note?`<p class="dz-warn">${esc(P.note)}</p>`:''}${dzMissHTML(P)}</div>${dzMapSVG(P)}<ol class="dz-plan">`;
+    <div class="dz-stats"><div><b>${st.length}</b><span>place${st.length>1?'s':''}</span></div><div><b>${states.size}</b><span>state${states.size>1?'s':''}</span></div><div><b>≈${fmtKm(roadKm)}</b><span>by road</span></div>${tr?`<div><b>${tr}</b><span>train${tr>1?'s':''}</span></div>`:''}${fl?`<div><b>${fl}</b><span>flight${fl>1?'s':''}</span></div>`:''}</div>${P.note?`<p class="dz-warn">${esc(P.note)}</p>`:''}${dzMissHTML(P)}<button type="button" class="dz-playall" data-play="">${SVG_PLAY}<span>Preview the trip as stories</span></button></div>${dzMapSVG(P)}<ol class="dz-plan">`;
   let prev=P.start;
   P.days.forEach((day,i)=>{
     let move='';
@@ -3331,7 +3357,7 @@ function dzResultHTML(P){
     else move=`<span class="dz-move">${SVG_CAR}All close by</span>`;
     const first=day.stops[0];
     const tools=`<div class="dz-dtools">${day.hop?'':`<button type="button" class="dz-dt" data-a="redo" data-d="${i}" title="${day.rest?'Fill this day with places nearby':'Different places for this day'}">${SVG_REDO}<span>${day.rest?'Fill this day':'New places'}</span></button>`}<button type="button" class="dz-dt" data-a="add" data-d="${i}" title="Add a day after Day ${i+1}"${P.days.length>=DZ_MAXDAYS?' disabled':''}>${SVG_PLUS}<span>Add a day</span></button>${P.days.length>1?`<button type="button" class="dz-dt rm" data-a="drop" data-d="${i}" title="Drop Day ${i+1}">${SVG_X}<span>Drop day</span></button>`:''}</div>`;
-    h+=`<li class="dz-day${day===P.flashDay?' fresh-day':''}" data-d="${i}" style="animation-delay:${Math.min(i,12)*45}ms;--dc:${dzDayCol(i)}"><div class="dz-ph"${first?` data-k="${esc(first.k)}" style="--c:${CATS[first.p.cat].color}"`:''}>${first?ICONS[first.p.cat]:MOON_SVG}</div>
+    h+=`<li class="dz-day${day===P.flashDay?' fresh-day':''}" data-d="${i}" style="animation-delay:${Math.min(i,12)*45}ms;--dc:${dzDayCol(i)}">${dzTileHTML(day,i)}
       <div class="dz-dbody"><div class="dz-dh"><b><s></s>Day ${i+1}</b><span>${esc(dzDayTitle(day,i,P))}</span></div>${move}
       ${day.stops.length?`<ul>${day.stops.map((c,j)=>{const b=bestMonths(c.p.best),arr=day.hop&&j===0;return `<li class="${c.k===P.flash?'fresh':''}" style="--c:${CATS[c.p.cat].color}"><i></i><div class="dz-pt"><b>${esc(c.p.name)}</b><span>${P.mustKeys&&P.mustKeys.has(c.k)?'<strong class="dz-mtag">★ Must-see</strong> ':''}${CATS[c.p.cat].label} · ${esc(c.p.state)}${b.size&&(b.size<=4||!b.has(P.o.month))?` · <em${b.has(P.o.month)?'':' class="off"'}>best ${esc(c.p.best)}</em>`:''}</span>${c.p.desc?`<p>${esc(c.p.desc)}</p>`:''}</div><div class="dz-acts"><button class="dz-swap" data-d="${i}" data-s="${j}" title="Something else here" aria-label="Swap ${esc(c.p.name)} for something else">${SVG_SWAP}</button>${arr?'':`<button class="dz-rm" data-d="${i}" data-s="${j}" title="Remove from the plan" aria-label="Remove ${esc(c.p.name)}">${SVG_X}</button>`}</div></li>`}).join('')}</ul>`:''}${tools}</div></li>`;
     if(day.stops.length)prev=day.stops[day.stops.length-1].p;
@@ -3341,12 +3367,46 @@ function dzResultHTML(P){
   h+=`</ol><p class="dz-note">Tap ${SVG_SWAP} for something else in that slot, or ${SVG_X} to drop a place; under each day, ${SVG_REDO} gives that day new places, ${SVG_PLUS} adds a day after it. Built from ${P.pool} places that suit ${MONTHS[o.month]} and your interests. Drive times here are rough; My trip fetches real road routes. Trains and flights name the nearest stations and airports only — check IRCTC and airlines for actual services.${P.days[0].hop&&P.days[0].hop.city||P.back?' Getting there from and back to your start city is shown here only; My trip begins at the first place.':''}</p>`;
   return h;
 }
+// Day tile: a photo collage of up to three of the day's places (tap → that day as stories)
+function dzTileHTML(day,i){
+  const first=day.stops[0];
+  if(!first)return `<div class="dz-ph">${MOON_SVG}</div>`;
+  const cells=day.stops.slice(0,3),more=day.stops.length-cells.length;
+  return `<button type="button" class="dz-ph n${cells.length}" data-play="${i}" style="--c:${CATS[first.p.cat].color}" title="Play Day ${i+1} as stories" aria-label="Play Day ${i+1} as photo stories">${cells.map((c,j)=>`<span class="dz-cell" data-k="${esc(c.k)}" data-s="${j}" style="--c:${CATS[c.p.cat].color}">${ICONS[c.p.cat]}</span>`).join('')}${more>0?`<em class="dz-more">+${more}</em>`:''}<i class="dz-pplay">${SVG_PLAY}</i></button>`;
+}
 async function dzPhotos(){
-  for(const el of document.querySelectorAll('#dzBody .dz-ph[data-k]')){
+  for(const el of document.querySelectorAll('#dzBody .dz-cell[data-k]')){
     const p=findPlace(el.dataset.k);if(!p)continue;
     getImage(p).then(urls=>{if(!urls||!el.isConnected)return;const im=new Image();im.alt='';im.onload=()=>im.classList.add('ok');imgChain(im,urls,()=>im.remove());el.appendChild(im)});
   }
 }
+// Hovering a place in a day lights up its photo in the collage
+document.addEventListener('pointerover',e=>{
+  const li=e.target.closest&&e.target.closest('#dzBody .dz-day ul li');
+  document.querySelectorAll('#dzBody .dz-ph.focus').forEach(t=>{if(!li||!li.closest('.dz-day').contains(t)){t.classList.remove('focus');t.querySelectorAll('.dz-cell.on').forEach(c=>c.classList.remove('on'))}});
+  if(!li)return;const tile=li.closest('.dz-day').querySelector('.dz-ph'),j=[...li.parentNode.children].indexOf(li);
+  if(!tile||j>2)return;tile.classList.add('focus');tile.querySelectorAll('.dz-cell').forEach(c=>c.classList.toggle('on',+c.dataset.s===j));
+});
+// The plan as a story deck: every place, day by day, full-bleed
+function dzStoryDeck(){
+  const P=dzPlan;if(!P)return null;
+  const slides=[];
+  P.days.forEach((day,i)=>day.stops.forEach((c,j)=>{const cur=curatedLine(c.k);slides.push({key:c.k,line:(cur&&cur.line)||c.p.desc,season:c.p.best,why:`Day ${i+1}${day.stops.length>1?' · '+(j+1)+' of '+day.stops.length:''}`,day:i})}));
+  if(!slides.length)return null;
+  const st=new Set(P.stops.map(c=>c.p.stateCode));
+  return {id:'mytrip',gen:'trip',ready:true,title:`Your ${P.o.days}-day trip`,kicker:`${MONTHS[P.o.month]} · ${slides.length} places · ${st.size} state${st.size>1?'s':''}`,slides};
+}
+function dzPlayStory(day){
+  const d=dzStoryDeck();if(!d)return;
+  storyDecks=storyDecks.filter(x=>x.gen!=='trip');storyDecks.unshift(d);
+  const at=day==null?0:Math.max(0,d.slides.findIndex(s=>s.day===day));
+  openStory('mytrip',at);
+}
+document.addEventListener('click',e=>{
+  const t=e.target.closest&&e.target.closest('#dzBody [data-play]');if(!t)return;
+  e.preventDefault();dzPlayStory(t.dataset.play===''?null:+t.dataset.play);
+});
+function storyUsePlan(){closeStory();setTimeout(dzApply,120)}
 async function dzBuild(shuffle){
   if(!airports.length)await loadHubs();
   dzSeed=shuffle?dzSeed+1:(Date.now()%100000);
@@ -3384,7 +3444,7 @@ function closeDesigner(){
   if(location.hash==='#design')history.replaceState(null,'',location.pathname+location.search);
   if(dzPrevFocus&&dzPrevFocus.focus)dzPrevFocus.focus();
 }
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.getElementById('designer').hidden)closeDesigner()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.getElementById('designer').hidden&&document.getElementById('story').hidden)closeDesigner()});
 
 init().then(initTrip).then(loadStories).then(()=>{tagGreatTrainCards();if(location.hash==='#design')openDesigner()});
 </script>
