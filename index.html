@@ -565,6 +565,10 @@ button.pg-row{width:100%;border:0;font:inherit;text-align:left;cursor:pointer;ma
 .pg-row.toy{background:linear-gradient(90deg,#FBF3E2,#FFFCF6)}
 .pg-row.toy .pg-t{white-space:normal}
 .pg-row.toy .pg-t em{display:block;font-style:normal;font-size:9.5px;color:var(--ink-light);margin-top:1px}
+.pg-row.far .pg-t{white-space:normal}
+.pg-row.far .pg-t em{display:block;font-style:normal;font-size:9.5px;color:#8A4A1F;margin-top:1px;line-height:1.3}
+.pg-row.far .pg-km{color:#8A4A1F}
+.pc-hubs .r.far{color:#8A4A1F}.pc-hubs .r.far b{color:#8A4A1F}
 .pg-ic.gt{background:linear-gradient(135deg,#1F5F8B,#24508F)}
 .pg-row.gt{background:linear-gradient(90deg,#E9F0F8,#FAFCFE)}
 .pg-row.gt .pg-t{white-space:normal}
@@ -2638,12 +2642,19 @@ function openNearPlace(k){const p=findPlace(k);if(p)focusPlace(p)}
 const approxKm=d=>d<1?'<1 km':'~'+Math.round(d).toLocaleString('en-IN')+' km';
 const flightsUrl=a=>'https://www.google.com/travel/flights?q='+encodeURIComponent('Flights to '+a.iata);
 const transitUrl=s=>`https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lng}&travelmode=transit`;
+/* A railhead more than FAR_RAIL km away (straight line): flag it, and point to a much closer airport if there is one */
+const FAR_RAIL=60;
+function farNote(n){
+  let t='Far from the railway — plan the last stretch by road';
+  if(n.air&&n.air.d<n.rail.d-40)t+=' · '+n.air.h.iata+' airport is closer';
+  return t;
+}
 function gettingThereHTML(p){
   const n=nearestHubs(p);if(!n)return '';
   const KM_NOTE='<i>straight line</i>';
   let h='<div class="pop-go">';
   if(n.air)h+=`<a class="pg-row" href="${flightsUrl(n.air.h)}" target="_blank" rel="noopener" title="Search flights to ${esc(n.air.h.iata)} (Google Flights)"><span class="pg-ic air">${SVG_PLANE}</span><span class="pg-t"><small>Nearest airport${n.air.h.intl?'<span class="pg-badge">International</span>':''}</small><b>${esc(n.air.h.iata)}</b>${esc(n.air.h.city)}</span><span class="pg-km">${approxKm(n.air.d)}${KM_NOTE}</span></a>`;
-  if(n.rail)h+=`<a class="pg-row" href="${transitUrl(n.rail.h)}" target="_blank" rel="noopener" title="${esc(n.rail.h.name)} — directions by public transport (Google Maps)"><span class="pg-ic rail">${SVG_TRAIN}</span><span class="pg-t"><small>Nearest railhead${isJn(n.rail.h)?'<span class="pg-badge jn">Junction</span>':''}${zoneBadge(n.rail.h)}</small><b>${esc(n.rail.h.code)}</b>${esc(n.rail.h.name)}</span><span class="pg-km">${approxKm(n.rail.d)}${KM_NOTE}</span></a>`;
+  if(n.rail){const far=n.rail.d>FAR_RAIL;h+=`<a class="pg-row${far?' far':''}" href="${transitUrl(n.rail.h)}" target="_blank" rel="noopener" title="${esc(n.rail.h.name)} — directions by public transport (Google Maps)"><span class="pg-ic rail">${SVG_TRAIN}</span><span class="pg-t"><small>Nearest railhead${isJn(n.rail.h)?'<span class="pg-badge jn">Junction</span>':''}${zoneBadge(n.rail.h)}</small><b>${esc(n.rail.h.code)}</b>${esc(n.rail.h.name)}${far?`<em>${esc(farNote(n))}</em>`:''}</span><span class="pg-km">${approxKm(n.rail.d)}${KM_NOTE}</span></a>`;}
   else if(n.island)h+=`<div class="pg-row"><span class="pg-ic none">${SVG_TRAIN}</span><span class="pg-t"><small>Railway</small>No rail link — fly or take a ship</span></div>`;
   const t=nearToyTrain(p);
   if(t){const story=toyDeckHas(t);
@@ -2654,7 +2665,7 @@ function gettingThereHTML(p){
 }
 function cardHubsHTML(p){
   const n=nearestHubs(p);if(!n)return '';
-  return `<div class="pc-hubs">${n.air?`<span class="a" title="Nearest airport: ${esc(n.air.h.name)} (straight-line distance)">${SVG_PLANE}<b>${esc(n.air.h.iata)}</b>${approxKm(n.air.d)}</span>`:''}${n.rail?`<span class="r" title="Nearest railhead: ${esc(n.rail.h.name)} (straight-line distance)">${SVG_TRAIN}<b>${esc(n.rail.h.code)}</b>${approxKm(n.rail.d)}</span>`:n.island?`<span class="r">${SVG_TRAIN}no rail</span>`:''}${nearToyTrain(p)?`<span class="t" title="${esc(nearToyTrain(p).name)} nearby">${SVG_TOY}Toy train</span>`:nearGreatTrains(p).length?`<span class="g" title="Famous train: ${esc(nearGreatTrains(p)[0].s.title)}">${SVG_TRAIN}Famous train</span>`:''}</div>`;
+  return `<div class="pc-hubs">${n.air?`<span class="a" title="Nearest airport: ${esc(n.air.h.name)} (straight-line distance)">${SVG_PLANE}<b>${esc(n.air.h.iata)}</b>${approxKm(n.air.d)}</span>`:''}${n.rail?`<span class="r${n.rail.d>FAR_RAIL?' far':''}" title="Nearest railhead: ${esc(n.rail.h.name)} (straight-line distance)${n.rail.d>FAR_RAIL?' — far from the railway, last stretch by road':''}">${SVG_TRAIN}<b>${esc(n.rail.h.code)}</b>${approxKm(n.rail.d)}</span>`:n.island?`<span class="r">${SVG_TRAIN}no rail</span>`:''}${nearToyTrain(p)?`<span class="t" title="${esc(nearToyTrain(p).name)} nearby">${SVG_TOY}Toy train</span>`:nearGreatTrains(p).length?`<span class="g" title="Famous train: ${esc(nearGreatTrains(p)[0].s.title)}">${SVG_TRAIN}Famous train</span>`:''}</div>`;
 }
 /* Story slides: one frosted "Getting there" chip — nearest airport and major railhead, straight line */
 function storyHubsHTML(p){

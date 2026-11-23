@@ -916,6 +916,27 @@
    "city": "Keshod (Junagadh)",
    "lat": 21.3169,
    "lng": 70.2703
+  },
+  {
+   "iata": "PXN",
+   "name": "Purnea Airport",
+   "city": "Purnia",
+   "lat": 25.7597,
+   "lng": 87.41
+  },
+  {
+   "iata": "AHA",
+   "name": "Maa Mahamaya Airport",
+   "city": "Ambikapur",
+   "lat": 22.9873,
+   "lng": 83.1961
+  },
+  {
+   "iata": "HSS",
+   "name": "Maharaja Agrasen Airport",
+   "city": "Hisar",
+   "lat": 29.1792,
+   "lng": 75.7553
   }
  ]
 }

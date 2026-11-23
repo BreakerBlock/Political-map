@@ -2031,6 +2031,22 @@
    "lat": 26.4655,
    "lng": 94.0027,
    "zone": "NFR"
+  },
+  {
+   "code": "SVQ",
+   "name": "Sivok Junction",
+   "city": "Sevoke (Siliguri)",
+   "lat": 26.8806,
+   "lng": 88.4689,
+   "zone": "NFR"
+  },
+  {
+   "code": "MLN",
+   "name": "Mailani Junction",
+   "city": "Mailani (Lakhimpur Kheri)",
+   "lat": 28.284,
+   "lng": 80.3482,
+   "zone": "NER"
   }
  ],
  "heritage": [
