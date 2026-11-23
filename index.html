@@ -1213,6 +1213,12 @@ function declutterLabels(){
 // A trailing second pass catches clusters that settle after the first one (e.g. after state data loads)
 let _dcT=0,_dcT2=0;function declutterSoon(ms){clearTimeout(_dcT);clearTimeout(_dcT2);_dcT=setTimeout(declutterLabels,ms==null?120:ms);_dcT2=setTimeout(declutterLabels,600)}
 map.on('zoomend',syncLabels);map.on('moveend resize',()=>declutterSoon());
+// While a popup is open, don't snap the map back inside maxBounds: autopan often has to move the view
+// past the northern edge to fit a tall popup (e.g. a Bihar or Arunachal pin on the all-India view), and
+// the snap-back fought the autopan — the map bounced and the popup ended up with its photo cut off.
+// The bounds come back once no popup is open (the next move eases the view back inside).
+map.on('popupopen',()=>map.off('moveend',map._panInsideMaxBounds));
+map.on('popupclose',()=>setTimeout(()=>{if(!map._popup||!map.hasLayer(map._popup)){map.off('moveend',map._panInsideMaxBounds);map.on('moveend',map._panInsideMaxBounds)}},0));
 clusters.on('animationend',()=>declutterSoon(30));
 // Fade labels out while zooming so they never sit stale over freshly split clusters
 map.on('zoomstart',()=>labelPane.classList.add('zooming'));
