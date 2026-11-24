@@ -397,6 +397,61 @@
    "desc": "Adil Shahi mausoleum with one of the world's largest domes and a whispering gallery",
    "wiki": "Gol_Gumbaz",
    "best": "Oct\u2013Feb"
+  },
+  {
+   "name": "Skandagiri Night Trek",
+   "cat": "adventure",
+   "lat": 13.433,
+   "lng": 77.717,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Hill fort near Chikkaballapur, climbed before dawn for sunrise above clouds",
+   "wiki": "Skandagiri",
+   "best": "Sep\u2013Feb"
+  },
+  {
+   "name": "Savandurga",
+   "cat": "adventure",
+   "lat": 12.919,
+   "lng": 77.292,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "One of Asia's largest monolith hills \u2014 climbs and rock-climbing",
+   "wiki": "Savandurga",
+   "best": "Oct\u2013Feb"
+  },
+  {
+   "name": "Chikmagalur",
+   "cat": "scenic",
+   "lat": 13.325,
+   "lng": 75.792,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Coffee country in the Western Ghats, where Indian coffee began",
+   "wiki": "Chikmagalur",
+   "best": "Sep\u2013Mar"
+  },
+  {
+   "name": "Murudeshwar",
+   "cat": "religious",
+   "lat": 14.094,
+   "lng": 74.484,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Seaside temple with a 37 m Shiva statue and a towering gopura",
+   "wiki": "Murdeshwar",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Nandi Hills",
+   "cat": "scenic",
+   "lat": 13.386,
+   "lng": 77.701,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Hill fortress above a sea of clouds at sunrise near Bengaluru",
+   "wiki": "Nandi_Hills,_India",
+   "best": "Sep\u2013Feb"
   }
  ]
 }

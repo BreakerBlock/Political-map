@@ -373,6 +373,17 @@
    "desc": "Coffee-country hill station at 1,515 m in the Shevaroy Hills",
    "wiki": "Yercaud",
    "best": "Oct\u2013Jun"
+  },
+  {
+   "name": "Kalakshetra, Chennai",
+   "cat": "arts",
+   "lat": 12.988,
+   "lng": 80.265,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Bharatanatyam academy founded in 1936 by Rukmini Devi Arundale",
+   "wiki": "Kalakshetra_Foundation",
+   "best": "Dec\u2013Jan"
   }
  ]
 }

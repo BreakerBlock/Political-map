@@ -291,6 +291,39 @@
    "desc": "Glacial lake at the source of the Beas, trekked from Dhundi in Solang Valley",
    "wiki": "Beas_River",
    "best": "May\u2013Jun, Sep\u2013Oct"
+  },
+  {
+   "name": "Prashar Lake Trek",
+   "cat": "adventure",
+   "lat": 31.754,
+   "lng": 77.101,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Lake with a floating island and a three-tiered pagoda temple",
+   "wiki": "Prashar_Lake",
+   "best": "Apr\u2013Jun, Sep\u2013Nov"
+  },
+  {
+   "name": "Bhrigu Lake Trek",
+   "cat": "adventure",
+   "lat": 32.293,
+   "lng": 77.242,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "High alpine lake above Manali, named after sage Bhrigu",
+   "wiki": "Bhrigu_Lake",
+   "best": "Jun\u2013Oct"
+  },
+  {
+   "name": "Kangra Miniature Painting",
+   "cat": "arts",
+   "lat": 32.215,
+   "lng": 76.319,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Delicate Pahari miniatures \u2014 see them at the Kangra Art Museum",
+   "wiki": "Kangra_painting",
+   "best": "Mar\u2013Jun, Sep\u2013Nov"
   }
  ]
 }

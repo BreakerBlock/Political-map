@@ -301,6 +301,50 @@
    "desc": "Oak-and-rhododendron forest ridge with birdlife and a Zero Point Himalayan view",
    "wiki": "Binsar_Wildlife_Sanctuary",
    "best": "Oct\u2013Jun"
+  },
+  {
+   "name": "Dodital Trek",
+   "cat": "adventure",
+   "lat": 30.898,
+   "lng": 78.525,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Forest trek to a 3,657 m lake in Uttarkashi district",
+   "wiki": "Dodital",
+   "best": "Apr\u2013Jun, Sep\u2013Nov"
+  },
+  {
+   "name": "Satopanth Tal Trek",
+   "cat": "adventure",
+   "lat": 30.744,
+   "lng": 79.357,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Glacial lake at ~4,600 m beyond Mana, above Badrinath",
+   "wiki": "Satopanth_Tal",
+   "best": "May\u2013Jun, Sep\u2013Oct"
+  },
+  {
+   "name": "Bhimtal",
+   "cat": "scenic",
+   "lat": 29.343,
+   "lng": 79.559,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Largest lake in Kumaon, with an island aquarium",
+   "wiki": "Bhimtal_Lake",
+   "best": "Mar\u2013Jun, Sep\u2013Nov"
+  },
+  {
+   "name": "Lansdowne",
+   "cat": "scenic",
+   "lat": 29.838,
+   "lng": 78.682,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Quiet pine-clad cantonment, home of the Garhwal Rifles",
+   "wiki": "Lansdowne,_India",
+   "best": "Mar\u2013Jun, Sep\u2013Nov"
   }
  ]
 }

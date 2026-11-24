@@ -211,6 +211,50 @@
    "desc": "Class I\u2013III rafting runs on the Teesta at Teesta Bazaar, Kalimpong",
    "wiki": "Teesta_Bazaar",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Bankura Horse, Panchmura",
+   "cat": "arts",
+   "lat": 22.967,
+   "lng": 87.167,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Village of potters who make the long-necked terracotta horse",
+   "wiki": "Bankura_horse",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Chhau Masks, Charida",
+   "cat": "arts",
+   "lat": 23.205,
+   "lng": 86.031,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Village of mask-makers for Purulia's Chhau dance",
+   "wiki": "Chhau_mask",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Kalimpong",
+   "cat": "scenic",
+   "lat": 27.067,
+   "lng": 88.467,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Hill town of monasteries, nurseries and Kanchenjunga views",
+   "wiki": "Kalimpong",
+   "best": "Mar\u2013May, Oct\u2013Dec"
+  },
+  {
+   "name": "Mayapur",
+   "cat": "religious",
+   "lat": 23.438,
+   "lng": 88.393,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "ISKCON's world headquarters on the Ganga, birthplace of Chaitanya",
+   "wiki": "Temple_of_the_Vedic_Planetarium",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

@@ -250,6 +250,11 @@
      "key": "UK|Tehri Lake Water Sports",
      "line": "Jet-ski and kayak on a Himalayan reservoir.",
      "season": "Oct\u2013Jun"
+    },
+    {
+     "key": "KA|Savandurga",
+     "line": "Scramble up one of Asia's largest monolith hills, an hour from Bengaluru.",
+     "season": "Oct\u2013Feb"
     }
    ]
   },
@@ -376,6 +381,11 @@
      "key": "HR|International Gita Mahotsav",
      "line": "Aartis and lamps around Brahma Sarovar, where the Gita is said to have been spoken.",
      "season": "Nov\u2013Dec"
+    },
+    {
+     "key": "MH|Kala Ghoda Arts Festival",
+     "line": "Nine days of free art, music and talks fill the lanes of Mumbai's art district.",
+     "season": "Feb"
     }
    ]
   },
@@ -458,6 +468,11 @@
      "key": "GJ|Marine National Park, Gulf of Kutch",
      "line": "At low tide, walk out over the Narara reef to find corals and sea creatures in the pools.",
      "season": "Nov\u2013Feb"
+    },
+    {
+     "key": "KL|Kumarakom Bird Sanctuary",
+     "line": "Glide past herons and cormorants on the shore of Vembanad Lake.",
+     "season": "Nov\u2013Mar"
     }
    ]
   },
@@ -532,6 +547,16 @@
      "key": "UK|Gangotri",
      "line": "Pray at the Ganga's mountain temple, a day's walk from its glacier source.",
      "season": "May\u2013Jun \u00b7 Sep\u2013Oct"
+    },
+    {
+     "key": "KA|Murudeshwar",
+     "line": "A 37 m Shiva statue gazes out over the Arabian Sea from a temple headland.",
+     "season": "Oct\u2013Mar"
+    },
+    {
+     "key": "WB|Mayapur",
+     "line": "ISKCON's riverside headquarters on the Ganga, where Chaitanya Mahaprabhu was born.",
+     "season": "Oct\u2013Mar"
     }
    ]
   },
@@ -714,6 +739,21 @@
      "key": "MH|Matheran",
      "line": "Ride the toy train up to a hill station with no cars at all.",
      "season": "Oct\u2013May"
+    },
+    {
+     "key": "KA|Nandi Hills",
+     "line": "Drive up before dawn near Bengaluru to watch the sun rise over a sea of clouds.",
+     "season": "Sep\u2013Feb"
+    },
+    {
+     "key": "KA|Chikmagalur",
+     "line": "Stay on a coffee estate in the hills where India's coffee story began.",
+     "season": "Sep\u2013Mar"
+    },
+    {
+     "key": "WB|Kalimpong",
+     "line": "Monasteries, flower nurseries and Kanchenjunga views in a quieter cousin of Darjeeling.",
+     "season": "Oct\u2013Dec"
     }
    ]
   },
@@ -932,6 +972,21 @@
      "key": "GJ|Ajrakh Block Printing, Bhuj",
      "line": "See indigo and madder cloth printed and washed at Ajrakhpur.",
      "season": "Nov\u2013Feb"
+    },
+    {
+     "key": "KL|Kochi-Muziris Biennale",
+     "line": "Old spice warehouses in Fort Kochi turn into India's biggest contemporary art show \u2014 every other winter.",
+     "season": "Dec\u2013Mar"
+    },
+    {
+     "key": "TN|Kalakshetra, Chennai",
+     "line": "Watch Bharatanatyam taught under the trees at Rukmini Devi's 1936 academy by the sea.",
+     "season": "Dec\u2013Jan"
+    },
+    {
+     "key": "WB|Bankura Horse, Panchmura",
+     "line": "Meet the potters of Panchmura, home of the long-necked terracotta Bankura horse.",
+     "season": "Oct\u2013Mar"
     }
    ]
   },

@@ -349,6 +349,39 @@
    "desc": "Trek through tea and grassland to a 2,640 m peak above Munnar's clouds",
    "wiki": "Meesapulimala",
    "best": "Sep\u2013Mar"
+  },
+  {
+   "name": "Thenmala Ecotourism",
+   "cat": "adventure",
+   "lat": 8.95,
+   "lng": 77.067,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "India's first planned ecotourism centre \u2014 rope bridge, trails, boating",
+   "wiki": "Thenmala",
+   "best": "Sep\u2013Mar"
+  },
+  {
+   "name": "Kochi-Muziris Biennale",
+   "cat": "arts",
+   "lat": 9.966,
+   "lng": 76.242,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "India's biggest contemporary art show, in Fort Kochi's warehouses (biennial)",
+   "wiki": "Kochi-Muziris_Biennale",
+   "best": "Dec\u2013Mar"
+  },
+  {
+   "name": "Kumarakom Bird Sanctuary",
+   "cat": "fauna",
+   "lat": 9.5,
+   "lng": 76.517,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Lakeside sanctuary on Vembanad, once the Baker estate",
+   "wiki": "Kumarakom_Bird_Sanctuary",
+   "best": "Nov\u2013Mar"
   }
  ]
 }

@@ -342,6 +342,28 @@
    "desc": "Clear-water Konkan beach where the Karli River meets the Arabian Sea, near Malvan",
    "wiki": "Tarkarli",
    "best": "Oct\u2013May"
+  },
+  {
+   "name": "Kalavantin Durg Trek",
+   "cat": "adventure",
+   "lat": 18.983,
+   "lng": 73.22,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Rock-cut steps up a 686 m pinnacle beside Prabalgad",
+   "wiki": "Kalavantin_Durg",
+   "best": "Oct\u2013Feb"
+  },
+  {
+   "name": "Kala Ghoda Arts Festival",
+   "cat": "festivals",
+   "lat": 18.931,
+   "lng": 72.833,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Nine days of art, music and talks in Mumbai's art district",
+   "wiki": "Kala_Ghoda_Arts_Festival",
+   "best": "Feb"
   }
  ]
 }

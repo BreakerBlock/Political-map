@@ -431,6 +431,28 @@
    "desc": "Ruined 16th-century fort town, famous for its legends of a curse",
    "wiki": "Bhangarh_Fort",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Phad Painting, Shahpura",
+   "cat": "arts",
+   "lat": 25.633,
+   "lng": 74.933,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Scroll paintings of folk deities by the Joshi painters of Shahpura",
+   "wiki": "Phad_painting",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Kota Doria, Kaithoon",
+   "cat": "arts",
+   "lat": 25.141,
+   "lng": 75.968,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Featherlight checked saris handwoven on pit looms",
+   "wiki": "Kota_doria",
+   "best": "Oct\u2013Mar"
   }
  ]
 }
