@@ -255,6 +255,50 @@
    "desc": "ISKCON's world headquarters on the Ganga, birthplace of Chaitanya",
    "wiki": "Temple_of_the_Vedic_Planetarium",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Joynagar Moa",
+   "cat": "cuisine",
+   "lat": 22.1752,
+   "lng": 88.4201,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "GI-tagged winter sweet of nolen gur (date-palm jaggery) and Kanakchur puffed rice",
+   "wiki": "Jaynagarer_Moa",
+   "best": "Dec\u2013Jan"
+  },
+  {
+   "name": "Langcha, Shaktigarh",
+   "cat": "cuisine",
+   "lat": 23.2167,
+   "lng": 87.9667,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "The fried syrupy langcha's home town \u2014 sweet shops line NH 19",
+   "wiki": "Lyangcha",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Kathi Roll, New Market",
+   "cat": "cuisine",
+   "lat": 22.5603,
+   "lng": 88.3531,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Kolkata's kathi roll, said to have begun at Nizam's by New Market (founded 1932)",
+   "wiki": "Kati_roll",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Indian Museum, Kolkata",
+   "cat": "arts",
+   "lat": 22.5581,
+   "lng": 88.3508,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Founded 1814 \u2014 Asia's oldest museum, with the Bharhut gateway and an Egyptian mummy",
+   "wiki": "Indian_Museum",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

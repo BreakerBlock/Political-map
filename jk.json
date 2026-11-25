@@ -161,6 +161,61 @@
    "desc": "Glide over pine forests from the meadows of this Jammu hill station",
    "wiki": "Patnitop",
    "best": "Apr\u2013Oct"
+  },
+  {
+   "name": "Kahwa, Srinagar",
+   "cat": "cuisine",
+   "lat": 34.09,
+   "lng": 74.79,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Kashmiri green tea brewed with saffron, cinnamon and cardamom, served with almonds",
+   "wiki": "Kahwah",
+   "best": "All year"
+  },
+  {
+   "name": "Gangabal Lake Trek",
+   "cat": "adventure",
+   "lat": 34.4319,
+   "lng": 74.9258,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Alpine lake at 3,576 m below Mt Harmukh, the high point of the Great Lakes trek",
+   "wiki": "Gangabal_Lake",
+   "best": "Jul\u2013Sep"
+  },
+  {
+   "name": "Hazratbal Shrine",
+   "cat": "religious",
+   "lat": 34.1292,
+   "lng": 74.8422,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "White-marble shrine on Dal Lake's north shore holding a relic of the Prophet",
+   "wiki": "Hazratbal_Shrine",
+   "best": "Apr\u2013Oct"
+  },
+  {
+   "name": "Martand Sun Temple",
+   "cat": "history",
+   "lat": 33.7456,
+   "lng": 75.2203,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "8th-century sun temple of Lalitaditya Muktapida, in ruins on the Mattan plateau",
+   "wiki": "Martand_Sun_Temple",
+   "best": "Apr\u2013Oct"
+  },
+  {
+   "name": "Gurez Valley",
+   "cat": "scenic",
+   "lat": 34.6333,
+   "lng": 74.8333,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Remote Kishanganga valley at ~2,580 m under the pyramid of Habba Khatoon peak",
+   "wiki": "Gurez",
+   "best": "May\u2013Oct"
   }
  ]
 }

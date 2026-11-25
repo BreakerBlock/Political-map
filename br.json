@@ -185,6 +185,28 @@
    "desc": "GI-tagged 'snake paintings' telling the Bihula\u2013Bishahari legend in pink, green and yellow",
    "wiki": "Manjusha_Art",
    "best": "All year"
+  },
+  {
+   "name": "Barabar Caves",
+   "cat": "history",
+   "lat": 25.005,
+   "lng": 85.063,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "India's oldest rock-cut caves, polished like glass in the Mauryan age",
+   "wiki": "Barabar_Caves",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Bihar Museum",
+   "cat": "arts",
+   "lat": 25.6081,
+   "lng": 85.121,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "Maki & Associates' 2015 museum \u2014 the Didarganj Yakshi and Bihar's deep past",
+   "wiki": "Bihar_Museum",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

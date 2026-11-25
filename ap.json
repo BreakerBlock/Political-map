@@ -170,6 +170,50 @@
    "desc": "GI-tagged gram-flour, jaggery and ghee laddu from Machilipatnam",
    "wiki": "Bandar_laddu",
    "best": "All year"
+  },
+  {
+   "name": "Tirupati Laddu",
+   "cat": "cuisine",
+   "lat": 13.6833,
+   "lng": 79.3472,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "GI-tagged laddu offered at the Tirumala temple since 1715",
+   "wiki": "Tirupati_laddu",
+   "best": "All year"
+  },
+  {
+   "name": "Rushikonda Beach",
+   "cat": "adventure",
+   "lat": 17.7825,
+   "lng": 83.3851,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Golden beach north of Visakhapatnam \u2014 surfing, kayaking and jet-skis",
+   "wiki": "Rushikonda_Beach",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Amaravati Stupa",
+   "cat": "history",
+   "lat": 16.5753,
+   "lng": 80.358,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Satavahana-era stupa, \"the most richly decorated stupa known\", from c. 3rd century BCE",
+   "wiki": "Amaravati_Stupa",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Simhachalam Temple",
+   "cat": "religious",
+   "lat": 17.7664,
+   "lng": 83.2505,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Hilltop Narasimha temple near Vizag, consecrated in 1268 by the Eastern Gangas",
+   "wiki": "Varaha_Lakshmi_Narasimha_temple,_Simhachalam",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

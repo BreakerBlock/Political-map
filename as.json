@@ -151,6 +151,28 @@
    "desc": "The satras of Majuli stage the Krishna Raas Leela over several nights",
    "wiki": "Raslila",
    "best": "Nov"
+  },
+  {
+   "name": "Umananda Temple",
+   "cat": "religious",
+   "lat": 26.1964,
+   "lng": 91.7453,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Shiva temple on Peacock Island in the Brahmaputra, built in 1694 \u2014 reached by ferry",
+   "wiki": "Umananda_Temple",
+   "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Haflong",
+   "cat": "scenic",
+   "lat": 25.169,
+   "lng": 93.016,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Assam's only hill station, above a lake in the Dima Hasao hills",
+   "wiki": "Haflong",
+   "best": "Oct\u2013Apr"
   }
  ]
 }

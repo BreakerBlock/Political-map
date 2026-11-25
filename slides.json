@@ -255,6 +255,11 @@
      "key": "KA|Savandurga",
      "line": "Scramble up one of Asia's largest monolith hills, an hour from Bengaluru.",
      "season": "Oct\u2013Feb"
+    },
+    {
+     "key": "JK|Gangabal Lake Trek",
+     "line": "Camp beside a glacial lake at 3,576 m under the north face of Harmukh.",
+     "season": "Jul\u2013Sep"
     }
    ]
   },
@@ -557,6 +562,11 @@
      "key": "WB|Mayapur",
      "line": "ISKCON's riverside headquarters on the Ganga, where Chaitanya Mahaprabhu was born.",
      "season": "Oct\u2013Mar"
+    },
+    {
+     "key": "AS|Umananda Temple",
+     "line": "Take the ferry to a Shiva temple on a tiny island in the Brahmaputra.",
+     "season": "Oct\u2013Apr"
     }
    ]
   },
@@ -647,6 +657,16 @@
      "key": "GJ|Statue of Unity",
      "line": "Ride up the world's tallest statue for views over the Narmada.",
      "season": "Oct\u2013Mar"
+    },
+    {
+     "key": "BR|Barabar Caves",
+     "line": "Mauryan caves cut into granite and polished to a mirror sheen over 2,000 years ago.",
+     "season": "Oct\u2013Mar"
+    },
+    {
+     "key": "JK|Martand Sun Temple",
+     "line": "The ruins of Lalitaditya's 8th-century sun temple, with the Pir Panjal behind.",
+     "season": "Apr\u2013Oct"
     }
    ]
   },
@@ -754,6 +774,11 @@
      "key": "WB|Kalimpong",
      "line": "Monasteries, flower nurseries and Kanchenjunga views in a quieter cousin of Darjeeling.",
      "season": "Oct\u2013Dec"
+    },
+    {
+     "key": "JK|Gurez Valley",
+     "line": "A hidden Kishanganga valley of log villages beneath Habba Khatoon peak.",
+     "season": "May\u2013Oct"
     }
    ]
   },
@@ -873,6 +898,16 @@
      "key": "MH|Malvani Cuisine, Malvan",
      "line": "Kokum, coconut and the day's catch on the Konkan coast \u2014 finish with sol kadhi.",
      "season": "Oct\u2013May"
+    },
+    {
+     "key": "WB|Joynagar Moa",
+     "line": "Winter-only balls of date-palm jaggery and puffed rice, GI-tagged since 2015.",
+     "season": "Dec\u2013Jan"
+    },
+    {
+     "key": "OD|Dahibara Aloodum, Cuttack",
+     "line": "Curd-soaked vadas drowned in spicy aloo dum \u2014 breakfast on Cuttack's streets.",
+     "season": "Oct\u2013Mar"
     }
    ]
   },
@@ -986,6 +1021,16 @@
     {
      "key": "WB|Bankura Horse, Panchmura",
      "line": "Meet the potters of Panchmura, home of the long-necked terracotta Bankura horse.",
+     "season": "Oct\u2013Mar"
+    },
+    {
+     "key": "GJ|Calico Museum of Textiles",
+     "line": "Centuries of Indian textiles in the Sarabhai family home in Ahmedabad.",
+     "season": "Oct\u2013Mar"
+    },
+    {
+     "key": "WB|Indian Museum, Kolkata",
+     "line": "Asia's oldest museum, founded in 1814 \u2014 from the Bharhut railing to a mummy.",
      "season": "Oct\u2013Mar"
     }
    ]

@@ -173,6 +173,28 @@
    "desc": "One of the five Sikh Takhts, where Guru Gobind Singh compiled the final Guru Granth Sahib",
    "wiki": "Takht_Sri_Damdama_Sahib",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Moorish Mosque, Kapurthala",
+   "cat": "history",
+   "lat": 31.369,
+   "lng": 75.381,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Built 1927\u201330 for Maharaja Jagatjit Singh, modelled on Marrakesh's Koutoubia",
+   "wiki": "Moorish_Mosque,_Kapurthala",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Gurdwara Fatehgarh Sahib",
+   "cat": "religious",
+   "lat": 30.6261,
+   "lng": 76.3966,
+   "state": "Punjab",
+   "stateCode": "PB",
+   "desc": "Where Guru Gobind Singh's youngest sons were martyred in 1705",
+   "wiki": "Gurdwara_Fatehgarh_Sahib",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

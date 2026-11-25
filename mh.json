@@ -364,6 +364,17 @@
    "desc": "Nine days of art, music and talks in Mumbai's art district",
    "wiki": "Kala_Ghoda_Arts_Festival",
    "best": "Feb"
+  },
+  {
+   "name": "CSMVS Museum, Mumbai",
+   "cat": "arts",
+   "lat": 18.9267,
+   "lng": 72.8322,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "The former Prince of Wales Museum (1922) by George Wittet \u2014 Indo-Saracenic treasure house",
+   "wiki": "Chhatrapati_Shivaji_Maharaj_Vastu_Sangrahalaya",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

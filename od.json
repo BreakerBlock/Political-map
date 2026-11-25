@@ -185,6 +185,61 @@
    "desc": "Roadside sweet shops between Bhubaneswar and Cuttack famous for Odisha rasagola",
    "wiki": "Rasgulla",
    "best": "All year"
+  },
+  {
+   "name": "Dahibara Aloodum, Cuttack",
+   "cat": "cuisine",
+   "lat": 20.5236,
+   "lng": 85.7881,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Cuttack's street classic \u2014 curd-soaked vadas with spicy aloo dum and ghuguni",
+   "wiki": "Dahibara_aludam",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Daringbadi",
+   "cat": "scenic",
+   "lat": 19.9072,
+   "lng": 84.1228,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Pine-clad hill station at ~915 m in Kandhamal, with coffee gardens",
+   "wiki": "Daringbadi",
+   "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Dhauli Shanti Stupa",
+   "cat": "history",
+   "lat": 20.1924,
+   "lng": 85.8395,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Hill above the Daya, held to be the Kalinga War site \u2014 Ashokan edicts and a 1972 peace pagoda",
+   "wiki": "Dhauli",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Ratnagiri Buddhist Site",
+   "cat": "history",
+   "lat": 20.6412,
+   "lng": 86.3353,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Monastery ruins from the 6th century CE, with giant Buddha heads",
+   "wiki": "Ratnagiri,_Odisha",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Hirakud Dam",
+   "cat": "scenic",
+   "lat": 21.57,
+   "lng": 83.87,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "On the Mahanadi \u2014 at 25.8 km with its dykes, the world's longest earthen dam",
+   "wiki": "Hirakud_Dam",
+   "best": "Oct\u2013Feb"
   }
  ]
 }

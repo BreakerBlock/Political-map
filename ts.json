@@ -181,6 +181,39 @@
    "desc": "Village famed for embossed brass and sheet-metal art",
    "wiki": "Pembarthy",
    "best": "Oct\u2013Feb"
+  },
+  {
+   "name": "Ananthagiri Hills",
+   "cat": "adventure",
+   "lat": 17.312,
+   "lng": 77.863,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Forested hills where the Musi rises, ~90 km from Hyderabad \u2014 treks and camping",
+   "wiki": "Ananthagiri_Hills,_Vikarabad_district",
+   "best": "Jul\u2013Feb"
+  },
+  {
+   "name": "Chowmahalla Palace",
+   "cat": "history",
+   "lat": 17.3582,
+   "lng": 78.4717,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "The Asaf Jahi Nizams' palace of courtyards and chandeliers, by the Charminar",
+   "wiki": "Chowmahalla_Palace",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Thousand Pillar Temple",
+   "cat": "religious",
+   "lat": 18.0037,
+   "lng": 79.5748,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "Kakatiya star-shaped temple to Shiva, Vishnu and Surya at Hanamkonda",
+   "wiki": "Thousand_Pillar_Temple",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

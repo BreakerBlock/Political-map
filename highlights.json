@@ -3915,7 +3915,183 @@
    "desc": "Hill fortress above a sea of clouds at sunrise near Bengaluru",
    "wiki": "Nandi_Hills,_India",
    "best": "Sep\u2013Feb"
+  },
+  {
+   "name": "Joynagar Moa",
+   "cat": "cuisine",
+   "lat": 22.1752,
+   "lng": 88.4201,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "GI-tagged winter sweet of nolen gur (date-palm jaggery) and Kanakchur puffed rice",
+   "wiki": "Jaynagarer_Moa",
+   "best": "Dec\u2013Jan"
+  },
+  {
+   "name": "Kathi Roll, New Market",
+   "cat": "cuisine",
+   "lat": 22.5603,
+   "lng": 88.3531,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Kolkata's kathi roll, said to have begun at Nizam's by New Market (founded 1932)",
+   "wiki": "Kati_roll",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Indian Museum, Kolkata",
+   "cat": "arts",
+   "lat": 22.5581,
+   "lng": 88.3508,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Founded 1814 \u2014 Asia's oldest museum, with the Bharhut gateway and an Egyptian mummy",
+   "wiki": "Indian_Museum",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Amaravati Stupa",
+   "cat": "history",
+   "lat": 16.5753,
+   "lng": 80.358,
+   "state": "Andhra Pradesh",
+   "stateCode": "AP",
+   "desc": "Satavahana-era stupa, \"the most richly decorated stupa known\", from c. 3rd century BCE",
+   "wiki": "Amaravati_Stupa",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Gangabal Lake Trek",
+   "cat": "adventure",
+   "lat": 34.4319,
+   "lng": 74.9258,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Alpine lake at 3,576 m below Mt Harmukh, the high point of the Great Lakes trek",
+   "wiki": "Gangabal_Lake",
+   "best": "Jul\u2013Sep"
+  },
+  {
+   "name": "Hazratbal Shrine",
+   "cat": "religious",
+   "lat": 34.1292,
+   "lng": 74.8422,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "White-marble shrine on Dal Lake's north shore holding a relic of the Prophet",
+   "wiki": "Hazratbal_Shrine",
+   "best": "Apr\u2013Oct"
+  },
+  {
+   "name": "Martand Sun Temple",
+   "cat": "history",
+   "lat": 33.7456,
+   "lng": 75.2203,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "8th-century sun temple of Lalitaditya Muktapida, in ruins on the Mattan plateau",
+   "wiki": "Martand_Sun_Temple",
+   "best": "Apr\u2013Oct"
+  },
+  {
+   "name": "Gurez Valley",
+   "cat": "scenic",
+   "lat": 34.6333,
+   "lng": 74.8333,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Remote Kishanganga valley at ~2,580 m under the pyramid of Habba Khatoon peak",
+   "wiki": "Gurez",
+   "best": "May\u2013Oct"
+  },
+  {
+   "name": "Dahibara Aloodum, Cuttack",
+   "cat": "cuisine",
+   "lat": 20.5236,
+   "lng": 85.7881,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Cuttack's street classic \u2014 curd-soaked vadas with spicy aloo dum and ghuguni",
+   "wiki": "Dahibara_aludam",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Daringbadi",
+   "cat": "scenic",
+   "lat": 19.9072,
+   "lng": 84.1228,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Pine-clad hill station at ~915 m in Kandhamal, with coffee gardens",
+   "wiki": "Daringbadi",
+   "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Dhauli Shanti Stupa",
+   "cat": "history",
+   "lat": 20.1924,
+   "lng": 85.8395,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Hill above the Daya, held to be the Kalinga War site \u2014 Ashokan edicts and a 1972 peace pagoda",
+   "wiki": "Dhauli",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Chowmahalla Palace",
+   "cat": "history",
+   "lat": 17.3582,
+   "lng": 78.4717,
+   "state": "Telangana",
+   "stateCode": "TS",
+   "desc": "The Asaf Jahi Nizams' palace of courtyards and chandeliers, by the Charminar",
+   "wiki": "Chowmahalla_Palace",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Barabar Caves",
+   "cat": "history",
+   "lat": 25.005,
+   "lng": 85.063,
+   "state": "Bihar",
+   "stateCode": "BR",
+   "desc": "India's oldest rock-cut caves, polished like glass in the Mauryan age",
+   "wiki": "Barabar_Caves",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Umananda Temple",
+   "cat": "religious",
+   "lat": 26.1964,
+   "lng": 91.7453,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Shiva temple on Peacock Island in the Brahmaputra, built in 1694 \u2014 reached by ferry",
+   "wiki": "Umananda_Temple",
+   "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "CSMVS Museum, Mumbai",
+   "cat": "arts",
+   "lat": 18.9267,
+   "lng": 72.8322,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "The former Prince of Wales Museum (1922) by George Wittet \u2014 Indo-Saracenic treasure house",
+   "wiki": "Chhatrapati_Shivaji_Maharaj_Vastu_Sangrahalaya",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Calico Museum of Textiles",
+   "cat": "arts",
+   "lat": 23.0533,
+   "lng": 72.5922,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "The Sarabhais' 1949 collection of Indian textiles, at Sarabhai House, Shahibaug",
+   "wiki": "Calico_Museum_of_Textiles",
+   "best": "Oct\u2013Mar"
   }
  ],
- "total": 680
+ "total": 712
 }
