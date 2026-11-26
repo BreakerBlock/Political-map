@@ -445,7 +445,18 @@ body.tl-dragging .tl-day{opacity:.25;transition:opacity .15s}
 .tz-play svg{width:15px;height:15px;margin-left:2px}
 .tz-x{flex-shrink:0;align-self:flex-start;border:none;background:none;color:var(--ink-light);font-size:16px;cursor:pointer;padding:0 4px;line-height:1}
 /* Surprise me */
-.sp-btn{display:flex;align-items:center;gap:7px;margin-top:8px!important;padding:7px 13px 7px 10px;border-radius:18px;border:none;cursor:pointer;font:700 .74rem 'DM Sans',sans-serif;color:#fff;background:linear-gradient(120deg,#138808,#0E7C86 60%,#2B5FA8);box-shadow:0 3px 12px rgba(14,124,134,.35);transition:transform .15s,box-shadow .15s}
+.sp-row{display:flex;align-items:center;gap:7px;margin-top:8px!important}
+.fo-btn{display:flex;align-items:center;gap:7px;max-width:210px;padding:4px 13px 4px 4px;border-radius:18px;border:1px solid rgba(255,255,255,.22);cursor:pointer;font:700 .74rem 'DM Sans',sans-serif;color:#fff;background:rgba(18,12,8,.58);backdrop-filter:blur(10px) saturate(1.3);-webkit-backdrop-filter:blur(10px) saturate(1.3);box-shadow:0 3px 12px rgba(0,0,0,.3);transition:transform .15s,box-shadow .15s,background .15s,opacity .3s}
+.fo-btn:hover{transform:translateY(-1px);background:rgba(18,12,8,.74);box-shadow:0 6px 18px rgba(0,0,0,.38)}
+.fo-btn>i{flex-shrink:0;width:23px;height:23px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#FF9933,#E2622B);box-shadow:0 0 0 2px rgba(255,153,51,.25)}
+.fo-btn>i svg{width:13px;height:13px;transform:rotate(45deg)}
+.fo-btn span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fo-btn small{display:block;font-size:.52rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#FFC98A;line-height:1.1}
+.fo-btn b{display:block;font-weight:700;line-height:1.2;overflow:hidden;text-overflow:ellipsis}
+.fo-btn.new>i{animation:foBtnPing 2.2s ease-out 3}
+@keyframes foBtnPing{0%{box-shadow:0 0 0 0 rgba(255,153,51,.7)}70%{box-shadow:0 0 0 10px rgba(255,153,51,0)}100%{box-shadow:0 0 0 2px rgba(255,153,51,.25)}}
+body.flying .fo-btn{opacity:0;pointer-events:none}
+.sp-btn{display:flex;align-items:center;gap:7px;padding:7px 13px 7px 10px;border-radius:18px;border:none;cursor:pointer;font:700 .74rem 'DM Sans',sans-serif;color:#fff;background:linear-gradient(120deg,#138808,#0E7C86 60%,#2B5FA8);box-shadow:0 3px 12px rgba(14,124,134,.35);transition:transform .15s,box-shadow .15s}
 .sp-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(14,124,134,.45)}
 .sp-btn svg{width:16px;height:16px;flex-shrink:0}
 .sp-btn.rolling svg,.sp-again.rolling svg{animation:spRoll .5s linear infinite}
@@ -652,7 +663,10 @@ button.pg-row{width:100%;border:0;font:inherit;text-align:left;cursor:pointer;ma
   .sp-hero{height:140px}
   .sp-ttl b{font-size:1.45rem}
   .sp-btn{padding:7px 11px 7px 9px;font-size:.7rem}
+  .fo-btn{max-width:150px;padding:3px 11px 3px 3px;font-size:.7rem}
+  .fo-btn small{font-size:.48rem}
 }
+@media(prefers-reduced-motion:reduce){.fo-btn.new>i{animation:none}}
 @media(prefers-reduced-motion:reduce){.st-bg img.ok{animation:none}.st-card>*{transition:opacity .2s}.btn-hl::after{animation:none}.sp-hero img{transition:opacity .3s}.sp-pulse i{animation:none}}
 button,a,.place-card,.cat-btn{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 
@@ -1317,6 +1331,7 @@ function populateStateSelect(){
 }
 
 async function onStateSelect(sc){
+  if(typeof fly!=='undefined'&&fly)endFlyover({stay:true});
   selectedState=sc;syncStateStoryBtn();
   if(sc){
     await loadStateData(sc);
@@ -2180,6 +2195,7 @@ function stateDeckFor(sc){
 }
 function openStateStory(sc){if(!sc||!statesIndex[sc])return;openStory(stateDeckFor(sc).id)}
 function syncStateStoryBtn(){
+  syncFlyBtn();
   const b=document.getElementById('stateStoryBtn');if(!b)return;
   b.hidden=!(selectedState&&storyDecks.length);
   if(!b.hidden){const n=(statesIndex[selectedState]||{}).name||'';b.title=`Play ${n} as swipe stories`;b.setAttribute('aria-label',`Play ${n} stories`)}
@@ -2207,6 +2223,13 @@ async function loadStories(){
     +`<button class="md-chip md-season" title="Best in ${MONTHS[seasonDeck().month]}" aria-label="Best in ${MONTHS[seasonDeck().month]}" onclick="openStory('season')">${SVG_CAL}</button>`
     +storyDecks.filter(d=>d.cat&&CATS[d.cat]).map(d=>`<button class="md-chip" style="--c:${CATS[d.cat].color}" title="${esc(d.title)}" aria-label="${esc(d.title)}" onclick="openStory('${d.id}')">${ICONS[d.cat]}</button>`).join('');
   md.hidden=false;
+  const fm=location.hash.match(/^#flyover(?:=([a-z]{2}))?$/i);
+  if(fm){
+    const sc=fm[1]&&statesIndex[fm[1].toUpperCase()]?fm[1].toUpperCase():'';
+    history.replaceState(null,'',location.pathname+location.search);
+    if(sc){document.getElementById('stateSelect').value=sc;await onStateSelect(sc)}
+    setTimeout(()=>startFlyover({state:sc}),sc?700:300);return;
+  }
   const m=location.hash.match(/^#story=([\w-]+)/);
   if(m){
     const id=m[1],sm=id.match(/^season-([a-z]{3})$/),st=id.match(/^state-([a-z]{2})$/);
@@ -2230,14 +2253,16 @@ async function showTeaser(id){
   if(document.getElementById('story').classList.contains('on')||!document.getElementById('surprise').hidden)return;
   const d=storyDecks.find(x=>x.id===(id||'india'))||storyDecks[0],t=document.getElementById('teaser');
   if(d.gen){await prepDeck(d);if(!d.slides.length)return;await ensureDeckPlaces(d)}
+  if(fly)return;
   if(document.getElementById('story').classList.contains('on')||!document.getElementById('surprise').hidden)return;
   t.dataset.deck=d.id;
-  t.querySelector('small').textContent=d.gen==='season'?'This month · Swipe stories':'New · Swipe stories';
+  t.querySelector('small').textContent=d.gen==='season'?'This month · Swipe stories':d.gen==='state'?'Keep exploring · Swipe stories':'New · Swipe stories';
   t.setAttribute('aria-label','Play '+d.title);
   const imgs=await Promise.all(d.slides.slice(0,3).map(s=>slideImage(s,storyPlace(s)).then(firstLoadable)));
   t.querySelector('.tz-stack').innerHTML=d.slides.slice(0,3).map((s,i)=>{const p=storyPlace(s),c=(CATS[p?p.cat:'scenic']||CATS.scenic).color;return `<i style="--c:${c};${imgs[i]?`background-image:url('${esc(imgs[i])}')`:''}"></i>`}).join('');
   t.querySelector('b').textContent=d.title;
-  t.querySelector('span').textContent=d.gen==='season'?`${d.slides.length} picks for this month · tap to play`:`${d.slides.length} unforgettable places · tap to play`;
+  const nSl=d.slides.filter(x=>!x.kind).length;
+  t.querySelector('span').textContent=d.gen==='season'?`${nSl} picks for this month · tap to play`:d.gen==='state'?`${nSl} stories from ${d.title} · tap to play`:`${nSl} unforgettable places · tap to play`;
   t.hidden=false;requestAnimationFrame(()=>requestAnimationFrame(()=>t.classList.add('on')));
 }
 function hideTeaser(){const t=document.getElementById('teaser');t.classList.remove('on');setTimeout(()=>t.hidden=true,450);try{localStorage.setItem(STORY_SEEN,'1');localStorage.setItem(SEASON_SEEN,seasonTag())}catch(e){}}
@@ -2382,10 +2407,14 @@ const reduceMotion=()=>window.matchMedia&&matchMedia('(prefers-reduced-motion: r
 let spPool=null,spSeq=0,spCur=null,spPulse=null,spSeen=[];
 try{spSeen=JSON.parse(localStorage.getItem(SP_SEEN)||'[]')}catch(e){spSeen=[]}
 const SurpriseCtl=L.Control.extend({options:{position:'topright'},onAdd(){
-  const b=L.DomUtil.create('button','sp-btn');b.id='spBtn';b.type='button';
+  // One row: "Fly over India / <State>" (filled in by syncFlyBtn once the stories load) + Surprise me
+  const row=L.DomUtil.create('div','sp-row');
+  const f=L.DomUtil.create('button','fo-btn',row);f.id='foBtn';f.type='button';f.hidden=true;
+  const b=L.DomUtil.create('button','sp-btn',row);b.id='spBtn';b.type='button';
   b.innerHTML=SVG_DICE+'<span>Surprise me</span>';b.title='Roll the dice: jump to a random place in India';b.setAttribute('aria-label','Surprise me — show a random place');
-  L.DomEvent.disableClickPropagation(b);L.DomEvent.on(b,'click',()=>surprise());
-  return b;
+  L.DomEvent.disableClickPropagation(row);L.DomEvent.on(b,'click',()=>surprise());
+  L.DomEvent.on(f,'click',()=>startFlyover({state:selectedState}));
+  return row;
 }});
 new SurpriseCtl().addTo(map);
 {const el=document.getElementById('surprise');L.DomEvent.disableClickPropagation(el);L.DomEvent.disableScrollPropagation(el)}
@@ -2493,19 +2522,26 @@ document.addEventListener('keydown',e=>{
    (slides.json → "flyover"), each with a photo card, then settles back on all of India and
    offers the Highlights stories. Any touch on the map, Esc or Skip ends it. ── */
 const FLY_SEEN='bharatyatra.flyoverSeen.v1',FLY_DWELL=3400;
-let flyKeys=[],fly=null,foPulse=null;
+let flyKeys=[],fly=null,foPulse=null,flyStarting=false;
 async function startFlyover(opts={}){
-  if(fly)return;
-  const keys=flyKeys.length?flyKeys:((storyDecks.find(d=>d.id==='india')||{slides:[]}).slides.slice(0,5).map(s=>s.key));
-  const places=(await Promise.all(keys.map(async k=>{const [sc,nm]=k.split('|');return allPlaces.find(p=>placeKey(p)===k)||(statesIndex[sc]?(await peekState(sc)).find(p=>p.name===nm):null)}))).filter(p=>p&&isFinite(p.lat)&&isFinite(p.lng));
+  if(fly||flyStarting)return;
+  const st=opts.state&&statesIndex[opts.state]?opts.state:'';
+  flyStarting=true;
+  let keys,places;
+  try{
+    keys=st?await stateFlyKeys(st):(flyKeys.length?flyKeys:((storyDecks.find(d=>d.id==='india')||{slides:[]}).slides.slice(0,5).map(s=>s.key)));
+    places=(await Promise.all(keys.map(async k=>{const [sc,nm]=k.split('|');return allPlaces.find(p=>placeKey(p)===k)||(statesIndex[sc]?(await peekState(sc)).find(p=>p.name===nm):null)}))).filter(p=>p&&isFinite(p.lat)&&isFinite(p.lng));
+  }finally{flyStarting=false}
   if(!places.length||fly)return;
+  if(st)places=nnOrder(places);
   if(opts.auto&&(document.getElementById('story').classList.contains('on')||!document.getElementById('surprise').hidden))return;
   try{localStorage.setItem(FLY_SEEN,'1')}catch(e){}
   const t=document.getElementById('teaser');if(!t.hidden){t.classList.remove('on');t.hidden=true}
   hideSurprise();closeCatPanel();map.closePopup();
   if(isMobile()&&document.body.classList.contains('list-open')){document.body.classList.remove('list-open');setTimeout(()=>map.invalidateSize(),50)}
   places.forEach(p=>getBigImage(p.wiki));
-  fly={seq:0,i:-1,places,auto:!!opts.auto,timer:0};
+  fly={seq:0,i:-1,places,auto:!!opts.auto,timer:0,state:st,z:st?stateFlyZoom(places):0};
+  document.getElementById('flyover').setAttribute('aria-label',st?`Fly-over of ${statesIndex[st].name}`:"Fly-over of India's highlights");
   document.body.classList.add('flying');
   const el=document.getElementById('flyover');
   document.getElementById('foProg').innerHTML=places.map((p,i)=>`<b onclick="flyStep(${i})" title="${esc(p.name)}"><i></i></b>`).join('');
@@ -2515,11 +2551,11 @@ async function startFlyover(opts={}){
 async function flyStep(i){
   const f=fly;if(!f)return;
   clearTimeout(f.timer);const seq=++f.seq;
-  if(i>=f.places.length){endFlyover();return}
+  if(i>=f.places.length){f.finished=true;endFlyover();return}
   f.i=i;
   const p=f.places[i],c=CATS[p.cat]||CATS.scenic,el=document.getElementById('flyover'),last=i===f.places.length-1;
   el.style.setProperty('--c',c.color);
-  document.getElementById('foKick').innerHTML=`${SVG_PLANE}Fly-over · ${i+1} / ${f.places.length}`;
+  document.getElementById('foKick').innerHTML=`${SVG_PLANE}Fly-over${f.state?' · '+esc(statesIndex[f.state].name):''} · ${i+1} / ${f.places.length}`;
   document.getElementById('foHere').innerHTML=PIN_SVG+'Explore here';
   document.getElementById('foNext').innerHTML=last?'Finish ✓':'Next ›';
   [...document.querySelectorAll('#foProg b')].forEach((b,j)=>{b.className=j<i?'done':'';b.style.removeProperty('--dur')});
@@ -2537,7 +2573,7 @@ async function flyStep(i){
   getBigImage(p.wiki).then(u=>{if(!u||seq!==f.seq||fly!==f)return;const im=new Image();im.alt=p.name;im.decoding='async';im.onload=()=>im.classList.add('ok');imgChain(im,u,x=>x.remove());hero.insertBefore(im,hero.firstChild)});
   // Fly so the place sits in the open part of the map, clear of the card
   if(foPulse){map.removeLayer(foPulse);foPulse=null}
-  const z=isMobile()?7:7.5,sz=map.getSize(),cw=el.offsetWidth,ch=el.offsetHeight;
+  const z=f.z||(isMobile()?7:7.5),sz=map.getSize(),cw=el.offsetWidth,ch=el.offsetHeight;
   const off=isMobile()?L.point(0,Math.max(0,(ch+16)/2)):L.point(-Math.min(sz.x/4,(cw+16)/2),0);
   const target=map.unproject(map.project([p.lat,p.lng],z).add(off),z);
   await new Promise(res=>{
@@ -2558,9 +2594,51 @@ function endFlyover(opts={}){
   document.body.classList.remove('flying');
   if(foPulse){map.removeLayer(foPulse);foPulse=null}
   if(opts.stay)return;
-  map.stop();showAllIndia(!reduceMotion());
+  map.stop();
+  if(f.state&&statesIndex[f.state]){
+    const s=statesIndex[f.state];map.setView([s.lat,s.lng],7,{animate:!reduceMotion()});
+    if(f.finished&&selectedState===f.state)setTimeout(()=>showTeaser(stateDeckFor(f.state).id),1100);
+    return;
+  }
+  showAllIndia(!reduceMotion());
   if(f.auto)setTimeout(()=>showTeaser('india'),1100);
 }
+// A state's fly-over: its top six story places (curated, highlighted, with photos), in a tidy route
+async function stateFlyKeys(sc){
+  const d=stateDeckFor(sc);await prepDeck(d);
+  return d.slides.filter(s=>!s.kind).slice(0,6).map(s=>s.key);
+}
+// Nearest-neighbour route, trying every start and keeping the shortest, so the tour never doubles back much
+function nnOrder(ps){
+  const dist=(a,b)=>Math.hypot(a.lat-b.lat,(a.lng-b.lng)*Math.cos(a.lat*Math.PI/180));
+  let best=ps,bestLen=Infinity;
+  ps.forEach((_,s)=>{
+    const out=[ps[s]],rest=ps.filter((_,i)=>i!==s);let len=0;
+    while(rest.length){
+      const l=out[out.length-1];let bi=0,bd=Infinity;
+      rest.forEach((p,i)=>{const d=dist(l,p);if(d<bd){bd=d;bi=i}});
+      len+=bd;out.push(rest.splice(bi,1)[0]);
+    }
+    if(len<bestLen){bestLen=len;best=out}
+  });
+  return best;
+}
+// Closer in for small states (Goa, Delhi, Chandigarh), wider for big ones (Rajasthan, Ladakh)
+function stateFlyZoom(ps){
+  const b=L.latLngBounds(ps.map(p=>[p.lat,p.lng]));
+  const z=map.getBoundsZoom(b.pad(.35),false)+(isMobile()?1:1.5);
+  return Math.max(isMobile()?7.5:8,Math.min(12,z));
+}
+function syncFlyBtn(){
+  const b=document.getElementById('foBtn');if(!b)return;
+  b.hidden=!storyDecks.length;if(b.hidden)return;
+  const n=selectedState&&statesIndex[selectedState]?statesIndex[selectedState].name:'India';
+  b.innerHTML=`<i>${SVG_PLANE}</i><span><small>Play the fly-over</small><b>${esc(n)}</b></span>`;
+  b.title=`Fly over ${n}: a short tour of its highlights`;b.setAttribute('aria-label',`Play the fly-over of ${n}`);
+  // The first time someone sees the button (e.g. a returning visitor), its plane pings softly, once
+  if(!flyBtnPinged){flyBtnPinged=true;let seen=true;try{seen=!!localStorage.getItem(FLY_BTN_SEEN);localStorage.setItem(FLY_BTN_SEEN,'1')}catch(e){}if(!seen)b.classList.add('new')}
+}
+const FLY_BTN_SEEN='bharatyatra.flyBtnSeen.v1';let flyBtnPinged=false;
 function flyoverStopHere(){
   const f=fly;if(!f)return;const p=f.places[f.i];
   endFlyover({stay:true});if(!p)return;
