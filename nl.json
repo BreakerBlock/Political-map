@@ -120,6 +120,28 @@
    "desc": "The \"Falcon Capital of the World\": huge Amur falcon roosts on their autumn migration",
    "wiki": "Pangti",
    "best": "Oct\u2013Nov"
+  },
+  {
+   "name": "Mount Saramati",
+   "cat": "adventure",
+   "lat": 25.74,
+   "lng": 95.0195,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "Nagaland's highest peak (3,826 m) on the Myanmar border; treks start from Thanamir in Kiphire",
+   "wiki": "Mount_Saramati",
+   "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Aoling Festival, Mon",
+   "cat": "festivals",
+   "lat": 26.7208,
+   "lng": 95.0286,
+   "state": "Nagaland",
+   "stateCode": "NL",
+   "desc": "The Konyak Naga New Year in Mon district, welcoming spring and praying for a good harvest",
+   "wiki": "Aoling_Festival",
+   "best": "Apr"
   }
  ]
 }

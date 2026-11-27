@@ -453,6 +453,28 @@
    "desc": "Featherlight checked saris handwoven on pit looms",
    "wiki": "Kota_doria",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Tal Chhapar Sanctuary",
+   "cat": "fauna",
+   "lat": 27.7981,
+   "lng": 74.4349,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Flat saline grassland in the Thar, famous for blackbuck herds and raptors",
+   "wiki": "Tal_Chhapar_Sanctuary",
+   "best": "Sep\u2013Mar"
+  },
+  {
+   "name": "Teej, Jaipur",
+   "cat": "festivals",
+   "lat": 26.915,
+   "lng": 75.82,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Jaipur's monsoon festival for Parvati, with a procession through the old city's bazaars",
+   "wiki": "Teej",
+   "best": "Jul\u2013Aug"
   }
  ]
 }

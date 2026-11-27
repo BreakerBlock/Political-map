@@ -181,6 +181,17 @@
    "desc": "National Handicrafts & Handlooms Museum, with live craft demonstrations",
    "wiki": "National_Handicrafts_and_Handlooms_Museum",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Republic Day Parade",
+   "cat": "festivals",
+   "lat": 28.6134,
+   "lng": 77.2184,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "26 January: tableaux, marching contingents and a flypast down Kartavya Path to India Gate",
+   "wiki": "Delhi_Republic_Day_parade",
+   "best": "Jan"
   }
  ]
 }

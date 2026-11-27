@@ -121,6 +121,17 @@
    "desc": "Forested 1,619 m mountain about 50 km from Aizawl, with a hilltop tourist resort",
    "wiki": "Hmuifang",
    "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Champhai",
+   "cat": "scenic",
+   "lat": 23.456,
+   "lng": 93.329,
+   "state": "Mizoram",
+   "stateCode": "MZ",
+   "desc": "The 'Rice Bowl of Mizoram', a 1,678 m town of paddy fields near the Myanmar border",
+   "wiki": "Champhai",
+   "best": "Oct\u2013Apr"
   }
  ]
 }

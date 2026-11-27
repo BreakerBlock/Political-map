@@ -129,6 +129,17 @@
    "desc": "Tibetan Buddhist monastery in the hill town of Bomdila",
    "wiki": "Bomdila",
    "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Arunachali Cuisine, Itanagar",
+   "cat": "cuisine",
+   "lat": 27.1,
+   "lng": 93.62,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Rice with fish, meat and greens, and apong rice beer; dishes vary from tribe to tribe",
+   "wiki": "Arunachali_cuisine",
+   "best": "Oct\u2013Apr"
   }
  ]
 }

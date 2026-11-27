@@ -240,6 +240,17 @@
    "desc": "On the Mahanadi \u2014 at 25.8 km with its dykes, the world's longest earthen dam",
    "wiki": "Hirakud_Dam",
    "best": "Oct\u2013Feb"
+  },
+  {
+   "name": "Gahirmatha Marine Sanctuary",
+   "cat": "fauna",
+   "lat": 20.5667,
+   "lng": 86.8333,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Called the world's most important nesting beach for olive ridley sea turtles",
+   "wiki": "Gahirmatha_Marine_Sanctuary",
+   "best": "Nov\u2013Mar"
   }
  ]
 }

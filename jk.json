@@ -216,6 +216,17 @@
    "desc": "Remote Kishanganga valley at ~2,580 m under the pyramid of Habba Khatoon peak",
    "wiki": "Gurez",
    "best": "May\u2013Oct"
+  },
+  {
+   "name": "Kalari Cheese, Udhampur",
+   "cat": "cuisine",
+   "lat": 32.916,
+   "lng": 75.1419,
+   "state": "Jammu & Kashmir",
+   "stateCode": "JK",
+   "desc": "Ramnagar's cheese, cooked in its own fat until golden, salted and eaten hot",
+   "wiki": "Kalari_cheese",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

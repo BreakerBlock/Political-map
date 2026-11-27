@@ -452,6 +452,39 @@
    "desc": "Hill fortress above a sea of clouds at sunrise near Bengaluru",
    "wiki": "Nandi_Hills,_India",
    "best": "Sep\u2013Feb"
+  },
+  {
+   "name": "Ranganathittu Bird Sanctuary",
+   "cat": "fauna",
+   "lat": 12.4,
+   "lng": 76.65,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Karnataka's largest bird sanctuary: Kaveri islets near Srirangapatna, a Ramsar site",
+   "wiki": "Ranganathittu_Bird_Sanctuary",
+   "best": "Dec\u2013Feb"
+  },
+  {
+   "name": "Surfing at Mulki",
+   "cat": "adventure",
+   "lat": 13.1,
+   "lng": 74.8,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Surf town where the Shambhavi meets the Arabian Sea; lessons at Sasihithlu Beach",
+   "wiki": "Mulki,_India",
+   "best": "Sep\u2013May"
+  },
+  {
+   "name": "Benne Dosa, Davanagere",
+   "cat": "cuisine",
+   "lat": 14.4666,
+   "lng": 75.9242,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Davanagere's butter-laced dosa, crisp from the griddle and served with chutney",
+   "wiki": "Benne_dose",
+   "best": "All year"
   }
  ]
 }

@@ -375,6 +375,28 @@
    "desc": "The former Prince of Wales Museum (1922) by George Wittet \u2014 Indo-Saracenic treasure house",
    "wiki": "Chhatrapati_Shivaji_Maharaj_Vastu_Sangrahalaya",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Melghat Tiger Reserve",
+   "cat": "fauna",
+   "lat": 21.2167,
+   "lng": 77.7167,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Teak forest in the Satpura hills, one of India's first Project Tiger reserves (pinned at Chikhaldara)",
+   "wiki": "Melghat_Tiger_Reserve",
+   "best": "Oct\u2013Jun"
+  },
+  {
+   "name": "Savji Cuisine, Nagpur",
+   "cat": "cuisine",
+   "lat": 21.1498,
+   "lng": 79.0806,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Fiery Savji mutton and chicken curries in Nagpur's family-run khanavalis",
+   "wiki": "Savji",
+   "best": "Nov\u2013Feb"
   }
  ]
 }

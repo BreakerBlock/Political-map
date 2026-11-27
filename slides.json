@@ -260,6 +260,16 @@
      "key": "JK|Gangabal Lake Trek",
      "line": "Camp beside a glacial lake at 3,576 m under the north face of Harmukh.",
      "season": "Jul\u2013Sep"
+    },
+    {
+     "key": "KA|Surfing at Mulki",
+     "line": "Learn to surf where the Shambhavi river meets the Arabian Sea.",
+     "season": "Sep\u2013May"
+    },
+    {
+     "key": "SK|Zuluk",
+     "line": "Drive the stacked hairpins above Zuluk with Kangchenjunga on the skyline.",
+     "season": "Mar\u2013May"
     }
    ]
   },
@@ -391,6 +401,21 @@
      "key": "MH|Kala Ghoda Arts Festival",
      "line": "Nine days of free art, music and talks fill the lanes of Mumbai's art district.",
      "season": "Feb"
+    },
+    {
+     "key": "DL|Republic Day Parade",
+     "line": "Watch India's parade of tableaux and fly-pasts on Kartavya Path.",
+     "season": "Jan"
+    },
+    {
+     "key": "TN|Thaipusam, Palani",
+     "line": "Join pilgrims carrying kavadi up Palani hill during Thaipusam.",
+     "season": "Jan\u2013Feb"
+    },
+    {
+     "key": "MN|Lai Haraoba, Moirang",
+     "line": "Watch the maibis' ritual dances of Manipur's oldest festival.",
+     "season": "May\u2013Jun"
     }
    ]
   },
@@ -477,6 +502,21 @@
     {
      "key": "KL|Kumarakom Bird Sanctuary",
      "line": "Glide past herons and cormorants on the shore of Vembanad Lake.",
+     "season": "Nov\u2013Mar"
+    },
+    {
+     "key": "MP|Kuno National Park",
+     "line": "Look for India's cheetahs, back in the wild here since 2022.",
+     "season": "Oct\u2013Mar"
+    },
+    {
+     "key": "AS|Hoollongapar Gibbon Sanctuary",
+     "line": "Hear hoolock gibbons, India's only apes, calling through the canopy at dawn.",
+     "season": "Oct\u2013Apr"
+    },
+    {
+     "key": "OD|Gahirmatha Marine Sanctuary",
+     "line": "Where olive ridley turtles come ashore in their thousands to nest.",
      "season": "Nov\u2013Mar"
     }
    ]
@@ -908,6 +948,11 @@
      "key": "OD|Dahibara Aloodum, Cuttack",
      "line": "Curd-soaked vadas drowned in spicy aloo dum \u2014 breakfast on Cuttack's streets.",
      "season": "Oct\u2013Mar"
+    },
+    {
+     "key": "KA|Benne Dosa, Davanagere",
+     "line": "Butter-laced dosa straight off Davanagere's griddles.",
+     "season": "All year"
     }
    ]
   },

@@ -382,6 +382,17 @@
    "desc": "Lakeside sanctuary on Vembanad, once the Baker estate",
    "wiki": "Kumarakom_Bird_Sanctuary",
    "best": "Nov\u2013Mar"
+  },
+  {
+   "name": "Thattekad Bird Sanctuary",
+   "cat": "fauna",
+   "lat": 10.1333,
+   "lng": 76.6833,
+   "state": "Kerala",
+   "stateCode": "KL",
+   "desc": "Kerala's first bird sanctuary, on the Periyar; Salim Ali rated it peninsular India's richest bird habitat",
+   "wiki": "Thattekad_Bird_Sanctuary",
+   "best": "Nov\u2013Apr"
   }
  ]
 }

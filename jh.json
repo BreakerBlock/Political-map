@@ -152,6 +152,17 @@
    "desc": "Hairpin-bend ghat road above the Patratu Dam reservoir",
    "wiki": "Patratu",
    "best": "Jul\u2013Feb"
+  },
+  {
+   "name": "Jharkhandi Cuisine, Ranchi",
+   "cat": "cuisine",
+   "lat": 23.36,
+   "lng": 85.33,
+   "state": "Jharkhand",
+   "stateCode": "JH",
+   "desc": "Try dhuska, deep-fried rice-and-lentil pancakes, with a spicy gram curry",
+   "wiki": "Jharkhandi_cuisine",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

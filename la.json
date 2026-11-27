@@ -204,6 +204,17 @@
    "desc": "A celebration of the Indus river on its banks at Shey, near Leh",
    "wiki": "Sindhu_Darshan_Festival",
    "best": "Jun"
+  },
+  {
+   "name": "Ladakhi Cuisine, Leh",
+   "cat": "cuisine",
+   "lat": 34.1526,
+   "lng": 77.5771,
+   "state": "Ladakh",
+   "stateCode": "LA",
+   "desc": "Warming Ladakhi fare: thukpa noodle soup, tsampa barley flour, and skyu and chutagi stews",
+   "wiki": "Thukpa",
+   "best": "Jun\u2013Oct"
   }
  ]
 }

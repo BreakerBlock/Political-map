@@ -140,6 +140,17 @@
    "stateCode": "SK",
    "desc": "Momos, thukpa and gundruk on MG Marg",
    "wiki": "Sikkimese_cuisine"
+  },
+  {
+   "name": "Zuluk",
+   "cat": "scenic",
+   "lat": 27.2518,
+   "lng": 88.7775,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "Hamlet at 2,900 m above tiered switchback roads, with views of Kangchenjunga",
+   "wiki": "Dzuluk",
+   "best": "Mar\u2013May"
   }
  ]
 }

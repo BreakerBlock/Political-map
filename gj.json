@@ -299,6 +299,28 @@
    "desc": "The Sarabhais' 1949 collection of Indian textiles, at Sarabhai House, Shahibaug",
    "wiki": "Calico_Museum_of_Textiles",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Nal Sarovar Bird Sanctuary",
+   "cat": "fauna",
+   "lat": 22.7667,
+   "lng": 72.0333,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Gujarat's largest wetland sanctuary near Ahmedabad: boat rides among flamingos and pelicans",
+   "wiki": "Nal_Sarovar_Bird_Sanctuary",
+   "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Tarnetar Fair",
+   "cat": "festivals",
+   "lat": 22.6458,
+   "lng": 71.2133,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Annual mela at the Trinetreshwar Mahadev temple, drawing around a lakh of visitors",
+   "wiki": "Tarnetar",
+   "best": "Aug\u2013Sep"
   }
  ]
 }

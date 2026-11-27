@@ -384,6 +384,39 @@
    "desc": "Bharatanatyam academy founded in 1936 by Rukmini Devi Arundale",
    "wiki": "Kalakshetra_Foundation",
    "best": "Dec\u2013Jan"
+  },
+  {
+   "name": "Vedanthangal Bird Sanctuary",
+   "cat": "fauna",
+   "lat": 12.5456,
+   "lng": 79.8558,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Protected since 1936, a lake-side heronry where tens of thousands of waterbirds winter",
+   "wiki": "Vedanthangal_Bird_Sanctuary",
+   "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Thaipusam, Palani",
+   "cat": "festivals",
+   "lat": 10.4388,
+   "lng": 77.5203,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "Palani's biggest festival: ten days of celebrations as pilgrims carry kavadi up the Murugan hill",
+   "wiki": "Dhandayuthapani_Swamy_Temple",
+   "best": "Jan\u2013Feb"
+  },
+  {
+   "name": "Dindigul Biryani",
+   "cat": "cuisine",
+   "lat": 10.35,
+   "lng": 77.95,
+   "state": "Tamil Nadu",
+   "stateCode": "TN",
+   "desc": "The 'City of Biryani', where the Thalappakatti biryani house began in 1957",
+   "wiki": "Dindigul",
+   "best": "All year"
   }
  ]
 }

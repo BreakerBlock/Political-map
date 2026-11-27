@@ -261,6 +261,28 @@
    "desc": "Ghats on the Mandakini where Rama is said to have lived in exile",
    "wiki": "Chitrakoot,_Madhya_Pradesh",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Kuno National Park",
+   "cat": "fauna",
+   "lat": 25.6667,
+   "lng": 77.1667,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Cheetahs brought from Namibia in 2022 roam dry forest and grassland on the Kuno River",
+   "wiki": "Kuno_National_Park",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Bhagoria, Jhabua",
+   "cat": "festivals",
+   "lat": 22.77,
+   "lng": 74.6,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Bhil harvest festival before Holi: families arrive by decorated bullock cart to dance and shop",
+   "wiki": "Bhagoria_Festival",
+   "best": "Mar"
   }
  ]
 }

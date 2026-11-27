@@ -345,6 +345,17 @@
    "desc": "Quiet pine-clad cantonment, home of the Garhwal Rifles",
    "wiki": "Lansdowne,_India",
    "best": "Mar\u2013Jun, Sep\u2013Nov"
+  },
+  {
+   "name": "International Yoga Festival, Rishikesh",
+   "cat": "festivals",
+   "lat": 30.1192,
+   "lng": 78.3122,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Held every March since 1999 in the yoga capital, with classes and talks by the Ganga",
+   "wiki": "Parmarth_Niketan",
+   "best": "Mar"
   }
  ]
 }

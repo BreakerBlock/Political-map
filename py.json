@@ -99,6 +99,28 @@
    "desc": "Karaikal's Dharbaranyeswarar temple, India's best-known shrine to Saturn (Shani)",
    "wiki": "Dharbaranyeswarar_Temple",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Mah\u00e9",
+   "cat": "history",
+   "lat": 11.7011,
+   "lng": 75.5507,
+   "state": "Puducherry",
+   "stateCode": "PY",
+   "desc": "Former French enclave at the mouth of the Mahe River on the Malabar coast, now part of Puducherry",
+   "wiki": "Mah\u00e9,_India",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Yanam",
+   "cat": "history",
+   "lat": 16.7333,
+   "lng": 82.2167,
+   "state": "Puducherry",
+   "stateCode": "PY",
+   "desc": "'French Yanam' in the Godavari delta, a French post from 1723 to 1954",
+   "wiki": "Yanam",
+   "best": "Oct\u2013Feb"
   }
  ]
 }

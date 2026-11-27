@@ -173,6 +173,17 @@
    "desc": "Assam's only hill station, above a lake in the Dima Hasao hills",
    "wiki": "Haflong",
    "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Hoollongapar Gibbon Sanctuary",
+   "cat": "fauna",
+   "lat": 26.7167,
+   "lng": 94.3833,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Evergreen forest ringed by tea gardens near Jorhat, home to the hoolock gibbon, India's only ape",
+   "wiki": "Hoollongapar_Gibbon_Sanctuary",
+   "best": "Oct\u2013Apr"
   }
  ]
 }
