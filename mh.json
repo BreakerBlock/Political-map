@@ -397,6 +397,28 @@
    "desc": "Fiery Savji mutton and chicken curries in Nagpur's family-run khanavalis",
    "wiki": "Savji",
    "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Torna Fort Trek",
+   "cat": "adventure",
+   "lat": 18.2761,
+   "lng": 73.6227,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Steep climb to a 1,403 m Sahyadri fort, captured by Shivaji early in his career",
+   "wiki": "Torna_Fort",
+   "best": "Sep\u2013Dec"
+  },
+  {
+   "name": "Duke's Nose, Khandala",
+   "cat": "adventure",
+   "lat": 18.7414,
+   "lng": 73.3587,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Beak-shaped cliff above Khandala, a favourite for rock climbing and rappelling",
+   "wiki": "Khandala",
+   "best": "Oct\u2013Feb"
   }
  ]
 }

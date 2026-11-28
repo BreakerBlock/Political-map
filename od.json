@@ -251,6 +251,17 @@
    "desc": "Called the world's most important nesting beach for olive ridley sea turtles",
    "wiki": "Gahirmatha_Marine_Sanctuary",
    "best": "Nov\u2013Mar"
+  },
+  {
+   "name": "Bali Jatra, Cuttack",
+   "cat": "festivals",
+   "lat": 20.4873,
+   "lng": 85.8702,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Kartika Purnima fair on the Mahanadi honouring the Odia mariners who sailed to Bali",
+   "wiki": "Cuttack",
+   "best": "Nov"
   }
  ]
 }

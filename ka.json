@@ -485,6 +485,39 @@
    "desc": "Davanagere's butter-laced dosa, crisp from the griddle and served with chutney",
    "wiki": "Benne_dose",
    "best": "All year"
+  },
+  {
+   "name": "Om Beach Trek, Gokarna",
+   "cat": "adventure",
+   "lat": 14.5169,
+   "lng": 74.3202,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Coastal walk over the headlands from Kudle to Om, Half Moon and Paradise beaches",
+   "wiki": "Gokarna,_Karnataka",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Kinnal Craft",
+   "cat": "arts",
+   "lat": 15.4431,
+   "lng": 76.1397,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Koppal village of chitragara artisans who carve lacquered wooden toys and idols",
+   "wiki": "Kinnal",
+   "best": "Oct\u2013Feb"
+  },
+  {
+   "name": "Bengaluru Karaga",
+   "cat": "festivals",
+   "lat": 12.9654,
+   "lng": 77.5834,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Thigala festival honouring Draupadi; the Karaga leaves the Dharmaraya Swamy Temple at full moon",
+   "wiki": "Dharmaraya_Swamy_Temple",
+   "best": "Mar\u2013Apr"
   }
  ]
 }

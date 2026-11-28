@@ -184,6 +184,28 @@
    "desc": "Evergreen forest ringed by tea gardens near Jorhat, home to the hoolock gibbon, India's only ape",
    "wiki": "Hoollongapar_Gibbon_Sanctuary",
    "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Sarthebari Bell Metal",
+   "cat": "arts",
+   "lat": 26.35,
+   "lng": 91.22,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Assam's main bell-metal town, beating out xorai, bowls and bells; GI-tagged",
+   "wiki": "Sarthebari_Bell_Metal_Craft",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Jonbeel Mela",
+   "cat": "festivals",
+   "lat": 26.2078,
+   "lng": 92.406,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Tiwa fair near Jagiroad where hill tribes still barter with plains people",
+   "wiki": "Jagiroad",
+   "best": "Jan"
   }
  ]
 }

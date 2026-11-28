@@ -99,6 +99,28 @@
    "desc": "Hilltop memorial to the frigate sunk off Diu on 9 December 1971",
    "wiki": "INS_Khukri_(F149)",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Ghoghla Beach, Diu",
+   "cat": "scenic",
+   "lat": 20.7385,
+   "lng": 71.0087,
+   "state": "Dadra & Nagar Haveli and Daman & Diu",
+   "stateCode": "DH",
+   "desc": "Diu's largest beach, Blue Flag certified, with parasailing and banana-boat rides",
+   "wiki": "Diu,_India",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Bom Jesus Church, Moti Daman",
+   "cat": "religious",
+   "lat": 20.4066,
+   "lng": 72.8343,
+   "state": "Dadra & Nagar Haveli and Daman & Diu",
+   "stateCode": "DH",
+   "desc": "Portuguese church of 1603 in the walled town of Moti Daman, with a richly carved fa\u00e7ade",
+   "wiki": "Daman,_India",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

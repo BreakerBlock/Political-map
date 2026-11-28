@@ -475,6 +475,17 @@
    "desc": "Jaipur's monsoon festival for Parvati, with a procession through the old city's bazaars",
    "wiki": "Teej",
    "best": "Jul\u2013Aug"
+  },
+  {
+   "name": "Marwar Festival, Jodhpur",
+   "cat": "festivals",
+   "lat": 26.28,
+   "lng": 73.02,
+   "state": "Rajasthan",
+   "stateCode": "RJ",
+   "desc": "Jodhpur's festival of Marwar folk music and dance",
+   "wiki": "Jodhpur",
+   "best": "Oct"
   }
  ]
 }

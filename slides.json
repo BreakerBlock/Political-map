@@ -270,6 +270,26 @@
      "key": "SK|Zuluk",
      "line": "Drive the stacked hairpins above Zuluk with Kangchenjunga on the skyline.",
      "season": "Mar\u2013May"
+    },
+    {
+     "key": "HP|Rupin Pass Trek",
+     "line": "Cross a 4,650 m shepherds' pass from Uttarakhand into Kinnaur.",
+     "season": "May\u2013Jun, Sep\u2013Oct"
+    },
+    {
+     "key": "MH|Torna Fort Trek",
+     "line": "Scramble up a 1,403 m Sahyadri fort from Shivaji's early campaigns.",
+     "season": "Sep\u2013Dec"
+    },
+    {
+     "key": "AN|Jolly Buoy Island Snorkelling",
+     "line": "Snorkel over the coral of a marine national park.",
+     "season": "Nov\u2013Apr"
+    },
+    {
+     "key": "LD|Kadmat Island",
+     "line": "Kayak and dive in a Lakshadweep coral lagoon.",
+     "season": "Oct\u2013Apr"
     }
    ]
   },
@@ -416,6 +436,26 @@
      "key": "MN|Lai Haraoba, Moirang",
      "line": "Watch the maibis' ritual dances of Manipur's oldest festival.",
      "season": "May\u2013Jun"
+    },
+    {
+     "key": "AR|Torgya, Tawang Monastery",
+     "line": "Watch Monpa masked dances in the courtyard of Tawang Monastery.",
+     "season": "Jan"
+    },
+    {
+     "key": "AS|Jonbeel Mela",
+     "line": "See hill tribes and plains people barter, as they have for centuries.",
+     "season": "Jan"
+    },
+    {
+     "key": "ML|Behdienkhlam, Jowai",
+     "line": "Join the Pnar crowds as giant logs are plunged into a mud pool.",
+     "season": "Jul"
+    },
+    {
+     "key": "OD|Bali Jatra, Cuttack",
+     "line": "Wander a week-long fair on the Mahanadi that honours Odisha's seafaring past.",
+     "season": "Nov"
     }
    ]
   },
@@ -1077,6 +1117,16 @@
      "key": "WB|Indian Museum, Kolkata",
      "line": "Asia's oldest museum, founded in 1814 \u2014 from the Bharhut railing to a mummy.",
      "season": "Oct\u2013Mar"
+    },
+    {
+     "key": "GJ|Bhujodi Weaving Village",
+     "line": "Watch Vankar weavers at their pit looms outside Bhuj.",
+     "season": "Nov\u2013Feb"
+    },
+    {
+     "key": "SK|Namgyal Institute of Tibetology",
+     "line": "Study thangkas and icons in Gangtok's Tibetology museum.",
+     "season": "Mar\u2013May, Oct\u2013Dec"
     }
    ]
   },

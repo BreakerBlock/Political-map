@@ -108,6 +108,39 @@
    "desc": "Rainforest trek near Diglipur to the 732 m summit, the highest point of the islands",
    "wiki": "Saddle_Peak_(Andaman_Islands)",
    "best": "Nov\u2013Apr"
+  },
+  {
+   "name": "Jolly Buoy Island Snorkelling",
+   "cat": "adventure",
+   "lat": 11.5072,
+   "lng": 92.6114,
+   "state": "Andaman & Nicobar",
+   "stateCode": "AN",
+   "desc": "Coral reefs of Mahatma Gandhi Marine National Park, reached by boat from Wandoor",
+   "wiki": "Mahatma_Gandhi_Marine_National_Park",
+   "best": "Nov\u2013Apr"
+  },
+  {
+   "name": "Viper Island",
+   "cat": "history",
+   "lat": 11.661,
+   "lng": 92.697,
+   "state": "Andaman & Nicobar",
+   "stateCode": "AN",
+   "desc": "Island off Port Blair with the ruins of a British-era jail and its hilltop gallows",
+   "wiki": "Viper_Island",
+   "best": "Oct\u2013May"
+  },
+  {
+   "name": "Ross and Smith Islands",
+   "cat": "scenic",
+   "lat": 13.3,
+   "lng": 93.075,
+   "state": "Andaman & Nicobar",
+   "stateCode": "AN",
+   "desc": "Twin islands near Diglipur joined by a sandbar; turtles nest here",
+   "wiki": "Ross_Island,_North_and_Middle_Andaman_district",
+   "best": "Oct\u2013May"
   }
  ]
 }

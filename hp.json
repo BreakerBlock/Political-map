@@ -324,6 +324,39 @@
    "desc": "Delicate Pahari miniatures \u2014 see them at the Kangra Art Museum",
    "wiki": "Kangra_painting",
    "best": "Mar\u2013Jun, Sep\u2013Nov"
+  },
+  {
+   "name": "Rupin Pass Trek",
+   "cat": "adventure",
+   "lat": 31.3447,
+   "lng": 78.1644,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "4,650 m shepherds' pass from the Rupin valley in Uttarakhand over to Sangla in Kinnaur",
+   "wiki": "Rupin_Pass",
+   "best": "May\u2013Jun, Sep\u2013Oct"
+  },
+  {
+   "name": "Serolsar Lake via Jalori Pass",
+   "cat": "adventure",
+   "lat": 31.5375,
+   "lng": 77.4167,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Forest walk from Jalori Pass to a high lake with a small shrine to Buddhi Nagin",
+   "wiki": "Seruvalsar_Lake",
+   "best": "Apr\u2013Nov"
+  },
+  {
+   "name": "Lavi Fair, Rampur",
+   "cat": "festivals",
+   "lat": 31.45,
+   "lng": 77.6331,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Old Himalayan trade fair on the Sutlej: wool, dry fruit and Chamurthi horses",
+   "wiki": "Rampur,_Himachal_Pradesh",
+   "best": "Nov"
   }
  ]
 }

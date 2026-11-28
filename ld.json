@@ -33,6 +33,17 @@
    "desc": "Southernmost Lakshadweep island, with an 1885 lighthouse and Maldivian roots",
    "wiki": "Minicoy",
    "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Kadmat Island",
+   "cat": "adventure",
+   "lat": 11.2247,
+   "lng": 72.7748,
+   "state": "Lakshadweep",
+   "stateCode": "LD",
+   "desc": "Long coral island in the Amindivi group with kayaking, snorkelling and scuba diving",
+   "wiki": "Kadmat_Island",
+   "best": "Oct\u2013Apr"
   }
  ]
 }

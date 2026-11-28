@@ -299,6 +299,17 @@
    "desc": "Founded 1814 \u2014 Asia's oldest museum, with the Bharhut gateway and an Egyptian mummy",
    "wiki": "Indian_Museum",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Poush Mela, Santiniketan",
+   "cat": "festivals",
+   "lat": 23.68,
+   "lng": 87.68,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Santiniketan's winter fair of Baul music and crafts, held since 1894",
+   "wiki": "Santiniketan",
+   "best": "Dec"
   }
  ]
 }

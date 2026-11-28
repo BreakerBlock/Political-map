@@ -356,6 +356,17 @@
    "desc": "Held every March since 1999 in the yoga capital, with classes and talks by the Ganga",
    "wiki": "Parmarth_Niketan",
    "best": "Mar"
+  },
+  {
+   "name": "Milam Glacier Trek",
+   "cat": "adventure",
+   "lat": 30.483,
+   "lng": 80.1,
+   "state": "Uttarakhand",
+   "stateCode": "UK",
+   "desc": "Trek from Munsiyari up the Goriganga valley to the glacier that feeds the river",
+   "wiki": "Milam_Glacier",
+   "best": "Mar\u2013May, Sep\u2013Oct"
   }
  ]
 }

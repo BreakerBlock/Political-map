@@ -192,6 +192,17 @@
    "desc": "26 January: tableaux, marching contingents and a flypast down Kartavya Path to India Gate",
    "wiki": "Delhi_Republic_Day_parade",
    "best": "Jan"
+  },
+  {
+   "name": "National Gallery of Modern Art",
+   "cat": "arts",
+   "lat": 28.6102,
+   "lng": 77.2344,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "India's premier modern art museum, in Jaipur House near India Gate since 1954",
+   "wiki": "National_Gallery_of_Modern_Art",
+   "best": "Oct\u2013Mar"
   }
  ]
 }

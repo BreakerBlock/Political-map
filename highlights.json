@@ -4289,7 +4289,205 @@
    "desc": "Held every March since 1999 in the yoga capital, with classes and talks by the Ganga",
    "wiki": "Parmarth_Niketan",
    "best": "Mar"
+  },
+  {
+   "name": "Rupin Pass Trek",
+   "cat": "adventure",
+   "lat": 31.3447,
+   "lng": 78.1644,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "4,650 m shepherds' pass from the Rupin valley in Uttarakhand over to Sangla in Kinnaur",
+   "wiki": "Rupin_Pass",
+   "best": "May\u2013Jun, Sep\u2013Oct"
+  },
+  {
+   "name": "Torna Fort Trek",
+   "cat": "adventure",
+   "lat": 18.2761,
+   "lng": 73.6227,
+   "state": "Maharashtra",
+   "stateCode": "MH",
+   "desc": "Steep climb to a 1,403 m Sahyadri fort, captured by Shivaji early in his career",
+   "wiki": "Torna_Fort",
+   "best": "Sep\u2013Dec"
+  },
+  {
+   "name": "Om Beach Trek, Gokarna",
+   "cat": "adventure",
+   "lat": 14.5169,
+   "lng": 74.3202,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Coastal walk over the headlands from Kudle to Om, Half Moon and Paradise beaches",
+   "wiki": "Gokarna,_Karnataka",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Jolly Buoy Island Snorkelling",
+   "cat": "adventure",
+   "lat": 11.5072,
+   "lng": 92.6114,
+   "state": "Andaman & Nicobar",
+   "stateCode": "AN",
+   "desc": "Coral reefs of Mahatma Gandhi Marine National Park, reached by boat from Wandoor",
+   "wiki": "Mahatma_Gandhi_Marine_National_Park",
+   "best": "Nov\u2013Apr"
+  },
+  {
+   "name": "Kadmat Island",
+   "cat": "adventure",
+   "lat": 11.2247,
+   "lng": 72.7748,
+   "state": "Lakshadweep",
+   "stateCode": "LD",
+   "desc": "Long coral island in the Amindivi group with kayaking, snorkelling and scuba diving",
+   "wiki": "Kadmat_Island",
+   "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Namgyal Institute of Tibetology",
+   "cat": "arts",
+   "lat": 27.3159,
+   "lng": 88.6047,
+   "state": "Sikkim",
+   "stateCode": "SK",
+   "desc": "Gangtok museum and research institute of Tibetan icons, thangkas and texts, opened 1958",
+   "wiki": "Namgyal_Institute_of_Tibetology",
+   "best": "Mar\u2013May, Oct\u2013Dec"
+  },
+  {
+   "name": "Tribal Museum, Bhopal",
+   "cat": "arts",
+   "lat": 23.2344,
+   "lng": 77.3848,
+   "state": "Madhya Pradesh",
+   "stateCode": "MP",
+   "desc": "Galleries on the art and life of Gond, Bhil, Baiga and other tribes, in Shyamla Hills",
+   "wiki": "Tribal_Museum_Bhopal",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "National Gallery of Modern Art",
+   "cat": "arts",
+   "lat": 28.6102,
+   "lng": 77.2344,
+   "state": "Delhi",
+   "stateCode": "DL",
+   "desc": "India's premier modern art museum, in Jaipur House near India Gate since 1954",
+   "wiki": "National_Gallery_of_Modern_Art",
+   "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Bhujodi Weaving Village",
+   "cat": "arts",
+   "lat": 23.3167,
+   "lng": 69.6289,
+   "state": "Gujarat",
+   "stateCode": "GJ",
+   "desc": "Vankar weavers make shawls and stoles on pit looms just outside Bhuj",
+   "wiki": "Bhuj",
+   "best": "Nov\u2013Feb"
+  },
+  {
+   "name": "Torgya, Tawang Monastery",
+   "cat": "festivals",
+   "lat": 27.5864,
+   "lng": 91.8575,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Three days of Monpa masked dances, held only at Tawang Monastery to ward off evil",
+   "wiki": "Tawang_Monastery",
+   "best": "Jan"
+  },
+  {
+   "name": "Bengaluru Karaga",
+   "cat": "festivals",
+   "lat": 12.9654,
+   "lng": 77.5834,
+   "state": "Karnataka",
+   "stateCode": "KA",
+   "desc": "Thigala festival honouring Draupadi; the Karaga leaves the Dharmaraya Swamy Temple at full moon",
+   "wiki": "Dharmaraya_Swamy_Temple",
+   "best": "Mar\u2013Apr"
+  },
+  {
+   "name": "Jonbeel Mela",
+   "cat": "festivals",
+   "lat": 26.2078,
+   "lng": 92.406,
+   "state": "Assam",
+   "stateCode": "AS",
+   "desc": "Tiwa fair near Jagiroad where hill tribes still barter with plains people",
+   "wiki": "Jagiroad",
+   "best": "Jan"
+  },
+  {
+   "name": "Poush Mela, Santiniketan",
+   "cat": "festivals",
+   "lat": 23.68,
+   "lng": 87.68,
+   "state": "West Bengal",
+   "stateCode": "WB",
+   "desc": "Santiniketan's winter fair of Baul music and crafts, held since 1894",
+   "wiki": "Santiniketan",
+   "best": "Dec"
+  },
+  {
+   "name": "Bali Jatra, Cuttack",
+   "cat": "festivals",
+   "lat": 20.4873,
+   "lng": 85.8702,
+   "state": "Odisha",
+   "stateCode": "OD",
+   "desc": "Kartika Purnima fair on the Mahanadi honouring the Odia mariners who sailed to Bali",
+   "wiki": "Cuttack",
+   "best": "Nov"
+  },
+  {
+   "name": "Lavi Fair, Rampur",
+   "cat": "festivals",
+   "lat": 31.45,
+   "lng": 77.6331,
+   "state": "Himachal Pradesh",
+   "stateCode": "HP",
+   "desc": "Old Himalayan trade fair on the Sutlej: wool, dry fruit and Chamurthi horses",
+   "wiki": "Rampur,_Himachal_Pradesh",
+   "best": "Nov"
+  },
+  {
+   "name": "Behdienkhlam, Jowai",
+   "cat": "festivals",
+   "lat": 25.3,
+   "lng": 92.15,
+   "state": "Meghalaya",
+   "stateCode": "ML",
+   "desc": "Pnar festival 'to drive away disease': logs are paraded and plunged into a mud pool",
+   "wiki": "Jowai",
+   "best": "Jul"
+  },
+  {
+   "name": "Viper Island",
+   "cat": "history",
+   "lat": 11.661,
+   "lng": 92.697,
+   "state": "Andaman & Nicobar",
+   "stateCode": "AN",
+   "desc": "Island off Port Blair with the ruins of a British-era jail and its hilltop gallows",
+   "wiki": "Viper_Island",
+   "best": "Oct\u2013May"
+  },
+  {
+   "name": "Bom Jesus Church, Moti Daman",
+   "cat": "religious",
+   "lat": 20.4066,
+   "lng": 72.8343,
+   "state": "Dadra & Nagar Haveli and Daman & Diu",
+   "stateCode": "DH",
+   "desc": "Portuguese church of 1603 in the walled town of Moti Daman, with a richly carved fa\u00e7ade",
+   "wiki": "Daman,_India",
+   "best": "Oct\u2013Mar"
   }
  ],
- "total": 747
+ "total": 777
 }

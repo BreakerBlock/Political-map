@@ -140,6 +140,28 @@
    "desc": "Rice with fish, meat and greens, and apong rice beer; dishes vary from tribe to tribe",
    "wiki": "Arunachali_cuisine",
    "best": "Oct\u2013Apr"
+  },
+  {
+   "name": "Torgya, Tawang Monastery",
+   "cat": "festivals",
+   "lat": 27.5864,
+   "lng": 91.8575,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Three days of Monpa masked dances, held only at Tawang Monastery to ward off evil",
+   "wiki": "Tawang_Monastery",
+   "best": "Jan"
+  },
+  {
+   "name": "Mopin, Aalo",
+   "cat": "festivals",
+   "lat": 28.17,
+   "lng": 94.77,
+   "state": "Arunachal Pradesh",
+   "stateCode": "AR",
+   "desc": "Galo harvest and new-year festival for the goddess Mopin Ane, with rice-paste blessings",
+   "wiki": "Aalo",
+   "best": "Apr"
   }
  ]
 }

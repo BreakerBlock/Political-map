@@ -76,6 +76,17 @@
    "desc": "Shivalik-hills forest beside Sukhna Lake; entry needs a forest permit",
    "wiki": "Sukhna_Wildlife_Sanctuary",
    "best": "Oct\u2013Mar"
+  },
+  {
+   "name": "Leisure Valley",
+   "cat": "scenic",
+   "lat": 30.7531,
+   "lng": 76.7919,
+   "state": "Chandigarh",
+   "stateCode": "CH",
+   "desc": "Linear park of gardens and trails along a seasonal stream, running from Sector 1 to 53",
+   "wiki": "Leisure_Valley,_Chandigarh",
+   "best": "Oct\u2013Mar"
   }
  ]
 }
